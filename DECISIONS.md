@@ -2,7 +2,7 @@
 
 - 2026-10-09: Initialize a single local Git repository because the workspace did not contain one. Create a public remote when the scaffold is reviewable, as authorized by TASK.md.
 - 2026-10-09: Use dense SciPy linear algebra first. Optional sparse or autodiff dependencies are not required for Stage 1.
-- 2026-10-09: Keep version 0.1.0.dev0 and the in-progress badge until every Stage 1 acceptance criterion is verified.
+- 2026-10-09: Keep the in-progress badge and defer the v0.1.0 tag/release until every acceptance criterion is verified. Candidate package metadata uses 0.1.0 during final installation validation.
 - 2026-10-09: Explicitly tighten R's PIRLS and GLM convergence controls because their ordinary stopping tolerances introduce likelihood and coefficient noise. Any case-specific PIRLS control remains stored in its oracle input.
 - 2026-10-09: Set GLS oracle `.relStep=1e-4` for approximate variance-parameter covariance after a black-box step-size sweep. The default tiny steps suffer cancellation near log(sigma)=0, whereas excessively large steps introduce truncation error. This control does not alter the fitted likelihood.
 - 2026-10-09: Preserve every generated input and failed comparison. Near-zero prediction discrepancies and optimizer-specific warning differences remain failures rather than being silently counted as passes.
@@ -73,3 +73,12 @@ Numerical failure expectations are strict and remain failures in the coverage de
 - emm_0736: The saturated GLM contains an all-zero or all-one factor cell and has no finite intercept MLE. Preserve the EMM output; verify the likelihood supremum against the supplemental R fit and check a boundary warning instead of comparing divergent coefficients.
 
 Control contrasts require an explicit supported `adjust` value. The unlisted R `dunnettx` default is not implemented; Python currently defaults to `none`.
+
+## Final oracle and comparison controls
+
+- All 603 GLMER inputs use `tolPwrss=1e-14` and `nAGQ0initStep=FALSE`. Public black-box observations showed that the initial nAGQ=0 step could leave coefficient noise for high-count Poisson models. Prior precision attempts remain in their fixture diagnostics.
+- All 600 GLS inputs record uniform public BFGS optimizer controls. Controls are not selected per Python result.
+- Relative field comparisons retain the TASK thresholds, with a 1e-12 absolute floating-point floor at zero. This floor is not a replacement for the required relative thresholds.
+- A GLMM cannot use the Gaussian Kenward-Roger F procedure. Python rejects that request, matching the public R oracle behavior; Gaussian mixed models support KR.
+- Numerical failure markers are explicit and strict. Coverage counts them as failures, while unexpected failures or unexpected passes fail the test suite. Every remaining ID and cause is recorded in the Stage 1 report.
+- CI limits BLAS thread pools to one worker for small dense golden problems, avoiding oversubscription on hosted runners. Runtime users retain their own thread configuration.

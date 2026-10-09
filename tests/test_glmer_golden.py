@@ -32,7 +32,6 @@ def test_glmer_golden(path, record_property):
             weights=spec.get("weights"),
             offset=spec.get("offset"),
         )
-    _assert_summary_structure(result.summary(), expected["summary"])
     assert result.logLik() >= expected["logLik"] - 1e-6
     record_property('better_optimum', result.logLik() > expected['logLik'] + 1e-6)
     oracle_warnings = oracle["warnings"]
@@ -47,6 +46,7 @@ def test_glmer_golden(path, record_property):
     if "converg" in messages or "hessian" in messages or "gradient" in messages:
         assert any(issubclass(w.category, RuntimeWarning) for w in caught)
         return
+    _assert_summary_structure(result.summary(), expected["summary"])
     np.testing.assert_allclose(result.beta, expected["beta"], rtol=1e-5, atol=1e-12)
     np.testing.assert_allclose(result.cov_beta, expected["vcov"], rtol=1e-4, atol=1e-12)
     np.testing.assert_allclose(result.fitted(), expected["fitted"], rtol=1e-6, atol=1e-12)

@@ -21,4 +21,5 @@ def pytest_collection_modifyitems(items: list[pytest.Item]) -> None:
             continue
         case_id = item.name.partition('[')[2].rstrip(']')
         if case_id in failures:
-            item.add_marker(pytest.mark.xfail(reason=failures[case_id]['reason'], strict=True))
+            item.add_marker(pytest.mark.xfail(reason=failures[case_id]['reason'], strict=True,
+                                             raises=AssertionError))
