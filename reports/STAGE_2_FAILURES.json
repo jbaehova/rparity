@@ -1,0 +1,4619 @@
+{
+  "schema_version": 1,
+  "scope": "Every unresolved comparison in the complete local Stage 2 corpus; expected failures remain failures in the numerical denominator.",
+  "source_sha256": "e6cef324cb542c557bd531b48cf5e9f73a95abbc6c59daedbf66ca66c23882f4",
+  "source_fingerprint_status": "Final runtime fingerprint reconciled with complete integrated local pytest.",
+  "case_outcomes_authority": "reports/validation.json after final full-suite recording",
+  "raw_run_evidence": {
+    "gam": {
+      "path": "oracle/cache/s2-gam-final-reference-current.xml",
+      "sha256": "43374947914793d4f5a01cb9431590a85adc380f4467f9c2085fb762f3a79f66"
+    },
+    "tmb": {
+      "path": "oracle/cache/s2-tmb-final-reference-current.xml",
+      "sha256": "8be631f0d3a4b87ae626628978c519b6fd726e569dbae0ab56b114c565b21df4"
+    }
+  },
+  "stage2_counts": {
+    "cases": 2400,
+    "passed": 2356,
+    "failed": 44,
+    "pass_rate": 0.9816666666666667
+  },
+  "module_counts": {
+    "gam": {
+      "cases": 1200,
+      "passed": 1184,
+      "failed": 16,
+      "pass_rate": 0.9866666666666667
+    },
+    "tmb": {
+      "cases": 1200,
+      "passed": 1172,
+      "failed": 28,
+      "pass_rate": 0.9766666666666667
+    }
+  },
+  "better_optimum_properties": {
+    "gam": {
+      "passed": {
+        "false": 1184
+      },
+      "failed": {
+        "false": 12,
+        "true": 4
+      }
+    },
+    "tmb": {
+      "passed": {
+        "false": 1057,
+        "true": 115
+      },
+      "failed": {
+        "false": 22,
+        "true": 6
+      }
+    }
+  },
+  "first_failed_fields": {
+    "gam": {
+      "mapped_identified_coefficients": 7,
+      "runtime_warning_correspondence": 3,
+      "newdata_link_prediction": 1,
+      "smoothing_selection_criterion": 2,
+      "mapped_identified_coefficient_covariance": 1,
+      "newdata_identified_term": 1,
+      "fitted_values": 1
+    },
+    "tmb": {
+      "cond_fixed_effect_covariance": 1,
+      "normalized_laplace_log_likelihood": 13,
+      "cond_fixed_effect_coefficients": 8,
+      "runtime_warning_correspondence": 4,
+      "disp_fixed_effect_coefficients": 1,
+      "disp_prediction": 1
+    }
+  },
+  "cause_categories": {
+    "gam": {
+      "finite_small_smooth_coefficients": 3,
+      "warning_and_identified_numeric_discrepancy": 3,
+      "different_smoothing_minimum": 4,
+      "identified_small_prediction": 1,
+      "unstable_large_penalty_R_objective": 2,
+      "small_covariance_entries": 1,
+      "identified_small_term": 1,
+      "identified_small_fitted_values": 1
+    },
+    "tmb": {
+      "weak_partial_Poisson_limit_covariance": 1,
+      "unresolved_extreme_NB1_dispersion_likelihood": 5,
+      "unresolved_zero_inflated_binomial_Laplace_fit": 3,
+      "unresolved_extreme_NB2_dispersion_likelihood": 1,
+      "binomial_mixture_conditional_separation": 5,
+      "unresolved_small_conditional_coefficient": 1,
+      "unresolved_rank_one_Laplace_likelihood": 2,
+      "warning_and_identified_numeric_discrepancy": 4,
+      "partially_collapsed_NB2_dispersion": 1,
+      "unresolved_rank_one_and_separated_ZI_likelihood": 2,
+      "different_dispersion_local_minimum": 2,
+      "identified_dispersion_prediction_precision": 1
+    }
+  },
+  "observation_history": {
+    "gam": {
+      "cases": 1200,
+      "selected_R_observations": 1200,
+      "superseded_R_observations_preserved": 1254,
+      "total_R_observations_in_corpus": 2454,
+      "selected_R_errors": 0,
+      "preserved_superseded_R_errors": 0
+    },
+    "tmb": {
+      "cases": 1200,
+      "selected_R_observations": 1200,
+      "superseded_R_observations_preserved": 3045,
+      "total_R_observations_in_corpus": 4245,
+      "selected_R_errors": 0,
+      "preserved_superseded_R_errors": 2
+    }
+  },
+  "interpretation": [
+    "A first failed assertion is not proof that all later fields would pass.",
+    "A better optimum does not convert an identified coefficient, covariance, prediction or warning discrepancy to a passing case.",
+    "Raw-run unrecorded better_optimum properties remain preserved. The final integrated run records all 2,400 objective properties before assertion.",
+    "Extreme penalties, weak information and nonstationary reference scores are observed failure mechanisms. Wording marked unresolved does not assign exclusive blame to R or Python.",
+    "Earlier diagnostic probes support investigation and do not replace the final selected-reference comparison.",
+    "No case was removed, no failed field was relaxed, and preserved R observations do not add cases to the denominator."
+  ],
+  "cases": [
+    {
+      "id": "gam_0018",
+      "module": "gam",
+      "status": "failed",
+      "failure_type": "AssertionError",
+      "family": "binomial",
+      "link": "logit",
+      "formula": "y ~ f + s(x, by=f, bs=\"tp\", k=5)",
+      "failed_field": "mapped_identified_coefficients",
+      "better_optimum": false,
+      "better_optimum_recorded": true,
+      "comparison": {
+        "max_absolute_difference_among_violations": 4.64355846e-08,
+        "max_relative_difference_among_violations": 0.8360158,
+        "relative_tolerance": 1e-05,
+        "absolute_tolerance": 1e-12,
+        "mismatched_elements": 3,
+        "compared_elements": 15,
+        "undefined_R_covariance": false
+      },
+      "selected_R_warnings": [],
+      "original_R_warnings": [],
+      "superseded_R_observations_preserved": 1,
+      "reference_sha256": "d137d308ced8334671dddb68e82fbe4ef1984f3a24e55fe88d62880e2dcf5f9b",
+      "method": "REML",
+      "R_smoothing_parameters": [
+        0.279049236689033,
+        0.001039647319538492,
+        3982503.7762517002
+      ],
+      "R_criterion": 65.91475762082254,
+      "R_converged": true,
+      "category": "finite_small_smooth_coefficients",
+      "severity": "numerical_tolerance_error",
+      "cause": "Different finite stopping points for the strongly penalized third factor smooth leave coefficient differences above the unchanged tolerance. Stronger independent R fits still fail the small coefficients and covariance.",
+      "investigation": {
+        "stored_reference_audit": {
+          "source": "oracle/cache/s2-gam-regular-reference-analysis.json",
+          "R_smoothing_gradient": [
+            [
+              -4.218847493575595e-15
+            ],
+            [
+              7.993605777301127e-15
+            ],
+            [
+              -2.171339552603513e-09
+            ]
+          ],
+          "failed_fields": {
+            "beta": {
+              "pass": false,
+              "max_abs": 4.643558463356105e-08,
+              "max_scaled": 29853.682673413405
+            },
+            "covariance": {
+              "pass": false,
+              "max_abs": 8.058403689256588e-08,
+              "max_scaled": 7574.35935977096
+            },
+            "coefficient_edf": {
+              "pass": false,
+              "max_abs": 3.466613740801456e-08,
+              "max_scaled": 816.3290565963872
+            },
+            "prediction": {
+              "pass": false,
+              "max_abs": 2.0164187208848716e-08,
+              "max_scaled": 1.0960005456066713
+            }
+          },
+          "public_R_matrix_augmented_QR": null,
+          "scope": "Stored independent investigation; final outcome is determined by the final XML, not this earlier audit."
+        },
+        "stored_python_minus_R_criterion": -1.8153087921746192e-09
+      },
+      "raw_run_better_optimum": false,
+      "raw_run_better_optimum_recorded": true,
+      "final_objective": {
+        "reference_smoothing_criterion": 65.91475762082254,
+        "python_smoothing_criterion": 65.91475761900723
+      }
+    },
+    {
+      "id": "gam_0298",
+      "module": "gam",
+      "status": "failed",
+      "failure_type": "AssertionError",
+      "family": "binomial",
+      "link": "logit",
+      "formula": "cbind(success, failure) ~ f + s(x, by=f, bs=\"cs\", k=6)",
+      "failed_field": "runtime_warning_correspondence",
+      "better_optimum": false,
+      "better_optimum_recorded": true,
+      "comparison": {
+        "undefined_R_covariance": false
+      },
+      "selected_R_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "original_R_warnings": [],
+      "superseded_R_observations_preserved": 1,
+      "reference_sha256": "ef478c3e9012b452928a83d43dde580df43840a8de3cc82e4bdac66e40033aba",
+      "method": "ML",
+      "R_smoothing_parameters": [
+        154.53097863996692,
+        34.678729490290976,
+        104234361533.69278
+      ],
+      "R_criterion": 158.822489247718,
+      "R_converged": false,
+      "category": "warning_and_identified_numeric_discrepancy",
+      "severity": "diagnostic_and_numerical_error",
+      "cause": "R reports inner nonconvergence while Python reports a stationary fit. A metadata-only exception was rejected because the small third factor-smooth coefficients, covariance and term statistics also differ.",
+      "investigation": {
+        "stored_reference_audit": {
+          "source": "oracle/cache/s2-gam-regular-reference-analysis.json",
+          "R_smoothing_gradient": [
+            [
+              -1.7763568394002505e-15
+            ],
+            [
+              2.6645352591003757e-15
+            ],
+            [
+              -6.706371014075785e-09
+            ]
+          ],
+          "failed_fields": {
+            "beta": {
+              "pass": false,
+              "max_abs": 3.963218842257161e-09,
+              "max_scaled": 3640.845365820224
+            },
+            "covariance": {
+              "pass": false,
+              "max_abs": 1.2952931162356555e-09,
+              "max_scaled": 1004.5815710130985
+            },
+            "coefficient_edf": {
+              "pass": false,
+              "max_abs": 1.1818267756208267e-08,
+              "max_scaled": 431.2672681258626
+            },
+            "terms": {
+              "pass": false,
+              "max_abs": 2.9577266543582364e-09,
+              "max_scaled": 2938.3104323055477
+            },
+            "terms_SE": {
+              "pass": false,
+              "max_abs": 8.721033479725584e-06,
+              "max_scaled": 2031.1557059603315
+            },
+            "smooth_edf": {
+              "pass": false,
+              "max_abs": 2.037497771436365e-08,
+              "max_scaled": 437.97933138870434
+            },
+            "smooth_Chi.sq": {
+              "pass": false,
+              "max_abs": 1.444635284809176e-08,
+              "max_scaled": 3417.227208919027
+            },
+            "check_edf": {
+              "pass": false,
+              "max_abs": 2.037497771436365e-08,
+              "max_scaled": 437.97933138870434
+            }
+          },
+          "public_R_matrix_augmented_QR": null,
+          "scope": "Stored independent investigation; final outcome is determined by the final XML, not this earlier audit."
+        },
+        "stored_python_minus_R_criterion": 3.001730419782689e-09
+      },
+      "raw_run_better_optimum": false,
+      "raw_run_better_optimum_recorded": true,
+      "final_objective": {
+        "reference_smoothing_criterion": 158.822489247718,
+        "python_smoothing_criterion": 158.82248925071974
+      }
+    },
+    {
+      "id": "gam_0446",
+      "module": "gam",
+      "status": "failed",
+      "failure_type": "AssertionError",
+      "family": "gaussian",
+      "link": "identity",
+      "formula": "y ~ f + s(x, bs=\"cr\", k=7) + s(z, bs=\"cr\", k=7) + ti(x, z, bs=c(\"cr\", \"cr\"), k=c(4, 4))",
+      "failed_field": "mapped_identified_coefficients",
+      "better_optimum": true,
+      "better_optimum_recorded": true,
+      "comparison": {
+        "max_absolute_difference_among_violations": 0.41572249,
+        "max_relative_difference_among_violations": 9.80430724,
+        "relative_tolerance": 1e-05,
+        "absolute_tolerance": 1e-12,
+        "mismatched_elements": 24,
+        "compared_elements": 24,
+        "undefined_R_covariance": false
+      },
+      "selected_R_warnings": [],
+      "original_R_warnings": [],
+      "superseded_R_observations_preserved": 1,
+      "reference_sha256": "c37336abed2ea3c23e632f4da295b58a5c63cdfc5655b76a994a6640349134ed",
+      "method": "GCV.Cp",
+      "R_smoothing_parameters": [
+        71.54903697733887,
+        323.549706697546,
+        10.843118154753201,
+        0.27680511697653637
+      ],
+      "R_criterion": 0.30584587306545974,
+      "R_converged": true,
+      "category": "different_smoothing_minimum",
+      "severity": "different_estimated_fit",
+      "cause": "Python reaches a lower GCV minimum than the automatic R fit and gives materially different coefficients. Public R fixed-smoothing evaluations confirm a lower criterion, but automatic independent R optimization has not reproduced the complete fit.",
+      "investigation": {
+        "independent_R_start": {
+          "old_R_criterion": 0.30584587306545974,
+          "Python_native_criterion": 0.30463016878537735,
+          "new_R_criterion": 0.30584587306545974,
+          "R_minus_Python": 0.0012157042800823858,
+          "confirmed": false,
+          "strict_pass": false
+        }
+      },
+      "raw_run_better_optimum": true,
+      "raw_run_better_optimum_recorded": true,
+      "final_objective": {
+        "reference_smoothing_criterion": 0.30584587306545974,
+        "python_smoothing_criterion": 0.30463016878537735
+      }
+    },
+    {
+      "id": "gam_0451",
+      "module": "gam",
+      "status": "failed",
+      "failure_type": "AssertionError",
+      "family": "binomial",
+      "link": "logit",
+      "formula": "y ~ f + s(x, bs=\"cr\", k=7)",
+      "failed_field": "newdata_link_prediction",
+      "better_optimum": false,
+      "better_optimum_recorded": true,
+      "comparison": {
+        "max_absolute_difference_among_violations": 2.14699622e-08,
+        "max_relative_difference_among_violations": 3.00498302e-06,
+        "relative_tolerance": 1e-06,
+        "absolute_tolerance": 1e-12,
+        "mismatched_elements": 1,
+        "compared_elements": 15,
+        "undefined_R_covariance": false
+      },
+      "selected_R_warnings": [],
+      "original_R_warnings": [],
+      "superseded_R_observations_preserved": 1,
+      "reference_sha256": "4ebbbf2e20271117903b5bd11bd006235b5daa57fb25b90d1502e21c8d84a4aa",
+      "method": "GCV.Cp",
+      "R_smoothing_parameters": [
+        22722199596.31553
+      ],
+      "R_criterion": 0.4177158486320456,
+      "R_converged": true,
+      "category": "identified_small_prediction",
+      "severity": "numerical_tolerance_error",
+      "cause": "The GCV fit has a very large smoothing parameter. The identified new-data link prediction close to zero differs beyond the relative tolerance; stronger public R fits still fail prediction and term comparisons.",
+      "investigation": {
+        "stored_reference_audit": {
+          "source": "oracle/cache/s2-gam-reference-precision-analysis.json",
+          "R_smoothing_gradient": [
+            [
+              -6.587139589089506e-11
+            ]
+          ],
+          "failed_fields": {
+            "prediction": {
+              "pass": false,
+              "max_abs": 3.8107610345061715e-08,
+              "max_scaled": 3.004562490505628
+            },
+            "terms": {
+              "pass": false,
+              "max_abs": 3.6976090911355897e-08,
+              "max_scaled": 3.2320952444848294
+            },
+            "terms_SE": {
+              "pass": false,
+              "max_abs": 5.255117666519774e-07,
+              "max_scaled": 1.0077181729940807
+            }
+          },
+          "public_R_matrix_augmented_QR": null,
+          "scope": "Stored independent investigation; final outcome is determined by the final XML, not this earlier audit."
+        },
+        "stored_python_minus_R_criterion": 5.560450433428343e-10
+      },
+      "raw_run_better_optimum": false,
+      "raw_run_better_optimum_recorded": true,
+      "final_objective": {
+        "reference_smoothing_criterion": 0.4177158486320456,
+        "python_smoothing_criterion": 0.4177158491880906
+      }
+    },
+    {
+      "id": "gam_0596",
+      "module": "gam",
+      "status": "failed",
+      "failure_type": "AssertionError",
+      "family": "Gamma",
+      "link": "inverse",
+      "formula": "y ~ f + s(x, bs=\"cr\", k=7) + s(z, bs=\"cr\", k=7) + ti(x, z, bs=c(\"cr\", \"cr\"), k=c(4, 4)) + offset(o)",
+      "failed_field": "runtime_warning_correspondence",
+      "better_optimum": false,
+      "better_optimum_recorded": true,
+      "comparison": {
+        "undefined_R_covariance": false
+      },
+      "selected_R_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "original_R_warnings": [],
+      "superseded_R_observations_preserved": 1,
+      "reference_sha256": "9e9a3c19255296f28d7d06a52f78d5220cb5c74bf4a7f004437525ee42f34cdd",
+      "method": "GCV.Cp",
+      "R_smoothing_parameters": [
+        71.60975458988494,
+        116189351104.85353,
+        561508693.6818038,
+        1259553080.3653505
+      ],
+      "R_criterion": 0.2731373821176478,
+      "R_converged": false,
+      "category": "warning_and_identified_numeric_discrepancy",
+      "severity": "diagnostic_and_numerical_error",
+      "cause": "R reports inner nonconvergence while Python reports a stationary fit. Stored audits also fail a small identified coefficient and a term comparison, so warning metadata alone cannot resolve the case.",
+      "investigation": {
+        "stored_reference_audit": {
+          "source": "oracle/cache/s2-gam-regular-reference-analysis.json",
+          "R_smoothing_gradient": [
+            [
+              -2.736482915266514e-13
+            ],
+            [
+              -4.033202728097041e-12
+            ],
+            [
+              -8.027436511026683e-12
+            ],
+            [
+              -1.024468252380452e-11
+            ]
+          ],
+          "failed_fields": {
+            "beta": {
+              "pass": false,
+              "max_abs": 3.1580024855999006e-09,
+              "max_scaled": 1.3438974327437065
+            },
+            "terms": {
+              "pass": false,
+              "max_abs": 2.015847895943737e-09,
+              "max_scaled": 12.712487806324544
+            }
+          },
+          "public_R_matrix_augmented_QR": null,
+          "scope": "Stored independent investigation; final outcome is determined by the final XML, not this earlier audit."
+        },
+        "stored_python_minus_R_criterion": 7.202027862973637e-11
+      },
+      "raw_run_better_optimum": false,
+      "raw_run_better_optimum_recorded": true,
+      "final_objective": {
+        "reference_smoothing_criterion": 0.2731373821176478,
+        "python_smoothing_criterion": 0.2731373821896681
+      }
+    },
+    {
+      "id": "gam_0685",
+      "module": "gam",
+      "status": "failed",
+      "failure_type": "AssertionError",
+      "family": "gaussian",
+      "link": "identity",
+      "formula": "y ~ f + te(x, z, bs=c(\"cr\", \"cr\"), k=c(5, 5))",
+      "failed_field": "smoothing_selection_criterion",
+      "better_optimum": false,
+      "better_optimum_recorded": true,
+      "comparison": {
+        "undefined_R_covariance": false
+      },
+      "selected_R_warnings": [],
+      "original_R_warnings": [],
+      "superseded_R_observations_preserved": 1,
+      "reference_sha256": "43af6564a30f9bcdfb55b261ee7271ae1df514bed79a08f209907ca9f21cd786",
+      "method": "GCV.Cp",
+      "R_smoothing_parameters": [
+        0.5997814807549814,
+        2259316635724.527
+      ],
+      "R_criterion": 0.6913215201927987,
+      "R_converged": true,
+      "category": "unstable_large_penalty_R_objective",
+      "severity": "objective_error",
+      "cause": "The original R GCV score is below Python by more than the objective tolerance at an enormous tensor penalty. An independent augmented-QR evaluation of public R X and S reproduces the Python score rather than the reported R score. Stronger R fits still fail identified predictions and covariance bounds.",
+      "investigation": {
+        "stored_reference_audit": {
+          "source": "oracle/cache/s2-gam-reference-precision-analysis.json",
+          "R_smoothing_gradient": null,
+          "failed_fields": {
+            "criterion": {
+              "pass": false,
+              "difference": 2.5323866370552395e-06
+            },
+            "beta": {
+              "pass": false,
+              "max_abs": 8.423695304754508e-05,
+              "max_scaled": 227.6474950574688
+            },
+            "covariance": {
+              "pass": false,
+              "max_abs": 5.570002171669626e-05,
+              "max_scaled": 322.082952515133
+            },
+            "fitted": {
+              "pass": false,
+              "max_abs": 9.18859743881395e-05,
+              "max_scaled": 1467.7398714593883
+            },
+            "prediction": {
+              "pass": false,
+              "max_abs": 4.977326231089818e-05,
+              "max_scaled": 402.3585713759047
+            },
+            "terms": {
+              "pass": false,
+              "max_abs": 4.9098366510236247e-05,
+              "max_scaled": 98.3000330493876
+            },
+            "check_k-index": {
+              "pass": false,
+              "max_abs": 1.328076886020213e-06,
+              "max_scaled": 1.1962471757752464
+            }
+          },
+          "public_R_matrix_augmented_QR": {
+            "max_fitted_difference": 0.00010460439959691925,
+            "max_beta_difference": 9.367424183481798e-05,
+            "r_penalized_sse": 66.41147554821421,
+            "qr_penalized_sse": 66.41147541134384,
+            "penalized_sse_excess": 1.3687036926057772e-07,
+            "r_deviance": 63.36907885809353,
+            "qr_deviance": 63.369388499856186,
+            "r_scale": 0.6254170603434472,
+            "qr_scale": 0.6254197338509763,
+            "r_criterion": 0.6913215201927987,
+            "qr_gcv": 0.6913240526378874,
+            "r_score_max_abs": 0.006721772694022965,
+            "r_score_normalized": 1.8974883144270248e-10,
+            "qr_score_normalized": 2.3735854059562563e-11
+          },
+          "scope": "Stored independent investigation; final outcome is determined by the final XML, not this earlier audit."
+        },
+        "stored_python_minus_R_criterion": 2.5323866370552395e-06
+      },
+      "Python_criterion": 0.691324052579477,
+      "criterion_difference_Python_minus_R": 2.532386678355536e-06,
+      "raw_run_better_optimum": null,
+      "raw_run_better_optimum_recorded": false,
+      "final_objective": {
+        "reference_smoothing_criterion": 0.6913215201927987,
+        "python_smoothing_criterion": 0.691324052579477
+      }
+    },
+    {
+      "id": "gam_0738",
+      "module": "gam",
+      "status": "failed",
+      "failure_type": "AssertionError",
+      "family": "binomial",
+      "link": "logit",
+      "formula": "y ~ f + s(x, by=f, bs=\"cs\", k=6)",
+      "failed_field": "mapped_identified_coefficients",
+      "better_optimum": false,
+      "better_optimum_recorded": true,
+      "comparison": {
+        "max_absolute_difference_among_violations": 2.27768277e-09,
+        "max_relative_difference_among_violations": 1.33062,
+        "relative_tolerance": 1e-05,
+        "absolute_tolerance": 1e-12,
+        "mismatched_elements": 5,
+        "compared_elements": 18,
+        "undefined_R_covariance": false
+      },
+      "selected_R_warnings": [],
+      "original_R_warnings": [],
+      "superseded_R_observations_preserved": 1,
+      "reference_sha256": "efa7313e2892c7bd625c02f04ef62ac44ce1bec9e0ca6e6cbb0be59dcc31c353",
+      "method": "REML",
+      "R_smoothing_parameters": [
+        3698.1259898963867,
+        283.87508465463975,
+        167816060076.3051
+      ],
+      "R_criterion": 78.9464257642553,
+      "R_converged": true,
+      "category": "finite_small_smooth_coefficients",
+      "severity": "numerical_tolerance_error",
+      "cause": "Different finite stopping points for the strongly penalized third factor shrinkage smooth leave small coefficient differences above tolerance. Stronger public R controls do not produce a full strict match.",
+      "investigation": {
+        "stored_reference_audit": {
+          "source": "oracle/cache/s2-gam-regular-reference-analysis.json",
+          "R_smoothing_gradient": [
+            [
+              -2.6645352591003757e-15
+            ],
+            [
+              4.440892098500626e-16
+            ],
+            [
+              -2.373185203907724e-09
+            ]
+          ],
+          "failed_fields": {
+            "beta": {
+              "pass": false,
+              "max_abs": 2.277682767848761e-09,
+              "max_scaled": 2239.3507820337213
+            },
+            "covariance": {
+              "pass": false,
+              "max_abs": 3.126119452999885e-09,
+              "max_scaled": 2531.3998311836453
+            },
+            "coefficient_edf": {
+              "pass": false,
+              "max_abs": 4.011736888926228e-09,
+              "max_scaled": 999.2026855973108
+            },
+            "terms": {
+              "pass": false,
+              "max_abs": 1.7185271669068721e-09,
+              "max_scaled": 1716.3105113291015
+            },
+            "terms_SE": {
+              "pass": false,
+              "max_abs": 1.9403610653938416e-05,
+              "max_scaled": 5264.939311444233
+            },
+            "smooth_edf": {
+              "pass": false,
+              "max_abs": 8.060033555229063e-09,
+              "max_scaled": 1142.0761950063593
+            },
+            "smooth_Chi.sq": {
+              "pass": false,
+              "max_abs": 1.7444188315875126e-09,
+              "max_scaled": 1542.2346482358746
+            },
+            "check_edf": {
+              "pass": false,
+              "max_abs": 8.060033555229063e-09,
+              "max_scaled": 1142.0761950063593
+            }
+          },
+          "public_R_matrix_augmented_QR": null,
+          "scope": "Stored independent investigation; final outcome is determined by the final XML, not this earlier audit."
+        },
+        "stored_python_minus_R_criterion": 3.157779815410322e-09
+      },
+      "raw_run_better_optimum": false,
+      "raw_run_better_optimum_recorded": true,
+      "final_objective": {
+        "reference_smoothing_criterion": 78.9464257642553,
+        "python_smoothing_criterion": 78.94642576741307
+      }
+    },
+    {
+      "id": "gam_0928",
+      "module": "gam",
+      "status": "failed",
+      "failure_type": "AssertionError",
+      "family": "gaussian",
+      "link": "identity",
+      "formula": "y ~ f + s(x, by=f, bs=\"ps\", k=7) + offset(o)",
+      "failed_field": "mapped_identified_coefficient_covariance",
+      "better_optimum": false,
+      "better_optimum_recorded": true,
+      "comparison": {
+        "max_absolute_difference_among_violations": 6.06552903e-12,
+        "max_relative_difference_among_violations": 1.0000525,
+        "relative_tolerance": 0.0001,
+        "absolute_tolerance": 1e-12,
+        "mismatched_elements": 118,
+        "compared_elements": 441,
+        "undefined_R_covariance": false
+      },
+      "selected_R_warnings": [],
+      "original_R_warnings": [],
+      "superseded_R_observations_preserved": 1,
+      "reference_sha256": "2ca9431ee7b2da6d447ef67a56d3604774fd5068a1f3ddd33c00b664b4024e15",
+      "method": "GCV.Cp",
+      "R_smoothing_parameters": [
+        5.724350621958911,
+        1.311581112970469,
+        2729784972820.362
+      ],
+      "R_criterion": 0.5060429631260323,
+      "R_converged": true,
+      "category": "small_covariance_entries",
+      "severity": "numerical_tolerance_error",
+      "cause": "Small cross-covariance entries involving the strongly penalized factor smooth disagree above the absolute floor. The original R covariance does not satisfy the independently measured Schur envelope, so it is not covered by a limit exception.",
+      "investigation": {
+        "stored_reference_audit": {
+          "source": "oracle/cache/s2-gam-regular-reference-analysis.json",
+          "R_smoothing_gradient": null,
+          "failed_fields": {
+            "covariance": {
+              "pass": false,
+              "max_abs": 2.9102981830009256e-10,
+              "max_scaled": 6.061852192184877
+            }
+          },
+          "public_R_matrix_augmented_QR": {
+            "max_fitted_difference": 1.6587120565958458e-11,
+            "max_beta_difference": 4.627243033183959e-11,
+            "r_penalized_sse": 60.747333085079,
+            "qr_penalized_sse": 60.747333085079006,
+            "penalized_sse_excess": -7.105427357601002e-15,
+            "r_deviance": 59.21961375403342,
+            "qr_deviance": 59.21961375397717,
+            "r_scale": 0.4676987365490053,
+            "qr_scale": 0.46769873654923855,
+            "r_criterion": 0.5060429631260323,
+            "qr_gcv": 0.5060429631262782,
+            "r_score_max_abs": 0.00021939486583200107,
+            "r_score_normalized": 1.7705940506960546e-11,
+            "qr_score_normalized": 7.143830911655392e-12
+          },
+          "scope": "Stored independent investigation; final outcome is determined by the final XML, not this earlier audit."
+        },
+        "stored_python_minus_R_criterion": 4.065414671572398e-12
+      },
+      "raw_run_better_optimum": false,
+      "raw_run_better_optimum_recorded": true,
+      "final_objective": {
+        "reference_smoothing_criterion": 0.5060429631260323,
+        "python_smoothing_criterion": 0.5060429631300977
+      }
+    },
+    {
+      "id": "gam_0948",
+      "module": "gam",
+      "status": "failed",
+      "failure_type": "AssertionError",
+      "family": "poisson",
+      "link": "log",
+      "formula": "y ~ f + s(x, by=f, bs=\"ps\", k=7) + offset(o)",
+      "failed_field": "mapped_identified_coefficients",
+      "better_optimum": true,
+      "better_optimum_recorded": true,
+      "comparison": {
+        "max_absolute_difference_among_violations": 4.42611788,
+        "max_relative_difference_among_violations": 73.5266871,
+        "relative_tolerance": 1e-05,
+        "absolute_tolerance": 1e-12,
+        "mismatched_elements": 9,
+        "compared_elements": 21,
+        "undefined_R_covariance": false
+      },
+      "selected_R_warnings": [],
+      "original_R_warnings": [],
+      "superseded_R_observations_preserved": 1,
+      "reference_sha256": "87176f4a9c44e40c2bbb91386602150271b4d911e3709d8fa7d67435ae2d20b9",
+      "method": "GCV.Cp",
+      "R_smoothing_parameters": [
+        77.35550174172583,
+        1131.6945417542659,
+        0.0025134816969188687
+      ],
+      "R_criterion": 0.10018103801488354,
+      "R_converged": true,
+      "category": "different_smoothing_minimum",
+      "severity": "different_estimated_fit",
+      "cause": "Python reaches a better GCV minimum than the selected R fit. An independently optimized public R start confirms that minimum, but its identified covariance still fails strict parity; the original selected observation remains the reference.",
+      "investigation": {
+        "independent_R_start": {
+          "old_R_criterion": 0.10018103801488354,
+          "Python_native_criterion": 0.0972965743269695,
+          "new_R_criterion": 0.09729657432696626,
+          "R_minus_Python": -3.247402347028583e-15,
+          "confirmed": true,
+          "strict_pass": false
+        }
+      },
+      "raw_run_better_optimum": true,
+      "raw_run_better_optimum_recorded": true,
+      "final_objective": {
+        "reference_smoothing_criterion": 0.10018103801488354,
+        "python_smoothing_criterion": 0.0972965743269732
+      }
+    },
+    {
+      "id": "gam_1027",
+      "module": "gam",
+      "status": "failed",
+      "failure_type": "AssertionError",
+      "family": "poisson",
+      "link": "log",
+      "formula": "y ~ f + w + s(x, by=w, bs=\"tp\", k=8)",
+      "failed_field": "runtime_warning_correspondence",
+      "better_optimum": false,
+      "better_optimum_recorded": true,
+      "comparison": {
+        "undefined_R_covariance": false
+      },
+      "selected_R_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "original_R_warnings": [],
+      "superseded_R_observations_preserved": 1,
+      "reference_sha256": "7112a477ed0a39543b53936516055a2ed2d4e73cbbebe13bbab94937bb140e95",
+      "method": "ML",
+      "R_smoothing_parameters": [
+        20613550325.58897
+      ],
+      "R_criterion": 290.4894594660907,
+      "R_converged": false,
+      "category": "warning_and_identified_numeric_discrepancy",
+      "severity": "diagnostic_and_numerical_error",
+      "cause": "R reports inner nonconvergence while Python reports a stationary fit. After removing the common design/penalty coefficient gauge, stored audits still reject small penalized coefficients; a metadata-only exception is not justified.",
+      "investigation": {
+        "stored_reference_audit": {
+          "source": "oracle/cache/s2-gam-regular-reference-analysis.json",
+          "R_smoothing_gradient": [
+            [
+              -7.429282078419419e-09
+            ]
+          ],
+          "failed_fields": {
+            "beta": {
+              "pass": false,
+              "max_abs": 0.3323143081823506,
+              "max_scaled": 332314308182.3506
+            },
+            "covariance": {
+              "pass": false,
+              "max_abs": 0.02721631508873699,
+              "max_scaled": 27216315088.73699
+            },
+            "coefficient_edf": {
+              "pass": false,
+              "max_abs": 1.0000000000000053,
+              "max_scaled": 1000000000000.0054
+            },
+            "terms": {
+              "pass": false,
+              "max_abs": 0.5571614382485146,
+              "max_scaled": 557161438248.5146
+            },
+            "terms_SE": {
+              "pass": false,
+              "max_abs": 0.25882724621253916,
+              "max_scaled": 258827246212.53915
+            },
+            "smooth_edf": {
+              "pass": false,
+              "max_abs": 1.000000000714318,
+              "max_scaled": 499.99999985694984
+            },
+            "smooth_Ref.df": {
+              "pass": false,
+              "max_abs": 1.0000000014286312,
+              "max_scaled": 499.9999999638984
+            },
+            "smooth_Chi.sq": {
+              "pass": false,
+              "max_abs": 21.816917906726992,
+              "max_scaled": 3350.007114521628
+            },
+            "check_edf": {
+              "pass": false,
+              "max_abs": 1.000000000714318,
+              "max_scaled": 499.99999985694984
+            }
+          },
+          "public_R_matrix_augmented_QR": null,
+          "scope": "Stored independent investigation; final outcome is determined by the final XML, not this earlier audit."
+        },
+        "stored_python_minus_R_criterion": -5.302467798173893e-09
+      },
+      "raw_run_better_optimum": false,
+      "raw_run_better_optimum_recorded": true,
+      "final_objective": {
+        "reference_smoothing_criterion": 290.4894594660907,
+        "python_smoothing_criterion": 290.4894594607882
+      }
+    },
+    {
+      "id": "gam_1049",
+      "module": "gam",
+      "status": "failed",
+      "failure_type": "AssertionError",
+      "family": "gaussian",
+      "link": "identity",
+      "formula": "y ~ f + s(x, bs=\"tp\", k=6) + s(z, bs=\"cr\", k=6)",
+      "failed_field": "smoothing_selection_criterion",
+      "better_optimum": false,
+      "better_optimum_recorded": true,
+      "comparison": {
+        "undefined_R_covariance": false
+      },
+      "selected_R_warnings": [],
+      "original_R_warnings": [],
+      "superseded_R_observations_preserved": 1,
+      "reference_sha256": "057346fca273b7c3b5155a983d7ac47c3ef2e94f6aa56adba6f4c4c13b078758",
+      "method": "GCV.Cp",
+      "R_smoothing_parameters": [
+        0.03474488743392951,
+        112033718577180.08
+      ],
+      "R_criterion": 1.2801649144253804,
+      "R_converged": true,
+      "category": "unstable_large_penalty_R_objective",
+      "severity": "objective_error",
+      "cause": "The original R GCV score is below Python by more than tolerance with a smoothing parameter above 1e14. Public X/S augmented QR shows substantial inner-fit error and reproduces Python's higher score. Healthier R starts improve inner accuracy but still fail an identified term or covariance envelope.",
+      "investigation": {
+        "stored_reference_audit": {
+          "source": "oracle/cache/s2-gam-reference-precision-analysis.json",
+          "R_smoothing_gradient": null,
+          "failed_fields": {
+            "criterion": {
+              "pass": false,
+              "difference": 0.0029772501515967775
+            },
+            "beta": {
+              "pass": false,
+              "max_abs": 0.7055352102184314,
+              "max_scaled": 209583.39158247516
+            },
+            "covariance": {
+              "pass": false,
+              "max_abs": 0.4166279042341299,
+              "max_scaled": 166291.6123564234
+            },
+            "fitted": {
+              "pass": false,
+              "max_abs": 0.12877963762088318,
+              "max_scaled": 9672802.150732674
+            },
+            "scale": {
+              "pass": false,
+              "max_abs": 0.004293303108235724,
+              "max_scaled": 36.529953254965484
+            },
+            "coefficient_edf": {
+              "pass": false,
+              "max_abs": 0.2070715375617056,
+              "max_scaled": 156.0949652754736
+            },
+            "prediction": {
+              "pass": false,
+              "max_abs": 0.07821057675469856,
+              "max_scaled": 1053765.0047097919
+            },
+            "prediction_SE": {
+              "pass": false,
+              "max_abs": 0.006072709555355382,
+              "max_scaled": 197.89715147332646
+            },
+            "terms": {
+              "pass": false,
+              "max_abs": 0.07850113198771391,
+              "max_scaled": 2095200.368439767
+            },
+            "terms_SE": {
+              "pass": false,
+              "max_abs": 0.007860512240924183,
+              "max_scaled": 365.8291141002779
+            },
+            "smooth_edf": {
+              "pass": false,
+              "max_abs": 0.11914308639159099,
+              "max_scaled": 29.571437697712383
+            },
+            "smooth_Ref.df": {
+              "pass": false,
+              "max_abs": 0.06586132220192376,
+              "max_scaled": 14.467294850572769
+            },
+            "smooth_F": {
+              "pass": false,
+              "max_abs": 0.20721773476653382,
+              "max_scaled": 1986.5861986013624
+            },
+            "smooth_p-value": {
+              "pass": false,
+              "max_abs": 0.0016205106653010004,
+              "max_scaled": 16.205106653010002
+            },
+            "check_edf": {
+              "pass": false,
+              "max_abs": 0.11914308639159099,
+              "max_scaled": 29.571437697712383
+            },
+            "check_k-index": {
+              "pass": false,
+              "max_abs": 0.010158024917988895,
+              "max_scaled": 11988.880903050653
+            },
+            "check_p-value": {
+              "pass": false,
+              "max_abs": 0.007499999999999951,
+              "max_scaled": 74.9999999999995
+            }
+          },
+          "public_R_matrix_augmented_QR": {
+            "max_fitted_difference": 0.1287796375913901,
+            "max_beta_difference": 0.7055352093843075,
+            "r_penalized_sse": 110.00888753117695,
+            "qr_penalized_sse": 109.75428430721738,
+            "penalized_sse_excess": 0.25460322395957746,
+            "r_deviance": 105.74139042827028,
+            "qr_deviance": 106.26820159588343,
+            "r_scale": 1.1752829360990726,
+            "qr_scale": 1.1795762392771862,
+            "r_criterion": 1.2801649144253804,
+            "qr_gcv": 1.283142164546412,
+            "r_score_max_abs": 0.36086536861735297,
+            "r_score_normalized": 1.9694254723077245e-09,
+            "qr_score_normalized": 7.32164978221324e-13
+          },
+          "scope": "Stored independent investigation; final outcome is determined by the final XML, not this earlier audit."
+        },
+        "stored_python_minus_R_criterion": 0.0029772501515967775
+      },
+      "Python_criterion": 1.2831421645769767,
+      "criterion_difference_Python_minus_R": 0.0029772501515963334,
+      "raw_run_better_optimum": null,
+      "raw_run_better_optimum_recorded": false,
+      "final_objective": {
+        "reference_smoothing_criterion": 1.2801649144253804,
+        "python_smoothing_criterion": 1.2831421645769767
+      }
+    },
+    {
+      "id": "gam_1161",
+      "module": "gam",
+      "status": "failed",
+      "failure_type": "AssertionError",
+      "family": "gaussian",
+      "link": "identity",
+      "formula": "y ~ f + s(x, bs=\"cr\", k=5)",
+      "failed_field": "newdata_identified_term",
+      "better_optimum": false,
+      "better_optimum_recorded": true,
+      "comparison": {
+        "max_absolute_difference_among_violations": 3.9971367e-09,
+        "max_relative_difference_among_violations": 3.48000073e-06,
+        "relative_tolerance": 1e-06,
+        "absolute_tolerance": 1e-12,
+        "mismatched_elements": 2,
+        "compared_elements": 15,
+        "undefined_R_covariance": false
+      },
+      "selected_R_warnings": [],
+      "original_R_warnings": [],
+      "superseded_R_observations_preserved": 1,
+      "reference_sha256": "d66e44e38777225d9bb3c21bae553d696204e01423a0b51d7bf77a33ec26ed1c",
+      "method": "GCV.Cp",
+      "R_smoothing_parameters": [
+        10846834746984.07
+      ],
+      "R_criterion": 0.7665962687624228,
+      "R_converged": true,
+      "category": "identified_small_term",
+      "severity": "numerical_tolerance_error",
+      "cause": "A very large penalty leaves a nonzero nullspace term whose nearzero evaluations differ beyond the strict relative tolerance. The retained term remains identified and was not waived by a zero-variance limit.",
+      "investigation": {
+        "stored_reference_audit": {
+          "source": "oracle/cache/s2-gam-regular-reference-analysis.json",
+          "R_smoothing_gradient": null,
+          "failed_fields": {
+            "terms": {
+              "pass": false,
+              "max_abs": 4.062284213873779e-09,
+              "max_scaled": 3.4769735999572036
+            }
+          },
+          "public_R_matrix_augmented_QR": {
+            "max_fitted_difference": 1.74632530658414e-11,
+            "max_beta_difference": 1.620775388899709e-11,
+            "r_penalized_sse": 72.94572844799984,
+            "qr_penalized_sse": 72.94572844799984,
+            "penalized_sse_excess": 0.0,
+            "r_deviance": 72.945728447996,
+            "qr_deviance": 72.94572844799602,
+            "r_scale": 0.736825539878334,
+            "qr_scale": 0.736825539878547,
+            "r_criterion": 0.7665962687624228,
+            "qr_gcv": 0.76659626876232,
+            "r_score_max_abs": 7.596396389401977e-05,
+            "r_score_normalized": 1.960887909201222e-12,
+            "qr_score_normalized": 1.8959150574188244e-12
+          },
+          "scope": "Stored independent investigation; final outcome is determined by the final XML, not this earlier audit."
+        },
+        "stored_python_minus_R_criterion": 6.849533162878174e-10
+      },
+      "raw_run_better_optimum": false,
+      "raw_run_better_optimum_recorded": true,
+      "final_objective": {
+        "reference_smoothing_criterion": 0.7665962687624228,
+        "python_smoothing_criterion": 0.7665962694473761
+      }
+    },
+    {
+      "id": "gam_1162",
+      "module": "gam",
+      "status": "failed",
+      "failure_type": "AssertionError",
+      "family": "gaussian",
+      "link": "identity",
+      "formula": "y ~ f + s(x, bs=\"cs\", k=5)",
+      "failed_field": "mapped_identified_coefficients",
+      "better_optimum": false,
+      "better_optimum_recorded": true,
+      "comparison": {
+        "max_absolute_difference_among_violations": 9.61566807e-08,
+        "max_relative_difference_among_violations": 44715.11192825,
+        "relative_tolerance": 1e-05,
+        "absolute_tolerance": 1e-12,
+        "mismatched_elements": 4,
+        "compared_elements": 7,
+        "undefined_R_covariance": false
+      },
+      "selected_R_warnings": [],
+      "original_R_warnings": [],
+      "superseded_R_observations_preserved": 1,
+      "reference_sha256": "3e8ca13eda91f9691e25929e2c2b3dc1f860c525c8c2b77165f6319a521fd61f",
+      "method": "GCV.Cp",
+      "R_smoothing_parameters": [
+        160883388071199.3
+      ],
+      "R_criterion": 0.26015418686094977,
+      "R_converged": true,
+      "category": "finite_small_smooth_coefficients",
+      "severity": "numerical_tolerance_error",
+      "cause": "Python and R stop at different finite values on a shallow GCV shrinkage axis. The small smooth coefficients disagree above tolerance, and identified predictions also fail in stored stronger-reference probes.",
+      "investigation": {
+        "stored_reference_audit": {
+          "source": "oracle/cache/s2-gam-regular-reference-analysis.json",
+          "R_smoothing_gradient": null,
+          "failed_fields": {
+            "beta": {
+              "pass": false,
+              "max_abs": 9.615668073971636e-08,
+              "max_scaled": 96154.61254852718
+            },
+            "covariance": {
+              "pass": false,
+              "max_abs": 8.55606153259446e-09,
+              "max_scaled": 8555.897785400844
+            },
+            "fitted": {
+              "pass": false,
+              "max_abs": 9.133595380017567e-08,
+              "max_scaled": 1.651274070482218
+            },
+            "coefficient_edf": {
+              "pass": false,
+              "max_abs": 7.853271958747883e-07,
+              "max_scaled": 771769.9001407598
+            },
+            "prediction": {
+              "pass": false,
+              "max_abs": 7.589377049033175e-08,
+              "max_scaled": 1.5490771346987395
+            },
+            "terms": {
+              "pass": false,
+              "max_abs": 7.749301955326423e-08,
+              "max_scaled": 77492.88522583846
+            },
+            "terms_SE": {
+              "pass": false,
+              "max_abs": 7.39907066688728e-05,
+              "max_scaled": 2046205.4870555894
+            },
+            "smooth_edf": {
+              "pass": false,
+              "max_abs": 1.2634462045253798e-06,
+              "max_scaled": 1228720.9666342807
+            },
+            "smooth_F": {
+              "pass": false,
+              "max_abs": 2.737547190306785e-07,
+              "max_scaled": 273587.1897868892
+            },
+            "check_edf": {
+              "pass": false,
+              "max_abs": 1.2634462045253798e-06,
+              "max_scaled": 1228720.9666342807
+            }
+          },
+          "public_R_matrix_augmented_QR": {
+            "max_fitted_difference": 6.276101860436256e-11,
+            "max_beta_difference": 7.132833212963874e-11,
+            "r_penalized_sse": 31.757102888992847,
+            "qr_penalized_sse": 31.757102888992847,
+            "penalized_sse_excess": 0.0,
+            "r_deviance": 31.757102888986626,
+            "qr_deviance": 31.757102888986623,
+            "r_scale": 0.2540568231063388,
+            "qr_scale": 0.25405682311195044,
+            "r_criterion": 0.26015418686094977,
+            "qr_gcv": 0.26015418686669606,
+            "r_score_max_abs": 0.013530385625753497,
+            "r_score_normalized": 1.3254426115102618e-10,
+            "qr_score_normalized": 1.900539355750449e-18
+          },
+          "scope": "Stored independent investigation; final outcome is determined by the final XML, not this earlier audit."
+        },
+        "stored_python_minus_R_criterion": 7.068221563599764e-10
+      },
+      "raw_run_better_optimum": false,
+      "raw_run_better_optimum_recorded": true,
+      "final_objective": {
+        "reference_smoothing_criterion": 0.26015418686094977,
+        "python_smoothing_criterion": 0.2601541875677719
+      }
+    },
+    {
+      "id": "gam_1165",
+      "module": "gam",
+      "status": "failed",
+      "failure_type": "AssertionError",
+      "family": "gaussian",
+      "link": "identity",
+      "formula": "y ~ f + te(x, z, bs=c(\"cr\", \"cr\"), k=c(5, 5))",
+      "failed_field": "fitted_values",
+      "better_optimum": false,
+      "better_optimum_recorded": true,
+      "comparison": {
+        "max_absolute_difference_among_violations": 8.83093633e-09,
+        "max_relative_difference_among_violations": 5.60875465e-06,
+        "relative_tolerance": 1e-06,
+        "absolute_tolerance": 1e-12,
+        "mismatched_elements": 2,
+        "compared_elements": 128,
+        "undefined_R_covariance": false
+      },
+      "selected_R_warnings": [],
+      "original_R_warnings": [],
+      "superseded_R_observations_preserved": 1,
+      "reference_sha256": "e5ec176d9ce4205ba3d57851b46553633fd04fee5e6609eb4d83484c4e016771",
+      "method": "GCV.Cp",
+      "R_smoothing_parameters": [
+        757399466031.9404,
+        5464692742068.407
+      ],
+      "R_criterion": 0.6532784225675453,
+      "R_converged": true,
+      "category": "identified_small_fitted_values",
+      "severity": "numerical_tolerance_error",
+      "cause": "Both tensor penalties are extremely large. Two fitted values close to zero differ beyond the strict relative tolerance; stronger independent R controls and starts still fail fitted values and terms.",
+      "investigation": {
+        "stored_reference_audit": {
+          "source": "oracle/cache/s2-gam-regular-reference-analysis.json",
+          "R_smoothing_gradient": null,
+          "failed_fields": {
+            "fitted": {
+              "pass": false,
+              "max_abs": 1.6752937120889655e-08,
+              "max_scaled": 5.603841571111351
+            },
+            "terms": {
+              "pass": false,
+              "max_abs": 1.1313056126876359e-08,
+              "max_scaled": 4.198806529609983
+            }
+          },
+          "public_R_matrix_augmented_QR": {
+            "max_fitted_difference": 1.479711353447044e-10,
+            "max_beta_difference": 1.7884460579153938e-10,
+            "r_penalized_sse": 75.96403157430515,
+            "qr_penalized_sse": 75.96403157430515,
+            "penalized_sse_excess": 0.0,
+            "r_deviance": 75.96403157427794,
+            "qr_deviance": 75.96403157427795,
+            "r_scale": 0.6226559965091909,
+            "qr_scale": 0.6226559965115458,
+            "r_criterion": 0.6532784225675453,
+            "qr_gcv": 0.6532784225706141,
+            "r_score_max_abs": 0.001300149057671618,
+            "r_score_normalized": 2.833080923882637e-11,
+            "qr_score_normalized": 1.1569026130818163e-11
+          },
+          "scope": "Stored independent investigation; final outcome is determined by the final XML, not this earlier audit."
+        },
+        "stored_python_minus_R_criterion": 8.957667940734382e-10
+      },
+      "raw_run_better_optimum": false,
+      "raw_run_better_optimum_recorded": true,
+      "final_objective": {
+        "reference_smoothing_criterion": 0.6532784225675453,
+        "python_smoothing_criterion": 0.6532784234633121
+      }
+    },
+    {
+      "id": "gam_1168",
+      "module": "gam",
+      "status": "failed",
+      "failure_type": "AssertionError",
+      "family": "gaussian",
+      "link": "identity",
+      "formula": "y ~ f + s(x, by=f, bs=\"cr\", k=8)",
+      "failed_field": "mapped_identified_coefficients",
+      "better_optimum": true,
+      "better_optimum_recorded": true,
+      "comparison": {
+        "max_absolute_difference_among_violations": 0.95153918,
+        "max_relative_difference_among_violations": 4.51815857,
+        "relative_tolerance": 1e-05,
+        "absolute_tolerance": 1e-12,
+        "mismatched_elements": 8,
+        "compared_elements": 24,
+        "undefined_R_covariance": false
+      },
+      "selected_R_warnings": [],
+      "original_R_warnings": [],
+      "superseded_R_observations_preserved": 1,
+      "reference_sha256": "01c2cdc685af90fd7e774c26bca921b0e0d5b1c3b33fa4ecc31da134d4e85968",
+      "method": "GCV.Cp",
+      "R_smoothing_parameters": [
+        759666414857.2227,
+        581388895454.0508,
+        0.3460659533890848
+      ],
+      "R_criterion": 0.3857178612762555,
+      "R_converged": true,
+      "category": "different_smoothing_minimum",
+      "severity": "different_estimated_fit",
+      "cause": "Python reaches a lower GCV minimum with a different third factor-smooth fit. A public R fixed-smoothing evaluation agrees with that point, but the automatic R optimizer continues to select the original different minimum.",
+      "investigation": {
+        "independent_R_start": {
+          "old_R_criterion": 0.3857178612762555,
+          "Python_native_criterion": 0.38419698763084775,
+          "new_R_criterion": 0.3857178612762555,
+          "R_minus_Python": 0.001520873645407761,
+          "confirmed": false,
+          "strict_pass": false
+        }
+      },
+      "raw_run_better_optimum": true,
+      "raw_run_better_optimum_recorded": true,
+      "final_objective": {
+        "reference_smoothing_criterion": 0.3857178612762555,
+        "python_smoothing_criterion": 0.38419698763084775
+      }
+    },
+    {
+      "id": "gam_1187",
+      "module": "gam",
+      "status": "failed",
+      "failure_type": "AssertionError",
+      "family": "poisson",
+      "link": "log",
+      "formula": "y ~ f + w + s(x, by=w, bs=\"cr\", k=5)",
+      "failed_field": "mapped_identified_coefficients",
+      "better_optimum": true,
+      "better_optimum_recorded": true,
+      "comparison": {
+        "max_absolute_difference_among_violations": 0.29021834,
+        "max_relative_difference_among_violations": 6.88731135,
+        "relative_tolerance": 1e-05,
+        "absolute_tolerance": 1e-12,
+        "mismatched_elements": 9,
+        "compared_elements": 9,
+        "undefined_R_covariance": false
+      },
+      "selected_R_warnings": [],
+      "original_R_warnings": [],
+      "superseded_R_observations_preserved": 1,
+      "reference_sha256": "23d42fe6d1ff09a70541b2c33f52918eacecc97cd6cb4af0863d34dec1f8296f",
+      "method": "GCV.Cp",
+      "R_smoothing_parameters": [
+        63.92117370307301
+      ],
+      "R_criterion": 0.14027308385342474,
+      "R_converged": true,
+      "category": "different_smoothing_minimum",
+      "severity": "different_estimated_fit",
+      "cause": "Python reaches a lower GCV minimum. A public R start independently confirms its criterion, but an identified summed term still fails after accounting for the common coefficient gauge; the original observation is retained.",
+      "investigation": {
+        "independent_R_start": {
+          "old_R_criterion": 0.14027308385342474,
+          "Python_native_criterion": 0.14007222886216997,
+          "new_R_criterion": 0.1400722283849336,
+          "R_minus_Python": -4.772363615401787e-10,
+          "confirmed": true,
+          "strict_pass": false
+        }
+      },
+      "raw_run_better_optimum": true,
+      "raw_run_better_optimum_recorded": true,
+      "final_objective": {
+        "reference_smoothing_criterion": 0.14027308385342474,
+        "python_smoothing_criterion": 0.14007222886216997
+      }
+    },
+    {
+      "id": "tmb_0037",
+      "module": "tmb",
+      "status": "failed",
+      "failure_type": "AssertionError",
+      "family": "nbinom1",
+      "link": "log",
+      "formula": "y ~ x + f + (1|g)",
+      "failed_field": "cond_fixed_effect_covariance",
+      "better_optimum": false,
+      "better_optimum_recorded": true,
+      "comparison": {
+        "max_absolute_difference_among_violations": 1.19341157e-07,
+        "max_relative_difference_among_violations": 0.00015986,
+        "relative_tolerance": 0.0001,
+        "absolute_tolerance": 1e-12,
+        "mismatched_elements": 2,
+        "compared_elements": 16,
+        "undefined_R_covariance": false
+      },
+      "selected_R_warnings": [],
+      "original_R_warnings": [
+        "Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')",
+        "NaNs produced"
+      ],
+      "superseded_R_observations_preserved": 3,
+      "reference_sha256": "12b60366bae404395303f9a4a3f7294224de4afc01d8e25e40294c0ffcda8c08",
+      "method": "normalized observed-Hessian Laplace",
+      "ziformula": "~0",
+      "dispformula": "~x + f",
+      "R_optimizer_diagnostics": {
+        "convergence": 0,
+        "pdHess": true,
+        "objective": 113.87518101244004
+      },
+      "R_score_max_abs": 3.201902661450148e-06,
+      "R_dispersion_prediction_range": [
+        8.464548666829031e-10,
+        11.654228966724821
+      ],
+      "R_conditional_probability_or_mean_range": [
+        0.8708099491899196,
+        1.4785482134539238
+      ],
+      "R_fixed_effects": {
+        "cond": [
+          0.012012664064642409,
+          0.12351678307076416,
+          0.21152051799657448,
+          0.09925695373860392
+        ],
+        "zi": [],
+        "disp": [
+          -0.6242033088910117,
+          1.3937372981411387,
+          1.1895281745341777,
+          -18.36309506082191
+        ]
+      },
+      "reference_log_likelihood": -113.87518101244004,
+      "python_log_likelihood": -113.8751809555093,
+      "log_likelihood_difference_Python_minus_R": 5.693074456303293e-08,
+      "R_random_covariance_eigenvalues": {
+        "g": [
+          1.4233983647439288e-08
+        ]
+      },
+      "category": "weak_partial_Poisson_limit_covariance",
+      "severity": "numerical_tolerance_error",
+      "cause": "A group-specific NB1 dispersion approaches the Poisson limit along a very weak information direction. The selected R covariance and Python covariance differ in two small conditional cross-covariance entries. Tighter inner controls and an independent Poisson-limit reference did not establish full strict parity.",
+      "investigation": {
+        "independent_public_R_curvature": {
+          "R_covariance_condition": 816715001.4798331,
+          "R_public_information_minimum_eigenvalue": 8.226084069457943e-08,
+          "Python_information_minimum_eigenvalue_at_R": 3.6329533290920674e-08,
+          "cond_covariance_tolerance_ratio_at_R": 1.919954849669845,
+          "source": "oracle/cache/s2-tmb-covariance-finite-handoff.json"
+        }
+      },
+      "raw_run_better_optimum": false,
+      "raw_run_better_optimum_recorded": true,
+      "final_objective": {
+        "reference_log_likelihood": -113.87518101244004,
+        "python_log_likelihood": -113.8751809555093
+      }
+    },
+    {
+      "id": "tmb_0097",
+      "module": "tmb",
+      "status": "failed",
+      "failure_type": "AssertionError",
+      "family": "nbinom1",
+      "link": "log",
+      "formula": "y ~ x + f + (x|g)",
+      "failed_field": "normalized_laplace_log_likelihood",
+      "better_optimum": false,
+      "better_optimum_recorded": true,
+      "comparison": {
+        "undefined_R_covariance": false
+      },
+      "selected_R_warnings": [
+        "Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')",
+        "Model convergence problem; false convergence (8). See vignette('troubleshooting'), help('diagnose')"
+      ],
+      "original_R_warnings": [
+        "Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')",
+        "Model convergence problem; false convergence (8). See vignette('troubleshooting'), help('diagnose')",
+        "NaNs produced"
+      ],
+      "superseded_R_observations_preserved": 3,
+      "reference_sha256": "764020527cb7a1d0fee6e89df044f91448dd21b2764ec37f6919295551d11d3e",
+      "method": "normalized observed-Hessian Laplace",
+      "ziformula": "~1",
+      "dispformula": "~x + f",
+      "R_optimizer_diagnostics": {
+        "convergence": 1,
+        "pdHess": false,
+        "objective": 116.54019171282889
+      },
+      "R_score_max_abs": 18.17731987055654,
+      "R_dispersion_prediction_range": [
+        1.0287571719598376e-16,
+        3.129638220029859
+      ],
+      "R_conditional_probability_or_mean_range": [
+        0.3587011796124104,
+        2.7324530104888005
+      ],
+      "R_fixed_effects": {
+        "cond": [
+          -0.4046416591353696,
+          -0.0884452691896345,
+          0.7044901295459055,
+          0.3764000473610802
+        ],
+        "zi": -19.8363298808178,
+        "disp": [
+          -0.5320253097855969,
+          -0.9900215424543036,
+          0.3492223686452532,
+          -35.04718054088126
+        ]
+      },
+      "python_log_likelihood": -116.57220028006,
+      "reference_log_likelihood": -116.540191712829,
+      "log_likelihood_difference_Python_minus_R": -0.03200856723100287,
+      "R_random_covariance_eigenvalues": {
+        "g": [
+          6.450292308709904e-05,
+          0.2008674501054583
+        ]
+      },
+      "category": "unresolved_extreme_NB1_dispersion_likelihood",
+      "severity": "objective_error",
+      "cause": "The selected R fit has NB1 dispersion near 1e-16 in part of the data, a non-positive-definite Hessian and a large residual score. Python's normalized Laplace likelihood remains lower than the recorded R optimizer objective; no accepted limit certificate resolves this discrepancy.",
+      "investigation": {
+        "stored_NB_stability_probe": {
+          "R_logLik": -116.52681158641332,
+          "Python_logLik": -116.57220028006026,
+          "logLik_difference": -0.04538869364694165,
+          "R_warnings": [
+            "Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')",
+            "Model convergence problem; false convergence (8). See vignette('troubleshooting'), help('diagnose')"
+          ],
+          "Python_warnings": [
+            "Non-positive-definite Hessian",
+            "boundary (singular) fit"
+          ],
+          "source": "oracle/cache/s2-tmb-nb-stability-probe.json",
+          "scope": "Earlier stored probe; the selected-reference objective comes from the final XML."
+        }
+      },
+      "raw_run_better_optimum": null,
+      "raw_run_better_optimum_recorded": false,
+      "final_objective": {
+        "reference_log_likelihood": -116.54019171282889,
+        "python_log_likelihood": -116.57220028006026
+      }
+    },
+    {
+      "id": "tmb_0099",
+      "module": "tmb",
+      "status": "failed",
+      "failure_type": "AssertionError",
+      "family": "binomial",
+      "link": "logit",
+      "formula": "y ~ x + f + (x|g)",
+      "failed_field": "normalized_laplace_log_likelihood",
+      "better_optimum": false,
+      "better_optimum_recorded": true,
+      "comparison": {
+        "undefined_R_covariance": false
+      },
+      "selected_R_warnings": [
+        "Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')",
+        "Model convergence problem; false convergence (8). See vignette('troubleshooting'), help('diagnose')",
+        "NaNs produced"
+      ],
+      "original_R_warnings": [
+        "Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')",
+        "Model convergence problem; false convergence (8). See vignette('troubleshooting'), help('diagnose')",
+        "NaNs produced"
+      ],
+      "superseded_R_observations_preserved": 3,
+      "reference_sha256": "b70ffaee7f1e804f9f79ad61b3a225c28bb66862f762ecccef30f564be3674b6",
+      "method": "normalized observed-Hessian Laplace",
+      "ziformula": "~1",
+      "dispformula": "~x + f",
+      "R_optimizer_diagnostics": {
+        "convergence": 1,
+        "pdHess": false,
+        "objective": 57.92109548843271
+      },
+      "R_score_max_abs": 45127826.97606985,
+      "R_dispersion_prediction_range": [
+        1.0,
+        1.0
+      ],
+      "R_conditional_probability_or_mean_range": [
+        0.6085050691581999,
+        0.9988834113883192
+      ],
+      "R_fixed_effects": {
+        "cond": [
+          3.5272475255657234,
+          1.4529969429997445,
+          -0.43300007874218227,
+          -1.1933158327848732
+        ],
+        "zi": -0.06465010354061071,
+        "disp": []
+      },
+      "python_log_likelihood": -61.3728687929548,
+      "reference_log_likelihood": -57.9210954884327,
+      "log_likelihood_difference_Python_minus_R": -3.4517733045220993,
+      "R_random_covariance_eigenvalues": {
+        "g": [
+          0.017444644469267367,
+          4.511684457881643
+        ]
+      },
+      "category": "unresolved_zero_inflated_binomial_Laplace_fit",
+      "severity": "objective_error",
+      "cause": "The zero-inflated binomial reference reports a non-positive-definite Hessian and a very large score. Tightened public inner-optimizer probes did not resolve the normalized Laplace likelihood gap; the case remains a failure.",
+      "investigation": {},
+      "raw_run_better_optimum": null,
+      "raw_run_better_optimum_recorded": false,
+      "final_objective": {
+        "reference_log_likelihood": -57.92109548843271,
+        "python_log_likelihood": -61.372868792954755
+      }
+    },
+    {
+      "id": "tmb_0266",
+      "module": "tmb",
+      "status": "failed",
+      "failure_type": "AssertionError",
+      "family": "nbinom2",
+      "link": "log",
+      "formula": "y ~ x + f + (1|g)",
+      "failed_field": "normalized_laplace_log_likelihood",
+      "better_optimum": false,
+      "better_optimum_recorded": true,
+      "comparison": {
+        "undefined_R_covariance": false
+      },
+      "selected_R_warnings": [
+        "Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')",
+        "Model convergence problem; false convergence (8). See vignette('troubleshooting'), help('diagnose')",
+        "NaNs produced"
+      ],
+      "original_R_warnings": [
+        "Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')",
+        "Model convergence problem; false convergence (8). See vignette('troubleshooting'), help('diagnose')",
+        "NaNs produced"
+      ],
+      "superseded_R_observations_preserved": 3,
+      "reference_sha256": "b463307955be99b7e682321e7cfa6f490a6db1c825eda934faf6f2a8ae5a0905",
+      "method": "normalized observed-Hessian Laplace",
+      "ziformula": "~z + x",
+      "dispformula": "~x + f",
+      "R_optimizer_diagnostics": {
+        "convergence": 1,
+        "pdHess": false,
+        "objective": 280.0538353518428
+      },
+      "R_score_max_abs": 0.023992976855950032,
+      "R_dispersion_prediction_range": [
+        0.00030820081762635725,
+        7305871376409.285
+      ],
+      "R_conditional_probability_or_mean_range": [
+        0.13894078946201488,
+        6.43497851849202
+      ],
+      "R_fixed_effects": {
+        "cond": [
+          0.10549506122435925,
+          0.12179880851599093,
+          0.5081476287155281,
+          -0.5571643533531722
+        ],
+        "zi": [
+          -1.412388109019912,
+          -0.03319949461414674,
+          0.06109620442222105
+        ],
+        "disp": [
+          18.99285337184599,
+          7.94026197435864,
+          -1.0585847694859778,
+          -18.328552161626412
+        ]
+      },
+      "python_log_likelihood": -280.054736791382,
+      "reference_log_likelihood": -280.053835351843,
+      "log_likelihood_difference_Python_minus_R": -0.0009014395390067875,
+      "R_random_covariance_eigenvalues": {
+        "g": [
+          0.6642768844141664
+        ]
+      },
+      "category": "unresolved_extreme_NB2_dispersion_likelihood",
+      "severity": "objective_error",
+      "cause": "The selected R fit spans NB2 dispersion from approximately 3e-4 to 7e12 and reports nonconvergence. The normalized Laplace likelihood discrepancy exceeds tolerance and no admitted Poisson-limit bound covers this case.",
+      "investigation": {
+        "stored_NB_stability_probe": {
+          "R_logLik": -280.0538353518428,
+          "Python_logLik": -280.0547367913821,
+          "logLik_difference": -0.0009014395392910046,
+          "R_warnings": [
+            "Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')",
+            "Model convergence problem; false convergence (8). See vignette('troubleshooting'), help('diagnose')",
+            "NaNs produced"
+          ],
+          "Python_warnings": [
+            "Non-positive-definite Hessian"
+          ],
+          "source": "oracle/cache/s2-tmb-nb-stability-probe.json",
+          "scope": "Earlier stored probe; the selected-reference objective comes from the final XML."
+        }
+      },
+      "raw_run_better_optimum": null,
+      "raw_run_better_optimum_recorded": false,
+      "final_objective": {
+        "reference_log_likelihood": -280.0538353518428,
+        "python_log_likelihood": -280.0547367913821
+      }
+    },
+    {
+      "id": "tmb_0307",
+      "module": "tmb",
+      "status": "failed",
+      "failure_type": "AssertionError",
+      "family": "nbinom1",
+      "link": "log",
+      "formula": "y ~ x + f + (x|g)",
+      "failed_field": "normalized_laplace_log_likelihood",
+      "better_optimum": false,
+      "better_optimum_recorded": true,
+      "comparison": {
+        "undefined_R_covariance": false
+      },
+      "selected_R_warnings": [
+        "Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')",
+        "Model convergence problem; false convergence (8). See vignette('troubleshooting'), help('diagnose')",
+        "NaNs produced"
+      ],
+      "original_R_warnings": [
+        "Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')",
+        "Model convergence problem; singular convergence (7). See vignette('troubleshooting'), help('diagnose')",
+        "NaNs produced"
+      ],
+      "superseded_R_observations_preserved": 3,
+      "reference_sha256": "7db893651ec3d08fd7a014cc5a984bde2ec3f1edd90d81a8afdc6dd4c6a6c825",
+      "method": "normalized observed-Hessian Laplace",
+      "ziformula": "~0",
+      "dispformula": "~x + f",
+      "R_optimizer_diagnostics": {
+        "convergence": 1,
+        "pdHess": false,
+        "objective": 390.41688071876695
+      },
+      "R_score_max_abs": 0.00021726768292013032,
+      "R_dispersion_prediction_range": [
+        9.898928997355714e-09,
+        2.487091404766609
+      ],
+      "R_conditional_probability_or_mean_range": [
+        0.32288568446317734,
+        8.58719708026266
+      ],
+      "R_fixed_effects": {
+        "cond": [
+          0.5260297925208433,
+          0.5742653010443776,
+          0.41645229841182646,
+          0.014952559679090111
+        ],
+        "zi": [],
+        "disp": [
+          -0.5412299036352982,
+          1.09697010537559,
+          -1.214926328476065,
+          -16.400465635318856
+        ]
+      },
+      "python_log_likelihood": -390.41692149968,
+      "reference_log_likelihood": -390.416880718767,
+      "log_likelihood_difference_Python_minus_R": -4.0780912968330085e-05,
+      "R_random_covariance_eigenvalues": {
+        "g": [
+          0.00010984277948205336,
+          0.13140838870357724
+        ]
+      },
+      "category": "unresolved_extreme_NB1_dispersion_likelihood",
+      "severity": "objective_error",
+      "cause": "A very small group-specific NB1 dispersion accompanies R nonconvergence and indefinite reported curvature. Python's likelihood remains below the selected R optimizer objective beyond tolerance; numerical ill-conditioning is observed but the exact discrepancy remains unresolved.",
+      "investigation": {
+        "stored_NB_stability_probe": {
+          "R_logLik": -390.4168806943376,
+          "Python_logLik": -390.4169214996803,
+          "logLik_difference": -4.080534273498415e-05,
+          "R_warnings": [
+            "Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')",
+            "Model convergence problem; false convergence (8). See vignette('troubleshooting'), help('diagnose')",
+            "NaNs produced"
+          ],
+          "Python_warnings": [
+            "Non-positive-definite Hessian",
+            "boundary (singular) fit"
+          ],
+          "source": "oracle/cache/s2-tmb-nb-stability-probe.json",
+          "scope": "Earlier stored probe; the selected-reference objective comes from the final XML."
+        }
+      },
+      "raw_run_better_optimum": null,
+      "raw_run_better_optimum_recorded": false,
+      "final_objective": {
+        "reference_log_likelihood": -390.41688071876695,
+        "python_log_likelihood": -390.4169214996803
+      }
+    },
+    {
+      "id": "tmb_0319",
+      "module": "tmb",
+      "status": "failed",
+      "failure_type": "AssertionError",
+      "family": "nbinom1",
+      "link": "log",
+      "formula": "y ~ x + f + (x|g)",
+      "failed_field": "normalized_laplace_log_likelihood",
+      "better_optimum": false,
+      "better_optimum_recorded": true,
+      "comparison": {
+        "undefined_R_covariance": false
+      },
+      "selected_R_warnings": [
+        "Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')",
+        "Model convergence problem; false convergence (8). See vignette('troubleshooting'), help('diagnose')",
+        "NaNs produced"
+      ],
+      "original_R_warnings": [
+        "Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')",
+        "Model convergence problem; false convergence (8). See vignette('troubleshooting'), help('diagnose')",
+        "NaNs produced"
+      ],
+      "superseded_R_observations_preserved": 3,
+      "reference_sha256": "5533305cfc6f7ef1ceaa3e1d562d1f4d91be4cb29819bb40a1297bcbbdf91335",
+      "method": "normalized observed-Hessian Laplace",
+      "ziformula": "~z + x",
+      "dispformula": "~x + f",
+      "R_optimizer_diagnostics": {
+        "convergence": 1,
+        "pdHess": false,
+        "objective": 399.99843615841996
+      },
+      "R_score_max_abs": 14982.523952028318,
+      "R_dispersion_prediction_range": [
+        4.184987858250208e-21,
+        1.8208890717001318
+      ],
+      "R_conditional_probability_or_mean_range": [
+        0.2441811168581644,
+        9.860637006628387
+      ],
+      "R_fixed_effects": {
+        "cond": [
+          0.5123174125370835,
+          0.5174731762444961,
+          0.06601041105317453,
+          0.14684010303787323
+        ],
+        "zi": [
+          -0.8921357164055145,
+          -0.06735839713424067,
+          0.22291641674631635
+        ],
+        "disp": [
+          -16.735099266676176,
+          -12.394647374802236,
+          -13.030539439835989,
+          -4.929025638674502
+        ]
+      },
+      "python_log_likelihood": -400.83693401085,
+      "reference_log_likelihood": -399.99843615842,
+      "log_likelihood_difference_Python_minus_R": -0.8384978524299527,
+      "R_random_covariance_eigenvalues": {
+        "g": [
+          0.12899438315964706,
+          0.3093603564402413
+        ]
+      },
+      "category": "unresolved_extreme_NB1_dispersion_likelihood",
+      "severity": "objective_error",
+      "cause": "The selected NB1 reference reaches dispersion near 4e-21 with a large residual score and non-positive-definite Hessian. The recorded normalized Laplace likelihood cannot be matched within tolerance and is not waived.",
+      "investigation": {
+        "stored_NB_stability_probe": {
+          "R_logLik": -399.8406549474048,
+          "Python_logLik": -400.83693401085014,
+          "logLik_difference": -0.9962790634453427,
+          "R_warnings": [
+            "Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')",
+            "Model convergence problem; false convergence (8). See vignette('troubleshooting'), help('diagnose')",
+            "NaNs produced"
+          ],
+          "Python_warnings": [
+            "overflow encountered in power",
+            "invalid value encountered in multiply",
+            "overflow encountered in power",
+            "invalid value encountered in multiply",
+            "overflow encountered in power",
+            "invalid value encountered in multiply",
+            "overflow encountered in power",
+            "invalid value encountered in multiply",
+            "overflow encountered in power",
+            "invalid value encountered in multiply",
+            "overflow encountered in power",
+            "invalid value encountered in multiply",
+            "overflow encountered in power",
+            "invalid value encountered in multiply",
+            "overflow encountered in power",
+            "invalid value encountered in multiply",
+            "overflow encountered in power",
+            "invalid value encountered in multiply",
+            "overflow encountered in power",
+            "invalid value encountered in multiply",
+            "overflow encountered in power",
+            "invalid value encountered in multiply",
+            "overflow encountered in power",
+            "invalid value encountered in multiply",
+            "overflow encountered in power",
+            "invalid value encountered in multiply",
+            "overflow encountered in power",
+            "invalid value encountered in multiply",
+            "Non-positive-definite Hessian"
+          ],
+          "source": "oracle/cache/s2-tmb-nb-stability-probe.json",
+          "scope": "Earlier stored probe; the selected-reference objective comes from the final XML."
+        }
+      },
+      "raw_run_better_optimum": null,
+      "raw_run_better_optimum_recorded": false,
+      "final_objective": {
+        "reference_log_likelihood": -399.99843615841996,
+        "python_log_likelihood": -400.8369340108497
+      }
+    },
+    {
+      "id": "tmb_0339",
+      "module": "tmb",
+      "status": "failed",
+      "failure_type": "AssertionError",
+      "family": "binomial",
+      "link": "logit",
+      "formula": "y ~ x + f + (1|g)",
+      "failed_field": "cond_fixed_effect_coefficients",
+      "better_optimum": false,
+      "better_optimum_recorded": true,
+      "comparison": {
+        "max_absolute_difference_among_violations": 0.57173582,
+        "max_relative_difference_among_violations": 0.02601393,
+        "relative_tolerance": 1e-05,
+        "absolute_tolerance": 1e-12,
+        "mismatched_elements": 3,
+        "compared_elements": 4,
+        "undefined_R_covariance": false
+      },
+      "selected_R_warnings": [],
+      "original_R_warnings": [
+        "Model convergence problem; singular convergence (7). See vignette('troubleshooting'), help('diagnose')"
+      ],
+      "superseded_R_observations_preserved": 3,
+      "reference_sha256": "01635f6f229bc54cd6b92b519cfca2d8ed34ec8ae3d39a8f5572f8a78b1891ed",
+      "method": "normalized observed-Hessian Laplace",
+      "ziformula": "~z + x",
+      "dispformula": "~1",
+      "R_optimizer_diagnostics": {
+        "convergence": 0,
+        "pdHess": true,
+        "objective": 65.06423568013946
+      },
+      "R_score_max_abs": 3.5736080200576836e-07,
+      "R_dispersion_prediction_range": [
+        1.0,
+        1.0
+      ],
+      "R_conditional_probability_or_mean_range": [
+        0.780694386994432,
+        0.9999999999843174
+      ],
+      "R_fixed_effects": {
+        "cond": [
+          24.6827200528038,
+          0.14990202175114703,
+          -21.978064001200497,
+          -23.23478549048067
+        ],
+        "zi": [
+          0.050638696373450226,
+          0.08915665220607912,
+          -0.15376056602425658
+        ],
+        "disp": []
+      },
+      "reference_log_likelihood": -65.06423568013946,
+      "python_log_likelihood": -65.06423568013987,
+      "log_likelihood_difference_Python_minus_R": -4.121147867408581e-13,
+      "R_random_covariance_eigenvalues": {
+        "g": [
+          1.5093772137857886e-54
+        ]
+      },
+      "category": "binomial_mixture_conditional_separation",
+      "severity": "nonregular_parameter_error",
+      "cause": "Conditional binomial probabilities approach one along a weak coefficient direction in the zero-inflated mixture. R and Python stop at different large finite logit coefficients despite practically equal likelihoods; no strict coefficient-limit comparison was accepted.",
+      "investigation": {
+        "stored_identified_field_audit": {
+          "source": "oracle/cache/s2-tmb-interior-reference-audit.json",
+          "Python_information_eigenvalues": [
+            3.304059220776847e-13,
+            0.08456401377143193,
+            0.4016888970597774,
+            0.5435722695494973,
+            0.7341718096711157,
+            11.663020196366743,
+            13.953673646034877,
+            22.513535061887055
+          ],
+          "Python_score_max_abs": 4.4595577231021366e-13,
+          "R_score_max_abs": 3.5736080200576836e-07,
+          "failed_fields": {
+            "cond_beta": {
+              "max_abs": 0.5717358249581217,
+              "worst_ratio": 2601.3930166024243,
+              "index": [
+                2
+              ],
+              "Python": -21.406328176487463,
+              "R": -21.978064001200497
+            },
+            "cond_cov": {
+              "max_abs": 413656655357.25134,
+              "worst_ratio": 34346.63790399971,
+              "index": [
+                1,
+                3
+              ],
+              "Python": -27.68384841520776,
+              "R": 11.370706908288623
+            }
+          },
+          "scope": "Stored investigation; final outcome is determined by the final XML."
+        }
+      },
+      "raw_run_better_optimum": false,
+      "raw_run_better_optimum_recorded": true,
+      "final_objective": {
+        "reference_log_likelihood": -65.06423568013946,
+        "python_log_likelihood": -65.06423568013987
+      }
+    },
+    {
+      "id": "tmb_0357",
+      "module": "tmb",
+      "status": "failed",
+      "failure_type": "AssertionError",
+      "family": "binomial",
+      "link": "logit",
+      "formula": "y ~ x + f + (1|g)",
+      "failed_field": "cond_fixed_effect_coefficients",
+      "better_optimum": false,
+      "better_optimum_recorded": true,
+      "comparison": {
+        "max_absolute_difference_among_violations": 0.03726416,
+        "max_relative_difference_among_violations": 0.00136559,
+        "relative_tolerance": 1e-05,
+        "absolute_tolerance": 1e-12,
+        "mismatched_elements": 1,
+        "compared_elements": 4,
+        "undefined_R_covariance": false
+      },
+      "selected_R_warnings": [],
+      "original_R_warnings": [],
+      "superseded_R_observations_preserved": 3,
+      "reference_sha256": "382b309d631349c0440236b0dfb1888ba1bc2a6f5fa0b6093fa6266ae101c31d",
+      "method": "normalized observed-Hessian Laplace",
+      "ziformula": "~z + x",
+      "dispformula": "~x",
+      "R_optimizer_diagnostics": {
+        "convergence": 0,
+        "pdHess": true,
+        "objective": 84.04665253409149
+      },
+      "R_score_max_abs": 9.435063842678559e-12,
+      "R_dispersion_prediction_range": [
+        1.0,
+        1.0
+      ],
+      "R_conditional_probability_or_mean_range": [
+        0.6925587366682372,
+        0.9999999999994125
+      ],
+      "R_fixed_effects": {
+        "cond": [
+          0.8445858601558159,
+          -0.023225113281788053,
+          0.18156443206556136,
+          27.288038268275503
+        ],
+        "zi": [
+          -0.40157976340343404,
+          0.5562665888057418,
+          -0.40386045050171643
+        ],
+        "disp": []
+      },
+      "reference_log_likelihood": -84.04665253409149,
+      "python_log_likelihood": -84.04665253409144,
+      "log_likelihood_difference_Python_minus_R": 5.684341886080802e-14,
+      "R_random_covariance_eigenvalues": {
+        "g": [
+          2.3770883338730575e-20
+        ]
+      },
+      "category": "binomial_mixture_conditional_separation",
+      "severity": "nonregular_parameter_error",
+      "cause": "A factor's conditional binomial probability approaches one while the mixture absorbs observed zeros. A very weak information direction allows different large finite coefficient stopping values; the coefficient comparison still fails.",
+      "investigation": {
+        "stored_identified_field_audit": {
+          "source": "oracle/cache/s2-tmb-interior-reference-audit.json",
+          "Python_information_eigenvalues": [
+            1.1749697684344575e-12,
+            1.028372709662497,
+            1.440564260440044,
+            2.0828337991723864,
+            2.436729437080863,
+            9.879527183628978,
+            14.725207718048079,
+            24.087545978561398
+          ],
+          "Python_score_max_abs": 1.1718812057820154e-12,
+          "R_score_max_abs": 9.435063842678559e-12,
+          "failed_fields": {
+            "cond_beta": {
+              "max_abs": 0.037264156118283154,
+              "worst_ratio": 136.55857418320576,
+              "index": [
+                3
+              ],
+              "Python": 27.25077411215722,
+              "R": 27.288038268275503
+            },
+            "cond_cov": {
+              "max_abs": 34521482284.59717,
+              "worst_ratio": 2574.897715287087,
+              "index": [
+                3,
+                1
+              ],
+              "Python": -0.6681555645598497,
+              "R": -0.5313407529133909
+            }
+          },
+          "scope": "Stored investigation; final outcome is determined by the final XML."
+        }
+      },
+      "raw_run_better_optimum": false,
+      "raw_run_better_optimum_recorded": true,
+      "final_objective": {
+        "reference_log_likelihood": -84.04665253409149,
+        "python_log_likelihood": -84.04665253409144
+      }
+    },
+    {
+      "id": "tmb_0393",
+      "module": "tmb",
+      "status": "failed",
+      "failure_type": "AssertionError",
+      "family": "binomial",
+      "link": "logit",
+      "formula": "y ~ x + f + (x|g)",
+      "failed_field": "normalized_laplace_log_likelihood",
+      "better_optimum": false,
+      "better_optimum_recorded": true,
+      "comparison": {
+        "undefined_R_covariance": false
+      },
+      "selected_R_warnings": [
+        "Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')",
+        "Model convergence problem; false convergence (8). See vignette('troubleshooting'), help('diagnose')",
+        "NaNs produced"
+      ],
+      "original_R_warnings": [
+        "Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')",
+        "Model convergence problem; false convergence (8). See vignette('troubleshooting'), help('diagnose')",
+        "NaNs produced"
+      ],
+      "superseded_R_observations_preserved": 3,
+      "reference_sha256": "5de0aeb4f635e71e206fc1b38137e7b812b961a97cb5b641582d1101fc8c4f5a",
+      "method": "normalized observed-Hessian Laplace",
+      "ziformula": "~z + x",
+      "dispformula": "~1",
+      "R_optimizer_diagnostics": {
+        "convergence": 1,
+        "pdHess": false,
+        "objective": 60.20790421068792
+      },
+      "R_score_max_abs": 1958386897.5948884,
+      "R_dispersion_prediction_range": [
+        1.0,
+        1.0
+      ],
+      "R_conditional_probability_or_mean_range": [
+        0.020361392714187958,
+        0.9943957866531827
+      ],
+      "R_fixed_effects": {
+        "cond": [
+          2.3894984363666336,
+          1.7523894220746825,
+          -0.2074299481728931,
+          -1.445363818060321
+        ],
+        "zi": [
+          -0.7296698421850524,
+          0.9144883835571146,
+          0.427506219292197
+        ],
+        "disp": []
+      },
+      "python_log_likelihood": -60.3879181459939,
+      "reference_log_likelihood": -60.2079042106879,
+      "log_likelihood_difference_Python_minus_R": -0.1800139353060004,
+      "R_random_covariance_eigenvalues": {
+        "g": [
+          0.9867391754372815,
+          3.117652862075885
+        ]
+      },
+      "category": "unresolved_zero_inflated_binomial_Laplace_fit",
+      "severity": "objective_error",
+      "cause": "The selected zero-inflated binomial reference reports a non-positive-definite Hessian and a score near 2e9. Its normalized Laplace objective is better than Python's by more than tolerance; unsuccessful stronger-inner probes are retained and do not resolve the failure.",
+      "investigation": {},
+      "raw_run_better_optimum": null,
+      "raw_run_better_optimum_recorded": false,
+      "final_objective": {
+        "reference_log_likelihood": -60.20790421068792,
+        "python_log_likelihood": -60.387918145993886
+      }
+    },
+    {
+      "id": "tmb_0416",
+      "module": "tmb",
+      "status": "failed",
+      "failure_type": "AssertionError",
+      "family": "nbinom2",
+      "link": "log",
+      "formula": "y ~ x + f + (x|g)",
+      "failed_field": "cond_fixed_effect_coefficients",
+      "better_optimum": true,
+      "better_optimum_recorded": true,
+      "comparison": {
+        "max_absolute_difference_among_violations": 8.34656417e-07,
+        "max_relative_difference_among_violations": 8.44829638e-05,
+        "relative_tolerance": 1e-05,
+        "absolute_tolerance": 1e-12,
+        "mismatched_elements": 1,
+        "compared_elements": 4,
+        "undefined_R_covariance": false
+      },
+      "selected_R_warnings": [],
+      "original_R_warnings": [
+        "Model convergence problem; singular convergence (7). See vignette('troubleshooting'), help('diagnose')"
+      ],
+      "superseded_R_observations_preserved": 3,
+      "reference_sha256": "48cc43e3f584616f814bcd96aa26732b6a46cbc4d0470a8dcb9a6fb1b09eb16d",
+      "method": "normalized observed-Hessian Laplace",
+      "ziformula": "~0",
+      "dispformula": "~x + f",
+      "R_optimizer_diagnostics": {
+        "convergence": 0,
+        "pdHess": true,
+        "objective": 251.5629229057412
+      },
+      "R_score_max_abs": 1.4874635601014319e-06,
+      "R_dispersion_prediction_range": [
+        0.2631850153365758,
+        163734045.56214586
+      ],
+      "R_conditional_probability_or_mean_range": [
+        0.6205908098207124,
+        9.837985213630406
+      ],
+      "R_fixed_effects": {
+        "cond": [
+          0.6791004798733609,
+          0.5356457135701249,
+          0.1780180455000152,
+          0.009879582583308465
+        ],
+        "zi": [],
+        "disp": [
+          0.7657062171264455,
+          1.5183432924660167,
+          0.7357150872307076,
+          16.077731869176166
+        ]
+      },
+      "reference_log_likelihood": -251.5629229057412,
+      "python_log_likelihood": -251.56292091760167,
+      "log_likelihood_difference_Python_minus_R": 1.9881395303400495e-06,
+      "R_random_covariance_eigenvalues": {
+        "g": [
+          4.026190338694314e-08,
+          0.19887951345848248
+        ]
+      },
+      "category": "unresolved_small_conditional_coefficient",
+      "severity": "numerical_tolerance_error",
+      "cause": "The selected correlated NB2 fit has weak dispersion and correlation directions. A small identified conditional coefficient differs beyond tolerance; a public R restart emits warnings and does not establish strict equality to the original selected fields.",
+      "investigation": {
+        "stored_identified_field_audit": {
+          "source": "oracle/cache/s2-tmb-interior-reference-audit.json",
+          "Python_information_eigenvalues": [
+            0.0,
+            2.230776306647329e-12,
+            0.005278397082008795,
+            1.3629192193871997,
+            3.454659218981926,
+            8.608971756362507,
+            11.353685955741701,
+            18.686658291599596,
+            44.7710665850024,
+            83.92380581388373,
+            149.6995510153782
+          ],
+          "Python_score_max_abs": 2.260535891042264e-12,
+          "R_score_max_abs": 1.4874635601014319e-06,
+          "failed_fields": {
+            "cond_beta": {
+              "max_abs": 2.109623037038766e-06,
+              "worst_ratio": 8.448210864545032,
+              "index": [
+                3
+              ],
+              "Python": 0.009880417239725851,
+              "R": 0.009879582583308465
+            },
+            "cond_cov": {
+              "max_abs": 5.687145455506026e-06,
+              "worst_ratio": 71.75328586334442,
+              "index": [
+                3,
+                1
+              ],
+              "Python": -0.0002723977258941328,
+              "R": -0.00027045703603878257
+            },
+            "disp_beta": {
+              "max_abs": 11.487204136475729,
+              "worst_ratio": 71447.91416164118,
+              "index": [
+                3
+              ],
+              "Python": 27.564936005651894,
+              "R": 16.077731869176166
+            },
+            "disp_cov": {
+              "max_abs": 332.25895894611386,
+              "worst_ratio": 9999.99999969903,
+              "index": [
+                3,
+                3
+              ],
+              "Python": 5.890334169474653e-19,
+              "R": 332.25895894611386
+            },
+            "disp_p": {
+              "max_abs": 0.37775720733724244,
+              "worst_ratio": 3777.5720733724243,
+              "index": [
+                3
+              ],
+              "Python": 0.0,
+              "R": 0.37775720733724244
+            },
+            "response_pred": {
+              "max_abs": 1.9843291278576203e-05,
+              "worst_ratio": 10.893020769321344,
+              "index": [
+                52
+              ],
+              "Python": 0.620597569940186,
+              "R": 0.6205908098207124
+            },
+            "cond_pred": {
+              "max_abs": 1.9843291278576203e-05,
+              "worst_ratio": 10.893020769321344,
+              "index": [
+                52
+              ],
+              "Python": 0.620597569940186,
+              "R": 0.6205908098207124
+            },
+            "disp_pred": {
+              "max_abs": 15957521497553.582,
+              "worst_ratio": 97460008654.686,
+              "index": [
+                65
+              ],
+              "Python": 15957685231599.145,
+              "R": 163734045.56214586
+            },
+            "g_cov": {
+              "max_abs": 1.7932179404989146e-06,
+              "worst_ratio": 5.584933747514501,
+              "index": [
+                0,
+                1
+              ],
+              "Python": 0.0028529240640141245,
+              "R": 0.002851331608616559
+            },
+            "g_ranef": {
+              "max_abs": 5.435375681461449e-06,
+              "worst_ratio": 5.781581423725752,
+              "index": [
+                2,
+                1
+              ],
+              "Python": -0.003357985598917562,
+              "R": -0.003356045268237978
+            }
+          },
+          "scope": "Stored investigation; final outcome is determined by the final XML."
+        }
+      },
+      "raw_run_better_optimum": true,
+      "raw_run_better_optimum_recorded": true,
+      "final_objective": {
+        "reference_log_likelihood": -251.5629229057412,
+        "python_log_likelihood": -251.56292091760167
+      }
+    },
+    {
+      "id": "tmb_0538",
+      "module": "tmb",
+      "status": "failed",
+      "failure_type": "AssertionError",
+      "family": "beta",
+      "link": "logit",
+      "formula": "y ~ x + f + (x|g) + offset(o)",
+      "failed_field": "normalized_laplace_log_likelihood",
+      "better_optimum": false,
+      "better_optimum_recorded": true,
+      "comparison": {
+        "undefined_R_covariance": false
+      },
+      "selected_R_warnings": [
+        "Model convergence problem; false convergence (8). See vignette('troubleshooting'), help('diagnose')"
+      ],
+      "original_R_warnings": [
+        "Model convergence problem; singular convergence (7). See vignette('troubleshooting'), help('diagnose')"
+      ],
+      "superseded_R_observations_preserved": 3,
+      "reference_sha256": "a660b89b74aa244ef011b2730b1d0e794eda3103e117068cebca49975ac60c44",
+      "method": "normalized observed-Hessian Laplace",
+      "ziformula": "~z + x",
+      "dispformula": "~x + f",
+      "R_optimizer_diagnostics": {
+        "convergence": 1,
+        "pdHess": true,
+        "objective": 28.380452339011622
+      },
+      "R_score_max_abs": 3.919890009584925e-06,
+      "R_dispersion_prediction_range": [
+        1.3273805353986148,
+        12.736609871632218
+      ],
+      "R_conditional_probability_or_mean_range": [
+        0.11679365182101223,
+        0.8668148617349716
+      ],
+      "R_fixed_effects": {
+        "cond": [
+          0.11284342911737502,
+          0.17344799427714222,
+          0.09710947803767798,
+          0.23308228735288902
+        ],
+        "zi": [
+          -1.5484464889917604,
+          0.8812983179591292,
+          0.15621419526390457
+        ],
+        "disp": [
+          0.8295358169537602,
+          0.39492913299409943,
+          1.1696832217871902,
+          0.004243446059055848
+        ]
+      },
+      "python_log_likelihood": -28.3804585257733,
+      "reference_log_likelihood": -28.3804523390116,
+      "log_likelihood_difference_Python_minus_R": -6.186761698501186e-06,
+      "R_random_covariance_eigenvalues": {
+        "g": [
+          1.3421025316272432e-11,
+          0.5716143388074286
+        ]
+      },
+      "category": "unresolved_rank_one_Laplace_likelihood",
+      "severity": "objective_error",
+      "cause": "The beta reference has a nearly rank-one random covariance and reports false convergence. Its normalized Laplace objective exceeds Python's by more than tolerance, so the covariance-boundary interpretation does not resolve the likelihood comparison.",
+      "investigation": {},
+      "raw_run_better_optimum": null,
+      "raw_run_better_optimum_recorded": false,
+      "final_objective": {
+        "reference_log_likelihood": -28.380452339011622,
+        "python_log_likelihood": -28.380458525773303
+      }
+    },
+    {
+      "id": "tmb_0560",
+      "module": "tmb",
+      "status": "failed",
+      "failure_type": "AssertionError",
+      "family": "nbinom2",
+      "link": "log",
+      "formula": "y ~ x + f + (1|g)",
+      "failed_field": "runtime_warning_correspondence",
+      "better_optimum": true,
+      "better_optimum_recorded": true,
+      "comparison": {
+        "undefined_R_covariance": false
+      },
+      "selected_R_warnings": [
+        "Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')",
+        "Model convergence problem; false convergence (8). See vignette('troubleshooting'), help('diagnose')",
+        "NaNs produced"
+      ],
+      "original_R_warnings": [
+        "Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')",
+        "Model convergence problem; false convergence (8). See vignette('troubleshooting'), help('diagnose')"
+      ],
+      "superseded_R_observations_preserved": 3,
+      "reference_sha256": "5f49cafdc5050794399235c96d034305e1ac4290612e5ca7006402d73ed15812",
+      "method": "normalized observed-Hessian Laplace",
+      "ziformula": "~0",
+      "dispformula": "~x",
+      "R_optimizer_diagnostics": {
+        "convergence": 1,
+        "pdHess": false,
+        "objective": 219.66465993045261
+      },
+      "R_score_max_abs": 111.43846792784883,
+      "R_dispersion_prediction_range": [
+        0.6411356189737721,
+        2.739327908091174e+18
+      ],
+      "R_conditional_probability_or_mean_range": [
+        0.05073949919756285,
+        3.238382565474503
+      ],
+      "R_fixed_effects": {
+        "cond": [
+          -0.40220446160641987,
+          0.5827846605522833,
+          0.3385608661328799,
+          -1.0236188077865205
+        ],
+        "zi": [],
+        "disp": [
+          20.76729940117931,
+          15.620083846941975
+        ]
+      },
+      "reference_log_likelihood": -219.66465993045261,
+      "python_log_likelihood": -219.53182523387622,
+      "log_likelihood_difference_Python_minus_R": 0.13283469657639557,
+      "R_random_covariance_eigenvalues": {
+        "g": [
+          0.44080958836973216
+        ]
+      },
+      "category": "warning_and_identified_numeric_discrepancy",
+      "severity": "diagnostic_and_numerical_error",
+      "cause": "The NB2 R fit reports false convergence with a large residual dispersion score, while Python finds a better stationary fit without a corresponding warning. A public R start confirms the Python likelihood but still reports poor curvature and substantial dispersion scores; strict identified-field and warning equivalence remains unresolved.",
+      "investigation": {
+        "stored_warning_or_curvature_audit": {
+          "Python_warnings": [],
+          "Python_converged": true,
+          "Python_pd_hessian": true,
+          "Python_score_max": 8.428769834867289e-12,
+          "Python_information_eigenvalues": [
+            0.0021377035013051635,
+            0.6716488561591363,
+            8.086692196947784,
+            10.677190755904924,
+            14.594171077613446,
+            46.273555020278515,
+            77.53855739781243
+          ],
+          "logLik_delta": 0.13283469657639557,
+          "all_strict_identified_fields_pass": false,
+          "source": "oracle/cache/s2-tmb-remaining-audit.json",
+          "rejected_identified_comparison": {
+            "max_absolute_difference_among_violations": 0.01819276,
+            "max_relative_difference_among_violations": 0.05373556,
+            "relative_tolerance": 1e-05,
+            "absolute_tolerance": 1e-12,
+            "mismatched_elements": 4,
+            "compared_elements": 4,
+            "undefined_R_covariance": false
+          }
+        },
+        "independent_public_R_start": {
+          "R_logLik": -219.66465993045261,
+          "Python_logLik": -219.53182523387622,
+          "R_public_start_logLik": -219.5318252338757,
+          "R_start_minus_Python": 5.115907697472721e-13,
+          "confirmed": true,
+          "R_public_start_warnings": [
+            "Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')",
+            "Model convergence problem; false convergence (8). See vignette('troubleshooting'), help('diagnose')"
+          ],
+          "R_score_max_abs": 0.20866458326712087,
+          "R_pdHess": false,
+          "source": "oracle/cache/s2-tmb-additional-start-confirmation.json"
+        }
+      },
+      "raw_run_better_optimum": true,
+      "raw_run_better_optimum_recorded": true,
+      "final_objective": {
+        "reference_log_likelihood": -219.66465993045261,
+        "python_log_likelihood": -219.53182523387622
+      }
+    },
+    {
+      "id": "tmb_0584",
+      "module": "tmb",
+      "status": "failed",
+      "failure_type": "AssertionError",
+      "family": "nbinom2",
+      "link": "log",
+      "formula": "y ~ x + f + (1|g)",
+      "failed_field": "runtime_warning_correspondence",
+      "better_optimum": false,
+      "better_optimum_recorded": true,
+      "comparison": {
+        "undefined_R_covariance": false
+      },
+      "selected_R_warnings": [
+        "Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')",
+        "Model convergence problem; false convergence (8). See vignette('troubleshooting'), help('diagnose')",
+        "NaNs produced"
+      ],
+      "original_R_warnings": [
+        "Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')",
+        "Model convergence problem; singular convergence (7). See vignette('troubleshooting'), help('diagnose')",
+        "NaNs produced"
+      ],
+      "superseded_R_observations_preserved": 3,
+      "reference_sha256": "96d1fa95229467efd5948b6729fdf7e2b4f17bb1274abb333d22139398a73148",
+      "method": "normalized observed-Hessian Laplace",
+      "ziformula": "~1",
+      "dispformula": "~x + f",
+      "R_optimizer_diagnostics": {
+        "convergence": 1,
+        "pdHess": false,
+        "objective": 377.04442071057963
+      },
+      "R_score_max_abs": 0.0005103966879752,
+      "R_dispersion_prediction_range": [
+        1.6377010084026278,
+        80305912832.5184
+      ],
+      "R_conditional_probability_or_mean_range": [
+        0.42892776906193975,
+        7.611922166032378
+      ],
+      "R_fixed_effects": {
+        "cond": [
+          0.9382460969791702,
+          0.39754529721644866,
+          0.1040565828653378,
+          0.040036981762325535
+        ],
+        "zi": -1.0753012556286505,
+        "disp": [
+          12.76071013746038,
+          -8.87752952470483,
+          0.8662425975570132,
+          0.6828348239626052
+        ]
+      },
+      "reference_log_likelihood": -377.04442071057963,
+      "python_log_likelihood": -377.04441994610517,
+      "log_likelihood_difference_Python_minus_R": 7.64474464176601e-07,
+      "R_random_covariance_eigenvalues": {
+        "g": [
+          0.47764448699847134
+        ]
+      },
+      "category": "warning_and_identified_numeric_discrepancy",
+      "severity": "diagnostic_and_numerical_error",
+      "cause": "R emits a false-convergence warning while Python has a stationary positive-curvature fit and emits no corresponding warning. Stored strict audits also reject conditional coefficients, so this is not a metadata-only exception.",
+      "investigation": {
+        "stored_warning_or_curvature_audit": {
+          "Python_warnings": [],
+          "Python_converged": true,
+          "Python_pd_hessian": true,
+          "Python_score_max": 1.665619031587795e-11,
+          "Python_information_eigenvalues": [
+            0.00311947732050003,
+            0.21947071311550798,
+            0.5357316761601879,
+            7.4845260521271415,
+            10.389661833699412,
+            13.32407491477377,
+            21.45036399266132,
+            37.08994642986272,
+            86.93249025709487,
+            209.46623516077463
+          ],
+          "logLik_delta": 7.64474464176601e-07,
+          "all_strict_identified_fields_pass": false,
+          "source": "oracle/cache/s2-tmb-remaining-audit.json",
+          "rejected_identified_comparison": {
+            "max_absolute_difference_among_violations": 4.5303023e-05,
+            "max_relative_difference_among_violations": 0.00113153,
+            "relative_tolerance": 1e-05,
+            "absolute_tolerance": 1e-12,
+            "mismatched_elements": 2,
+            "compared_elements": 4,
+            "undefined_R_covariance": false
+          }
+        }
+      },
+      "raw_run_better_optimum": false,
+      "raw_run_better_optimum_recorded": true,
+      "final_objective": {
+        "reference_log_likelihood": -377.04442071057963,
+        "python_log_likelihood": -377.04441994610517
+      }
+    },
+    {
+      "id": "tmb_0631",
+      "module": "tmb",
+      "status": "failed",
+      "failure_type": "AssertionError",
+      "family": "nbinom1",
+      "link": "log",
+      "formula": "y ~ x + f + (x|g)",
+      "failed_field": "normalized_laplace_log_likelihood",
+      "better_optimum": false,
+      "better_optimum_recorded": true,
+      "comparison": {
+        "undefined_R_covariance": false
+      },
+      "selected_R_warnings": [
+        "NA/NaN function evaluation",
+        "Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')",
+        "Model convergence problem; false convergence (8). See vignette('troubleshooting'), help('diagnose')",
+        "NaNs produced"
+      ],
+      "original_R_warnings": [
+        "NA/NaN function evaluation",
+        "Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')",
+        "Model convergence problem; false convergence (8). See vignette('troubleshooting'), help('diagnose')",
+        "NaNs produced"
+      ],
+      "superseded_R_observations_preserved": 2,
+      "reference_sha256": "5aeabfa1aabb7aff10379f9fd300f0cc88b9e182d3aadbd0e87fda2dfa799fe4",
+      "method": "normalized observed-Hessian Laplace",
+      "ziformula": "~0",
+      "dispformula": "~x + f",
+      "R_optimizer_diagnostics": {
+        "convergence": 1,
+        "pdHess": false,
+        "objective": 316.8313747906366
+      },
+      "R_score_max_abs": 1231102991025398.2,
+      "R_dispersion_prediction_range": [
+        9.615961786025065e-35,
+        2.012832756742994
+      ],
+      "R_conditional_probability_or_mean_range": [
+        0.52324556601983,
+        6.574664194008182
+      ],
+      "R_fixed_effects": {
+        "cond": [
+          0.7131946591470586,
+          0.09944450823733522,
+          -0.018388075635722805,
+          -0.7621240008154946
+        ],
+        "zi": [],
+        "disp": [
+          -0.8528272405537709,
+          -0.7396227747415186,
+          0.5344895593907264,
+          -76.47528227754287
+        ]
+      },
+      "python_log_likelihood": -317.470333018316,
+      "reference_log_likelihood": -316.831374790637,
+      "log_likelihood_difference_Python_minus_R": -0.6389582276789838,
+      "R_random_covariance_eigenvalues": {
+        "g": [
+          1.6817081494465143e-05,
+          0.24365816076825958
+        ]
+      },
+      "category": "unresolved_extreme_NB1_dispersion_likelihood",
+      "severity": "objective_error",
+      "cause": "The selected NB1 reference reaches dispersion near 1e-34 and reports a score above 1e15, nonconvergence and indefinite curvature. The likelihood gap remains unresolved and the original observation is retained.",
+      "investigation": {
+        "stored_NB_stability_probe": {
+          "R_logLik": -316.83137478886533,
+          "Python_logLik": -317.4703330183161,
+          "logLik_difference": -0.6389582294507932,
+          "R_warnings": [
+            "NA/NaN function evaluation",
+            "Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')",
+            "Model convergence problem; false convergence (8). See vignette('troubleshooting'), help('diagnose')",
+            "NaNs produced"
+          ],
+          "Python_warnings": [
+            "Non-positive-definite Hessian",
+            "boundary (singular) fit"
+          ],
+          "source": "oracle/cache/s2-tmb-nb-stability-probe.json",
+          "scope": "Earlier stored probe; the selected-reference objective comes from the final XML."
+        }
+      },
+      "raw_run_better_optimum": null,
+      "raw_run_better_optimum_recorded": false,
+      "final_objective": {
+        "reference_log_likelihood": -316.8313747906366,
+        "python_log_likelihood": -317.4703330183161
+      }
+    },
+    {
+      "id": "tmb_0643",
+      "module": "tmb",
+      "status": "failed",
+      "failure_type": "AssertionError",
+      "family": "nbinom1",
+      "link": "log",
+      "formula": "y ~ x + f + (x|g)",
+      "failed_field": "normalized_laplace_log_likelihood",
+      "better_optimum": false,
+      "better_optimum_recorded": true,
+      "comparison": {
+        "undefined_R_covariance": false
+      },
+      "selected_R_warnings": [
+        "Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')",
+        "Model convergence problem; function evaluation limit reached without convergence (9). See vignette('troubleshooting'), help('diagnose')"
+      ],
+      "original_R_warnings": [
+        "Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')",
+        "Model convergence problem; false convergence (8). See vignette('troubleshooting'), help('diagnose')"
+      ],
+      "superseded_R_observations_preserved": 2,
+      "reference_sha256": "83c03c4d2cc23a73e2bd885e43f98fd9db033199e530074af44153df13153ad2",
+      "method": "normalized observed-Hessian Laplace",
+      "ziformula": "~z + x",
+      "dispformula": "~x + f",
+      "R_optimizer_diagnostics": {
+        "convergence": 1,
+        "pdHess": false,
+        "objective": 298.0583063124611
+      },
+      "R_score_max_abs": 69.50197683685033,
+      "R_dispersion_prediction_range": [
+        4.104126474368387e-27,
+        3.2936978211218486
+      ],
+      "R_conditional_probability_or_mean_range": [
+        0.25949011152437346,
+        11.68691093972045
+      ],
+      "R_fixed_effects": {
+        "cond": [
+          0.014181884065504436,
+          0.605779422464438,
+          0.17511625190703003,
+          -0.40156715301163964
+        ],
+        "zi": [
+          -51.52834295463059,
+          42.84461482707306,
+          -4.588489496230939
+        ],
+        "disp": [
+          0.6131039780360549,
+          0.4328939005195708,
+          -0.8419690552600441,
+          -60.84217763426588
+        ]
+      },
+      "python_log_likelihood": -298.591790223334,
+      "reference_log_likelihood": -298.058306312461,
+      "log_likelihood_difference_Python_minus_R": -0.5334839108729739,
+      "R_random_covariance_eigenvalues": {
+        "g": [
+          0.1780475892208344,
+          0.41444625632888715
+        ]
+      },
+      "category": "unresolved_extreme_NB1_dispersion_likelihood",
+      "severity": "objective_error",
+      "cause": "The NB1 reference reaches dispersion near 4e-27 with a separated zero-inflation predictor and exhausts its function-evaluation budget. Python does not match the better recorded R objective within tolerance; no independent acceptable reference resolves the failure.",
+      "investigation": {
+        "stored_NB_stability_probe": {
+          "R_logLik": -298.0583063146051,
+          "Python_logLik": -298.5917902233345,
+          "logLik_difference": -0.5334839087294085,
+          "R_warnings": [
+            "Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')",
+            "Model convergence problem; function evaluation limit reached without convergence (9). See vignette('troubleshooting'), help('diagnose')"
+          ],
+          "Python_warnings": [
+            "Non-positive-definite Hessian"
+          ],
+          "source": "oracle/cache/s2-tmb-nb-stability-probe.json",
+          "scope": "Earlier stored probe; the selected-reference objective comes from the final XML."
+        }
+      },
+      "raw_run_better_optimum": null,
+      "raw_run_better_optimum_recorded": false,
+      "final_objective": {
+        "reference_log_likelihood": -298.0583063124611,
+        "python_log_likelihood": -298.5917902233345
+      }
+    },
+    {
+      "id": "tmb_0644",
+      "module": "tmb",
+      "status": "failed",
+      "failure_type": "AssertionError",
+      "family": "nbinom2",
+      "link": "log",
+      "formula": "y ~ x + f + (x|g)",
+      "failed_field": "runtime_warning_correspondence",
+      "better_optimum": true,
+      "better_optimum_recorded": true,
+      "comparison": {
+        "undefined_R_covariance": false
+      },
+      "selected_R_warnings": [
+        "Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')",
+        "Model convergence problem; false convergence (8). See vignette('troubleshooting'), help('diagnose')",
+        "NaNs produced"
+      ],
+      "original_R_warnings": [
+        "Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')",
+        "Model convergence problem; false convergence (8). See vignette('troubleshooting'), help('diagnose')"
+      ],
+      "superseded_R_observations_preserved": 2,
+      "reference_sha256": "0a83fcd144278de63f3d0a92a1e87be7f2efd16c7e152654b8f5623ff4b8a638",
+      "method": "normalized observed-Hessian Laplace",
+      "ziformula": "~z + x",
+      "dispformula": "~x + f",
+      "R_optimizer_diagnostics": {
+        "convergence": 1,
+        "pdHess": false,
+        "objective": 313.4833637477264
+      },
+      "R_score_max_abs": 2.248172424160329,
+      "R_dispersion_prediction_range": [
+        3.8849573842597124e-07,
+        168694417048053.94
+      ],
+      "R_conditional_probability_or_mean_range": [
+        0.40910267442441217,
+        8.16905263595659
+      ],
+      "R_fixed_effects": {
+        "cond": [
+          0.45859622352950574,
+          0.5048347632764137,
+          -0.5183788734945878,
+          -0.051532473117573294
+        ],
+        "zi": [
+          -1.354768325808646,
+          0.5077661849830042,
+          0.34028271141517763
+        ],
+        "disp": [
+          14.70917141387301,
+          12.615495577093933,
+          0.7818176009922129,
+          -14.380796373589112
+        ]
+      },
+      "reference_log_likelihood": -313.4833637477264,
+      "python_log_likelihood": -312.7527939814217,
+      "log_likelihood_difference_Python_minus_R": 0.7305697663047113,
+      "R_random_covariance_eigenvalues": {
+        "g": [
+          0.0017304740404793643,
+          0.27048533080612536
+        ]
+      },
+      "category": "warning_and_identified_numeric_discrepancy",
+      "severity": "diagnostic_and_numerical_error",
+      "cause": "The NB2 R fit reports false convergence while Python reaches a better stationary fit without a corresponding warning. An independent R start confirms the likelihood but retains non-positive-definite curvature and large dispersion scores; a metadata-only exception would not establish identified-field parity.",
+      "investigation": {
+        "stored_warning_or_curvature_audit": {
+          "Python_warnings": [],
+          "Python_converged": true,
+          "Python_pd_hessian": true,
+          "Python_score_max": 7.423055226052355e-11,
+          "Python_information_eigenvalues": [
+            0.00013255797066748557,
+            0.12014596755838287,
+            0.13783460984152301,
+            0.6834936469631853,
+            2.6620319514548547,
+            3.340112092429143,
+            4.102231973674044,
+            7.209400991082132,
+            10.091809975780157,
+            14.956272887486845,
+            19.84589851075215,
+            34.73048190957912,
+            35.75242428982607,
+            75.68171451196957
+          ],
+          "logLik_delta": 0.7305697663047113,
+          "all_strict_identified_fields_pass": false,
+          "source": "oracle/cache/s2-tmb-remaining-audit.json",
+          "rejected_identified_comparison": {
+            "max_absolute_difference_among_violations": 0.04971638,
+            "max_relative_difference_among_violations": 0.96475823,
+            "relative_tolerance": 1e-05,
+            "absolute_tolerance": 1e-12,
+            "mismatched_elements": 4,
+            "compared_elements": 4,
+            "undefined_R_covariance": false
+          }
+        },
+        "independent_public_R_start": {
+          "R_logLik": -313.4833637477264,
+          "Python_logLik": -312.7527939814217,
+          "R_public_start_logLik": -312.75279398140503,
+          "R_start_minus_Python": 1.6655121726216748e-11,
+          "confirmed": true,
+          "R_public_start_warnings": [
+            "Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')",
+            "Model convergence problem; false convergence (8). See vignette('troubleshooting'), help('diagnose')",
+            "NaNs produced"
+          ],
+          "R_score_max_abs": 251.69596494744047,
+          "R_pdHess": false,
+          "source": "oracle/cache/s2-tmb-additional-start-confirmation.json"
+        }
+      },
+      "raw_run_better_optimum": true,
+      "raw_run_better_optimum_recorded": true,
+      "final_objective": {
+        "reference_log_likelihood": -313.4833637477264,
+        "python_log_likelihood": -312.7527939814217
+      }
+    },
+    {
+      "id": "tmb_0693",
+      "module": "tmb",
+      "status": "failed",
+      "failure_type": "AssertionError",
+      "family": "binomial",
+      "link": "logit",
+      "formula": "y ~ x + f + (1|g)",
+      "failed_field": "cond_fixed_effect_coefficients",
+      "better_optimum": false,
+      "better_optimum_recorded": true,
+      "comparison": {
+        "max_absolute_difference_among_violations": 1.24915574,
+        "max_relative_difference_among_violations": 0.05462936,
+        "relative_tolerance": 1e-05,
+        "absolute_tolerance": 1e-12,
+        "mismatched_elements": 1,
+        "compared_elements": 4,
+        "undefined_R_covariance": false
+      },
+      "selected_R_warnings": [],
+      "original_R_warnings": [],
+      "superseded_R_observations_preserved": 2,
+      "reference_sha256": "9a54364a3a0bb340c865c05f3a7678236b4cd559ce2217e9f2fdf8573f3c748a",
+      "method": "normalized observed-Hessian Laplace",
+      "ziformula": "~1",
+      "dispformula": "~x + f",
+      "R_optimizer_diagnostics": {
+        "convergence": 0,
+        "pdHess": true,
+        "objective": 60.04057204676317
+      },
+      "R_score_max_abs": 2.8163247425495664e-07,
+      "R_dispersion_prediction_range": [
+        1.0,
+        1.0
+      ],
+      "R_conditional_probability_or_mean_range": [
+        0.7004792661539698,
+        0.999999999998257
+      ],
+      "R_fixed_effects": {
+        "cond": [
+          3.955238843562363,
+          -0.23494179188020217,
+          22.866014906226358,
+          -2.799881993723555
+        ],
+        "zi": 0.20549273695076384,
+        "disp": []
+      },
+      "reference_log_likelihood": -60.04057204676317,
+      "python_log_likelihood": -60.04057204676379,
+      "log_likelihood_difference_Python_minus_R": -6.252776074688882e-13,
+      "R_random_covariance_eigenvalues": {
+        "g": [
+          9.259833471483863e-12
+        ]
+      },
+      "category": "binomial_mixture_conditional_separation",
+      "severity": "nonregular_parameter_error",
+      "cause": "A factor's conditional binomial probability saturates near one in the zero-inflated mixture. The corresponding information direction is extremely weak and R/Python large finite logit coefficients differ, even though likelihoods agree closely.",
+      "investigation": {
+        "stored_identified_field_audit": {
+          "source": "oracle/cache/s2-tmb-interior-reference-audit.json",
+          "Python_information_eigenvalues": [
+            1.429110495934192e-12,
+            0.0024650226274317622,
+            0.042787960348301284,
+            0.24509179858836644,
+            1.0726665795578563,
+            19.884718729238024
+          ],
+          "Python_score_max_abs": 1.1502779348682763e-12,
+          "R_score_max_abs": 2.8163247425495664e-07,
+          "failed_fields": {
+            "cond_beta": {
+              "max_abs": 1.2491557381038163,
+              "worst_ratio": 5462.935880010899,
+              "index": [
+                2
+              ],
+              "Python": 21.61685916812254,
+              "R": 22.866014906226358
+            },
+            "cond_cov": {
+              "max_abs": 2331404121354.484,
+              "worst_ratio": 7691.556235009211,
+              "index": [
+                2,
+                2
+              ],
+              "Python": 699717344991.6461,
+              "R": 3031121466346.13
+            },
+            "zi_p": {
+              "shape": [
+                [
+                  1
+                ],
+                []
+              ]
+            },
+            "g_cov": {
+              "max_abs": 9.259833471483863e-12,
+              "worst_ratio": 9.251266952345967,
+              "index": [
+                0,
+                0
+              ],
+              "Python": 0.0,
+              "R": 9.259833471483863e-12
+            },
+            "g_ranef": {
+              "max_abs": 4.9404510987104035e-12,
+              "worst_ratio": 4.938011498277192,
+              "index": [
+                0,
+                0
+              ],
+              "Python": 0.0,
+              "R": 4.9404510987104035e-12
+            }
+          },
+          "scope": "Stored investigation; final outcome is determined by the final XML."
+        }
+      },
+      "raw_run_better_optimum": false,
+      "raw_run_better_optimum_recorded": true,
+      "final_objective": {
+        "reference_log_likelihood": -60.04057204676317,
+        "python_log_likelihood": -60.04057204676379
+      }
+    },
+    {
+      "id": "tmb_0698",
+      "module": "tmb",
+      "status": "failed",
+      "failure_type": "AssertionError",
+      "family": "nbinom2",
+      "link": "log",
+      "formula": "y ~ x + f + (1|g)",
+      "failed_field": "disp_fixed_effect_coefficients",
+      "better_optimum": false,
+      "better_optimum_recorded": true,
+      "comparison": {
+        "max_absolute_difference_among_violations": 9.85237907,
+        "max_relative_difference_among_violations": 0.62624412,
+        "relative_tolerance": 1e-05,
+        "absolute_tolerance": 1e-12,
+        "mismatched_elements": 3,
+        "compared_elements": 4,
+        "undefined_R_covariance": false
+      },
+      "selected_R_warnings": [],
+      "original_R_warnings": [
+        "Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')",
+        "NaNs produced"
+      ],
+      "superseded_R_observations_preserved": 2,
+      "reference_sha256": "01ab9e4328a1567d1b9b93aa70c8b10be80bc53624e2280e2a55fd3885843cf6",
+      "method": "normalized observed-Hessian Laplace",
+      "ziformula": "~z + x",
+      "dispformula": "~x + f",
+      "R_optimizer_diagnostics": {
+        "convergence": 0,
+        "pdHess": true,
+        "objective": 120.54467912670742
+      },
+      "R_score_max_abs": 1.4343646690161485e-06,
+      "R_dispersion_prediction_range": [
+        1.0922563981269133,
+        17616165.184943847
+      ],
+      "R_conditional_probability_or_mean_range": [
+        0.9950589448961509,
+        3.35212347942316
+      ],
+      "R_fixed_effects": {
+        "cond": [
+          0.37297607817247735,
+          0.24987158280265084,
+          0.43648838724128725,
+          0.19276103801492764
+        ],
+        "zi": [
+          -1.5619213122365816,
+          0.9043809177654883,
+          -0.4340857888815496
+        ],
+        "disp": [
+          16.50927901355859,
+          0.12452170872994706,
+          -16.250977852203334,
+          -15.732489228940056
+        ]
+      },
+      "reference_log_likelihood": -120.54467912670742,
+      "python_log_likelihood": -120.54467908836713,
+      "log_likelihood_difference_Python_minus_R": 3.834028916571697e-08,
+      "R_random_covariance_eigenvalues": {
+        "g": [
+          0.0736611453156148
+        ]
+      },
+      "category": "partially_collapsed_NB2_dispersion",
+      "severity": "nonregular_parameter_error",
+      "cause": "A subset of the NB2 dispersion predictor approaches the Poisson limit along a weak information direction. Large finite dispersion coefficients differ; no indexed density, covariance and identified-field certificate admits this case.",
+      "investigation": {
+        "stored_identified_field_audit": {
+          "source": "oracle/cache/s2-tmb-interior-reference-audit.json",
+          "Python_information_eigenvalues": [
+            1.146398483885168e-12,
+            0.6862140351149265,
+            0.8227251026009714,
+            1.745738128450817,
+            2.090872029659513,
+            3.4648609833631854,
+            4.309220093363199,
+            6.117813144510679,
+            7.408783759141835,
+            13.049437807039368,
+            33.01636402832524,
+            51.7420939060205
+          ],
+          "Python_score_max_abs": 6.763478666016454e-13,
+          "R_score_max_abs": 1.4343646690161485e-06,
+          "failed_fields": {
+            "disp_beta": {
+              "max_abs": 9.852379072610738,
+              "worst_ratio": 62624.41140156036,
+              "index": [
+                3
+              ],
+              "Python": -25.58486807000206,
+              "R": -15.732489228940056
+            },
+            "disp_cov": {
+              "max_abs": 290545380786.25256,
+              "worst_ratio": 416849420178.5809,
+              "index": [
+                0,
+                2
+              ],
+              "Python": -290545384013.3009,
+              "R": -6970.031934274508
+            },
+            "disp_p": {
+              "max_abs": 0.15671738877560037,
+              "worst_ratio": 1567.1738877560038,
+              "index": [
+                0
+              ],
+              "Python": 0.999960978335044,
+              "R": 0.8432435895594437
+            },
+            "zprob_pred": {
+              "max_abs": 1.8842907201221948e-07,
+              "worst_ratio": 1.0814254422562564,
+              "index": [
+                27
+              ],
+              "Python": 0.08696623261362824,
+              "R": 0.08696613856515195
+            },
+            "disp_pred": {
+              "max_abs": 333730654860.15686,
+              "worst_ratio": 18944605854.04562,
+              "index": [
+                4
+              ],
+              "Python": 245410665939.84106,
+              "R": 12953434.576356791
+            }
+          },
+          "scope": "Stored investigation; final outcome is determined by the final XML."
+        }
+      },
+      "raw_run_better_optimum": false,
+      "raw_run_better_optimum_recorded": true,
+      "final_objective": {
+        "reference_log_likelihood": -120.54467912670742,
+        "python_log_likelihood": -120.54467908836713
+      }
+    },
+    {
+      "id": "tmb_0717",
+      "module": "tmb",
+      "status": "failed",
+      "failure_type": "AssertionError",
+      "family": "binomial",
+      "link": "logit",
+      "formula": "y ~ x + f + (x|g)",
+      "failed_field": "normalized_laplace_log_likelihood",
+      "better_optimum": false,
+      "better_optimum_recorded": true,
+      "comparison": {
+        "undefined_R_covariance": false
+      },
+      "selected_R_warnings": [
+        "Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')",
+        "Model convergence problem; false convergence (8). See vignette('troubleshooting'), help('diagnose')",
+        "NaNs produced"
+      ],
+      "original_R_warnings": [],
+      "superseded_R_observations_preserved": 2,
+      "reference_sha256": "9498353781120d01c3630f9a7c0c68bdce6cb5c94fbe20f14a356844c98afb5d",
+      "method": "normalized observed-Hessian Laplace",
+      "ziformula": "~z + x",
+      "dispformula": "~1",
+      "R_optimizer_diagnostics": {
+        "convergence": 1,
+        "pdHess": false,
+        "objective": 66.39273814763806
+      },
+      "R_score_max_abs": 2.066136287875303e-05,
+      "R_dispersion_prediction_range": [
+        1.0,
+        1.0
+      ],
+      "R_conditional_probability_or_mean_range": [
+        0.19785290542381212,
+        0.7242128100274425
+      ],
+      "R_fixed_effects": {
+        "cond": [
+          -0.1280878928742241,
+          -0.2144064150314568,
+          0.45245987132097926,
+          -0.15856959703442022
+        ],
+        "zi": [
+          -578.4563212545157,
+          87.14201561178103,
+          -385.8963778517551
+        ],
+        "disp": []
+      },
+      "python_log_likelihood": -66.3927444119206,
+      "reference_log_likelihood": -66.3927381476381,
+      "log_likelihood_difference_Python_minus_R": -6.264282504275798e-06,
+      "R_random_covariance_eigenvalues": {
+        "g": [
+          3.9699399352598005e-13,
+          0.5075213898918907
+        ]
+      },
+      "category": "unresolved_rank_one_and_separated_ZI_likelihood",
+      "severity": "objective_error",
+      "cause": "The reference combines a nearly rank-one random covariance with very large zero-inflation coefficients and reports nonconvergence. The normalized Laplace objective remains better than Python's beyond tolerance, so a boundary warning alone does not pass the case.",
+      "investigation": {},
+      "raw_run_better_optimum": null,
+      "raw_run_better_optimum_recorded": false,
+      "final_objective": {
+        "reference_log_likelihood": -66.39273814763806,
+        "python_log_likelihood": -66.39274441192062
+      }
+    },
+    {
+      "id": "tmb_0733",
+      "module": "tmb",
+      "status": "failed",
+      "failure_type": "AssertionError",
+      "family": "nbinom1",
+      "link": "log",
+      "formula": "y ~ x + f + (x|g)",
+      "failed_field": "normalized_laplace_log_likelihood",
+      "better_optimum": false,
+      "better_optimum_recorded": true,
+      "comparison": {
+        "undefined_R_covariance": false
+      },
+      "selected_R_warnings": [
+        "Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')",
+        "Model convergence problem; false convergence (8). See vignette('troubleshooting'), help('diagnose')"
+      ],
+      "original_R_warnings": [
+        "Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')",
+        "Model convergence problem; singular convergence (7). See vignette('troubleshooting'), help('diagnose')"
+      ],
+      "superseded_R_observations_preserved": 2,
+      "reference_sha256": "29ea9ed365dd4f90b10eb8f1f1e4b56c1408289a266263bc4961a81b01fd79fe",
+      "method": "normalized observed-Hessian Laplace",
+      "ziformula": "~z + x",
+      "dispformula": "~x",
+      "R_optimizer_diagnostics": {
+        "convergence": 1,
+        "pdHess": false,
+        "objective": 155.60974230455665
+      },
+      "R_score_max_abs": 9.268966048026073e-06,
+      "R_dispersion_prediction_range": [
+        0.27086796983121575,
+        0.767389764761519
+      ],
+      "R_conditional_probability_or_mean_range": [
+        0.2945395243636501,
+        9.118925163703642
+      ],
+      "R_fixed_effects": {
+        "cond": [
+          -0.07765636571039683,
+          0.024733270171182944,
+          0.6785663640061133,
+          -0.052482996604075634
+        ],
+        "zi": [
+          -2.8234190219642263,
+          1.3502842762987661,
+          -1.8752927585392754
+        ],
+        "disp": [
+          -0.7877767742930039,
+          0.3772053965093173
+        ]
+      },
+      "python_log_likelihood": -155.609744354192,
+      "reference_log_likelihood": -155.609742304557,
+      "log_likelihood_difference_Python_minus_R": -2.049635014600426e-06,
+      "R_random_covariance_eigenvalues": {
+        "g": [
+          4.986752666283624e-12,
+          0.6434339394924613
+        ]
+      },
+      "category": "unresolved_rank_one_Laplace_likelihood",
+      "severity": "objective_error",
+      "cause": "The selected NB1 reference has a nearly rank-one random covariance and reports nonconvergence. A small normalized Laplace likelihood discrepancy still exceeds the fixed objective tolerance.",
+      "investigation": {},
+      "raw_run_better_optimum": null,
+      "raw_run_better_optimum_recorded": false,
+      "final_objective": {
+        "reference_log_likelihood": -155.60974230455665,
+        "python_log_likelihood": -155.6097443541916
+      }
+    },
+    {
+      "id": "tmb_0883",
+      "module": "tmb",
+      "status": "failed",
+      "failure_type": "AssertionError",
+      "family": "nbinom1",
+      "link": "log",
+      "formula": "y ~ x + f + (1|g)",
+      "failed_field": "runtime_warning_correspondence",
+      "better_optimum": true,
+      "better_optimum_recorded": true,
+      "comparison": {
+        "undefined_R_covariance": false
+      },
+      "selected_R_warnings": [
+        "Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')",
+        "Model convergence problem; false convergence (8). See vignette('troubleshooting'), help('diagnose')"
+      ],
+      "original_R_warnings": [
+        "Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')",
+        "Model convergence problem; false convergence (8). See vignette('troubleshooting'), help('diagnose')"
+      ],
+      "superseded_R_observations_preserved": 2,
+      "reference_sha256": "478da6c5f8387557069a79e1c787d4594092286785d41ae23bb3eac2df14df6a",
+      "method": "normalized observed-Hessian Laplace",
+      "ziformula": "~0",
+      "dispformula": "~x",
+      "R_optimizer_diagnostics": {
+        "convergence": 1,
+        "pdHess": false,
+        "objective": 289.8922008021349
+      },
+      "R_score_max_abs": 0.4853160808160418,
+      "R_dispersion_prediction_range": [
+        4.142445109571084e-14,
+        11.86659066247531
+      ],
+      "R_conditional_probability_or_mean_range": [
+        1.1279038296756474,
+        3.870016114242162
+      ],
+      "R_fixed_effects": {
+        "cond": [
+          0.7138707265200531,
+          0.18381304778968643,
+          0.06586709601357288,
+          0.03884980650337215
+        ],
+        "zi": [],
+        "disp": [
+          -13.753450789025162,
+          -12.378739315701436
+        ]
+      },
+      "reference_log_likelihood": -289.8922008021349,
+      "python_log_likelihood": -289.54249521730725,
+      "log_likelihood_difference_Python_minus_R": 0.3497055848276318,
+      "R_random_covariance_eigenvalues": {
+        "g": [
+          0.06267957481840206
+        ]
+      },
+      "category": "warning_and_identified_numeric_discrepancy",
+      "severity": "diagnostic_and_numerical_error",
+      "cause": "R emits false convergence with a substantial residual score while Python reaches a better stationary fit without a corresponding warning. Conditional coefficients also differ, and an independent R restart did not reproduce the Python fit.",
+      "investigation": {
+        "stored_warning_or_curvature_audit": {
+          "Python_warnings": [],
+          "Python_converged": true,
+          "Python_pd_hessian": true,
+          "Python_score_max": 8.781242399891198e-11,
+          "Python_information_eigenvalues": [
+            0.0017967598139388733,
+            4.276158825213803,
+            7.563544488679937,
+            22.693184456623843,
+            58.61427643151551,
+            124.99239121880362,
+            192.34928699346904
+          ],
+          "logLik_delta": 0.3497055848276318,
+          "all_strict_identified_fields_pass": false,
+          "source": "oracle/cache/s2-tmb-remaining-audit.json",
+          "rejected_identified_comparison": {
+            "max_absolute_difference_among_violations": 0.01433006,
+            "max_relative_difference_among_violations": 0.21756026,
+            "relative_tolerance": 1e-05,
+            "absolute_tolerance": 1e-12,
+            "mismatched_elements": 4,
+            "compared_elements": 4,
+            "undefined_R_covariance": false
+          }
+        },
+        "independent_public_R_start": {
+          "R_logLik": -289.8922008021349,
+          "Python_logLik": -289.54249521730725,
+          "R_public_start_logLik": -297.8402683799892,
+          "R_start_minus_Python": -8.297773162681949,
+          "confirmed": false,
+          "R_public_start_warnings": [
+            "Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')",
+            "Model convergence problem; false convergence (8). See vignette('troubleshooting'), help('diagnose')"
+          ],
+          "R_score_max_abs": 362.55189397632466,
+          "R_pdHess": false,
+          "source": "oracle/cache/s2-tmb-additional-start-confirmation.json"
+        }
+      },
+      "raw_run_better_optimum": true,
+      "raw_run_better_optimum_recorded": true,
+      "final_objective": {
+        "reference_log_likelihood": -289.8922008021349,
+        "python_log_likelihood": -289.54249521730725
+      }
+    },
+    {
+      "id": "tmb_0902",
+      "module": "tmb",
+      "status": "failed",
+      "failure_type": "AssertionError",
+      "family": "nbinom2",
+      "link": "log",
+      "formula": "y ~ x + f + (1|g)",
+      "failed_field": "cond_fixed_effect_coefficients",
+      "better_optimum": true,
+      "better_optimum_recorded": true,
+      "comparison": {
+        "max_absolute_difference_among_violations": 0.09057636,
+        "max_relative_difference_among_violations": 0.36820958,
+        "relative_tolerance": 1e-05,
+        "absolute_tolerance": 1e-12,
+        "mismatched_elements": 4,
+        "compared_elements": 4,
+        "undefined_R_covariance": false
+      },
+      "selected_R_warnings": [],
+      "original_R_warnings": [
+        "Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')",
+        "NaNs produced"
+      ],
+      "superseded_R_observations_preserved": 2,
+      "reference_sha256": "004d262bfb5aabdfd6afc4a888f7dd29a565f5016dc202a2dae8a6b366922478",
+      "method": "normalized observed-Hessian Laplace",
+      "ziformula": "~0",
+      "dispformula": "~x + f",
+      "R_optimizer_diagnostics": {
+        "convergence": 0,
+        "pdHess": true,
+        "objective": 285.65610914488923
+      },
+      "R_score_max_abs": 1.895171048815758e-06,
+      "R_dispersion_prediction_range": [
+        6.168921013940205,
+        17237537.181199394
+      ],
+      "R_conditional_probability_or_mean_range": [
+        0.2401048484911596,
+        9.065048813156624
+      ],
+      "R_fixed_effects": {
+        "cond": [
+          -0.1290133387460039,
+          0.2378109182769724,
+          0.24599132098502827,
+          0.15564602110877243
+        ],
+        "zi": [],
+        "disp": [
+          16.615423126280554,
+          -0.03379626382126184,
+          -14.749297554126029,
+          -13.091574828631265
+        ]
+      },
+      "reference_log_likelihood": -285.65610914488923,
+      "python_log_likelihood": -282.4947283921189,
+      "log_likelihood_difference_Python_minus_R": 3.1613807527703557,
+      "R_random_covariance_eigenvalues": {
+        "g": [
+          0.7565609489984433
+        ]
+      },
+      "category": "different_dispersion_local_minimum",
+      "severity": "different_estimated_fit",
+      "cause": "Python reaches a better NB2 likelihood at a different dispersion fit and gives different identified conditional coefficients. A public R start at that point returned an invalid initial objective, so no complete independent strict reference was adopted.",
+      "investigation": {
+        "stored_identified_field_audit": {
+          "source": "oracle/cache/s2-tmb-interior-reference-audit.json",
+          "Python_information_eigenvalues": [
+            -1.0411673145628333e-12,
+            1.0967399865949649e-12,
+            0.2322022252963103,
+            3.1392914295302305,
+            8.854177690699979,
+            14.682316850404915,
+            28.783025113246936,
+            97.05898494127489,
+            227.87598630251688
+          ],
+          "Python_score_max_abs": 2.352579242526076e-11,
+          "R_score_max_abs": 1.895171048815758e-06,
+          "failed_fields": {
+            "cond_beta": {
+              "max_abs": 0.09057636103877456,
+              "worst_ratio": 36820.94305406175,
+              "index": [
+                2
+              ],
+              "Python": 0.3365676820238028,
+              "R": 0.24599132098502827
+            },
+            "cond_cov": {
+              "max_abs": 0.003735800483670563,
+              "worst_ratio": 3175.525957204158,
+              "index": [
+                1,
+                2
+              ],
+              "Python": -0.003105544369563795,
+              "R": -0.0023570529207904444
+            },
+            "cond_p": {
+              "max_abs": 0.10877784496070064,
+              "worst_ratio": 1087.7784496070065,
+              "index": [
+                2
+              ],
+              "Python": 0.028854090543814548,
+              "R": 0.1376319355045152
+            },
+            "disp_beta": {
+              "max_abs": 1355.3501732353664,
+              "worst_ratio": 2911140748.6264534,
+              "index": [
+                1
+              ],
+              "Python": 983.8259224909807,
+              "R": -0.03379626382126184
+            },
+            "disp_cov": {
+              "max_abs": 3869.8401466229193,
+              "worst_ratio": 36623.69595565044,
+              "index": [
+                1,
+                2
+              ],
+              "Python": 0.9072635167877837,
+              "R": 0.19459278411284645
+            },
+            "disp_p": {
+              "max_abs": 0.9667195831884818,
+              "worst_ratio": 9667.195831884817,
+              "index": [
+                1
+              ],
+              "Python": 0.0,
+              "R": 0.9667195831884818
+            },
+            "response_pred": {
+              "max_abs": 1.0021835515268602,
+              "worst_ratio": 143426.9644561026,
+              "index": [
+                28
+              ],
+              "Python": 0.7358298857441234,
+              "R": 0.8590394498046026
+            },
+            "cond_pred": {
+              "max_abs": 1.0021835515268602,
+              "worst_ratio": 143426.9644561026,
+              "index": [
+                28
+              ],
+              "Python": 0.7358298857441234,
+              "R": 0.8590394498046026
+            },
+            "disp_pred": {
+              "finite": false
+            },
+            "g_cov": {
+              "max_abs": 0.011681411145132214,
+              "worst_ratio": 154.4014531307087,
+              "index": [
+                0,
+                0
+              ],
+              "Python": 0.7682423601435755,
+              "R": 0.7565609489984433
+            },
+            "g_ranef": {
+              "max_abs": 0.09755523795832685,
+              "worst_ratio": 3156.7434264045078,
+              "index": [
+                1,
+                0
+              ],
+              "Python": 0.21148234167385008,
+              "R": 0.30903757963217693
+            }
+          },
+          "scope": "Stored investigation; final outcome is determined by the final XML."
+        }
+      },
+      "raw_run_better_optimum": true,
+      "raw_run_better_optimum_recorded": true,
+      "final_objective": {
+        "reference_log_likelihood": -285.65610914488923,
+        "python_log_likelihood": -282.4947283921189
+      }
+    },
+    {
+      "id": "tmb_0953",
+      "module": "tmb",
+      "status": "failed",
+      "failure_type": "AssertionError",
+      "family": "gaussian",
+      "link": "identity",
+      "formula": "y ~ x + f + (x|g)",
+      "failed_field": "normalized_laplace_log_likelihood",
+      "better_optimum": false,
+      "better_optimum_recorded": true,
+      "comparison": {
+        "undefined_R_covariance": false
+      },
+      "selected_R_warnings": [
+        "Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')",
+        "Model convergence problem; false convergence (8). See vignette('troubleshooting'), help('diagnose')"
+      ],
+      "original_R_warnings": [],
+      "superseded_R_observations_preserved": 2,
+      "reference_sha256": "e74163e8adbedefc641d2333273b1cbd6a49156e5613351c106d39c18a22612e",
+      "method": "normalized observed-Hessian Laplace",
+      "ziformula": "~z + x",
+      "dispformula": "~x",
+      "R_optimizer_diagnostics": {
+        "convergence": 1,
+        "pdHess": false,
+        "objective": 175.5254326289794
+      },
+      "R_score_max_abs": 0.00037545908720231283,
+      "R_dispersion_prediction_range": [
+        0.4374857583019784,
+        0.8565607848764091
+      ],
+      "R_conditional_probability_or_mean_range": [
+        -1.929678550826061,
+        0.875733258228528
+      ],
+      "R_fixed_effects": {
+        "cond": [
+          -0.1748815170015146,
+          -0.14263571537620764,
+          0.25274630262591047,
+          -0.19863973932119358
+        ],
+        "zi": [
+          -974.8312245840956,
+          806.9052172245174,
+          -1.5003407649982512
+        ],
+        "disp": [
+          -0.4908419373178992,
+          0.2421020681714357
+        ]
+      },
+      "python_log_likelihood": -175.525434312237,
+      "reference_log_likelihood": -175.525432628979,
+      "log_likelihood_difference_Python_minus_R": -1.6832580058689928e-06,
+      "R_random_covariance_eigenvalues": {
+        "g": [
+          1.6314325178309475e-11,
+          0.38243154364702936
+        ]
+      },
+      "category": "unresolved_rank_one_and_separated_ZI_likelihood",
+      "severity": "objective_error",
+      "cause": "The Gaussian reference has a nearly rank-one random covariance and zero-inflation coefficients with magnitude near 1e3. Its recorded objective remains better than Python's beyond tolerance despite reported nonconvergence.",
+      "investigation": {},
+      "raw_run_better_optimum": null,
+      "raw_run_better_optimum_recorded": false,
+      "final_objective": {
+        "reference_log_likelihood": -175.5254326289794,
+        "python_log_likelihood": -175.52543431223705
+      }
+    },
+    {
+      "id": "tmb_0981",
+      "module": "tmb",
+      "status": "failed",
+      "failure_type": "AssertionError",
+      "family": "binomial",
+      "link": "logit",
+      "formula": "y ~ x + f + (1|g)",
+      "failed_field": "cond_fixed_effect_coefficients",
+      "better_optimum": false,
+      "better_optimum_recorded": true,
+      "comparison": {
+        "max_absolute_difference_among_violations": 0.07457191,
+        "max_relative_difference_among_violations": 0.00232859,
+        "relative_tolerance": 1e-05,
+        "absolute_tolerance": 1e-12,
+        "mismatched_elements": 1,
+        "compared_elements": 4,
+        "undefined_R_covariance": false
+      },
+      "selected_R_warnings": [],
+      "original_R_warnings": [],
+      "superseded_R_observations_preserved": 2,
+      "reference_sha256": "f3b750a611db17f16ed5c0c9f8486eeeec4f83daa61491d90a4dee788adca5e8",
+      "method": "normalized observed-Hessian Laplace",
+      "ziformula": "~1",
+      "dispformula": "~1",
+      "R_optimizer_diagnostics": {
+        "convergence": 0,
+        "pdHess": true,
+        "objective": 73.17097978994781
+      },
+      "R_score_max_abs": 3.5143952192839834e-08,
+      "R_dispersion_prediction_range": [
+        1.0,
+        1.0
+      ],
+      "R_conditional_probability_or_mean_range": [
+        0.04546738228118291,
+        0.9999999999999998
+      ],
+      "R_fixed_effects": {
+        "cond": [
+          1.59175410893431,
+          0.7565713223719053,
+          32.024498609958,
+          -0.11327534272274532
+        ],
+        "zi": -0.6822755062918159,
+        "disp": []
+      },
+      "reference_log_likelihood": -73.17097978994781,
+      "python_log_likelihood": -73.17097978994771,
+      "log_likelihood_difference_Python_minus_R": 9.947598300641403e-14,
+      "R_random_covariance_eigenvalues": {
+        "g": [
+          4.478617711510681
+        ]
+      },
+      "category": "binomial_mixture_conditional_separation",
+      "severity": "nonregular_parameter_error",
+      "cause": "A conditional binomial factor probability saturates near one with an extremely weak coefficient-information direction. Different large finite coefficient stopping values remain outside the unchanged coefficient tolerance.",
+      "investigation": {
+        "stored_identified_field_audit": {
+          "source": "oracle/cache/s2-tmb-interior-reference-audit.json",
+          "Python_information_eigenvalues": [
+            2.1371091088209705e-13,
+            0.15056017108501557,
+            0.9261842673720352,
+            1.6032608268897621,
+            4.693703754945526,
+            13.361148940215884
+          ],
+          "Python_score_max_abs": 5.030467429412464e-13,
+          "R_score_max_abs": 3.5143952192839834e-08,
+          "failed_fields": {
+            "cond_beta": {
+              "max_abs": 0.07457191406295749,
+              "worst_ratio": 232.85895819430698,
+              "index": [
+                2
+              ],
+              "Python": 32.09907052402096,
+              "R": 32.024498609958
+            },
+            "cond_cov": {
+              "max_abs": 2836358394380.698,
+              "worst_ratio": 41784.603198137425,
+              "index": [
+                3,
+                2
+              ],
+              "Python": 2.634895149583495,
+              "R": -0.8289847418807154
+            },
+            "zi_p": {
+              "shape": [
+                [
+                  1
+                ],
+                []
+              ]
+            }
+          },
+          "scope": "Stored investigation; final outcome is determined by the final XML."
+        }
+      },
+      "raw_run_better_optimum": false,
+      "raw_run_better_optimum_recorded": true,
+      "final_objective": {
+        "reference_log_likelihood": -73.17097978994781,
+        "python_log_likelihood": -73.17097978994771
+      }
+    },
+    {
+      "id": "tmb_1023",
+      "module": "tmb",
+      "status": "failed",
+      "failure_type": "AssertionError",
+      "family": "binomial",
+      "link": "logit",
+      "formula": "y ~ x + f + (1|g)",
+      "failed_field": "cond_fixed_effect_coefficients",
+      "better_optimum": false,
+      "better_optimum_recorded": true,
+      "comparison": {
+        "max_absolute_difference_among_violations": 0.44135695,
+        "max_relative_difference_among_violations": 0.01429952,
+        "relative_tolerance": 1e-05,
+        "absolute_tolerance": 1e-12,
+        "mismatched_elements": 1,
+        "compared_elements": 4,
+        "undefined_R_covariance": false
+      },
+      "selected_R_warnings": [],
+      "original_R_warnings": [],
+      "superseded_R_observations_preserved": 2,
+      "reference_sha256": "93e3106d2e16965210dc3741ed3a731865482193949733b3bcfb67cc14aaeb36",
+      "method": "normalized observed-Hessian Laplace",
+      "ziformula": "~z + x",
+      "dispformula": "~x + f",
+      "R_optimizer_diagnostics": {
+        "convergence": 0,
+        "pdHess": true,
+        "objective": 59.376301244687475
+      },
+      "R_score_max_abs": 1.0266303150319787e-07,
+      "R_dispersion_prediction_range": [
+        1.0,
+        1.0
+      ],
+      "R_conditional_probability_or_mean_range": [
+        0.14778260707845814,
+        0.999999999999998
+      ],
+      "R_fixed_effects": {
+        "cond": [
+          0.47851529944652316,
+          1.78650819211402,
+          0.6293459108212243,
+          30.86514806462423
+        ],
+        "zi": [
+          -0.8400449562539378,
+          -0.2895658339257623,
+          0.2176855338236345
+        ],
+        "disp": []
+      },
+      "reference_log_likelihood": -59.376301244687475,
+      "python_log_likelihood": -59.376301244687156,
+      "log_likelihood_difference_Python_minus_R": 3.197442310920451e-13,
+      "R_random_covariance_eigenvalues": {
+        "g": [
+          6.798824412927527e-13
+        ]
+      },
+      "category": "binomial_mixture_conditional_separation",
+      "severity": "nonregular_parameter_error",
+      "cause": "The zero-inflated binomial fit has a conditional factor probability near one and a very weak coefficient-information direction. R and Python choose different large finite logit coefficients on the flat likelihood axis; no accepted identified-field exception applies.",
+      "investigation": {
+        "stored_identified_field_audit": {
+          "source": "oracle/cache/s2-tmb-interior-reference-audit.json",
+          "Python_information_eigenvalues": [
+            5.682280140380892e-13,
+            0.9059315144972168,
+            1.2899304979153658,
+            1.7257170024559365,
+            2.795907114668824,
+            7.647590018114317,
+            10.33637679401253,
+            17.27528068933481
+          ],
+          "Python_score_max_abs": 4.0244805587389743e-13,
+          "R_score_max_abs": 1.0266303150319787e-07,
+          "failed_fields": {
+            "cond_beta": {
+              "max_abs": 0.4413569519607847,
+              "worst_ratio": 1429.9524810531816,
+              "index": [
+                3
+              ],
+              "Python": 30.423791112663444,
+              "R": 30.86514806462423
+            },
+            "cond_cov": {
+              "max_abs": 2101450476842.392,
+              "worst_ratio": 8458.608706990244,
+              "index": [
+                0,
+                3
+              ],
+              "Python": 0.05685342418664955,
+              "R": 0.3688449059177248
+            }
+          },
+          "scope": "Stored investigation; final outcome is determined by the final XML."
+        }
+      },
+      "raw_run_better_optimum": false,
+      "raw_run_better_optimum_recorded": true,
+      "final_objective": {
+        "reference_log_likelihood": -59.376301244687475,
+        "python_log_likelihood": -59.376301244687156
+      }
+    },
+    {
+      "id": "tmb_1041",
+      "module": "tmb",
+      "status": "failed",
+      "failure_type": "AssertionError",
+      "family": "binomial",
+      "link": "logit",
+      "formula": "y ~ x + f + (x|g)",
+      "failed_field": "normalized_laplace_log_likelihood",
+      "better_optimum": false,
+      "better_optimum_recorded": true,
+      "comparison": {
+        "undefined_R_covariance": false
+      },
+      "selected_R_warnings": [
+        "Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')",
+        "Model convergence problem; false convergence (8). See vignette('troubleshooting'), help('diagnose')",
+        "NaNs produced"
+      ],
+      "original_R_warnings": [
+        "Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')",
+        "Model convergence problem; false convergence (8). See vignette('troubleshooting'), help('diagnose')",
+        "NaNs produced"
+      ],
+      "superseded_R_observations_preserved": 2,
+      "reference_sha256": "f19ae45f52e47ba36a342c846c34698cbf527d2cc2cf1b0da787c6cec8aa6d36",
+      "method": "normalized observed-Hessian Laplace",
+      "ziformula": "~z + x",
+      "dispformula": "~1",
+      "R_optimizer_diagnostics": {
+        "convergence": 1,
+        "pdHess": false,
+        "objective": 56.86383563990937
+      },
+      "R_score_max_abs": 5028.863060810756,
+      "R_dispersion_prediction_range": [
+        1.0,
+        1.0
+      ],
+      "R_conditional_probability_or_mean_range": [
+        0.025025326280501515,
+        0.9984516071336063
+      ],
+      "R_fixed_effects": {
+        "cond": [
+          3.5922970704979758,
+          0.4456357940093096,
+          -1.5421969067931844,
+          -3.1349701644615906
+        ],
+        "zi": [
+          -0.29294528616304993,
+          -0.20994179628859952,
+          -0.8402813884359877
+        ],
+        "disp": []
+      },
+      "python_log_likelihood": -58.599198541637,
+      "reference_log_likelihood": -56.8638356399094,
+      "log_likelihood_difference_Python_minus_R": -1.7353629017276049,
+      "R_random_covariance_eigenvalues": {
+        "g": [
+          0.008631587908018445,
+          11.091891339746077
+        ]
+      },
+      "category": "unresolved_zero_inflated_binomial_Laplace_fit",
+      "severity": "objective_error",
+      "cause": "The selected zero-inflated binomial reference reports an indefinite Hessian and a large residual score. Tightened public inner-optimizer probes do not resolve its substantially better recorded normalized Laplace objective.",
+      "investigation": {},
+      "raw_run_better_optimum": null,
+      "raw_run_better_optimum_recorded": false,
+      "final_objective": {
+        "reference_log_likelihood": -56.86383563990937,
+        "python_log_likelihood": -58.59919854163702
+      }
+    },
+    {
+      "id": "tmb_1106",
+      "module": "tmb",
+      "status": "failed",
+      "failure_type": "AssertionError",
+      "family": "nbinom2",
+      "link": "log",
+      "formula": "y ~ x + f + (1|g) + offset(o)",
+      "failed_field": "disp_prediction",
+      "better_optimum": false,
+      "better_optimum_recorded": true,
+      "comparison": {
+        "max_absolute_difference_among_violations": 0.34711272,
+        "max_relative_difference_among_violations": 5.51459799e-06,
+        "relative_tolerance": 1e-06,
+        "absolute_tolerance": 1e-12,
+        "mismatched_elements": 68,
+        "compared_elements": 93,
+        "undefined_R_covariance": false
+      },
+      "selected_R_warnings": [],
+      "original_R_warnings": [],
+      "superseded_R_observations_preserved": 2,
+      "reference_sha256": "69ad19e17e84a1f09cb53524518485253f97d6a71698ba884adac216b7aca7e3",
+      "method": "normalized observed-Hessian Laplace",
+      "ziformula": "~1",
+      "dispformula": "~x",
+      "R_optimizer_diagnostics": {
+        "convergence": 0,
+        "pdHess": true,
+        "objective": 133.2144433594736
+      },
+      "R_score_max_abs": 9.216842909023628e-07,
+      "R_dispersion_prediction_range": [
+        0.19762206863797652,
+        62944.3375248616
+      ],
+      "R_conditional_probability_or_mean_range": [
+        0.8106086334924686,
+        2.8087180966121634
+      ],
+      "R_fixed_effects": {
+        "cond": [
+          0.6937627224591787,
+          0.08163244059372067,
+          -0.6113303061405182,
+          -0.49031578786242136
+        ],
+        "zi": -1.3923266936485594,
+        "disp": [
+          4.661230150754287,
+          4.589988995166917
+        ]
+      },
+      "reference_log_likelihood": -133.2144433594736,
+      "python_log_likelihood": -133.21444328442806,
+      "log_likelihood_difference_Python_minus_R": 7.504553423132165e-08,
+      "R_random_covariance_eigenvalues": {
+        "g": [
+          5.757111391715365e-09
+        ]
+      },
+      "category": "identified_dispersion_prediction_precision",
+      "severity": "numerical_tolerance_error",
+      "cause": "A large NB2 dispersion prediction magnifies a small difference in the estimated dispersion predictor. The prediction remains identified and fails its unchanged relative tolerance; no broad dispersion-limit waiver is applied.",
+      "investigation": {
+        "stored_identified_field_audit": {
+          "source": "oracle/cache/s2-tmb-interior-reference-audit.json",
+          "Python_information_eigenvalues": [
+            0.05408222712933768,
+            1.1880954579204372,
+            4.5022572556651195,
+            8.435302955668014,
+            17.138251270433887,
+            26.07698066325869,
+            35.86783163607559,
+            99.34201995316025
+          ],
+          "Python_score_max_abs": 3.4306189833355205e-11,
+          "R_score_max_abs": 9.216842909023628e-07,
+          "failed_fields": {
+            "zi_p": {
+              "shape": [
+                [
+                  1
+                ],
+                []
+              ]
+            },
+            "disp_pred": {
+              "max_abs": 0.3471127172524575,
+              "worst_ratio": 5.514597990801653,
+              "index": [
+                74
+              ],
+              "Python": 62943.99041214435,
+              "R": 62944.3375248616
+            },
+            "g_cov": {
+              "max_abs": 5.757111391715365e-09,
+              "worst_ratio": 3653.6591311668253,
+              "index": [
+                0,
+                0
+              ],
+              "Python": 0.0,
+              "R": 5.757111391715365e-09
+            },
+            "g_ranef": {
+              "max_abs": 3.1923306745711626e-08,
+              "worst_ratio": 7614.691975359766,
+              "index": [
+                5,
+                0
+              ],
+              "Python": 0.0,
+              "R": -3.1923306745711626e-08
+            }
+          },
+          "scope": "Stored investigation; final outcome is determined by the final XML."
+        }
+      },
+      "raw_run_better_optimum": false,
+      "raw_run_better_optimum_recorded": true,
+      "final_objective": {
+        "reference_log_likelihood": -133.2144433594736,
+        "python_log_likelihood": -133.21444328442806
+      }
+    },
+    {
+      "id": "tmb_1118",
+      "module": "tmb",
+      "status": "failed",
+      "failure_type": "AssertionError",
+      "family": "nbinom2",
+      "link": "log",
+      "formula": "y ~ x + f + (1|g) + offset(o)",
+      "failed_field": "cond_fixed_effect_coefficients",
+      "better_optimum": true,
+      "better_optimum_recorded": true,
+      "comparison": {
+        "max_absolute_difference_among_violations": 0.10436558,
+        "max_relative_difference_among_violations": 0.30912603,
+        "relative_tolerance": 1e-05,
+        "absolute_tolerance": 1e-12,
+        "mismatched_elements": 4,
+        "compared_elements": 4,
+        "undefined_R_covariance": false
+      },
+      "selected_R_warnings": [],
+      "original_R_warnings": [
+        "Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')",
+        "NaNs produced"
+      ],
+      "superseded_R_observations_preserved": 2,
+      "reference_sha256": "f03dc1aff1565a7d45f38467a95fd2da1b5c8af2c0eee90b8868fdc655460cdd",
+      "method": "normalized observed-Hessian Laplace",
+      "ziformula": "~0",
+      "dispformula": "~x + f",
+      "R_optimizer_diagnostics": {
+        "convergence": 0,
+        "pdHess": true,
+        "objective": 194.94115232316753
+      },
+      "R_score_max_abs": 2.061438680075349e-06,
+      "R_dispersion_prediction_range": [
+        1.9609801733888943,
+        267317032.18820235
+      ],
+      "R_conditional_probability_or_mean_range": [
+        0.4629880459421637,
+        3.5501038416553476
+      ],
+      "R_fixed_effects": {
+        "cond": [
+          0.3725228570385612,
+          0.5075062341828729,
+          -0.32543029919254035,
+          -0.33761498444450927
+        ],
+        "zi": [],
+        "disp": [
+          1.8837014718033855,
+          -0.8925740881378098,
+          16.35632674728005,
+          0.46623408327456833
+        ]
+      },
+      "reference_log_likelihood": -194.94115232316753,
+      "python_log_likelihood": -191.27648918897512,
+      "log_likelihood_difference_Python_minus_R": 3.664663134192409,
+      "R_random_covariance_eigenvalues": {
+        "g": [
+          6.287068759616697e-08
+        ]
+      },
+      "category": "different_dispersion_local_minimum",
+      "severity": "different_estimated_fit",
+      "cause": "Python reaches a better NB2 likelihood at a different dispersion fit and gives different identified conditional coefficients. A public R restart at the Python point failed with an invalid initial objective, leaving the strict reference discrepancy unresolved.",
+      "investigation": {
+        "stored_identified_field_audit": {
+          "source": "oracle/cache/s2-tmb-interior-reference-audit.json",
+          "Python_information_eigenvalues": [
+            -1.97091613519797e-13,
+            7.407696865133179e-13,
+            1.1199822295860233e-09,
+            0.041102443825768845,
+            0.41002347923672355,
+            18.584377987007898,
+            38.446304148912766,
+            103.26607687704683,
+            191.46339506582333
+          ],
+          "Python_score_max_abs": 1.1200978241092576e-09,
+          "R_score_max_abs": 2.061438680075349e-06,
+          "failed_fields": {
+            "cond_beta": {
+              "max_abs": 0.10436557973507016,
+              "worst_ratio": 30912.593821685055,
+              "index": [
+                3
+              ],
+              "Python": -0.4419805641795794,
+              "R": -0.33761498444450927
+            },
+            "cond_cov": {
+              "max_abs": 0.014263299789346318,
+              "worst_ratio": 23356.62143645144,
+              "index": [
+                1,
+                3
+              ],
+              "Python": -0.0022165280393814917,
+              "R": 0.0016594800513781212
+            },
+            "cond_p": {
+              "max_abs": 0.1271220668473706,
+              "worst_ratio": 1271.220668473706,
+              "index": [
+                3
+              ],
+              "Python": 0.035565716717257376,
+              "R": 0.16268778356462799
+            },
+            "disp_beta": {
+              "max_abs": 434.61938623916643,
+              "worst_ratio": 39078518.181611106,
+              "index": [
+                1
+              ],
+              "Python": -349.6973404839395,
+              "R": -0.8925740881378098
+            },
+            "disp_cov": {
+              "max_abs": 2760.7195622396302,
+              "worst_ratio": 30416.78874571635,
+              "index": [
+                0,
+                1
+              ],
+              "Python": 11.64851515306911,
+              "R": -5.705361047582127
+            },
+            "disp_p": {
+              "max_abs": 0.8369341568776989,
+              "worst_ratio": 8369.341568776988,
+              "index": [
+                3
+              ],
+              "Python": 0.0,
+              "R": 0.8369341568776989
+            },
+            "response_pred": {
+              "max_abs": 0.605104075103581,
+              "worst_ratio": 172439.76821040662,
+              "index": [
+                39
+              ],
+              "Python": 4.114178048837299,
+              "R": 3.5090739737337184
+            },
+            "cond_pred": {
+              "max_abs": 0.605104075103581,
+              "worst_ratio": 172439.76821040662,
+              "index": [
+                39
+              ],
+              "Python": 4.114178048837299,
+              "R": 3.5090739737337184
+            },
+            "disp_pred": {
+              "finite": false
+            },
+            "g_cov": {
+              "max_abs": 0.008835996969072574,
+              "worst_ratio": 1212558473.1736977,
+              "index": [
+                0,
+                0
+              ],
+              "Python": 0.008836059839760171,
+              "R": 6.287068759616697e-08
+            },
+            "g_ranef": {
+              "max_abs": 0.060500657858233005,
+              "worst_ratio": 6023939312.904352,
+              "index": [
+                8,
+                0
+              ],
+              "Python": -0.014292973111627676,
+              "R": -1.3726931235974395e-08
+            }
+          },
+          "scope": "Stored investigation; final outcome is determined by the final XML."
+        }
+      },
+      "raw_run_better_optimum": true,
+      "raw_run_better_optimum_recorded": true,
+      "final_objective": {
+        "reference_log_likelihood": -194.94115232316753,
+        "python_log_likelihood": -191.27648918897512
+      }
+    }
+  ],
+  "raw_run_better_optimum_properties": {
+    "gam": {
+      "passed": {
+        "false": 1184
+      },
+      "failed": {
+        "false": 10,
+        "true": 4,
+        "unrecorded": 2
+      }
+    },
+    "tmb": {
+      "passed": {
+        "false": 1057,
+        "true": 115
+      },
+      "failed": {
+        "false": 9,
+        "unrecorded": 13,
+        "true": 6
+      }
+    }
+  },
+  "final_run_evidence": {
+    "path": "oracle/cache/pytest-stage2-final.xml",
+    "sha256": "76a05df45328acc66be5c61fbd0159b77d29f8c4e57b6308c5cff792c1541eb3",
+    "test_counts": {
+      "passed": 6838,
+      "failed": 0,
+      "skipped": 0,
+      "expected_failures": 101
+    },
+    "representative_R_examples": 16,
+    "stage1_regressions": []
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "repetitions": 3,
+  "statistic": "median",
+  "machine_architecture": "arm64",
+  "python_version": "3.12.13",
+  "scope": "Warm public fit calls on the same machine; R startup excluded.",
+  "models": [
+    {
+      "id": "gam_0000",
+      "option": "gam / tp / gaussian / REML",
+      "observations": 137,
+      "python_seconds": 0.006623583998589311,
+      "r_seconds": 0.008999999999999897
+    },
+    {
+      "id": "gam_0015",
+      "option": "gam / te / binomial / REML",
+      "observations": 145,
+      "python_seconds": 0.10160120799992,
+      "r_seconds": 0.014000000000000234
+    },
+    {
+      "id": "gam_0033",
+      "option": "gam / ps / Gamma / REML",
+      "observations": 98,
+      "python_seconds": 0.013544207999075297,
+      "r_seconds": 0.006000000000000227
+    },
+    {
+      "id": "tmb_0001",
+      "option": "glmmTMB / nbinom1 / zi ~0 / disp ~1 / (1|g)",
+      "observations": 89,
+      "python_seconds": 0.05308525000145892,
+      "r_seconds": 0.03200000000000003
+    },
+    {
+      "id": "tmb_0068",
+      "option": "glmmTMB / nbinom2 / zi ~z + x / disp ~1 / (x|g)",
+      "observations": 108,
+      "python_seconds": 0.34917108400259167,
+      "r_seconds": 0.06799999999999962
+    }
+  ]
+}

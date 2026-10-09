@@ -2,6 +2,8 @@
 
 Stage 1 acceptance checks are complete for v0.1.0.
 
+Stage 2 acceptance checks are complete for v0.2.0.
+
 Counts below refer to committed synthetic R observations. Passing status comes from
 the latest recorded pytest run; unexecuted or skipped cases are not passes.
 
@@ -101,6 +103,126 @@ the latest recorded pytest run; unexecuted or skipped cases are not passes.
 | emm | response / lmer / asymptotic | implemented and validated | 3 | 100.00% | 0 failures; 0 unverified |
 | emm | response / lmer / kenward-roger | implemented and validated | 4 | 100.00% | 0 failures; 0 unverified |
 | emm | response / lmer / satterthwaite | implemented and validated | 3 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / additive / Gamma / GCV.Cp | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / additive / Gamma / ML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / additive / Gamma / REML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / additive / binomial / GCV.Cp | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / additive / binomial / ML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / additive / binomial / REML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / additive / gaussian / GCV.Cp | implemented and validated | 10 | 90.00% | 1 failures; 0 unverified |
+| gam | gam / additive / gaussian / ML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / additive / gaussian / REML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / additive / poisson / GCV.Cp | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / additive / poisson / ML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / additive / poisson / REML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / continuous-by / Gamma / GCV.Cp | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / continuous-by / Gamma / ML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / continuous-by / Gamma / REML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / continuous-by / binomial / GCV.Cp | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / continuous-by / binomial / ML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / continuous-by / binomial / REML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / continuous-by / gaussian / GCV.Cp | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / continuous-by / gaussian / ML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / continuous-by / gaussian / REML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / continuous-by / poisson / GCV.Cp | implemented and validated | 10 | 90.00% | 1 failures; 0 unverified |
+| gam | gam / continuous-by / poisson / ML | implemented and validated | 10 | 90.00% | 1 failures; 0 unverified |
+| gam | gam / continuous-by / poisson / REML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / cr / Gamma / GCV.Cp | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / cr / Gamma / ML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / cr / Gamma / REML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / cr / binomial / GCV.Cp | implemented and validated | 10 | 90.00% | 1 failures; 0 unverified |
+| gam | gam / cr / binomial / ML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / cr / binomial / REML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / cr / gaussian / GCV.Cp | implemented and validated | 10 | 90.00% | 1 failures; 0 unverified |
+| gam | gam / cr / gaussian / ML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / cr / gaussian / REML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / cr / poisson / GCV.Cp | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / cr / poisson / ML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / cr / poisson / REML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / cs / Gamma / GCV.Cp | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / cs / Gamma / ML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / cs / Gamma / REML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / cs / binomial / GCV.Cp | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / cs / binomial / ML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / cs / binomial / REML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / cs / gaussian / GCV.Cp | implemented and validated | 10 | 90.00% | 1 failures; 0 unverified |
+| gam | gam / cs / gaussian / ML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / cs / gaussian / REML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / cs / poisson / GCV.Cp | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / cs / poisson / ML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / cs / poisson / REML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / factor-by / Gamma / GCV.Cp | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / factor-by / Gamma / ML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / factor-by / Gamma / REML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / factor-by / binomial / GCV.Cp | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / factor-by / binomial / ML | implemented and validated | 10 | 90.00% | 1 failures; 0 unverified |
+| gam | gam / factor-by / binomial / REML | implemented and validated | 10 | 80.00% | 2 failures; 0 unverified |
+| gam | gam / factor-by / gaussian / GCV.Cp | implemented and validated | 10 | 80.00% | 2 failures; 0 unverified |
+| gam | gam / factor-by / gaussian / ML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / factor-by / gaussian / REML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / factor-by / poisson / GCV.Cp | implemented and validated | 10 | 90.00% | 1 failures; 0 unverified |
+| gam | gam / factor-by / poisson / ML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / factor-by / poisson / REML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / ps / Gamma / GCV.Cp | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / ps / Gamma / ML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / ps / Gamma / REML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / ps / binomial / GCV.Cp | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / ps / binomial / ML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / ps / binomial / REML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / ps / gaussian / GCV.Cp | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / ps / gaussian / ML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / ps / gaussian / REML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / ps / poisson / GCV.Cp | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / ps / poisson / ML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / ps / poisson / REML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / re / Gamma / GCV.Cp | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / re / Gamma / ML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / re / Gamma / REML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / re / binomial / GCV.Cp | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / re / binomial / ML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / re / binomial / REML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / re / gaussian / GCV.Cp | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / re / gaussian / ML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / re / gaussian / REML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / re / poisson / GCV.Cp | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / re / poisson / ML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / re / poisson / REML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / te / Gamma / GCV.Cp | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / te / Gamma / ML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / te / Gamma / REML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / te / binomial / GCV.Cp | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / te / binomial / ML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / te / binomial / REML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / te / gaussian / GCV.Cp | implemented and validated | 10 | 80.00% | 2 failures; 0 unverified |
+| gam | gam / te / gaussian / ML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / te / gaussian / REML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / te / poisson / GCV.Cp | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / te / poisson / ML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / te / poisson / REML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / ti / Gamma / GCV.Cp | implemented and validated | 10 | 90.00% | 1 failures; 0 unverified |
+| gam | gam / ti / Gamma / ML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / ti / Gamma / REML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / ti / binomial / GCV.Cp | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / ti / binomial / ML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / ti / binomial / REML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / ti / gaussian / GCV.Cp | implemented and validated | 10 | 90.00% | 1 failures; 0 unverified |
+| gam | gam / ti / gaussian / ML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / ti / gaussian / REML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / ti / poisson / GCV.Cp | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / ti / poisson / ML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / ti / poisson / REML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / tp / Gamma / GCV.Cp | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / tp / Gamma / ML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / tp / Gamma / REML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / tp / binomial / GCV.Cp | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / tp / binomial / ML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / tp / binomial / REML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / tp / gaussian / GCV.Cp | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / tp / gaussian / ML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / tp / gaussian / REML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / tp / poisson / GCV.Cp | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / tp / poisson / ML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| gam | gam / tp / poisson / REML | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
 | glmer | glmer / binomial-cloglog | implemented and validated | 150 | 95.33% | 7 failures; 0 unverified |
 | glmer | glmer / binomial-logit | implemented and validated | 150 | 97.33% | 4 failures; 0 unverified |
 | glmer | glmer / binomial-logit fractional binary | implemented and validated | 1 | 100.00% | 0 failures; 0 unverified |
@@ -187,6 +309,114 @@ the latest recorded pytest run; unexecuted or skipped cases are not passes.
 | lmer | lmer / REML / (x\|\|g) / sum / missingness / weights | implemented and validated | 1 | 100.00% | 0 failures; 0 unverified |
 | lmer | lmer / REML / (x\|\|g) / sum / weights | implemented and validated | 2 | 100.00% | 0 failures; 0 unverified |
 | lmer | lmer / REML / (x\|\|g) / weights | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / beta / zi ~0 / disp ~1 / (1\|g) | implemented and validated | 12 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / beta / zi ~0 / disp ~1 / (x\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / beta / zi ~0 / disp ~x + f / (1\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / beta / zi ~0 / disp ~x + f / (x\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / beta / zi ~0 / disp ~x / (1\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / beta / zi ~0 / disp ~x / (x\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / beta / zi ~1 / disp ~1 / (1\|g) | implemented and validated | 12 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / beta / zi ~1 / disp ~1 / (x\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / beta / zi ~1 / disp ~x + f / (1\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / beta / zi ~1 / disp ~x + f / (x\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / beta / zi ~1 / disp ~x / (1\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / beta / zi ~1 / disp ~x / (x\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / beta / zi ~z + x / disp ~1 / (1\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / beta / zi ~z + x / disp ~1 / (x\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / beta / zi ~z + x / disp ~x + f / (1\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / beta / zi ~z + x / disp ~x + f / (x\|g) | implemented and validated | 11 | 90.91% | 1 failures; 0 unverified |
+| tmb | glmmTMB / beta / zi ~z + x / disp ~x / (1\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / beta / zi ~z + x / disp ~x / (x\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / binomial / zi ~0 / disp ~1 / (1\|g) | implemented and validated | 12 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / binomial / zi ~0 / disp ~1 / (x\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / binomial / zi ~0 / disp ~x + f / (1\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / binomial / zi ~0 / disp ~x + f / (x\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / binomial / zi ~0 / disp ~x / (1\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / binomial / zi ~0 / disp ~x / (x\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / binomial / zi ~1 / disp ~1 / (1\|g) | implemented and validated | 12 | 91.67% | 1 failures; 0 unverified |
+| tmb | glmmTMB / binomial / zi ~1 / disp ~1 / (x\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / binomial / zi ~1 / disp ~x + f / (1\|g) | implemented and validated | 11 | 90.91% | 1 failures; 0 unverified |
+| tmb | glmmTMB / binomial / zi ~1 / disp ~x + f / (x\|g) | implemented and validated | 11 | 90.91% | 1 failures; 0 unverified |
+| tmb | glmmTMB / binomial / zi ~1 / disp ~x / (1\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / binomial / zi ~1 / disp ~x / (x\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / binomial / zi ~z + x / disp ~1 / (1\|g) | implemented and validated | 11 | 90.91% | 1 failures; 0 unverified |
+| tmb | glmmTMB / binomial / zi ~z + x / disp ~1 / (x\|g) | implemented and validated | 11 | 72.73% | 3 failures; 0 unverified |
+| tmb | glmmTMB / binomial / zi ~z + x / disp ~x + f / (1\|g) | implemented and validated | 11 | 90.91% | 1 failures; 0 unverified |
+| tmb | glmmTMB / binomial / zi ~z + x / disp ~x + f / (x\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / binomial / zi ~z + x / disp ~x / (1\|g) | implemented and validated | 11 | 90.91% | 1 failures; 0 unverified |
+| tmb | glmmTMB / binomial / zi ~z + x / disp ~x / (x\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / gaussian / zi ~0 / disp ~1 / (1\|g) | implemented and validated | 12 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / gaussian / zi ~0 / disp ~1 / (x\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / gaussian / zi ~0 / disp ~x + f / (1\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / gaussian / zi ~0 / disp ~x + f / (x\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / gaussian / zi ~0 / disp ~x / (1\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / gaussian / zi ~0 / disp ~x / (x\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / gaussian / zi ~1 / disp ~1 / (1\|g) | implemented and validated | 12 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / gaussian / zi ~1 / disp ~1 / (x\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / gaussian / zi ~1 / disp ~x + f / (1\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / gaussian / zi ~1 / disp ~x + f / (x\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / gaussian / zi ~1 / disp ~x / (1\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / gaussian / zi ~1 / disp ~x / (x\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / gaussian / zi ~z + x / disp ~1 / (1\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / gaussian / zi ~z + x / disp ~1 / (x\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / gaussian / zi ~z + x / disp ~x + f / (1\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / gaussian / zi ~z + x / disp ~x + f / (x\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / gaussian / zi ~z + x / disp ~x / (1\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / gaussian / zi ~z + x / disp ~x / (x\|g) | implemented and validated | 11 | 90.91% | 1 failures; 0 unverified |
+| tmb | glmmTMB / nbinom1 / zi ~0 / disp ~1 / (1\|g) | implemented and validated | 12 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / nbinom1 / zi ~0 / disp ~1 / (x\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / nbinom1 / zi ~0 / disp ~x + f / (1\|g) | implemented and validated | 11 | 90.91% | 1 failures; 0 unverified |
+| tmb | glmmTMB / nbinom1 / zi ~0 / disp ~x + f / (x\|g) | implemented and validated | 11 | 81.82% | 2 failures; 0 unverified |
+| tmb | glmmTMB / nbinom1 / zi ~0 / disp ~x / (1\|g) | implemented and validated | 11 | 90.91% | 1 failures; 0 unverified |
+| tmb | glmmTMB / nbinom1 / zi ~0 / disp ~x / (x\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / nbinom1 / zi ~1 / disp ~1 / (1\|g) | implemented and validated | 12 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / nbinom1 / zi ~1 / disp ~1 / (x\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / nbinom1 / zi ~1 / disp ~x + f / (1\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / nbinom1 / zi ~1 / disp ~x + f / (x\|g) | implemented and validated | 11 | 90.91% | 1 failures; 0 unverified |
+| tmb | glmmTMB / nbinom1 / zi ~1 / disp ~x / (1\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / nbinom1 / zi ~1 / disp ~x / (x\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / nbinom1 / zi ~z + x / disp ~1 / (1\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / nbinom1 / zi ~z + x / disp ~1 / (x\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / nbinom1 / zi ~z + x / disp ~x + f / (1\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / nbinom1 / zi ~z + x / disp ~x + f / (x\|g) | implemented and validated | 11 | 81.82% | 2 failures; 0 unverified |
+| tmb | glmmTMB / nbinom1 / zi ~z + x / disp ~x / (1\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / nbinom1 / zi ~z + x / disp ~x / (x\|g) | implemented and validated | 11 | 90.91% | 1 failures; 0 unverified |
+| tmb | glmmTMB / nbinom2 / zi ~0 / disp ~1 / (1\|g) | implemented and validated | 12 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / nbinom2 / zi ~0 / disp ~1 / (x\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / nbinom2 / zi ~0 / disp ~x + f / (1\|g) | implemented and validated | 11 | 81.82% | 2 failures; 0 unverified |
+| tmb | glmmTMB / nbinom2 / zi ~0 / disp ~x + f / (x\|g) | implemented and validated | 11 | 90.91% | 1 failures; 0 unverified |
+| tmb | glmmTMB / nbinom2 / zi ~0 / disp ~x / (1\|g) | implemented and validated | 11 | 90.91% | 1 failures; 0 unverified |
+| tmb | glmmTMB / nbinom2 / zi ~0 / disp ~x / (x\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / nbinom2 / zi ~1 / disp ~1 / (1\|g) | implemented and validated | 12 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / nbinom2 / zi ~1 / disp ~1 / (x\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / nbinom2 / zi ~1 / disp ~x + f / (1\|g) | implemented and validated | 11 | 90.91% | 1 failures; 0 unverified |
+| tmb | glmmTMB / nbinom2 / zi ~1 / disp ~x + f / (x\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / nbinom2 / zi ~1 / disp ~x / (1\|g) | implemented and validated | 11 | 90.91% | 1 failures; 0 unverified |
+| tmb | glmmTMB / nbinom2 / zi ~1 / disp ~x / (x\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / nbinom2 / zi ~z + x / disp ~1 / (1\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / nbinom2 / zi ~z + x / disp ~1 / (x\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / nbinom2 / zi ~z + x / disp ~x + f / (1\|g) | implemented and validated | 11 | 81.82% | 2 failures; 0 unverified |
+| tmb | glmmTMB / nbinom2 / zi ~z + x / disp ~x + f / (x\|g) | implemented and validated | 11 | 90.91% | 1 failures; 0 unverified |
+| tmb | glmmTMB / nbinom2 / zi ~z + x / disp ~x / (1\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / nbinom2 / zi ~z + x / disp ~x / (x\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / poisson / zi ~0 / disp ~1 / (1\|g) | implemented and validated | 12 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / poisson / zi ~0 / disp ~1 / (x\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / poisson / zi ~0 / disp ~x + f / (1\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / poisson / zi ~0 / disp ~x + f / (x\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / poisson / zi ~0 / disp ~x / (1\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / poisson / zi ~0 / disp ~x / (x\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / poisson / zi ~1 / disp ~1 / (1\|g) | implemented and validated | 12 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / poisson / zi ~1 / disp ~1 / (x\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / poisson / zi ~1 / disp ~x + f / (1\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / poisson / zi ~1 / disp ~x + f / (x\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / poisson / zi ~1 / disp ~x / (1\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / poisson / zi ~1 / disp ~x / (x\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / poisson / zi ~z + x / disp ~1 / (1\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / poisson / zi ~z + x / disp ~1 / (x\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / poisson / zi ~z + x / disp ~x + f / (1\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / poisson / zi ~z + x / disp ~x + f / (x\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / poisson / zi ~z + x / disp ~x / (1\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
+| tmb | glmmTMB / poisson / zi ~z + x / disp ~x / (x\|g) | implemented and validated | 11 | 100.00% | 0 failures; 0 unverified |
 
 ## Module totals
 
@@ -194,14 +424,17 @@ the latest recorded pytest run; unexecuted or skipped cases are not passes.
 | --- | ---: | ---: | ---: |
 | anova | 700 | 697 | 3 |
 | emm | 753 | 752 | 1 |
+| gam | 1200 | 1184 | 16 |
 | glmer | 603 | 585 | 18 |
 | gls | 600 | 587 | 13 |
 | inference | 600 | 594 | 6 |
 | lmer | 600 | 584 | 16 |
+| tmb | 1200 | 1172 | 28 |
 
-Total: 3856 synthetic cases, 3799 recorded passes.
+Total: 6256 synthetic cases, 6155 recorded passes.
 
-Each module requires at least 300 cases; Stage 1 requires at least 3,000 and 98% passing.
+Stage 1 requires at least 300 cases per module, 3,000 total and 98% passing.
+Stage 2 separately requires at least 2,000 cases and 98% passing, with no new Stage 1 failures.
 
 ## R package examples
 
@@ -224,3 +457,5 @@ are included in coverage and require the development oracle.
 | test_lmertest_sleepstudy_anova[satterthwaite-1] | passed |
 | test_lmertest_sleepstudy_coefficients | passed |
 | test_nlme_orthodont_inference | passed |
+| test_public_mcycle_gaussian_gam | passed |
+| test_public_salamanders_zero_inflated_poisson | passed |

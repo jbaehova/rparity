@@ -234,5 +234,225 @@
     "reason": "Ubuntu Python 3.13 conditional mode near -1.44e-5 differs by 1.59e-9 (relative 1.1022e-4), exceeding the retained 1e-4 threshold. The local reference and other recorded environments pass.",
     "strict": false,
     "platform_dependent": true
+  },
+  "gam_0018": {
+    "category": "finite_small_smooth_coefficients",
+    "reason": "Different finite stopping points for the strongly penalized third factor smooth leave coefficient differences above the unchanged tolerance. Stronger independent R fits still fail the small coefficients and covariance.",
+    "strict": true
+  },
+  "gam_0298": {
+    "category": "warning_and_identified_numeric_discrepancy",
+    "reason": "R reports inner nonconvergence while Python reports a stationary fit. A metadata-only exception was rejected because the small third factor-smooth coefficients, covariance and term statistics also differ.",
+    "strict": true
+  },
+  "gam_0446": {
+    "category": "different_smoothing_minimum",
+    "reason": "Python reaches a lower GCV minimum than the automatic R fit and gives materially different coefficients. Public R fixed-smoothing evaluations confirm a lower criterion, but automatic independent R optimization has not reproduced the complete fit.",
+    "strict": true
+  },
+  "gam_0451": {
+    "category": "identified_small_prediction",
+    "reason": "The GCV fit has a very large smoothing parameter. The identified new-data link prediction close to zero differs beyond the relative tolerance; stronger public R fits still fail prediction and term comparisons.",
+    "strict": true
+  },
+  "gam_0596": {
+    "category": "warning_and_identified_numeric_discrepancy",
+    "reason": "R reports inner nonconvergence while Python reports a stationary fit. Stored audits also fail a small identified coefficient and a term comparison, so warning metadata alone cannot resolve the case.",
+    "strict": true
+  },
+  "gam_0685": {
+    "category": "unstable_large_penalty_R_objective",
+    "reason": "The original R GCV score is below Python by more than the objective tolerance at an enormous tensor penalty. An independent augmented-QR evaluation of public R X and S reproduces the Python score rather than the reported R score. Stronger R fits still fail identified predictions and covariance bounds.",
+    "strict": true
+  },
+  "gam_0738": {
+    "category": "finite_small_smooth_coefficients",
+    "reason": "Different finite stopping points for the strongly penalized third factor shrinkage smooth leave small coefficient differences above tolerance. Stronger public R controls do not produce a full strict match.",
+    "strict": true
+  },
+  "gam_0928": {
+    "category": "small_covariance_entries",
+    "reason": "Small cross-covariance entries involving the strongly penalized factor smooth disagree above the absolute floor. The original R covariance does not satisfy the independently measured Schur envelope, so it is not covered by a limit exception.",
+    "strict": true
+  },
+  "gam_0948": {
+    "category": "different_smoothing_minimum",
+    "reason": "Python reaches a better GCV minimum than the selected R fit. An independently optimized public R start confirms that minimum, but its identified covariance still fails strict parity; the original selected observation remains the reference.",
+    "strict": true
+  },
+  "gam_1027": {
+    "category": "warning_and_identified_numeric_discrepancy",
+    "reason": "R reports inner nonconvergence while Python reports a stationary fit. After removing the common design/penalty coefficient gauge, stored audits still reject small penalized coefficients; a metadata-only exception is not justified.",
+    "strict": true
+  },
+  "gam_1049": {
+    "category": "unstable_large_penalty_R_objective",
+    "reason": "The original R GCV score is below Python by more than tolerance with a smoothing parameter above 1e14. Public X/S augmented QR shows substantial inner-fit error and reproduces Python's higher score. Healthier R starts improve inner accuracy but still fail an identified term or covariance envelope.",
+    "strict": true
+  },
+  "gam_1161": {
+    "category": "identified_small_term",
+    "reason": "A very large penalty leaves a nonzero nullspace term whose nearzero evaluations differ beyond the strict relative tolerance. The retained term remains identified and was not waived by a zero-variance limit.",
+    "strict": true
+  },
+  "gam_1162": {
+    "category": "finite_small_smooth_coefficients",
+    "reason": "Python and R stop at different finite values on a shallow GCV shrinkage axis. The small smooth coefficients disagree above tolerance, and identified predictions also fail in stored stronger-reference probes.",
+    "strict": true
+  },
+  "gam_1165": {
+    "category": "identified_small_fitted_values",
+    "reason": "Both tensor penalties are extremely large. Two fitted values close to zero differ beyond the strict relative tolerance; stronger independent R controls and starts still fail fitted values and terms.",
+    "strict": true
+  },
+  "gam_1168": {
+    "category": "different_smoothing_minimum",
+    "reason": "Python reaches a lower GCV minimum with a different third factor-smooth fit. A public R fixed-smoothing evaluation agrees with that point, but the automatic R optimizer continues to select the original different minimum.",
+    "strict": true
+  },
+  "gam_1187": {
+    "category": "different_smoothing_minimum",
+    "reason": "Python reaches a lower GCV minimum. A public R start independently confirms its criterion, but an identified summed term still fails after accounting for the common coefficient gauge; the original observation is retained.",
+    "strict": true
+  },
+  "tmb_0037": {
+    "category": "weak_partial_Poisson_limit_covariance",
+    "reason": "A group-specific NB1 dispersion approaches the Poisson limit along a very weak information direction. The selected R covariance and Python covariance differ in two small conditional cross-covariance entries. Tighter inner controls and an independent Poisson-limit reference did not establish full strict parity.",
+    "strict": true
+  },
+  "tmb_0097": {
+    "category": "unresolved_extreme_NB1_dispersion_likelihood",
+    "reason": "The selected R fit has NB1 dispersion near 1e-16 in part of the data, a non-positive-definite Hessian and a large residual score. Python's normalized Laplace likelihood remains lower than the recorded R optimizer objective; no accepted limit certificate resolves this discrepancy.",
+    "strict": true
+  },
+  "tmb_0099": {
+    "category": "unresolved_zero_inflated_binomial_Laplace_fit",
+    "reason": "The zero-inflated binomial reference reports a non-positive-definite Hessian and a very large score. Tightened public inner-optimizer probes did not resolve the normalized Laplace likelihood gap; the case remains a failure.",
+    "strict": true
+  },
+  "tmb_0266": {
+    "category": "unresolved_extreme_NB2_dispersion_likelihood",
+    "reason": "The selected R fit spans NB2 dispersion from approximately 3e-4 to 7e12 and reports nonconvergence. The normalized Laplace likelihood discrepancy exceeds tolerance and no admitted Poisson-limit bound covers this case.",
+    "strict": true
+  },
+  "tmb_0307": {
+    "category": "unresolved_extreme_NB1_dispersion_likelihood",
+    "reason": "A very small group-specific NB1 dispersion accompanies R nonconvergence and indefinite reported curvature. Python's likelihood remains below the selected R optimizer objective beyond tolerance; numerical ill-conditioning is observed but the exact discrepancy remains unresolved.",
+    "strict": true
+  },
+  "tmb_0319": {
+    "category": "unresolved_extreme_NB1_dispersion_likelihood",
+    "reason": "The selected NB1 reference reaches dispersion near 4e-21 with a large residual score and non-positive-definite Hessian. The recorded normalized Laplace likelihood cannot be matched within tolerance and is not waived.",
+    "strict": true
+  },
+  "tmb_0339": {
+    "category": "binomial_mixture_conditional_separation",
+    "reason": "Conditional binomial probabilities approach one along a weak coefficient direction in the zero-inflated mixture. R and Python stop at different large finite logit coefficients despite practically equal likelihoods; no strict coefficient-limit comparison was accepted.",
+    "strict": true
+  },
+  "tmb_0357": {
+    "category": "binomial_mixture_conditional_separation",
+    "reason": "A factor's conditional binomial probability approaches one while the mixture absorbs observed zeros. A very weak information direction allows different large finite coefficient stopping values; the coefficient comparison still fails.",
+    "strict": true
+  },
+  "tmb_0393": {
+    "category": "unresolved_zero_inflated_binomial_Laplace_fit",
+    "reason": "The selected zero-inflated binomial reference reports a non-positive-definite Hessian and a score near 2e9. Its normalized Laplace objective is better than Python's by more than tolerance; unsuccessful stronger-inner probes are retained and do not resolve the failure.",
+    "strict": true
+  },
+  "tmb_0416": {
+    "category": "unresolved_small_conditional_coefficient",
+    "reason": "The selected correlated NB2 fit has weak dispersion and correlation directions. A small identified conditional coefficient differs beyond tolerance; a public R restart emits warnings and does not establish strict equality to the original selected fields.",
+    "strict": true
+  },
+  "tmb_0538": {
+    "category": "unresolved_rank_one_Laplace_likelihood",
+    "reason": "The beta reference has a nearly rank-one random covariance and reports false convergence. Its normalized Laplace objective exceeds Python's by more than tolerance, so the covariance-boundary interpretation does not resolve the likelihood comparison.",
+    "strict": true
+  },
+  "tmb_0560": {
+    "category": "warning_and_identified_numeric_discrepancy",
+    "reason": "The NB2 R fit reports false convergence with a large residual dispersion score, while Python finds a better stationary fit without a corresponding warning. A public R start confirms the Python likelihood but still reports poor curvature and substantial dispersion scores; strict identified-field and warning equivalence remains unresolved.",
+    "strict": true
+  },
+  "tmb_0584": {
+    "category": "warning_and_identified_numeric_discrepancy",
+    "reason": "R emits a false-convergence warning while Python has a stationary positive-curvature fit and emits no corresponding warning. Stored strict audits also reject conditional coefficients, so this is not a metadata-only exception.",
+    "strict": true
+  },
+  "tmb_0631": {
+    "category": "unresolved_extreme_NB1_dispersion_likelihood",
+    "reason": "The selected NB1 reference reaches dispersion near 1e-34 and reports a score above 1e15, nonconvergence and indefinite curvature. The likelihood gap remains unresolved and the original observation is retained.",
+    "strict": true
+  },
+  "tmb_0643": {
+    "category": "unresolved_extreme_NB1_dispersion_likelihood",
+    "reason": "The NB1 reference reaches dispersion near 4e-27 with a separated zero-inflation predictor and exhausts its function-evaluation budget. Python does not match the better recorded R objective within tolerance; no independent acceptable reference resolves the failure.",
+    "strict": true
+  },
+  "tmb_0644": {
+    "category": "warning_and_identified_numeric_discrepancy",
+    "reason": "The NB2 R fit reports false convergence while Python reaches a better stationary fit without a corresponding warning. An independent R start confirms the likelihood but retains non-positive-definite curvature and large dispersion scores; a metadata-only exception would not establish identified-field parity.",
+    "strict": true
+  },
+  "tmb_0693": {
+    "category": "binomial_mixture_conditional_separation",
+    "reason": "A factor's conditional binomial probability saturates near one in the zero-inflated mixture. The corresponding information direction is extremely weak and R/Python large finite logit coefficients differ, even though likelihoods agree closely.",
+    "strict": true
+  },
+  "tmb_0698": {
+    "category": "partially_collapsed_NB2_dispersion",
+    "reason": "A subset of the NB2 dispersion predictor approaches the Poisson limit along a weak information direction. Large finite dispersion coefficients differ; no indexed density, covariance and identified-field certificate admits this case.",
+    "strict": true
+  },
+  "tmb_0717": {
+    "category": "unresolved_rank_one_and_separated_ZI_likelihood",
+    "reason": "The reference combines a nearly rank-one random covariance with very large zero-inflation coefficients and reports nonconvergence. The normalized Laplace objective remains better than Python's beyond tolerance, so a boundary warning alone does not pass the case.",
+    "strict": true
+  },
+  "tmb_0733": {
+    "category": "unresolved_rank_one_Laplace_likelihood",
+    "reason": "The selected NB1 reference has a nearly rank-one random covariance and reports nonconvergence. A small normalized Laplace likelihood discrepancy still exceeds the fixed objective tolerance.",
+    "strict": true
+  },
+  "tmb_0883": {
+    "category": "warning_and_identified_numeric_discrepancy",
+    "reason": "R emits false convergence with a substantial residual score while Python reaches a better stationary fit without a corresponding warning. Conditional coefficients also differ, and an independent R restart did not reproduce the Python fit.",
+    "strict": true
+  },
+  "tmb_0902": {
+    "category": "different_dispersion_local_minimum",
+    "reason": "Python reaches a better NB2 likelihood at a different dispersion fit and gives different identified conditional coefficients. A public R start at that point returned an invalid initial objective, so no complete independent strict reference was adopted.",
+    "strict": true
+  },
+  "tmb_0953": {
+    "category": "unresolved_rank_one_and_separated_ZI_likelihood",
+    "reason": "The Gaussian reference has a nearly rank-one random covariance and zero-inflation coefficients with magnitude near 1e3. Its recorded objective remains better than Python's beyond tolerance despite reported nonconvergence.",
+    "strict": true
+  },
+  "tmb_0981": {
+    "category": "binomial_mixture_conditional_separation",
+    "reason": "A conditional binomial factor probability saturates near one with an extremely weak coefficient-information direction. Different large finite coefficient stopping values remain outside the unchanged coefficient tolerance.",
+    "strict": true
+  },
+  "tmb_1023": {
+    "category": "binomial_mixture_conditional_separation",
+    "reason": "The zero-inflated binomial fit has a conditional factor probability near one and a very weak coefficient-information direction. R and Python choose different large finite logit coefficients on the flat likelihood axis; no accepted identified-field exception applies.",
+    "strict": true
+  },
+  "tmb_1041": {
+    "category": "unresolved_zero_inflated_binomial_Laplace_fit",
+    "reason": "The selected zero-inflated binomial reference reports an indefinite Hessian and a large residual score. Tightened public inner-optimizer probes do not resolve its substantially better recorded normalized Laplace objective.",
+    "strict": true
+  },
+  "tmb_1106": {
+    "category": "identified_dispersion_prediction_precision",
+    "reason": "A large NB2 dispersion prediction magnifies a small difference in the estimated dispersion predictor. The prediction remains identified and fails its unchanged relative tolerance; no broad dispersion-limit waiver is applied.",
+    "strict": true
+  },
+  "tmb_1118": {
+    "category": "different_dispersion_local_minimum",
+    "reason": "Python reaches a better NB2 likelihood at a different dispersion fit and gives different identified conditional coefficients. A public R restart at the Python point failed with an invalid initial objective, leaving the strict reference discrepancy unresolved.",
+    "strict": true
   }
 }

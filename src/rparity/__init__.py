@@ -6,7 +6,7 @@ from .gls import corAR1, corARMA, corCompSymm, corSymm, gls, varExp, varIdent, v
 from .lmm import glmer, lmer
 from .tmb import GlmmTMBResult, glmmTMB
 
-__version__ = '0.1.0'
+__version__ = '0.2.0'
 __all__ = [
     'Anova',
     'EmmGrid',

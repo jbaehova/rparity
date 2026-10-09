@@ -163,3 +163,20 @@ requires independently stable positive information. Boundary dispersion
 comparisons use separately derived normalized NB density and curvature bounds,
 validated by 80-digit arithmetic. These are mathematical implementations and
 numerical black-box observations; no target function body was read.
+
+## Stage 2 final integration and distribution audit
+
+The final raw corpus comparison retains all 2,400 original designs. A separate
+read-only audit compared the initial corpus checkpoint with the selected
+fixtures and their preserved attempts: every original statistical input and
+every original oracle observation remains present. The 6,699 stored corpus
+observations are history, not additional validation cases. All 44 unresolved
+comparisons remain failed numerical cases, with public per-case explanations.
+
+The final numerical implementation uses independently written Python and
+permissively licensed numerical dependencies. No target R source files or
+function bodies were opened for this integration. R observations still come
+only through the black-box driver. Final wheel checks disable process launch,
+remove R from PATH, and use a clean Python 3.11 environment without rpy2 or
+the build-time OpenBLAS provider installed. Third-party native license notices
+are included. The package and numerical oracle remain separate.

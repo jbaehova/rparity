@@ -10,3 +10,5 @@ nav:
       - emmeans: migration/emmeans.md
       - car: migration/car.md
       - nlme: migration/nlme.md
+      - mgcv: migration/mgcv.md
+      - glmmTMB: migration/glmmTMB.md

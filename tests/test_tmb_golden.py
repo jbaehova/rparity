@@ -397,14 +397,14 @@ def test_tmb_golden(path, record_property):
     reference_loglik = observation["result"]["logLik"]
     if reference_loglik is None:
         reference_loglik = -observation["result"]["optimizer_diagnostics"]["objective"]
+    record_property("reference_log_likelihood", float(reference_loglik))
+    record_property("python_log_likelihood", float(model.logLik()))
+    record_property("better_optimum", bool(model.logLik() > reference_loglik + 1e-6))
     assert np.isfinite(model.logLik()), "finite normalized Laplace log likelihood"
     assert model.logLik() >= reference_loglik - 1e-6, (
         f"normalized log likelihood: Python {model.logLik():.15g}, "
         f"R {reference_loglik:.15g}"
     )
-    record_property("reference_log_likelihood", float(reference_loglik))
-    record_property("python_log_likelihood", float(model.logLik()))
-    record_property("better_optimum", bool(model.logLik() > reference_loglik + 1e-6))
     messages = " ".join(np.atleast_1d(observation["warnings"]).tolist()).lower()
     diagnostics = expected["optimizer_diagnostics"]
     record_property("reference_convergence", diagnostics["convergence"])

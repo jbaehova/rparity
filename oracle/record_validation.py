@@ -41,10 +41,11 @@ def main() -> None:
                for module in ('test_r_examples', 'test_stage2_r_examples')):
             examples[name] = {'status': status}
         candidate = name.partition('[')[2].rstrip(']')
-        # IDs such as glmer_0001 contain lmer_0001 as a suffix. Only an exact
-        # parameter ID identifies a corpus case, so cross-module suffixes must
-        # never transfer test outcomes to a different model.
-        matching = [candidate] if candidate in ids else []
+        # Downstream tests reuse corpus IDs for separate inference checks.
+        # Only a golden comparison owns its corpus outcome and objective
+        # properties. Exact matching also prevents glmer/lmer suffix overlap.
+        is_golden = 'golden' in name.partition('[')[0]
+        matching = [candidate] if is_golden and candidate in ids else []
         for case_id in matching:
             current = outcomes.get(case_id, {})
             if current.get('status') == 'failed':
