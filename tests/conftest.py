@@ -1,6 +1,7 @@
 """Explicit known parity failures remain failures in the numerical report.
 
-Strict xfail keeps unexpected regressions and unexpectedly fixed cases visible.
+Strict xfail keeps unexpectedly fixed cases visible. Three explicitly reviewed
+environment-dependent cases permit a genuine pass on other supported environments.
 The documented corpus gate counts these cases as failures, never passes.
 """
 from __future__ import annotations
@@ -21,5 +22,6 @@ def pytest_collection_modifyitems(items: list[pytest.Item]) -> None:
             continue
         case_id = item.name.partition('[')[2].rstrip(']')
         if case_id in failures:
-            item.add_marker(pytest.mark.xfail(reason=failures[case_id]['reason'], strict=True,
+            item.add_marker(pytest.mark.xfail(reason=failures[case_id]['reason'],
+                                             strict=failures[case_id].get('strict', True),
                                              raises=AssertionError))

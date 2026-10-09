@@ -5,7 +5,9 @@
   },
   "lmer_0059": {
     "category": "near_zero_prediction",
-    "reason": "R optimizer roundoff exceeds the strict relative prediction criterion near zero; all objective checks pass."
+    "reason": "R optimizer roundoff exceeds the strict relative prediction criterion near zero; all objective checks pass.",
+    "strict": false,
+    "platform_dependent": true
   },
   "lmer_0186": {
     "category": "near_zero_prediction",
@@ -53,7 +55,9 @@
   },
   "lmer_0585": {
     "category": "near_zero_prediction",
-    "reason": "R optimizer roundoff exceeds the strict relative prediction criterion near zero; all objective checks pass."
+    "reason": "R optimizer roundoff exceeds the strict relative prediction criterion near zero; all objective checks pass.",
+    "strict": false,
+    "platform_dependent": true
   },
   "lmer_0160": {
     "category": "optimizer_warning",
@@ -205,7 +209,9 @@
   },
   "glmer_0107": {
     "category": "fixed_covariance_precision",
-    "reason": "Laplace objectives meet the 1e-6 criterion, but R/Python fixed covariance precision exceeds the specified strict relative threshold."
+    "reason": "Laplace objectives meet the 1e-6 criterion, but R/Python fixed covariance precision exceeds the specified strict relative threshold.",
+    "strict": false,
+    "platform_dependent": true
   },
   "glmer_0152": {
     "category": "fixed_covariance_precision",

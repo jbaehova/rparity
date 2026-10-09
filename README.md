@@ -1,21 +1,21 @@
-![Status: Stage 1 in progress (pre-alpha, API may change)](https://img.shields.io/badge/Status-Stage%201%20in%20progress-orange)
+![Status: Stage 1 complete (v0.1.0)](https://img.shields.io/badge/Status-Stage%201%20complete%20%28v0.1.0%29-green)
 
 # rparity
 
 R-grade mixed models, marginal means, GAMs and meta-analysis in pure Python, verified against R, no R required.
 
-Stage 1 is under development. See [progress](PROGRESS.md) and [validation coverage](docs/coverage.md).
+Stage 1 is complete in v0.1.0. The synthetic corpus passes 3,796/3,856 cases (98.44%); 60 documented differences remain counted as failures. See the [Stage 1 report](reports/STAGE_1_REPORT.md), [validation coverage](docs/coverage.md), and [documentation site](https://jbaehova.github.io/rparity/).
 
 ## Installation
 
-Python 3.11 or later is required. Build from this checkout with `uv build`,
+Python 3.11 or later is required. Download the wheel from the [GitHub release](https://github.com/jbaehova/rparity/releases/tag/v0.1.0), or build from this checkout with `uv build`,
 then install its wheel into your Python environment:
 
 ```sh
-python -m pip install dist/rparity-0.1.0.dev0-py3-none-any.whl
+python -m pip install dist/rparity-0.1.0-py3-none-any.whl
 ```
 
-NumPy, SciPy, pandas, formulaic, and statsmodels are installed as dependencies.
+NumPy and SciPy handle numerical work. pandas, formulaic and statsmodels provide data and model support.
 Polars input is supported when Polars is already available. No R or rpy2 is
 required for fitting, inference, or prediction.
 

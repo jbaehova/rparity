@@ -9,7 +9,7 @@
 
 ## Case-specific validation policy
 
-Numerical failure expectations are strict and remain failures in the coverage denominator. A fixed case unexpectedly passing is an XPASS error until its classification is reviewed. No fixture is removed and required-field tolerances are unchanged.
+Numerical failure expectations are strict and remain failures in the coverage denominator. An unexpectedly passing case is an XPASS error unless its environment dependence has been explicitly reviewed. No fixture is removed and required-field tolerances are unchanged.
 
 - emm_0013: The saturated GLM contains an all-zero or all-one factor cell and has no finite intercept MLE. Preserve the EMM output; verify the likelihood supremum against the supplemental R fit and check a boundary warning instead of comparing divergent coefficients.
 - emm_0016: The saturated GLM contains an all-zero or all-one factor cell and has no finite intercept MLE. Preserve the EMM output; verify the likelihood supremum against the supplemental R fit and check a boundary warning instead of comparing divergent coefficients.
@@ -80,5 +80,12 @@ Control contrasts require an explicit supported `adjust` value. The unlisted R `
 - All 600 GLS inputs record uniform public BFGS optimizer controls. Controls are not selected per Python result.
 - Relative field comparisons retain the TASK thresholds, with a 1e-12 absolute floating-point floor at zero. This floor is not a replacement for the required relative thresholds.
 - A GLMM cannot use the Gaussian Kenward-Roger F procedure. Python rejects that request, matching the public R oracle behavior; Gaussian mixed models support KR.
-- Numerical failure markers are explicit and strict. Coverage counts them as failures, while unexpected failures or unexpected passes fail the test suite. Every remaining ID and cause is recorded in the Stage 1 report.
+- Numerical failure markers are explicit; 57 are strict and three are reviewed environment-dependent cases. Coverage counts them as failures, while unexpected failures or unexpected passes fail the test suite. Every remaining ID and cause is recorded in the Stage 1 report.
 - CI limits BLAS thread pools to one worker for small dense golden problems, avoiding oversubscription on hosted runners. Runtime users retain their own thread configuration.
+
+## Environment-dependent numerical expectations
+
+- glmer_0107: Full covariance checks pass on all six hosted CI environments but fail on the local reference environment. Keep the strict field assertions unchanged and permit XPASS for this ID. An actual failed assertion remains a failed corpus case.
+- lmer_0059: Full prediction checks pass on Linux Python 3.12/3.13 but fail in the other recorded environments. Permit XPASS for this ID with every numerical threshold unchanged.
+- lmer_0585: Full prediction checks pass on Linux Python 3.11 and all hosted macOS versions but fail in the other recorded environments. Permit XPASS for this ID with every numerical threshold unchanged.
+- The six initial CI jobs had exactly two XPASS errors each and no unexpected numerical regressions. Fifty-seven other expected-failure IDs remain strict. Expected failures accept AssertionError only, so runtime errors remain unexpected failures.
