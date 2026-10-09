@@ -1,10 +1,6 @@
 name: Tests
 on:
-  push:
-    branches: [main]
-    paths-ignore: ['**/*.md', 'docs/**', 'reports/**']
-  pull_request:
-    paths-ignore: ['**/*.md', 'docs/**', 'reports/**']
+  workflow_dispatch:
 jobs:
   python:
     strategy:

@@ -93,3 +93,8 @@ Control contrasts require an explicit supported `adjust` value. The unlisted R `
 - Normalize scalar inner products to Python float and separate trial/final objective names for older NumPy type stubs on Python 3.11. These conversions preserve the double-precision numerical values; the full corpus is rechecked after the typing fix.
 
 - lmer_0364: A later Ubuntu Python 3.13 run exceeds the existing conditional-mode relative criterion by an absolute 1.59e-9 at a value near -1.44e-5. Keep this environment-specific numerical failure without changing the threshold. Other recorded environments pass, so its expected-failure marker permits genuine passes. The local reference still has 60 failures; the reviewed union across environments has 61 IDs.
+
+## Local validation policy
+
+- Run tests locally by default, now and in future work. At the user's request, cancel the remaining hosted test jobs and remove push/PR test triggers. Retain the six-environment workflow only for explicitly requested manual execution.
+- Keep the TASK-required automatic GitHub Pages deployment, limited to changes affecting documentation. Release acceptance uses the complete local validation rather than an incomplete remote matrix.

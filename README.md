@@ -82,5 +82,6 @@ uv run mkdocs build --strict
 uv build
 ```
 
-CI runs the tests without R on Linux and macOS. Documentation deploys through
+Run tests locally by default. The Linux/macOS no-R CI matrix is available only
+through manual dispatch when explicitly requested. Documentation changes deploy through
 GitHub Pages when `main` is pushed. PyPI publication is performed by a person.

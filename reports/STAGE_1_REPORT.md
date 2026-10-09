@@ -135,7 +135,14 @@ its 60 actual failures. Every recorded environment stays above 98% passing.
 - `uv run ruff check` and `uv run mypy src` pass.
 - `uv run mkdocs build --strict` and `uv build` pass.
 - A fresh Python 3.12 environment installs the release wheel with pip and runs the README quick start unchanged, with R excluded from PATH.
-- Linux/macOS CI runs the no-R suite on Python 3.11, 3.12 and 3.13.
+- Tests run locally by default. The optional manual Linux/macOS CI matrix covers
+  Python 3.11, 3.12 and 3.13. Automatic test runs are disabled at the user's request.
+- The final remote run was canceled after four jobs passed; it is not claimed as
+  a complete six-environment validation. Stage 1 acceptance uses the complete
+  local pytest run and the isolated local Python 3.11 typing check.
+  The [recorded run](https://github.com/jbaehova/rparity/actions/runs/37885827966)
+  tested commit `1f69afe`; subsequent release changes affect documentation and
+  workflow triggers only. The validation source fingerprint matches the wheel.
 
 ## Same-machine speed comparison
 
