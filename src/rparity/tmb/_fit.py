@@ -26,7 +26,12 @@ from rparity.formula import (
 )
 from rparity.lmm._glmer_math import score_hessian
 
-from ._covariance import centered_score_hessian, native_coordinates
+from ._covariance import (
+    centered_score_hessian,
+    native_coordinates,
+    richardson_score_hessian,
+    weak_component_information,
+)
 from ._families import Terms, inverse_link, observation_terms
 
 Array = NDArray[np.float64]
@@ -984,8 +989,14 @@ def glmmTMB(
                 raw, jacobian = transform(values)
                 return jacobian.T @ gradient(raw)
 
-            hessian = centered_score_hessian(native_gradient, natural_parameters)
             covariance_transform = transform(natural_parameters)[1]
+            if np.any(np.all(covariance_transform == 0, axis=0)):
+                # At exact rank one, the divergent correlation coordinate
+                # has no finite derivative. Resolve the retained tangent
+                # more accurately instead of amplifying a coarse score step.
+                hessian = richardson_score_hessian(native_gradient, natural_parameters)
+            else:
+                hessian = centered_score_hessian(native_gradient, natural_parameters)
     # Fixed coefficients can remain identifiable when a variance component is
     # on its boundary. The Moore-Penrose inverse retains that information.
     eigenvalues = np.linalg.eigvalsh(hessian) if np.all(np.isfinite(hessian)) else np.array([-1])
@@ -1034,7 +1045,10 @@ def glmmTMB(
     component_information = np.diag(hessian)[p:coefficients]
     component_parameters = np.asarray(fit.x[p:coefficients], dtype=float)
     unidentified_components = component_information < 1e-8
-    if pd_hessian and np.any(unidentified_components & (np.abs(component_parameters) > 10)):
+    if pd_hessian and (
+        np.any(unidentified_components & (np.abs(component_parameters) > 10))
+        or weak_component_information(hessian, np.asarray(fit.x, dtype=float), p, coefficients)
+    ):
         # A positive but effectively flat mixture/dispersion direction can
         # have a finite enormous covariance. This occurs, for example, when
         # only one dispersion stratum approaches its Poisson limit.

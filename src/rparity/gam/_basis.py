@@ -73,7 +73,7 @@ def _cubic(x: np.ndarray, k: int, shrinkage: bool) -> SplineBasis:
     xx = np.asarray(x, dtype=float).reshape(-1)
     if len(np.unique(xx)) < k:
         raise ValueError("A cubic spline needs at least k distinct covariate values.")
-    ordered = np.sort(xx)
+    ordered = np.unique(xx)
     positions = 1 + (len(ordered) - 1) * np.linspace(0, 1, k)
     floor = np.floor(positions)
     left = floor.astype(int) - 1

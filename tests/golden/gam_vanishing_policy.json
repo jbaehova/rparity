@@ -733,6 +733,25 @@
     ],
     "optimizer_warning_metadata_difference": true
   },
+  "gam_0315": {
+    "kind": "gam_numerical_positive_penalty_limit",
+    "collapsed_penalty_indices": [
+      0
+    ],
+    "positive_rank": 8,
+    "coefficients": false,
+    "covariance": false,
+    "coefficient_edf": false,
+    "vanishing_coefficient_edf_indices": [],
+    "term_fit": [],
+    "term_se": [],
+    "smooth_edf": [],
+    "smooth_statistic": [],
+    "optimizer_warning_metadata_difference": true,
+    "exception_fields": [
+      "R_optimizer_warning_metadata"
+    ]
+  },
   "gam_0319": {
     "kind": "gam_numerical_positive_penalty_limit",
     "collapsed_penalty_indices": [
@@ -854,6 +873,26 @@
     ],
     "optimizer_warning_metadata_difference": false
   },
+  "gam_0356": {
+    "kind": "gam_numerical_positive_penalty_limit",
+    "collapsed_penalty_indices": [
+      1
+    ],
+    "positive_rank": 6,
+    "coefficients": false,
+    "covariance": false,
+    "coefficient_edf": false,
+    "vanishing_coefficient_edf_indices": [],
+    "term_fit": [
+      "s(z)"
+    ],
+    "term_se": [
+      "s(z)"
+    ],
+    "smooth_edf": [],
+    "smooth_statistic": [],
+    "optimizer_warning_metadata_difference": true
+  },
   "gam_0359": {
     "kind": "gam_numerical_positive_penalty_limit",
     "collapsed_penalty_indices": [
@@ -879,6 +918,28 @@
       "coefficient_edf"
     ],
     "optimizer_warning_metadata_difference": true
+  },
+  "gam_0366": {
+    "kind": "gam_numerical_positive_penalty_limit",
+    "collapsed_penalty_indices": [
+      2,
+      3
+    ],
+    "positive_rank": 8,
+    "coefficients": false,
+    "covariance": false,
+    "coefficient_edf": false,
+    "vanishing_coefficient_edf_indices": [],
+    "term_fit": [],
+    "term_se": [
+      "ti(x,z)"
+    ],
+    "smooth_edf": [],
+    "smooth_statistic": [],
+    "optimizer_warning_metadata_difference": false,
+    "exception_fields": [
+      "term_se:ti(x,z)"
+    ]
   },
   "gam_0386": {
     "kind": "gam_numerical_positive_penalty_limit",
@@ -2700,6 +2761,42 @@
     ],
     "optimizer_warning_metadata_difference": true
   },
+  "gam_1038": {
+    "kind": "gam_numerical_positive_penalty_limit",
+    "collapsed_penalty_indices": [
+      1,
+      2
+    ],
+    "positive_rank": 12,
+    "coefficients": true,
+    "covariance": true,
+    "coefficient_edf": true,
+    "vanishing_coefficient_edf_indices": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22
+    ],
+    "term_fit": [],
+    "term_se": [],
+    "smooth_edf": [],
+    "smooth_statistic": [],
+    "optimizer_warning_metadata_difference": true,
+    "exception_fields": [
+      "coefficients",
+      "covariance",
+      "coefficient_edf",
+      "R_optimizer_warning_metadata"
+    ]
+  },
   "gam_1039": {
     "kind": "gam_numerical_positive_penalty_limit",
     "collapsed_penalty_indices": [
@@ -3751,6 +3848,33 @@
     ],
     "optimizer_warning_metadata_difference": true
   },
+  "gam_1166": {
+    "kind": "gam_numerical_positive_penalty_limit",
+    "collapsed_penalty_indices": [
+      0,
+      2,
+      3
+    ],
+    "positive_rank": 11,
+    "coefficients": false,
+    "covariance": true,
+    "coefficient_edf": false,
+    "vanishing_coefficient_edf_indices": [],
+    "term_fit": [
+      "ti(x,z)"
+    ],
+    "term_se": [
+      "ti(x,z)"
+    ],
+    "smooth_edf": [],
+    "smooth_statistic": [],
+    "optimizer_warning_metadata_difference": false,
+    "exception_fields": [
+      "covariance",
+      "term_fit:ti(x,z)",
+      "term_se:ti(x,z)"
+    ]
+  },
   "gam_1170": {
     "kind": "gam_numerical_positive_penalty_limit",
     "collapsed_penalty_indices": [
@@ -3949,6 +4073,37 @@
     ],
     "optimizer_warning_metadata_difference": true
   },
+  "gam_1190": {
+    "kind": "gam_numerical_positive_penalty_limit",
+    "collapsed_penalty_indices": [
+      0
+    ],
+    "positive_rank": 6,
+    "coefficients": true,
+    "covariance": true,
+    "coefficient_edf": true,
+    "vanishing_coefficient_edf_indices": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "term_fit": [
+      "s(x)"
+    ],
+    "term_se": [],
+    "smooth_edf": [],
+    "smooth_statistic": [],
+    "optimizer_warning_metadata_difference": false,
+    "exception_fields": [
+      "coefficients",
+      "covariance",
+      "coefficient_edf",
+      "term_fit:s(x)"
+    ]
+  },
   "gam_1192": {
     "kind": "gam_numerical_positive_penalty_limit",
     "collapsed_penalty_indices": [
@@ -3987,6 +4142,22 @@
       "term_fit:s(x)",
       "term_se:s(x)"
     ],
+    "optimizer_warning_metadata_difference": true
+  },
+  "gam_1193": {
+    "kind": "gam_numerical_positive_penalty_limit",
+    "collapsed_penalty_indices": [
+      0
+    ],
+    "positive_rank": 6,
+    "coefficients": false,
+    "covariance": true,
+    "coefficient_edf": false,
+    "vanishing_coefficient_edf_indices": [],
+    "term_fit": [],
+    "term_se": [],
+    "smooth_edf": [],
+    "smooth_statistic": [],
     "optimizer_warning_metadata_difference": true
   },
   "gam_1194": {
@@ -4032,5 +4203,28 @@
       "term_se:s(g)"
     ],
     "optimizer_warning_metadata_difference": false
+  },
+  "gam_1196": {
+    "kind": "gam_numerical_positive_penalty_limit",
+    "collapsed_penalty_indices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "positive_rank": 16,
+    "coefficients": false,
+    "covariance": true,
+    "coefficient_edf": false,
+    "vanishing_coefficient_edf_indices": [],
+    "term_fit": [
+      "s(x)"
+    ],
+    "term_se": [
+      "s(x)"
+    ],
+    "smooth_edf": [],
+    "smooth_statistic": [],
+    "optimizer_warning_metadata_difference": true
   }
 }

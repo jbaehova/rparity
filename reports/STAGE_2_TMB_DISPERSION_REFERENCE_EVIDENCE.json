@@ -1,0 +1,919 @@
+{
+  "scope": "Seven individually guarded independent numerical references. Every original observation remains preserved. No runtime tolerances or denominator changes.",
+  "cleanroom": "This work read only the public numeric R observations in the supplied handoff. No target R source or function body was inspected. No new R invocation was required.",
+  "reference_sources": [
+    "https://stat.ethz.ch/R-manual/R-devel/library/stats/html/optim.html",
+    "https://glmmtmb.github.io/glmmTMB/reference/nbinom2.html"
+  ],
+  "runtime_source_sha256": "3795eaeb440b9302ca291745cb9eeac9f32e8f08d4c37baf852890d37494af4a",
+  "file_sha256": {
+    "tests/_tmb_dispersion_limits.py": "1b41f4efcd7ebe5fb444147643329c6c60d808cc5d93c62cb4bbffbc7542e385",
+    "tests/golden/tmb_dispersion_reference.json": "80171cf4c7a3778a33ce83018b2a0b9b10b94533454be799b41019d3823e53e4"
+  },
+  "cases": {
+    "tmb_0367": {
+      "helper_validated": true,
+      "proof": {
+        "reference": "Richardson extrapolated public R score Hessian at unchanged stationary point",
+        "original_R_raw_covariance_preserved": true,
+        "Hessian_step_sizes": [
+          0.04,
+          0.08,
+          0.16
+        ],
+        "component_consecutive_covariance_absolute_difference": {
+          "cond": 4.948340382449068e-07,
+          "zi": 1.1246215228521983e-06,
+          "disp": 0.0009512652899203999
+        },
+        "R_information_minimum_eigenvalue": 0.01513005240282237,
+        "Python_information_minimum_eigenvalue": 0.015130039874323428,
+        "R_score_max": 1.977301357369843e-09,
+        "Python_score_max": 2.0210222384520193e-11,
+        "warning_or_boundary_exception": false
+      },
+      "complete_goldentest_passed": true
+    },
+    "tmb_0254": {
+      "helper_validated": true,
+      "proof": {
+        "reference": "independently fitted public R negative-binomial Poisson stratum",
+        "original_raw_observation_preserved": true,
+        "collapsed_levels": [
+          "b",
+          "c"
+        ],
+        "retained_levels": [
+          "a"
+        ],
+        "collapsed_density_and_curvature_bounds": {
+          "Python": {
+            "density": 5.54947988437419e-11,
+            "curvature": 5.549479884349919e-11,
+            "largest_expansion_ratio": 7.80085525772241e-12
+          },
+          "original_R": {
+            "density": 5.2253016236861766e-06,
+            "curvature": 5.225298641270903e-06,
+            "largest_expansion_ratio": 1.0380164575809114e-06
+          },
+          "independent_R": {
+            "density": 5.869542923181038e-16,
+            "curvature": 5.869542923181038e-16,
+            "largest_expansion_ratio": 3.01820128432829e-17
+          }
+        },
+        "identified_dispersion": {
+          "identified_coefficients": [
+            2.4465810327788255,
+            -1.754293390634289
+          ],
+          "identified_covariance": [
+            [
+              1.1540261595086467,
+              -1.0284774403248134
+            ],
+            [
+              -1.0284774403248134,
+              1.0520243687791924
+            ]
+          ],
+          "independent_R_identified_covariance": [
+            [
+              1.1540261580322613,
+              -1.0284774389379532
+            ],
+            [
+              -1.0284774389379532,
+              1.0520243674762848
+            ]
+          ],
+          "reported_raw_quotient_covariance": [
+            [
+              1.1540261595086467,
+              -1.0284774403248134
+            ],
+            [
+              -1.0284774403248134,
+              1.0520243687791924
+            ]
+          ],
+          "covariance_reference": "reported Python covariance projected to identified quotient",
+          "original_raw_dispersion_covariance_parity_claimed": false
+        },
+        "better_optimum_reference": true,
+        "original_log_likelihood": -417.73739123300186,
+        "independent_R_log_likelihood": -417.73739019794283,
+        "Python_log_likelihood": -417.73739019795323,
+        "original_numeric_AIC_BIC_matched": false,
+        "original_AIC": 853.4747824660037,
+        "derived_reference_AIC": 853.4747803958857,
+        "original_BIC": 878.7844416643554,
+        "derived_reference_BIC": 878.7844395942374,
+        "nominal_original_parameter_count": 9,
+        "original_df_resid": 114,
+        "independent_R_parameter_count": 7,
+        "changed_reference_fields": [
+          "cond_vcov",
+          "cond_wald_p",
+          "cond_beta",
+          "response_prediction",
+          "cond_prediction",
+          "zprob_prediction",
+          "g_random_covariance",
+          "g_random_modes",
+          "AIC",
+          "BIC"
+        ],
+        "R_score_max": 5.3470838867752946e-12,
+        "R_information_minimum_eigenvalue": 0.46866637854728416,
+        "discarded_dispersion_dimension": 2,
+        "Python_weak_dispersion_information_norm": 4.542129835910849e-11,
+        "Python_information_norm": 253.44939813688393,
+        "Python_retained_information_minimum_eigenvalue": 0.4686663779377239,
+        "Python_score_max": 9.894280007957855e-12
+      },
+      "complete_goldentest_passed": true
+    },
+    "tmb_0746": {
+      "helper_validated": true,
+      "proof": {
+        "reference": "independently fitted public R negative-binomial Poisson stratum",
+        "original_raw_observation_preserved": true,
+        "collapsed_levels": [
+          "a"
+        ],
+        "retained_levels": [
+          "b",
+          "c"
+        ],
+        "collapsed_density_and_curvature_bounds": {
+          "Python": {
+            "density": 2.3753772319462334e-10,
+            "curvature": 2.375377231912818e-10,
+            "largest_expansion_ratio": 1.7275167905750637e-11
+          },
+          "original_R": {
+            "density": 4.18722602438231e-07,
+            "curvature": 4.187225920552179e-07,
+            "largest_expansion_ratio": 3.045199931936895e-08
+          },
+          "independent_R": {
+            "density": 4.712268085226991e-16,
+            "curvature": 4.712268085226991e-16,
+            "largest_expansion_ratio": 2.5490125531749533e-17
+          }
+        },
+        "identified_dispersion": {
+          "identified_coefficients": [
+            1.6189109866302687,
+            0.827779902033825,
+            -0.5676217273820462
+          ],
+          "identified_covariance": [
+            [
+              1.2568911015968545,
+              0.01654370396681248,
+              -0.7095880836128945
+            ],
+            [
+              0.016543703966812384,
+              1.4498215380778632,
+              0.15771482791668087
+            ],
+            [
+              -0.7095880836128945,
+              0.15771482791668082,
+              1.267357322367635
+            ]
+          ],
+          "independent_R_identified_covariance": [
+            [
+              1.256891101361524,
+              0.016543703808843485,
+              -0.7095880837431973
+            ],
+            [
+              0.016543703808843457,
+              1.4498215380080937,
+              0.15771482772721102
+            ],
+            [
+              -0.7095880837431973,
+              0.15771482772721096,
+              1.2673573225375592
+            ]
+          ],
+          "reported_raw_quotient_covariance": [
+            [
+              1.2569122314453125,
+              0.0165557861328125,
+              -0.7095880737132845
+            ],
+            [
+              0.0165557861328125,
+              1.4498291015625,
+              0.1577148303345055
+            ],
+            [
+              -0.7095894175828192,
+              0.15771351629913255,
+              1.2673573387266737
+            ]
+          ],
+          "covariance_reference": "inverse actual Python information on identified tangent",
+          "original_raw_dispersion_covariance_parity_claimed": false
+        },
+        "better_optimum_reference": false,
+        "original_log_likelihood": -211.32075813939855,
+        "independent_R_log_likelihood": -211.320758129897,
+        "Python_log_likelihood": -211.32075812990254,
+        "original_numeric_AIC_BIC_matched": true,
+        "original_AIC": 446.6415162787971,
+        "derived_reference_AIC": 446.6415162787971,
+        "original_BIC": 480.95926513113716,
+        "derived_reference_BIC": 480.95926513113716,
+        "nominal_original_parameter_count": 12,
+        "original_df_resid": 117,
+        "independent_R_parameter_count": 11,
+        "changed_reference_fields": [
+          "cond_vcov",
+          "cond_wald_p",
+          "zi_vcov",
+          "zi_wald_p"
+        ],
+        "R_score_max": 2.341460358934455e-13,
+        "R_information_minimum_eigenvalue": 0.06153654139892636,
+        "discarded_dispersion_dimension": 1,
+        "Python_weak_dispersion_information_norm": 2.426817251553871e-09,
+        "Python_information_norm": 122.15487042773448,
+        "Python_retained_information_minimum_eigenvalue": 0.06153654139718799,
+        "Python_score_max": 1.879524313963543e-12
+      },
+      "complete_goldentest_passed": true
+    },
+    "tmb_0848": {
+      "helper_validated": true,
+      "proof": {
+        "reference": "independently fitted public R negative-binomial Poisson stratum",
+        "original_raw_observation_preserved": true,
+        "collapsed_levels": [
+          "b"
+        ],
+        "retained_levels": [
+          "a",
+          "c"
+        ],
+        "collapsed_density_and_curvature_bounds": {
+          "Python": {
+            "density": 7.640188177571908e-11,
+            "curvature": 7.640188177505723e-11,
+            "largest_expansion_ratio": 1.2615212950674554e-11
+          },
+          "original_R": {
+            "density": 9.235917754995955e-08,
+            "curvature": 9.235917658279393e-08,
+            "largest_expansion_ratio": 1.525002195605455e-08
+          },
+          "independent_R": {
+            "density": 1.7927924081811856e-16,
+            "curvature": 1.7927924081811856e-16,
+            "largest_expansion_ratio": 2.5490125531749533e-17
+          }
+        },
+        "identified_dispersion": {
+          "identified_coefficients": [
+            1.497824972905572,
+            -0.062484494975952654,
+            -0.13013443308534325
+          ],
+          "identified_covariance": [
+            [
+              0.5228807092658276,
+              0.12614581040256195,
+              -0.236180759075097
+            ],
+            [
+              0.1261458104025618,
+              0.6550827289184743,
+              -0.17281544454938397
+            ],
+            [
+              -0.23618075907509697,
+              -0.17281544454938397,
+              0.4205114728212543
+            ]
+          ],
+          "independent_R_identified_covariance": [
+            [
+              0.5228805034305751,
+              0.12614568701203893,
+              -0.2361805770377606
+            ],
+            [
+              0.12614568701203893,
+              0.6550826349406431,
+              -0.17281530832175665
+            ],
+            [
+              -0.23618057703776058,
+              -0.1728153083217566,
+              0.42051132376973505
+            ]
+          ],
+          "reported_raw_quotient_covariance": [
+            [
+              0.5228807092658276,
+              0.12614581040256195,
+              -0.236180759075097
+            ],
+            [
+              0.1261458104025618,
+              0.6550827289184743,
+              -0.17281544454938397
+            ],
+            [
+              -0.23618075907509697,
+              -0.17281544454938397,
+              0.4205114728212543
+            ]
+          ],
+          "covariance_reference": "reported Python covariance projected to identified quotient",
+          "original_raw_dispersion_covariance_parity_claimed": false
+        },
+        "better_optimum_reference": false,
+        "original_log_likelihood": -220.85157835112093,
+        "independent_R_log_likelihood": -220.85157834562315,
+        "Python_log_likelihood": -220.8515783456276,
+        "original_numeric_AIC_BIC_matched": true,
+        "original_AIC": 463.70315670224187,
+        "derived_reference_AIC": 463.70315670224187,
+        "original_BIC": 494.98921465328635,
+        "derived_reference_BIC": 494.98921465328635,
+        "nominal_original_parameter_count": 11,
+        "original_df_resid": 116,
+        "independent_R_parameter_count": 10,
+        "changed_reference_fields": [
+          "cond_vcov",
+          "cond_wald_p"
+        ],
+        "R_score_max": 1.6764367671839864e-13,
+        "R_information_minimum_eigenvalue": 0.4146972651563981,
+        "discarded_dispersion_dimension": 1,
+        "Python_weak_dispersion_information_norm": 2.1663778116663194e-11,
+        "Python_information_norm": 134.72701260689976,
+        "Python_retained_information_minimum_eigenvalue": 0.41469726590456196,
+        "Python_score_max": 4.549581682115527e-12
+      },
+      "complete_goldentest_passed": true
+    },
+    "tmb_0980": {
+      "helper_validated": true,
+      "proof": {
+        "reference": "independently fitted public R negative-binomial Poisson stratum",
+        "original_raw_observation_preserved": true,
+        "collapsed_levels": [
+          "a",
+          "b",
+          "c"
+        ],
+        "retained_levels": [],
+        "collapsed_density_and_curvature_bounds": {
+          "Python": {
+            "density": 4.558742927587238e-12,
+            "curvature": 4.5587429275859044e-12,
+            "largest_expansion_ratio": 6.371639558649587e-13
+          },
+          "original_R": {
+            "density": 8.213996725974369e-08,
+            "curvature": 8.213996682686393e-08,
+            "largest_expansion_ratio": 1.1480495296717765e-08
+          },
+          "independent_R": {
+            "density": 0.0,
+            "curvature": 0.0,
+            "largest_expansion_ratio": 0.0
+          }
+        },
+        "identified_dispersion": {},
+        "better_optimum_reference": false,
+        "original_log_likelihood": -77.75145747603597,
+        "independent_R_log_likelihood": -77.7514574686368,
+        "Python_log_likelihood": -77.75145746863721,
+        "original_numeric_AIC_BIC_matched": true,
+        "original_AIC": 169.50291495207193,
+        "derived_reference_AIC": 169.50291495207193,
+        "original_BIC": 186.76427178265402,
+        "derived_reference_BIC": 186.76427178265402,
+        "nominal_original_parameter_count": 7,
+        "original_df_resid": 80,
+        "independent_R_parameter_count": 6,
+        "changed_reference_fields": [
+          "cond_vcov",
+          "cond_wald_p",
+          "zi_vcov",
+          "zi_wald_p"
+        ],
+        "R_score_max": 6.2727600891321345e-15,
+        "R_information_minimum_eigenvalue": 0.8081888398852385,
+        "discarded_dispersion_dimension": 1,
+        "Python_weak_dispersion_information_norm": 1.577527806451449e-12,
+        "Python_information_norm": 25.316522840536166,
+        "Python_retained_information_minimum_eigenvalue": 0.8081888398858593,
+        "Python_score_max": 4.059310132588072e-13
+      },
+      "complete_goldentest_passed": true
+    },
+    "tmb_0476": {
+      "helper_validated": true,
+      "proof": {
+        "reference": "independently fitted public R negative-binomial Poisson stratum",
+        "original_raw_observation_preserved": true,
+        "collapsed_levels": [
+          "c"
+        ],
+        "retained_levels": [
+          "a",
+          "b"
+        ],
+        "collapsed_density_and_curvature_bounds": {
+          "Python": {
+            "density": 1.3037005691875348e-10,
+            "curvature": 1.3037005690731512e-10,
+            "largest_expansion_ratio": 1.7576801460764908e-10
+          },
+          "original_R": {
+            "density": 6.813751076664975e-06,
+            "curvature": 6.81371983205848e-06,
+            "largest_expansion_ratio": 9.185752539353955e-06
+          },
+          "independent_R": {
+            "density": 1.9479092288025163e-16,
+            "curvature": 1.9479092288025163e-16,
+            "largest_expansion_ratio": 5.366042734135419e-17
+          }
+        },
+        "identified_dispersion": {
+          "identified_coefficients": [
+            5.258263870895241,
+            3.947526414229948,
+            -3.517875314544396
+          ],
+          "identified_covariance": [
+            [
+              33.833549961814285,
+              20.854764014118174,
+              -27.782823384604093
+            ],
+            [
+              20.85476401411817,
+              14.721032573484994,
+              -17.913908592994716
+            ],
+            [
+              -27.782823384604093,
+              -17.913908592994716,
+              23.792483368025415
+            ]
+          ],
+          "independent_R_identified_covariance": [
+            [
+              33.833560242328105,
+              20.854770317110127,
+              -27.782831752473406
+            ],
+            [
+              20.854770317110127,
+              14.721036448624908,
+              -17.91391372024884
+            ],
+            [
+              -27.782831752473406,
+              -17.91391372024884,
+              23.79249016842056
+            ]
+          ],
+          "reported_raw_quotient_covariance": [
+            [
+              33.833549961814285,
+              20.854764014118174,
+              -27.782823384604093
+            ],
+            [
+              20.85476401411817,
+              14.721032573484994,
+              -17.913908592994716
+            ],
+            [
+              -27.782823384604093,
+              -17.913908592994716,
+              23.792483368025415
+            ]
+          ],
+          "covariance_reference": "reported Python covariance projected to identified quotient",
+          "original_raw_dispersion_covariance_parity_claimed": false
+        },
+        "better_optimum_reference": true,
+        "original_log_likelihood": -188.55703172208797,
+        "independent_R_log_likelihood": -188.55702694593475,
+        "Python_log_likelihood": -188.55702694604975,
+        "original_numeric_AIC_BIC_matched": false,
+        "original_AIC": 397.11406344417594,
+        "derived_reference_AIC": 397.1140538918695,
+        "original_BIC": 424.20936545729927,
+        "derived_reference_BIC": 424.20935590499283,
+        "nominal_original_parameter_count": 10,
+        "original_df_resid": 101,
+        "independent_R_parameter_count": 9,
+        "changed_reference_fields": [
+          "cond_vcov",
+          "cond_wald_p",
+          "cond_beta",
+          "zi_vcov",
+          "zi_wald_p",
+          "zi_beta",
+          "response_prediction",
+          "cond_prediction",
+          "zprob_prediction",
+          "g_random_covariance",
+          "g_random_modes",
+          "AIC",
+          "BIC"
+        ],
+        "R_score_max": 4.931047800985078e-11,
+        "R_information_minimum_eigenvalue": 0.014166318069306502,
+        "discarded_dispersion_dimension": 1,
+        "Python_weak_dispersion_information_norm": 2.2245001799712618e-10,
+        "Python_information_norm": 123.1283705178057,
+        "Python_retained_information_minimum_eigenvalue": 0.014166322273943084,
+        "Python_score_max": 9.215497809300643e-11
+      },
+      "complete_goldentest_passed": true
+    },
+    "tmb_1178": {
+      "helper_validated": true,
+      "proof": {
+        "reference": "independently fitted public R negative-binomial Poisson stratum",
+        "original_raw_observation_preserved": true,
+        "collapsed_levels": [
+          "a"
+        ],
+        "retained_levels": [
+          "b",
+          "c"
+        ],
+        "collapsed_density_and_curvature_bounds": {
+          "Python": {
+            "density": 1.3979233894326494e-11,
+            "curvature": 1.3979233894247402e-11,
+            "largest_expansion_ratio": 7.172473278661247e-12
+          },
+          "original_R": {
+            "density": 1.1094024781639968e-10,
+            "curvature": 1.1094024781141733e-10,
+            "largest_expansion_ratio": 5.690242803716447e-11
+          },
+          "independent_R": {
+            "density": 6.149491849761162e-17,
+            "curvature": 6.149491849761162e-17,
+            "largest_expansion_ratio": 1.2745062765874767e-17
+          }
+        },
+        "identified_dispersion": {
+          "identified_coefficients": [
+            0.3864645611478217,
+            1.0389816545583628,
+            2.2287595733460797
+          ],
+          "identified_covariance": [
+            [
+              0.90545654296875,
+              0.70306396484375,
+              0.43716799999296896
+            ],
+            [
+              0.70306396484375,
+              4.74462890625,
+              1.5334391884032819
+            ],
+            [
+              0.4371758658759042,
+              1.5334519947219967,
+              1.4007697973724906
+            ]
+          ],
+          "independent_R_identified_covariance": [
+            [
+              0.9054025568555161,
+              0.703032742657172,
+              0.4371680186869314
+            ],
+            [
+              0.7030327426571722,
+              4.744532837750434,
+              1.533439258495522
+            ],
+            [
+              0.43716801868693134,
+              1.5334392584955219,
+              1.4007697955329441
+            ]
+          ],
+          "reported_raw_quotient_covariance": [
+            [
+              0.90545654296875,
+              0.70306396484375,
+              0.43716799999296896
+            ],
+            [
+              0.70306396484375,
+              4.74462890625,
+              1.5334391884032819
+            ],
+            [
+              0.4371758658759042,
+              1.5334519947219967,
+              1.4007697973724906
+            ]
+          ],
+          "covariance_reference": "reported Python covariance projected to identified quotient",
+          "original_raw_dispersion_covariance_parity_claimed": false
+        },
+        "better_optimum_reference": true,
+        "original_log_likelihood": -100.63069959625676,
+        "independent_R_log_likelihood": -100.63036752837286,
+        "Python_log_likelihood": -100.63036752837633,
+        "original_numeric_AIC_BIC_matched": false,
+        "original_AIC": 225.26139919251352,
+        "derived_reference_AIC": 225.26073505674572,
+        "original_BIC": 253.9947890485828,
+        "derived_reference_BIC": 253.99412491281498,
+        "nominal_original_parameter_count": 12,
+        "original_df_resid": 69,
+        "independent_R_parameter_count": 11,
+        "changed_reference_fields": [
+          "cond_vcov",
+          "cond_wald_p",
+          "cond_beta",
+          "zi_vcov",
+          "zi_wald_p",
+          "zi_beta",
+          "response_prediction",
+          "cond_prediction",
+          "zprob_prediction",
+          "g_random_covariance",
+          "g_random_modes",
+          "AIC",
+          "BIC"
+        ],
+        "R_score_max": 3.5048323965281014e-10,
+        "R_information_minimum_eigenvalue": 0.004448570799957988,
+        "discarded_dispersion_dimension": 1,
+        "Python_weak_dispersion_information_norm": 1.7764748090755356e-09,
+        "Python_information_norm": 35.23843491212769,
+        "Python_retained_information_minimum_eigenvalue": 0.004448570759105036,
+        "Python_score_max": 3.9110936711495015e-12
+      },
+      "complete_goldentest_passed": true
+    }
+  },
+  "guards": {
+    "mutations": {
+      "original_observation": {
+        "rejected": true,
+        "error": ""
+      },
+      "auxiliary_observation": {
+        "rejected": true,
+        "error": ""
+      },
+      "changed_response": {
+        "rejected": true,
+        "error": "unchanged fit data y"
+      },
+      "offset_not_collapsed": {
+        "rejected": true,
+        "error": ""
+      },
+      "nonstationary_auxiliary": {
+        "rejected": true,
+        "error": ""
+      },
+      "indefinite_auxiliary": {
+        "rejected": true,
+        "error": ""
+      },
+      "missing_warning": {
+        "rejected": true,
+        "error": "A proved dispersion limit must have a genuine measured Python dispersion warning"
+      },
+      "resolved_python_dispersion": {
+        "rejected": true,
+        "error": ""
+      },
+      "nonstationary_python": {
+        "rejected": true,
+        "error": ""
+      },
+      "identified_python_beta": {
+        "rejected": true,
+        "error": "\nNot equal to tolerance rtol=1e-05, atol=1e-12\n\nMismatched elements: 1 / 4 (25%)\nMismatch at index:\n [0]: 0.4665019043584383 (ACTUAL), 0.45650190435827315 (DESIRED)\nMax absolute difference among violations: 0.01\nMax relative difference among violations: 0.02190571\n ACTUAL: array([ 0.466502,  0.466377,  0.165775, -0.322479])\n DESIRED: array([ 0.456502,  0.466377,  0.165775, -0.322479])"
+      },
+      "identified_python_covariance": {
+        "rejected": true,
+        "error": "\nNot equal to tolerance rtol=0.0001, atol=1e-12\n\nMismatched elements: 1 / 16 (6.25%)\nMismatch at index:\n [0, 0]: 0.0403743807713647 (ACTUAL), 0.020187190765419777 (DESIRED)\nMax absolute difference among violations: 0.02018719\nMax relative difference among violations: 0.99999996\n ACTUAL: array([[ 0.040374,  0.002088, -0.011907, -0.012718],\n       [ 0.002088,  0.024133,  0.001368, -0.000866],\n       [-0.011907,  0.001368,  0.02367 ,  0.01168 ],\n       [-0.012718, -0.000866,  0.01168 ,  0.127866]])\n DESIRED: array([[ 0.020187,  0.002088, -0.011907, -0.012718],\n       [ 0.002088,  0.024133,  0.001368, -0.000866],\n       [-0.011907,  0.001368,  0.02367 ,  0.01168 ],\n       [-0.012718, -0.000866,  0.01168 ,  0.127866]])"
+      },
+      "retained_dispersion_prediction": {
+        "rejected": true,
+        "error": "\nNot equal to tolerance rtol=1e-05, atol=1e-12\n\nMismatched elements: 2 / 3 (66.7%)\nMismatch at indices:\n [0]: 1.507824972905572 (ACTUAL), 1.4978249729063364 (DESIRED)\n [1]: -0.052484494975952645 (ACTUAL), -0.0624844949738072 (DESIRED)\nMax absolute difference among violations: 0.01\nMax relative difference among violations: 0.1600397\n ACTUAL: array([ 1.507825, -0.052484, -0.130134])\n DESIRED: array([ 1.497825, -0.062484, -0.130134])"
+      },
+      "collapsed_dispersion_resolved": {
+        "rejected": true,
+        "error": "The Poisson-limit series must converge with resolved remainder"
+      },
+      "changed_weights": {
+        "rejected": true,
+        "error": "\nArrays are not equal\n\nMismatched elements: 1 / 127 (0.787%)\nMismatch at index:\n [0]: 2.0 (ACTUAL), 1.0 (DESIRED)\nMax absolute difference among violations: 1.\nMax relative difference among violations: 1.\n ACTUAL: array([2., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1.,\n       1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1.,\n       1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1.,...\n DESIRED: array([1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1.,\n       1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1.,\n       1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1., 1.,..."
+      },
+      "changed_random_covariance": {
+        "rejected": true,
+        "error": "\nNot equal to tolerance rtol=0.0001, atol=1e-12\n\nMismatched elements: 1 / 4 (25%)\nMismatch at index:\n [0, 0]: 0.026274670168390597 (ACTUAL), 0.03627467475820217 (DESIRED)\nMax absolute difference among violations: 0.01\nMax relative difference among violations: 0.27567455\n ACTUAL: array([[0.026275, 0.01799 ],\n       [0.01799 , 0.078623]])\n DESIRED: array([[0.036275, 0.01799 ],\n       [0.01799 , 0.078623]])"
+      },
+      "better_optimum_flag_removed": {
+        "rejected": true,
+        "error": "original_R collapsed density bound"
+      },
+      "richardson_changed_original": {
+        "rejected": true,
+        "error": ""
+      },
+      "richardson_changed_probe": {
+        "rejected": true,
+        "error": ""
+      },
+      "richardson_unstable_steps": {
+        "rejected": true,
+        "error": "\nNot equal to tolerance rtol=0.0001, atol=1e-12\n\nMismatched elements: 16 / 16 (100%)\nFirst 5 mismatches are at indices:\n [0, 0]: 0.10431576669072656 (ACTUAL), 0.0915781729073093 (DESIRED)\n [0, 1]: -0.006453700713774978 (ACTUAL), -0.005665599093238781 (DESIRED)\n [0, 2]: -0.0349306321182262 (ACTUAL), -0.030665439808457668 (DESIRED)\n [0, 3]: -0.03497358470759017 (ACTUAL), -0.030703215676335743 (DESIRED)\n [1, 0]: -0.0064537007137749815 (ACTUAL), -0.00566559909323878 (DESIRED)\nMax absolute difference among violations: 0.01273759\nMax relative difference among violations: 0.1435325\n ACTUAL: array([[ 0.104316, -0.006454, -0.034931, -0.034974],\n       [-0.006454,  0.023993, -0.001574, -0.009347],\n       [-0.034931, -0.001574,  0.063769,  0.039065],\n       [-0.034974, -0.009347,  0.039065,  0.126838]])\n DESIRED: array([[ 0.091578, -0.005666, -0.030665, -0.030703],\n       [-0.005666,  0.023944, -0.001838, -0.009611],\n       [-0.030665, -0.001838,  0.062341,  0.037635],\n       [-0.030703, -0.009611,  0.037635,  0.125407]])"
+      },
+      "richardson_wrong_step": {
+        "rejected": true,
+        "error": ""
+      },
+      "richardson_indefinite_hessian": {
+        "rejected": true,
+        "error": ""
+      },
+      "richardson_nonstationary_point": {
+        "rejected": true,
+        "error": ""
+      },
+      "richardson_different_points": {
+        "rejected": true,
+        "error": "\nArrays are not equal\n\nMismatched elements: 1 / 10 (10%)\nMismatch at index:\n [9]: -0.4536520876112304 (ACTUAL), -0.4436520876112304 (DESIRED)\nMax absolute difference among violations: 0.01\nMax relative difference among violations: 0.02254018\n ACTUAL: array([ 0.312301,  0.115804,  0.425796, -0.234139, -1.326352, -7.274938,\n       -6.367182,  2.291753,  2.792509, -0.453652])\n DESIRED: array([ 0.312301,  0.115804,  0.425796, -0.234139, -1.326352, -7.274938,\n       -6.367182,  2.291753,  2.792509, -0.443652])"
+      }
+    },
+    "independent_decimal_series": [
+      {
+        "family": "nbinom1",
+        "count": 0,
+        "mean": 1.5,
+        "size": 100000000.0,
+        "density_bound": 1.1249999887503198e-08,
+        "exact_absolute_density": 1.12499998875e-08,
+        "curvature_bound": 1.1249999581643831e-08,
+        "exact_curvature_envelope": 1.1249999581640633e-08
+      },
+      {
+        "family": "nbinom1",
+        "count": 4,
+        "mean": 3.5,
+        "size": 1000000000000.0,
+        "density_bound": 1.8750000000064975e-12,
+        "exact_absolute_density": 1.874999999996792e-12,
+        "curvature_bound": 1.8749999999977515e-12,
+        "exact_curvature_envelope": 1.8749999999880455e-12
+      },
+      {
+        "family": "nbinom1",
+        "count": 20,
+        "mean": 7.1,
+        "size": 10000.0,
+        "density_bound": 0.007312008232775846,
+        "exact_absolute_density": 0.00731200823274618,
+        "curvature_bound": 0.007299919561907799,
+        "exact_curvature_envelope": 0.007299919561877979
+      },
+      {
+        "family": "nbinom1",
+        "count": 50,
+        "mean": 0.7,
+        "size": 1000000.0,
+        "density_bound": 0.0011902248001380018,
+        "exact_absolute_density": 0.0011902248001358544,
+        "curvature_bound": 0.0011905183497943263,
+        "exact_curvature_envelope": 0.0011905183497921779
+      },
+      {
+        "family": "nbinom2",
+        "count": 0,
+        "mean": 1.5,
+        "size": 100000000.0,
+        "density_bound": 1.1249999887503197e-08,
+        "exact_absolute_density": 1.1249999887500002e-08,
+        "curvature_bound": 1.124999958164383e-08,
+        "exact_curvature_envelope": 1.1249999581640635e-08
+      },
+      {
+        "family": "nbinom2",
+        "count": 4,
+        "mean": 3.5,
+        "size": 1000000000000.0,
+        "density_bound": 1.8750000000064975e-12,
+        "exact_absolute_density": 1.874999999996792e-12,
+        "curvature_bound": 1.8749999999977515e-12,
+        "exact_curvature_envelope": 1.8749999999880455e-12
+      },
+      {
+        "family": "nbinom2",
+        "count": 20,
+        "mean": 7.1,
+        "size": 10000.0,
+        "density_bound": 0.007312008232775846,
+        "exact_absolute_density": 0.00731200823274618,
+        "curvature_bound": 0.007299919561907799,
+        "exact_curvature_envelope": 0.00729991956187798
+      },
+      {
+        "family": "nbinom2",
+        "count": 50,
+        "mean": 0.7,
+        "size": 1000000.0,
+        "density_bound": 0.0011902248001380018,
+        "exact_absolute_density": 0.0011902248001358544,
+        "curvature_bound": 0.0011905183497943263,
+        "exact_curvature_envelope": 0.0011905183497921776
+      }
+    ]
+  },
+  "strict_identified_tolerances": {
+    "coefficients_relative": 1e-05,
+    "covariance_relative": 0.0001,
+    "predictions_relative": 1e-06,
+    "Wald_p_absolute": 0.0001,
+    "numeric_absolute_floor": 1e-12,
+    "log_likelihood_absolute": 1e-06
+  },
+  "nominal_information_criteria": "Keep the original model parameter count and residual df. Only the three independently confirmed better optimum cases derive AIC and BIC from the selected boundary log likelihood plus the original nominal parameter count. Their original numeric AIC and BIC remain in the original fixture and are reported separately.",
+  "density_certificate": {
+    "identity": "log(p_NB/p_Poisson) = sum_(j=0)^(y-1) log1p(j/r) - y*log1p(mu/r) + r*(mu/r-log1p(mu/r))",
+    "algorithm": "Eight-term signed alternating series with a geometric remainder and a forward arithmetic error bound. First and second log-dispersion derivatives are derived term by term. The bound includes mixture curvature of at most one quarter of the squared conditional first derivative.",
+    "scope": "Conditional collapsed-stratum density and curvature only. The actual normalized Laplace likelihood and positive retained outer information are independently rechecked at every test run.",
+    "maximum_density_and_curvature": 1e-06,
+    "independent_arithmetic_validation": "Eight 80-decimal-digit recurrence and derivative checks pass for NB1 and NB2, including count zero and large sizes."
+  },
+  "regular_covariance_certificate": {
+    "id": "tmb_0367",
+    "fit_point": "Exactly equal native public R parameters and fitted fields across all three observations.",
+    "formula": "inverse((4*H(0.08)-H(0.16))/3)",
+    "stability": "Every fixed-component covariance block also agrees with inverse((4*H(0.04)-H(0.08))/3) at the original covariance tolerance 1e-4.",
+    "warning_waiver": false,
+    "raw_R_covariance_preserved": true
+  },
+  "tangent_covariance_certificate": {
+    "id": "tmb_0746",
+    "construction": "Lift the retained dispersion quotient with its Moore-Penrose right inverse while retaining every other native coordinate. Invert the actual positive information on that tangent and compare the identified dispersion covariance against the independently fitted public R limit at 1e-4.",
+    "original_reported_full_covariance_parity_claimed": false,
+    "roundoff_only_waiver": false
+  },
+  "better_optimum_references": [
+    "tmb_0254",
+    "tmb_0476",
+    "tmb_1178"
+  ],
+  "original_density_limit_bound_rejected": {
+    "tmb_0254": "Original R density correction exceeds 1e-6. The original reference is not treated as equivalent to its Poisson stratum. The separately fitted boundary is independently confirmed as a better optimum and every identified field retains its original tolerance.",
+    "tmb_0476": "Original R density correction exceeds 1e-6. Same explicit better-optimum rule; no claim that the original density met the limit bound."
+  },
+  "excluded": {
+    "tmb_0037": "Requires a separate normalized Laplace zero-random-variance and zero-mode proof. Original variance 1.4234e-8 and original modes up to 6.0782e-8 cannot be skipped merely from the tiny fitted Python variance. Auxiliary random modes miss the normal absolute tolerance. No exception was introduced.",
+    "tmb_0698": "Original density perturb exceeds 1e-6 and raw identified covariance still fails. No complete independently confirmed better optimum proof is supplied.",
+    "tmb_0416": "Independent R limit still fails identified fields at the simultaneous random correlation boundary.",
+    "tmb_0589": "Independent public R NB1 score is numerically noisy. No reference passes all identified fields.",
+    "tmb_1015": "Independent limit fits still fail identified covariance or predictions."
+  },
+  "validation": {
+    "complete_goldentest": {
+      "passed": 7,
+      "failed": 0
+    },
+    "hostile_mutations_rejected": 23,
+    "hostile_mutations_attempted": 23,
+    "ruff": "passed",
+    "execution": "Local, no GitHub Actions"
+  },
+  "local_evidence": [
+    "oracle/cache/s2-tmb-dispersion-golden-validation.json",
+    "oracle/cache/s2-tmb-dispersion-hostile-validation.json",
+    "oracle/cache/s2-tmb-poisson-limit-handoff.json"
+  ]
+}

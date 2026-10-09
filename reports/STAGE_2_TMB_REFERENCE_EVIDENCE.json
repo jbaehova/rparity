@@ -1,0 +1,778 @@
+{
+  "refined_count": 20,
+  "references": {
+    "tmb_0167": {
+      "strict_result": {
+        "outcome": "pass",
+        "error": "",
+        "record": {
+          "reference_log_likelihood": -179.73659768332732,
+          "python_log_likelihood": -179.73659768332743,
+          "better_optimum": false,
+          "reference_convergence": 0,
+          "reference_pd_hessian": true
+        },
+        "R_warnings": [],
+        "R_score_max": 6.613990110189698e-12,
+        "R_gradientfixed_max": 6.613990110189698e-12,
+        "Python_logLik": -179.73659768332743,
+        "R_logLik": -179.73659768332732,
+        "R_parameter_change": 3.941291737419306e-15
+      },
+      "numeric_repeat_exact": true,
+      "mode_precision_proof": {
+        "original": {
+          "mode_score_max": 4.137755388322617e-07,
+          "mode_newton_correction_max": 1.803352632789696e-08,
+          "mean_mode_correction_max": 1.622958750036417e-08,
+          "prediction_reconstruction_max": 2.7827102566657658e-08,
+          "mode_hessian_minimum_eigenvalue": 1.2474951011262938,
+          "reported_gradient_max": 5.267823141239833e-07,
+          "fresh_public_R_score_max": 6.443115878018086e-15
+        },
+        "confirmed": {
+          "mode_score_max": 2.1338486533295509e-13,
+          "mode_newton_correction_max": 3.4265194304268444e-14,
+          "mean_mode_correction_max": 1.539538195676646e-14,
+          "prediction_reconstruction_max": 4.440892098500626e-16,
+          "mode_hessian_minimum_eigenvalue": 1.2474951139691957,
+          "reported_gradient_max": 6.613990110189698e-12,
+          "fresh_public_R_score_max": 6.613990110189698e-12
+        }
+      },
+      "original_fixture_sha256": "6cc67a0de398ecd437d4a4cdce9963365fe1a7d6d51de831a7ae4b2187113685",
+      "justification": "Documented native starts preserve the independently optimized R objective and resolve inconsistent displayed conditional modes. Exact likelihood mode scores from original R coefficients, physical covariance, and reported modes decrease by multiple orders of magnitude; every original TASK field tolerance passes and public R metadata has no warning.",
+      "selected_observation_sha256": "b4736aa2ca693c8fcf3d3b9f62561f4fb9c4a191fb0c21ff8f61a39da664611b",
+      "prior_observations_preserved": true
+    },
+    "tmb_0293": {
+      "strict_result": {
+        "outcome": "pass",
+        "error": "",
+        "record": {
+          "reference_log_likelihood": -332.0335627891556,
+          "python_log_likelihood": -332.03356278915567,
+          "better_optimum": false,
+          "reference_convergence": 0,
+          "reference_pd_hessian": true
+        },
+        "R_warnings": [],
+        "R_score_max": 1.7113408658789308e-14,
+        "R_gradientfixed_max": 1.7113408658789308e-14,
+        "Python_logLik": -332.03356278915567,
+        "R_logLik": -332.0335627891556,
+        "R_parameter_change": 0.0
+      },
+      "numeric_repeat_exact": true,
+      "mode_precision_proof": {
+        "original": {
+          "mode_score_max": 2.231753037096329e-07,
+          "mode_newton_correction_max": 3.566964692082603e-08,
+          "mean_mode_correction_max": 1.956671753133035e-08,
+          "prediction_reconstruction_max": 2.947320465462866e-08,
+          "mode_hessian_minimum_eigenvalue": 1.371028801710895,
+          "reported_gradient_max": 2.8953035811657997e-06,
+          "fresh_public_R_score_max": 7.994395887945556e-14
+        },
+        "confirmed": {
+          "mode_score_max": 1.5154544286133387e-14,
+          "mode_newton_correction_max": 2.0426721801662896e-15,
+          "mean_mode_correction_max": 1.1425771122290952e-15,
+          "prediction_reconstruction_max": 2.220446049250313e-16,
+          "mode_hessian_minimum_eigenvalue": 1.3710287819217621,
+          "reported_gradient_max": 1.7113408658789308e-14,
+          "fresh_public_R_score_max": 1.7113408658789308e-14
+        }
+      },
+      "original_fixture_sha256": "6a169e9060c79361b58b647f433206df4d2a0ee62a21e62e54d064ed8ca39b74",
+      "justification": "Documented native starts preserve the independently optimized R objective and resolve inconsistent displayed conditional modes. Exact likelihood mode scores from original R coefficients, physical covariance, and reported modes decrease by multiple orders of magnitude; every original TASK field tolerance passes and public R metadata has no warning.",
+      "selected_observation_sha256": "c95cfa05fba8cad7d3618fa981f97307a248c4558d1c96509381fbf9af8821c0",
+      "prior_observations_preserved": true
+    },
+    "tmb_0347": {
+      "strict_result": {
+        "outcome": "pass",
+        "error": "",
+        "record": {
+          "reference_log_likelihood": -149.20885009085453,
+          "python_log_likelihood": -149.20885009085464,
+          "better_optimum": false,
+          "reference_convergence": 0,
+          "reference_pd_hessian": true
+        },
+        "R_warnings": [],
+        "R_score_max": 1.1865976307953489e-14,
+        "R_gradientfixed_max": 1.1865976307953489e-14,
+        "Python_logLik": -149.20885009085464,
+        "R_logLik": -149.20885009085453,
+        "R_parameter_change": 0.0
+      },
+      "numeric_repeat_exact": true,
+      "mode_precision_proof": {
+        "original": {
+          "mode_score_max": 5.329727543745832e-07,
+          "mode_newton_correction_max": 5.527140844894835e-08,
+          "mean_mode_correction_max": 2.9632105210539463e-08,
+          "prediction_reconstruction_max": 5.053814133848533e-08,
+          "mode_hessian_minimum_eigenvalue": 7.6053738027840625,
+          "reported_gradient_max": 2.2755314741165777e-06,
+          "fresh_public_R_score_max": 5.261926467947859e-14
+        },
+        "confirmed": {
+          "mode_score_max": 5.773159728050814e-15,
+          "mode_newton_correction_max": 5.986997948717134e-16,
+          "mean_mode_correction_max": 3.209749008662617e-16,
+          "prediction_reconstruction_max": 2.220446049250313e-16,
+          "mode_hessian_minimum_eigenvalue": 7.605373587078834,
+          "reported_gradient_max": 1.1865976307953489e-14,
+          "fresh_public_R_score_max": 1.1865976307953489e-14
+        }
+      },
+      "original_fixture_sha256": "286215649271c7163f585f362148b7dd8070986cde425ea4847d8013c0c7952f",
+      "justification": "Documented native starts preserve the independently optimized R objective and resolve inconsistent displayed conditional modes. Exact likelihood mode scores from original R coefficients, physical covariance, and reported modes decrease by multiple orders of magnitude; every original TASK field tolerance passes and public R metadata has no warning.",
+      "selected_observation_sha256": "ec5bc924fa63c34606f8ff1b12f942c417309cfa72056935ff396e5ceed05881",
+      "prior_observations_preserved": true
+    },
+    "tmb_0545": {
+      "strict_result": {
+        "outcome": "pass",
+        "error": "",
+        "record": {
+          "reference_log_likelihood": -233.91668559305072,
+          "python_log_likelihood": -233.91668559305077,
+          "better_optimum": false,
+          "reference_convergence": 0,
+          "reference_pd_hessian": true
+        },
+        "R_warnings": [],
+        "R_score_max": 2.8341960146892448e-14,
+        "R_gradientfixed_max": 2.8341960146892448e-14,
+        "Python_logLik": -233.91668559305077,
+        "R_logLik": -233.91668559305072,
+        "R_parameter_change": 0.0
+      },
+      "numeric_repeat_exact": true,
+      "mode_precision_proof": {
+        "original": {
+          "mode_score_max": 1.310592676245781e-06,
+          "mode_newton_correction_max": 8.83743472951548e-08,
+          "mean_mode_correction_max": 4.777433901855832e-08,
+          "prediction_reconstruction_max": 9.00864853825567e-08,
+          "mode_hessian_minimum_eigenvalue": 12.43826989657518,
+          "reported_gradient_max": 4.806998934845888e-06,
+          "fresh_public_R_score_max": 1.1112745460024764e-13
+        },
+        "confirmed": {
+          "mode_score_max": 1.3183898417423734e-14,
+          "mode_newton_correction_max": 7.830031453986798e-16,
+          "mean_mode_correction_max": 4.232841352218214e-16,
+          "prediction_reconstruction_max": 0.0,
+          "mode_hessian_minimum_eigenvalue": 12.438270961666158,
+          "reported_gradient_max": 2.8341960146892448e-14,
+          "fresh_public_R_score_max": 2.8341960146892448e-14
+        }
+      },
+      "original_fixture_sha256": "bbfcd8723d04eec4699a81237de94aabef6c27bfeb3d79911080c29c16df674b",
+      "justification": "Documented native starts preserve the independently optimized R objective and resolve inconsistent displayed conditional modes. Exact likelihood mode scores from original R coefficients, physical covariance, and reported modes decrease by multiple orders of magnitude; every original TASK field tolerance passes and public R metadata has no warning.",
+      "selected_observation_sha256": "e9d4af09fe163617ccd830c4c113508b0e16207aaa31af48ab33414a4132cad6",
+      "prior_observations_preserved": true
+    },
+    "tmb_0649": {
+      "strict_result": {
+        "outcome": "pass",
+        "error": "",
+        "record": {
+          "reference_log_likelihood": -183.59780735003824,
+          "python_log_likelihood": -183.59780735010122,
+          "better_optimum": false,
+          "reference_convergence": 0,
+          "reference_pd_hessian": true
+        },
+        "R_warnings": [],
+        "R_score_max": 2.8910512872570848e-11,
+        "R_gradientfixed_max": 2.8910512872570848e-11,
+        "Python_logLik": -183.59780735010122,
+        "R_logLik": -183.59780735003824,
+        "R_parameter_change": 5.211613085531752e-11
+      },
+      "numeric_repeat_exact": true,
+      "mode_precision_proof": {
+        "original": {
+          "mode_score_max": 1.5409270002209041e-06,
+          "mode_newton_correction_max": 4.990296787116776e-08,
+          "mean_mode_correction_max": 3.540195426110245e-08,
+          "prediction_reconstruction_max": null,
+          "mode_hessian_minimum_eigenvalue": 4.717135403852785,
+          "reported_gradient_max": 2.2247107192008286e-06,
+          "fresh_public_R_score_max": 1.1435698742123801e-11
+        },
+        "confirmed": {
+          "mode_score_max": 1.1186225279402606e-09,
+          "mode_newton_correction_max": 1.4113611636839295e-10,
+          "mean_mode_correction_max": 1.0012419162804466e-10,
+          "prediction_reconstruction_max": null,
+          "mode_hessian_minimum_eigenvalue": 4.717135593062666,
+          "reported_gradient_max": 2.8910512872570848e-11,
+          "fresh_public_R_score_max": 2.8910512872570848e-11
+        }
+      },
+      "original_fixture_sha256": "8f1a1dc83b83156f38fe46bdc4d7b864c45b26d3e65360bc437cd6d7b5c494e0",
+      "justification": "Documented native starts preserve the independently optimized R objective and resolve inconsistent displayed conditional modes. Exact likelihood mode scores from original R coefficients, physical covariance, and reported modes decrease by multiple orders of magnitude; every original TASK field tolerance passes and public R metadata has no warning.",
+      "selected_observation_sha256": "17bb879544acb3ef1d498b463ba1c1ba819ebc9e87dfd2a60a3139052ac213d1",
+      "prior_observations_preserved": true
+    },
+    "tmb_0683": {
+      "strict_result": {
+        "outcome": "pass",
+        "error": "",
+        "record": {
+          "reference_log_likelihood": -133.12723334476115,
+          "python_log_likelihood": -133.12723334476124,
+          "better_optimum": false,
+          "reference_convergence": 0,
+          "reference_pd_hessian": true
+        },
+        "R_warnings": [],
+        "R_score_max": 1.4453152216709064e-12,
+        "R_gradientfixed_max": 1.4453152216709064e-12,
+        "Python_logLik": -133.12723334476124,
+        "R_logLik": -133.12723334476115,
+        "R_parameter_change": 3.2751579226442118e-15
+      },
+      "numeric_repeat_exact": true,
+      "mode_precision_proof": {
+        "original": {
+          "mode_score_max": 1.7094455301847056e-06,
+          "mode_newton_correction_max": 8.884835626733372e-08,
+          "mean_mode_correction_max": 7.48115089366537e-08,
+          "prediction_reconstruction_max": 8.71416246939205e-08,
+          "mode_hessian_minimum_eigenvalue": 11.606766045880846,
+          "reported_gradient_max": 1.0167340684778294e-06,
+          "fresh_public_R_score_max": 7.213934311023351e-14
+        },
+        "confirmed": {
+          "mode_score_max": 1.4521717162097048e-13,
+          "mode_newton_correction_max": 8.914576143543747e-15,
+          "mean_mode_correction_max": 7.506192467509238e-15,
+          "prediction_reconstruction_max": 2.220446049250313e-16,
+          "mode_hessian_minimum_eigenvalue": 11.606764977938507,
+          "reported_gradient_max": 1.4453152216709064e-12,
+          "fresh_public_R_score_max": 1.4453152216709064e-12
+        }
+      },
+      "original_fixture_sha256": "8ff547603ae2aaab25d44c5a02e59f4cb3eb8243c0be8910df036d1102a66bb4",
+      "justification": "Documented native starts preserve the independently optimized R objective and resolve inconsistent displayed conditional modes. Exact likelihood mode scores from original R coefficients, physical covariance, and reported modes decrease by multiple orders of magnitude; every original TASK field tolerance passes and public R metadata has no warning.",
+      "selected_observation_sha256": "0e5543ecb0e2ee57c9ad3f8f96f7e424188d13262e2a5571af8716159d8f2c76",
+      "prior_observations_preserved": true
+    },
+    "tmb_0764": {
+      "strict_result": {
+        "outcome": "pass",
+        "error": "",
+        "record": {
+          "reference_log_likelihood": -189.50533666397178,
+          "python_log_likelihood": -189.50533666397166,
+          "better_optimum": false,
+          "reference_convergence": 0,
+          "reference_pd_hessian": true
+        },
+        "R_warnings": [],
+        "R_score_max": 3.2008423689333654e-11,
+        "R_gradientfixed_max": 3.2008423689333654e-11,
+        "Python_logLik": -189.50533666397166,
+        "R_logLik": -189.50533666397178,
+        "R_parameter_change": 8.626432901337466e-13
+      },
+      "numeric_repeat_exact": true,
+      "mode_precision_proof": {
+        "original": {
+          "mode_score_max": 4.5148267235894934e-08,
+          "mode_newton_correction_max": 2.7547214561896683e-08,
+          "mean_mode_correction_max": 7.869520861042046e-09,
+          "prediction_reconstruction_max": null,
+          "mode_hessian_minimum_eigenvalue": 1.319208326907464,
+          "reported_gradient_max": 3.705603674325486e-07,
+          "fresh_public_R_score_max": 4.791523081082438e-12
+        },
+        "confirmed": {
+          "mode_score_max": 1.279620853722463e-11,
+          "mode_newton_correction_max": 6.6589644838295055e-12,
+          "mean_mode_correction_max": 1.9022927737296476e-12,
+          "prediction_reconstruction_max": null,
+          "mode_hessian_minimum_eigenvalue": 1.3192083952251759,
+          "reported_gradient_max": 3.2008423689333654e-11,
+          "fresh_public_R_score_max": 3.2008423689333654e-11
+        }
+      },
+      "original_fixture_sha256": "89da8d6db8faaf16477b7f4edc6e6833a874ec54bece8dc7b135018f57ead9a1",
+      "justification": "Documented native starts preserve the independently optimized R objective and resolve inconsistent displayed conditional modes. Exact likelihood mode scores from original R coefficients, physical covariance, and reported modes decrease by multiple orders of magnitude; every original TASK field tolerance passes and public R metadata has no warning.",
+      "selected_observation_sha256": "3f1b1a02b90a47d65b2adbb106815db6e4c5f1433fb797d5d11f199906b551e8",
+      "prior_observations_preserved": true
+    },
+    "tmb_0863": {
+      "strict_result": {
+        "outcome": "pass",
+        "error": "",
+        "record": {
+          "reference_log_likelihood": -144.96011460511386,
+          "python_log_likelihood": -144.960114605114,
+          "better_optimum": false,
+          "reference_convergence": 0,
+          "reference_pd_hessian": true
+        },
+        "R_warnings": [],
+        "R_score_max": 6.553750597770858e-11,
+        "R_gradientfixed_max": 6.553750597770858e-11,
+        "Python_logLik": -144.960114605114,
+        "R_logLik": -144.96011460511386,
+        "R_parameter_change": 1.1845524561238108e-12
+      },
+      "numeric_repeat_exact": true,
+      "mode_precision_proof": {
+        "original": {
+          "mode_score_max": 8.303406801024593e-08,
+          "mode_newton_correction_max": 6.727202042356906e-09,
+          "mean_mode_correction_max": 3.7138304029717654e-09,
+          "prediction_reconstruction_max": 2.4346521465545834e-09,
+          "mode_hessian_minimum_eigenvalue": 1.430521680850209,
+          "reported_gradient_max": 1.0395854491834777e-07,
+          "fresh_public_R_score_max": 1.6158949178723958e-14
+        },
+        "confirmed": {
+          "mode_score_max": 2.0125012767380213e-11,
+          "mode_newton_correction_max": 3.711552651943274e-12,
+          "mean_mode_correction_max": 1.2951891705285395e-12,
+          "prediction_reconstruction_max": 4.440892098500626e-16,
+          "mode_hessian_minimum_eigenvalue": 1.4305217191491975,
+          "reported_gradient_max": 6.553750597770858e-11,
+          "fresh_public_R_score_max": 6.553750597770858e-11
+        }
+      },
+      "original_fixture_sha256": "41d7dbe2856e6634f14af23362db2ff6fb0b4206fab4cd80171ab46ec305d440",
+      "justification": "Documented native starts preserve the independently optimized R objective and resolve inconsistent displayed conditional modes. Exact likelihood mode scores from original R coefficients, physical covariance, and reported modes decrease by multiple orders of magnitude; every original TASK field tolerance passes and public R metadata has no warning.",
+      "selected_observation_sha256": "42307e0888caa557aa183b5c39d89bf402d53ceff74884a8ee832a59b1a20132",
+      "prior_observations_preserved": true
+    },
+    "tmb_0896": {
+      "strict_result": {
+        "outcome": "pass",
+        "error": "",
+        "record": {
+          "reference_log_likelihood": -330.4314895569609,
+          "python_log_likelihood": -330.4314895569651,
+          "better_optimum": false,
+          "reference_convergence": 0,
+          "reference_pd_hessian": true
+        },
+        "R_warnings": [],
+        "R_score_max": 3.785788349475183e-11,
+        "R_gradientfixed_max": 3.785788349475183e-11,
+        "Python_logLik": -330.4314895569651,
+        "R_logLik": -330.4314895569609,
+        "R_parameter_change": 0.0
+      },
+      "numeric_repeat_exact": true,
+      "mode_precision_proof": {
+        "original": {
+          "mode_score_max": 1.07043214581104e-06,
+          "mode_newton_correction_max": 7.889888784408565e-08,
+          "mean_mode_correction_max": 4.370813534824747e-08,
+          "prediction_reconstruction_max": null,
+          "mode_hessian_minimum_eigenvalue": 4.025197341372318,
+          "reported_gradient_max": 1.0410053876697134e-06,
+          "fresh_public_R_score_max": 2.9047160510220493e-11
+        },
+        "confirmed": {
+          "mode_score_max": 1.887379141862766e-15,
+          "mode_newton_correction_max": 2.979818654307596e-16,
+          "mean_mode_correction_max": 1.6507497897368935e-16,
+          "prediction_reconstruction_max": null,
+          "mode_hessian_minimum_eigenvalue": 4.025197634486084,
+          "reported_gradient_max": 3.785788349475183e-11,
+          "fresh_public_R_score_max": 3.785788349475183e-11
+        }
+      },
+      "original_fixture_sha256": "2fc5e28b29c5dd42bf19b5ada3f174446b07165e07c8a15c0ab8cb8230890f80",
+      "justification": "Documented native starts preserve the independently optimized R objective and resolve inconsistent displayed conditional modes. Exact likelihood mode scores from original R coefficients, physical covariance, and reported modes decrease by multiple orders of magnitude; every original TASK field tolerance passes and public R metadata has no warning.",
+      "selected_observation_sha256": "2527460e3579c97c394d5b077627163cad68c7dee8f5e01c1293b50b6dc55d86",
+      "prior_observations_preserved": true
+    },
+    "tmb_0965": {
+      "strict_result": {
+        "outcome": "pass",
+        "error": "",
+        "record": {
+          "reference_log_likelihood": -235.0183073157034,
+          "python_log_likelihood": -235.01830731570334,
+          "better_optimum": false,
+          "reference_convergence": 0,
+          "reference_pd_hessian": true
+        },
+        "R_warnings": [],
+        "R_score_max": 2.9629076969683865e-14,
+        "R_gradientfixed_max": 2.9629076969683865e-14,
+        "Python_logLik": -235.01830731570334,
+        "R_logLik": -235.0183073157034,
+        "R_parameter_change": 0.0
+      },
+      "numeric_repeat_exact": true,
+      "mode_precision_proof": {
+        "original": {
+          "mode_score_max": 9.84936401327019e-08,
+          "mode_newton_correction_max": 2.5103453670916436e-08,
+          "mean_mode_correction_max": 6.531691906253752e-09,
+          "prediction_reconstruction_max": 1.0136727013332347e-08,
+          "mode_hessian_minimum_eigenvalue": 1.4037084501381318,
+          "reported_gradient_max": 7.508825143054398e-07,
+          "fresh_public_R_score_max": 2.4528989950312052e-14
+        },
+        "confirmed": {
+          "mode_score_max": 3.774758283725532e-15,
+          "mode_newton_correction_max": 1.604840782040551e-15,
+          "mean_mode_correction_max": 4.3777073568336617e-16,
+          "prediction_reconstruction_max": 4.440892098500626e-16,
+          "mode_hessian_minimum_eigenvalue": 1.403708447674916,
+          "reported_gradient_max": 2.9629076969683865e-14,
+          "fresh_public_R_score_max": 2.9629076969683865e-14
+        }
+      },
+      "original_fixture_sha256": "2aa85747d244832665afab6baf33751abcfc5be2ab42ccb92d2a3a7fde632323",
+      "justification": "Documented native starts preserve the independently optimized R objective and resolve inconsistent displayed conditional modes. Exact likelihood mode scores from original R coefficients, physical covariance, and reported modes decrease by multiple orders of magnitude; every original TASK field tolerance passes and public R metadata has no warning.",
+      "selected_observation_sha256": "1e29ffe4c9314c7ab86ed0897490e690008b37d97f98612058522e508f664f14",
+      "prior_observations_preserved": true
+    },
+    "tmb_1175": {
+      "strict_result": {
+        "outcome": "pass",
+        "error": "",
+        "record": {
+          "reference_log_likelihood": -85.17683302596218,
+          "python_log_likelihood": -85.1768330259622,
+          "better_optimum": false,
+          "reference_convergence": 0,
+          "reference_pd_hessian": true
+        },
+        "R_warnings": [],
+        "R_score_max": 1.2651304215083642e-14,
+        "R_gradientfixed_max": 1.2651304215083642e-14,
+        "Python_logLik": -85.1768330259622,
+        "R_logLik": -85.17683302596218,
+        "R_parameter_change": 0.0
+      },
+      "numeric_repeat_exact": true,
+      "mode_precision_proof": {
+        "original": {
+          "mode_score_max": 4.573430878451745e-08,
+          "mode_newton_correction_max": 1.6313939239147156e-08,
+          "mean_mode_correction_max": 6.146084977227355e-09,
+          "prediction_reconstruction_max": 1.325749982017399e-08,
+          "mode_hessian_minimum_eigenvalue": 1.4566453424056416,
+          "reported_gradient_max": 3.282516914470563e-07,
+          "fresh_public_R_score_max": 1.1910445779430566e-14
+        },
+        "confirmed": {
+          "mode_score_max": 1.9984014443252818e-15,
+          "mode_newton_correction_max": 1.1817141520484474e-15,
+          "mean_mode_correction_max": 4.679284195508618e-16,
+          "prediction_reconstruction_max": 1.1102230246251565e-16,
+          "mode_hessian_minimum_eigenvalue": 1.4566453396274175,
+          "reported_gradient_max": 1.2651304215083642e-14,
+          "fresh_public_R_score_max": 1.2651304215083642e-14
+        }
+      },
+      "original_fixture_sha256": "aacef52f06bfc94f566a8f0f2dd3583e211412ee5b4e01075ceae35989c6b26e",
+      "justification": "Documented native starts preserve the independently optimized R objective and resolve inconsistent displayed conditional modes. Exact likelihood mode scores from original R coefficients, physical covariance, and reported modes decrease by multiple orders of magnitude; every original TASK field tolerance passes and public R metadata has no warning.",
+      "selected_observation_sha256": "a275c3e3d4cd78336f5e0c1e9e2c366bd893e40bb0f11295d75f691fe2d14ab4",
+      "prior_observations_preserved": true
+    },
+    "tmb_1193": {
+      "strict_result": {
+        "outcome": "pass",
+        "error": "",
+        "record": {
+          "reference_log_likelihood": -242.5419712126641,
+          "python_log_likelihood": -242.54197121266415,
+          "better_optimum": false,
+          "reference_convergence": 0,
+          "reference_pd_hessian": true
+        },
+        "R_warnings": [],
+        "R_score_max": 1.4856798352024284e-12,
+        "R_gradientfixed_max": 1.4856798352024284e-12,
+        "Python_logLik": -242.54197121266415,
+        "R_logLik": -242.5419712126641,
+        "R_parameter_change": 6.994405055138486e-15
+      },
+      "numeric_repeat_exact": true,
+      "mode_precision_proof": {
+        "original": {
+          "mode_score_max": 1.2522341541476578e-07,
+          "mode_newton_correction_max": 7.0266635481054744e-09,
+          "mean_mode_correction_max": 3.9721368600870545e-09,
+          "prediction_reconstruction_max": 1.649485570354159e-08,
+          "mode_hessian_minimum_eigenvalue": 11.88429105566889,
+          "reported_gradient_max": 2.246499831257914e-06,
+          "fresh_public_R_score_max": 1.0572604208925237e-13
+        },
+        "confirmed": {
+          "mode_score_max": 1.1191048088221578e-13,
+          "mode_newton_correction_max": 8.12748636552483e-15,
+          "mean_mode_correction_max": 4.594426064220333e-15,
+          "prediction_reconstruction_max": 1.1102230246251565e-16,
+          "mode_hessian_minimum_eigenvalue": 11.88428977895325,
+          "reported_gradient_max": 1.4856798352024284e-12,
+          "fresh_public_R_score_max": 1.4856798352024284e-12
+        }
+      },
+      "original_fixture_sha256": "ca5697a2d0bf014349c35d3e0deed723cc038a496cfd0402b55638cffef68a85",
+      "justification": "Documented native starts preserve the independently optimized R objective and resolve inconsistent displayed conditional modes. Exact likelihood mode scores from original R coefficients, physical covariance, and reported modes decrease by multiple orders of magnitude; every original TASK field tolerance passes and public R metadata has no warning.",
+      "selected_observation_sha256": "32db452d53c967acc3acc47af92cb4f014ba3b83c366497d760a716c9e9112ed",
+      "prior_observations_preserved": true
+    },
+    "tmb_0121": {
+      "numeric_repeat_exact": true,
+      "original_fixture_sha256": "d77adb6d217fff9049360e8a9431c407276c2fc532815a23764792190028699c",
+      "policy": {
+        "kind": "tmb_singular_reference",
+        "reason": "A documented native-start R optimization independently confirms the better mixture optimum, while its entire fixed-parameter covariance is undefined and public score information is numerically singular despite pdHess=True. Preserve all original attempts; use the TASK singular-likelihood and genuine Python curvature-warning rule only.",
+        "reference_fingerprint": "53bff0d9978f7635ae5f66a858f873dfed93b5dc4898a810a3cdd1049d81db20",
+        "public_R_hessian": [
+          [
+            11.719736294901528,
+            2.2636972531500654,
+            4.7867101167284325,
+            1.8059815046424232,
+            -2.961403870612972e-12,
+            -3.713548536862718e-12,
+            -1.540147216634676e-12,
+            -1.487112105582042,
+            2.272558469046733
+          ],
+          [
+            2.2636972531500654,
+            52.1877284408837,
+            -4.245750826004868,
+            3.358835767669155,
+            -1.3826752688085257e-12,
+            -1.7704861022640679e-12,
+            -5.594398300743118e-13,
+            0.22182305930139312,
+            0.7416802638399376
+          ],
+          [
+            4.7867101167284325,
+            -4.245750826004868,
+            19.65524641688543,
+            -3.8917072174488867,
+            -7.188653573930086e-12,
+            -9.682346055666957e-12,
+            -2.8539309069775103e-12,
+            0.3357981040448682,
+            0.5872958112592765
+          ],
+          [
+            1.8059815046424232,
+            3.358835767669155,
+            -3.8917072174488867,
+            9.806989936442523,
+            1.085355907030131e-12,
+            1.479406328465806e-12,
+            4.5364891872241766e-13,
+            -0.5041909211738749,
+            0.08781895882738894
+          ],
+          [
+            -2.961403870612972e-12,
+            -1.3826752688085257e-12,
+            -7.188653573930086e-12,
+            1.085355907030131e-12,
+            3.246353890878357e-11,
+            4.765454541025075e-11,
+            -1.2318330668360094e-12,
+            1.1962857538426412e-12,
+            3.0098677469830533e-12
+          ],
+          [
+            -3.713548536862718e-12,
+            -1.7704861022640679e-12,
+            -9.682346055666957e-12,
+            1.479406328465806e-12,
+            4.765454541025075e-11,
+            7.014058132687011e-11,
+            -2.672158560420727e-12,
+            1.5243337074849917e-12,
+            4.218805660200911e-12
+          ],
+          [
+            -1.540147216634676e-12,
+            -5.594398300743118e-13,
+            -2.8539309069775103e-12,
+            4.5364891872241766e-13,
+            -1.2318330668360094e-12,
+            -2.672158560420727e-12,
+            4.047595614972185e-12,
+            5.539652431258904e-13,
+            1.2224578816350366e-12
+          ],
+          [
+            -1.487112105582042,
+            0.22182305930139312,
+            0.3357981040448682,
+            -0.5041909211738749,
+            1.1962857538426412e-12,
+            1.5243337074849917e-12,
+            5.539652431258904e-13,
+            7.685720144172597,
+            0.48552730822258583
+          ],
+          [
+            2.272558469046733,
+            0.7416802638399376,
+            0.5872958112592765,
+            0.08781895882738894,
+            3.0098677469830533e-12,
+            4.218805660200911e-12,
+            1.2224578816350366e-12,
+            0.48552730822258583,
+            8.67347315168468
+          ]
+        ],
+        "public_R_score": [
+          -2.020605904817785e-13,
+          -2.298161660974074e-14,
+          -9.126033262418787e-14,
+          -2.8310687127941492e-14,
+          5.937358372601357e-12,
+          1.1135030951554048e-11,
+          -1.1429636271740537e-11,
+          3.5860203695392556e-14,
+          -1.759703494030873e-13
+        ],
+        "finite_difference_step": 0.001,
+        "information_relative_bound": 1e-12,
+        "reference_score_bound": 1e-07
+      },
+      "requires_root_review": true,
+      "selected_observation_sha256": "538e44337861592c368385a99f8a00b2f70331718f8821657087a802cded5fe1",
+      "prior_observations_preserved": true
+    },
+    "tmb_0593": {
+      "numeric_repeat_exact": true,
+      "original_fixture_sha256": "7fc566f75a67bd7ef3e33e01c4c252af8de1500905e44528a144b1be3c7460b9",
+      "requires_root_review": true,
+      "selected_observation_sha256": "fa9a9ef47e5f10918d58ae502136e0e1829e47cf0ebf187fffee2737c36741c3",
+      "prior_observations_preserved": true
+    },
+    "tmb_0202": {
+      "numeric_repeat_exact": true,
+      "original_fixture_sha256": "fa1b166baaa20a4a9c5f4a2698a4a2dd31681d321cfd4778f45943330ea4cf70",
+      "requires_root_review": true,
+      "selected_observation_sha256": "1f187d2b859f39bb625d0bd54f07d69274c00e1078dcc2da3bbb2128ef72a7e6",
+      "prior_observations_preserved": true
+    },
+    "tmb_1112": {
+      "numeric_repeat_exact": true,
+      "original_fixture_sha256": "6e0d50861676392ac394ef9f7d10b496714e7ea7c3bd0267caf8feb5ccc1e892",
+      "requires_root_review": false,
+      "selected_observation_sha256": "1142e819750e073f756bb7a909c4f1181929ae9957b3e47f4dd991cce86b05da",
+      "prior_observations_preserved": true
+    },
+    "tmb_0371": {
+      "policy": {
+        "kind": "tmb_boundary_identification",
+        "exception_fields": [
+          "zi_beta",
+          "zi_vcov",
+          "zi_wald_p"
+        ],
+        "reason": "R public native starts resolve displayed conditional-mode stopping error; only independently vanishing zero-mixture coefficient uncertainty remains nonidentified. Every remaining field retains its original TASK tolerance.",
+        "absent_zi": true,
+        "mixture_likelihood_bound": 1e-06,
+        "zi_curvature_bound": 1e-06
+      },
+      "proof": {
+        "reference_log_likelihood": -119.10132402495613,
+        "python_log_likelihood": -119.10132402495618,
+        "better_optimum": false,
+        "reference_convergence": 0,
+        "reference_pd_hessian": true,
+        "boundary_policy_fields": "[\"zi_beta\", \"zi_vcov\", \"zi_wald_p\"]",
+        "boundary_policy_guards": "{\"R\": {\"probability_max\": 1.9820520982698222e-14, \"probability_bound\": 9.09090909090909e-09, \"conditional_density_difference\": 2.1518573945983715e-12, \"observed_zi_curvature_norm\": 1.1388681109984052e-12}, \"Python\": {\"probability_max\": 1.9820520982698222e-14, \"probability_bound\": 9.09090909090909e-09, \"conditional_density_difference\": 2.151857394598366e-12, \"observed_zi_curvature_norm\": 1.1388681109984052e-12}}"
+      },
+      "R_reported_gradient_max": 1.1248069580921623e-12,
+      "numeric_repeat_exact": true,
+      "original_fixture_sha256": "6dfd101bd77efd7d4f8ce79a1ce4ca81379336ae4ae59b15cf90ecc6a43652ef",
+      "selected_observation_sha256": "c32453277e6620e432773cb36264d68ceaa680a2a6e98c191931d9b9641d0d29",
+      "prior_observations_preserved": true
+    },
+    "tmb_0533": {
+      "policy": {
+        "kind": "tmb_boundary_identification",
+        "exception_fields": [
+          "zi_beta",
+          "zi_vcov",
+          "zi_wald_p"
+        ],
+        "reason": "R public native starts resolve displayed conditional-mode stopping error; only independently vanishing zero-mixture coefficient uncertainty remains nonidentified. Every remaining field retains its original TASK tolerance.",
+        "absent_zi": true,
+        "mixture_likelihood_bound": 1e-06,
+        "zi_curvature_bound": 1e-06
+      },
+      "proof": {
+        "reference_log_likelihood": -159.78048618786096,
+        "python_log_likelihood": -159.78048618786107,
+        "better_optimum": false,
+        "reference_convergence": 0,
+        "reference_pd_hessian": true,
+        "boundary_policy_fields": "[\"zi_beta\", \"zi_vcov\", \"zi_wald_p\"]",
+        "boundary_policy_guards": "{\"R\": {\"probability_max\": 4.7640936447628116e-14, \"probability_bound\": 8.130081300813008e-09, \"conditional_density_difference\": 7.121933144699382e-12, \"observed_zi_curvature_norm\": 1.9296456758856494e-12}, \"Python\": {\"probability_max\": 4.764093644788132e-14, \"probability_bound\": 8.130081300813008e-09, \"conditional_density_difference\": 7.121933144750783e-12, \"observed_zi_curvature_norm\": 1.929645675916793e-12}}"
+      },
+      "R_reported_gradient_max": 1.778765025857595e-10,
+      "numeric_repeat_exact": true,
+      "original_fixture_sha256": "8cb5254c1d673b65191939fc7fa940f5461f372b5b48a93de4199febb450fefd",
+      "selected_observation_sha256": "c4b3a8deaf220a289a04184910777608358ed297790707e2493f93754dbe3bbf",
+      "prior_observations_preserved": true
+    },
+    "tmb_0641": {
+      "policy": {
+        "kind": "tmb_boundary_identification",
+        "exception_fields": [
+          "zi_beta",
+          "zi_vcov",
+          "zi_wald_p"
+        ],
+        "reason": "R public native starts resolve displayed conditional-mode stopping error; only independently vanishing zero-mixture coefficient uncertainty remains nonidentified. Every remaining field retains its original TASK tolerance.",
+        "absent_zi": true,
+        "mixture_likelihood_bound": 1e-06,
+        "zi_curvature_bound": 1e-06
+      },
+      "proof": {
+        "reference_log_likelihood": -204.39703928408613,
+        "python_log_likelihood": -204.39703928408613,
+        "better_optimum": false,
+        "reference_convergence": 0,
+        "reference_pd_hessian": true,
+        "boundary_policy_fields": "[\"zi_beta\", \"zi_vcov\", \"zi_wald_p\"]",
+        "boundary_policy_guards": "{\"R\": {\"probability_max\": 4.25498333325827e-14, \"probability_bound\": 5.714285714285714e-09, \"conditional_density_difference\": 8.495128522257411e-12, \"observed_zi_curvature_norm\": 3.6736829955259265e-12}, \"Python\": {\"probability_max\": 4.25498333325827e-14, \"probability_bound\": 5.714285714285714e-09, \"conditional_density_difference\": 8.495128522308118e-12, \"observed_zi_curvature_norm\": 3.6736829955259265e-12}}"
+      },
+      "R_reported_gradient_max": 3.546988734973648e-12,
+      "numeric_repeat_exact": true,
+      "original_fixture_sha256": "be71a7f81cadef17b80acba377b39cbcf2206534cfaca4749c18b80e20102ca9",
+      "selected_observation_sha256": "38222da39253ea68f847809b95cf9e35e5a3d32300a6b25ddb12f3cb7e77275e",
+      "prior_observations_preserved": true
+    },
+    "tmb_0367": {
+      "justification": "An independently repeated public R start refines fitted modes. Identified covariance is separately validated using stable public Richardson information estimates.",
+      "selected_observation_sha256": "19cf10cd6309bfce584569ab42588ba69586ebe287a4ec43d8859751221025f1",
+      "prior_observations_preserved": true
+    }
+  },
+  "identified_tolerances_changed": false,
+  "original_and_unsuccessful_observations_preserved": true,
+  "warning_rule_cases": [
+    "tmb_0202",
+    "tmb_0593"
+  ],
+  "measured_singular_case": "tmb_0121",
+  "stable_information_case_pending_helper_integration": "tmb_0367"
+}

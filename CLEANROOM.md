@@ -131,3 +131,35 @@ stronger controls. Lower minima or improved score and augmented-QR consistency
 are independently verified. All prior specifications and observations remain
 in the fixtures. Failed precision probes are retained separately rather than
 being counted as passing references.
+
+Mixed-model correlation boundaries are checked through public numeric Hessians
+and independent, documented `rr(d=1)` auxiliary fits. The latter represent
+the same physical rank-one random covariance in finite loading coordinates.
+They supply identified limiting covariance and, for explicitly indexed fields,
+predictions. Their reduced parameter count never replaces the original
+unstructured model's AIC, BIC or residual degrees of freedom. Every original
+observation and all auxiliary inputs and outputs are retained. Runtime fitting
+does not receive these R matrices or reference coefficients.
+
+Weak component information is also examined after profiling all nuisance
+coordinates. This independently derived Schur-complement diagnostic detects
+joint component contrasts that positive information diagonals can miss. It
+changes warning diagnostics only. Quadratic likelihood and orthogonal-change
+tests establish its joint-direction behavior without an R implementation
+reference.
+
+Public example reproduction exposed repeated-covariate knot selection: the
+cubic basis must take type-7 quantiles over unique covariate values. Public
+numeric spline objects verified the correction without a target source view.
+The representative mcycle and Salamanders inputs stay in development cache.
+
+Support-preserving GAM penalty roots factor each original smooth block before
+rotating to the fitting space, preventing amplified rounding leakage between
+independent blocks. Exact rank-one TMB tangents remove quadratic score-step
+error by Richardson extrapolation. Independent public R loading-coordinate
+Hessians verify consecutive refined covariance stability. Interior NB1
+information refinement likewise records all original numeric Hessians and
+requires independently stable positive information. Boundary dispersion
+comparisons use separately derived normalized NB density and curvature bounds,
+validated by 80-digit arithmetic. These are mathematical implementations and
+numerical black-box observations; no target function body was read.

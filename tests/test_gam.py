@@ -289,3 +289,19 @@ def test_machine_stationary_regressions_without_r_runtime(case_id):
 def test_invalid_fit_arguments(argument):
     with pytest.raises(ValueError):
         gam('y ~ s(x, bs="cr", k=6)', sample(), **argument)
+def test_component_penalty_root_preserves_separate_smooth_support():
+    """A large penalty cannot couple structurally independent smooth blocks."""
+    from rparity.gam._fit import _component_penalty_root
+
+    matrix = np.zeros((7, 7))
+    matrix[2:4, 2:4] = np.array([[2., -.4], [-.4, 1.]])
+    root = _component_penalty_root(matrix, np.eye(7), 2)
+    np.testing.assert_array_equal(root[:, [0, 1, 4, 5, 6]], 0)
+    np.testing.assert_allclose(root.T @ root, matrix, atol=1e-15)
+    rotation = np.eye(7)
+    angle = .71
+    rotation[2:4, 2:4] = [[np.cos(angle), -np.sin(angle)],
+                         [np.sin(angle), np.cos(angle)]]
+    rotated = _component_penalty_root(matrix, rotation, 2)
+    np.testing.assert_array_equal(rotated[:, [0, 1, 4, 5, 6]], 0)
+    np.testing.assert_allclose(rotated.T @ rotated, rotation.T @ matrix @ rotation, atol=1e-15)

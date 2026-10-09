@@ -337,8 +337,10 @@ def test_gam_golden(path, record_property):
         assert joint_null.shape[1] == policy["joint_nullity"]
         assert np.min(np.linalg.svd(constraint.T @ joint_null, compute_uv=False)) > 1e-6
     criterion = model.criterion_in_basis(transform, constraint=constraint)
-    assert criterion <= expected["criterion"] + 1e-6
     record_property("better_optimum", bool(criterion < expected["criterion"] - 1e-6))
+    record_property("reference_smoothing_criterion", float(expected["criterion"]))
+    record_property("python_smoothing_criterion", float(criterion))
+    assert criterion <= expected["criterion"] + 1e-6
     gauge_limit = (numerical_gauge_penalty_limit(
         model, expected, transform, spec, gauge_limit_policy, policy, criterion, constraint)
         if gauge_limit_policy else None)

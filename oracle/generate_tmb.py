@@ -107,7 +107,11 @@ def make_case(index: int) -> dict[str, Any]:
         },
     }
     if spec["id"] in REFERENCE_OVERRIDES:
-        spec.update({"args": REFERENCE_OVERRIDES[spec["id"]]["args"]})
+        override = REFERENCE_OVERRIDES[spec["id"]]
+        spec["args"] = override["args"]
+        for name in ("tmb_covariance_diagnostics", "tmb_hessian_step", "tmb_inner_control"):
+            if name in override:
+                spec[name] = override[name]
     if np.any(weights != 1):
         spec["weights"] = "weight"
     return {

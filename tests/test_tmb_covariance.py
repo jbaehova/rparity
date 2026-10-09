@@ -3,8 +3,14 @@
 from types import SimpleNamespace
 
 import numpy as np
+from scipy import linalg
 
-from rparity.tmb._covariance import centered_score_hessian, native_coordinates
+from rparity.tmb._covariance import (
+    centered_score_hessian,
+    native_coordinates,
+    richardson_score_hessian,
+    weak_component_information,
+)
 
 
 def test_unstructured_coordinates_preserve_covariance_and_derivatives():
@@ -50,3 +56,38 @@ def test_centered_score_information_is_exact_for_a_quadratic():
         centered_score_hessian(gradient, np.array([0.3, 0.1, -0.6])),
         information, rtol=1e-12, atol=1e-12,
     )
+
+
+def test_profiled_weak_component_contrast_survives_rotation():
+    """A nearly flat joint contrast has positive individual diagonals."""
+    rotation = np.array([[1., 1.], [-1., 1.]]) / np.sqrt(2)
+    component_information = rotation @ np.diag([1e-10, 9.]) @ rotation.T
+    cross = np.array([[.3, -.4]])
+    information = np.block([
+        [np.array([[2.]]), cross],
+        [cross.T, component_information + cross.T @ cross / 2],
+    ])
+    parameters = np.r_[.2, rotation @ np.array([25., .5])]
+    assert np.min(np.diag(information)) > 1
+    assert weak_component_information(information, parameters, 1, 3)
+    change = linalg.block_diag(np.eye(1), rotation)
+    assert weak_component_information(change.T @ information @ change,
+                                      change.T @ parameters, 1, 3)
+    assert not weak_component_information(information, parameters / 100, 1, 3)
+    resolved = information.copy()
+    resolved[1:, 1:] += np.eye(2) * .01
+    assert not weak_component_information(resolved, parameters, 1, 3)
+
+
+def test_richardson_information_removes_cubic_score_step_error():
+    information = np.array([[4., .3], [.3, 2.]])
+    cubic = np.array([3., 7.])
+    location = np.array([.6, -.2])
+
+    def gradient(parameters):
+        return information @ parameters + cubic * parameters**3
+
+    exact = information + np.diag(3 * cubic * location**2)
+    assert np.max(abs(centered_score_hessian(gradient, location) - exact)) > 1e-6
+    np.testing.assert_allclose(richardson_score_hessian(gradient, location), exact,
+                               rtol=1e-12, atol=1e-12)

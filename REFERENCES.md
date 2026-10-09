@@ -261,3 +261,29 @@ polygamma derivatives are independently evaluated using SciPy. Binomial,
 Poisson, and Gaussian components use their normalized standard densities.
 Joint fixed-component covariance feeds the marginal-means and Wald
 hypotheses documented above.
+
+## Identified boundary references and profiled information
+
+The public
+[reduced-rank covariance specification](https://glmmtmb.github.io/glmmTMB/articles/covstruct.html#reduced-rank)
+defines covariance through finite loadings. A rank-one two-dimensional random
+covariance is the outer product of its loading vector. Independent public R
+fits in this chart verify identified limiting inference without inverting the
+divergent unstructured correlation coordinate. Nominal parameter-count
+quantities still refer to the original fitted model.
+
+For an information matrix partitioned into component and nuisance blocks,
+the profiled component information is
+`Hcc - Hcn @ inv(Hnn) @ Hnc`. Its weak eigenspace detects joint component
+contrasts instead of relying on separate diagonal entries. This is the
+block-inverse identity applied to the likelihood information specified by
+Kristensen et al. (2016), Section 2. Orthogonal-coordinate tests independently
+verify the calculation.
+
+For a positive penalized block `K`, the norm of a profiled convex score at zero
+divided by the smallest eigenvalue of `K` bounds its fitted coefficient norm.
+The Schur complement bounds its contribution to Bayesian coefficient
+covariance. The executable GAM guards recompute both quantities from each
+actual fit. They compare retained null-space coefficients and covariance at
+their original tolerances and separately retain the coefficient integration
+measure in Wood's REML criterion.

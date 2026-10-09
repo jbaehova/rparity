@@ -12,8 +12,34 @@ from typing import Any
 
 import numpy as np
 from numpy.typing import NDArray
+from scipy import linalg
 
 Array = NDArray[np.float64]
+
+
+def weak_component_information(
+    information: Array, parameters: Array, first: int, last: int,
+) -> bool:
+    """Detect a flat component contrast after profiling nuisance coordinates.
+
+    A partial dispersion boundary can involve an intercept and factor contrast
+    jointly. Their separate information diagonals remain positive even when
+    one linear combination has effectively zero profiled information.
+    """
+    if last <= first:
+        return False
+    indices = np.arange(first, last)
+    nuisance = np.r_[np.arange(first), np.arange(last, len(information))]
+    profiled = information[np.ix_(indices, indices)].copy()
+    if len(nuisance):
+        cross = information[np.ix_(nuisance, indices)]
+        nuisance_information = information[np.ix_(nuisance, nuisance)]
+        profiled -= cross.T @ linalg.cho_solve(linalg.cho_factor(nuisance_information), cross)
+    values, vectors = linalg.eigh((profiled + profiled.T) / 2)
+    threshold = np.sqrt(np.finfo(float).eps) * max(1.0, float(np.max(np.abs(values))))
+    weak = values <= threshold
+    amplitude = np.linalg.norm(vectors[:, weak].T @ parameters[indices])
+    return bool(np.any(weak) and amplitude > 10)
 
 
 def native_coordinates(
@@ -87,10 +113,11 @@ def native_coordinates(
     return natural, transform
 
 
-def centered_score_hessian(gradient: Callable[[Array], Array], parameters: Array) -> Array:
+def centered_score_hessian(
+    gradient: Callable[[Array], Array], parameters: Array, *, step: float = 1e-3,
+) -> Array:
     """Symmetric central score differences with unscaled 1e-3 increments."""
     hessian = np.empty((len(parameters), len(parameters)))
-    step = 1e-3
     for i in range(len(parameters)):
         direction = np.zeros_like(parameters)
         direction[i] = step
@@ -98,3 +125,10 @@ def centered_score_hessian(gradient: Callable[[Array], Array], parameters: Array
             2 * step
         )
     return (hessian + hessian.T) / 2
+
+
+def richardson_score_hessian(gradient: Callable[[Array], Array], parameters: Array) -> Array:
+    """Remove quadratic step error on an identified singular-model tangent."""
+    coarse = centered_score_hessian(gradient, parameters)
+    fine = centered_score_hessian(gradient, parameters, step=5e-4)
+    return (4 * fine - coarse) / 3

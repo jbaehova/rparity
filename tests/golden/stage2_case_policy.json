@@ -194,6 +194,24 @@
     "max_design_null_residual": 8.881784197001252e-16,
     "max_penalty_null_residual": 1.2259546835205675e-14
   },
+  "gam_0068": {
+    "optimizer_warning_difference": {
+      "reason": "Repeated public BFGS confirms the optimum and every numeric field. Only R inner-iteration metadata differs; actual Python convergence, score and curvature remain enforced.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "python_outer_gradient": [
+        -2.6835245137135644e-10,
+        4.440892098500626e-16,
+        -4.440892098500626e-16
+      ],
+      "python_outer_hessian_eigenvalues": [
+        2.691920760374431e-10,
+        0.5435077531287615,
+        1.2442101219281017
+      ]
+    }
+  },
   "gam_0073": {
     "optimizer_warning_difference": {
       "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
@@ -809,6 +827,29 @@
       ]
     }
   },
+  "gam_0318": {
+    "optimizer_warning_difference": {
+      "reason": "An independently repeated public R fit has an optimizer event metadata difference despite healthy public outer score and independent penalized inner score. Python converges, is stationary, and has nonnegative smoothing curvature. Every identified numeric assertion retains its original tolerance.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "converged metadata"
+      ],
+      "python_outer_gradient": [
+        0.0,
+        6.661338147750939e-16,
+        -1.0582728027230814e-09
+      ],
+      "python_outer_hessian_eigenvalues": [
+        1.057450423519183e-09,
+        0.3368478504936351,
+        0.4309710485161147
+      ],
+      "criterion_difference": 3.26405569239796e-14
+    }
+  },
   "gam_0332": {
     "optimizer_warning_difference": {
       "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
@@ -1162,6 +1203,24 @@
     "coefficient_count": 9,
     "max_design_null_residual": 1.582067810090848e-15,
     "max_penalty_null_residual": 1.3877787807814457e-16
+  },
+  "gam_0458": {
+    "optimizer_warning_difference": {
+      "reason": "Independent public R reoptimization confirms the lower criterion. Native-support penalty roots resolve cross-block covariance cancellation and every numeric field passes. Preserve actual R event metadata while enforcing Python convergence, score and curvature.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "python_outer_gradient": [
+        -3.861556915019059e-10,
+        -4.0795346936461556e-10,
+        1.3010426069826053e-18
+      ],
+      "python_outer_hessian_eigenvalues": [
+        3.861541292420437e-10,
+        4.0795269690962103e-10,
+        0.002160139160866535
+      ]
+    }
   },
   "gam_0465": {
     "optimizer_warning_difference": {
@@ -1644,6 +1703,31 @@
       ]
     }
   },
+  "gam_0616": {
+    "optimizer_warning_difference": {
+      "reason": "An independently repeated public R fit has an optimizer event metadata difference despite healthy public outer score and independent penalized inner score. Python converges, is stationary, and has nonnegative smoothing curvature. Every identified numeric assertion retains its original tolerance.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "converged metadata"
+      ],
+      "python_outer_gradient": [
+        -4.440892098500626e-16,
+        -1.9825330266343144e-09,
+        0.0,
+        -2.220446049250313e-16
+      ],
+      "python_outer_hessian_eigenvalues": [
+        1.98278427490089e-09,
+        0.0030849103893903257,
+        0.38554613820115785,
+        1.0698815832179691
+      ],
+      "criterion_difference": 1.9240928850194905e-09
+    }
+  },
   "gam_0617": {
     "kind": "gam_coefficient_gauge",
     "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
@@ -2024,6 +2108,52 @@
       ]
     }
   },
+  "gam_0758": {
+    "optimizer_warning_difference": {
+      "reason": "An independently repeated public R fit has an optimizer event metadata difference despite healthy public outer score and independent penalized inner score. Python converges, is stationary, and has nonnegative smoothing curvature. Every identified numeric assertion retains its original tolerance.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "converged metadata"
+      ],
+      "python_outer_gradient": [
+        8.881784197001252e-16,
+        0.0,
+        -6.070246083567099e-09
+      ],
+      "python_outer_hessian_eigenvalues": [
+        6.070255409436046e-09,
+        0.14162951686685016,
+        0.16846046612187215
+      ],
+      "criterion_difference": 1.6342482922482304e-13
+    }
+  },
+  "gam_0778": {
+    "optimizer_warning_difference": {
+      "reason": "An independently repeated public R fit has an optimizer event metadata difference despite healthy public outer score and independent penalized inner score. Python converges, is stationary, and has nonnegative smoothing curvature. Every identified numeric assertion retains its original tolerance.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "converged metadata"
+      ],
+      "python_outer_gradient": [
+        -9.246476917468271e-10,
+        -1.1102230246251565e-15,
+        -8.403875373375058e-10
+      ],
+      "python_outer_hessian_eigenvalues": [
+        8.4043776818521e-10,
+        9.245577694648328e-10,
+        0.3228182795227037
+      ],
+      "criterion_difference": 2.842170943040401e-14
+    }
+  },
   "gam_0783": {
     "optimizer_warning_difference": {
       "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
@@ -2241,6 +2371,30 @@
       ]
     }
   },
+  "gam_0886": {
+    "optimizer_warning_difference": {
+      "reason": "An independently repeated public R fit has an optimizer event metadata difference despite healthy public outer score and independent penalized inner score. Python converges, is stationary, and has nonnegative smoothing curvature. Every identified numeric assertion retains its original tolerance.",
+      "r_warnings": [
+        "Fitting terminated with step failure - check results carefully"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence"
+      ],
+      "python_outer_gradient": [
+        4.440892098500626e-16,
+        0.0,
+        0.0,
+        -2.220446049250313e-16
+      ],
+      "python_outer_hessian_eigenvalues": [
+        0.0224933581898727,
+        0.10938495487998397,
+        0.3966235978601548,
+        0.4383340553571307
+      ],
+      "criterion_difference": -2.842170943040401e-14
+    }
+  },
   "gam_0887": {
     "kind": "gam_coefficient_gauge",
     "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
@@ -2275,6 +2429,27 @@
       "python_outer_hessian_eigenvalues": [
         2.4076547846319705
       ]
+    }
+  },
+  "gam_0905": {
+    "optimizer_warning_difference": {
+      "reason": "An independently repeated public R fit has an optimizer event metadata difference despite healthy public outer score and independent penalized inner score. Python converges, is stationary, and has nonnegative smoothing curvature. Every identified numeric assertion retains its original tolerance.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "converged metadata"
+      ],
+      "python_outer_gradient": [
+        -5.34983612965334e-10,
+        2.510276431166858e-10
+      ],
+      "python_outer_hessian_eigenvalues": [
+        1.1068877941559769e-10,
+        5.007735423579607e-09
+      ],
+      "criterion_difference": 1.7826096154749393e-10
     }
   },
   "gam_0907": {
@@ -2946,7 +3121,24 @@
     "design_rank": 10,
     "coefficient_count": 11,
     "max_design_null_residual": 3.3306690738754696e-16,
-    "max_penalty_null_residual": 1.1102230246251565e-16
+    "max_penalty_null_residual": 1.1102230246251565e-16,
+    "optimizer_warning_difference": {
+      "reason": "Public R automatic reoptimization lowers the independent outer score while every identified numeric field passes its original tolerance under the existing verified coefficient gauge. R inner metadata remains false despite a negligible independent inner score. Python actually converges and has healthy analytic smoothing score and curvature. Preserve all original gauge checks and do not fabricate a Python warning.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "converged metadata"
+      ],
+      "python_outer_gradient": [
+        -1.1730646232166464e-08
+      ],
+      "python_outer_hessian_eigenvalues": [
+        1.1731134582267563e-08
+      ],
+      "criterion_difference": 1.1590081783197093e-08
+    }
   },
   "gam_1118": {
     "optimizer_warning_difference": {

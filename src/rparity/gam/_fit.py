@@ -237,6 +237,25 @@ def _root_logdet(root: Array) -> float:
     return 2*float(np.sum(np.log(diagonal)))
 
 
+def _component_penalty_root(matrix: Array, space: Array, null_dimension: int) -> Array:
+    """Factor a smooth on its original support before rotating coefficients.
+
+    Factoring an already rotated full matrix can leak rounding errors between
+    independent smooth blocks. A large smoothing multiplier amplifies those
+    errors. This order retains exact structural zeros in each component.
+    """
+    support = np.flatnonzero(np.max(np.abs(matrix), axis=0) > 0)
+    if not len(support):
+        return np.zeros((0, space.shape[1]))
+    values, vectors = linalg.eigh(matrix[np.ix_(support, support)])
+    positive = values > max(float(np.max(values)), 1.0) * 1e-12
+    native_root = np.zeros((int(np.sum(positive)), len(matrix)))
+    native_root[:, support] = np.sqrt(values[positive])[:, None] * vectors[:, positive].T
+    root = native_root @ space
+    root[:, :null_dimension] = 0
+    return root
+
+
 def _inverse_root(X: Array, weights: Array, root: Array) -> Array:
     augmented = np.vstack([X*np.sqrt(weights)[:, None], root])
     R = linalg.qr(augmented, mode="r", check_finite=False)[0][:X.shape[1], :]
@@ -846,14 +865,10 @@ def gam(
     reduced_positive = reduced_values > max(float(np.max(np.abs(reduced_values))), 1.0) * 1e-10
     inner_space = coefficient_space @ reduced_vectors
     inner_null_dimension = int(np.sum(~reduced_positive))
-    penalty_roots = []
-    for matrix in penalties:
-        reduced_matrix = inner_space.T @ matrix @ inner_space
-        reduced_matrix[:inner_null_dimension, :] = 0
-        reduced_matrix[:, :inner_null_dimension] = 0
-        values, vectors = linalg.eigh(reduced_matrix)
-        positive = values > max(float(np.max(values)), 1.0)*1e-12
-        penalty_roots.append(np.sqrt(values[positive])[:, None]*vectors[:, positive].T)
+    penalty_roots = [
+        _component_penalty_root(matrix, inner_space, inner_null_dimension)
+        for matrix in penalties
+    ]
     n = len(y)
     effective_n = n / gamma
     cache: dict[tuple[float, ...], tuple[float, _Inner, Array, float, Array]] = {}

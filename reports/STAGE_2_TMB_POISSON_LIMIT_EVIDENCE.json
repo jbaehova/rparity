@@ -1,0 +1,2107 @@
+{
+  "scope": "Cache-only independent public R precision and Poisson-limit audit. No source, tests, corpus fixtures or policy files were changed.",
+  "cleanroom": "All R numeric observations ran through oracle/run_case.R. Only public help pages were opened. Target source and function bodies were not inspected.",
+  "documentation": [
+    "https://stat.ethz.ch/R-manual/R-devel/library/stats/html/optim.html",
+    "https://glmmtmb.github.io/glmmTMB/reference/nbinom2.html"
+  ],
+  "R_observations": 82,
+  "R_errors": 10,
+  "R_repeat_checks": {
+    "tmb_0254_strong_original_start": {
+      "all_result_fields_identical": true,
+      "warnings_identical": true,
+      "same_fit_and_covariance": true
+    },
+    "tmb_0980_extra_limit_40": {
+      "all_result_fields_identical": true,
+      "warnings_identical": true,
+      "same_fit_and_covariance": true
+    },
+    "tmb_0476_extra_limit_40": {
+      "all_result_fields_identical": true,
+      "warnings_identical": true,
+      "same_fit_and_covariance": true
+    },
+    "tmb_0476_strong_original_start": {
+      "all_result_fields_identical": true,
+      "warnings_identical": true,
+      "same_fit_and_covariance": true
+    },
+    "tmb_1178_extra_limit_40": {
+      "all_result_fields_identical": true,
+      "warnings_identical": true,
+      "same_fit_and_covariance": true
+    },
+    "tmb_1178_strong_original_start": {
+      "all_result_fields_identical": true,
+      "warnings_identical": true,
+      "same_fit_and_covariance": true
+    },
+    "tmb_0367_python_start_h_0.16": {
+      "all_result_fields_identical": true,
+      "warnings_identical": true,
+      "same_fit_and_covariance": true
+    }
+  },
+  "source_hash_before": "c5e36a7ed26ca7e63c513f50a9b3e30673266b52c38a7e49b745aeac8475383a",
+  "source_hash_after": "29dd83163b862e28d16cdf48a9753f66c1f471ad38faf728ff595d3ea4c53a50",
+  "source_change_explanation": "Root added a generic profiled component-information warning during this audit. Reported fits and covariance numbers were unchanged. This worker did not edit source.",
+  "driver_hash_after": "c1a2830b0e0c90a0024006f87be3fbde032f0013e0dfa0514f70c65db787beaf",
+  "regular_0367_stable_numerical_reference": {
+    "id": "tmb_0367",
+    "derived_covariance_kind": "Richardson public_R_score_Hessian",
+    "retained_information_minimum_eigenvalue": 0.01513005240282237,
+    "covariance_reference": {
+      "cond": [
+        [
+          0.10431576669072656,
+          -0.006453700713774978,
+          -0.0349306321182262,
+          -0.03497358470759017
+        ],
+        [
+          -0.0064537007137749815,
+          0.0239928837639009,
+          -0.001574481025180479,
+          -0.009346791593552702
+        ],
+        [
+          -0.03493063211822621,
+          -0.00157448102518048,
+          0.06376945472819612,
+          0.03906526375580591
+        ],
+        [
+          -0.03497358470759017,
+          -0.009346791593552705,
+          0.039065263755805914,
+          0.12683828386645848
+        ]
+      ],
+      "zi": [
+        [
+          0.26188106770732994
+        ]
+      ],
+      "disp": [
+        [
+          37.05651947512612,
+          30.437748796072842,
+          -7.595839663911911,
+          -9.135039706459345
+        ],
+        [
+          30.437748796072846,
+          26.097236090974686,
+          -5.238539886072522,
+          -6.525802114104827
+        ],
+        [
+          -7.595839663911905,
+          -5.238539886072516,
+          3.720720596256703,
+          2.85783938162954
+        ],
+        [
+          -9.13503970645934,
+          -6.52580211410482,
+          2.8578393816295407,
+          5.426090141484016
+        ]
+      ]
+    },
+    "derived_R_Wald_p": {
+      "cond": [
+        0.33357575284201524,
+        0.4546877321309003,
+        0.09176751762372165,
+        0.510904938596747
+      ],
+      "zi": [
+        0.00954663501581843
+      ],
+      "disp": [
+        0.23205577982422998,
+        0.21262543838457193,
+        0.23479256562272677,
+        0.23060099446868998
+      ]
+    },
+    "all_strict_fields_pass": true,
+    "strict_fields": {
+      "cond_beta": {
+        "pass": true,
+        "max_absolute": 3.0596981892561104e-10,
+        "maximum_tolerance_ratio": 0.0002642131780638234
+      },
+      "cond_vcov": {
+        "pass": true,
+        "max_absolute": 5.582772271695013e-07,
+        "maximum_tolerance_ratio": 0.09564082673403321
+      },
+      "cond_wald_p": {
+        "pass": true,
+        "max_absolute": 1.133003964648438e-06,
+        "maximum_tolerance_ratio": 0.01133003964648438
+      },
+      "zi_beta": {
+        "pass": true,
+        "max_absolute": 3.191784614386961e-10,
+        "maximum_tolerance_ratio": 2.4064377301784354e-05
+      },
+      "zi_vcov": {
+        "pass": true,
+        "max_absolute": 1.331189420250567e-06,
+        "maximum_tolerance_ratio": 0.05083182916095459
+      },
+      "zi_wald_p": {
+        "pass": true,
+        "max_absolute": 1.827707480049623e-07,
+        "maximum_tolerance_ratio": 0.001827707480049623
+      },
+      "disp_beta": {
+        "pass": true,
+        "max_absolute": 4.277849718903326e-08,
+        "maximum_tolerance_ratio": 0.0005880255958148302
+      },
+      "disp_vcov": {
+        "pass": true,
+        "max_absolute": 3.5044467821876424e-05,
+        "maximum_tolerance_ratio": 0.04449750746267107
+      },
+      "disp_wald_p": {
+        "pass": true,
+        "max_absolute": 7.286318313148854e-07,
+        "maximum_tolerance_ratio": 0.007286318313148854
+      },
+      "response_prediction": {
+        "pass": true,
+        "max_absolute": 1.6431012106465914e-09,
+        "maximum_tolerance_ratio": 0.0007785726695425742
+      },
+      "cond_prediction": {
+        "pass": true,
+        "max_absolute": 2.371295160230602e-09,
+        "maximum_tolerance_ratio": 0.0008397799559831697
+      },
+      "zprob_prediction": {
+        "pass": true,
+        "max_absolute": 4.8368198335424495e-11,
+        "maximum_tolerance_ratio": 0.00023058348295014548
+      },
+      "disp_prediction": {
+        "pass": true,
+        "max_absolute": 1.2723444058337918e-06,
+        "maximum_tolerance_ratio": 0.060234748789260294
+      },
+      "cond_g_random_covariance": {
+        "pass": true,
+        "max_absolute": 9.572087567022436e-11,
+        "maximum_tolerance_ratio": 2.3716131455093777e-06
+      },
+      "cond_g_random_modes": {
+        "pass": true,
+        "max_absolute": 1.286681872159079e-10,
+        "maximum_tolerance_ratio": 1.061837307400897e-05
+      },
+      "AIC": {
+        "pass": true,
+        "max_absolute": 4.6350123739102855e-10,
+        "maximum_tolerance_ratio": 0.00023175061869551428
+      },
+      "BIC": {
+        "pass": true,
+        "max_absolute": 4.6350123739102855e-10,
+        "maximum_tolerance_ratio": 0.00023175061869551428
+      },
+      "residual_df": {
+        "pass": true
+      }
+    },
+    "consecutive_step_covariance_stability": {
+      "cond": {
+        "pass": true,
+        "max_absolute": 4.948340382449068e-07,
+        "maximum_tolerance_ratio": 0.13671907428606825
+      },
+      "zi": {
+        "pass": true,
+        "max_absolute": 1.1246215228521983e-06,
+        "maximum_tolerance_ratio": 0.04294397795739331
+      },
+      "disp": {
+        "pass": true,
+        "max_absolute": 0.0009512652899203999,
+        "maximum_tolerance_ratio": 0.4337361006892339
+      }
+    },
+    "R_controls_same_except_numeric_start": true,
+    "original_R_covariance_preserved": true,
+    "hessian_steps": [
+      0.04,
+      0.08,
+      0.16
+    ],
+    "reference_fit_repeated_exact_parameters": true,
+    "Python_warnings": []
+  },
+  "remaining_rejections": {
+    "0416": "Original R random correlation is another nonregular boundary; fixed-dispersion auxiliary identified fields still fail. Do not count.",
+    "0589": "Public R NB1 score and optimizer are noisy on the partial Poisson stratum; no auxiliary fit passes all identified fields.",
+    "0698": "Original R collapsed density perturb exceeds 1e-6; direct reported quotient covariance also fails. Stable tangent match alone is not a complete original-reference certificate.",
+    "1015": "Every tested public R NB1 fixed-limit fit still fails identified covariance or predictions.",
+    "all stronger original-formula boundary starts": "Rejected as stationary references. Objectives numerically match Python, but public R scores are corrupted (0.002 to 2.2), with false convergence. Do not adopt their warnings to waive identified fields."
+  },
+  "quotient_stability_audit": [
+    {
+      "id": "tmb_0746",
+      "warnings": [
+        "Component parameters are weakly identified"
+      ],
+      "identified_tangent_covariance": [
+        [
+          1.2568911015968545,
+          0.01654370396681248,
+          -0.7095880836128945
+        ],
+        [
+          0.016543703966812384,
+          1.4498215380778632,
+          0.15771482791668087
+        ],
+        [
+          -0.7095880836128945,
+          0.15771482791668082,
+          1.267357322367635
+        ]
+      ],
+      "R_aux_covariance": [
+        [
+          1.256891101361524,
+          0.016543703808843485,
+          -0.7095880837431973
+        ],
+        [
+          0.016543703808843457,
+          1.4498215380080937,
+          0.15771482772721102
+        ],
+        [
+          -0.7095880837431973,
+          0.15771482772721096,
+          1.2673573225375592
+        ]
+      ],
+      "strict_tangent_covariance": {
+        "pass": true,
+        "max_absolute": 2.3533042181611563e-10,
+        "maximum_tolerance_ratio": 9.548581252590093e-05
+      },
+      "reported_quotient_covariance": [
+        [
+          1.2569122314453125,
+          0.0165557861328125,
+          -0.7095880737132845
+        ],
+        [
+          0.0165557861328125,
+          1.4498291015625,
+          0.1577148303345055
+        ],
+        [
+          -0.7095894175828192,
+          0.15771351629913255,
+          1.2673573387266737
+        ]
+      ],
+      "reported_quotient_roundoff_bound": [
+        [
+          0.0006714980578724676,
+          0.000671498057933923,
+          1.402972627175386e-13
+        ],
+        [
+          0.000671498057933923,
+          0.0006714980580001279,
+          1.3875662327210162e-13
+        ],
+        [
+          1.4029726776734508e-13,
+          1.3875662826891199e-13,
+          2.2512788766112267e-15
+        ]
+      ],
+      "roundoff_envelope_pass": false,
+      "max_roundoff_envelope_ratio": 1169844.0068665086,
+      "tangent_hessian_min_eigenvalue": 0.06153654139718799,
+      "tangent_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.333333333333333,
+          0.3333333333333335,
+          1.6915395330155664e-16,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0000000000000002,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.6666666666666663,
+          -0.3333333333333332,
+          -1.6915395330155664e-16,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.33333333333333315,
+          0.6666666666666669,
+          1.812986607347358e-16,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": "tmb_0698",
+      "warnings": [
+        "Component parameters are weakly identified"
+      ],
+      "identified_tangent_covariance": [
+        [
+          0.8618797256406251,
+          0.28525279513833113,
+          -0.30930371677593427
+        ],
+        [
+          0.2852527951383312,
+          1.164886546983441,
+          -0.16229975772359628
+        ],
+        [
+          -0.30930371677593427,
+          -0.16229975772359626,
+          0.4325723569058774
+        ]
+      ],
+      "R_aux_covariance": [
+        [
+          0.861879731053572,
+          0.2852528023591021,
+          -0.3093037186260822
+        ],
+        [
+          0.28525280235910216,
+          1.1648865566054571,
+          -0.16229976021699247
+        ],
+        [
+          -0.30930371862608225,
+          -0.16229976021699247,
+          0.43257235751310863
+        ]
+      ],
+      "strict_tangent_covariance": {
+        "pass": true,
+        "max_absolute": 9.622016072796669e-09,
+        "maximum_tolerance_ratio": 0.0002531358383962961
+      },
+      "reported_quotient_covariance": [
+        [
+          0.8619384765625,
+          0.28533935546875,
+          -0.3093076771322103
+        ],
+        [
+          0.28533935546875,
+          1.16497802734375,
+          -0.16230533926602675
+        ],
+        [
+          -0.3093059585139599,
+          -0.16230463999204403,
+          0.4325734324735072
+        ]
+      ],
+      "reported_quotient_roundoff_bound": [
+        [
+          0.002064449120194328,
+          0.0020644491231864583,
+          1.9860221137880015e-12
+        ],
+        [
+          0.0020644491231864587,
+          0.002064449126181175,
+          1.985760985179725e-12
+        ],
+        [
+          1.986022113199018e-12,
+          1.985760986401461e-12,
+          7.684047753171569e-16
+        ]
+      ],
+      "roundoff_envelope_pass": false,
+      "max_roundoff_envelope_ratio": 1869386.8860136447,
+      "tangent_hessian_min_eigenvalue": 0.48489716140334427,
+      "tangent_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.333333333333333,
+          0.3333333333333335,
+          1.6915395330155664e-16,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0000000000000002,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.6666666666666663,
+          -0.3333333333333332,
+          -1.6915395330155664e-16,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.33333333333333315,
+          0.6666666666666669,
+          1.812986607347358e-16,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  ],
+  "quotient_roundoff_warning": "The full reported quotient mismatch cannot be justified solely by a multiplication forward-roundoff bound. Weak-block inversion contamination also contributes. The stable identified tangent inverse is a separate explicitly derived boundary covariance, not strict parity of the reported full covariance.",
+  "integration_requirements": [
+    "Keep every original reference and failed probe. Never replace original AIC, BIC or residual df with lower-dimensional auxiliary fit values.",
+    "Retain original TASK tolerances for every identified beta, covariance, Wald p, response prediction, retained dispersion prediction and physical random covariance or mode.",
+    "Recheck weighted collapsed-stratum NB-to-Poisson log-density perturb dynamically at the current Python and the independent R limiting fit.",
+    "For 0367 derive the reference covariance as inverse((4*H(.08)-H(.16))/3), and recheck stability against inverse((4*H(.04)-H(.08))/3). No warning or boundary waiver applies.",
+    "For partial limits compare identified dispersion contrasts in the listed quotient chart. Treat a stable information tangent separately from the numerically contaminated full raw covariance."
+  ],
+  "cache_files": [
+    "oracle/cache/s2-tmb-poisson-limit-0367-confirmation.json",
+    "oracle/cache/s2-tmb-poisson-limit-R.log",
+    "oracle/cache/s2-tmb-poisson-limit-analysis.json",
+    "oracle/cache/s2-tmb-poisson-limit-candidates.json",
+    "oracle/cache/s2-tmb-poisson-limit-confirmation-R.log",
+    "oracle/cache/s2-tmb-poisson-limit-confirmation-input.json",
+    "oracle/cache/s2-tmb-poisson-limit-confirmation-output.json",
+    "oracle/cache/s2-tmb-poisson-limit-density-bounds.json",
+    "oracle/cache/s2-tmb-poisson-limit-density-bounds.py",
+    "oracle/cache/s2-tmb-poisson-limit-extra-R.log",
+    "oracle/cache/s2-tmb-poisson-limit-extra-analysis.json",
+    "oracle/cache/s2-tmb-poisson-limit-extra-analysis.log",
+    "oracle/cache/s2-tmb-poisson-limit-extra-analysis.py",
+    "oracle/cache/s2-tmb-poisson-limit-extra-input.json",
+    "oracle/cache/s2-tmb-poisson-limit-extra-output.json",
+    "oracle/cache/s2-tmb-poisson-limit-extra.py",
+    "oracle/cache/s2-tmb-poisson-limit-handoff.json",
+    "oracle/cache/s2-tmb-poisson-limit-handoff.py",
+    "oracle/cache/s2-tmb-poisson-limit-hessian-R.log",
+    "oracle/cache/s2-tmb-poisson-limit-hessian-analysis.json",
+    "oracle/cache/s2-tmb-poisson-limit-hessian-components.json",
+    "oracle/cache/s2-tmb-poisson-limit-hessian-extended-R.log",
+    "oracle/cache/s2-tmb-poisson-limit-hessian-extended-analysis.json",
+    "oracle/cache/s2-tmb-poisson-limit-hessian-extended-input.json",
+    "oracle/cache/s2-tmb-poisson-limit-hessian-extended-output.json",
+    "oracle/cache/s2-tmb-poisson-limit-hessian-input.json",
+    "oracle/cache/s2-tmb-poisson-limit-hessian-output.json",
+    "oracle/cache/s2-tmb-poisson-limit-input.json",
+    "oracle/cache/s2-tmb-poisson-limit-manifest.json",
+    "oracle/cache/s2-tmb-poisson-limit-output.json",
+    "oracle/cache/s2-tmb-poisson-limit-probe.py",
+    "oracle/cache/s2-tmb-poisson-limit-quotient-stability.json",
+    "oracle/cache/s2-tmb-poisson-limit-retry-R.log",
+    "oracle/cache/s2-tmb-poisson-limit-retry-input.json",
+    "oracle/cache/s2-tmb-poisson-limit-retry-output.json"
+  ],
+  "selected_boundary_candidates": [
+    {
+      "id": "tmb_0037",
+      "variant": "tmb_0037_extra_limit_20_retry_Python_start",
+      "status": "all fields pass except numerically zero random modes; requires separate zero-RE proof",
+      "original_reference_fingerprint": "12b60366bae404395303f9a4a3f7294224de4afc01d8e25e40294c0ffcda8c08",
+      "original_R_density_limit_perturbation": 8.485588942619415e-08,
+      "Python_density_limit_perturbation": 3.838707129943941e-12,
+      "density_limit_bound": 1e-06,
+      "dispersion_quotient_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "collapsed_levels": [
+        "c"
+      ],
+      "retained_levels": [
+        "a",
+        "b"
+      ],
+      "Python_warnings_at_final_audit": [
+        "Component parameters are weakly identified",
+        "boundary (singular) fit"
+      ],
+      "Python_score_max": 1.6435464100794661e-12,
+      "Python_information_eigenvalues": [
+        1.7486012637814835e-12,
+        0.3787471569830583,
+        1.3381993036656024,
+        2.895305332468831,
+        4.788741777743324,
+        7.668734633398551,
+        17.592080916605983,
+        35.31485598396599,
+        67.18297701902512
+      ],
+      "Python_weak_dispersion_direction_projection": 1.0,
+      "Python_weak_dispersion_direction_amplitude": 28.366589459810452,
+      "strict_auxiliary_comparison": {
+        "warnings": [],
+        "R_ll": -113.87518095285436,
+        "Python_minus_R_ll": -2.654928721312899e-09,
+        "R_diagnostics": {
+          "convergence": 0,
+          "message": "relative convergence (4)",
+          "iterations": 52,
+          "objective": 113.87518095285436,
+          "gradient": [
+            -1.259829532679171e-06,
+            -2.2340689595140816e-07,
+            5.609523545748778e-09,
+            -1.2603791460988557e-06,
+            -3.6401967528765926e-09,
+            -6.821748702274993e-09,
+            -5.087731723798029e-09,
+            1.3482548411082933e-12
+          ],
+          "pdHess": true
+        },
+        "R_score_max": 9.96385507594029e-07,
+        "R_hessian_eigenvalues": [
+          2.220446049047834e-12,
+          0.42115759078852877,
+          2.2957257674303815,
+          4.344033953868385,
+          4.854858396597012,
+          16.224264503401507,
+          35.222562285327186,
+          66.66896635663649
+        ],
+        "R_aux_density_limit_perturbation": 1.4083121113728225e-08,
+        "fields": {
+          "cond_beta": {
+            "pass": true,
+            "max_absolute": 8.395974815389451e-08,
+            "maximum_tolerance_ratio": 0.0845881869097315
+          },
+          "cond_vcov": {
+            "pass": true,
+            "max_absolute": 6.650489072224097e-06,
+            "maximum_tolerance_ratio": 0.668659028791226
+          },
+          "cond_wald_p": {
+            "pass": true,
+            "max_absolute": 1.3945654716351896e-05,
+            "maximum_tolerance_ratio": 0.13945654716351896
+          },
+          "response_prediction": {
+            "pass": true,
+            "max_absolute": 8.497756442960025e-08,
+            "maximum_tolerance_ratio": 0.08999336905056861
+          },
+          "cond_prediction": {
+            "pass": true,
+            "max_absolute": 8.497756442960025e-08,
+            "maximum_tolerance_ratio": 0.08999336905056861
+          },
+          "zprob_prediction": {
+            "pass": true,
+            "max_absolute": 0.0,
+            "maximum_tolerance_ratio": 0.0
+          },
+          "cond_g_random_covariance": {
+            "pass": true,
+            "max_absolute": 4.655619199651404e-13,
+            "maximum_tolerance_ratio": 0.4655402461840569
+          },
+          "cond_g_random_modes": {
+            "pass": false,
+            "max_absolute": 1.988034347172691e-12,
+            "maximum_tolerance_ratio": 1.9876391976732148
+          },
+          "identified_dispersion_beta": {
+            "pass": true,
+            "max_absolute": 5.16013098916801e-08,
+            "maximum_tolerance_ratio": 0.006406344293692758
+          },
+          "identified_dispersion_covariance": {
+            "pass": true,
+            "max_absolute": 5.024683694898613e-06,
+            "maximum_tolerance_ratio": 0.04263828625992083
+          },
+          "identified_dispersion_wald": {
+            "pass": true,
+            "max_absolute": 9.744856720450557e-07,
+            "maximum_tolerance_ratio": 0.009744856720450557
+          },
+          "retained_dispersion_predictions": {
+            "pass": true,
+            "max_absolute": 7.372683370476807e-07,
+            "maximum_tolerance_ratio": 0.09960709872082857
+          }
+        },
+        "failed_fields": [
+          "cond_g_random_modes"
+        ]
+      }
+    },
+    {
+      "id": "tmb_0254",
+      "variant": "tmb_0254_extra_limit_40_retry",
+      "status": "all identified auxiliary fields pass; original R density bound exceeds 1e-6",
+      "original_reference_fingerprint": "14365db424a523a861b1618c39155538e8d456302fb2ed331febb508054813f9",
+      "original_R_density_limit_perturbation": 5.225301622113765e-06,
+      "Python_density_limit_perturbation": 5.549710690999632e-11,
+      "density_limit_bound": 1e-06,
+      "dispersion_quotient_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "collapsed_levels": [
+        "b",
+        "c"
+      ],
+      "retained_levels": [
+        "a"
+      ],
+      "Python_warnings_at_final_audit": [
+        "Component parameters are weakly identified"
+      ],
+      "Python_score_max": 9.894280007957855e-12,
+      "Python_information_eigenvalues": [
+        1.3645436254597822e-12,
+        1.1718697907728976e-11,
+        0.468666377937727,
+        12.853978141857631,
+        14.93532180785805,
+        16.624958907323848,
+        43.34049274778424,
+        102.7745603723841,
+        253.44939813688399
+      ],
+      "Python_weak_dispersion_direction_projection": 0.9999999999999997,
+      "Python_weak_dispersion_direction_amplitude": 28.14390596889835,
+      "strict_auxiliary_comparison": {
+        "warnings": [],
+        "R_ll": -417.73739019794283,
+        "Python_minus_R_ll": -1.0402345651527867e-11,
+        "R_diagnostics": {
+          "convergence": 0,
+          "message": "stationary-score convergence",
+          "iterations": 5,
+          "objective": 417.73739019794283,
+          "gradient": [
+            1.758593271006248e-13,
+            -1.0854650511760155e-12,
+            -4.303224443447107e-13,
+            -1.7136292385089291e-12,
+            -5.3470838867752946e-12,
+            -2.0240753517697385e-13,
+            1.821043316141413e-13
+          ],
+          "pdHess": true
+        },
+        "R_score_max": 5.3470838867752946e-12,
+        "R_hessian_eigenvalues": [
+          0.46866637854728416,
+          12.853978141868884,
+          14.93532180786333,
+          16.624958907318362,
+          43.34049274777202,
+          102.77456037252068,
+          253.44939813726793
+        ],
+        "R_aux_density_limit_perturbation": 5.10702591327572e-15,
+        "fields": {
+          "cond_beta": {
+            "pass": true,
+            "max_absolute": 2.7430835380926055e-13,
+            "maximum_tolerance_ratio": 1.3773627249372816e-07
+          },
+          "cond_vcov": {
+            "pass": true,
+            "max_absolute": 3.8840805571815906e-13,
+            "maximum_tolerance_ratio": 2.5657751841429464e-06
+          },
+          "cond_wald_p": {
+            "pass": true,
+            "max_absolute": 4.9574788718587115e-12,
+            "maximum_tolerance_ratio": 4.9574788718587115e-08
+          },
+          "response_prediction": {
+            "pass": true,
+            "max_absolute": 4.150901844468535e-12,
+            "maximum_tolerance_ratio": 1.3347134777093107e-06
+          },
+          "cond_prediction": {
+            "pass": true,
+            "max_absolute": 4.150901844468535e-12,
+            "maximum_tolerance_ratio": 1.3347134777093107e-06
+          },
+          "zprob_prediction": {
+            "pass": true,
+            "max_absolute": 0.0,
+            "maximum_tolerance_ratio": 0.0
+          },
+          "cond_g_random_covariance": {
+            "pass": true,
+            "max_absolute": 2.579603197716551e-13,
+            "maximum_tolerance_ratio": 5.375424602428271e-09
+          },
+          "cond_g_random_modes": {
+            "pass": true,
+            "max_absolute": 1.0518252935298733e-12,
+            "maximum_tolerance_ratio": 4.768804221614669e-08
+          },
+          "identified_dispersion_beta": {
+            "pass": true,
+            "max_absolute": 9.531930800221744e-12,
+            "maximum_tolerance_ratio": 4.262188776391066e-07
+          },
+          "identified_dispersion_covariance": {
+            "pass": true,
+            "max_absolute": 1.4763854583321745e-09,
+            "maximum_tolerance_ratio": 1.3484594958139316e-05
+          },
+          "identified_dispersion_wald": {
+            "pass": true,
+            "max_absolute": 1.943813721094756e-10,
+            "maximum_tolerance_ratio": 1.943813721094756e-06
+          },
+          "retained_dispersion_predictions": {
+            "pass": true,
+            "max_absolute": 2.6802808861248195e-09,
+            "maximum_tolerance_ratio": 1.998414709710995e-05
+          }
+        },
+        "failed_fields": []
+      }
+    },
+    {
+      "id": "tmb_0746",
+      "variant": "tmb_0746_extra_limit_40",
+      "status": "all fields pass except reported dispersion quotient covariance; stable identified tangent passes",
+      "original_reference_fingerprint": "4f37420eae2e6e9f0ce5dc177aef5e1da7258ff9a958ca5decb131e16d9b9387",
+      "original_R_density_limit_perturbation": 4.1872260392317173e-07,
+      "Python_density_limit_perturbation": 2.3753699007755813e-10,
+      "density_limit_bound": 1e-06,
+      "dispersion_quotient_transform": [
+        [
+          1.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "collapsed_levels": [
+        "a"
+      ],
+      "retained_levels": [
+        "b",
+        "c"
+      ],
+      "Python_warnings_at_final_audit": [
+        "Component parameters are weakly identified"
+      ],
+      "Python_score_max": 1.879524313963543e-12,
+      "Python_information_eigenvalues": [
+        3.5271584717338083e-12,
+        0.06154162708847939,
+        0.5312143738426223,
+        0.9714915606215361,
+        1.2865337881630543,
+        1.9309180934691206,
+        3.366823952721236,
+        8.8594557446264,
+        14.383946504093215,
+        24.094572934603956,
+        51.864908871567025,
+        122.15487042773452
+      ],
+      "Python_weak_dispersion_direction_projection": 1.0000000000000002,
+      "Python_weak_dispersion_direction_amplitude": 45.628613271712766,
+      "strict_auxiliary_comparison": {
+        "warnings": [],
+        "R_ll": -211.320758129897,
+        "Python_minus_R_ll": -5.5422333389287814e-12,
+        "R_diagnostics": {
+          "convergence": 0,
+          "message": "stationary-score convergence",
+          "iterations": 4,
+          "objective": 211.320758129897,
+          "gradient": [
+            5.0681681074138396e-14,
+            -5.2638449155040234e-14,
+            7.90062459898877e-14,
+            -1.895011925157064e-14,
+            2.341460358934455e-13,
+            -2.2602839738761205e-13,
+            -5.963111948670274e-14,
+            1.0338301395518279e-13,
+            -2.461225667715894e-14,
+            -1.8457457784393227e-14,
+            2.890916672715349e-15
+          ],
+          "pdHess": true
+        },
+        "R_score_max": 2.341460358934455e-13,
+        "R_hessian_eigenvalues": [
+          0.06153654139892636,
+          0.5110574911990904,
+          0.6602943923710616,
+          1.0488729686697496,
+          1.7597521031484045,
+          2.374383239792692,
+          8.859352240801512,
+          14.003003304686402,
+          24.094557091029586,
+          51.83623192120502,
+          122.15453113630872
+        ],
+        "R_aux_density_limit_perturbation": 6.661338147750939e-16,
+        "fields": {
+          "cond_beta": {
+            "pass": true,
+            "max_absolute": 7.68968222430999e-13,
+            "maximum_tolerance_ratio": 5.134879136030875e-07
+          },
+          "cond_vcov": {
+            "pass": true,
+            "max_absolute": 3.324877345667332e-09,
+            "maximum_tolerance_ratio": 0.00028735174882776117
+          },
+          "cond_wald_p": {
+            "pass": true,
+            "max_absolute": 4.58235882572211e-09,
+            "maximum_tolerance_ratio": 4.5823588257221104e-05
+          },
+          "zi_beta": {
+            "pass": true,
+            "max_absolute": 1.4086509736443986e-12,
+            "maximum_tolerance_ratio": 1.7251474871843743e-07
+          },
+          "zi_vcov": {
+            "pass": true,
+            "max_absolute": 1.614698513785484e-10,
+            "maximum_tolerance_ratio": 1.9872782230859366e-05
+          },
+          "zi_wald_p": {
+            "pass": true,
+            "max_absolute": 3.746327293524532e-11,
+            "maximum_tolerance_ratio": 3.746327293524532e-07
+          },
+          "response_prediction": {
+            "pass": true,
+            "max_absolute": 8.884004643050503e-12,
+            "maximum_tolerance_ratio": 3.75945498239654e-06
+          },
+          "cond_prediction": {
+            "pass": true,
+            "max_absolute": 1.4853895891064894e-11,
+            "maximum_tolerance_ratio": 4.191357596818077e-06
+          },
+          "zprob_prediction": {
+            "pass": true,
+            "max_absolute": 2.994271497414047e-13,
+            "maximum_tolerance_ratio": 9.76924600394819e-07
+          },
+          "cond_g_random_covariance": {
+            "pass": true,
+            "max_absolute": 5.844907891017215e-13,
+            "maximum_tolerance_ratio": 1.6552048815739432e-07
+          },
+          "cond_g_random_modes": {
+            "pass": true,
+            "max_absolute": 3.1548930135016917e-12,
+            "maximum_tolerance_ratio": 9.159645413103618e-07
+          },
+          "identified_dispersion_beta": {
+            "pass": true,
+            "max_absolute": 1.757005652081034e-11,
+            "maximum_tolerance_ratio": 3.095380704667774e-06
+          },
+          "identified_dispersion_covariance": {
+            "pass": false,
+            "max_absolute": 2.113008378845649e-05,
+            "maximum_tolerance_ratio": 7.303271870300375
+          },
+          "identified_dispersion_wald": {
+            "pass": true,
+            "max_absolute": 3.4142109210655303e-06,
+            "maximum_tolerance_ratio": 0.0341421092106553
+          },
+          "retained_dispersion_predictions": {
+            "pass": true,
+            "max_absolute": 3.283044947011149e-10,
+            "maximum_tolerance_ratio": 3.109031723378699e-05
+          }
+        },
+        "failed_fields": [
+          "identified_dispersion_covariance"
+        ]
+      }
+    },
+    {
+      "id": "tmb_0848",
+      "variant": "tmb_0848_extra_limit_40_retry",
+      "status": "ready for narrowly identified partial Poisson limit certificate",
+      "original_reference_fingerprint": "e0282955cff30255ac0d6a603cdfcf113fe292637299648eaf6e9e932a4cde17",
+      "original_R_density_limit_perturbation": 9.23591751966768e-08,
+      "Python_density_limit_perturbation": 7.640077459569738e-11,
+      "density_limit_bound": 1e-06,
+      "dispersion_quotient_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "collapsed_levels": [
+        "b"
+      ],
+      "retained_levels": [
+        "a",
+        "c"
+      ],
+      "Python_warnings_at_final_audit": [
+        "Component parameters are weakly identified"
+      ],
+      "Python_score_max": 4.549581682115527e-12,
+      "Python_information_eigenvalues": [
+        6.120865950744622e-12,
+        0.41729065789425357,
+        0.5859981829511922,
+        0.9139558144892698,
+        2.066045878860488,
+        4.06400119942326,
+        6.827188064313181,
+        8.793312207995795,
+        33.557212813672855,
+        48.256891739333085,
+        134.7270126068997
+      ],
+      "Python_weak_dispersion_direction_projection": 1.0000000000000002,
+      "Python_weak_dispersion_direction_amplitude": 25.552630418852434,
+      "strict_auxiliary_comparison": {
+        "warnings": [],
+        "R_ll": -220.85157834562315,
+        "Python_minus_R_ll": -4.433786671143025e-12,
+        "R_diagnostics": {
+          "convergence": 0,
+          "message": "stationary-score convergence",
+          "iterations": 1,
+          "objective": 220.85157834562315,
+          "gradient": [
+            4.278525533862876e-09,
+            3.7101023364627395e-09,
+            -1.2531382787006606e-07,
+            3.9211362629076874e-10,
+            -1.227417712455249e-07,
+            1.2290080022778205e-07,
+            6.836208032504065e-07,
+            -2.9108520489817824e-09,
+            -1.0715759750368203e-07,
+            -2.2681919457489402e-07
+          ],
+          "pdHess": true
+        },
+        "R_score_max": 1.6764367671839864e-13,
+        "R_hessian_eigenvalues": [
+          0.4146972651563981,
+          0.5967703192525735,
+          1.235770472021097,
+          2.2686793267003202,
+          3.7988983902041475,
+          5.0287205589054045,
+          8.508114387131297,
+          33.54579063906105,
+          48.224401456155164,
+          134.72416291349717
+        ],
+        "R_aux_density_limit_perturbation": 8.881784197001252e-16,
+        "fields": {
+          "cond_beta": {
+            "pass": true,
+            "max_absolute": 5.768163724440001e-13,
+            "maximum_tolerance_ratio": 1.7886962538288375e-07
+          },
+          "cond_vcov": {
+            "pass": true,
+            "max_absolute": 7.782670868872188e-09,
+            "maximum_tolerance_ratio": 0.017748482126094322
+          },
+          "cond_wald_p": {
+            "pass": true,
+            "max_absolute": 1.458064957660099e-08,
+            "maximum_tolerance_ratio": 0.0001458064957660099
+          },
+          "response_prediction": {
+            "pass": true,
+            "max_absolute": 9.565686065471368e-08,
+            "maximum_tolerance_ratio": 0.09924638703888503
+          },
+          "cond_prediction": {
+            "pass": true,
+            "max_absolute": 9.565686065471368e-08,
+            "maximum_tolerance_ratio": 0.09924638703888503
+          },
+          "zprob_prediction": {
+            "pass": true,
+            "max_absolute": 0.0,
+            "maximum_tolerance_ratio": 0.0
+          },
+          "cond_g_random_covariance": {
+            "pass": true,
+            "max_absolute": 8.571506830701292e-09,
+            "maximum_tolerance_ratio": 0.004764506475236961
+          },
+          "cond_g_random_modes": {
+            "pass": true,
+            "max_absolute": 4.1004679263156874e-08,
+            "maximum_tolerance_ratio": 0.011823038957286501
+          },
+          "identified_dispersion_beta": {
+            "pass": true,
+            "max_absolute": 4.150846333317304e-12,
+            "maximum_tolerance_ratio": 3.433567081352181e-06
+          },
+          "identified_dispersion_covariance": {
+            "pass": true,
+            "max_absolute": 2.058352525091678e-07,
+            "maximum_tolerance_ratio": 0.009781587952982134
+          },
+          "identified_dispersion_wald": {
+            "pass": true,
+            "max_absolute": 3.807087781831919e-08,
+            "maximum_tolerance_ratio": 0.00038070877818319193
+          },
+          "retained_dispersion_predictions": {
+            "pass": true,
+            "max_absolute": 2.8391728825738483e-06,
+            "maximum_tolerance_ratio": 0.5310712199729952
+          }
+        },
+        "failed_fields": []
+      }
+    },
+    {
+      "id": "tmb_0980",
+      "variant": "tmb_0980_extra_limit_40",
+      "status": "ready for whole-model Poisson limit certificate",
+      "original_reference_fingerprint": "f5db71f2422a8114c89d54dcf2502a54904036bded16fa2e0dc5d00d3075bdf9",
+      "original_R_density_limit_perturbation": 8.213996581518668e-08,
+      "Python_density_limit_perturbation": 4.557867971932694e-12,
+      "density_limit_bound": 1e-06,
+      "dispersion_quotient_transform": [],
+      "collapsed_levels": [
+        "a",
+        "b",
+        "c"
+      ],
+      "retained_levels": [],
+      "Python_warnings_at_final_audit": [
+        "Component parameters are weakly identified",
+        "Dispersion is on the Poisson boundary"
+      ],
+      "Python_score_max": 4.059310132588072e-13,
+      "Python_information_eigenvalues": [
+        9.556181152952845e-13,
+        0.8081888398858602,
+        1.9123609375352029,
+        4.317092371240455,
+        6.699132514102218,
+        11.92623793641643,
+        25.31652284053618
+      ],
+      "Python_weak_dispersion_direction_projection": 1.0,
+      "Python_weak_dispersion_direction_amplitude": 29.180361673582016,
+      "strict_auxiliary_comparison": {
+        "warnings": [],
+        "R_ll": -77.7514574686368,
+        "Python_minus_R_ll": -4.121147867408581e-13,
+        "R_diagnostics": {
+          "convergence": 0,
+          "message": "stationary-score convergence",
+          "iterations": 4,
+          "objective": 77.7514574686368,
+          "gradient": [
+            -3.618073907141195e-08,
+            -3.4816974109341814e-08,
+            -2.0439902265190213e-07,
+            4.5132770173927916e-08,
+            -1.2141916860830548e-08,
+            -1.03164448261861e-07
+          ],
+          "pdHess": true
+        },
+        "R_score_max": 6.2727600891321345e-15,
+        "R_hessian_eigenvalues": [
+          0.8081888398852385,
+          1.9123609375345156,
+          4.317092371238907,
+          6.699132514101997,
+          11.926237936416227,
+          25.316522840539086
+        ],
+        "R_aux_density_limit_perturbation": 0.0,
+        "fields": {
+          "cond_beta": {
+            "pass": true,
+            "max_absolute": 1.0513812043200232e-13,
+            "maximum_tolerance_ratio": 1.238841385068018e-08
+          },
+          "cond_vcov": {
+            "pass": true,
+            "max_absolute": 5.142026304749692e-09,
+            "maximum_tolerance_ratio": 0.00022587351102904118
+          },
+          "cond_wald_p": {
+            "pass": true,
+            "max_absolute": 2.3656404612992787e-09,
+            "maximum_tolerance_ratio": 2.3656404612992787e-05
+          },
+          "zi_beta": {
+            "pass": true,
+            "max_absolute": 5.964118088286341e-13,
+            "maximum_tolerance_ratio": 4.394621507277774e-08
+          },
+          "zi_vcov": {
+            "pass": true,
+            "max_absolute": 4.773388240231213e-08,
+            "maximum_tolerance_ratio": 0.00041384250119727323
+          },
+          "zi_wald_p": {
+            "pass": true,
+            "max_absolute": 9.389376776081093e-09,
+            "maximum_tolerance_ratio": 9.389376776081093e-05
+          },
+          "response_prediction": {
+            "pass": true,
+            "max_absolute": 3.7231650207303346e-08,
+            "maximum_tolerance_ratio": 0.0254218461952088
+          },
+          "cond_prediction": {
+            "pass": true,
+            "max_absolute": 5.260816315910688e-08,
+            "maximum_tolerance_ratio": 0.022985134161370643
+          },
+          "zprob_prediction": {
+            "pass": true,
+            "max_absolute": 1.937965399267938e-09,
+            "maximum_tolerance_ratio": 0.009467044675163204
+          },
+          "cond_g_random_covariance": {
+            "pass": true,
+            "max_absolute": 2.1226250535022473e-08,
+            "maximum_tolerance_ratio": 0.0003578572658855517
+          },
+          "cond_g_random_modes": {
+            "pass": true,
+            "max_absolute": 1.043512165566085e-08,
+            "maximum_tolerance_ratio": 0.00014668940880186942
+          }
+        },
+        "failed_fields": []
+      }
+    },
+    {
+      "id": "tmb_0476",
+      "variant": "tmb_0476_extra_limit_40",
+      "status": "all identified auxiliary fields pass; original R density bound exceeds 1e-6",
+      "original_reference_fingerprint": "112c145492ea24f07c626dfc907f7c3b1b5aa708bfac8c9407af9d1ffd24bebc",
+      "original_R_density_limit_perturbation": 6.8137510745858165e-06,
+      "Python_density_limit_perturbation": 1.3037027013496072e-10,
+      "density_limit_bound": 1e-06,
+      "dispersion_quotient_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "collapsed_levels": [
+        "c"
+      ],
+      "retained_levels": [
+        "a",
+        "b"
+      ],
+      "Python_warnings_at_final_audit": [
+        "Component parameters are weakly identified"
+      ],
+      "Python_score_max": 9.215497809300643e-11,
+      "Python_information_eigenvalues": [
+        9.216765666730235e-11,
+        0.01615949248446985,
+        0.4309530793569124,
+        3.3579449905032206,
+        6.316858858976623,
+        11.107361637741393,
+        13.254204646227974,
+        21.92873304646638,
+        41.48455979174704,
+        123.12837051780572
+      ],
+      "Python_weak_dispersion_direction_projection": 1.0,
+      "Python_weak_dispersion_direction_amplitude": 23.102414218830067,
+      "strict_auxiliary_comparison": {
+        "warnings": [],
+        "R_ll": -188.55702694593475,
+        "Python_minus_R_ll": -1.1499423635541461e-10,
+        "R_diagnostics": {
+          "convergence": 0,
+          "message": "stationary-score convergence",
+          "iterations": 17,
+          "objective": 188.55702694593475,
+          "gradient": [
+            7.771561172376096e-15,
+            -4.297950884080137e-14,
+            -2.3869795029440866e-14,
+            5.345723863570129e-14,
+            2.2315482794965646e-14,
+            -1.3558262151880385e-11,
+            -2.2317502013091683e-11,
+            4.931047800985078e-11,
+            -2.6645352591003757e-15
+          ],
+          "pdHess": true
+        },
+        "R_score_max": 4.931047800985078e-11,
+        "R_hessian_eigenvalues": [
+          0.014166318069306502,
+          0.7440893720546982,
+          2.2753129318212255,
+          6.161349280570602,
+          11.108169213825159,
+          13.259010493000181,
+          21.93657988946282,
+          41.43727646073779,
+          123.12387945466284
+        ],
+        "R_aux_density_limit_perturbation": 0.0,
+        "fields": {
+          "cond_beta": {
+            "pass": true,
+            "max_absolute": 6.554934373070864e-11,
+            "maximum_tolerance_ratio": 2.068221476551496e-05
+          },
+          "cond_vcov": {
+            "pass": true,
+            "max_absolute": 2.189994872947576e-09,
+            "maximum_tolerance_ratio": 0.0015987795959464081
+          },
+          "cond_wald_p": {
+            "pass": true,
+            "max_absolute": 8.869711298764571e-09,
+            "maximum_tolerance_ratio": 8.869711298764571e-05
+          },
+          "zi_beta": {
+            "pass": true,
+            "max_absolute": 1.570410468332284e-11,
+            "maximum_tolerance_ratio": 1.072315539888168e-06
+          },
+          "zi_vcov": {
+            "pass": true,
+            "max_absolute": 6.166420152275975e-11,
+            "maximum_tolerance_ratio": 3.8049228563513557e-06
+          },
+          "zi_wald_p": {
+            "pass": true,
+            "max_absolute": 7.801391910949862e-13,
+            "maximum_tolerance_ratio": 7.801391910949862e-09
+          },
+          "response_prediction": {
+            "pass": true,
+            "max_absolute": 7.490097431173126e-10,
+            "maximum_tolerance_ratio": 0.00013921879565906945
+          },
+          "cond_prediction": {
+            "pass": true,
+            "max_absolute": 9.510383591759819e-10,
+            "maximum_tolerance_ratio": 0.00013626984016118862
+          },
+          "zprob_prediction": {
+            "pass": true,
+            "max_absolute": 2.395167397750697e-12,
+            "maximum_tolerance_ratio": 1.2755149742373654e-05
+          },
+          "cond_g_random_covariance": {
+            "pass": true,
+            "max_absolute": 3.174149831863815e-11,
+            "maximum_tolerance_ratio": 6.148959555655114e-07
+          },
+          "cond_g_random_modes": {
+            "pass": true,
+            "max_absolute": 8.987349753297735e-11,
+            "maximum_tolerance_ratio": 4.3309099420528415e-06
+          },
+          "identified_dispersion_beta": {
+            "pass": true,
+            "max_absolute": 5.049890283714831e-09,
+            "maximum_tolerance_ratio": 0.00011836604688613737
+          },
+          "identified_dispersion_covariance": {
+            "pass": true,
+            "max_absolute": 1.0280513819793669e-05,
+            "maximum_tolerance_ratio": 0.003038555133755473
+          },
+          "identified_dispersion_wald": {
+            "pass": true,
+            "max_absolute": 7.328686535412743e-08,
+            "maximum_tolerance_ratio": 0.0007328686535412743
+          },
+          "retained_dispersion_predictions": {
+            "pass": true,
+            "max_absolute": 0.00010020427362178452,
+            "maximum_tolerance_ratio": 0.009759087764758664
+          }
+        },
+        "failed_fields": []
+      }
+    },
+    {
+      "id": "tmb_1178",
+      "variant": "tmb_1178_extra_limit_40",
+      "status": "ready as independently confirmed better boundary optimum",
+      "original_reference_fingerprint": "0e8d22351a39da4ff58f17b1324abeae001063ecd42f3529652a98deb37fcbde",
+      "original_R_density_limit_perturbation": 1.1094156149304979e-10,
+      "Python_density_limit_perturbation": 1.3979595259172584e-11,
+      "density_limit_bound": 1e-06,
+      "dispersion_quotient_transform": [
+        [
+          1.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "collapsed_levels": [
+        "a"
+      ],
+      "retained_levels": [
+        "b",
+        "c"
+      ],
+      "Python_warnings_at_final_audit": [
+        "Component parameters are weakly identified"
+      ],
+      "Python_score_max": 3.9110936711495015e-12,
+      "Python_information_eigenvalues": [
+        7.26811913880573e-13,
+        0.004455052832439859,
+        0.29426404742892237,
+        1.0726761718499382,
+        1.2689789984884188,
+        2.3810946621581217,
+        3.3972996179990447,
+        4.292002999032435,
+        5.942092769963138,
+        10.831982192635438,
+        12.736564449650407,
+        35.2384349121277
+      ],
+      "Python_weak_dispersion_direction_projection": 1.0,
+      "Python_weak_dispersion_direction_amplitude": 48.86523182224489,
+      "strict_auxiliary_comparison": {
+        "warnings": [],
+        "R_ll": -100.63036752837286,
+        "Python_minus_R_ll": -3.467448550509289e-12,
+        "R_diagnostics": {
+          "convergence": 0,
+          "message": "stationary-score convergence",
+          "iterations": 26,
+          "objective": 100.63036752837286,
+          "gradient": [
+            -2.6217694681918147e-10,
+            1.1617334871871776e-10,
+            1.2761514067705093e-11,
+            1.4040034412854396e-10,
+            1.6937925020887867e-11,
+            1.366226194676745e-10,
+            -4.677216773607551e-11,
+            -6.465904200947392e-12,
+            2.699691581398156e-10,
+            7.879716323877517e-11,
+            -3.5048323965281014e-10
+          ],
+          "pdHess": true
+        },
+        "R_score_max": 3.5048323965281014e-10,
+        "R_hessian_eigenvalues": [
+          0.004448570799957988,
+          0.19272338101254047,
+          1.0595443174088677,
+          1.2634117764639958,
+          2.0178748929151205,
+          2.6026215344854347,
+          3.5741373515498434,
+          5.7029043044835515,
+          10.821515477175623,
+          12.73475652777539,
+          35.23776969235994
+        ],
+        "R_aux_density_limit_perturbation": 2.220446049250313e-16,
+        "fields": {
+          "cond_beta": {
+            "pass": true,
+            "max_absolute": 3.4040492646880693e-11,
+            "maximum_tolerance_ratio": 0.0006292427650984076
+          },
+          "cond_vcov": {
+            "pass": true,
+            "max_absolute": 7.806466001403223e-09,
+            "maximum_tolerance_ratio": 0.005280848925625547
+          },
+          "cond_wald_p": {
+            "pass": true,
+            "max_absolute": 6.5996860754147235e-09,
+            "maximum_tolerance_ratio": 6.599686075414724e-05
+          },
+          "zi_beta": {
+            "pass": true,
+            "max_absolute": 3.0998092981349146e-09,
+            "maximum_tolerance_ratio": 7.158683616834718e-05
+          },
+          "zi_vcov": {
+            "pass": true,
+            "max_absolute": 6.771685463036192e-06,
+            "maximum_tolerance_ratio": 0.00030211000592412016
+          },
+          "zi_wald_p": {
+            "pass": true,
+            "max_absolute": 3.184645325227109e-09,
+            "maximum_tolerance_ratio": 3.184645325227109e-05
+          },
+          "response_prediction": {
+            "pass": true,
+            "max_absolute": 1.9708723542066764e-10,
+            "maximum_tolerance_ratio": 0.000210075936327616
+          },
+          "cond_prediction": {
+            "pass": true,
+            "max_absolute": 3.269224890800615e-10,
+            "maximum_tolerance_ratio": 0.00016979507708556128
+          },
+          "zprob_prediction": {
+            "pass": true,
+            "max_absolute": 3.975746815099157e-11,
+            "maximum_tolerance_ratio": 0.003059293111267103
+          },
+          "cond_g_random_covariance": {
+            "pass": true,
+            "max_absolute": 5.311083170478348e-11,
+            "maximum_tolerance_ratio": 2.242364748028116e-05
+          },
+          "cond_g_random_modes": {
+            "pass": true,
+            "max_absolute": 1.1021814017020404e-10,
+            "maximum_tolerance_ratio": 1.6322568415634325e-05
+          },
+          "identified_dispersion_beta": {
+            "pass": true,
+            "max_absolute": 1.51148926708089e-10,
+            "maximum_tolerance_ratio": 3.911067216341407e-05
+          },
+          "identified_dispersion_covariance": {
+            "pass": true,
+            "max_absolute": 9.60684995661154e-05,
+            "maximum_tolerance_ratio": 0.5962664035891031
+          },
+          "identified_dispersion_wald": {
+            "pass": true,
+            "max_absolute": 8.896230900723445e-06,
+            "maximum_tolerance_ratio": 0.08896230900723445
+          },
+          "retained_dispersion_predictions": {
+            "pass": true,
+            "max_absolute": 4.2035033231968555e-09,
+            "maximum_tolerance_ratio": 0.00015225876351084678
+          }
+        },
+        "failed_fields": []
+      }
+    }
+  ],
+  "analytic_density_and_curvature_bounds": {
+    "derivation": "Integer-count gamma recurrence, log1p inequalities and an absolutely convergent log-density series. No target implementation is used.",
+    "density_bound": "sum weights * (abs((y-mu)^2-y)/(2*size) + y*(mu/size)^2/2 + mu*(mu/size)^2/[3*(1-mu/size)] + sum_j (j/size)^2/2)",
+    "curvature_bound": "sum weights * (abs((y-mu)^2-y)/(2*size) + sum_j r_j^2*(2-r_j)/(1-r_j)^2 + (y+mu)*r_mu^2*(2-r_mu)/(1-r_mu)^2)",
+    "mixture_extension": "An unchanged zero-mixture log density is 1-Lipschitz in the conditional log density, so this bound remains valid for ZI densities.",
+    "curvature_scope": "This is a conditional observation log-dispersion curvature bound. Laplace profile information must still be checked numerically on the actual outer information.",
+    "rows": [
+      {
+        "id": "tmb_0037",
+        "bounds": {
+          "Python": {
+            "weighted_absolute_log_density_difference_upper_bound": 3.839013613356382e-12,
+            "loose_triangle_density_bound": 1.6318449047279487e-11,
+            "loose_triangle_curvature_bound": 2.1502814364625656e-11,
+            "weighted_absolute_log_dispersion_curvature_upper_bound": 3.8390136133970785e-12,
+            "both_bounds_below_1e-6": true,
+            "maximum_mean_to_size_ratio": 1.7919796923993896e-12,
+            "maximum_count_to_size_ratio": 1.0306993005277506e-12
+          },
+          "Roriginal": {
+            "weighted_absolute_log_density_difference_upper_bound": 8.48558957981788e-08,
+            "loose_triangle_density_bound": 3.6069589114647123e-07,
+            "loose_triangle_curvature_bound": 4.7528886098016483e-07,
+            "weighted_absolute_log_dispersion_curvature_upper_bound": 8.485591568161023e-08,
+            "both_bounds_below_1e-6": true,
+            "maximum_mean_to_size_ratio": 3.9609132498638314e-08,
+            "maximum_count_to_size_ratio": 2.2782129066167504e-08
+          },
+          "Rauxiliary": {
+            "weighted_absolute_log_density_difference_upper_bound": 1.4083121092980875e-08,
+            "loose_triangle_density_bound": 6.448857008404174e-08,
+            "loose_triangle_curvature_bound": 7.994722212967035e-08,
+            "weighted_absolute_log_dispersion_curvature_upper_bound": 1.4083121378139046e-08,
+            "both_bounds_below_1e-6": true,
+            "maximum_mean_to_size_ratio": 2.061153622438558e-09,
+            "maximum_count_to_size_ratio": 4.365631241564493e-09
+          }
+        }
+      },
+      {
+        "id": "tmb_0254",
+        "bounds": {
+          "Python": {
+            "weighted_absolute_log_density_difference_upper_bound": 5.549479884602342e-11,
+            "loose_triangle_density_bound": 1.088222947398779e-09,
+            "loose_triangle_curvature_bound": 1.3386020378738866e-09,
+            "weighted_absolute_log_dispersion_curvature_upper_bound": 5.5494798855555775e-11,
+            "both_bounds_below_1e-6": true,
+            "maximum_mean_to_size_ratio": 7.049612830792123e-12,
+            "maximum_count_to_size_ratio": 7.80085525772241e-12
+          },
+          "Roriginal": {
+            "weighted_absolute_log_density_difference_upper_bound": 5.2253182990817965e-06,
+            "loose_triangle_density_bound": 8.384171376153188e-05,
+            "loose_triangle_curvature_bound": 0.00010456827332938166,
+            "weighted_absolute_log_dispersion_curvature_upper_bound": 5.225376206148484e-06,
+            "both_bounds_below_1e-6": false,
+            "maximum_mean_to_size_ratio": 1.0380164575809114e-06,
+            "maximum_count_to_size_ratio": 5.231306589677872e-07
+          },
+          "Rauxiliary": {
+            "weighted_absolute_log_density_difference_upper_bound": 5.8695429231475615e-16,
+            "loose_triangle_density_bound": 7.939521367167771e-15,
+            "loose_triangle_curvature_bound": 9.84621196020649e-15,
+            "weighted_absolute_log_dispersion_curvature_upper_bound": 5.869542923147563e-16,
+            "both_bounds_below_1e-6": true,
+            "maximum_mean_to_size_ratio": 3.01820128432829e-17,
+            "maximum_count_to_size_ratio": 2.9738479787041125e-17
+          }
+        }
+      },
+      {
+        "id": "tmb_0746",
+        "bounds": {
+          "Python": {
+            "weighted_absolute_log_density_difference_upper_bound": 2.375377232025466e-10,
+            "loose_triangle_density_bound": 1.4435495025026543e-09,
+            "loose_triangle_curvature_bound": 1.8935829767261176e-09,
+            "weighted_absolute_log_dispersion_curvature_upper_bound": 2.3753772322938887e-10,
+            "both_bounds_below_1e-6": true,
+            "maximum_mean_to_size_ratio": 1.636590796899225e-11,
+            "maximum_count_to_size_ratio": 1.7275167905750637e-11
+          },
+          "Roriginal": {
+            "weighted_absolute_log_density_difference_upper_bound": 4.187226287336901e-07,
+            "loose_triangle_density_bound": 2.5446347567136727e-06,
+            "loose_triangle_curvature_bound": 3.337936954318613e-06,
+            "weighted_absolute_log_dispersion_curvature_upper_bound": 4.187227121413139e-07,
+            "both_bounds_below_1e-6": true,
+            "maximum_mean_to_size_ratio": 2.8849191148920367e-08,
+            "maximum_count_to_size_ratio": 3.0451999319368945e-08
+          },
+          "Rauxiliary": {
+            "weighted_absolute_log_density_difference_upper_bound": 4.712268085217178e-16,
+            "loose_triangle_density_bound": 2.6679756241227e-15,
+            "loose_triangle_curvature_bound": 3.5051100650556268e-15,
+            "weighted_absolute_log_dispersion_curvature_upper_bound": 4.712268085217178e-16,
+            "both_bounds_below_1e-6": true,
+            "maximum_mean_to_size_ratio": 2.0123733425147178e-17,
+            "maximum_count_to_size_ratio": 2.5490125531749533e-17
+          }
+        }
+      },
+      {
+        "id": "tmb_0848",
+        "bounds": {
+          "Python": {
+            "weighted_absolute_log_density_difference_upper_bound": 7.640188177919606e-11,
+            "loose_triangle_density_bound": 1.0125331650424676e-09,
+            "loose_triangle_curvature_bound": 1.2504195461112862e-09,
+            "weighted_absolute_log_dispersion_curvature_upper_bound": 7.640188179214691e-11,
+            "both_bounds_below_1e-6": true,
+            "maximum_mean_to_size_ratio": 9.107817331749606e-12,
+            "maximum_count_to_size_ratio": 1.2615212950674554e-11
+          },
+          "Roriginal": {
+            "weighted_absolute_log_density_difference_upper_bound": 9.235918320523681e-08,
+            "loose_triangle_density_bound": 1.224010677635492e-06,
+            "loose_triangle_curvature_bound": 1.5115819966887968e-06,
+            "weighted_absolute_log_dispersion_curvature_upper_bound": 9.235920213090347e-08,
+            "both_bounds_below_1e-6": true,
+            "maximum_mean_to_size_ratio": 1.1010073269386192e-08,
+            "maximum_count_to_size_ratio": 1.525002195605455e-08
+          },
+          "Rauxiliary": {
+            "weighted_absolute_log_density_difference_upper_bound": 1.792792408172623e-16,
+            "loose_triangle_density_bound": 2.2198093309066735e-15,
+            "loose_triangle_curvature_bound": 2.7442327934760658e-15,
+            "weighted_absolute_log_dispersion_curvature_upper_bound": 1.7927924081726235e-16,
+            "both_bounds_below_1e-6": true,
+            "maximum_mean_to_size_ratio": 1.8723761572325216e-17,
+            "maximum_count_to_size_ratio": 2.5490125531749533e-17
+          }
+        }
+      },
+      {
+        "id": "tmb_0980",
+        "bounds": {
+          "Python": {
+            "weighted_absolute_log_density_difference_upper_bound": 4.5587429275845045e-12,
+            "loose_triangle_density_bound": 1.9165666203106528e-11,
+            "loose_triangle_curvature_bound": 2.4349742262214178e-11,
+            "weighted_absolute_log_dispersion_curvature_upper_bound": 4.558742927595211e-12,
+            "both_bounds_below_1e-6": true,
+            "maximum_mean_to_size_ratio": 5.049328135176602e-13,
+            "maximum_count_to_size_ratio": 6.371639558649587e-13
+          },
+          "Roriginal": {
+            "weighted_absolute_log_density_difference_upper_bound": 8.213996838600151e-08,
+            "loose_triangle_density_bound": 3.4532923293834697e-07,
+            "loose_triangle_curvature_bound": 4.3873653070504575e-07,
+            "weighted_absolute_log_dispersion_curvature_upper_bound": 8.213997186137048e-08,
+            "both_bounds_below_1e-6": true,
+            "maximum_mean_to_size_ratio": 9.097938953555245e-09,
+            "maximum_count_to_size_ratio": 1.1480495296717765e-08
+          },
+          "Rauxiliary": {
+            "weighted_absolute_log_density_difference_upper_bound": 0.0,
+            "loose_triangle_density_bound": 0.0,
+            "loose_triangle_curvature_bound": 0.0,
+            "weighted_absolute_log_dispersion_curvature_upper_bound": 0.0,
+            "both_bounds_below_1e-6": true,
+            "maximum_mean_to_size_ratio": 0.0,
+            "maximum_count_to_size_ratio": 0.0
+          }
+        }
+      },
+      {
+        "id": "tmb_0476",
+        "bounds": {
+          "Python": {
+            "weighted_absolute_log_density_difference_upper_bound": 1.303700571589013e-10,
+            "loose_triangle_density_bound": 4.185947484969531e-09,
+            "loose_triangle_curvature_bound": 5.18121896582566e-09,
+            "weighted_absolute_log_dispersion_curvature_upper_bound": 1.3037005801573567e-10,
+            "both_bounds_below_1e-6": true,
+            "maximum_mean_to_size_ratio": 1.5147607964724416e-10,
+            "maximum_count_to_size_ratio": 1.7576801460764908e-10
+          },
+          "Roriginal": {
+            "weighted_absolute_log_density_difference_upper_bound": 6.814412831247917e-06,
+            "loose_triangle_density_bound": 0.0002187794004851807,
+            "loose_triangle_curvature_bound": 0.0002708010679654642,
+            "weighted_absolute_log_dispersion_curvature_upper_bound": 6.816753365907081e-06,
+            "both_bounds_below_1e-6": false,
+            "maximum_mean_to_size_ratio": 7.916236433795585e-06,
+            "maximum_count_to_size_ratio": 9.185752539353955e-06
+          },
+          "Rauxiliary": {
+            "weighted_absolute_log_density_difference_upper_bound": 1.947909228791427e-16,
+            "loose_triangle_density_bound": 2.1842582543390797e-15,
+            "loose_triangle_curvature_bound": 2.82541042088661e-15,
+            "weighted_absolute_log_dispersion_curvature_upper_bound": 1.947909228791429e-16,
+            "both_bounds_below_1e-6": true,
+            "maximum_mean_to_size_ratio": 5.3660427341354195e-17,
+            "maximum_count_to_size_ratio": 4.673189680820748e-17
+          }
+        }
+      },
+      {
+        "id": "tmb_1178",
+        "bounds": {
+          "Python": {
+            "weighted_absolute_log_density_difference_upper_bound": 1.3979233894490601e-11,
+            "loose_triangle_density_bound": 6.297452723270448e-11,
+            "loose_triangle_curvature_bound": 7.413158921956642e-11,
+            "weighted_absolute_log_dispersion_curvature_upper_bound": 1.3979233895014846e-11,
+            "both_bounds_below_1e-6": true,
+            "maximum_mean_to_size_ratio": 7.172473278661247e-12,
+            "maximum_count_to_size_ratio": 6.3591696790370785e-12
+          },
+          "Roriginal": {
+            "weighted_absolute_log_density_difference_upper_bound": 1.1094024782781237e-10,
+            "loose_triangle_density_bound": 4.990969962128718e-10,
+            "loose_triangle_curvature_bound": 5.872039702764296e-10,
+            "weighted_absolute_log_dispersion_curvature_upper_bound": 1.1094024786076888e-10,
+            "both_bounds_below_1e-6": true,
+            "maximum_mean_to_size_ratio": 5.6902428037164473e-11,
+            "maximum_count_to_size_ratio": 5.046265359426927e-11
+          },
+          "Rauxiliary": {
+            "weighted_absolute_log_density_difference_upper_bound": 6.149491849750793e-17,
+            "loose_triangle_density_bound": 3.0568348294735487e-16,
+            "loose_triangle_curvature_bound": 3.6904913561801297e-16,
+            "weighted_absolute_log_dispersion_curvature_upper_bound": 6.149491849750793e-17,
+            "both_bounds_below_1e-6": true,
+            "maximum_mean_to_size_ratio": 9.060375700431402e-18,
+            "maximum_count_to_size_ratio": 1.2745062765874767e-17
+          }
+        }
+      }
+    ]
+  }
+}

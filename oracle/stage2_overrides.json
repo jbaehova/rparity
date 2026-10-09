@@ -1,4 +1,29 @@
 {
+  "gam_0003": {
+    "reason": "Repeated documented public smoothing starts or controls improve independently measured R smoothing or inner score residuals; every strict numerical field passes.",
+    "args": {
+      "method": "REML",
+      "in.out": {
+        "sp": [
+          14342288203.246252
+        ],
+        "scale": 0.552042529871079
+      },
+      "optimizer": [
+        "outer",
+        "bfgs"
+      ]
+    },
+    "gam_control": {
+      "epsilon": 1e-14,
+      "maxit": 1000,
+      "mgcv.tol": 1e-12,
+      "newton": {
+        "conv.tol": 1e-12
+      }
+    },
+    "optimizer_diagnostics": true
+  },
   "gam_0016": {
     "args": {
       "method": "REML",
@@ -21,6 +46,83 @@
         "conv.tol": 1e-10
       }
     }
+  },
+  "gam_0048": {
+    "args": {
+      "method": "ML",
+      "in.out": {
+        "sp": [
+          25507366026.46287,
+          0.3620551241983696,
+          64757112209.30618
+        ],
+        "scale": 0.835527299746217
+      },
+      "optimizer": [
+        "outer",
+        "bfgs"
+      ]
+    },
+    "reason": "Repeated independently optimized public BFGS references, with improved smoothing stationarity and every strict numeric field passing.",
+    "gam_control": {
+      "epsilon": 1e-14,
+      "maxit": 2000,
+      "mgcv.tol": 1e-14,
+      "rank.tol": 1e-15,
+      "newton": {
+        "conv.tol": 1e-13,
+        "maxHalf": 60
+      }
+    }
+  },
+  "gam_0068": {
+    "args": {
+      "method": "ML",
+      "in.out": {
+        "sp": [
+          12464334516.044882,
+          0.06447659549285632,
+          0.2380337141428963
+        ],
+        "scale": 1.0
+      },
+      "optimizer": [
+        "outer",
+        "bfgs"
+      ]
+    },
+    "reason": "Repeated independently optimized public BFGS references, with improved smoothing stationarity and every strict numeric field passing.",
+    "gam_control": {
+      "epsilon": 1e-14,
+      "maxit": 2000,
+      "mgcv.tol": 1e-14,
+      "rank.tol": 1e-15,
+      "newton": {
+        "conv.tol": 1e-13,
+        "maxHalf": 60
+      }
+    }
+  },
+  "gam_0092": {
+    "reason": "Repeated documented public smoothing starts or controls improve independently measured R smoothing or inner score residuals; every strict numerical field passes.",
+    "args": {
+      "method": "GCV.Cp",
+      "in.out": {
+        "sp": [
+          184.56321647088922
+        ],
+        "scale": 1.0
+      }
+    },
+    "gam_control": {
+      "epsilon": 1e-14,
+      "maxit": 1000,
+      "mgcv.tol": 1e-12,
+      "newton": {
+        "conv.tol": 1e-12
+      }
+    },
+    "optimizer_diagnostics": true
   },
   "gam_0093": {
     "args": {
@@ -68,6 +170,28 @@
         "conv.tol": 1e-10
       }
     }
+  },
+  "gam_0129": {
+    "reason": "Repeated documented public smoothing starts or controls improve independently measured R smoothing or inner score residuals; every strict numerical field passes.",
+    "args": {
+      "method": "REML",
+      "in.out": {
+        "sp": [
+          36.13087160336081,
+          72004899337.38577
+        ],
+        "scale": 0.33666926333925595
+      }
+    },
+    "gam_control": {
+      "epsilon": 1e-14,
+      "maxit": 1000,
+      "mgcv.tol": 1e-12,
+      "newton": {
+        "conv.tol": 1e-12
+      }
+    },
+    "optimizer_diagnostics": true
   },
   "gam_0143": {
     "args": {
@@ -176,6 +300,71 @@
       }
     }
   },
+  "gam_0258": {
+    "reason": "Repeated documented public smoothing starts or controls improve independently measured R smoothing or inner score residuals; every strict numerical field passes.",
+    "args": {
+      "method": "REML",
+      "in.out": {
+        "sp": [
+          1738.1094081450274,
+          21.88537830752312,
+          6293.606912057149
+        ],
+        "scale": 1.0
+      }
+    },
+    "gam_control": {
+      "epsilon": 1e-14,
+      "maxit": 1000,
+      "mgcv.tol": 1e-12,
+      "newton": {
+        "conv.tol": 1e-12
+      }
+    },
+    "optimizer_diagnostics": true
+  },
+  "gam_0312": {
+    "reason": "Repeated documented public smoothing starts or controls improve independently measured R smoothing or inner score residuals; every strict numerical field passes.",
+    "args": {
+      "method": "ML"
+    },
+    "gam_control": {
+      "epsilon": 1e-14,
+      "maxit": 1000,
+      "mgcv.tol": 1e-12,
+      "newton": {
+        "conv.tol": 1e-12
+      }
+    },
+    "optimizer_diagnostics": true
+  },
+  "gam_0318": {
+    "reason": "Independent repeated public R reference improves smoothing or inner score precision; all identified numeric fields pass. Only optimizer event metadata requires an individually guarded exception.",
+    "args": {
+      "method": "ML",
+      "in.out": {
+        "sp": [
+          101.44146461527671,
+          147.75873757267263,
+          72004899337.38577
+        ],
+        "scale": 0.3158680449944808
+      },
+      "optimizer": [
+        "outer",
+        "bfgs"
+      ]
+    },
+    "gam_control": {
+      "epsilon": 1e-14,
+      "maxit": 100,
+      "mgcv.tol": 1e-12,
+      "newton": {
+        "conv.tol": 1e-12
+      }
+    },
+    "optimizer_diagnostics": true
+  },
   "gam_0338": {
     "args": {
       "method": "GCV.Cp",
@@ -197,6 +386,52 @@
         "conv.tol": 1e-10
       }
     }
+  },
+  "gam_0350": {
+    "reason": "Repeated documented public smoothing starts or controls improve independently measured R smoothing or inner score residuals; every strict numerical field passes.",
+    "args": {
+      "method": "GCV.Cp",
+      "in.out": {
+        "sp": [
+          23.558247509629258
+        ],
+        "scale": 0.294510488622369
+      }
+    },
+    "gam_control": {
+      "epsilon": 1e-14,
+      "maxit": 1000,
+      "mgcv.tol": 1e-12,
+      "newton": {
+        "conv.tol": 1e-12
+      }
+    },
+    "optimizer_diagnostics": true
+  },
+  "gam_0356": {
+    "args": {
+      "method": "GCV.Cp",
+      "in.out": {
+        "sp": [
+          3.1431832718358947,
+          72004899337.38586,
+          0.10065862765317721,
+          3.0929785847445395
+        ],
+        "scale": 0.32326410551211027
+      }
+    },
+    "reason": "Independent public R reoptimization confirms the lower minimum. Native-support penalty roots retain structural zeros; indexed limit guards bound only collapsed positive directions.",
+    "gam_control": {
+      "epsilon": 1e-14,
+      "maxit": 2000,
+      "mgcv.tol": 1e-12,
+      "newton": {
+        "conv.tol": 1e-12,
+        "maxHalf": 60
+      }
+    },
+    "optimizer_diagnostics": true
   },
   "gam_0368": {
     "args": {
@@ -242,6 +477,51 @@
       }
     }
   },
+  "gam_0458": {
+    "args": {
+      "method": "GCV.Cp",
+      "in.out": {
+        "sp": [
+          114144866.37270679,
+          117513322.4912156,
+          3.81576164186037e-05
+        ],
+        "scale": 1.0
+      }
+    },
+    "reason": "Independent public R reoptimization confirms the lower minimum. Native-support penalty roots retain structural zeros; indexed limit guards bound only collapsed positive directions.",
+    "gam_control": {
+      "epsilon": 1e-14,
+      "maxit": 2000,
+      "mgcv.tol": 1e-12,
+      "newton": {
+        "conv.tol": 1e-12,
+        "maxHalf": 60
+      }
+    },
+    "optimizer_diagnostics": true
+  },
+  "gam_0460": {
+    "reason": "Repeated documented public smoothing starts or controls improve independently measured R smoothing or inner score residuals; every strict numerical field passes.",
+    "args": {
+      "method": "GCV.Cp",
+      "in.out": {
+        "sp": [
+          0.04918784685093296
+        ],
+        "scale": 1.0
+      }
+    },
+    "gam_control": {
+      "epsilon": 1e-14,
+      "maxit": 1000,
+      "mgcv.tol": 1e-12,
+      "newton": {
+        "conv.tol": 1e-12
+      }
+    },
+    "optimizer_diagnostics": true
+  },
   "gam_0560": {
     "args": {
       "method": "GCV.Cp"
@@ -258,6 +538,41 @@
     "gam_initial_sp": [
       0.04623495529500063
     ]
+  },
+  "gam_0568": {
+    "reason": "Repeated documented public smoothing starts or controls improve independently measured R smoothing or inner score residuals; every strict numerical field passes.",
+    "args": {
+      "method": "GCV.Cp"
+    },
+    "gam_control": {
+      "epsilon": 1e-14,
+      "maxit": 1000,
+      "mgcv.tol": 1e-12,
+      "newton": {
+        "conv.tol": 1e-12
+      }
+    },
+    "gam_initial_sp": [
+      0.06048302633229306,
+      0.04214869953227099,
+      0.11661079338273106
+    ],
+    "optimizer_diagnostics": true
+  },
+  "gam_0616": {
+    "reason": "Independent repeated public R reference improves smoothing or inner score precision; all identified numeric fields pass. Only optimizer event metadata requires an individually guarded exception.",
+    "args": {
+      "method": "REML"
+    },
+    "gam_control": {
+      "epsilon": 1e-14,
+      "maxit": 100,
+      "mgcv.tol": 1e-12,
+      "newton": {
+        "conv.tol": 1e-12
+      }
+    },
+    "optimizer_diagnostics": true
   },
   "gam_0646": {
     "args": {
@@ -344,6 +659,140 @@
       }
     }
   },
+  "gam_0758": {
+    "reason": "Independent repeated public R reference improves smoothing or inner score precision; all identified numeric fields pass. Only optimizer event metadata requires an individually guarded exception.",
+    "args": {
+      "method": "REML",
+      "in.out": {
+        "sp": [
+          996.4037727713318,
+          217.3188050290128,
+          72004899337.38596
+        ],
+        "scale": 0.1559809972696301
+      },
+      "optimizer": [
+        "outer",
+        "bfgs"
+      ]
+    },
+    "gam_control": {
+      "epsilon": 1e-14,
+      "maxit": 100,
+      "mgcv.tol": 1e-12,
+      "newton": {
+        "conv.tol": 1e-12
+      }
+    },
+    "optimizer_diagnostics": true
+  },
+  "gam_0766": {
+    "reason": "Repeated documented public smoothing starts or controls improve independently measured R smoothing or inner score residuals; every strict numerical field passes.",
+    "args": {
+      "method": "ML",
+      "in.out": {
+        "sp": [
+          15.300108098303058,
+          138.11554834276444,
+          72004899337.38596,
+          72004899337.38596
+        ],
+        "scale": 0.5753276886017983
+      }
+    },
+    "gam_control": {
+      "epsilon": 1e-14,
+      "maxit": 1000,
+      "mgcv.tol": 1e-12,
+      "newton": {
+        "conv.tol": 1e-12
+      }
+    },
+    "optimizer_diagnostics": true
+  },
+  "gam_0768": {
+    "reason": "Repeated documented public smoothing starts or controls improve independently measured R smoothing or inner score residuals; every strict numerical field passes.",
+    "args": {
+      "method": "ML",
+      "in.out": {
+        "sp": [
+          23.57163945141886,
+          12.514840562849987,
+          22.252052980845384
+        ],
+        "scale": 0.21813062593953872
+      }
+    },
+    "gam_control": {
+      "epsilon": 1e-14,
+      "maxit": 1000,
+      "mgcv.tol": 1e-12,
+      "newton": {
+        "conv.tol": 1e-12
+      }
+    },
+    "optimizer_diagnostics": true
+  },
+  "gam_0778": {
+    "reason": "Independent repeated public R reference improves smoothing or inner score precision; all identified numeric fields pass. Only optimizer event metadata requires an individually guarded exception.",
+    "args": {
+      "method": "ML",
+      "in.out": {
+        "sp": [
+          72004899337.38586,
+          9.672130830837384,
+          72004899337.3859
+        ],
+        "scale": 1.0
+      },
+      "optimizer": [
+        "outer",
+        "bfgs"
+      ]
+    },
+    "gam_control": {
+      "epsilon": 1e-14,
+      "maxit": 100,
+      "mgcv.tol": 1e-12,
+      "newton": {
+        "conv.tol": 1e-12
+      }
+    },
+    "optimizer_diagnostics": true
+  },
+  "gam_0787": {
+    "reason": "Repeated documented public smoothing starts or controls improve independently measured R smoothing or inner score residuals; every strict numerical field passes.",
+    "args": {
+      "method": "ML"
+    },
+    "gam_control": {
+      "epsilon": 1e-14,
+      "maxit": 1000,
+      "mgcv.tol": 1e-12,
+      "newton": {
+        "conv.tol": 1e-12
+      }
+    },
+    "optimizer_diagnostics": true
+  },
+  "gam_0802": {
+    "reason": "Repeated documented public smoothing starts or controls improve independently measured R smoothing or inner score residuals; every strict numerical field passes.",
+    "args": {
+      "method": "GCV.Cp"
+    },
+    "gam_control": {
+      "epsilon": 1e-14,
+      "maxit": 1000,
+      "mgcv.tol": 1e-12,
+      "newton": {
+        "conv.tol": 1e-12
+      }
+    },
+    "gam_initial_sp": [
+      54.81306661418931
+    ],
+    "optimizer_diagnostics": true
+  },
   "gam_0837": {
     "args": {
       "method": "GCV.Cp",
@@ -363,6 +812,45 @@
         "conv.tol": 1e-10
       }
     }
+  },
+  "gam_0876": {
+    "reason": "Repeated documented public smoothing starts or controls improve independently measured R smoothing or inner score residuals; every strict numerical field passes.",
+    "args": {
+      "method": "REML"
+    },
+    "gam_control": {
+      "epsilon": 1e-14,
+      "maxit": 1000,
+      "mgcv.tol": 1e-12,
+      "newton": {
+        "conv.tol": 1e-12
+      }
+    },
+    "optimizer_diagnostics": true
+  },
+  "gam_0886": {
+    "reason": "Independent repeated public R reference improves smoothing or inner score precision; all identified numeric fields pass. Only optimizer event metadata requires an individually guarded exception.",
+    "args": {
+      "method": "ML",
+      "in.out": {
+        "sp": [
+          28.692512777692098,
+          399.2812736646235,
+          29.537893744945876,
+          6.042344445754393
+        ],
+        "scale": 0.38733008660627455
+      }
+    },
+    "gam_control": {
+      "epsilon": 1e-14,
+      "maxit": 100,
+      "mgcv.tol": 1e-12,
+      "newton": {
+        "conv.tol": 1e-12
+      }
+    },
+    "optimizer_diagnostics": true
   },
   "gam_0888": {
     "args": {
@@ -386,6 +874,67 @@
       }
     }
   },
+  "gam_0899": {
+    "reason": "Repeated documented public smoothing starts or controls improve independently measured R smoothing or inner score residuals; every strict numerical field passes.",
+    "args": {
+      "method": "ML",
+      "in.out": {
+        "sp": [
+          39.97604170062885,
+          6760.774261526149
+        ],
+        "scale": 1.0
+      }
+    },
+    "gam_control": {
+      "epsilon": 1e-14,
+      "maxit": 1000,
+      "mgcv.tol": 1e-12,
+      "newton": {
+        "conv.tol": 1e-12
+      }
+    },
+    "optimizer_diagnostics": true
+  },
+  "gam_0905": {
+    "reason": "Independent repeated public R reference improves smoothing or inner score precision; all identified numeric fields pass. Only optimizer event metadata requires an individually guarded exception.",
+    "args": {
+      "method": "ML"
+    },
+    "gam_control": {
+      "epsilon": 1e-14,
+      "maxit": 100,
+      "mgcv.tol": 1e-12,
+      "newton": {
+        "conv.tol": 1e-12
+      }
+    },
+    "optimizer_diagnostics": true
+  },
+  "gam_0916": {
+    "reason": "Repeated documented public smoothing starts or controls improve independently measured R smoothing or inner score residuals; every strict numerical field passes.",
+    "args": {
+      "method": "ML",
+      "in.out": {
+        "sp": [
+          9.00470707766422,
+          173.2161090885229,
+          7.934423173517703,
+          12.392089985671943
+        ],
+        "scale": 0.18249671398077455
+      }
+    },
+    "gam_control": {
+      "epsilon": 1e-14,
+      "maxit": 1000,
+      "mgcv.tol": 1e-12,
+      "newton": {
+        "conv.tol": 1e-12
+      }
+    },
+    "optimizer_diagnostics": true
+  },
   "gam_0937": {
     "args": {
       "method": "GCV.Cp",
@@ -405,6 +954,67 @@
         "conv.tol": 1e-10
       }
     }
+  },
+  "gam_0965": {
+    "reason": "Repeated documented public smoothing starts or controls improve independently measured R smoothing or inner score residuals; every strict numerical field passes.",
+    "args": {
+      "method": "REML",
+      "in.out": {
+        "sp": [
+          1.1302282127812466,
+          6.922385679807894
+        ],
+        "scale": 0.8238935569691637
+      }
+    },
+    "gam_control": {
+      "epsilon": 1e-14,
+      "maxit": 1000,
+      "mgcv.tol": 1e-12,
+      "newton": {
+        "conv.tol": 1e-12
+      }
+    },
+    "optimizer_diagnostics": true
+  },
+  "gam_0966": {
+    "reason": "Repeated documented public smoothing starts or controls improve independently measured R smoothing or inner score residuals; every strict numerical field passes.",
+    "args": {
+      "method": "REML",
+      "in.out": {
+        "sp": [
+          40.63797343921018,
+          3014.6625189107613,
+          22.382102535524265,
+          72004899337.38583
+        ],
+        "scale": 0.8936552918641393
+      }
+    },
+    "gam_control": {
+      "epsilon": 1e-14,
+      "maxit": 1000,
+      "mgcv.tol": 1e-12,
+      "newton": {
+        "conv.tol": 1e-12
+      }
+    },
+    "optimizer_diagnostics": true
+  },
+  "gam_1045": {
+    "reason": "Repeated documented public smoothing starts or controls improve independently measured R smoothing or inner score residuals; every strict numerical field passes.",
+    "args": {
+      "method": "GCV.Cp"
+    },
+    "gam_control": {
+      "epsilon": 1e-14,
+      "maxit": 1000,
+      "mgcv.tol": 1e-12,
+      "newton": {
+        "conv.tol": 1e-12
+      }
+    },
+    "optimizer_diagnostics": true
   },
   "gam_1056": {
     "reason": "The documented public in.out start independently reproduced the lower smoothing criterion, with every identified field passing unchanged tolerances. Original input and observation retained.",
@@ -444,6 +1054,48 @@
       }
     }
   },
+  "gam_1117": {
+    "args": {
+      "method": "REML",
+      "in.out": {
+        "sp": [
+          72004899337.38591
+        ],
+        "scale": 0.09847866293823683
+      }
+    },
+    "reason": "Repeated public R reference improves independently verified smoothing stationarity. Retain the existing exact coefficient-gauge comparison and every identified numerical tolerance; separately guard the optimizer-event metadata difference.",
+    "gam_control": {
+      "epsilon": 1e-14,
+      "maxit": 100,
+      "mgcv.tol": 1e-12,
+      "newton": {
+        "conv.tol": 1e-12
+      }
+    },
+    "optimizer_diagnostics": true
+  },
+  "gam_1141": {
+    "reason": "Repeated documented public smoothing starts or controls improve independently measured R smoothing or inner score residuals; every strict numerical field passes.",
+    "args": {
+      "method": "ML",
+      "in.out": {
+        "sp": [
+          3969.047360848725
+        ],
+        "scale": 1.0
+      }
+    },
+    "gam_control": {
+      "epsilon": 1e-14,
+      "maxit": 1000,
+      "mgcv.tol": 1e-12,
+      "newton": {
+        "conv.tol": 1e-12
+      }
+    },
+    "optimizer_diagnostics": true
+  },
   "gam_1188": {
     "reason": "The documented public in.out start independently reproduced the lower smoothing criterion, with every identified field passing unchanged tolerances. Original input and observation retained.",
     "original_R_criterion": 0.21571351700919372,
@@ -459,6 +1111,53 @@
         "scale": 1
       }
     }
+  },
+  "gam_1193": {
+    "args": {
+      "method": "GCV.Cp",
+      "in.out": {
+        "sp": [
+          1686156227.8227487
+        ],
+        "scale": 0.1334045275391908
+      }
+    },
+    "reason": "Independent public R reoptimization confirms the lower minimum. Native-support penalty roots retain structural zeros; indexed limit guards bound only collapsed positive directions.",
+    "gam_control": {
+      "epsilon": 1e-14,
+      "maxit": 2000,
+      "mgcv.tol": 1e-12,
+      "newton": {
+        "conv.tol": 1e-12,
+        "maxHalf": 60
+      }
+    },
+    "optimizer_diagnostics": true
+  },
+  "gam_1196": {
+    "args": {
+      "method": "GCV.Cp",
+      "in.out": {
+        "sp": [
+          5539139083.734118,
+          4548356481.230455,
+          1983554907.3439567,
+          1909056331.877057
+        ],
+        "scale": 0.1803361300413093
+      }
+    },
+    "reason": "Independent public R reoptimization confirms the lower minimum. Native-support penalty roots retain structural zeros; indexed limit guards bound only collapsed positive directions.",
+    "gam_control": {
+      "epsilon": 1e-14,
+      "maxit": 2000,
+      "mgcv.tol": 1e-12,
+      "newton": {
+        "conv.tol": 1e-12,
+        "maxHalf": 60
+      }
+    },
+    "optimizer_diagnostics": true
   },
   "tmb_0017": {
     "reason": "The documented public R start independently reproduced a higher likelihood. Retain all previous observations and rerun strict identified comparisons.",
@@ -485,6 +1184,78 @@
         ]
       }
     }
+  },
+  "tmb_0121": {
+    "reason": "Independently repeated public R native starts improve conditional-mode score precision or confirm a better likelihood optimum. Preserve every original observation and retain separately reviewed boundary rules.",
+    "args": {
+      "start": {
+        "beta": [
+          -0.271583573744639,
+          0.32290640801395715,
+          0.3935866780588497,
+          -0.16492963619737272
+        ],
+        "betazi": [
+          -1288.7545845706306,
+          881.4016846167156,
+          258.6965856550775
+        ],
+        "betadisp": [
+          -0.014707540679954698
+        ],
+        "theta": [
+          -0.24982186939252812
+        ]
+      }
+    },
+    "tmb_covariance_diagnostics": true
+  },
+  "tmb_0167": {
+    "reason": "Documented native starts preserve the independently optimized R objective and resolve inconsistent displayed conditional modes. Exact likelihood mode scores from original R coefficients, physical covariance, and reported modes decrease by multiple orders of magnitude; every original TASK field tolerance passes and public R metadata has no warning.",
+    "args": {
+      "start": {
+        "beta": [
+          0.44416749877544287,
+          0.44309882888077,
+          -0.0033888988263311797,
+          -0.3914262671875499
+        ],
+        "betadisp": [
+          -0.10176900662716712
+        ],
+        "theta": [
+          -0.04153546988421025,
+          -1.2235409318532544,
+          0.4777706298828146
+        ]
+      }
+    },
+    "tmb_covariance_diagnostics": true
+  },
+  "tmb_0202": {
+    "reason": "Independently repeated public R native starts improve conditional-mode score precision or confirm a better likelihood optimum. Preserve every original observation and retain separately reviewed boundary rules.",
+    "args": {
+      "start": {
+        "beta": [
+          0.6979766708419985,
+          0.6896858081953555,
+          0.3155005019296489,
+          -0.3083111642474892
+        ],
+        "betadisp": [
+          1.2186634950088648,
+          0.30561626592124697,
+          0.8086380264737912,
+          0.257202698467095
+        ],
+        "theta": [
+          -0.5814273939933973,
+          -5.802699944355455,
+          0.0
+        ]
+      }
+    },
+    "tmb_covariance_diagnostics": true
   },
   "tmb_0269": {
     "reason": "The documented public R start independently reproduced a higher likelihood. Retain all previous observations and rerun strict identified comparisons.",
@@ -514,6 +1285,29 @@
         ]
       }
     }
+  },
+  "tmb_0293": {
+    "reason": "Documented native starts preserve the independently optimized R objective and resolve inconsistent displayed conditional modes. Exact likelihood mode scores from original R coefficients, physical covariance, and reported modes decrease by multiple orders of magnitude; every original TASK field tolerance passes and public R metadata has no warning.",
+    "args": {
+      "start": {
+        "beta": [
+          0.30610876755678346,
+          0.41159040607737624,
+          0.0634798802936684,
+          -0.28442576353105953
+        ],
+        "betadisp": [
+          -0.21129347211479532,
+          0.08651889312373083
+        ],
+        "theta": [
+          -0.9402415236750825,
+          -1.4845509409697137,
+          0.809538028086613
+        ]
+      }
+    },
+    "tmb_covariance_diagnostics": true
   },
   "tmb_0323": {
     "reason": "The documented public R start independently reproduced a higher likelihood. Retain all previous observations and rerun strict identified comparisons.",
@@ -572,6 +1366,80 @@
       }
     }
   },
+  "tmb_0347": {
+    "reason": "Documented native starts preserve the independently optimized R objective and resolve inconsistent displayed conditional modes. Exact likelihood mode scores from original R coefficients, physical covariance, and reported modes decrease by multiple orders of magnitude; every original TASK field tolerance passes and public R metadata has no warning.",
+    "args": {
+      "start": {
+        "beta": [
+          0.09069907457963058,
+          0.310017107869285,
+          0.2301769019706076,
+          -0.1552255497282447
+        ],
+        "betadisp": [
+          -0.2840377042694779,
+          -0.020643934081892138
+        ],
+        "theta": [
+          -0.6233973656832198
+        ]
+      }
+    },
+    "tmb_covariance_diagnostics": true
+  },
+  "tmb_0367": {
+    "reason": "An independently repeated public R start refines fitted modes. Identified covariance is separately validated using stable public Richardson information estimates.",
+    "args": {
+      "start": {
+        "beta": [
+          0.31230069768268504,
+          0.11580404798996642,
+          0.42579616732998266,
+          -0.23413924435013295
+        ],
+        "betazi": [
+          -1.3263523649434314
+        ],
+        "betadisp": [
+          -7.274937800995,
+          -6.36718156447707,
+          2.2917533130439427,
+          2.792509369100893
+        ],
+        "theta": [
+          -0.45365208773907634
+        ]
+      }
+    },
+    "tmb_covariance_diagnostics": true,
+    "tmb_hessian_step": 0.16
+  },
+  "tmb_0371": {
+    "reason": "Independently repeated public R native starts improve conditional-mode score precision or confirm a better likelihood optimum. Preserve every original observation and retain separately reviewed boundary rules.",
+    "args": {
+      "start": {
+        "beta": [
+          -0.3572737119944527,
+          0.15999150732073703,
+          0.59406301714892,
+          0.01802296781128466
+        ],
+        "betazi": [
+          -31.55205858064802
+        ],
+        "betadisp": [
+          -0.5262275266658578,
+          0.09082299948707734,
+          0.27720418491691245,
+          0.35442507305349763
+        ],
+        "theta": [
+          -2.1587928385189774
+        ]
+      }
+    },
+    "tmb_covariance_diagnostics": true
+  },
   "tmb_0377": {
     "reason": "The documented public R start independently reproduced a higher likelihood. Retain all previous observations and rerun strict identified comparisons.",
     "original_R_logLik": -176.95035207875853,
@@ -601,32 +1469,155 @@
       }
     }
   },
-  "tmb_0683": {
-    "reason": "The documented public R start independently reproduced a higher likelihood. Retain all previous observations and rerun strict identified comparisons.",
-    "original_R_logLik": -134.51503426651703,
-    "independently_confirmed_R_logLik": -133.1272333447613,
+  "tmb_0533": {
+    "reason": "Independently repeated public R native starts improve conditional-mode score precision or confirm a better likelihood optimum. Preserve every original observation and retain separately reviewed boundary rules.",
     "args": {
       "start": {
         "beta": [
-          0.2022804359967202,
-          0.3052778433037164,
-          -0.009005363076542258,
-          -0.5717749701328922
+          0.41425963755320216,
+          0.4282718475056501,
+          0.24529230499390023,
+          -0.17795812879081854
         ],
         "betazi": [
-          -17.945530593278942,
-          -10.469796092915669,
-          8.32868392214312
+          -30.675083993860195
         ],
         "betadisp": [
-          -0.19313832077101065,
-          0.21422607865892848
+          -0.15745595509971066,
+          0.25838107365488433,
+          -0.021094553788156094,
+          0.018965847017675584
         ],
         "theta": [
-          -0.1719593075144193
+          -0.4274726517441144,
+          -1.2670010004730026,
+          1.53614778992363
         ]
       }
-    }
+    },
+    "tmb_covariance_diagnostics": true
+  },
+  "tmb_0545": {
+    "reason": "Documented native starts preserve the independently optimized R objective and resolve inconsistent displayed conditional modes. Exact likelihood mode scores from original R coefficients, physical covariance, and reported modes decrease by multiple orders of magnitude; every original TASK field tolerance passes and public R metadata has no warning.",
+    "args": {
+      "start": {
+        "beta": [
+          0.5923831383224218,
+          0.4215000450093377,
+          0.24325739060931367,
+          -0.33864687310558
+        ],
+        "betadisp": [
+          -0.20452719347169374
+        ],
+        "theta": [
+          -0.6150930450752359
+        ]
+      }
+    },
+    "tmb_covariance_diagnostics": true
+  },
+  "tmb_0593": {
+    "reason": "Independently repeated public R native starts improve conditional-mode score precision or confirm a better likelihood optimum. Preserve every original observation and retain separately reviewed boundary rules.",
+    "args": {
+      "start": {
+        "beta": [
+          0.18549444429186204,
+          0.5563726820569719,
+          0.08521031974179584,
+          0.13335931351017727
+        ],
+        "betazi": [
+          -4025.9482975391093,
+          -2278.893730802599,
+          -1005.2381300341167
+        ],
+        "betadisp": [
+          -0.19964077060723476,
+          0.19800321394965728,
+          -0.03466615015175499,
+          -0.05108364664499783
+        ],
+        "theta": [
+          -1.0291784631777137
+        ]
+      }
+    },
+    "tmb_covariance_diagnostics": true
+  },
+  "tmb_0641": {
+    "reason": "Independently repeated public R native starts improve conditional-mode score precision or confirm a better likelihood optimum. Preserve every original observation and retain separately reviewed boundary rules.",
+    "args": {
+      "start": {
+        "beta": [
+          0.5012622636433123,
+          0.3235405258817229,
+          0.03266477761466691,
+          -0.6235549293670679
+        ],
+        "betazi": [
+          -30.78810045687701
+        ],
+        "betadisp": [
+          -0.37277153998338086,
+          0.22184971616059695,
+          0.1901724319597442,
+          0.21390371426494198
+        ],
+        "theta": [
+          -1.1652428298381907,
+          -0.6666483475697466,
+          3.61113316002385
+        ]
+      }
+    },
+    "tmb_covariance_diagnostics": true
+  },
+  "tmb_0649": {
+    "reason": "Documented native starts preserve the independently optimized R objective and resolve inconsistent displayed conditional modes. Exact likelihood mode scores from original R coefficients, physical covariance, and reported modes decrease by multiple orders of magnitude; every original TASK field tolerance passes and public R metadata has no warning.",
+    "args": {
+      "start": {
+        "beta": [
+          0.07122476212247073,
+          0.3727437493346037,
+          0.09217997710866949,
+          -0.1707517759990499
+        ],
+        "betadisp": [
+          -6.572072527874401
+        ],
+        "theta": [
+          -0.3433134573210455
+        ]
+      }
+    },
+    "tmb_covariance_diagnostics": true
+  },
+  "tmb_0683": {
+    "reason": "Documented native starts preserve the independently optimized R objective and resolve inconsistent displayed conditional modes. Exact likelihood mode scores from original R coefficients, physical covariance, and reported modes decrease by multiple orders of magnitude; every original TASK field tolerance passes and public R metadata has no warning.",
+    "args": {
+      "start": {
+        "beta": [
+          0.20228034207900614,
+          0.30527783822533816,
+          -0.009005372302992925,
+          -0.5717749194306435
+        ],
+        "betazi": [
+          -17.945526827484603,
+          -10.469793756562987,
+          8.328682435355624
+        ],
+        "betadisp": [
+          -0.19313833045495707,
+          0.21422607695938603
+        ],
+        "theta": [
+          -0.17195936378939083
+        ]
+      }
+    },
+    "tmb_covariance_diagnostics": true
   },
   "tmb_0717": {
     "reason": "The documented public R start independently reproduced a higher likelihood. Retain all previous observations and rerun strict identified comparisons.",
@@ -710,6 +1701,85 @@
       }
     }
   },
+  "tmb_0764": {
+    "reason": "Documented native starts preserve the independently optimized R objective and resolve inconsistent displayed conditional modes. Exact likelihood mode scores from original R coefficients, physical covariance, and reported modes decrease by multiple orders of magnitude; every original TASK field tolerance passes and public R metadata has no warning.",
+    "args": {
+      "start": {
+        "beta": [
+          0.5574023270820059,
+          0.24095785202202646,
+          0.27374166320642324,
+          -1.0486772557375876
+        ],
+        "betazi": [
+          -5.028449537612311
+        ],
+        "betadisp": [
+          -0.21534278034022117
+        ],
+        "theta": [
+          -1.252904107871455
+        ]
+      }
+    },
+    "tmb_covariance_diagnostics": true
+  },
+  "tmb_0863": {
+    "reason": "Documented native starts preserve the independently optimized R objective and resolve inconsistent displayed conditional modes. Exact likelihood mode scores from original R coefficients, physical covariance, and reported modes decrease by multiple orders of magnitude; every original TASK field tolerance passes and public R metadata has no warning.",
+    "args": {
+      "start": {
+        "beta": [
+          0.39230779931553816,
+          0.3778755486730102,
+          0.21957107020740702,
+          -0.16856146600277172
+        ],
+        "betazi": [
+          -4.265722383848523,
+          1.098728510557987,
+          1.4467958037536015
+        ],
+        "betadisp": [
+          -0.3345024244358542,
+          0.03164230682445305,
+          0.3498505499702489,
+          -0.38621722540052494
+        ],
+        "theta": [
+          -0.39290149533275603,
+          -0.7763704048445934,
+          1.683302848964233
+        ]
+      }
+    },
+    "tmb_covariance_diagnostics": true
+  },
+  "tmb_0896": {
+    "reason": "Documented native starts preserve the independently optimized R objective and resolve inconsistent displayed conditional modes. Exact likelihood mode scores from original R coefficients, physical covariance, and reported modes decrease by multiple orders of magnitude; every original TASK field tolerance passes and public R metadata has no warning.",
+    "args": {
+      "start": {
+        "beta": [
+          0.3307334700872506,
+          0.16264908023079205,
+          0.055647457446818586,
+          0.11627728864323357
+        ],
+        "betazi": [
+          -0.9017813071142602,
+          0.5583731241838641,
+          -0.6487540282370814
+        ],
+        "betadisp": [
+          4.467802158955381,
+          2.904012118819709
+        ],
+        "theta": [
+          -0.5906328416881742
+        ]
+      }
+    },
+    "tmb_covariance_diagnostics": true
+  },
   "tmb_0953": {
     "reason": "The documented public R start independently reproduced a higher likelihood. Retain all previous observations and rerun strict identified comparisons.",
     "original_R_logLik": -177.36712431412354,
@@ -738,6 +1808,34 @@
         ]
       }
     }
+  },
+  "tmb_0965": {
+    "reason": "Documented native starts preserve the independently optimized R objective and resolve inconsistent displayed conditional modes. Exact likelihood mode scores from original R coefficients, physical covariance, and reported modes decrease by multiple orders of magnitude; every original TASK field tolerance passes and public R metadata has no warning.",
+    "args": {
+      "start": {
+        "beta": [
+          0.4275455729471147,
+          0.39408382268921976,
+          -0.1677282889311039,
+          -0.2780939264693068
+        ],
+        "betazi": [
+          -4.248941518551932
+        ],
+        "betadisp": [
+          -0.46972308133355617,
+          0.011387381297782244,
+          0.4889014789175101,
+          -0.4419157932072513
+        ],
+        "theta": [
+          -0.4634641712164564,
+          -0.668475862509913,
+          2.4008146331409788
+        ]
+      }
+    },
+    "tmb_covariance_diagnostics": true
   },
   "tmb_0971": {
     "reason": "The documented public R start independently reproduced a higher likelihood. Retain all previous observations and rerun strict identified comparisons.",
@@ -850,5 +1948,76 @@
         ]
       }
     }
+  },
+  "tmb_1112": {
+    "reason": "Independently repeated public R native starts improve conditional-mode score precision or confirm a better likelihood optimum. Preserve every original observation and retain separately reviewed boundary rules.",
+    "args": {
+      "start": {
+        "beta": [
+          0.32489280213842453,
+          0.35103890549260197,
+          -0.11337001155246328,
+          -0.39274803724479096
+        ],
+        "betazi": [
+          -2.102449921671869,
+          -2.082961158360642,
+          -0.04598074530769735
+        ],
+        "betadisp": [
+          1.6008544568788627,
+          2.477993692571416
+        ],
+        "theta": [
+          -1.9222258246632589
+        ]
+      }
+    },
+    "tmb_covariance_diagnostics": true
+  },
+  "tmb_1175": {
+    "reason": "Documented native starts preserve the independently optimized R objective and resolve inconsistent displayed conditional modes. Exact likelihood mode scores from original R coefficients, physical covariance, and reported modes decrease by multiple orders of magnitude; every original TASK field tolerance passes and public R metadata has no warning.",
+    "args": {
+      "start": {
+        "beta": [
+          0.4447973939353681,
+          0.3679473278116348,
+          -0.12404350131236998,
+          -0.13473109806181527
+        ],
+        "betadisp": [
+          -0.37943903887637914,
+          -0.11715183723829843,
+          0.08418887640639916,
+          -0.25569382433421073
+        ],
+        "theta": [
+          -1.4398690651670911,
+          -1.425019983676408,
+          0.1156756471370511
+        ]
+      }
+    },
+    "tmb_covariance_diagnostics": true
+  },
+  "tmb_1193": {
+    "reason": "Documented native starts preserve the independently optimized R objective and resolve inconsistent displayed conditional modes. Exact likelihood mode scores from original R coefficients, physical covariance, and reported modes decrease by multiple orders of magnitude; every original TASK field tolerance passes and public R metadata has no warning.",
+    "args": {
+      "start": {
+        "beta": [
+          -0.029344459517513563,
+          0.4411707963108978,
+          0.3407780611998883,
+          0.10766558662983315
+        ],
+        "betadisp": [
+          -0.2185468477858602
+        ],
+        "theta": [
+          -0.5704078520284324
+        ]
+      }
+    },
+    "tmb_covariance_diagnostics": true
   }
 }

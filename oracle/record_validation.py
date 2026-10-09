@@ -37,7 +37,8 @@ def main() -> None:
         status = 'failed' if failed or expected_failure else ('skipped' if skip is not None else 'passed')
         all_counts['expected_failures' if expected_failure else status] += 1
         name = test.get('name', '')
-        if 'test_r_examples' in test.get('classname', ''):
+        if any(module in test.get('classname', '')
+               for module in ('test_r_examples', 'test_stage2_r_examples')):
             examples[name] = {'status': status}
         candidate = name.partition('[')[2].rstrip(']')
         # IDs such as glmer_0001 contain lmer_0001 as a suffix. Only an exact
@@ -91,6 +92,7 @@ def main() -> None:
                             if entry['module'] in {'gam', 'tmb'}}
             second_passed = sum(entry['status'] == 'passed' for entry in second_stage.values())
             assert len(second_stage) >= 2000, len(second_stage)
+            assert len(examples) >= 16, examples
             assert second_passed / len(second_stage) >= 0.98, (second_passed, len(second_stage))
             assert {'gam', 'tmb'} <= {entry['module'] for entry in second_stage.values()}
             report['stage2_complete'] = True
