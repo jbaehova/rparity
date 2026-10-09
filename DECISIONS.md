@@ -80,7 +80,7 @@ Control contrasts require an explicit supported `adjust` value. The unlisted R `
 - All 600 GLS inputs record uniform public BFGS optimizer controls. Controls are not selected per Python result.
 - Relative field comparisons retain the TASK thresholds, with a 1e-12 absolute floating-point floor at zero. This floor is not a replacement for the required relative thresholds.
 - A GLMM cannot use the Gaussian Kenward-Roger F procedure. Python rejects that request, matching the public R oracle behavior; Gaussian mixed models support KR.
-- Numerical failure markers are explicit; 57 are strict and three are reviewed environment-dependent cases. Coverage counts them as failures, while unexpected failures or unexpected passes fail the test suite. Every remaining ID and cause is recorded in the Stage 1 report.
+- Numerical failure markers are explicit; 57 are strict and four are reviewed environment-dependent cases. Coverage counts them as failures, while unexpected failures or unexpected passes fail the test suite. Every remaining ID and cause is recorded in the Stage 1 report.
 - CI limits BLAS thread pools to one worker for small dense golden problems, avoiding oversubscription on hosted runners. Runtime users retain their own thread configuration.
 
 ## Environment-dependent numerical expectations
@@ -91,3 +91,5 @@ Control contrasts require an explicit supported `adjust` value. The unlisted R `
 - The six initial CI jobs had exactly two XPASS errors each and no unexpected numerical regressions. Fifty-seven other expected-failure IDs remain strict. Expected failures accept AssertionError only, so runtime errors remain unexpected failures.
 
 - Normalize scalar inner products to Python float and separate trial/final objective names for older NumPy type stubs on Python 3.11. These conversions preserve the double-precision numerical values; the full corpus is rechecked after the typing fix.
+
+- lmer_0364: A later Ubuntu Python 3.13 run exceeds the existing conditional-mode relative criterion by an absolute 1.59e-9 at a value near -1.44e-5. Keep this environment-specific numerical failure without changing the threshold. Other recorded environments pass, so its expected-failure marker permits genuine passes. The local reference still has 60 failures; the reviewed union across environments has 61 IDs.

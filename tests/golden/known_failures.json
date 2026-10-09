@@ -244,5 +244,11 @@
   "glmer_0312": {
     "category": "better_optimum_warning_divergence",
     "reason": "Python improves log likelihood by 7.21e-5 at SD 0.0172; R returns a singular SD near 4e-7. The fitted Python model does not warrant the R singular warning."
+  },
+  "lmer_0364": {
+    "category": "near_zero_conditional_mode",
+    "reason": "Ubuntu Python 3.13 conditional mode near -1.44e-5 differs by 1.59e-9 (relative 1.1022e-4), exceeding the retained 1e-4 threshold. The local reference and other recorded environments pass.",
+    "strict": false,
+    "platform_dependent": true
   }
 }

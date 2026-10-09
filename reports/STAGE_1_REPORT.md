@@ -35,7 +35,7 @@ cbpp, Duncan, warpbreaks and Orthodont. Built-in datasets remain outside the rep
 
 Original fixtures are retained. Strict expected-failure markers identify reviewed
 differences so unrelated regressions still fail pytest. Fifty-seven markers are strict.
-Three reviewed environment-dependent IDs (`glmer_0107`, `lmer_0059`, `lmer_0585`)
+Four reviewed environment-dependent IDs (`glmer_0107`, `lmer_0059`, `lmer_0585`, `lmer_0364`)
 permit genuine passes on supported platforms; their numerical thresholds stay unchanged.
 Runtime errors are never expected failures.
 These expected failures count as failures in every corpus pass-rate calculation.
@@ -118,6 +118,16 @@ based on Python agreement. See [decisions](../DECISIONS.md).
 
 `better_optimum`: 5 cases have Python objective improvement exceeding 1e-6 (likelihood or REML criterion).
 An improved objective does not override a required warning-kind mismatch.
+
+## Environment-specific additional observation
+
+The local reference passes `lmer_0364`. A later Ubuntu Python 3.13 CI run
+exceeds the unchanged 1e-4 relative conditional-mode threshold: the R value is
+-1.444224020531799e-5, the Python value is -1.444383197701793e-5, and the
+absolute difference is 1.59e-9. This remains a numerical failure on that
+environment rather than a tolerance waiver. The reviewed union of failures
+across environments contains 61 IDs; the reference coverage table above counts
+its 60 actual failures. Every recorded environment stays above 98% passing.
 
 ## Validation
 

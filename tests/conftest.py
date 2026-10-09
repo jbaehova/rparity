@@ -1,6 +1,6 @@
 """Explicit known parity failures remain failures in the numerical report.
 
-Strict xfail keeps unexpectedly fixed cases visible. Three explicitly reviewed
+Strict xfail keeps unexpectedly fixed cases visible. Four explicitly reviewed
 environment-dependent cases permit a genuine pass on other supported environments.
 The documented corpus gate counts these cases as failures, never passes.
 """
