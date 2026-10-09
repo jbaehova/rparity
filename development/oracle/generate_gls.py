@@ -1,7 +1,7 @@
 """Generate independently seeded synthetic GLS black-box golden fixtures.
 
-Run ``uv run python oracle/generate_gls.py``. All R outputs are obtained through
-oracle/run_case.R. No package datasets or R implementation code are copied.
+Run ``uv run python development/oracle/generate_gls.py``. All R outputs are obtained through
+development/oracle/run_case.R. No package datasets or R implementation code are copied.
 """
 
 from __future__ import annotations
@@ -134,14 +134,14 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--count", type=int, default=600)
     args = parser.parse_args()
-    root = Path(__file__).resolve().parents[1]
-    cache = root / "oracle/cache"
+    root = Path(__file__).resolve().parents[2]
+    cache = root / "development/oracle/cache"
     cache.mkdir(parents=True, exist_ok=True)
     cases = [make_case(i) for i in range(args.count)]
     input_file, output_file = cache / "gls_input.json", cache / "gls_output.json"
     input_file.write_text(json.dumps({"cases": [case["spec"] for case in cases]}))
     subprocess.run(
-        ["Rscript", str(root / "oracle/run_case.R"), str(input_file), str(output_file)],
+        ["Rscript", str(root / "development/oracle/run_case.R"), str(input_file), str(output_file)],
         check=True,
         cwd=root,
     )

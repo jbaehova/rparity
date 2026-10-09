@@ -64,7 +64,7 @@ applicable Python warnings remain visible.
 
 Detailed numerical observations, including score comparisons and R public optimizer
 fields, are in [precision diagnostics](precision_diagnostics.json). All remaining IDs
-and original classifications are in [known failures](../tests/golden/known_failures.json).
+and original classifications are in [known failures](../../tests/golden/known_failures.json).
 
 ## Current coverage
 
@@ -98,7 +98,7 @@ coefficient or required-warning failures. The original release had five such cas
 
 The validated runtime fingerprint is `e037083415d69ff8ecb5e31a5c83a3dfa58702c89a1126f3127a169a3889f4de`.
 Current case outcomes are in [validation.json](validation.json), and option-level
-coverage is regenerated in [coverage](../docs/coverage.md).
+coverage is regenerated in [coverage](../../docs/coverage.md).
 
 No target R package source or function body was inspected. Additional R numerical
 observations use only oracle/run_case.R and public optimizer outputs. Stage 2 and

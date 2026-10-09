@@ -142,7 +142,7 @@ def test_native_fit_smooth_test_parity(case):
     np.testing.assert_allclose(actual["p-value"], expected["p-value"], atol=1e-4, rtol=0)
 
 
-# Additional public numeric observations obtained by oracle/run_case.R. The
+# Additional public numeric observations obtained by development/oracle/run_case.R. The
 # fitted corpus inputs remain the independent source for response and basis.
 @pytest.mark.parametrize("case,r_squared,deviance_explained,rank", [
     (0, 0.4331682974167592, 0.4592805690792711, 10),

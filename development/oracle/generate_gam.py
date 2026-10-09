@@ -16,8 +16,8 @@ from typing import Any
 import numpy as np
 from scipy.special import expit
 
-ROOT = Path(__file__).resolve().parents[1]
-REFERENCE_OVERRIDES = json.loads((ROOT / "oracle/stage2_overrides.json").read_text())
+ROOT = Path(__file__).resolve().parents[2]
+REFERENCE_OVERRIDES = json.loads((ROOT / "development/oracle/stage2_overrides.json").read_text())
 FAMILIES = ("gaussian", "binomial", "poisson", "Gamma")
 METHODS = ("REML", "ML", "GCV.Cp")
 ARCHETYPES = ("tp", "cr", "cs", "ps", "re", "te", "ti", "continuous-by", "factor-by", "additive")
@@ -156,7 +156,7 @@ def make_case(index: int) -> dict[str, Any]:
 def generate(count: int, start: int = 0, batch_size: int = 40, specs_only: bool = False) -> None:
     """Observe approved R batches and retain every indexed synthetic input."""
     cases = [make_case(index) for index in range(start, start + count)]
-    cache = ROOT / "oracle/cache"
+    cache = ROOT / "development/oracle/cache"
     cache.mkdir(parents=True, exist_ok=True)
     manifest = cache / f"s2-design-gam-{start:04d}-{count}.json"
     manifest.write_text(json.dumps(cases, indent=2) + "\n")
@@ -171,7 +171,7 @@ def generate(count: int, start: int = 0, batch_size: int = 40, specs_only: bool 
         input_path = cache / f"s2-design-gam-input-{start + offset:04d}.json"
         output_path = cache / f"s2-design-gam-output-{start + offset:04d}.json"
         input_path.write_text(json.dumps({"cases": [case["spec"] for case in batch]}))
-        subprocess.run(["Rscript", str(ROOT / "oracle/run_case.R"), str(input_path), str(output_path)], check=True, cwd=ROOT)
+        subprocess.run(["Rscript", str(ROOT / "development/oracle/run_case.R"), str(input_path), str(output_path)], check=True, cwd=ROOT)
         outputs = json.loads(output_path.read_text())
         for case, output in zip(batch, outputs, strict=True):
             assert case["id"] == output["id"]
@@ -182,7 +182,7 @@ def generate(count: int, start: int = 0, batch_size: int = 40, specs_only: bool 
                     case["oracle_attempts"] = previous["oracle_attempts"]
                 if previous["spec"] != case["spec"]:
                     case.setdefault("oracle_attempts", []).append({
-                        "reason": "Uniform documented high-precision IRLS and smoothing controls. Explicit, independently R-confirmed in.out initialization overrides are recorded in oracle/stage2_overrides.json; original input and observation retained.",
+                        "reason": "Uniform documented high-precision IRLS and smoothing controls. Explicit, independently R-confirmed in.out initialization overrides are recorded in development/oracle/stage2_overrides.json; original input and observation retained.",
                         "spec": previous["spec"], "oracle": previous["oracle"],
                     })
             case["oracle"] = output

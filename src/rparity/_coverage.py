@@ -20,7 +20,7 @@ def source_digest(root: Path) -> str:
 def generate(root: Path | None = None) -> str:
     """Write docs/coverage.md; unexecuted fixtures never count as passing."""
     root = root or Path.cwd()
-    validation_path = root / 'reports' / 'validation.json'
+    validation_path = root / 'development' / 'reports' / 'validation.json'
     validation: dict[str, Any] = {}
     if validation_path.exists():
         validation = json.loads(validation_path.read_text())
@@ -36,11 +36,14 @@ def generate(root: Path | None = None) -> str:
         option = case.get('option', case.get('spec', {}).get('call', module))
         rows[(module, option)].append(case.get('id', path.stem))
     lines = [
+        '---',
+        'title: R numerical compatibility and supported options in Python',
+        'description: Recorded R comparisons for supported rparity model and inference options in Python.',
+        '---', '',
         '# Validation coverage', '',
-        ('Stage 1 acceptance checks are complete for v0.1.0.' if first_complete else
-         'Stage 1 remains in progress until every required option and acceptance check passes.'), '',
-        ('Stage 2 acceptance checks are complete for v0.2.0.' if second_complete else
-         'Stage 2 verification is ongoing; generated cases alone do not establish acceptance.'), '',
+        ('These results document numerical compatibility for the supported Python APIs.'
+         if first_complete and second_complete else
+         'Some model groups lack a verified validation record for the current source.'), '',
         'Counts below refer to committed synthetic R observations. Passing status comes from',
         'the latest recorded pytest run; unexecuted or skipped cases are not passes.', '',
         '| Module | R function and options | Implementation | Golden cases | Pass rate | Notes |',
@@ -55,22 +58,35 @@ def generate(root: Path | None = None) -> str:
         notes = f'{failed} failures; {len(ids)-verified} unverified'
         option = option.replace('|', '\\|')
         complete = second_complete if module in {'gam', 'tmb'} else first_complete
-        implementation = 'implemented and validated' if complete else 'implemented, verification ongoing'
+        implementation = 'implemented; validation recorded' if complete else 'implemented; unverified'
         lines.append(f'| {module} | {option} | {implementation} | {len(ids)} | {rate} | {notes} |')
         totals[module][0] += len(ids)
         totals[module][1] += passed
         totals[module][2] += failed
     if not rows:
         for module in ['lmer', 'glmer', 'inference', 'anova', 'emm', 'gls']:
-            lines.append(f'| {module} | required Stage 1 options | implementation in progress | 0 | unverified | Oracle generation pending |')
+            lines.append(f'| {module} | model options | implemented; unverified | 0 | unverified | Oracle observations unavailable |')
     lines.extend(['', '## Module totals', '', '| Module | Golden cases | Passed | Failed |', '| --- | ---: | ---: | ---: |'])
     for module, values in sorted(totals.items()):
         lines.append(f'| {module} | {values[0]} | {values[1]} | {values[2]} |')
     n = sum(v[0] for v in totals.values())
     p = sum(v[1] for v in totals.values())
-    lines.extend(['', f'Total: {n} synthetic cases, {p} recorded passes.', '',
-                  'Stage 1 requires at least 300 cases per module, 3,000 total and 98% passing.',
-                  'Stage 2 separately requires at least 2,000 cases and 98% passing, with no new Stage 1 failures.', '',
+    f = sum(v[2] for v in totals.values())
+    lines.extend(['', f'Total: {n} synthetic cases, {p} recorded passes and {f} failures.', '',
+                  '## Validation groups', '',
+                  '| Model group | Golden cases | Passed | Failed | Pass rate |',
+                  '| --- | ---: | ---: | ---: | ---: |'])
+    for label, extended in [('Mixed models and inference', False),
+                            ('GAMs and distributional models', True)]:
+        group_values = [v for module, v in totals.items() if (module in {'gam', 'tmb'}) == extended]
+        group_n = sum(v[0] for v in group_values)
+        group_p = sum(v[1] for v in group_values)
+        group_f = sum(v[2] for v in group_values)
+        rate = f'{group_p / group_n:.2%}' if group_p + group_f else 'unverified'
+        lines.append(f'| {label} | {group_n} | {group_p} | {group_f} | {rate} |')
+    lines.extend(['',
+                  'Known differences remain counted as failures. The option-level results above',
+                  'describe the tested scope; they do not establish parity for unsupported options.', '',
                   '## R package examples', '',
                   'Built-in R example data is not committed. The following `needs_r` cases',
                   'are included in coverage and require the development oracle.', '',

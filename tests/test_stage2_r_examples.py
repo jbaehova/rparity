@@ -27,7 +27,7 @@ from scipy import stats
 from rparity import gam, glmmTMB
 
 ROOT = Path(__file__).resolve().parents[1]
-CACHE = ROOT / "oracle" / "cache"
+CACHE = ROOT / "development" / "oracle" / "cache"
 pytestmark = [
     pytest.mark.needs_r,
     pytest.mark.skipif(shutil.which("Rscript") is None,
@@ -41,7 +41,7 @@ def _oracle(label: str, cases: list[dict[str, Any]]) -> list[dict[str, Any]]:
     destination = CACHE / f"s2-public-r-examples-{label}-output.json"
     source.write_text(json.dumps({"cases": cases}))
     completed = subprocess.run(
-        ["Rscript", "oracle/run_case.R", str(source), str(destination)],
+        ["Rscript", "development/oracle/run_case.R", str(source), str(destination)],
         cwd=ROOT, capture_output=True, text=True, check=False,
     )
     if completed.returncode and "there is no package called" in completed.stderr:

@@ -16,7 +16,7 @@ from rparity._coverage import source_digest
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('junit', type=Path)
-    parser.add_argument('--output', type=Path, default=Path('reports/validation.json'))
+    parser.add_argument('--output', type=Path, default=Path('development/reports/validation.json'))
     parser.add_argument('--stage1-complete', action='store_true',
                         help='Verify the numerical and representative-example completion gates.')
     parser.add_argument('--stage2-complete', action='store_true',
@@ -84,7 +84,7 @@ def main() -> None:
         report['stage1_counts'] = {'cases': len(first_stage), 'passed': passed,
                                    'failed': len(first_stage) - passed}
         if args.stage2_complete:
-            baseline = json.loads(Path('reports/STAGE_1_REGRESSION_BASELINE.json').read_text())
+            baseline = json.loads(Path('development/reports/STAGE_1_REGRESSION_BASELINE.json').read_text())
             failures = {key for key, entry in first_stage.items() if entry['status'] == 'failed'}
             new_failures = sorted(failures - set(baseline['failed_ids']))
             assert len(first_stage) == baseline['cases'], (len(first_stage), baseline['cases'])

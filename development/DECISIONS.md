@@ -159,3 +159,9 @@ Control contrasts require an explicit supported `adjust` value. The unlisted R `
 - Record likelihood and smoothing objective properties before assertions so an objective discrepancy does not disappear from the numerical audit. Better objective values do not turn later identified discrepancies into passes.
 - Freeze the post-Stage-1 baseline at 3,799 passes and 57 actual failures among 3,856 cases. Require no failures outside that fixed list. Keep the immutable v0.1.0 tag and original release assets unchanged.
 - Publish only after the final integrated local suite, lint, types, strict documentation and clean wheel checks succeed. Attach the macOS ARM64 wheel and sdist to GitHub; do not claim Linux or Windows execution, start Stage 3 or upload to PyPI.
+
+## Public library documentation
+
+- Organize the entry points around installation and Python analysis workflows. Keep development phases and release bookkeeping out of README and documentation landing-page branding. Package version metadata remains necessary for installation and release identification.
+- Group the oracle, numerical reports and development records under development/. Keep the installed library in src/rparity, runnable analyses in examples/ and user guides in docs/. Preserve all corpus inputs, comparisons, tolerances and historical report filenames.
+- Publish descriptive search titles, canonical URLs, sitemap and image-free sharing metadata. Use natural R-to-Python workflow vocabulary and accurately describe the available APIs. Search engine rankings and indexing timing are external outcomes.

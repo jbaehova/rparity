@@ -5,7 +5,7 @@ on:
     paths:
       - 'docs/**'
       - 'mkdocs.yml'
-      - 'reports/validation.json'
+      - 'development/reports/validation.json'
   workflow_dispatch:
 permissions:
   contents: read

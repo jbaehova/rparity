@@ -1,6 +1,8 @@
 """Generate maintained R/Python API migration tables."""
 from pathlib import Path
 
+ROOT = Path(__file__).resolve().parents[2]
+
 TABLES = {
 'lme4': [
 ('Random intercept', 'lmer(y ~ x + (1|g), data=d)', 'lmer("y ~ x + (1|g)", d)'),
@@ -132,7 +134,7 @@ for module, examples in TABLES.items():
              'These examples assume an existing data frame `d` and fitted models. Import the',
              'named functions from `rparity`. For statsmodels examples, import',
              '`statsmodels.api as sm` and `statsmodels.formula.api as smf`.', '',
-             'Consult the validation coverage for numerical limitations in v0.1.0.', '']
+             'Consult the validation coverage for supported options and known numerical differences.', '']
     if module == 'car':
         lines += ['Type III tests depend on contrast coding. **Use sum contrasts** when testing',
                   'overall main effects in interaction models. This also applies to statsmodels:',
@@ -147,4 +149,4 @@ for module, examples in TABLES.items():
     lines += ['| Use | R | Python |','| --- | --- | --- |']
     for label, r, py in examples:
         lines.append(f'| {label} | `{r.replace(chr(124), chr(92)+chr(124))}` | `{py.replace(chr(124),chr(92)+chr(124))}` |')
-    Path(f'docs/migration/{module}.md').write_text('\n'.join(lines)+'\n')
+    (ROOT / f'docs/migration/{module}.md').write_text('\n'.join(lines)+'\n')

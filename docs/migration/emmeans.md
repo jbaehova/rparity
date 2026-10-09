@@ -1,10 +1,16 @@
+---
+title: "emmeans in Python: marginal means and contrasts"
+description: Compute estimated marginal means in Python without runtime R. Translate emmeans, pairwise contrasts, emtrends and multiplicity adjustments to rparity.
+---
+
 # emmeans migration
 
 These examples assume an existing data frame `d` and fitted models. Import the
 named functions from `rparity`. For statsmodels examples, import
 `statsmodels.api as sm` and `statsmodels.formula.api as smf`.
 
-Consult the validation coverage for numerical limitations in v0.1.0.
+See [numerical accuracy and limitations](../validation.md) and the
+[option-level coverage](../coverage.md) when reproducing an R analysis.
 
 Control contrasts require an explicit supported adjustment. The R `dunnettx`
 default is unavailable; Python defaults to `none`.

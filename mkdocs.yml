@@ -1,14 +1,46 @@
 site_name: rparity
-site_description: Clean-room Python statistical models validated against R.
+site_url: https://jbaehova.github.io/rparity/
+site_description: R-style mixed models, GAMs and estimated marginal means in Python. Use lmer, mgcv and glmmTMB workflows without an R runtime, verified against R.
+repo_url: https://github.com/jbaehova/rparity
+repo_name: jbaehova/rparity
+edit_uri: edit/main/docs/
 theme:
   name: material
+  custom_dir: docs/overrides
+  language: en
+  features:
+    - navigation.sections
+    - navigation.footer
+    - content.code.copy
+    - search.suggest
+    - search.highlight
+plugins:
+  - search
+markdown_extensions:
+  - meta
+  - toc:
+      permalink: true
+extra:
+  software_version: 0.2.0
 nav:
   - Home: index.md
-  - Validation coverage: coverage.md
-  - Migration:
+  - Getting started:
+      - Installation: getting-started/installation.md
+      - Quickstart: getting-started/quickstart.md
+  - Guides:
+      - Mixed models: guides/mixed-models.md
+      - Generalized additive models: guides/generalized-additive-models.md
+      - Zero-inflated models: guides/zero-inflated-models.md
+      - Marginal means: guides/marginal-means.md
+      - R models in Python: guides/r-packages-in-python.md
+  - API reference: reference/index.md
+  - Moving from R:
       - lme4: migration/lme4.md
       - emmeans: migration/emmeans.md
       - car: migration/car.md
       - nlme: migration/nlme.md
       - mgcv: migration/mgcv.md
       - glmmTMB: migration/glmmTMB.md
+  - Numerical compatibility:
+      - Accuracy and limitations: validation.md
+      - Option-level comparisons: coverage.md

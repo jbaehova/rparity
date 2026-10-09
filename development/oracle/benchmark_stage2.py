@@ -14,8 +14,8 @@ import pandas as pd
 
 from rparity import gam, glmmTMB
 
-ROOT = Path(__file__).resolve().parents[1]
-CACHE = ROOT / "oracle/cache"
+ROOT = Path(__file__).resolve().parents[2]
+CACHE = ROOT / "development/oracle/cache"
 
 
 def fit(spec: dict[str, Any]) -> Any:
@@ -39,10 +39,10 @@ def main() -> None:
              for index, case in enumerate(selected)]
     specs.extend(dict(case["spec"], id=f"benchmark_{index}_{repeat}", benchmark=True)
                  for repeat in range(3) for index, case in enumerate(selected))
-    CACHE.mkdir(exist_ok=True)
+    CACHE.mkdir(parents=True, exist_ok=True)
     input_file, output_file = CACHE / "benchmark-s2-input.json", CACHE / "benchmark-s2-output.json"
     input_file.write_text(json.dumps({"cases": specs}))
-    subprocess.run(["Rscript", "oracle/run_case.R", str(input_file), str(output_file)],
+    subprocess.run(["Rscript", "development/oracle/run_case.R", str(input_file), str(output_file)],
                    cwd=ROOT, check=True)
     observed = {case["id"]: case for case in json.loads(output_file.read_text())}
     rows = []
@@ -67,7 +67,7 @@ def main() -> None:
               "python_version": platform.python_version(),
               "scope": "Warm public fit calls on the same machine; R startup excluded.",
               "models": rows}
-    (ROOT / "reports/benchmark_stage2.json").write_text(json.dumps(report, indent=2) + "\n")
+    (ROOT / "development/reports/benchmark_stage2.json").write_text(json.dumps(report, indent=2) + "\n")
     print(json.dumps(report, indent=2))
 
 

@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  {{ super() }}
+  {% if page %}
+    {% set description = page.meta.description | default(config.site_description, true) %}
+    {% set page_title = page.meta.title | default(page.title, true) %}
+    {% set title = page_title ~ " | " ~ config.site_name %}
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="{{ config.site_name | e }}">
+    <meta property="og:title" content="{{ title | e }}">
+    <meta property="og:description" content="{{ description | e }}">
+    <meta property="og:url" content="{{ page.canonical_url | e }}">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{{ title | e }}">
+    <meta name="twitter:description" content="{{ description | e }}">
+    {% set graph = [
+      {"@type": "WebSite", "@id": config.site_url ~ "#site", "url": config.site_url,
+       "name": config.site_name, "description": config.site_description, "inLanguage": "en"},
+      {"@type": "WebPage", "@id": page.canonical_url ~ "#page", "url": page.canonical_url,
+       "name": page_title, "description": description, "inLanguage": "en",
+       "isPartOf": {"@id": config.site_url ~ "#site"}}
+    ] %}
+    {% if page.is_homepage %}
+      {% set _ = graph.append({
+        "@type": "SoftwareSourceCode", "@id": config.site_url ~ "#software",
+        "name": "rparity", "description": config.site_description,
+        "codeRepository": config.repo_url, "url": config.site_url,
+        "programmingLanguage": "Python", "runtimePlatform": "Python >=3.11",
+        "version": config.extra.software_version,
+        "license": config.repo_url ~ "/blob/main/LICENSE"
+      }) %}
+    {% else %}
+      {% set _ = graph.append({
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "rparity", "item": config.site_url},
+          {"@type": "ListItem", "position": 2, "name": page_title, "item": page.canonical_url}
+        ]
+      }) %}
+    {% endif %}
+    <script type="application/ld+json">{{ {"@context": "https://schema.org", "@graph": graph} | tojson }}</script>
+  {% endif %}
+{% endblock %}

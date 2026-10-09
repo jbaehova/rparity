@@ -1,7 +1,7 @@
 """Representative public R inference examples, without committed package data.
 
 Every R observation and dataset is fetched through the approved JSON oracle.
-Only the ignored ``oracle/cache/acceptance-*`` files contain built-in data.
+Only the ignored ``development/oracle/cache/acceptance-*`` files contain built-in data.
 """
 from __future__ import annotations
 
@@ -21,7 +21,7 @@ from rparity.emm import EmmGrid
 from rparity.inference import coefficient_tests
 
 ROOT = Path(__file__).resolve().parents[1]
-CACHE = ROOT / 'oracle' / 'cache'
+CACHE = ROOT / 'development' / 'oracle' / 'cache'
 pytestmark = [
     pytest.mark.needs_r,
     pytest.mark.skipif(shutil.which('Rscript') is None, reason='R is a development-only oracle'),
@@ -34,7 +34,7 @@ def _oracle(label: str, specs: list[dict[str, Any]]) -> list[dict[str, Any]]:
     destination = CACHE / f'acceptance-{label}-output.json'
     source.write_text(json.dumps({'cases': specs}))
     completed = subprocess.run(
-        ['Rscript', 'oracle/run_case.R', str(source), str(destination)],
+        ['Rscript', 'development/oracle/run_case.R', str(source), str(destination)],
         cwd=ROOT, capture_output=True, text=True, check=False,
     )
     if completed.returncode and "there is no package called" in completed.stderr:

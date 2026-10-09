@@ -16,12 +16,12 @@ from typing import Any
 import numpy as np
 from scipy.special import expit
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 FAMILIES = ("poisson", "nbinom1", "nbinom2", "binomial", "beta", "gaussian")
 ZERO_FORMULAS = ("~0", "~1", "~z + x")
 DISPERSION_FORMULAS = ("~1", "~x", "~x + f")
 RANDOM_FORMULAS = ("(1|g)", "(x|g)")
-REFERENCE_OVERRIDES = json.loads((ROOT / "oracle/stage2_overrides.json").read_text())
+REFERENCE_OVERRIDES = json.loads((ROOT / "development/oracle/stage2_overrides.json").read_text())
 
 
 def make_case(index: int) -> dict[str, Any]:
@@ -131,7 +131,7 @@ def make_case(index: int) -> dict[str, Any]:
 def generate(count: int, start: int = 0, batch_size: int = 25, specs_only: bool = False) -> None:
     """Evaluate reproducible batches without dropping difficult oracle outcomes."""
     cases = [make_case(index) for index in range(start, start + count)]
-    cache = ROOT / "oracle/cache"
+    cache = ROOT / "development/oracle/cache"
     cache.mkdir(parents=True, exist_ok=True)
     (cache / f"s2-design-tmb-{start:04d}-{count}.json").write_text(json.dumps(cases, indent=2) + "\n")
     if specs_only:
@@ -145,7 +145,7 @@ def generate(count: int, start: int = 0, batch_size: int = 25, specs_only: bool 
         input_path = cache / f"s2-design-tmb-input-{start + offset:04d}.json"
         output_path = cache / f"s2-design-tmb-output-{start + offset:04d}.json"
         input_path.write_text(json.dumps({"cases": [case["spec"] for case in batch]}))
-        subprocess.run(["Rscript", str(ROOT / "oracle/run_case.R"), str(input_path), str(output_path)], check=True, cwd=ROOT)
+        subprocess.run(["Rscript", str(ROOT / "development/oracle/run_case.R"), str(input_path), str(output_path)], check=True, cwd=ROOT)
         outputs = json.loads(output_path.read_text())
         for case, output in zip(batch, outputs, strict=True):
             assert case["id"] == output["id"]
@@ -156,7 +156,7 @@ def generate(count: int, start: int = 0, batch_size: int = 25, specs_only: bool 
                     case["oracle_attempts"] = previous["oracle_attempts"]
                 if previous["spec"] != case["spec"]:
                     case.setdefault("oracle_attempts", []).append({
-                        "reason": "Uniform explicit high-precision nlminb controls with independent stationary-score Newton polish. Fourteen previously observed local optima use documented, independently R-confirmed public starts from oracle/stage2_overrides.json. Beta endpoints are projected to open support where needed. Original input and observation retained.",
+                        "reason": "Uniform explicit high-precision nlminb controls with independent stationary-score Newton polish. Fourteen previously observed local optima use documented, independently R-confirmed public starts from development/oracle/stage2_overrides.json. Beta endpoints are projected to open support where needed. Original input and observation retained.",
                         "spec": previous["spec"], "oracle": previous["oracle"],
                     })
             case["oracle"] = output

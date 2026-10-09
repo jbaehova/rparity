@@ -1,6 +1,6 @@
 {
-  "command": "uv run pytest --junitxml=oracle/cache/pytest-stage2-final.xml",
-  "source_sha256": "e6cef324cb542c557bd531b48cf5e9f73a95abbc6c59daedbf66ca66c23882f4",
+  "command": "uv run pytest --junitxml=development/oracle/cache/user-library-final.xml",
+  "source_sha256": "989a113e1127e96d1c53dfe95977c1d6e56b967fb49bde0f6a5989790f99a644",
   "test_counts": {
     "passed": 6838,
     "failed": 0,

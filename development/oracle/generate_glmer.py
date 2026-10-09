@@ -13,7 +13,7 @@ import pandas as pd
 
 from rparity.lmm._glmer_math import inverse_link
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 
 
 def make_case(seed: int) -> dict:
@@ -141,7 +141,7 @@ def generate(count: int) -> None:
         def execute(batch: list[dict]) -> list[dict]:
             input_path.write_text(json.dumps({"cases": batch}))
             subprocess.run(
-                ["Rscript", str(ROOT / "oracle/run_case.R"), str(input_path), str(output_path)],
+                ["Rscript", str(ROOT / "development/oracle/run_case.R"), str(input_path), str(output_path)],
                 check=True,
             )
             return json.loads(output_path.read_text())

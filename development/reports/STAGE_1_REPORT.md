@@ -30,7 +30,7 @@ the latest validation. The published release tag and artifacts are unchanged.
 
 The completion threshold is 98% across the entire Stage 1 corpus.
 Each module has at least 300 cases. Per-option coverage is generated in
-[coverage](../docs/coverage.md); release outcomes are in
+[coverage](../../docs/coverage.md); release outcomes are in
 [the tagged validation](https://github.com/jbaehova/rparity/blob/v0.1.0/reports/validation.json).
 
 Fourteen development-only representative R examples pass, including sleepstudy,

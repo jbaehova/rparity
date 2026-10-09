@@ -1,3 +1,8 @@
+---
+title: "GAMs in Python: mgcv-style smooths with rparity"
+description: Fit mgcv-style generalized additive models in Python with s(), te() and ti(). Compare R and rparity formulas, prediction, EDF and GAM diagnostics.
+---
+
 # mgcv migration
 
 Import `gam` and `gam_check` from `rparity`. The examples assume an existing
@@ -15,11 +20,9 @@ reproducing an R analysis. The supported methods select smoothness with GCV
 or UBRE, marginal ML, or REML. See the [validation coverage](../coverage.md)
 for the recorded numerical results and remaining limitations. Public R
 behavior is specified by the [mgcv GAM manual](https://stat.ethz.ch/R-manual/R-patched/library/mgcv/html/gam.html).
-Stage 2 is complete in v0.2.0. The fixed GAM corpus passes 1,184/1,200 cases;
-its 16 remaining differences count as failures in the combined Stage 2 result
-of 2,356/2,400 (98.17%). See the
-[Stage 2 report](https://github.com/jbaehova/rparity/blob/main/reports/STAGE_2_REPORT.md)
-and [case-level evidence](https://github.com/jbaehova/rparity/blob/main/reports/STAGE_2_FAILURES.json).
+
+See [numerical accuracy and limitations](../validation.md) for validation
+results, known differences and links to the detailed evidence.
 
 ## Model specification
 
@@ -154,12 +157,12 @@ smoothing-uncertainty correction that mgcv can apply for RE/ML selection.
 See the [public AIC specification](https://stat.ethz.ch/R-manual/R-devel/library/mgcv/html/logLik.gam.html)
 before comparing these AIC values. Boundary tests involving multiple
 random-effect smooths have an observed statistic discrepancy outside the
-seeded golden corpus; their approximate p-values need independent checking.
+recorded comparison corpus; their approximate p-values need independent checking.
 
 This module uses dense linear algebra and targets ordinary GAMs with modest
 basis sizes. Above 2000 unique thin plate locations, it chooses an evenly
 indexed subset; this differs from mgcv's knot-sampling convention and has no
-claim of native-coordinate parity. The Stage 2 scope does not include `bam`,
+claim of native-coordinate parity. The implementation does not include `bam`,
 `gamm`, extra response families, or `bs="fs"`. Shared smooth parameters
 through `id`, custom knots, and smoothing-selection uncertainty in prediction
 are unavailable. Numerical

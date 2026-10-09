@@ -2,7 +2,7 @@
 # Public black-box API only. Do not print, inspect, or resolve function bodies.
 suppressPackageStartupMessages(library(jsonlite))
 args <- commandArgs(trailingOnly = TRUE)
-if (length(args) < 1L) stop('Usage: Rscript oracle/run_case.R input.json [output.json]')
+if (length(args) < 1L) stop('Usage: Rscript development/oracle/run_case.R input.json [output.json]')
 input <- fromJSON(args[[1]], simplifyVector = FALSE)
 `%or%` <- function(x, y) if (is.null(x)) y else x
 plain_matrix <- function(x) unname(as.matrix(x))

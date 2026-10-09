@@ -4,7 +4,7 @@ AGENTS.md
 .env
 .env.*
 .venv/
-oracle/cache/
+development/oracle/cache/
 __pycache__/
 *.py[cod]
 .pytest_cache/

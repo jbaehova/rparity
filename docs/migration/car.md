@@ -1,10 +1,16 @@
+---
+title: "Type II and III ANOVA in Python: car and lmerTest migration"
+description: Translate car Anova and lmerTest ANOVA to Python for linear, generalized and mixed models. Learn contrast coding, Wald tests and degrees-of-freedom options.
+---
+
 # car migration
 
 These examples assume an existing data frame `d` and fitted models. Import the
 named functions from `rparity`. For statsmodels examples, import
 `statsmodels.api as sm` and `statsmodels.formula.api as smf`.
 
-Consult the validation coverage for numerical limitations in v0.1.0.
+See [numerical accuracy and limitations](../validation.md) and the
+[option-level coverage](../coverage.md) when reproducing an R analysis.
 
 Type III tests depend on contrast coding. **Use sum contrasts** when testing
 overall main effects in interaction models. This also applies to statsmodels:

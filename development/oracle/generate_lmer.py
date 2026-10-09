@@ -1,6 +1,6 @@
 """Generate seeded synthetic lmer cases using only the public R oracle.
 
-Run ``uv run python oracle/generate_lmer.py --count 600`` to regenerate.
+Run ``uv run python development/oracle/generate_lmer.py --count 600`` to regenerate.
 Covariance likelihoods follow Bates et al. (2015), equations 34 and 39-41.
 """
 from __future__ import annotations
@@ -13,7 +13,7 @@ from pathlib import Path
 
 import numpy as np
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 STRUCTURES = ["(1|g)", "(x|g)", "(x||g)", "(1|g)+(1|h)", "(1|g/h)", "(0+x|g)"]
 
 
@@ -118,7 +118,7 @@ def main() -> None:
             input_path = Path(temporary) / "input.json"
             output_path = Path(temporary) / "output.json"
             input_path.write_text(json.dumps({"cases": specs}))
-            subprocess.run(["Rscript", str(ROOT / "oracle/run_case.R"), str(input_path), str(output_path)], check=True)
+            subprocess.run(["Rscript", str(ROOT / "development/oracle/run_case.R"), str(input_path), str(output_path)], check=True)
             observed = {o["id"]: o for o in json.loads(output_path.read_text())}
         for case in cases:
             case["oracle"] = observed[case["id"]]

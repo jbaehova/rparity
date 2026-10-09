@@ -98,11 +98,11 @@ libraries are vendored unmodified from the pinned build dependency
 These paths live below the wheel's `rparity/_openblas_libs` directory. The
 manifest records package-relative paths and the original provider version.
 The provider's complete retained notice matches
-[`LICENSES/scipy-openblas32-LICENSE.txt`](../LICENSES/scipy-openblas32-LICENSE.txt)
+[`LICENSES/scipy-openblas32-LICENSE.txt`](../../LICENSES/scipy-openblas32-LICENSE.txt)
 byte for byte. It includes OpenBLAS and LAPACK BSD terms, the GCC runtime
 exception and associated GPL text, and libquadmath terms. The complete
-[`GNU LGPL 2.1 text`](../LICENSES/GNU-LGPL-2.1.txt) is bundled beside it.
-See the [notice explanation](../LICENSES/README.md) for upstream source links.
+[`GNU LGPL 2.1 text`](../../LICENSES/GNU-LGPL-2.1.txt) is bundled beside it.
+See the [notice explanation](../../LICENSES/README.md) for upstream source links.
 
 The source archive includes `hatch_build.py`, the pinned build requirement,
 all Python implementation modules, the README and all retained license

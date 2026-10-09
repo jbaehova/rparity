@@ -1,10 +1,16 @@
+---
+title: "GLS in Python: nlme correlation and variance models"
+description: Fit generalized least squares in Python with nlme-style AR1, compound symmetry and heteroscedastic variance models. Translate gls formulas and predictions.
+---
+
 # nlme migration
 
 These examples assume an existing data frame `d` and fitted models. Import the
 named functions from `rparity`. For statsmodels examples, import
 `statsmodels.api as sm` and `statsmodels.formula.api as smf`.
 
-Consult the validation coverage for numerical limitations in v0.1.0.
+See [numerical accuracy and limitations](../validation.md) and the
+[option-level coverage](../coverage.md) when reproducing an R analysis.
 
 | Use | R | Python |
 | --- | --- | --- |

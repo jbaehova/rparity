@@ -1,10 +1,16 @@
+---
+title: "lmer and glmer in Python: lme4 migration"
+description: Fit R-style linear and generalized mixed models in Python with lmer and glmer. Map random effects, REML, prediction and inference without runtime R or rpy2.
+---
+
 # lme4 migration
 
 These examples assume an existing data frame `d` and fitted models. Import the
 named functions from `rparity`. For statsmodels examples, import
 `statsmodels.api as sm` and `statsmodels.formula.api as smf`.
 
-Consult the validation coverage for numerical limitations in v0.1.0.
+See [numerical accuracy and limitations](../validation.md) and the
+[option-level coverage](../coverage.md) when reproducing an R analysis.
 
 Population prediction uses `re_form="NA"`; `re_form=None` includes conditional
 random effects. `deviance()` for Gaussian models returns the fitted ML/REML

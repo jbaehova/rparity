@@ -12,8 +12,8 @@ import pandas as pd
 
 from rparity import corAR1, glmer, gls, lmer
 
-ROOT = Path(__file__).resolve().parents[1]
-CACHE = ROOT / 'oracle/cache'
+ROOT = Path(__file__).resolve().parents[2]
+CACHE = ROOT / 'development/oracle/cache'
 
 
 def fit(spec: dict[str, Any]) -> Any:
@@ -30,6 +30,7 @@ def fit(spec: dict[str, Any]) -> Any:
 
 
 def main() -> None:
+    CACHE.mkdir(parents=True, exist_ok=True)
     selected=[]
     candidates = [('lmer','lmer_0000'),('lmer','lmer_0001'),('glmer','glmer_0000'),
                   ('glmer','glmer_0003'),('gls','gls_0001')]
@@ -45,7 +46,7 @@ def main() -> None:
     input_file=CACHE/'benchmark-input.json'
     output_file=CACHE/'benchmark-output.json'
     input_file.write_text(json.dumps({'cases':specs}))
-    subprocess.run(['Rscript','oracle/run_case.R',str(input_file),str(output_file)],cwd=ROOT,check=True)
+    subprocess.run(['Rscript','development/oracle/run_case.R',str(input_file),str(output_file)],cwd=ROOT,check=True)
     results={result['id']:result for result in json.loads(output_file.read_text())}
     report=[]
     for i,(option,spec) in enumerate(selected):
@@ -63,7 +64,7 @@ def main() -> None:
             r_times.append(observation['fit_seconds'])
         report.append({'option':option,'observations':len(next(iter(spec['data'].values()))),
                        'python_seconds':statistics.median(times),'r_seconds':statistics.median(r_times)})
-    output=ROOT/'reports/benchmark.json'
+    output=ROOT/'development/reports/benchmark.json'
     output.write_text(json.dumps({'repetitions':3,'statistic':'median',
         'scope':'warm fit calls on the same machine, excluding R process startup',
         'models':report},indent=2)+'\n')

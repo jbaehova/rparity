@@ -10,7 +10,7 @@ from typing import Any
 import numpy as np
 import pandas as pd
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 
 
 def make_specs(count: int = 600) -> list[dict[str, Any]]:
@@ -82,12 +82,12 @@ def make_specs(count: int = 600) -> list[dict[str, Any]]:
 def main() -> None:
     """Write real R outputs and all synthetic input observations into fixtures."""
     cases = make_specs() + make_native_specs() + make_extra_specs()
-    cache = ROOT / "oracle/cache"
+    cache = ROOT / "development/oracle/cache"
     cache.mkdir(parents=True, exist_ok=True)
     input_path = cache / "emm-golden-input.json"
     output_path = cache / "emm-golden-output.json"
     input_path.write_text(json.dumps({"cases": [case["spec"] for case in cases]}))
-    subprocess.run(["Rscript", str(ROOT / "oracle/run_case.R"), str(input_path), str(output_path)], check=True)
+    subprocess.run(["Rscript", str(ROOT / "development/oracle/run_case.R"), str(input_path), str(output_path)], check=True)
     results = json.loads(output_path.read_text())
     boundaries = []
     for case in cases:
@@ -105,7 +105,7 @@ def main() -> None:
         boundary_input = cache / "emm-boundary-input.json"
         boundary_output = cache / "emm-boundary-output.json"
         boundary_input.write_text(json.dumps({"cases": boundaries}))
-        subprocess.run(["Rscript", str(ROOT / "oracle/run_case.R"), str(boundary_input), str(boundary_output)], check=True)
+        subprocess.run(["Rscript", str(ROOT / "development/oracle/run_case.R"), str(boundary_input), str(boundary_output)], check=True)
         boundary_results = {result["id"]: result for result in json.loads(boundary_output.read_text())}
         for case in cases:
             if case["id"] in boundary_results:

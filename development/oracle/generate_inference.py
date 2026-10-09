@@ -9,7 +9,7 @@ from typing import Any
 
 import numpy as np
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 
 
 def case_spec(index: int) -> dict[str, Any]:
@@ -58,14 +58,14 @@ def generate(count: int = 600, batch_size: int = 50) -> None:
     """Run only the approved R oracle and preserve every output, including errors."""
     destination = ROOT / 'tests/golden/inference'
     destination.mkdir(parents=True, exist_ok=True)
-    cache = ROOT / 'oracle/cache'
+    cache = ROOT / 'development/oracle/cache'
     cache.mkdir(parents=True, exist_ok=True)
     for begin in range(0, count, batch_size):
         specs = [case_spec(i) for i in range(begin, min(begin + batch_size, count))]
         request = cache / 'inference_request.json'
         response = cache / 'inference_response.json'
         request.write_text(json.dumps({'cases': specs}))
-        subprocess.run(['Rscript', str(ROOT / 'oracle/run_case.R'), str(request), str(response)],
+        subprocess.run(['Rscript', str(ROOT / 'development/oracle/run_case.R'), str(request), str(response)],
                        check=True)
         outputs = json.loads(response.read_text())
         for spec, oracle in zip(specs, outputs, strict=True):

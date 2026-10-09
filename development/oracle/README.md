@@ -6,7 +6,8 @@ function, formula, data columns (or CSV), arguments, and an extraction operation
 It writes a JSON array of public results and captured warnings.
 
 ```sh
-Rscript oracle/run_case.R oracle/cache/input.json oracle/cache/output.json
+Rscript development/oracle/run_case.R \
+  development/oracle/cache/input.json development/oracle/cache/output.json
 ```
 
 Supported fit calls are `lmer`, `glmer`, `gls`, `lm`, `glm`, `gam`, and
@@ -26,7 +27,7 @@ Wheel builds vendor the OpenBLAS backend and its native dependencies, with
 their license notices. The provider is a build-time dependency. The current
 clean-wheel execution check covers macOS ARM64.
 
-## Stage 2 case schema
+## GAM and distributional model case schema
 
 GAM cases use `call: "gam"`, the ordinary R smooth formula, and a top-level
 `family` of `gaussian`, `binomial`, `poisson`, or `Gamma`. An optional `link`
@@ -82,7 +83,7 @@ to `~ 0`, and `dispformula` to `~ 1`. The oracle uses one evaluation thread and
 `nlminb` controls `iter.max = 10000`, `eval.max = 10000`, `rel.tol = 1e-14`,
 `x.tol = 1e-12`, `sing.tol = 1e-16`, and `xf.tol = 1e-16`. `tmb_control` can
 supply explicit overrides. Top-level `weights` and `offset` name data columns,
-as in Stage 1 cases. JSON arrays under `args.start` are converted to numeric
+as in the mixed-model cases. JSON arrays under `args.start` are converted to numeric
 vectors for the public `beta`, `betazi`, `betadisp`, and `theta` start fields.
 Their parameterization follows the
 [public fit specification](https://glmmTMB.github.io/glmmTMB/reference/glmmTMB.html)
@@ -120,14 +121,14 @@ fitted score. An optional `tmb_inner_control` changes documented
 interface. These diagnostic options do not supply Python runtime fitting
 inputs.
 
-## Reproducible Stage 2 references
+## Reproducible references
 
 The generators enumerate seeded designs before fitting. Run them locally with
 the development R packages recorded in `versions.json`:
 
 ```sh
-uv run python oracle/generate_gam.py --count 1200
-uv run python oracle/generate_tmb.py --count 1200
+uv run python development/oracle/generate_gam.py --count 1200
+uv run python development/oracle/generate_tmb.py --count 1200
 ```
 
 Use `--start` and `--count` for an indexed range, or `--specs-only` to write
@@ -157,16 +158,22 @@ identifiable directions of a rank-one random-effect model. Dynamic checks
 verify the score, curvature, likelihood, and physical covariance before such
 a reference is used. Original observations remain intact. Auxiliary models
 do not replace the original model's parameter count, AIC, or BIC. Each
-exception records its fields and mathematical evidence in the Stage 2
+exception records its fields and mathematical evidence in the validation
 reports and golden policies.
 
-Stage 2 is complete in v0.2.0. The fixed 2,400-case corpus has 2,356 passes
+The fixed GAM and distributional model corpus has 2,400 cases with 2,356 passes
 (98.17%) and 44 retained failures: 16 GAM and 28 extended-model cases.
-Stage 1 retains its 3,799/3,856 baseline with 57 differences and no new
-regression. See the [Stage 2 report](../reports/STAGE_2_REPORT.md) and
+The mixed-model and inference corpus retains its 3,799/3,856 baseline with 57
+differences and no new regression. See the [validation report](../reports/STAGE_2_REPORT.md) and
 [case-level failures](../reports/STAGE_2_FAILURES.json). All tests run locally;
 GitHub Actions tests require an explicit request for manual dispatch.
 
 Synthetic golden files include their full inputs and observations. Built-in R
-example data may only be saved beneath ignored `oracle/cache/`. Regeneration
+example data may only be saved beneath ignored `development/oracle/cache/`. Regeneration
 requires development packages listed in `versions.json`, when available.
+
+The development tools and their local caches now live under `development/`.
+Historical evidence retains the paths recorded when it was created, including
+the former `oracle/cache/` location. Use the commands above for the current
+checkout. Cached observations moved with the directory; they were not regenerated
+or edited during the move.

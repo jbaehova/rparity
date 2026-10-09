@@ -5,11 +5,16 @@ build-backend = "hatchling.build"
 [project]
 name = "rparity"
 version = "0.2.0"
-description = "R-grade mixed models, marginal means, GAMs and meta-analysis in pure Python, verified against R."
+description = "R-style mixed models, GAMs and estimated marginal means in Python, without an R runtime."
 readme = "README.md"
 requires-python = ">=3.11"
 license = "MIT"
 dependencies = ["numpy>=2.0", "scipy>=1.14", "pandas>=2.2", "formulaic>=1.1", "statsmodels>=0.14"]
+
+[project.urls]
+Documentation = "https://jbaehova.github.io/rparity/"
+Repository = "https://github.com/jbaehova/rparity"
+Issues = "https://github.com/jbaehova/rparity/issues"
 
 [dependency-groups]
 dev = ["pytest>=8", "ruff>=0.11", "mypy>=1.15", "pandas-stubs", "scipy-stubs", "mkdocs-material>=9", "polars>=1", "scipy-openblas32==0.3.34.237.0"]

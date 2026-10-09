@@ -1,3 +1,8 @@
+---
+title: "glmmTMB in Python: mixed models, zero inflation and dispersion"
+description: Use glmmTMB-style mixed models in Python with rparity. Translate R formulas for zero inflation, dispersion, prediction and component-specific marginal means.
+---
+
 # glmmTMB migration
 
 Import `glmmTMB`, `emmeans`, and `Anova` from `rparity`. The examples assume an
@@ -16,11 +21,9 @@ There is no runtime R or automatic-differentiation dependency. See the
 [validation coverage](../coverage.md) for numerical evidence and the
 [public model specification](https://glmmTMB.github.io/glmmTMB/reference/glmmTMB.html)
 for the R interface.
-Stage 2 is complete in v0.2.0. The fixed extended-model corpus passes
-1,172/1,200 cases; its 28 remaining differences count as failures in the
-combined Stage 2 result of 2,356/2,400 (98.17%). See the
-[Stage 2 report](https://github.com/jbaehova/rparity/blob/main/reports/STAGE_2_REPORT.md)
-and [case-level evidence](https://github.com/jbaehova/rparity/blob/main/reports/STAGE_2_FAILURES.json).
+
+See [numerical accuracy and limitations](../validation.md) for validation
+results, known differences and links to the detailed evidence.
 
 ## Model specification
 
@@ -125,7 +128,7 @@ explicit prediction offsets for new data.
 
 ## Marginal means and Wald tests
 
-The Stage 1 inference functions accept conditional, zero-inflation, and
+The inference functions accept conditional, zero-inflation, and
 dispersion components. Pass `component` explicitly for clarity. Conditional
 means on the response scale refer to the conditional mean, while
 `component="zi", type="response"` reports structural-zero probabilities.
