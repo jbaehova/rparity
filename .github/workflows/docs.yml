@@ -6,9 +6,6 @@ on:
       - 'docs/**'
       - 'mkdocs.yml'
       - 'reports/validation.json'
-      - 'pyproject.toml'
-      - 'uv.lock'
-      - '.github/workflows/docs.yml'
   workflow_dispatch:
 permissions:
   contents: read

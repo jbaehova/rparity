@@ -86,7 +86,14 @@ def _component_formula(formula: str, conditional_rhs: str | None = None) -> str:
 
 @dataclass
 class GlmmTMBResult:
-    """Conditional, zero-inflation, and dispersion components of a Laplace fit."""
+    """Conditional, zero-inflation, and dispersion components of a Laplace fit.
+
+    ``outer_gradient`` uses the fitted raw parameters. ``outer_information``
+    differentiates scores in ``information_parameters`` coordinates; the
+    ``information_transform`` Jacobian maps these coordinates back to raw
+    parameters. These numeric diagnostics expose weak information directions
+    without assigning them finite coefficient uncertainty.
+    """
 
     formula: str
     data: pd.DataFrame
@@ -124,6 +131,10 @@ class GlmmTMBResult:
     terms: dict[str, list[int]]
     converged: bool
     pd_hessian: bool
+    outer_gradient: Array
+    outer_information: Array
+    information_parameters: Array
+    information_transform: Array
     contrasts: str = "treatment"
     reml: bool = False
     offset_expressions: list[str] = field(default_factory=list)
@@ -631,9 +642,15 @@ def glmmTMB(
                 chol = linalg.cho_factor(hessian, lower=True, check_finite=False)
                 step = linalg.cho_solve(chol, gradient, check_finite=False)
             except linalg.LinAlgError:
-                ridge = max(1e-6, -float(np.linalg.eigvalsh(hessian)[0]) + 1e-4)
-                step = linalg.solve(
-                    hessian + ridge * identity, gradient, assume_a="pos", check_finite=False
+                # A scalar ridge can disappear when added to an indefinite
+                # matrix with a large spectral range. Invert a positive
+                # spectral proposal directly instead. This affects only the
+                # descent direction; the likelihood and final observed
+                # information still use the unmodified inner Hessian.
+                eigenvalues, eigenvectors = linalg.eigh(hessian, check_finite=False)
+                floor = max(1e-4, np.max(np.abs(eigenvalues), initial=0) * 1e-12)
+                step = eigenvectors @ (
+                    (eigenvectors.T @ gradient) / np.maximum(eigenvalues, floor)
                 )
             criterion = float(np.sum(terms.value) + u @ u / 2)
             scale = 1.0
@@ -957,9 +974,11 @@ def glmmTMB(
         native = native_coordinates(np.asarray(fit.x, dtype=float), blocks, coefficients)
         covariance_transform = np.eye(len(fit.x))
         if native is None:
+            information_parameters = np.asarray(fit.x, dtype=float)
             hessian = centered_score_hessian(gradient, np.asarray(fit.x, dtype=float))
         else:
             natural_parameters, transform = native
+            information_parameters = natural_parameters
 
             def native_gradient(values: Array) -> Array:
                 raw, jacobian = transform(values)
@@ -1064,6 +1083,10 @@ def glmmTMB(
         terms=fixed.terms,
         converged=converged,
         pd_hessian=pd_hessian,
+        outer_gradient=gradient(np.asarray(fit.x, dtype=float)).copy(),
+        outer_information=hessian.copy(),
+        information_parameters=information_parameters.copy(),
+        information_transform=covariance_transform.copy(),
         contrasts=contrasts,
         offset_expressions=parsed.offsets,
         offset_column=offset if isinstance(offset, str) else None,

@@ -1,0 +1,50 @@
+{
+  "gam_0280": {
+    "penalty_rank": 3,
+    "coefficients": true,
+    "covariance": true,
+    "coefficient_edf": true
+  },
+  "gam_0880": {
+    "penalty_rank": 4,
+    "coefficients": true,
+    "covariance": true,
+    "coefficient_edf": true
+  },
+  "gam_1080": {
+    "penalty_rank": 3,
+    "coefficients": true,
+    "covariance": true,
+    "coefficient_edf": true
+  },
+  "gam_1120": {
+    "penalty_rank": 5,
+    "coefficients": true,
+    "covariance": true,
+    "coefficient_edf": true
+  },
+  "gam_1124": {
+    "penalty_rank": 7,
+    "coefficients": true,
+    "covariance": true,
+    "coefficient_edf": true,
+    "term_fit": [
+      "s(g)"
+    ],
+    "term_se": [
+      "s(g)"
+    ],
+    "smooth_edf": [
+      "s(g)"
+    ],
+    "smooth_statistic": [
+      "s(g)"
+    ]
+  },
+  "gam_1160": {
+    "penalty_rank": 3,
+    "coefficients": true,
+    "covariance": true,
+    "coefficient_edf": true
+  }
+}

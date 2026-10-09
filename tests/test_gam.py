@@ -1,5 +1,10 @@
 """Independent identities for penalized fitting, covariance, and prediction."""
 
+import json
+import warnings
+from dataclasses import replace
+from pathlib import Path
+
 import numpy as np
 import pandas as pd
 import pytest
@@ -211,6 +216,73 @@ def test_weighted_gamma_profiles_precision_likelihood(method):
     assert_allclose(np.log(fit._likelihood_scale), independent.x, atol=2e-6)
     assert_allclose(fit.objective, independent.fun, atol=1e-8)
     assert_allclose(fit.criterion_in_basis(np.eye(len(fit.beta))), fit.objective, atol=1e-8)
+
+
+def test_qr_stationarity_accepts_exact_solution_and_rejects_wrong_mean():
+    from rparity.gam._fit import _Family, _irls, _penalized_stationary
+
+    frame = sample()
+    X = np.column_stack([np.ones(len(frame)), frame.x, frame.z])
+    root = np.diag([0., 3., 1e6])
+    weights = np.ones(len(frame))
+    family = _Family("gaussian", "identity")
+    inner = _irls(X, frame.y.to_numpy(), weights, np.zeros(len(frame)), family,
+                  root.T@root, 100, 1e-11, root)
+    assert _penalized_stationary(X, frame.y.to_numpy(), weights, family, inner, root)
+    wrong_beta = inner.beta+np.array([.01, 0, 0])
+    wrong_mean = X@wrong_beta
+    wrong = replace(inner, beta=wrong_beta, eta=wrong_mean, mu=wrong_mean,
+                    deviance=float(np.sum((frame.y.to_numpy()-wrong_mean)**2)))
+    assert not _penalized_stationary(X, frame.y.to_numpy(), weights, family, wrong, root)
+
+
+def test_outer_stationarity_requires_score_and_positive_curvature():
+    from rparity.gam._fit import _criterion_stationary
+
+    assert _criterion_stationary(np.zeros(2), np.diag([0., 2.]), 10.)
+    assert not _criterion_stationary(np.array([1e-3, 0.]), np.eye(2), 10.)
+    assert not _criterion_stationary(np.zeros(2), np.diag([-1e-3, 2.]), 10.)
+    assert not _criterion_stationary(np.array([np.nan]), np.ones((1, 1)), 10.)
+
+
+def test_stationary_fit_retains_failed_optimizer_status(monkeypatch):
+    minimize = optimize.minimize
+
+    def stalled_status(*args, **kwargs):
+        result = minimize(*args, **kwargs)
+        result.success = False
+        result.message = "Simulated line-search stagnation after reaching the optimum"
+        return result
+
+    reference = gam('y ~ s(x, bs="cr", k=6)', sample(), method="REML")
+    monkeypatch.setattr(optimize, "minimize", stalled_status)
+    with warnings.catch_warnings(record=True) as caught:
+        fit = gam('y ~ s(x, bs="cr", k=6)', sample(), method="REML")
+    assert fit.converged
+    assert not fit._outer_result.success
+    assert "Simulated" in fit._outer_result.message
+    assert not any(issubclass(item.category, RuntimeWarning) for item in caught)
+    assert_allclose(fit.beta, reference.beta, rtol=1e-8, atol=1e-11)
+    assert_allclose(fit.objective, reference.objective, atol=1e-11)
+
+
+@pytest.mark.parametrize("case_id", [406, 601, 820, 835])
+def test_machine_stationary_regressions_without_r_runtime(case_id):
+    # Only seeded input data are used. No R observations or optimizer results
+    # supply a convergence label or a fitting value to this regression test.
+    fixture = Path(__file__).parent/f"golden/gam/gam_{case_id:04d}.json"
+    spec = json.loads(fixture.read_text())["spec"]
+    frame = pd.DataFrame(spec["data"])
+    for name in spec.get("factors", []):
+        frame[name] = pd.Categorical(frame[name])
+    with warnings.catch_warnings(record=True) as caught:
+        fit = gam(spec["formula"], frame, family=spec["family"], link=spec.get("link"),
+                  **spec.get("args", {}))
+    assert fit.converged
+    assert not any(issubclass(item.category, RuntimeWarning) for item in caught)
+    gradient, hessian = fit.smoothing_derivatives()
+    assert np.max(np.abs(gradient)) < 1e-8*max(1, abs(fit.objective))
+    assert np.min(linalg.eigvalsh(hessian)) >= -1e-8*max(1, np.linalg.norm(hessian, 2))
 
 
 @pytest.mark.parametrize("argument", [{"method":"invalid"}, {"family":"beta"}, {"weights":-1}, {"sp":[1,2]}, {"gamma":0}])

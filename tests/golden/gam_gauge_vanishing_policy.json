@@ -1,0 +1,86 @@
+{
+  "gam_0017": {
+    "kind": "gam_gauge_positive_penalty_limit",
+    "collapsed_penalty_indices": [
+      0
+    ],
+    "positive_rank": 4,
+    "identified_null_dimension": 5,
+    "coefficients": true,
+    "covariance": true,
+    "optimizer_warning_metadata_difference": false,
+    "reason": "The exact joint design/penalty gauge is removed first. Only the shared vanishing positive-penalty directions use recomputed convex-score and Schur covariance envelopes. The retained identifiable null projection and complete model predictions retain every original TASK tolerance."
+  },
+  "gam_0057": {
+    "kind": "gam_gauge_positive_penalty_limit",
+    "collapsed_penalty_indices": [
+      0
+    ],
+    "positive_rank": 4,
+    "identified_null_dimension": 5,
+    "coefficients": true,
+    "covariance": true,
+    "optimizer_warning_metadata_difference": false,
+    "reason": "The exact joint design/penalty gauge is removed first. Only the shared vanishing positive-penalty directions use recomputed convex-score and Schur covariance envelopes. The retained identifiable null projection and complete model predictions retain every original TASK tolerance."
+  },
+  "gam_0067": {
+    "kind": "gam_gauge_positive_penalty_limit",
+    "collapsed_penalty_indices": [
+      0
+    ],
+    "positive_rank": 6,
+    "identified_null_dimension": 5,
+    "coefficients": true,
+    "covariance": true,
+    "optimizer_warning_metadata_difference": true,
+    "reason": "The exact joint design/penalty gauge is removed first. Only the shared vanishing positive-penalty directions use recomputed convex-score and Schur covariance envelopes. The retained identifiable null projection and complete model predictions retain every original TASK tolerance."
+  },
+  "gam_0077": {
+    "kind": "gam_gauge_positive_penalty_limit",
+    "collapsed_penalty_indices": [
+      0
+    ],
+    "positive_rank": 3,
+    "identified_null_dimension": 5,
+    "coefficients": true,
+    "covariance": true,
+    "optimizer_warning_metadata_difference": true,
+    "reason": "The exact joint design/penalty gauge is removed first. Only the shared vanishing positive-penalty directions use recomputed convex-score and Schur covariance envelopes. The retained identifiable null projection and complete model predictions retain every original TASK tolerance."
+  },
+  "gam_0517": {
+    "kind": "gam_gauge_positive_penalty_limit",
+    "collapsed_penalty_indices": [
+      0
+    ],
+    "positive_rank": 6,
+    "identified_null_dimension": 5,
+    "coefficients": true,
+    "covariance": true,
+    "optimizer_warning_metadata_difference": true,
+    "reason": "The exact joint design/penalty gauge is removed first. Only the shared vanishing positive-penalty directions use recomputed convex-score and Schur covariance envelopes. The retained identifiable null projection and complete model predictions retain every original TASK tolerance."
+  },
+  "gam_0557": {
+    "kind": "gam_gauge_positive_penalty_limit",
+    "collapsed_penalty_indices": [
+      0
+    ],
+    "positive_rank": 3,
+    "identified_null_dimension": 5,
+    "coefficients": true,
+    "covariance": true,
+    "optimizer_warning_metadata_difference": true,
+    "reason": "The exact joint design/penalty gauge is removed first. Only the shared vanishing positive-penalty directions use recomputed convex-score and Schur covariance envelopes. The retained identifiable null projection and complete model predictions retain every original TASK tolerance."
+  },
+  "gam_1037": {
+    "kind": "gam_gauge_positive_penalty_limit",
+    "collapsed_penalty_indices": [
+      0
+    ],
+    "positive_rank": 6,
+    "identified_null_dimension": 5,
+    "coefficients": true,
+    "covariance": true,
+    "optimizer_warning_metadata_difference": true,
+    "reason": "The exact joint design/penalty gauge is removed first. Only the shared vanishing positive-penalty directions use recomputed convex-score and Schur covariance envelopes. The retained identifiable null projection and complete model predictions retain every original TASK tolerance."
+  }
+}

@@ -1,0 +1,539 @@
+{
+  "status": "All seven mathematical guards and read-only complete golden integrations pass; original 137 guards remain passing. Root-owned permanent integration pending.",
+  "source_hash": {
+    "src/rparity/gam/__init__.py": "6f9ca760b96d93071ade1d6cc18839331534590ff0479b6efe984e442a74a332",
+    "src/rparity/gam/_basis.py": "7473e9fab4a81ddf36736c73f1374df8619e548b92b90b80b26afab96028ea66",
+    "src/rparity/gam/_check.py": "9bf276c2b8f98cc588ad702cf145815310c9fd815ae8d7684d04c09f6aed7dd2",
+    "src/rparity/gam/_cs.py": "8c2d96f57bacefcc620aa2d4aba555059dbf813c456e5fd109e2d34507113ea1",
+    "src/rparity/gam/_fit.py": "9a0ec29f6c9aa1413e31613981956684cd70343aeaf409d93889a6112d2428b2",
+    "src/rparity/gam/_formula.py": "d1dd97a89c6dabc7e90c73235fd734925841ab3b79b0812534b3716887a4d4b8",
+    "src/rparity/gam/_summary.py": "f0de4e97a8354720134286aa330dc18e0d66a860ee73336a9667c82119a66a47"
+  },
+  "audited_ids": [
+    "gam_0017",
+    "gam_0057",
+    "gam_0067",
+    "gam_0077",
+    "gam_0517",
+    "gam_0557",
+    "gam_1037"
+  ],
+  "eligible_count": 7,
+  "mathematical_measure": "Joint X/S gauge removed orthogonally; nominal unpenalized dimension retained. For REML, add log|det(C.T @ G)| to the orthogonal-quotient limit criterion, using observed covariance-null normals C and independent joint-null basis G.",
+  "strict_fields_preserved": [
+    "retained identifiable null coefficients",
+    "retained identifiable null covariance",
+    "full fitted values",
+    "full predictions",
+    "prediction standard errors",
+    "scale",
+    "total EDF",
+    "summed term predictions",
+    "k-check statistics and p-values",
+    "rank and model rank",
+    "summary section and column structure"
+  ],
+  "exception_fields": [
+    "positive-penalty coefficient projection",
+    "positive-penalty covariance projection",
+    "R convergence-warning metadata"
+  ],
+  "warning_policy": "No warnings fabricated. Python convergence, analytic smoothing score, and Hessian PSD are independently required before retaining all numeric fields.",
+  "maximum_absolute_criterion_perturbation": 5.367127187128062e-09,
+  "maximum_absolute_selection_data_loss_perturbation": 1.1904148777830414e-09,
+  "maximum_positive_curve_relative_to_link_noise_rms": 1.0255340278113823e-09,
+  "case_proofs": [
+    {
+      "id": "gam_0017",
+      "eligible": true,
+      "family": "binomial",
+      "link": "logit",
+      "method": "REML",
+      "formula": "y ~ f + w + s(x, by=w, bs=\"tp\", k=6)",
+      "r_warnings": [],
+      "proof": {
+        "sources": {
+          "Python": {
+            "criterion_change": 9.137437473327736e-10,
+            "data_loss_change": -4.164633082837099e-10,
+            "minimum_positive_penalty": 1003570048.8270489,
+            "coefficient_error": 2.439588473549348e-10,
+            "coefficient_bound": 1.7669200910788387e-09,
+            "covariance_error": 1.2005252891447613e-09,
+            "covariance_bound": 2.6586092788461896e-09,
+            "positive_curve_relative_to_link_noise_rms": 3.587800413946039e-10,
+            "null_score": 3.4416913763379853e-15
+          },
+          "R": {
+            "criterion_change": 2.6118414098164067e-09,
+            "data_loss_change": -1.1904148777830414e-09,
+            "minimum_positive_penalty": 351095980.61417896,
+            "coefficient_error": 6.973300151838259e-10,
+            "coefficient_bound": 5.050550789489363e-09,
+            "covariance_error": 3.431572417246207e-09,
+            "covariance_bound": 7.599348301051675e-09,
+            "positive_curve_relative_to_link_noise_rms": 1.0255340278113823e-09,
+            "null_score": 3.4416913763379853e-15
+          }
+        },
+        "joint_nullity": 1,
+        "positive_rank": 4,
+        "identified_null_dimension": 5,
+        "nominal_unpenalized_dimension": 6,
+        "REML_slice_log_jacobian": -0.346573590279972,
+        "criterion_limit": 90.98864020035745,
+        "gradient": [
+          -9.137435252881687e-10
+        ],
+        "hessian_eigenvalues": [
+          9.135655195298872e-10
+        ]
+      }
+    },
+    {
+      "id": "gam_0057",
+      "eligible": true,
+      "family": "binomial",
+      "link": "logit",
+      "method": "ML",
+      "formula": "y ~ f + w + s(x, by=w, bs=\"tp\", k=6)",
+      "r_warnings": [],
+      "proof": {
+        "sources": {
+          "Python": {
+            "criterion_change": 7.077431973812054e-10,
+            "data_loss_change": -8.890310709830374e-11,
+            "minimum_positive_penalty": 17500106808.63095,
+            "coefficient_error": 2.9954867731306265e-11,
+            "coefficient_bound": 3.4648115229244843e-10,
+            "covariance_error": 7.138486252425084e-11,
+            "covariance_bound": 1.572321709413766e-10,
+            "positive_curve_relative_to_link_noise_rms": 4.1808756990988263e-11,
+            "null_score": 1.7631081645662542e-14
+          },
+          "R": {
+            "criterion_change": 3.779078383558954e-09,
+            "data_loss_change": -4.747846560348989e-10,
+            "minimum_positive_penalty": 3277456482.869835,
+            "coefficient_error": 1.5994731287106658e-10,
+            "coefficient_bound": 1.850049635742543e-09,
+            "covariance_error": 3.811626479383845e-10,
+            "covariance_bound": 8.395473134793224e-10,
+            "positive_curve_relative_to_link_noise_rms": 2.2323712207602028e-10,
+            "null_score": 1.7631081645662542e-14
+          }
+        },
+        "joint_nullity": 1,
+        "positive_rank": 4,
+        "identified_null_dimension": 5,
+        "nominal_unpenalized_dimension": 6,
+        "REML_slice_log_jacobian": 0.0,
+        "criterion_limit": 75.20877245502318,
+        "gradient": [
+          -7.077536334776369e-10
+        ],
+        "hessian_eigenvalues": [
+          7.076561558960748e-10
+        ]
+      }
+    },
+    {
+      "id": "gam_0067",
+      "eligible": true,
+      "family": "poisson",
+      "link": "log",
+      "method": "ML",
+      "formula": "y ~ f + w + s(x, by=w, bs=\"tp\", k=8)",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "proof": {
+        "sources": {
+          "Python": {
+            "criterion_change": 1.490064960307791e-09,
+            "data_loss_change": -3.246896085329354e-10,
+            "minimum_positive_penalty": 78534115608.02768,
+            "coefficient_error": 2.2989100375216115e-11,
+            "coefficient_bound": 2.5995195043369857e-10,
+            "covariance_error": 1.5925960932239896e-11,
+            "covariance_bound": 5.1627737309822514e-11,
+            "positive_curve_relative_to_link_noise_rms": 1.0097253932404714e-10,
+            "null_score": 1.4210854715202004e-13
+          },
+          "R": {
+            "criterion_change": 5.367127187128062e-09,
+            "data_loss_change": -1.169354391095112e-09,
+            "minimum_positive_penalty": 21803942909.050903,
+            "coefficient_error": 8.280207014928548e-11,
+            "coefficient_bound": 9.363029711207865e-10,
+            "covariance_error": 5.736265357945527e-11,
+            "covariance_bound": 1.859543802412346e-10,
+            "positive_curve_relative_to_link_noise_rms": 3.6368456528084953e-10,
+            "null_score": 1.4210854715202004e-13
+          }
+        },
+        "joint_nullity": 1,
+        "positive_rank": 6,
+        "identified_null_dimension": 5,
+        "nominal_unpenalized_dimension": 6,
+        "REML_slice_log_jacobian": 0.0,
+        "criterion_limit": 196.46215000429297,
+        "gradient": [
+          -1.490117806923763e-09
+        ],
+        "hessian_eigenvalues": [
+          1.4888830908906432e-09
+        ]
+      }
+    },
+    {
+      "id": "gam_0077",
+      "eligible": true,
+      "family": "Gamma",
+      "link": "inverse",
+      "method": "ML",
+      "formula": "y ~ f + w + s(x, by=w, bs=\"tp\", k=5)",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "proof": {
+        "sources": {
+          "Python": {
+            "criterion_change": 5.028013561059197e-10,
+            "data_loss_change": -2.958842060252209e-10,
+            "minimum_positive_penalty": 23548273745.10733,
+            "coefficient_error": 2.2925751740433973e-11,
+            "coefficient_bound": 1.68047914660136e-10,
+            "covariance_error": 8.635721092617362e-12,
+            "covariance_bound": 1.3471620851274538e-11,
+            "positive_curve_relative_to_link_noise_rms": 9.018562957347712e-11,
+            "null_score": 4.4747635072487585e-14
+          },
+          "R": {
+            "criterion_change": 1.697777918252541e-09,
+            "data_loss_change": -9.990763771838829e-10,
+            "minimum_positive_penalty": 6973823344.939064,
+            "coefficient_error": 7.741516593034241e-11,
+            "coefficient_bound": 5.674417175455274e-10,
+            "covariance_error": 2.9159909841442614e-11,
+            "covariance_bound": 4.54891671184052e-11,
+            "positive_curve_relative_to_link_noise_rms": 3.0453089015489057e-10,
+            "null_score": 4.4747635072487585e-14
+          }
+        },
+        "joint_nullity": 1,
+        "positive_rank": 3,
+        "identified_null_dimension": 5,
+        "nominal_unpenalized_dimension": 6,
+        "REML_slice_log_jacobian": 0.0,
+        "criterion_limit": -30.340700278988557,
+        "gradient": [
+          -5.027698257720203e-10
+        ],
+        "hessian_eigenvalues": [
+          5.023759186428833e-10
+        ]
+      }
+    },
+    {
+      "id": "gam_0517",
+      "eligible": true,
+      "family": "Gamma",
+      "link": "inverse",
+      "method": "REML",
+      "formula": "y ~ f + w + s(x, by=w, bs=\"tp\", k=8) + offset(o)",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "proof": {
+        "sources": {
+          "Python": {
+            "criterion_change": 9.476295304011728e-10,
+            "data_loss_change": -6.68215704990871e-10,
+            "minimum_positive_penalty": 1076793028.2899904,
+            "coefficient_error": 1.494309297398509e-10,
+            "coefficient_bound": 1.3090958574910728e-09,
+            "covariance_error": 2.0380086152596128e-10,
+            "covariance_bound": 5.447416390185963e-10,
+            "positive_curve_relative_to_link_noise_rms": 4.735660282787652e-10,
+            "null_score": 3.2124739603164896e-14
+          },
+          "R": {
+            "criterion_change": 8.073115509432682e-10,
+            "data_loss_change": -5.693152616004227e-10,
+            "minimum_positive_penalty": 1263906487.7174957,
+            "coefficient_error": 1.2730928953599044e-10,
+            "coefficient_bound": 1.1152923941828589e-09,
+            "covariance_error": 1.7362943438895255e-10,
+            "covariance_bound": 4.640960425580071e-10,
+            "positive_curve_relative_to_link_noise_rms": 4.0345889784833214e-10,
+            "null_score": 3.2124739603164896e-14
+          }
+        },
+        "joint_nullity": 1,
+        "positive_rank": 6,
+        "identified_null_dimension": 5,
+        "nominal_unpenalized_dimension": 6,
+        "REML_slice_log_jacobian": -0.346573590279972,
+        "criterion_limit": -28.607192869013087,
+        "gradient": [
+          -9.476930351581814e-10
+        ],
+        "hessian_eigenvalues": [
+          9.480564481615754e-10
+        ]
+      }
+    },
+    {
+      "id": "gam_0557",
+      "eligible": true,
+      "family": "Gamma",
+      "link": "inverse",
+      "method": "ML",
+      "formula": "y ~ f + w + s(x, by=w, bs=\"tp\", k=5) + offset(o)",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "proof": {
+        "sources": {
+          "Python": {
+            "criterion_change": 8.968612519311137e-10,
+            "data_loss_change": -1.447553188427264e-10,
+            "minimum_positive_penalty": 15011186316.095219,
+            "coefficient_error": 1.3495653449150864e-11,
+            "coefficient_bound": 1.491346062648522e-10,
+            "covariance_error": 1.312269236991768e-11,
+            "covariance_bound": 2.3011739967765708e-11,
+            "positive_curve_relative_to_link_noise_rms": 7.281915718898308e-11,
+            "null_score": 6.87432730140338e-14
+          },
+          "R": {
+            "criterion_change": 1.1255067988713563e-09,
+            "data_loss_change": -1.8169288296121522e-10,
+            "minimum_positive_penalty": 11960391269.315662,
+            "coefficient_error": 1.6938115304001928e-11,
+            "coefficient_bound": 1.8717509405921708e-10,
+            "covariance_error": 1.6469996788032885e-11,
+            "covariance_bound": 2.8881456161034557e-11,
+            "positive_curve_relative_to_link_noise_rms": 9.13931019433728e-11,
+            "null_score": 6.87432730140338e-14
+          }
+        },
+        "joint_nullity": 1,
+        "positive_rank": 3,
+        "identified_null_dimension": 5,
+        "nominal_unpenalized_dimension": 6,
+        "REML_slice_log_jacobian": 0.0,
+        "criterion_limit": -27.41044782560435,
+        "gradient": [
+          -8.967995235309445e-10
+        ],
+        "hessian_eigenvalues": [
+          8.972082336337431e-10
+        ]
+      }
+    },
+    {
+      "id": "gam_1037",
+      "eligible": true,
+      "family": "Gamma",
+      "link": "inverse",
+      "method": "ML",
+      "formula": "y ~ f + w + s(x, by=w, bs=\"tp\", k=8)",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "proof": {
+        "sources": {
+          "Python": {
+            "criterion_change": 5.471818553814956e-10,
+            "data_loss_change": -8.975931109489466e-11,
+            "minimum_positive_penalty": 31957531490.22156,
+            "coefficient_error": 1.4868465620974524e-11,
+            "coefficient_bound": 1.2156553994975005e-10,
+            "covariance_error": 7.532789468590059e-12,
+            "covariance_bound": 2.3230724237852497e-11,
+            "positive_curve_relative_to_link_noise_rms": 4.5159329510353464e-11,
+            "null_score": 2.5487280177640518e-14
+          },
+          "R": {
+            "criterion_change": 9.718590376905922e-10,
+            "data_loss_change": -1.5937473563099047e-10,
+            "minimum_positive_penalty": 17992657154.02929,
+            "coefficient_error": 2.6408443348815168e-11,
+            "coefficient_bound": 2.15917779003527e-10,
+            "covariance_error": 1.3379379529770413e-11,
+            "covariance_bound": 4.126108751007734e-11,
+            "positive_curve_relative_to_link_noise_rms": 8.021012709556477e-11,
+            "null_score": 2.5487280177640518e-14
+          }
+        },
+        "joint_nullity": 1,
+        "positive_rank": 6,
+        "identified_null_dimension": 5,
+        "nominal_unpenalized_dimension": 6,
+        "REML_slice_log_jacobian": 0.0,
+        "criterion_limit": -30.337257639398693,
+        "gradient": [
+          -5.471876285412236e-10
+        ],
+        "hessian_eigenvalues": [
+          5.46007683510652e-10
+        ]
+      }
+    }
+  ],
+  "full_golden_validation": [
+    {
+      "id": "gam_0017",
+      "full_golden_pass": true,
+      "properties": [
+        [
+          "better_optimum",
+          false
+        ]
+      ]
+    },
+    {
+      "id": "gam_0057",
+      "full_golden_pass": true,
+      "properties": [
+        [
+          "better_optimum",
+          false
+        ]
+      ]
+    },
+    {
+      "id": "gam_0067",
+      "full_golden_pass": true,
+      "properties": [
+        [
+          "better_optimum",
+          false
+        ],
+        [
+          "reviewed_optimizer_warning_difference",
+          true
+        ]
+      ]
+    },
+    {
+      "id": "gam_0077",
+      "full_golden_pass": true,
+      "properties": [
+        [
+          "better_optimum",
+          false
+        ],
+        [
+          "reviewed_optimizer_warning_difference",
+          true
+        ]
+      ]
+    },
+    {
+      "id": "gam_0517",
+      "full_golden_pass": true,
+      "properties": [
+        [
+          "better_optimum",
+          false
+        ],
+        [
+          "reviewed_optimizer_warning_difference",
+          true
+        ]
+      ]
+    },
+    {
+      "id": "gam_0557",
+      "full_golden_pass": true,
+      "properties": [
+        [
+          "better_optimum",
+          false
+        ],
+        [
+          "reviewed_optimizer_warning_difference",
+          true
+        ]
+      ]
+    },
+    {
+      "id": "gam_1037",
+      "full_golden_pass": true,
+      "properties": [
+        [
+          "better_optimum",
+          false
+        ],
+        [
+          "reviewed_optimizer_warning_difference",
+          true
+        ]
+      ]
+    }
+  ],
+  "hostile_guard_validation": [
+    {
+      "field": "identified_beta",
+      "rejected": true
+    },
+    {
+      "field": "identified_covariance",
+      "rejected": true
+    },
+    {
+      "field": "positive_beta",
+      "rejected": true
+    },
+    {
+      "field": "positive_covariance",
+      "rejected": true
+    },
+    {
+      "field": "fitted",
+      "rejected": true
+    },
+    {
+      "field": "prediction",
+      "rejected": true
+    },
+    {
+      "field": "prediction_se",
+      "rejected": true
+    },
+    {
+      "field": "total_edf",
+      "rejected": true
+    },
+    {
+      "field": "wrong_slice",
+      "rejected": true
+    },
+    {
+      "field": "wrong_rank",
+      "rejected": true
+    }
+  ],
+  "runtime_changed": false,
+  "original_137_helper_changed": false,
+  "original_137_regression_validation": {
+    "cases": 137,
+    "hostile_original_guards": 3,
+    "passed": 140,
+    "seconds": 18.85,
+    "log": "oracle/cache/s2-gam-gauge-limit-137-regression.log"
+  },
+  "source_hash_after": {
+    "src/rparity/gam/__init__.py": "6f9ca760b96d93071ade1d6cc18839331534590ff0479b6efe984e442a74a332",
+    "src/rparity/gam/_basis.py": "7473e9fab4a81ddf36736c73f1374df8619e548b92b90b80b26afab96028ea66",
+    "src/rparity/gam/_check.py": "9bf276c2b8f98cc588ad702cf145815310c9fd815ae8d7684d04c09f6aed7dd2",
+    "src/rparity/gam/_cs.py": "8c2d96f57bacefcc620aa2d4aba555059dbf813c456e5fd109e2d34507113ea1",
+    "src/rparity/gam/_fit.py": "9a0ec29f6c9aa1413e31613981956684cd70343aeaf409d93889a6112d2428b2",
+    "src/rparity/gam/_formula.py": "d1dd97a89c6dabc7e90c73235fd734925841ab3b79b0812534b3716887a4d4b8",
+    "src/rparity/gam/_summary.py": "f0de4e97a8354720134286aa330dc18e0d66a860ee73336a9667c82119a66a47"
+  },
+  "source_changed": false
+}

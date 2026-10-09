@@ -1,4 +1,411 @@
 {
+  "gam_0016": {
+    "args": {
+      "method": "REML",
+      "in.out": {
+        "sp": [
+          72004899337.38583,
+          72004899337.3858,
+          72004899337.38591,
+          0.7758544432747554
+        ],
+        "scale": 1.0
+      }
+    },
+    "reason": "Independently R-optimized better smoothing minimum, initialized from a verified penalty-coordinate map.",
+    "gam_control": {
+      "epsilon": 1e-12,
+      "maxit": 1000,
+      "mgcv.tol": 1e-10,
+      "newton": {
+        "conv.tol": 1e-10
+      }
+    }
+  },
+  "gam_0093": {
+    "args": {
+      "method": "GCV.Cp",
+      "in.out": {
+        "sp": [
+          7.443600504336224
+        ],
+        "scale": 1.0
+      },
+      "optimizer": [
+        "outer",
+        "bfgs"
+      ]
+    },
+    "reason": "Public BFGS starts at independently mapped smoothing parameters and confirms the same objective with a lower smoothing score residual.",
+    "gam_control": {
+      "epsilon": 1e-14,
+      "maxit": 1000,
+      "mgcv.tol": 1e-12,
+      "newton": {
+        "conv.tol": 1e-12
+      }
+    }
+  },
+  "gam_0096": {
+    "args": {
+      "method": "GCV.Cp",
+      "in.out": {
+        "sp": [
+          72004899337.386,
+          0.6659121536859199,
+          72004899337.38585,
+          24325903920.174103
+        ],
+        "scale": 1.0
+      }
+    },
+    "reason": "Independently R-optimized better smoothing minimum, initialized from a verified penalty-coordinate map.",
+    "gam_control": {
+      "epsilon": 1e-12,
+      "maxit": 1000,
+      "mgcv.tol": 1e-10,
+      "newton": {
+        "conv.tol": 1e-10
+      }
+    }
+  },
+  "gam_0143": {
+    "args": {
+      "method": "REML",
+      "in.out": {
+        "sp": [
+          0.27734041289624284
+        ],
+        "scale": 1.0
+      }
+    },
+    "reason": "Independently R-optimized better smoothing minimum, initialized from a verified penalty-coordinate map.",
+    "gam_control": {
+      "epsilon": 1e-12,
+      "maxit": 1000,
+      "mgcv.tol": 1e-10,
+      "newton": {
+        "conv.tol": 1e-10
+      }
+    }
+  },
+  "gam_0206": {
+    "args": {
+      "method": "GCV.Cp"
+    },
+    "reason": "Public two-part gam initialization from a predeclared 0.9 perturbation preserves smoothing estimation and confirms a more stationary or numerically stable GCV fit.",
+    "gam_control": {
+      "epsilon": 1e-14,
+      "maxit": 1000,
+      "mgcv.tol": 1e-12,
+      "newton": {
+        "conv.tol": 1e-12
+      }
+    },
+    "gam_initial_sp": [
+      26.015778273772806,
+      460.48987372354753,
+      64804409403.64731,
+      0.43875269435282765
+    ]
+  },
+  "gam_0225": {
+    "args": {
+      "method": "GCV.Cp",
+      "in.out": {
+        "sp": [
+          7.909870991101987,
+          72004899337.3859
+        ],
+        "scale": 1.0
+      }
+    },
+    "reason": "Independently R-optimized better smoothing minimum, initialized from a verified penalty-coordinate map.",
+    "gam_control": {
+      "epsilon": 1e-12,
+      "maxit": 1000,
+      "mgcv.tol": 1e-10,
+      "newton": {
+        "conv.tol": 1e-10
+      }
+    }
+  },
+  "gam_0241": {
+    "args": {
+      "method": "REML",
+      "in.out": {
+        "sp": [
+          72004899337.38586
+        ],
+        "scale": 0.580475616311046
+      }
+    },
+    "reason": "Independently R-optimized better smoothing minimum, initialized from a verified penalty-coordinate map.",
+    "gam_control": {
+      "epsilon": 1e-12,
+      "maxit": 1000,
+      "mgcv.tol": 1e-10,
+      "newton": {
+        "conv.tol": 1e-10
+      }
+    }
+  },
+  "gam_0248": {
+    "args": {
+      "method": "REML",
+      "in.out": {
+        "sp": [
+          59.32323460619301,
+          11.19588173407649,
+          28.57273755557788
+        ],
+        "scale": 0.5081283766831923
+      },
+      "optimizer": [
+        "outer",
+        "bfgs"
+      ]
+    },
+    "reason": "Public BFGS starts at independently mapped smoothing parameters and confirms the same objective with a lower smoothing score residual.",
+    "gam_control": {
+      "epsilon": 1e-14,
+      "maxit": 1000,
+      "mgcv.tol": 1e-12,
+      "newton": {
+        "conv.tol": 1e-12
+      }
+    }
+  },
+  "gam_0338": {
+    "args": {
+      "method": "GCV.Cp",
+      "in.out": {
+        "sp": [
+          671.33275846306,
+          9.100835666728095,
+          9.111308813844653
+        ],
+        "scale": 1.0
+      }
+    },
+    "reason": "Independently R-optimized better smoothing minimum, initialized from a verified penalty-coordinate map.",
+    "gam_control": {
+      "epsilon": 1e-12,
+      "maxit": 1000,
+      "mgcv.tol": 1e-10,
+      "newton": {
+        "conv.tol": 1e-10
+      }
+    }
+  },
+  "gam_0368": {
+    "args": {
+      "method": "REML",
+      "in.out": {
+        "sp": [
+          0.02472918457028386,
+          0.08233604709982606,
+          0.06180162122617992
+        ],
+        "scale": 0.5552262955180712
+      }
+    },
+    "reason": "Independently R-optimized better smoothing minimum, initialized from a verified penalty-coordinate map.",
+    "gam_control": {
+      "epsilon": 1e-12,
+      "maxit": 1000,
+      "mgcv.tol": 1e-10,
+      "newton": {
+        "conv.tol": 1e-10
+      }
+    }
+  },
+  "gam_0418": {
+    "args": {
+      "method": "ML",
+      "in.out": {
+        "sp": [
+          14787944661.901215,
+          40805522359.66632,
+          6.4372182011313415
+        ],
+        "scale": 1.0
+      }
+    },
+    "reason": "Independently R-optimized better smoothing minimum, initialized from a verified penalty-coordinate map.",
+    "gam_control": {
+      "epsilon": 1e-12,
+      "maxit": 1000,
+      "mgcv.tol": 1e-10,
+      "newton": {
+        "conv.tol": 1e-10
+      }
+    }
+  },
+  "gam_0560": {
+    "args": {
+      "method": "GCV.Cp"
+    },
+    "reason": "Public two-part gam initialization from a predeclared 0.9 perturbation preserves smoothing estimation and confirms a more stationary or numerically stable GCV fit.",
+    "gam_control": {
+      "epsilon": 1e-14,
+      "maxit": 1000,
+      "mgcv.tol": 1e-12,
+      "newton": {
+        "conv.tol": 1e-12
+      }
+    },
+    "gam_initial_sp": [
+      0.04623495529500063
+    ]
+  },
+  "gam_0646": {
+    "args": {
+      "method": "ML",
+      "in.out": {
+        "sp": [
+          16.177290168350005,
+          983.4539492334872,
+          72004899337.38599,
+          43.115298155526226
+        ],
+        "scale": 0.24607351118981224
+      }
+    },
+    "reason": "Independently R-optimized better smoothing minimum, initialized from a verified penalty-coordinate map.",
+    "gam_control": {
+      "epsilon": 1e-12,
+      "maxit": 1000,
+      "mgcv.tol": 1e-10,
+      "newton": {
+        "conv.tol": 1e-10
+      }
+    }
+  },
+  "gam_0653": {
+    "args": {
+      "method": "ML",
+      "in.out": {
+        "sp": [
+          0.1216493141848051
+        ],
+        "scale": 1.0
+      }
+    },
+    "reason": "Independently R-optimized better smoothing minimum, initialized from a verified penalty-coordinate map.",
+    "gam_control": {
+      "epsilon": 1e-12,
+      "maxit": 1000,
+      "mgcv.tol": 1e-10,
+      "newton": {
+        "conv.tol": 1e-10
+      }
+    }
+  },
+  "gam_0682": {
+    "args": {
+      "method": "GCV.Cp"
+    },
+    "reason": "Public two-part gam initialization from a predeclared 0.9 perturbation preserves smoothing estimation and confirms a more stationary or numerically stable GCV fit.",
+    "gam_control": {
+      "epsilon": 1e-14,
+      "maxit": 1000,
+      "mgcv.tol": 1e-12,
+      "newton": {
+        "conv.tol": 1e-12
+      }
+    },
+    "gam_initial_sp": [
+      15.583574760688752
+    ]
+  },
+  "gam_0699": {
+    "args": {
+      "method": "GCV.Cp",
+      "in.out": {
+        "sp": [
+          5.154409274152044,
+          12.099562442605295
+        ],
+        "scale": 1.0
+      },
+      "optimizer": [
+        "outer",
+        "bfgs"
+      ]
+    },
+    "reason": "Public BFGS starts at independently mapped smoothing parameters and confirms the same objective with a lower smoothing score residual.",
+    "gam_control": {
+      "epsilon": 1e-14,
+      "maxit": 1000,
+      "mgcv.tol": 1e-12,
+      "newton": {
+        "conv.tol": 1e-12
+      }
+    }
+  },
+  "gam_0837": {
+    "args": {
+      "method": "GCV.Cp",
+      "in.out": {
+        "sp": [
+          296.20059225562017
+        ],
+        "scale": 0.20790182538662483
+      }
+    },
+    "reason": "Independently R-optimized better smoothing minimum, initialized from a verified penalty-coordinate map.",
+    "gam_control": {
+      "epsilon": 1e-12,
+      "maxit": 1000,
+      "mgcv.tol": 1e-10,
+      "newton": {
+        "conv.tol": 1e-10
+      }
+    }
+  },
+  "gam_0888": {
+    "args": {
+      "method": "ML",
+      "in.out": {
+        "sp": [
+          0.08201873328705718,
+          0.03856439244599244,
+          72004899337.38573
+        ],
+        "scale": 0.4253668532931276
+      }
+    },
+    "reason": "Independently R-optimized better smoothing minimum, initialized from a verified penalty-coordinate map.",
+    "gam_control": {
+      "epsilon": 1e-12,
+      "maxit": 1000,
+      "mgcv.tol": 1e-10,
+      "newton": {
+        "conv.tol": 1e-10
+      }
+    }
+  },
+  "gam_0937": {
+    "args": {
+      "method": "GCV.Cp",
+      "in.out": {
+        "sp": [
+          837436783.0713356
+        ],
+        "scale": 1.0
+      }
+    },
+    "reason": "Independently R-optimized better smoothing minimum, initialized from a verified penalty-coordinate map.",
+    "gam_control": {
+      "epsilon": 1e-12,
+      "maxit": 1000,
+      "mgcv.tol": 1e-10,
+      "newton": {
+        "conv.tol": 1e-10
+      }
+    }
+  },
   "gam_1056": {
     "reason": "The documented public in.out start independently reproduced the lower smoothing criterion, with every identified field passing unchanged tolerances. Original input and observation retained.",
     "original_R_criterion": 0.24709528624937538,
@@ -13,6 +420,27 @@
           5.807205115213948
         ],
         "scale": 1
+      }
+    }
+  },
+  "gam_1079": {
+    "args": {
+      "method": "GCV.Cp",
+      "in.out": {
+        "sp": [
+          0.01022680035711119,
+          366.1532253398453
+        ],
+        "scale": 0.16866777369927105
+      }
+    },
+    "reason": "Independently R-optimized better smoothing minimum, initialized from a verified penalty-coordinate map.",
+    "gam_control": {
+      "epsilon": 1e-12,
+      "maxit": 1000,
+      "mgcv.tol": 1e-10,
+      "newton": {
+        "conv.tol": 1e-10
       }
     }
   },

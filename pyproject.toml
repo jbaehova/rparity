@@ -1,5 +1,5 @@
 [build-system]
-requires = ["hatchling"]
+requires = ["hatchling", "scipy-openblas32==0.3.34.237.0"]
 build-backend = "hatchling.build"
 
 [project]
@@ -12,7 +12,7 @@ license = "MIT"
 dependencies = ["numpy>=2.0", "scipy>=1.14", "pandas>=2.2", "formulaic>=1.1", "statsmodels>=0.14"]
 
 [dependency-groups]
-dev = ["pytest>=8", "ruff>=0.11", "mypy>=1.15", "pandas-stubs", "scipy-stubs", "mkdocs-material>=9", "polars>=1"]
+dev = ["pytest>=8", "ruff>=0.11", "mypy>=1.15", "pandas-stubs", "scipy-stubs", "mkdocs-material>=9", "polars>=1", "scipy-openblas32==0.3.34.237.0"]
 
 [tool.ruff]
 line-length = 100
@@ -30,3 +30,9 @@ markers = ["needs_r: development-only tests requiring R and its packages", "gold
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/rparity"]
+
+[tool.hatch.build.targets.wheel.hooks.custom]
+path = "hatch_build.py"
+
+[tool.hatch.build.targets.sdist]
+include = ["src/rparity", "hatch_build.py", "LICENSE", "LICENSES", "pyproject.toml", "README.md"]

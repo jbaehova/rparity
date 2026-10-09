@@ -1,0 +1,430 @@
+{
+  "provisional_until_final_runtime_freeze": true,
+  "policy_case_count": 6,
+  "source_hash_before": {
+    "src/rparity/gam/__init__.py": "6f9ca760b96d93071ade1d6cc18839331534590ff0479b6efe984e442a74a332",
+    "src/rparity/gam/_basis.py": "366d3bd28a723d50a93914f537eefb3dfe0c9fa6d9f049f84ca81dca93a70776",
+    "src/rparity/gam/_check.py": "9bf276c2b8f98cc588ad702cf145815310c9fd815ae8d7684d04c09f6aed7dd2",
+    "src/rparity/gam/_cs.py": "ddb07b598283448bf98d2c13a84290b6112999744eeb504f9e7ed7bcbff4c090",
+    "src/rparity/gam/_fit.py": "19262a83b54a356297569e51b703e5f6b557f8fddc7e0bc6968e38f5742045c4",
+    "src/rparity/gam/_formula.py": "d1dd97a89c6dabc7e90c73235fd734925841ab3b79b0812534b3716887a4d4b8",
+    "src/rparity/gam/_summary.py": "f0de4e97a8354720134286aa330dc18e0d66a860ee73336a9667c82119a66a47"
+  },
+  "source_hash_after": {
+    "src/rparity/gam/__init__.py": "6f9ca760b96d93071ade1d6cc18839331534590ff0479b6efe984e442a74a332",
+    "src/rparity/gam/_basis.py": "366d3bd28a723d50a93914f537eefb3dfe0c9fa6d9f049f84ca81dca93a70776",
+    "src/rparity/gam/_check.py": "9bf276c2b8f98cc588ad702cf145815310c9fd815ae8d7684d04c09f6aed7dd2",
+    "src/rparity/gam/_cs.py": "ddb07b598283448bf98d2c13a84290b6112999744eeb504f9e7ed7bcbff4c090",
+    "src/rparity/gam/_fit.py": "19262a83b54a356297569e51b703e5f6b557f8fddc7e0bc6968e38f5742045c4",
+    "src/rparity/gam/_formula.py": "d1dd97a89c6dabc7e90c73235fd734925841ab3b79b0812534b3716887a4d4b8",
+    "src/rparity/gam/_summary.py": "f0de4e97a8354720134286aa330dc18e0d66a860ee73336a9667c82119a66a47"
+  },
+  "derivation": [
+    "For one Gaussian penalty decompose S into unpenalized N and positive penalized U; H=X^T W X, A=N^T H N, beta0=N A^+ N^T X^T W(y-offset), T=U-N A^+ N^T H U and P=T Sr^(-1/2).",
+    "With tau=1/lambda, C=P^T H P, h=Sr^(-1/2) U^T(X^T W(y-offset)-H beta0), beta(tau)=beta0+P tau(I+tau C)^(-1)h and V(tau)=scale[N A^+ N^T+P tau(I+tau C)^(-1)P^T].",
+    "Gaussian REML, ML and GCV selection derivatives are rational functions with positive denominators. Each indexed case independently recomputes strictly positive numerator coefficients using long double arithmetic with cancellation margin above 1e-12, certifying tau=0 is the unique global minimum.",
+    "The original R and Python selection criteria must both lie within 1e-6 of this exact minimum. R penalty scaling is independently transformed and checked proportional before its variance coordinate is used.",
+    "Unpenalized coefficients and covariance retain the original relative tolerances. Penalized coefficients and mixed covariance blocks must satisfy the explicit norm bounds tau||M P||||h|| and scale*tau||M P||||Q P||; these quantities vanish at the certified minimum.",
+    "Individual coefficient edf with nonzero exact limits retain the original relative tolerance; zero-limit values receive only their variance-dependent Cauchy-Schwarz bound. Total edf retains the original relative tolerance.",
+    "Only case1124 has additional full-zero random-effect term, smooth edf and statistic exceptions. Term rows with nonzero exact limits retain their original tolerances. Zero-limit fit/SE and smooth statistic receive their explicit variance-dependent bounds. All p-values retain the original 1e-4 absolute tolerance."
+  ],
+  "strict_fields_preserved": [
+    "selection criterion",
+    "unpenalized coefficient quotient",
+    "unpenalized covariance block",
+    "fitted values",
+    "scale",
+    "total effective degrees of freedom",
+    "prediction",
+    "prediction standard error",
+    "all unaffected term fits and standard errors",
+    "all nonzero term limits",
+    "all unaffected smooth tables",
+    "all smooth p-values",
+    "k.check index and p-value",
+    "rank",
+    "convergence metadata or independently reviewed stationary-solution policy",
+    "summary sections"
+  ],
+  "cases": [
+    {
+      "id": "gam_0280",
+      "formula": "y ~ f + s(x, bs=\"tp\", k=5)",
+      "method": "ML",
+      "fixture_sha256": "f54c11bc2780ce995d81aaa6bf67fa2e02d6f0b4c080c0254ec2d54c568392f8",
+      "exception_fields": {
+        "penalty_rank": 3,
+        "coefficients": true,
+        "covariance": true,
+        "coefficient_edf": true
+      },
+      "criterion_limit": 110.03348315944378,
+      "R_criterion_excess": 4.550969379124581e-09,
+      "Python_criterion_excess": 6.43908038000518e-10,
+      "global_derivative_numerator_coefficients": [
+        384.10937491203185,
+        2434.501088685907,
+        6971.010235033527,
+        8797.1126018615,
+        3424.3564423853486,
+        608.3010298594955,
+        52.22919683957173,
+        4.150456132834629,
+        0.1766447623340331
+      ],
+      "minimum_relative_coefficient_margin": 0.17620617383855952,
+      "penalized_finite_variance_envelopes": [
+        {
+          "source": "Python",
+          "variance": 2.1872013666720512e-10,
+          "beta_error": 1.1186388449286228e-10,
+          "beta_bound": 2.4076572903057254e-10,
+          "covariance_error": 8.895018812912033e-11,
+          "covariance_bound": 8.895206563507251e-11
+        },
+        {
+          "source": "R",
+          "variance": 1.5458015326985545e-09,
+          "beta_error": 7.905963811575955e-10,
+          "beta_bound": 1.7016084509997838e-09,
+          "covariance_error": 6.28654219986381e-10,
+          "covariance_bound": 6.28667490260474e-10
+        }
+      ],
+      "strict_checks_passed": true,
+      "properties": {
+        "better_optimum": false,
+        "certified_gaussian_boundary": true
+      }
+    },
+    {
+      "id": "gam_0880",
+      "formula": "y ~ f + s(x, bs=\"tp\", k=6) + offset(o)",
+      "method": "ML",
+      "fixture_sha256": "f1a2cc46fea21425dfee3e0790f29449f99e1c30ccc990a7be00a92ff0a469b4",
+      "exception_fields": {
+        "penalty_rank": 4,
+        "coefficients": true,
+        "covariance": true,
+        "coefficient_edf": true
+      },
+      "criterion_limit": 176.06593995383776,
+      "R_criterion_excess": 8.270603757409845e-09,
+      "Python_criterion_excess": 9.873701856122352e-10,
+      "global_derivative_numerator_coefficients": [
+        718.7530423692563,
+        4760.402482120302,
+        24646.718491999258,
+        65837.13281462685,
+        33927.24254629025,
+        29065.840650791753,
+        12864.399325483231,
+        2727.117009874886,
+        310.1754295872943,
+        20.446434440215004,
+        0.8388220633908073,
+        0.019479657912997588
+      ],
+      "minimum_relative_coefficient_margin": 0.06172112270621587,
+      "penalized_finite_variance_envelopes": [
+        {
+          "source": "Python",
+          "variance": 3.1808005832929975e-10,
+          "beta_error": 5.093328003363242e-10,
+          "beta_bound": 7.999517294719688e-10,
+          "covariance_error": 2.1562727376066982e-10,
+          "covariance_bound": 2.1565830552007568e-10
+        },
+        {
+          "source": "R",
+          "variance": 2.6644142098077097e-09,
+          "beta_error": 4.266452704935582e-09,
+          "beta_bound": 6.700837412947096e-09,
+          "covariance_error": 1.8062131048467563e-09,
+          "covariance_bound": 1.8064730513151601e-09
+        }
+      ],
+      "strict_checks_passed": true,
+      "properties": {
+        "better_optimum": false,
+        "certified_gaussian_boundary": true
+      }
+    },
+    {
+      "id": "gam_1080",
+      "formula": "y ~ f + s(x, bs=\"tp\", k=5)",
+      "method": "REML",
+      "fixture_sha256": "b3ab8b982ec96033612bc1600685d2f793d069fed5408e684e1e1175e39e770a",
+      "exception_fields": {
+        "penalty_rank": 3,
+        "coefficients": true,
+        "covariance": true,
+        "coefficient_edf": true
+      },
+      "criterion_limit": 99.33495389192657,
+      "R_criterion_excess": 3.4506939528000657e-09,
+      "Python_criterion_excess": 6.923386308699264e-10,
+      "global_derivative_numerator_coefficients": [
+        62.90840906326906,
+        149.35422991685368,
+        81.80039245208218,
+        16.480348177854463,
+        1.2839848047087217,
+        0.03728677618920655
+      ],
+      "minimum_relative_coefficient_margin": 0.8080534213682314,
+      "penalized_finite_variance_envelopes": [
+        {
+          "source": "Python",
+          "variance": 7.661488365331545e-10,
+          "beta_error": 8.615859580439482e-11,
+          "beta_bound": 9.566879068076308e-11,
+          "covariance_error": 1.2232023355396704e-10,
+          "covariance_bound": 1.2232710646318408e-10
+        },
+        {
+          "source": "R",
+          "variance": 3.818691817714664e-09,
+          "beta_error": 4.294376066543483e-10,
+          "beta_bound": 4.768389779672758e-10,
+          "covariance_error": 6.096769343698835e-10,
+          "covariance_bound": 6.097111922433072e-10
+        }
+      ],
+      "strict_checks_passed": true,
+      "properties": {
+        "better_optimum": false,
+        "certified_gaussian_boundary": true
+      }
+    },
+    {
+      "id": "gam_1120",
+      "formula": "y ~ f + s(x, bs=\"tp\", k=7)",
+      "method": "ML",
+      "fixture_sha256": "74698ad10ff3929927a5736bbb8b3831491152f31bf46d6a21152f5eaa83d47b",
+      "exception_fields": {
+        "penalty_rank": 5,
+        "coefficients": true,
+        "covariance": true,
+        "coefficient_edf": true
+      },
+      "criterion_limit": 98.62722325611334,
+      "R_criterion_excess": 3.2012934525482706e-09,
+      "Python_criterion_excess": 5.106386424813536e-10,
+      "global_derivative_numerator_coefficients": [
+        495.0155018416916,
+        5952.30608283796,
+        27914.06784966868,
+        60013.197697238065,
+        58294.492895444404,
+        29999.114860654594,
+        8947.419799522448,
+        1630.4760819661112,
+        187.0332262440194,
+        13.667274630780252,
+        0.6345507664164988,
+        0.018407685207457246,
+        0.0003197731127004285,
+        3.0216669293250997e-06,
+        1.1893653933603909e-08
+      ],
+      "minimum_relative_coefficient_margin": 0.7467088654761194,
+      "penalized_finite_variance_envelopes": [
+        {
+          "source": "Python",
+          "variance": 7.315966867486581e-11,
+          "beta_error": 3.143897972225724e-11,
+          "beta_bound": 4.7790028367536154e-11,
+          "covariance_error": 1.9210433035375328e-11,
+          "covariance_bound": 1.921095312640928e-11
+        },
+        {
+          "source": "R",
+          "variance": 4.586742666946028e-10,
+          "beta_error": 1.971065590813967e-10,
+          "beta_bound": 2.996194025182156e-10,
+          "covariance_error": 1.204397373538516e-10,
+          "covariance_bound": 1.204429981350875e-10
+        }
+      ],
+      "strict_checks_passed": true,
+      "properties": {
+        "better_optimum": false,
+        "certified_gaussian_boundary": true
+      }
+    },
+    {
+      "id": "gam_1124",
+      "formula": "y ~ f + x + s(g, bs=\"re\")",
+      "method": "ML",
+      "fixture_sha256": "eaeb283225eb5383ed5066bf70cb611895cd49586f77893e3760f50e9e062a4c",
+      "exception_fields": {
+        "penalty_rank": 7,
+        "coefficients": true,
+        "covariance": true,
+        "coefficient_edf": true,
+        "term_fit": [
+          "s(g)"
+        ],
+        "term_se": [
+          "s(g)"
+        ],
+        "smooth_edf": [
+          "s(g)"
+        ],
+        "smooth_statistic": [
+          "s(g)"
+        ]
+      },
+      "criterion_limit": 189.74885924738805,
+      "R_criterion_excess": 5.462823082780233e-09,
+      "Python_criterion_excess": 5.287574822432362e-10,
+      "global_derivative_numerator_coefficients": [
+        4833.600749275829,
+        2131504.1809733086,
+        430653632.3005433,
+        53339165025.82982,
+        4559028708246.768,
+        286465458781336.75,
+        1.3745013013898404e+16,
+        5.158104185178215e+17,
+        1.53676151432424e+19,
+        3.665888524441859e+20,
+        7.024250100382339e+21,
+        1.0792787793147573e+23,
+        1.32065639196734e+24,
+        1.2701233139397761e+25,
+        9.39332894333954e+25,
+        5.156481199266395e+26,
+        1.97917057409834e+27,
+        4.7409944121356294e+27,
+        5.335538523941239e+27,
+        530757939537611.06,
+        13.199416943490393
+      ],
+      "minimum_relative_coefficient_margin": 0.1704342912679862,
+      "penalized_finite_variance_envelopes": [
+        {
+          "source": "Python",
+          "variance": 2.4370154605396514e-11,
+          "beta_error": 2.1653716474315364e-10,
+          "beta_bound": 2.1653716487748744e-10,
+          "covariance_error": 2.0120018413181096e-11,
+          "covariance_bound": 2.0120018413986543e-11
+        },
+        {
+          "source": "R",
+          "variance": 2.5177837524751563e-10,
+          "beta_error": 2.237137026318738e-09,
+          "beta_bound": 2.237137040627738e-09,
+          "covariance_error": 2.0786842043113832e-10,
+          "covariance_bound": 2.078684205171034e-10
+        }
+      ],
+      "strict_checks_passed": true,
+      "properties": {
+        "better_optimum": false,
+        "certified_gaussian_boundary": true
+      }
+    },
+    {
+      "id": "gam_1160",
+      "formula": "y ~ f + s(x, bs=\"tp\", k=5)",
+      "method": "GCV.Cp",
+      "fixture_sha256": "0ecc0da225265a226161bce4bdc295c15b48c469766cb5c27ce976428af2f452",
+      "exception_fields": {
+        "penalty_rank": 3,
+        "coefficients": true,
+        "covariance": true,
+        "coefficient_edf": true
+      },
+      "criterion_limit": 0.23640120325567873,
+      "R_criterion_excess": -1.3761214390228815e-13,
+      "Python_criterion_excess": 1.0397238625614591e-13,
+      "global_derivative_numerator_coefficients": [
+        118.87240497464717,
+        768.2543593155749,
+        1800.863997746712,
+        2021.923428114239,
+        1359.7619569392773,
+        569.7500205147252,
+        142.31368268055274,
+        21.335557559232857,
+        2.171746522160223,
+        0.1519517486721883,
+        0.004732945750875126
+      ],
+      "minimum_relative_coefficient_margin": 0.29418660610269143,
+      "penalized_finite_variance_envelopes": [
+        {
+          "source": "Python",
+          "variance": 1.3897974170187107e-11,
+          "beta_error": 2.968981691698791e-12,
+          "beta_bound": 3.396876893280138e-12,
+          "covariance_error": 1.5229533656394695e-12,
+          "covariance_bound": 1.5229869583480572e-12
+        },
+        {
+          "source": "R",
+          "variance": 1.6453209535707506e-13,
+          "beta_error": 3.5119859626233253e-14,
+          "beta_bound": 4.021415395348142e-14,
+          "covariance_error": 1.8029444569913554e-14,
+          "covariance_bound": 1.8029982815469846e-14
+        }
+      ],
+      "strict_checks_passed": true,
+      "properties": {
+        "better_optimum": false,
+        "certified_gaussian_boundary": true
+      }
+    }
+  ],
+  "excluded_boundary_policy_candidates": [
+    {
+      "id": "gam_0003",
+      "reason": "No positive-polynomial global certificate, and an identified fitted value fails its original tolerance."
+    },
+    {
+      "id": "gam_0361",
+      "reason": "Already passes the original strict test without a policy. No positive-polynomial global certificate, so a boundary exception is not authorized."
+    },
+    {
+      "id": "gam_0121",
+      "reason": "A term standard error has a nonzero exact nullspace limit and fails its original tolerance."
+    },
+    {
+      "id": "gam_1161",
+      "reason": "A term fit has a nonzero exact nullspace limit and fails its original tolerance."
+    },
+    {
+      "id": "gam_1082",
+      "reason": "The smooth p-value fails its original absolute tolerance and is never waived by a zero variance certificate."
+    },
+    {
+      "id": "gam_1162",
+      "reason": "Identified fitted values and predictions fail their original tolerance and are never waived."
+    }
+  ],
+  "already_strictly_passing_certified_cases": [
+    "gam_0643",
+    "gam_1167"
+  ],
+  "corpus_retention": "No fixture is deleted or replaced. The six cases remain counted, and any failed certificate or identified comparison fails that original golden case.",
+  "all_candidate_recheck": {
+    "passed": 9,
+    "failed": 5,
+    "retained_failures": [
+      "test_gam_golden[gam_0003]",
+      "test_gam_golden[gam_0121]",
+      "test_gam_golden[gam_1082]",
+      "test_gam_golden[gam_1161]",
+      "test_gam_golden[gam_1162]"
+    ],
+    "strictly_passing_without_policy": [
+      "gam_0361",
+      "gam_0643",
+      "gam_1167"
+    ]
+  }
+}

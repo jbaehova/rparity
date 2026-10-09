@@ -8,6 +8,31 @@
     "max_design_null_residual": 4.440892098500626e-16,
     "max_penalty_null_residual": 1.3757679819842585e-14
   },
+  "gam_0016": {
+    "optimizer_warning_difference": {
+      "reason": "Public R reoptimization independently confirms the objective and every numerical field. Python is stationary with nonnegative smoothing curvature. Preserve all identified assertions instead of fabricating an optimizer warning.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "converged metadata"
+      ],
+      "python_outer_gradient": [
+        -1.2054273135220228e-09,
+        -4.1387338001186436e-11,
+        -2.7605917551909442e-11,
+        2.220446049250313e-16
+      ],
+      "python_outer_hessian_eigenvalues": [
+        2.874828649810692e-11,
+        4.1565776313207425e-11,
+        1.2046660896642719e-09,
+        0.2812726511665641
+      ],
+      "criterion_difference": 8.079581448328099e-10
+    }
+  },
   "gam_0017": {
     "kind": "gam_coefficient_gauge",
     "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
@@ -318,6 +343,25 @@
     "max_design_null_residual": 4.440892098500626e-16,
     "max_penalty_null_residual": 1.1102230246251565e-16
   },
+  "gam_0143": {
+    "optimizer_warning_difference": {
+      "reason": "Public R reoptimization independently confirms the objective and every numerical field. Python is stationary with nonnegative smoothing curvature. Preserve all identified assertions instead of fabricating an optimizer warning.",
+      "r_warnings": [
+        "Fitting terminated with step failure - check results carefully"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "converged metadata"
+      ],
+      "python_outer_gradient": [
+        6.661338147750939e-16
+      ],
+      "python_outer_hessian_eigenvalues": [
+        0.8434890109149107
+      ],
+      "criterion_difference": 2.842170943040401e-14
+    }
+  },
   "gam_0145": {
     "optimizer_warning_difference": {
       "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
@@ -588,6 +632,27 @@
       ]
     }
   },
+  "gam_0225": {
+    "optimizer_warning_difference": {
+      "reason": "Public R reoptimization independently confirms the objective and every numerical field. Python is stationary with nonnegative smoothing curvature. Preserve all identified assertions instead of fabricating an optimizer warning.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "converged metadata"
+      ],
+      "python_outer_gradient": [
+        -2.0875662309904897e-14,
+        -3.6061563233355063e-11
+      ],
+      "python_outer_hessian_eigenvalues": [
+        3.5986865531380454e-11,
+        0.0024511889562759317
+      ],
+      "criterion_difference": 2.2774143682013914e-11
+    }
+  },
   "gam_0226": {
     "optimizer_warning_difference": {
       "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; require the actual stationary score and nonnegative smoothing curvature and retain all identified numerical assertions at the original TASK tolerances.",
@@ -771,6 +836,29 @@
     "max_design_null_residual": 2.1094237467877974e-15,
     "max_penalty_null_residual": 1.1102230246251565e-16
   },
+  "gam_0368": {
+    "optimizer_warning_difference": {
+      "reason": "Public R reoptimization independently confirms the objective and every numerical field. Python is stationary with nonnegative smoothing curvature. Preserve all identified assertions instead of fabricating an optimizer warning.",
+      "r_warnings": [
+        "Fitting terminated with step failure - check results carefully"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "converged metadata"
+      ],
+      "python_outer_gradient": [
+        -8.881784197001252e-16,
+        0.0,
+        8.881784197001252e-16
+      ],
+      "python_outer_hessian_eigenvalues": [
+        0.39231470249676725,
+        0.7184552082256362,
+        0.9700632401377582
+      ],
+      "criterion_difference": 5.684341886080802e-14
+    }
+  },
   "gam_0377": {
     "kind": "gam_coefficient_gauge",
     "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
@@ -788,6 +876,23 @@
     "coefficient_count": 9,
     "max_design_null_residual": 3.3306690738754696e-16,
     "max_penalty_null_residual": 5.551115123125783e-17
+  },
+  "gam_0392": {
+    "optimizer_warning_difference": {
+      "reason": "After bit-exact cubic shrinkage penalty construction, every original numerical assertion passes. Python has an independently stationary smoothing score and positive semidefinite curvature; only R optimizer-event metadata differs.",
+      "r_warnings": [
+        "Fitting terminated with step failure - check results carefully"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence"
+      ],
+      "python_outer_gradient": [
+        7.549516567451064e-15
+      ],
+      "python_outer_hessian_eigenvalues": [
+        1.5132215943212863
+      ]
+    }
   },
   "gam_0396": {
     "optimizer_warning_difference": {
@@ -838,6 +943,23 @@
       ],
       "python_outer_hessian_eigenvalues": [
         1.2556023168064738
+      ]
+    }
+  },
+  "gam_0402": {
+    "optimizer_warning_difference": {
+      "reason": "After bit-exact cubic shrinkage penalty construction, every original numerical assertion passes. Python has an independently stationary smoothing score and positive semidefinite curvature; only R optimizer-event metadata differs.",
+      "r_warnings": [
+        "Fitting terminated with step failure - check results carefully"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence"
+      ],
+      "python_outer_gradient": [
+        0.0
+      ],
+      "python_outer_hessian_eigenvalues": [
+        2.07278160848016
       ]
     }
   },
@@ -978,6 +1100,25 @@
     "coefficient_count": 9,
     "max_design_null_residual": 1.7208456881689926e-15,
     "max_penalty_null_residual": 1.5265566588595902e-16
+  },
+  "gam_0439": {
+    "optimizer_warning_difference": {
+      "reason": "After bit-exact cubic shrinkage penalty construction, every original numerical assertion passes. Python has an independently stationary smoothing score and positive semidefinite curvature; only R optimizer-event metadata differs.",
+      "r_warnings": [
+        "Fitting terminated with step failure - check results carefully"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence"
+      ],
+      "python_outer_gradient": [
+        5.773159728050814e-15,
+        1.7763568394002505e-15
+      ],
+      "python_outer_hessian_eigenvalues": [
+        0.7625366859767304,
+        1.3134023327656743
+      ]
+    }
   },
   "gam_0447": {
     "kind": "gam_coefficient_gauge",
@@ -2663,6 +2804,27 @@
       "python_outer_hessian_eigenvalues": [
         0.0009569870762353641
       ]
+    }
+  },
+  "gam_1079": {
+    "optimizer_warning_difference": {
+      "reason": "Public R reoptimization independently confirms the objective and every numerical field. Python is stationary with nonnegative smoothing curvature. Preserve all identified assertions instead of fabricating an optimizer warning.",
+      "r_warnings": [
+        "Fitting terminated with step failure - check results carefully"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "converged metadata"
+      ],
+      "python_outer_gradient": [
+        2.168404344971009e-19,
+        -3.2526065174565133e-19
+      ],
+      "python_outer_hessian_eigenvalues": [
+        8.870504857470768e-05,
+        0.001412493466507737
+      ],
+      "criterion_difference": 4.9404924595819466e-15
     }
   },
   "gam_1083": {

@@ -1,0 +1,2454 @@
+{
+  "selected_count": 20,
+  "original_inputs_and_observations_preserved": true,
+  "tolerances_changed": false,
+  "cases": [
+    {
+      "id": "gam_0016",
+      "family": "binomial",
+      "method": "REML",
+      "old_R_criterion": 78.9195644515355,
+      "Python_native_criterion": 78.90163033635041,
+      "Python_internal_criterion": 78.90163033634802,
+      "start": {
+        "sp": [
+          72004899337.38583,
+          72004899337.3858,
+          72004899337.38591,
+          0.7758544432747554
+        ],
+        "scale": 1.0
+      },
+      "penalty_ratios_own_over_R": [
+        0.9999999999999993,
+        0.9999999999999989,
+        1.0000000000000004,
+        1.0000000000000002
+      ],
+      "Python_gradient": [
+        -1.2054273135220228e-09,
+        -4.1387338001186436e-11,
+        -2.7605917551909442e-11,
+        2.220446049250313e-16
+      ],
+      "Python_hessian": [
+        [
+          1.2046659965866031e-09,
+          0.0,
+          2.9605947323337506e-13,
+          3.2011430543358683e-12
+        ],
+        [
+          0.0,
+          4.144832625267251e-11,
+          1.2212453270876722e-12,
+          -4.526009197055222e-11
+        ],
+        [
+          2.9605947323337506e-13,
+          1.2212453270876722e-12,
+          2.886579864025407e-11,
+          5.181040781584063e-13
+        ],
+        [
+          3.2011430543358683e-12,
+          -4.526009197055222e-11,
+          5.181040781584063e-13,
+          0.2812726511665642
+        ]
+      ],
+      "Python_gradient_normalized": 1.527759703295652e-11,
+      "Python_hessian_min_eigenvalue": 0.0,
+      "Python_converged": true,
+      "Python_warnings": [],
+      "R_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "new_R_criterion": 78.90163033554245,
+      "Python_new_R_chart_criterion": 78.90163033635041,
+      "R_improvement": 0.017934115993057276,
+      "R_minus_Python": -8.079581448328099e-10,
+      "R_converged": false,
+      "confirmed": true,
+      "strict_pass": true,
+      "strict_properties": {
+        "better_optimum": false,
+        "reviewed_optimizer_warning_difference": true
+      },
+      "reason": "Independently R-optimized better smoothing minimum, initialized from a verified penalty-coordinate map.",
+      "original_observation_sha256": "fa53a6d1681f13bdf47058e7887e2ab63b4eab13da8d8d16363d5262d664653f",
+      "selected_observation_sha256": "1a82508572de54b49503803ac7ca82312ec3955bebef400c225c8774260d46c0"
+    },
+    {
+      "id": "gam_0096",
+      "family": "binomial",
+      "method": "GCV.Cp",
+      "old_R_criterion": 0.33739129267405277,
+      "Python_native_criterion": 0.33563594306640465,
+      "Python_internal_criterion": 0.33563594306640465,
+      "start": {
+        "sp": [
+          72004899337.386,
+          0.6659121536859199,
+          72004899337.38585,
+          24325903920.174103
+        ],
+        "scale": 1.0
+      },
+      "penalty_ratios_own_over_R": [
+        1.0000000000000018,
+        1.0000000000000007,
+        0.9999999999999996,
+        0.9999999999999998
+      ],
+      "Python_gradient": [
+        -3.826380695297389e-12,
+        -8.673617379884035e-19,
+        -3.5508219470396805e-13,
+        -5.778959422572811e-13
+      ],
+      "Python_hessian": [
+        [
+          3.824729309642407e-12,
+          -1.4945109457937398e-13,
+          4.341711639360583e-16,
+          7.927102231275297e-16
+        ],
+        [
+          -1.4945109457937398e-13,
+          0.00334218606692554,
+          -1.851081362367776e-14,
+          8.2693586980847e-14
+        ],
+        [
+          4.341711639360583e-16,
+          -1.851081362367776e-14,
+          2.8573745873592376e-13,
+          7.006428586417419e-14
+        ],
+        [
+          7.927102231275297e-16,
+          8.2693586980847e-14,
+          7.006428586417419e-14,
+          5.082306616963351e-13
+        ]
+      ],
+      "Python_gradient_normalized": 3.826380695297389e-12,
+      "Python_hessian_min_eigenvalue": 0.0,
+      "Python_converged": true,
+      "Python_warnings": [],
+      "R_warnings": [],
+      "new_R_criterion": 0.33563594306339595,
+      "Python_new_R_chart_criterion": 0.33563594306640465,
+      "R_improvement": 0.00175534961065682,
+      "R_minus_Python": -3.0087043967341742e-12,
+      "R_converged": true,
+      "confirmed": true,
+      "strict_pass": true,
+      "strict_properties": {
+        "better_optimum": false
+      },
+      "reason": "Independently R-optimized better smoothing minimum, initialized from a verified penalty-coordinate map.",
+      "original_observation_sha256": "0c9d2c2c628060b11666f1c77721794ac61d203db0985432721f99295140aaec",
+      "selected_observation_sha256": "f33178d1dbee17004399020fa09b670155c7acf466125818e18faaf05eca4b98"
+    },
+    {
+      "id": "gam_0143",
+      "family": "poisson",
+      "method": "REML",
+      "old_R_criterion": 218.48924257546435,
+      "Python_native_criterion": 216.45842188951184,
+      "Python_internal_criterion": 216.45842188951184,
+      "start": {
+        "sp": [
+          0.27734041289624284
+        ],
+        "scale": 1.0
+      },
+      "penalty_ratios_own_over_R": [
+        1.0000000000000016
+      ],
+      "Python_gradient": [
+        6.661338147750939e-16
+      ],
+      "Python_hessian": [
+        [
+          0.8434890109149107
+        ]
+      ],
+      "Python_gradient_normalized": 3.0774215618882806e-18,
+      "Python_hessian_min_eigenvalue": 0.0,
+      "Python_converged": true,
+      "Python_warnings": [],
+      "R_warnings": [
+        "Fitting terminated with step failure - check results carefully"
+      ],
+      "new_R_criterion": 216.4584218895118,
+      "Python_new_R_chart_criterion": 216.45842188951184,
+      "R_improvement": 2.030820685952534,
+      "R_minus_Python": -2.842170943040401e-14,
+      "R_converged": true,
+      "confirmed": true,
+      "strict_pass": true,
+      "strict_properties": {
+        "better_optimum": false,
+        "reviewed_optimizer_warning_difference": true
+      },
+      "reason": "Independently R-optimized better smoothing minimum, initialized from a verified penalty-coordinate map.",
+      "original_observation_sha256": "646da6c581be762ff9cc4efb59f9d4c7f6d425ec80e2fd30943d10a490b2a833",
+      "selected_observation_sha256": "f09e82754b5abad935eab74dd3cef05612e936dd8e95bd5284b6e40fb047f933"
+    },
+    {
+      "id": "gam_0225",
+      "family": "poisson",
+      "method": "GCV.Cp",
+      "old_R_criterion": -0.04413588315856565,
+      "Python_native_criterion": -0.05003664587747289,
+      "Python_internal_criterion": -0.05003664587747289,
+      "start": {
+        "sp": [
+          7.909870991101987,
+          72004899337.3859
+        ],
+        "scale": 1.0
+      },
+      "penalty_ratios_own_over_R": [
+        0.9999999999999987,
+        1.0000000000000002
+      ],
+      "Python_gradient": [
+        -2.0875662309904897e-14,
+        -3.6061563233355063e-11
+      ],
+      "Python_hessian": [
+        [
+          0.0024511889562759312,
+          4.214525177998914e-11
+        ],
+        [
+          4.214525177998914e-11,
+          3.5986866256017476e-11
+        ]
+      ],
+      "Python_gradient_normalized": 3.6061563233355063e-11,
+      "Python_hessian_min_eigenvalue": 0.0,
+      "Python_converged": true,
+      "Python_warnings": [],
+      "R_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "new_R_criterion": -0.050036645900247034,
+      "Python_new_R_chart_criterion": -0.05003664587747289,
+      "R_improvement": 0.005900762741681387,
+      "R_minus_Python": -2.2774143682013914e-11,
+      "R_converged": false,
+      "confirmed": true,
+      "strict_pass": true,
+      "strict_properties": {
+        "better_optimum": false,
+        "reviewed_optimizer_warning_difference": true
+      },
+      "reason": "Independently R-optimized better smoothing minimum, initialized from a verified penalty-coordinate map.",
+      "original_observation_sha256": "ac0b55a74af2b2856f31caa27a6a070410d5ff49c0e20c36005ede5f7fa5b903",
+      "selected_observation_sha256": "fbf1a7ebc322a176df24f7917d41c35d8d4d5a36a88eb5bfa04cbda8ca69ee3b"
+    },
+    {
+      "id": "gam_0241",
+      "family": "gaussian",
+      "method": "REML",
+      "old_R_criterion": 130.4273875214728,
+      "Python_native_criterion": 130.39293388496378,
+      "Python_internal_criterion": 130.39293388496455,
+      "start": {
+        "sp": [
+          72004899337.38586
+        ],
+        "scale": 0.580475616311046
+      },
+      "penalty_ratios_own_over_R": [
+        0.9999999999999998
+      ],
+      "Python_gradient": [
+        -1.8386077105247978e-09
+      ],
+      "Python_hessian": [
+        [
+          1.8387513733841843e-09
+        ]
+      ],
+      "Python_gradient_normalized": 1.4100516460093283e-11,
+      "Python_hessian_min_eigenvalue": 0.0,
+      "Python_converged": true,
+      "Python_warnings": [],
+      "R_warnings": [],
+      "new_R_criterion": 130.39293388380233,
+      "Python_new_R_chart_criterion": 130.39293388496378,
+      "R_improvement": 0.03445363767048093,
+      "R_minus_Python": -1.1614531558734598e-09,
+      "R_converged": true,
+      "confirmed": true,
+      "strict_pass": true,
+      "strict_properties": {
+        "better_optimum": false
+      },
+      "reason": "Independently R-optimized better smoothing minimum, initialized from a verified penalty-coordinate map.",
+      "original_observation_sha256": "ff563c782020564ed19b636a7e707323393c8aa64be547ab01e20c1e45271dd9",
+      "selected_observation_sha256": "4c7ca35336e26c30385fc688315448346f22272f51f7c9d346c2e1f62232ff2d"
+    },
+    {
+      "id": "gam_0338",
+      "family": "binomial",
+      "method": "GCV.Cp",
+      "old_R_criterion": -0.044563869209112816,
+      "Python_native_criterion": -0.04926876991760562,
+      "Python_internal_criterion": -0.04926876991760562,
+      "start": {
+        "sp": [
+          671.33275846306,
+          9.100835666728095,
+          9.111308813844653
+        ],
+        "scale": 1.0
+      },
+      "penalty_ratios_own_over_R": [
+        0.9999999999999996,
+        0.9999999999999978,
+        0.9999999999999998
+      ],
+      "Python_gradient": [
+        0.0,
+        1.734723475976807e-18,
+        8.673617379884035e-19
+      ],
+      "Python_hessian": [
+        [
+          0.004857359565190016,
+          2.8189256484623115e-15,
+          -9.107298248878237e-15
+        ],
+        [
+          2.8189256484623115e-15,
+          0.0060268399961570995,
+          1.120342244901688e-14
+        ],
+        [
+          -9.107298248878237e-15,
+          1.120342244901688e-14,
+          0.004710175316602599
+        ]
+      ],
+      "Python_gradient_normalized": 1.734723475976807e-18,
+      "Python_hessian_min_eigenvalue": 0.0,
+      "Python_converged": true,
+      "Python_warnings": [],
+      "R_warnings": [],
+      "new_R_criterion": -0.04926876991760554,
+      "Python_new_R_chart_criterion": -0.04926876991760562,
+      "R_improvement": 0.004704900708492721,
+      "R_minus_Python": 8.326672684688674e-17,
+      "R_converged": true,
+      "confirmed": true,
+      "strict_pass": true,
+      "strict_properties": {
+        "better_optimum": false
+      },
+      "reason": "Independently R-optimized better smoothing minimum, initialized from a verified penalty-coordinate map.",
+      "original_observation_sha256": "6dbb0316fe434f366a9d99d69dc64d09dba3d3badfba42f36e6657d6e191dda0",
+      "selected_observation_sha256": "eb451d6f2852b53c60d129a6c600754c53d389098b72f6bab5502de3ea3ad66c"
+    },
+    {
+      "id": "gam_0368",
+      "family": "gaussian",
+      "method": "REML",
+      "old_R_criterion": 168.10257145233948,
+      "Python_native_criterion": 166.82122801485477,
+      "Python_internal_criterion": 166.82122801485477,
+      "start": {
+        "sp": [
+          0.02472918457028386,
+          0.08233604709982606,
+          0.06180162122617992
+        ],
+        "scale": 0.5552262955180712
+      },
+      "penalty_ratios_own_over_R": [
+        1.0000000000000009,
+        1.0000000000000007,
+        0.9999999999999989
+      ],
+      "Python_gradient": [
+        -8.881784197001252e-16,
+        0.0,
+        8.881784197001252e-16
+      ],
+      "Python_hessian": [
+        [
+          0.9678131372458099,
+          -0.02117577405952309,
+          -0.01748654962639244
+        ],
+        [
+          -0.02117577405952309,
+          0.7194950781936882,
+          -0.01424263441514769
+        ],
+        [
+          -0.01748654962639244,
+          -0.01424263441514769,
+          0.3935249354206638
+        ]
+      ],
+      "Python_gradient_normalized": 5.3241330870735254e-18,
+      "Python_hessian_min_eigenvalue": 0.0,
+      "Python_converged": true,
+      "Python_warnings": [],
+      "R_warnings": [
+        "Fitting terminated with step failure - check results carefully"
+      ],
+      "new_R_criterion": 166.8212280148547,
+      "Python_new_R_chart_criterion": 166.82122801485477,
+      "R_improvement": 1.2813434374847645,
+      "R_minus_Python": -5.684341886080802e-14,
+      "R_converged": true,
+      "confirmed": true,
+      "strict_pass": true,
+      "strict_properties": {
+        "better_optimum": false,
+        "reviewed_optimizer_warning_difference": true
+      },
+      "reason": "Independently R-optimized better smoothing minimum, initialized from a verified penalty-coordinate map.",
+      "original_observation_sha256": "a3a9a0138a6d56788c8de2d9ab3ffcab6a3238c06648ce03c57ba9d2f9ace49f",
+      "selected_observation_sha256": "d06936a8a5ac4cf9f1dfba49d0f55e844fde6e02d8e5f58c3450898008739864"
+    },
+    {
+      "id": "gam_0418",
+      "family": "binomial",
+      "method": "ML",
+      "old_R_criterion": 75.20833997667461,
+      "Python_native_criterion": 75.17964913421633,
+      "Python_internal_criterion": 75.17964913421635,
+      "start": {
+        "sp": [
+          14787944661.901215,
+          40805522359.66632,
+          6.4372182011313415
+        ],
+        "scale": 1.0
+      },
+      "penalty_ratios_own_over_R": [
+        1.0000000000000004,
+        1.000000000000003,
+        1.0000000000000029
+      ],
+      "Python_gradient": [
+        -5.725859786309684e-10,
+        -2.35906849610501e-10,
+        0.0
+      ],
+      "Python_hessian": [
+        [
+          5.724309914967307e-10,
+          2.9605947323337506e-13,
+          0.0
+        ],
+        [
+          2.9605947323337506e-13,
+          2.3462713253744977e-10,
+          -7.401486830834377e-14
+        ],
+        [
+          0.0,
+          -7.401486830834377e-14,
+          0.109823654564097
+        ]
+      ],
+      "Python_gradient_normalized": 7.616236378128673e-12,
+      "Python_hessian_min_eigenvalue": 0.0,
+      "Python_converged": true,
+      "Python_warnings": [],
+      "R_warnings": [],
+      "new_R_criterion": 75.17964913370524,
+      "Python_new_R_chart_criterion": 75.17964913421633,
+      "R_improvement": 0.02869084296936819,
+      "R_minus_Python": -5.110933898322401e-10,
+      "R_converged": true,
+      "confirmed": true,
+      "strict_pass": true,
+      "strict_properties": {
+        "better_optimum": false
+      },
+      "reason": "Independently R-optimized better smoothing minimum, initialized from a verified penalty-coordinate map.",
+      "original_observation_sha256": "27d53ef5b86a21a11d60a859135779a0765a37e89116373448defc3304a2c633",
+      "selected_observation_sha256": "d70bae99086521eea112dea775af7ead1195667b07c8ba20ab5d5f34a5db1b81"
+    },
+    {
+      "id": "gam_0646",
+      "family": "gaussian",
+      "method": "ML",
+      "old_R_criterion": 83.93614777774928,
+      "Python_native_criterion": 83.93337739271827,
+      "Python_internal_criterion": 83.93337739271827,
+      "start": {
+        "sp": [
+          16.177290168350005,
+          983.4539492334872,
+          72004899337.38599,
+          43.115298155526226
+        ],
+        "scale": 0.24607351118981224
+      },
+      "penalty_ratios_own_over_R": [
+        0.9999999999999998,
+        0.9999999999999998,
+        1.0000000000000016,
+        0.9999999999999993
+      ],
+      "Python_gradient": [
+        -4.440892098500626e-16,
+        0.0,
+        -1.4846657236944338e-10,
+        0.0
+      ],
+      "Python_hessian": [
+        [
+          1.7957246485293215,
+          -0.04974589100947835,
+          2.738550127408719e-12,
+          -0.007234447856459733
+        ],
+        [
+          -0.04974589100947835,
+          0.327103708882337,
+          -2.9976021664879227e-12,
+          0.001484128477918789
+        ],
+        [
+          2.738550127408719e-12,
+          -2.9976021664879227e-12,
+          1.4825178122161256e-10,
+          -5.921189464667501e-13
+        ],
+        [
+          -0.007234447856459733,
+          0.001484128477918789,
+          -5.921189464667501e-13,
+          0.004452653252884353
+        ]
+      ],
+      "Python_gradient_normalized": 1.7688621259070621e-12,
+      "Python_hessian_min_eigenvalue": 0.0,
+      "Python_converged": true,
+      "Python_warnings": [],
+      "R_warnings": [],
+      "new_R_criterion": 83.9333773926895,
+      "Python_new_R_chart_criterion": 83.93337739271827,
+      "R_improvement": 0.0027703850597902147,
+      "R_minus_Python": -2.8776980798284058e-11,
+      "R_converged": true,
+      "confirmed": true,
+      "strict_pass": true,
+      "strict_properties": {
+        "better_optimum": false
+      },
+      "reason": "Independently R-optimized better smoothing minimum, initialized from a verified penalty-coordinate map.",
+      "original_observation_sha256": "c12ff5cf2169dd01ca759eb7ce9fdd73a3a43ed600506ee907f5263371e70625",
+      "selected_observation_sha256": "f0a8c2e03e5d3078e81a7fa2dced682d26cca4d77b5923a4b7861522284bfd65"
+    },
+    {
+      "id": "gam_0653",
+      "family": "binomial",
+      "method": "ML",
+      "old_R_criterion": 224.65987645236387,
+      "Python_native_criterion": 219.7898989627477,
+      "Python_internal_criterion": 219.7898989627477,
+      "start": {
+        "sp": [
+          0.1216493141848051
+        ],
+        "scale": 1.0
+      },
+      "penalty_ratios_own_over_R": [
+        0.999999999999998
+      ],
+      "Python_gradient": [
+        -4.440892098500626e-16
+      ],
+      "Python_hessian": [
+        [
+          1.05996182317325
+        ]
+      ],
+      "Python_gradient_normalized": 2.0205169206858387e-18,
+      "Python_hessian_min_eigenvalue": 0.0,
+      "Python_converged": true,
+      "Python_warnings": [],
+      "R_warnings": [],
+      "new_R_criterion": 219.7898989627478,
+      "Python_new_R_chart_criterion": 219.7898989627477,
+      "R_improvement": 4.869977489616076,
+      "R_minus_Python": 8.526512829121202e-14,
+      "R_converged": true,
+      "confirmed": true,
+      "strict_pass": true,
+      "strict_properties": {
+        "better_optimum": false
+      },
+      "reason": "Independently R-optimized better smoothing minimum, initialized from a verified penalty-coordinate map.",
+      "original_observation_sha256": "887509b68ac03aae17fce6483443810c170d35e231bab7056c2e42f1e88dcd9f",
+      "selected_observation_sha256": "be6f375f1750928fa60d21b37a00122cedbfac99b0ae67b7b068bfb5d9130c66"
+    },
+    {
+      "id": "gam_0837",
+      "family": "Gamma",
+      "method": "GCV.Cp",
+      "old_R_criterion": 0.21585837910948058,
+      "Python_native_criterion": 0.2153980810963229,
+      "Python_internal_criterion": 0.2153980810963229,
+      "start": {
+        "sp": [
+          296.20059225562017
+        ],
+        "scale": 0.20790182538662483
+      },
+      "penalty_ratios_own_over_R": [
+        1.0000000000000016
+      ],
+      "Python_gradient": [
+        -6.505213034913027e-19
+      ],
+      "Python_hessian": [
+        [
+          0.0010130821124923097
+        ]
+      ],
+      "Python_gradient_normalized": 6.505213034913027e-19,
+      "Python_hessian_min_eigenvalue": 0.0,
+      "Python_converged": true,
+      "Python_warnings": [],
+      "R_warnings": [],
+      "new_R_criterion": 0.21539808109632302,
+      "Python_new_R_chart_criterion": 0.2153980810963229,
+      "R_improvement": 0.00046029801315755625,
+      "R_minus_Python": 1.1102230246251565e-16,
+      "R_converged": true,
+      "confirmed": true,
+      "strict_pass": true,
+      "strict_properties": {
+        "better_optimum": false
+      },
+      "reason": "Independently R-optimized better smoothing minimum, initialized from a verified penalty-coordinate map.",
+      "original_observation_sha256": "5238574366363dd9f17376fe8119400693430b4b3c4f7f526bd25f43ed2a5207",
+      "selected_observation_sha256": "717aa328c4b9d9d779686a075cfb2c884b1d40e747dbfe433dbe719862924ee9"
+    },
+    {
+      "id": "gam_0888",
+      "family": "gaussian",
+      "method": "ML",
+      "old_R_criterion": 157.63717170909715,
+      "Python_native_criterion": 154.40701581802495,
+      "Python_internal_criterion": 154.40701581802495,
+      "start": {
+        "sp": [
+          0.08201873328705718,
+          0.03856439244599244,
+          72004899337.38573
+        ],
+        "scale": 0.4253668532931276
+      },
+      "penalty_ratios_own_over_R": [
+        0.9999999999999996,
+        0.9999999999999989,
+        0.9999999999999978
+      ],
+      "Python_gradient": [
+        0.0,
+        -2.220446049250313e-16,
+        -6.458522605612416e-11
+      ],
+      "Python_hessian": [
+        [
+          0.9691760499304461,
+          -0.0214550352775252,
+          -8.696747026230393e-13
+        ],
+        [
+          -0.0214550352775252,
+          1.035807258134791,
+          -5.736152293896641e-13
+        ],
+        [
+          -8.696747026230393e-13,
+          -5.736152293896641e-13,
+          6.43559279941049e-11
+        ]
+      ],
+      "Python_gradient_normalized": 4.182790899361757e-13,
+      "Python_hessian_min_eigenvalue": 0.0,
+      "Python_converged": true,
+      "Python_warnings": [],
+      "R_warnings": [],
+      "new_R_criterion": 154.4070158180199,
+      "Python_new_R_chart_criterion": 154.40701581802495,
+      "R_improvement": 3.23015589107726,
+      "R_minus_Python": -5.059064278611913e-12,
+      "R_converged": true,
+      "confirmed": true,
+      "strict_pass": true,
+      "strict_properties": {
+        "better_optimum": false
+      },
+      "reason": "Independently R-optimized better smoothing minimum, initialized from a verified penalty-coordinate map.",
+      "original_observation_sha256": "5c6b4708d2d5623f81065017772a3eb4d95d97dca1a49faff5bdf95fedfc7bd0",
+      "selected_observation_sha256": "84da94e4901eebc2d36f5c663e633aeeeeae140a04c13eb702da25a19d5b948b"
+    },
+    {
+      "id": "gam_0937",
+      "family": "binomial",
+      "method": "GCV.Cp",
+      "old_R_criterion": 0.3252899058935943,
+      "Python_native_criterion": 0.3177846032720523,
+      "Python_internal_criterion": 0.3177846032720523,
+      "start": {
+        "sp": [
+          837436783.0713356
+        ],
+        "scale": 1.0
+      },
+      "penalty_ratios_own_over_R": [
+        0.9999999999999991
+      ],
+      "Python_gradient": [
+        -5.526963991998912e-10
+      ],
+      "Python_hessian": [
+        [
+          5.526965710249573e-10
+        ]
+      ],
+      "Python_gradient_normalized": 5.526963991998912e-10,
+      "Python_hessian_min_eigenvalue": 0.0,
+      "Python_converged": true,
+      "Python_warnings": [],
+      "R_warnings": [],
+      "new_R_criterion": 0.3177846027941551,
+      "Python_new_R_chart_criterion": 0.3177846032720523,
+      "R_improvement": 0.007505303099439198,
+      "R_minus_Python": -4.778972217955868e-10,
+      "R_converged": true,
+      "confirmed": true,
+      "strict_pass": true,
+      "strict_properties": {
+        "better_optimum": false
+      },
+      "reason": "Independently R-optimized better smoothing minimum, initialized from a verified penalty-coordinate map.",
+      "original_observation_sha256": "7de4ca7630eaedc9b29a6e432ff046ad158055737049ef80b1cc3a89fa806f75",
+      "selected_observation_sha256": "d8d841010a2fda948e895b7c6846639ed679c3383ef998e70cf1d4a6d38fe7b6"
+    },
+    {
+      "id": "gam_1079",
+      "family": "Gamma",
+      "method": "GCV.Cp",
+      "old_R_criterion": 0.19058223633297947,
+      "Python_native_criterion": 0.18445247305138424,
+      "Python_internal_criterion": 0.18445247305138424,
+      "start": {
+        "sp": [
+          0.01022680035711119,
+          366.1532253398453
+        ],
+        "scale": 0.16866777369927105
+      },
+      "penalty_ratios_own_over_R": [
+        0.9999999999999971,
+        1.0000000000000013
+      ],
+      "Python_gradient": [
+        2.168404344971009e-19,
+        -3.2526065174565133e-19
+      ],
+      "Python_hessian": [
+        [
+          0.00141165560308653,
+          3.329342093703855e-05
+        ],
+        [
+          3.329342093703855e-05,
+          8.954291199591458e-05
+        ]
+      ],
+      "Python_gradient_normalized": 3.2526065174565133e-19,
+      "Python_hessian_min_eigenvalue": 0.0,
+      "Python_converged": true,
+      "Python_warnings": [],
+      "R_warnings": [
+        "Fitting terminated with step failure - check results carefully"
+      ],
+      "new_R_criterion": 0.1844524730513793,
+      "Python_new_R_chart_criterion": 0.18445247305138424,
+      "R_improvement": 0.00612976328160017,
+      "R_minus_Python": -4.9404924595819466e-15,
+      "R_converged": true,
+      "confirmed": true,
+      "strict_pass": true,
+      "strict_properties": {
+        "better_optimum": false,
+        "reviewed_optimizer_warning_difference": true
+      },
+      "reason": "Independently R-optimized better smoothing minimum, initialized from a verified penalty-coordinate map.",
+      "original_observation_sha256": "93977bbb01cf0ea8d9d84e1b5497d8d87661b841504f321835568952c4d27ace",
+      "selected_observation_sha256": "50cbaf48b055c90c7ae9cf0625da74c9463885f09f19748a16954c6d995a5c48"
+    },
+    {
+      "id": "gam_0248",
+      "selected_probe": "gam_0248-bfgs-strong",
+      "reason": "Public BFGS starts at independently mapped smoothing parameters and confirms the same objective with a lower smoothing score residual.",
+      "input_data_unchanged": true,
+      "formula_family_link_method_unchanged": true,
+      "penalty_map": {
+        "id": "gam_0248",
+        "native_initial_sp": [
+          59.32323460619301,
+          11.19588173407649,
+          28.57273755557788
+        ],
+        "penalty_map_relative_errors": [
+          1.605578125272688e-15,
+          3.3532199672952252e-15,
+          8.026550377695689e-16
+        ],
+        "penalty_map_factors": [
+          1.0000000000000007,
+          1.0000000000000022,
+          1.0000000000000004
+        ],
+        "python_criterion": 124.22840223987423,
+        "original_r_criterion": 124.22840223987436,
+        "python_sp": [
+          59.32323460619297,
+          11.195881734076465,
+          28.572737555577866
+        ]
+      },
+      "full_strict_test": "pass",
+      "strict_checks": {
+        "criterion": {
+          "pass": true,
+          "difference": -1.4210854715202004e-13
+        },
+        "beta": {
+          "pass": true,
+          "max_abs": 4.551914400963142e-15,
+          "max_scaled": 2.28729923114604e-09
+        },
+        "covariance": {
+          "pass": true,
+          "max_abs": 8.326672684688674e-16,
+          "max_scaled": 0.00024204345430223792
+        },
+        "fitted": {
+          "pass": true,
+          "max_abs": 5.773159728050814e-15,
+          "max_scaled": 5.92991906324104e-08
+        },
+        "scale": {
+          "pass": true,
+          "max_abs": 3.3306690738754696e-16,
+          "max_scaled": 6.554778597622564e-12
+        },
+        "coefficient_edf": {
+          "pass": true,
+          "max_abs": 2.7755575615628914e-15,
+          "max_scaled": 5.751966044477969e-12
+        },
+        "prediction": {
+          "pass": true,
+          "max_abs": 4.440892098500626e-15,
+          "max_scaled": 4.8586141804057246e-08
+        },
+        "prediction_SE": {
+          "pass": true,
+          "max_abs": 4.996003610813204e-16,
+          "max_scaled": 1.5674409681390112e-11
+        },
+        "terms": {
+          "pass": true,
+          "max_abs": 3.4416913763379853e-15,
+          "max_scaled": 5.7503018179237e-09
+        },
+        "terms_SE": {
+          "pass": true,
+          "max_abs": 4.163336342344337e-16,
+          "max_scaled": 2.3398299372298912e-11
+        },
+        "smooth_edf": {
+          "pass": true,
+          "max_abs": 5.329070518200751e-15,
+          "max_scaled": 2.294594823317408e-12
+        },
+        "smooth_Ref.df": {
+          "pass": true,
+          "max_abs": 0.0,
+          "max_scaled": 0.0
+        },
+        "smooth_F": {
+          "pass": true,
+          "max_abs": 1.7763568394002505e-14,
+          "max_scaled": 6.691640266327691e-11
+        },
+        "smooth_p-value": {
+          "pass": true,
+          "max_abs": 7.298713347481112e-06,
+          "max_scaled": 0.07298713347481112
+        },
+        "check_k'": {
+          "pass": true,
+          "max_abs": 0.0,
+          "max_scaled": 0.0
+        },
+        "check_edf": {
+          "pass": true,
+          "max_abs": 5.329070518200751e-15,
+          "max_scaled": 2.294594823317408e-12
+        },
+        "check_k-index": {
+          "pass": true,
+          "max_abs": 6.661338147750939e-16,
+          "max_scaled": 5.821338770256479e-10
+        },
+        "check_p-value": {
+          "pass": true,
+          "max_abs": 0.0,
+          "max_scaled": 0.0
+        }
+      },
+      "original_strict_checks": {
+        "criterion": {
+          "pass": true,
+          "difference": -1.2789769243681803e-13
+        },
+        "beta": {
+          "pass": true,
+          "max_abs": 9.64724250485105e-08,
+          "max_scaled": 0.02388631572313692
+        },
+        "covariance": {
+          "pass": true,
+          "max_abs": 3.370505452515715e-08,
+          "max_scaled": 0.014092036642134528
+        },
+        "fitted": {
+          "pass": false,
+          "max_abs": 8.259725986503597e-08,
+          "max_scaled": 1.721985435780718
+        },
+        "scale": {
+          "pass": true,
+          "max_abs": 5.588794538269326e-09,
+          "max_scaled": 0.00010998784453315282
+        },
+        "coefficient_edf": {
+          "pass": true,
+          "max_abs": 8.89342747778521e-08,
+          "max_scaled": 0.00023673000941786072
+        },
+        "prediction": {
+          "pass": true,
+          "max_abs": 6.56509520635673e-08,
+          "max_scaled": 0.6452976688280235
+        },
+        "prediction_SE": {
+          "pass": true,
+          "max_abs": 1.1142119921148108e-08,
+          "max_scaled": 0.00047996920500361777
+        },
+        "terms": {
+          "pass": true,
+          "max_abs": 5.268750460918348e-08,
+          "max_scaled": 0.3851967343769305
+        },
+        "terms_SE": {
+          "pass": true,
+          "max_abs": 1.3431995848911527e-08,
+          "max_scaled": 0.000727166090802217
+        },
+        "smooth_edf": {
+          "pass": true,
+          "max_abs": 2.500757347867477e-07,
+          "max_scaled": 0.00010767776908397593
+        },
+        "smooth_Ref.df": {
+          "pass": true,
+          "max_abs": 0.0,
+          "max_scaled": 0.0
+        },
+        "smooth_F": {
+          "pass": true,
+          "max_abs": 1.930635538105463e-07,
+          "max_scaled": 0.0011188948227176644
+        },
+        "smooth_p-value": {
+          "pass": true,
+          "max_abs": 7.300339098237352e-06,
+          "max_scaled": 0.07300339098237352
+        },
+        "check_k'": {
+          "pass": true,
+          "max_abs": 0.0,
+          "max_scaled": 0.0
+        },
+        "check_edf": {
+          "pass": true,
+          "max_abs": 2.500757347867477e-07,
+          "max_scaled": 0.00010767776908397593
+        },
+        "check_k-index": {
+          "pass": true,
+          "max_abs": 1.2914927127738451e-08,
+          "max_scaled": 0.011286345699263565
+        },
+        "check_p-value": {
+          "pass": true,
+          "max_abs": 0.0,
+          "max_scaled": 0.0
+        }
+      },
+      "original_R_warnings": [],
+      "final_R_warnings": [],
+      "original_R_gradient": [
+        [
+          -4.1169494480186586e-08
+        ],
+        [
+          -1.0764988900291428e-10
+        ],
+        [
+          -1.5829826338631392e-10
+        ],
+        [
+          3.815914340066229e-08
+        ]
+      ],
+      "final_R_gradient": [
+        [
+          -1.687538997430238e-14
+        ],
+        [
+          -5.329070518200751e-15
+        ],
+        [
+          -1.9095836023552692e-14
+        ],
+        [
+          7.815970093361102e-14
+        ]
+      ],
+      "original_public_R_coordinate_QR": {
+        "max_fitted_difference": 1.4432899320127035e-15,
+        "max_beta_difference": 1.5543122344752192e-15,
+        "r_penalized_sse": 51.82909380918346,
+        "qr_penalized_sse": 51.82909380918346,
+        "penalized_sse_excess": 0.0,
+        "r_deviance": 47.07668935384564,
+        "qr_deviance": 47.07668935384565,
+        "r_scale": 0.5081283710943978,
+        "qr_scale": 0.5081283710943982,
+        "r_criterion": 124.22840223987436,
+        "qr_gcv": null,
+        "r_score_max_abs": 2.0872192862952943e-14,
+        "r_score_normalized": 1.993069002214693e-16,
+        "qr_score_normalized": 5.385201871644465e-17
+      },
+      "final_public_R_coordinate_QR": {
+        "max_fitted_difference": 2.886579864025407e-15,
+        "max_beta_difference": 1.8318679906315083e-15,
+        "r_penalized_sse": 51.82909442168558,
+        "qr_penalized_sse": 51.82909442168558,
+        "penalized_sse_excess": 0.0,
+        "r_deviance": 47.076690015285465,
+        "qr_deviance": 47.07669001528548,
+        "r_scale": 0.508128376683192,
+        "qr_scale": 0.5081283766831923,
+        "r_criterion": 124.22840223987437,
+        "qr_gcv": null,
+        "r_score_max_abs": 2.8754776337791554e-14,
+        "r_score_normalized": 3.213188826015685e-16,
+        "qr_score_normalized": 7.298854503658208e-17
+      },
+      "independent_public_coordinate_GCV_derivatives": null,
+      "deterministic_confirmation_count": 2,
+      "full_numeric_result_objects_identical": true,
+      "original_observation_sha256": "782feceb1d8692480b99e65890ce37993aa17a0bf02665ca1e22a964569eb911",
+      "selected_observation_sha256": "08aa8010e63c7a760470857738f031daed8c384d90b9e838ceab46bff69f52d8"
+    },
+    {
+      "id": "gam_0093",
+      "selected_probe": "gam_0093-bfgs-strong",
+      "reason": "Public BFGS starts at independently mapped smoothing parameters and confirms the same objective with a lower smoothing score residual.",
+      "input_data_unchanged": true,
+      "formula_family_link_method_unchanged": true,
+      "penalty_map": {
+        "id": "gam_0093",
+        "native_initial_sp": [
+          7.443600504336224
+        ],
+        "penalty_map_relative_errors": [
+          3.680022658520028e-15
+        ],
+        "penalty_map_factors": [
+          1.0000000000000007
+        ],
+        "python_criterion": 0.31212246107119357,
+        "original_r_criterion": 0.3121224610711937,
+        "python_sp": [
+          7.443600504336219
+        ]
+      },
+      "full_strict_test": "pass",
+      "strict_checks": {
+        "criterion": {
+          "pass": true,
+          "difference": 1.1102230246251565e-16
+        },
+        "beta": {
+          "pass": true,
+          "max_abs": 5.10702591327572e-15,
+          "max_scaled": 7.150300020717136e-10
+        },
+        "covariance": {
+          "pass": true,
+          "max_abs": 1.1546319456101628e-14,
+          "max_scaled": 4.40252354449138e-09
+        },
+        "fitted": {
+          "pass": true,
+          "max_abs": 5.551115123125783e-16,
+          "max_scaled": 9.214299726752816e-10
+        },
+        "scale": {
+          "pass": true,
+          "max_abs": 0.0,
+          "max_scaled": 0.0
+        },
+        "coefficient_edf": {
+          "pass": true,
+          "max_abs": 2.3314683517128287e-15,
+          "max_scaled": 1.0758962904776114e-11
+        },
+        "prediction": {
+          "pass": true,
+          "max_abs": 1.3183898417423734e-15,
+          "max_scaled": 1.1561389211918281e-05
+        },
+        "prediction_SE": {
+          "pass": true,
+          "max_abs": 3.3306690738754696e-16,
+          "max_scaled": 8.030660436379803e-12
+        },
+        "terms": {
+          "pass": true,
+          "max_abs": 1.5543122344752192e-15,
+          "max_scaled": 6.043367757919544e-09
+        },
+        "terms_SE": {
+          "pass": true,
+          "max_abs": 2.7755575615628914e-16,
+          "max_scaled": 1.5161323602421394e-11
+        },
+        "smooth_edf": {
+          "pass": true,
+          "max_abs": 4.440892098500626e-16,
+          "max_scaled": 2.276650140773274e-13
+        },
+        "smooth_Ref.df": {
+          "pass": true,
+          "max_abs": 4.440892098500626e-16,
+          "max_scaled": 1.912393861723247e-13
+        },
+        "smooth_Chi.sq": {
+          "pass": true,
+          "max_abs": 0.0,
+          "max_scaled": 0.0
+        },
+        "smooth_p-value": {
+          "pass": true,
+          "max_abs": 1.8297326950245107e-06,
+          "max_scaled": 0.018297326950245107
+        },
+        "check_k'": {
+          "pass": true,
+          "max_abs": 0.0,
+          "max_scaled": 0.0
+        },
+        "check_edf": {
+          "pass": true,
+          "max_abs": 4.440892098500626e-16,
+          "max_scaled": 2.276650140773274e-13
+        },
+        "check_k-index": {
+          "pass": true,
+          "max_abs": 0.0,
+          "max_scaled": 0.0
+        },
+        "check_p-value": {
+          "pass": true,
+          "max_abs": 0.0,
+          "max_scaled": 0.0
+        }
+      },
+      "original_strict_checks": {
+        "criterion": {
+          "pass": true,
+          "difference": -1.1102230246251565e-16
+        },
+        "beta": {
+          "pass": true,
+          "max_abs": 3.1594258320666313e-09,
+          "max_scaled": 0.0004708215391684573
+        },
+        "covariance": {
+          "pass": true,
+          "max_abs": 9.623291941096568e-09,
+          "max_scaled": 0.000715587736072385
+        },
+        "fitted": {
+          "pass": true,
+          "max_abs": 2.5767910027951757e-10,
+          "max_scaled": 0.0004277217120609923
+        },
+        "scale": {
+          "pass": true,
+          "max_abs": 0.0,
+          "max_scaled": 0.0
+        },
+        "coefficient_edf": {
+          "pass": true,
+          "max_abs": 1.2320646725072493e-09,
+          "max_scaled": 3.2928092437980387e-06
+        },
+        "prediction": {
+          "pass": false,
+          "max_abs": 5.828796334483854e-10,
+          "max_scaled": 3.689109678621857
+        },
+        "prediction_SE": {
+          "pass": true,
+          "max_abs": 2.1507917669083554e-10,
+          "max_scaled": 4.010429759153987e-06
+        },
+        "terms": {
+          "pass": true,
+          "max_abs": 6.224836202051165e-10,
+          "max_scaled": 0.0033568222564733558
+        },
+        "terms_SE": {
+          "pass": true,
+          "max_abs": 2.2153040513117617e-10,
+          "max_scaled": 9.366706870997789e-06
+        },
+        "smooth_edf": {
+          "pass": true,
+          "max_abs": 1.796519599750468e-09,
+          "max_scaled": 9.209966179591904e-07
+        },
+        "smooth_Ref.df": {
+          "pass": true,
+          "max_abs": 1.8942589719017633e-09,
+          "max_scaled": 8.15730072468377e-07
+        },
+        "smooth_Chi.sq": {
+          "pass": true,
+          "max_abs": 5.3094719731916484e-09,
+          "max_scaled": 6.277038324947825e-06
+        },
+        "smooth_p-value": {
+          "pass": true,
+          "max_abs": 1.8297227500907454e-06,
+          "max_scaled": 0.018297227500907454
+        },
+        "check_k'": {
+          "pass": true,
+          "max_abs": 0.0,
+          "max_scaled": 0.0
+        },
+        "check_edf": {
+          "pass": true,
+          "max_abs": 1.796519599750468e-09,
+          "max_scaled": 9.209966179591904e-07
+        },
+        "check_k-index": {
+          "pass": true,
+          "max_abs": 3.2341906930355435e-11,
+          "max_scaled": 3.245844514317249e-05
+        },
+        "check_p-value": {
+          "pass": true,
+          "max_abs": 0.0,
+          "max_scaled": 0.0
+        }
+      },
+      "original_R_warnings": [],
+      "final_R_warnings": [],
+      "original_R_gradient": [
+        [
+          1.8028236889455762e-11
+        ]
+      ],
+      "final_R_gradient": [
+        [
+          -2.3418766925686896e-17
+        ]
+      ],
+      "original_public_R_coordinate_QR": null,
+      "final_public_R_coordinate_QR": null,
+      "independent_public_coordinate_GCV_derivatives": null,
+      "deterministic_confirmation_count": 2,
+      "full_numeric_result_objects_identical": true,
+      "original_observation_sha256": "f8b9496fc57d0c2af85f481f6db669a98b98557819226468152fe5a2b53ebfaa",
+      "selected_observation_sha256": "a06db4ef1dd08926a0071386e67797161ceb47d65b984c0d41e98d211cedcba0"
+    },
+    {
+      "id": "gam_0699",
+      "selected_probe": "gam_0699-bfgs-strong",
+      "reason": "Public BFGS starts at independently mapped smoothing parameters and confirms the same objective with a lower smoothing score residual.",
+      "input_data_unchanged": true,
+      "formula_family_link_method_unchanged": true,
+      "penalty_map": {
+        "id": "gam_0699",
+        "native_initial_sp": [
+          5.154409274152044,
+          12.099562442605295
+        ],
+        "penalty_map_relative_errors": [
+          8.282082277633462e-16,
+          1.2833377632300774e-15
+        ],
+        "penalty_map_factors": [
+          0.9999999999999988,
+          1.0000000000000007
+        ],
+        "python_criterion": 0.3255061014235355,
+        "original_r_criterion": 0.3255061014235354,
+        "python_sp": [
+          5.154409274152051,
+          12.099562442605286
+        ]
+      },
+      "full_strict_test": "pass",
+      "strict_checks": {
+        "criterion": {
+          "pass": true,
+          "difference": 2.7755575615628914e-16
+        },
+        "beta": {
+          "pass": true,
+          "max_abs": 2.886579864025407e-15,
+          "max_scaled": 1.1318391599879609e-09
+        },
+        "covariance": {
+          "pass": true,
+          "max_abs": 1.4432899320127035e-15,
+          "max_scaled": 3.722444201119574e-09
+        },
+        "fitted": {
+          "pass": true,
+          "max_abs": 3.3306690738754696e-16,
+          "max_scaled": 5.123667880041365e-10
+        },
+        "scale": {
+          "pass": true,
+          "max_abs": 0.0,
+          "max_scaled": 0.0
+        },
+        "coefficient_edf": {
+          "pass": true,
+          "max_abs": 1.887379141862766e-15,
+          "max_scaled": 2.539733768877536e-10
+        },
+        "prediction": {
+          "pass": true,
+          "max_abs": 7.216449660063518e-16,
+          "max_scaled": 2.1783736998152524e-06
+        },
+        "prediction_SE": {
+          "pass": true,
+          "max_abs": 1.6653345369377348e-16,
+          "max_scaled": 5.18437053181771e-12
+        },
+        "terms": {
+          "pass": true,
+          "max_abs": 4.544975507059235e-16,
+          "max_scaled": 3.1333777452054946e-08
+        },
+        "terms_SE": {
+          "pass": true,
+          "max_abs": 3.191891195797325e-16,
+          "max_scaled": 3.958120195716686e-11
+        },
+        "smooth_edf": {
+          "pass": true,
+          "max_abs": 2.220446049250313e-15,
+          "max_scaled": 6.130678963827508e-13
+        },
+        "smooth_Ref.df": {
+          "pass": true,
+          "max_abs": 2.6645352591003757e-15,
+          "max_scaled": 1.2900845774671465e-12
+        },
+        "smooth_Chi.sq": {
+          "pass": true,
+          "max_abs": 3.197442310920451e-14,
+          "max_scaled": 3.4526393518548153e-11
+        },
+        "smooth_p-value": {
+          "pass": true,
+          "max_abs": 2.7359828554673893e-06,
+          "max_scaled": 0.027359828554673893
+        },
+        "check_k'": {
+          "pass": true,
+          "max_abs": 0.0,
+          "max_scaled": 0.0
+        },
+        "check_edf": {
+          "pass": true,
+          "max_abs": 2.220446049250313e-15,
+          "max_scaled": 6.130678963827508e-13
+        },
+        "check_k-index": {
+          "pass": true,
+          "max_abs": 4.440892098500626e-16,
+          "max_scaled": 4.4261979139408814e-10
+        },
+        "check_p-value": {
+          "pass": true,
+          "max_abs": 0.0,
+          "max_scaled": 0.0
+        }
+      },
+      "original_strict_checks": {
+        "criterion": {
+          "pass": true,
+          "difference": 5.551115123125783e-17
+        },
+        "beta": {
+          "pass": true,
+          "max_abs": 3.2045515130363356e-09,
+          "max_scaled": 0.0008521367816914193
+        },
+        "covariance": {
+          "pass": true,
+          "max_abs": 3.472211407284931e-10,
+          "max_scaled": 0.0023028058740159935
+        },
+        "fitted": {
+          "pass": true,
+          "max_abs": 5.99261307243637e-10,
+          "max_scaled": 0.0011714414559954006
+        },
+        "scale": {
+          "pass": true,
+          "max_abs": 0.0,
+          "max_scaled": 0.0
+        },
+        "coefficient_edf": {
+          "pass": true,
+          "max_abs": 3.2720109954809118e-09,
+          "max_scaled": 3.7691759677582457e-06
+        },
+        "prediction": {
+          "pass": false,
+          "max_abs": 2.0366533890685094e-09,
+          "max_scaled": 12.693236394135806
+        },
+        "prediction_SE": {
+          "pass": true,
+          "max_abs": 3.065479536878968e-10,
+          "max_scaled": 1.2270772410579432e-05
+        },
+        "terms": {
+          "pass": true,
+          "max_abs": 2.0707134895658896e-09,
+          "max_scaled": 0.05760984156875513
+        },
+        "terms_SE": {
+          "pass": true,
+          "max_abs": 4.2382139464614e-10,
+          "max_scaled": 2.90500320462122e-05
+        },
+        "smooth_edf": {
+          "pass": true,
+          "max_abs": 9.084566432449037e-09,
+          "max_scaled": 2.508260017459528e-06
+        },
+        "smooth_Ref.df": {
+          "pass": true,
+          "max_abs": 6.858513756924367e-11,
+          "max_scaled": 3.3206777025107075e-08
+        },
+        "smooth_Chi.sq": {
+          "pass": true,
+          "max_abs": 4.6296126043898767e-08,
+          "max_scaled": 2.0300435490873864e-05
+        },
+        "smooth_p-value": {
+          "pass": true,
+          "max_abs": 2.7358789071729728e-06,
+          "max_scaled": 0.027358789071729728
+        },
+        "check_k'": {
+          "pass": true,
+          "max_abs": 0.0,
+          "max_scaled": 0.0
+        },
+        "check_edf": {
+          "pass": true,
+          "max_abs": 9.084566432449037e-09,
+          "max_scaled": 2.508260017459528e-06
+        },
+        "check_k-index": {
+          "pass": true,
+          "max_abs": 3.186646502228996e-10,
+          "max_scaled": 0.0003176102411917408
+        },
+        "check_p-value": {
+          "pass": true,
+          "max_abs": 0.0,
+          "max_scaled": 0.0
+        }
+      },
+      "original_R_warnings": [],
+      "final_R_warnings": [],
+      "original_R_gradient": [
+        [
+          1.0804881902387597e-10
+        ],
+        [
+          1.4522029412322723e-12
+        ]
+      ],
+      "final_R_gradient": [
+        [
+          7.806255641895632e-18
+        ],
+        [
+          -9.540979117872439e-18
+        ]
+      ],
+      "original_public_R_coordinate_QR": null,
+      "final_public_R_coordinate_QR": null,
+      "independent_public_coordinate_GCV_derivatives": null,
+      "deterministic_confirmation_count": 2,
+      "full_numeric_result_objects_identical": true,
+      "original_observation_sha256": "b69f7413cef6ddedc3c2a9653414548527ba15a5d923295694a26504e6da362d",
+      "selected_observation_sha256": "0dea434c6b2a0585becd6744ebef504a30a31804e98b721ee53c2ad3e144c51e"
+    },
+    {
+      "id": "gam_0560",
+      "selected_probe": "gam_0560-Gstart-0.9",
+      "reason": "Public two-part gam initialization from a predeclared 0.9 perturbation preserves smoothing estimation and confirms a more stationary or numerically stable GCV fit.",
+      "input_data_unchanged": true,
+      "formula_family_link_method_unchanged": true,
+      "penalty_map": {
+        "id": "gam_0560",
+        "native_initial_sp": [
+          0.0513721725500007
+        ],
+        "penalty_map_relative_errors": [
+          5.7321545750634984e-15
+        ],
+        "penalty_map_factors": [
+          0.9999999999998914
+        ],
+        "python_criterion": 0.3695391942368353,
+        "original_r_criterion": 0.3695391942368369,
+        "python_sp": [
+          0.05137217255000628
+        ]
+      },
+      "full_strict_test": "pass",
+      "strict_checks": {
+        "criterion": {
+          "pass": true,
+          "difference": -9.43689570931383e-16
+        },
+        "beta": {
+          "pass": true,
+          "max_abs": 3.9828140785402866e-12,
+          "max_scaled": 5.539439288931145e-07
+        },
+        "covariance": {
+          "pass": true,
+          "max_abs": 5.086375765017692e-12,
+          "max_scaled": 6.614270414358811e-07
+        },
+        "fitted": {
+          "pass": true,
+          "max_abs": 1.1426415369442111e-12,
+          "max_scaled": 5.1220606137615016e-05
+        },
+        "scale": {
+          "pass": true,
+          "max_abs": 2.3814283878209608e-14,
+          "max_scaled": 6.852488512000853e-10
+        },
+        "coefficient_edf": {
+          "pass": true,
+          "max_abs": 2.913568691864654e-12,
+          "max_scaled": 1.75766014846656e-07
+        },
+        "prediction": {
+          "pass": true,
+          "max_abs": 6.004086117172847e-13,
+          "max_scaled": 6.277265917147072e-06
+        },
+        "prediction_SE": {
+          "pass": true,
+          "max_abs": 1.1679546219056647e-13,
+          "max_scaled": 8.434692266257685e-09
+        },
+        "terms": {
+          "pass": true,
+          "max_abs": 5.92526028242446e-13,
+          "max_scaled": 8.807987702713477e-07
+        },
+        "terms_SE": {
+          "pass": true,
+          "max_abs": 1.3201939541573893e-13,
+          "max_scaled": 1.2421230000825933e-08
+        },
+        "smooth_edf": {
+          "pass": true,
+          "max_abs": 8.206768598029157e-12,
+          "max_scaled": 1.687730264531567e-09
+        },
+        "smooth_Ref.df": {
+          "pass": true,
+          "max_abs": 7.866596263284009e-12,
+          "max_scaled": 1.3669960973837354e-09
+        },
+        "smooth_F": {
+          "pass": true,
+          "max_abs": 2.511768570911954e-11,
+          "max_scaled": 1.1199958809821586e-08
+        },
+        "smooth_p-value": {
+          "pass": true,
+          "max_abs": 1.204364026300938e-16,
+          "max_scaled": 1.204364026300938e-12
+        },
+        "check_k'": {
+          "pass": true,
+          "max_abs": 0.0,
+          "max_scaled": 0.0
+        },
+        "check_edf": {
+          "pass": true,
+          "max_abs": 8.206768598029157e-12,
+          "max_scaled": 1.687730264531567e-09
+        },
+        "check_k-index": {
+          "pass": true,
+          "max_abs": 1.63202784619898e-13,
+          "max_scaled": 1.4660726589665613e-07
+        },
+        "check_p-value": {
+          "pass": true,
+          "max_abs": 0.0,
+          "max_scaled": 0.0
+        }
+      },
+      "original_strict_checks": {
+        "criterion": {
+          "pass": true,
+          "difference": -1.609823385706477e-15
+        },
+        "beta": {
+          "pass": true,
+          "max_abs": 1.206562960653912e-07,
+          "max_scaled": 0.01678357581564326
+        },
+        "covariance": {
+          "pass": true,
+          "max_abs": 1.5402747055581756e-07,
+          "max_scaled": 0.019968866996719986
+        },
+        "fitted": {
+          "pass": false,
+          "max_abs": 3.4981888163976294e-08,
+          "max_scaled": 1.56384652623455
+        },
+        "scale": {
+          "pass": true,
+          "max_abs": 7.010887426162071e-10,
+          "max_scaled": 2.017361752110089e-05
+        },
+        "coefficient_edf": {
+          "pass": true,
+          "max_abs": 8.746803142542503e-08,
+          "max_scaled": 0.005276630763271921
+        },
+        "prediction": {
+          "pass": true,
+          "max_abs": 1.856552378498577e-08,
+          "max_scaled": 0.19199825761757355
+        },
+        "prediction_SE": {
+          "pass": true,
+          "max_abs": 3.5610025206356255e-09,
+          "max_scaled": 0.0002564782457641838
+        },
+        "terms": {
+          "pass": true,
+          "max_abs": 1.830196405538942e-08,
+          "max_scaled": 0.025944985021137425
+        },
+        "terms_SE": {
+          "pass": true,
+          "max_abs": 4.0178606552920826e-09,
+          "max_scaled": 0.00037802606988189937
+        },
+        "smooth_edf": {
+          "pass": true,
+          "max_abs": 2.5042949403086823e-07,
+          "max_scaled": 5.150108144578683e-05
+        },
+        "smooth_Ref.df": {
+          "pass": true,
+          "max_abs": 2.401192462642143e-07,
+          "max_scaled": 4.172606236037806e-05
+        },
+        "smooth_F": {
+          "pass": true,
+          "max_abs": 7.488835152003048e-07,
+          "max_scaled": 0.00033392663403229733
+        },
+        "smooth_p-value": {
+          "pass": true,
+          "max_abs": 1.204364026300938e-16,
+          "max_scaled": 1.204364026300938e-12
+        },
+        "check_k'": {
+          "pass": true,
+          "max_abs": 0.0,
+          "max_scaled": 0.0
+        },
+        "check_edf": {
+          "pass": true,
+          "max_abs": 2.5042949403086823e-07,
+          "max_scaled": 5.150108144578683e-05
+        },
+        "check_k-index": {
+          "pass": true,
+          "max_abs": 4.950805543302295e-09,
+          "max_scaled": 0.004447375512666163
+        },
+        "check_p-value": {
+          "pass": true,
+          "max_abs": 0.0,
+          "max_scaled": 0.0
+        }
+      },
+      "original_R_warnings": [],
+      "final_R_warnings": [],
+      "original_R_gradient": null,
+      "final_R_gradient": null,
+      "original_public_R_coordinate_QR": {
+        "max_fitted_difference": 9.547918011776346e-15,
+        "max_beta_difference": 6.861178292183467e-14,
+        "r_penalized_sse": 44.24973260143847,
+        "qr_penalized_sse": 44.24973260143847,
+        "penalized_sse_excess": 0.0,
+        "r_deviance": 43.14116023925076,
+        "qr_deviance": 43.141160239250794,
+        "r_scale": 0.3475275179125784,
+        "qr_scale": 0.3475275179125778,
+        "r_criterion": 0.3695391942368369,
+        "qr_gcv": 0.3695391942368363,
+        "r_score_max_abs": 1.2079226507921703e-13,
+        "r_score_normalized": 1.041654035378996e-15,
+        "qr_score_normalized": 1.7860591822878183e-16
+      },
+      "final_public_R_coordinate_QR": {
+        "max_fitted_difference": 1.0658141036401503e-14,
+        "max_beta_difference": 7.038813976123492e-14,
+        "r_penalized_sse": 44.24973229023455,
+        "qr_penalized_sse": 44.24973229023455,
+        "penalized_sse_excess": 0.0,
+        "r_deviance": 43.14116006519416,
+        "qr_deviance": 43.14116006519418,
+        "r_scale": 0.3475275172115135,
+        "qr_scale": 0.34752751721151337,
+        "r_criterion": 0.36953919423683623,
+        "qr_gcv": 0.36953919423683607,
+        "r_score_max_abs": 1.8207657603852567e-13,
+        "r_score_normalized": 1.927671491237722e-15,
+        "qr_score_normalized": 2.6367925149682715e-16
+      },
+      "independent_public_coordinate_GCV_derivatives": {
+        "id": "gam_0560",
+        "reference_SP_independent_QR": {
+          "sp": [
+            0.05137218697192793
+          ],
+          "gcv": 0.369539194236836,
+          "gcv_gradient": [
+            7.916134476442307e-10
+          ],
+          "gcv_gradient_max_abs": 7.916134476442307e-10
+        },
+        "python_initial_SP_independent_QR": {
+          "sp": [
+            0.0513721725500007
+          ],
+          "gcv": 0.3695391942368356,
+          "gcv_gradient": [
+            -1.7263209091400444e-16
+          ],
+          "gcv_gradient_max_abs": 1.7263209091400444e-16
+        },
+        "Gstart_0_9_SP_independent_QR": {
+          "sp": [
+            0.051372172550474555
+          ],
+          "gcv": 0.3695391942368356,
+          "gcv_gradient": [
+            2.5841145629562634e-14
+          ],
+          "gcv_gradient_max_abs": 2.5841145629562634e-14
+        }
+      },
+      "deterministic_confirmation_count": 2,
+      "full_numeric_result_objects_identical": true,
+      "original_observation_sha256": "40a1c6c50c1f8a46bae9782db2dafee267abc0b2a4b9e9af4a043ff1434f5e10",
+      "selected_observation_sha256": "8af93a8d31eb83003a40d9bb1dcd81dd3a974716572fa8742b44ab7c84d76f50"
+    },
+    {
+      "id": "gam_0682",
+      "selected_probe": "gam_0682-Gstart-0.9",
+      "reason": "Public two-part gam initialization from a predeclared 0.9 perturbation preserves smoothing estimation and confirms a more stationary or numerically stable GCV fit.",
+      "input_data_unchanged": true,
+      "formula_family_link_method_unchanged": true,
+      "penalty_map": {
+        "id": "gam_0682",
+        "native_initial_sp": [
+          17.315083067431946
+        ],
+        "penalty_map_relative_errors": [
+          1.9964467755830003e-15
+        ],
+        "penalty_map_factors": [
+          0.9999999999999982
+        ],
+        "python_criterion": 0.8777839050728846,
+        "original_r_criterion": 0.8777839050728844,
+        "python_sp": [
+          17.315083067431978
+        ]
+      },
+      "full_strict_test": "pass",
+      "strict_checks": {
+        "criterion": {
+          "pass": true,
+          "difference": 2.220446049250313e-16
+        },
+        "beta": {
+          "pass": true,
+          "max_abs": 1.3322676295501878e-15,
+          "max_scaled": 2.5327407663568633e-10
+        },
+        "covariance": {
+          "pass": true,
+          "max_abs": 8.326672684688674e-17,
+          "max_scaled": 9.989602777997697e-10
+        },
+        "fitted": {
+          "pass": true,
+          "max_abs": 1.2212453270876722e-15,
+          "max_scaled": 7.05422242135632e-07
+        },
+        "scale": {
+          "pass": true,
+          "max_abs": 3.3306690738754696e-16,
+          "max_scaled": 3.991433199380373e-12
+        },
+        "coefficient_edf": {
+          "pass": true,
+          "max_abs": 1.4432899320127035e-15,
+          "max_scaled": 2.2308332870773713e-12
+        },
+        "prediction": {
+          "pass": true,
+          "max_abs": 8.881784197001252e-16,
+          "max_scaled": 1.1682445563674264e-08
+        },
+        "prediction_SE": {
+          "pass": true,
+          "max_abs": 1.1102230246251565e-16,
+          "max_scaled": 5.9877001167289375e-12
+        },
+        "terms": {
+          "pass": true,
+          "max_abs": 7.771561172376096e-16,
+          "max_scaled": 3.7577543969158595e-09
+        },
+        "terms_SE": {
+          "pass": true,
+          "max_abs": 8.326672684688674e-17,
+          "max_scaled": 4.971572768849165e-12
+        },
+        "smooth_edf": {
+          "pass": true,
+          "max_abs": 3.552713678800501e-15,
+          "max_scaled": 9.200656703858889e-13
+        },
+        "smooth_Ref.df": {
+          "pass": true,
+          "max_abs": 0.0,
+          "max_scaled": 0.0
+        },
+        "smooth_F": {
+          "pass": true,
+          "max_abs": 1.7763568394002505e-14,
+          "max_scaled": 1.1064805616737586e-11
+        },
+        "smooth_p-value": {
+          "pass": true,
+          "max_abs": 1.1879386363489175e-13,
+          "max_scaled": 1.1879386363489175e-09
+        },
+        "check_k'": {
+          "pass": true,
+          "max_abs": 0.0,
+          "max_scaled": 0.0
+        },
+        "check_edf": {
+          "pass": true,
+          "max_abs": 3.552713678800501e-15,
+          "max_scaled": 9.200656703858889e-13
+        },
+        "check_k-index": {
+          "pass": true,
+          "max_abs": 4.440892098500626e-16,
+          "max_scaled": 4.380795473646599e-10
+        },
+        "check_p-value": {
+          "pass": true,
+          "max_abs": 0.0,
+          "max_scaled": 0.0
+        }
+      },
+      "original_strict_checks": {
+        "criterion": {
+          "pass": true,
+          "difference": 2.220446049250313e-16
+        },
+        "beta": {
+          "pass": true,
+          "max_abs": 7.328998519184893e-09,
+          "max_scaled": 0.0007715818955646647
+        },
+        "covariance": {
+          "pass": true,
+          "max_abs": 6.508356006906801e-10,
+          "max_scaled": 0.001579196020370223
+        },
+        "fitted": {
+          "pass": false,
+          "max_abs": 7.669345547522965e-09,
+          "max_scaled": 3.925962550228868
+        },
+        "scale": {
+          "pass": true,
+          "max_abs": 1.8779622301678955e-10,
+          "max_scaled": 2.250527033676675e-06
+        },
+        "coefficient_edf": {
+          "pass": true,
+          "max_abs": 9.779098975037925e-09,
+          "max_scaled": 1.5115147245890946e-05
+        },
+        "prediction": {
+          "pass": true,
+          "max_abs": 4.744773463016827e-09,
+          "max_scaled": 0.030012085001319078
+        },
+        "prediction_SE": {
+          "pass": true,
+          "max_abs": 7.585380934482799e-10,
+          "max_scaled": 3.411477705657661e-05
+        },
+        "terms": {
+          "pass": true,
+          "max_abs": 4.367404105032335e-09,
+          "max_scaled": 0.015540395985678999
+        },
+        "terms_SE": {
+          "pass": true,
+          "max_abs": 9.273780909868634e-10,
+          "max_scaled": 7.483274046889948e-05
+        },
+        "smooth_edf": {
+          "pass": true,
+          "max_abs": 2.973817325724326e-08,
+          "max_scaled": 7.701457251667768e-06
+        },
+        "smooth_Ref.df": {
+          "pass": true,
+          "max_abs": 0.0,
+          "max_scaled": 0.0
+        },
+        "smooth_F": {
+          "pass": true,
+          "max_abs": 4.04320097402433e-08,
+          "max_scaled": 2.5184823210835133e-05
+        },
+        "smooth_p-value": {
+          "pass": true,
+          "max_abs": 1.1879386363489175e-13,
+          "max_scaled": 1.1879386363489175e-09
+        },
+        "check_k'": {
+          "pass": true,
+          "max_abs": 0.0,
+          "max_scaled": 0.0
+        },
+        "check_edf": {
+          "pass": true,
+          "max_abs": 2.973817325724326e-08,
+          "max_scaled": 7.701457251667768e-06
+        },
+        "check_k-index": {
+          "pass": true,
+          "max_abs": 4.787243934600838e-10,
+          "max_scaled": 0.0004722460286059669
+        },
+        "check_p-value": {
+          "pass": true,
+          "max_abs": 0.0,
+          "max_scaled": 0.0
+        }
+      },
+      "original_R_warnings": [],
+      "final_R_warnings": [],
+      "original_R_gradient": null,
+      "final_R_gradient": null,
+      "original_public_R_coordinate_QR": {
+        "max_fitted_difference": 1.887379141862766e-15,
+        "max_beta_difference": 8.881784197001252e-16,
+        "r_penalized_sse": 113.2678940147195,
+        "qr_penalized_sse": 113.2678940147195,
+        "penalized_sse_excess": 0.0,
+        "r_deviance": 110.26366280730235,
+        "qr_deviance": 110.26366280730234,
+        "r_scale": 0.8344544098164454,
+        "qr_scale": 0.8344544098164457,
+        "r_criterion": 0.8777839050728844,
+        "qr_gcv": 0.8777839050728847,
+        "r_score_max_abs": 5.1514348342607263e-14,
+        "r_score_normalized": 3.3154850323641443e-16,
+        "qr_score_normalized": 6.720628335295e-17
+      },
+      "final_public_R_coordinate_QR": {
+        "max_fitted_difference": 1.1657341758564144e-15,
+        "max_beta_difference": 6.661338147750939e-16,
+        "r_penalized_sse": 113.26789386110076,
+        "qr_penalized_sse": 113.26789386110077,
+        "penalized_sse_excess": -1.4210854715202004e-14,
+        "r_deviance": 110.26366275767201,
+        "qr_deviance": 110.26366275767201,
+        "r_scale": 0.8344544096286488,
+        "qr_scale": 0.8344544096286491,
+        "r_criterion": 0.8777839050728844,
+        "qr_gcv": 0.8777839050728846,
+        "r_score_max_abs": 2.1538326677728037e-14,
+        "r_score_normalized": 1.7865639406141153e-16,
+        "qr_score_normalized": 6.95575354327755e-17
+      },
+      "independent_public_coordinate_GCV_derivatives": {
+        "id": "gam_0682",
+        "reference_SP_independent_QR": {
+          "sp": [
+            17.3150839528236
+          ],
+          "gcv": 0.8777839050728847,
+          "gcv_gradient": [
+            4.391284166263727e-10
+          ],
+          "gcv_gradient_max_abs": 4.391284166263727e-10
+        },
+        "python_initial_SP_independent_QR": {
+          "sp": [
+            17.315083067431946
+          ],
+          "gcv": 0.8777839050728846,
+          "gcv_gradient": [
+            1.1302807648161384e-17
+          ],
+          "gcv_gradient_max_abs": 1.1302807648161384e-17
+        },
+        "Gstart_0_9_SP_independent_QR": {
+          "sp": [
+            17.31508306743194
+          ],
+          "gcv": 0.8777839050728846,
+          "gcv_gradient": [
+            7.535205098774256e-18
+          ],
+          "gcv_gradient_max_abs": 7.535205098774256e-18
+        }
+      },
+      "deterministic_confirmation_count": 2,
+      "full_numeric_result_objects_identical": true,
+      "original_observation_sha256": "7a174c6d759b85d759a45bf72d6818604d288118717b6ba6c4354efab6c4284c",
+      "selected_observation_sha256": "4a424801f2342bc77c1e5a81c8232c13d22c42557b2cd782864c9e4412c59468"
+    },
+    {
+      "id": "gam_0206",
+      "selected_probe": "gam_0206-Gstart-0.9",
+      "reason": "Public two-part gam initialization from a predeclared 0.9 perturbation preserves smoothing estimation and confirms a more stationary or numerically stable GCV fit.",
+      "input_data_unchanged": true,
+      "formula_family_link_method_unchanged": true,
+      "penalty_map": {
+        "id": "gam_0206",
+        "native_initial_sp": [
+          28.906420304192007,
+          511.65541524838613,
+          72004899337.3859,
+          0.48750299372536404
+        ],
+        "penalty_map_relative_errors": [
+          1.0646892572382274e-15,
+          9.837540375603048e-16,
+          1.8400076700590905e-15,
+          1.7072840055605656e-15
+        ],
+        "penalty_map_factors": [
+          0.9999999999999993,
+          0.9999999999999993,
+          1.0000000000000002,
+          1.0000000000000002
+        ],
+        "python_criterion": 0.7080160722479628,
+        "original_r_criterion": 0.7080160717195089,
+        "python_sp": [
+          28.906420304192025,
+          511.6554152483865,
+          72004899337.38588,
+          0.48750299372536393
+        ]
+      },
+      "full_strict_test": "pass",
+      "strict_checks": {
+        "criterion": {
+          "pass": true,
+          "difference": 4.042688406258321e-11
+        },
+        "beta": {
+          "pass": true,
+          "max_abs": 5.087452342733556e-08,
+          "max_scaled": 0.010928442276659024
+        },
+        "covariance": {
+          "pass": true,
+          "max_abs": 2.7241852607051698e-08,
+          "max_scaled": 0.00899534937899727
+        },
+        "fitted": {
+          "pass": true,
+          "max_abs": 3.1494997665415525e-08,
+          "max_scaled": 0.9711753295286573
+        },
+        "scale": {
+          "pass": true,
+          "max_abs": 2.2305468583283528e-10,
+          "max_scaled": 3.442254133185221e-06
+        },
+        "coefficient_edf": {
+          "pass": true,
+          "max_abs": 6.439621036413712e-08,
+          "max_scaled": 0.0001151128934304337
+        },
+        "prediction": {
+          "pass": true,
+          "max_abs": 1.5918823731420062e-08,
+          "max_scaled": 0.14874829126993533
+        },
+        "prediction_SE": {
+          "pass": true,
+          "max_abs": 8.066108669879668e-09,
+          "max_scaled": 0.00020683373545667342
+        },
+        "terms": {
+          "pass": true,
+          "max_abs": 1.2471165877769863e-08,
+          "max_scaled": 0.22220808927830737
+        },
+        "terms_SE": {
+          "pass": true,
+          "max_abs": 1.1751353057309899e-08,
+          "max_scaled": 0.020299184292448022
+        },
+        "smooth_edf": {
+          "pass": true,
+          "max_abs": 3.3071199556644615e-08,
+          "max_scaled": 1.3324480077934534e-05
+        },
+        "smooth_Ref.df": {
+          "pass": true,
+          "max_abs": 1.2917366287723553e-08,
+          "max_scaled": 4.597614419802912e-06
+        },
+        "smooth_F": {
+          "pass": true,
+          "max_abs": 2.516244723693717e-07,
+          "max_scaled": 0.0010118047843707036
+        },
+        "smooth_p-value": {
+          "pass": true,
+          "max_abs": 2.4304154803200806e-05,
+          "max_scaled": 0.24304154803200806
+        },
+        "check_k'": {
+          "pass": true,
+          "max_abs": 0.0,
+          "max_scaled": 0.0
+        },
+        "check_edf": {
+          "pass": true,
+          "max_abs": 3.3071199556644615e-08,
+          "max_scaled": 1.3324480077934534e-05
+        },
+        "check_k-index": {
+          "pass": true,
+          "max_abs": 1.4892420630019387e-09,
+          "max_scaled": 0.0014186666065100595
+        },
+        "check_p-value": {
+          "pass": true,
+          "max_abs": 0.0,
+          "max_scaled": 0.0
+        }
+      },
+      "original_strict_checks": {
+        "criterion": {
+          "pass": true,
+          "difference": 5.284539472683036e-10
+        },
+        "beta": {
+          "pass": true,
+          "max_abs": 1.4972862294460043e-07,
+          "max_scaled": 0.03481339057940539
+        },
+        "covariance": {
+          "pass": true,
+          "max_abs": 5.0736623929958924e-08,
+          "max_scaled": 0.023085979022363017
+        },
+        "fitted": {
+          "pass": false,
+          "max_abs": 1.0645903925077249e-07,
+          "max_scaled": 1.2108733387658552
+        },
+        "scale": {
+          "pass": true,
+          "max_abs": 7.627937170795462e-10,
+          "max_scaled": 1.1771686443555941e-05
+        },
+        "coefficient_edf": {
+          "pass": true,
+          "max_abs": 1.0728880095456361e-07,
+          "max_scaled": 0.00032129234148359003
+        },
+        "prediction": {
+          "pass": false,
+          "max_abs": 7.743751163913348e-08,
+          "max_scaled": 1.083998633088051
+        },
+        "prediction_SE": {
+          "pass": true,
+          "max_abs": 1.8761291686875126e-08,
+          "max_scaled": 0.0004691564120163803
+        },
+        "terms": {
+          "pass": false,
+          "max_abs": 6.177243352945005e-08,
+          "max_scaled": 1.4925511259090443
+        },
+        "terms_SE": {
+          "pass": true,
+          "max_abs": 2.3870739662701368e-08,
+          "max_scaled": 0.0016229119885059079
+        },
+        "smooth_edf": {
+          "pass": true,
+          "max_abs": 2.1988984455489913e-07,
+          "max_scaled": 8.85942509193536e-05
+        },
+        "smooth_Ref.df": {
+          "pass": true,
+          "max_abs": 8.881092306012306e-08,
+          "max_scaled": 3.161003459889005e-05
+        },
+        "smooth_F": {
+          "pass": true,
+          "max_abs": 6.644233647712383e-07,
+          "max_scaled": 0.002671707487841924
+        },
+        "smooth_p-value": {
+          "pass": true,
+          "max_abs": 2.4292450231166995e-05,
+          "max_scaled": 0.24292450231166995
+        },
+        "check_k'": {
+          "pass": true,
+          "max_abs": 0.0,
+          "max_scaled": 0.0
+        },
+        "check_edf": {
+          "pass": true,
+          "max_abs": 2.1988984455489913e-07,
+          "max_scaled": 8.85942509193536e-05
+        },
+        "check_k-index": {
+          "pass": true,
+          "max_abs": 2.9520175193198384e-09,
+          "max_scaled": 0.0025290379430322136
+        },
+        "check_p-value": {
+          "pass": true,
+          "max_abs": 0.0,
+          "max_scaled": 0.0
+        }
+      },
+      "original_R_warnings": [],
+      "final_R_warnings": [],
+      "original_R_gradient": null,
+      "final_R_gradient": null,
+      "original_public_R_coordinate_QR": {
+        "max_fitted_difference": 1.0620489254709042e-07,
+        "max_beta_difference": 1.4924813068750709e-07,
+        "r_penalized_sse": 76.20209477120953,
+        "qr_penalized_sse": 76.20209477120943,
+        "penalized_sse_excess": 9.947598300641403e-14,
+        "r_deviance": 73.5386070094772,
+        "qr_deviance": 73.53860678274377,
+        "r_scale": 0.6479901660355798,
+        "qr_scale": 0.6479901652803794,
+        "r_criterion": 0.7080160717195089,
+        "qr_gcv": 0.7080160722521232,
+        "r_score_max_abs": 2.6382548026004926e-05,
+        "r_score_normalized": 9.636480682864914e-12,
+        "qr_score_normalized": 1.0983458592411022e-12
+      },
+      "final_public_R_coordinate_QR": {
+        "max_fitted_difference": 3.2278640205163356e-08,
+        "max_beta_difference": 5.1450086635540515e-08,
+        "r_penalized_sse": 76.20209477275567,
+        "qr_penalized_sse": 76.20209477275566,
+        "penalized_sse_excess": 1.4210854715202004e-14,
+        "r_deviance": 73.53860673502214,
+        "qr_deviance": 73.53860678208436,
+        "r_scale": 0.6479901650497314,
+        "qr_scale": 0.6479901653006938,
+        "r_criterion": 0.7080160722075359,
+        "qr_gcv": 0.708016072302864,
+        "r_score_max_abs": 1.179724208877353e-06,
+        "r_score_normalized": 1.1188104059787306e-12,
+        "qr_score_normalized": 3.60776355670663e-13
+      },
+      "independent_public_coordinate_GCV_derivatives": {
+        "id": "gam_0206",
+        "reference_SP_independent_QR": {
+          "sp": [
+            28.906420319344726,
+            511.65541517424214,
+            22807891096.73694,
+            0.4875029950628205
+          ],
+          "gcv": 0.7080160722521232,
+          "gcv_gradient": [
+            3.655894651680841e-12,
+            -6.117908913846892e-15,
+            -6.077786037010027e-12,
+            5.679534398122729e-12
+          ],
+          "gcv_gradient_max_abs": 6.077786037010027e-12
+        },
+        "python_initial_SP_independent_QR": {
+          "sp": [
+            28.906420304192007,
+            511.65541524838613,
+            72004899337.3859,
+            0.48750299372536404
+          ],
+          "gcv": 0.7080160722480527,
+          "gcv_gradient": [
+            1.6452225866381287e-15,
+            3.3727903282765315e-15,
+            -1.925165897094972e-12,
+            1.4488545996629854e-14
+          ],
+          "gcv_gradient_max_abs": 1.925165897094972e-12
+        },
+        "Gstart_0_9_SP_independent_QR": {
+          "sp": [
+            28.906420327351,
+            511.65541513598635,
+            2439284630.4602065,
+            0.4875029971714317
+          ],
+          "gcv": 0.708016072302864,
+          "gcv_gradient": [
+            3.2332808305723937e-12,
+            -6.623046024372553e-13,
+            -5.6828732702555853e-11,
+            1.6769869781024793e-11
+          ],
+          "gcv_gradient_max_abs": 5.6828732702555853e-11
+        }
+      },
+      "deterministic_confirmation_count": 2,
+      "full_numeric_result_objects_identical": true,
+      "original_observation_sha256": "fc549e6f3ca3aeb35b54833bf3cf5246dabdfbb1ff109b6821475ee9dfd14a8b",
+      "selected_observation_sha256": "1ffbfa9243e1b27ae502b4e8a2cac4702951b8cce5d5114224f4fdf8ff6dedce"
+    }
+  ],
+  "cs_warning_review": [
+    {
+      "id": "gam_0392",
+      "properties": {
+        "better_optimum": false,
+        "reviewed_optimizer_warning_difference": true
+      },
+      "all_original_assertions_pass": true,
+      "warnings": []
+    },
+    {
+      "id": "gam_0402",
+      "properties": {
+        "better_optimum": false,
+        "reviewed_optimizer_warning_difference": true
+      },
+      "all_original_assertions_pass": true,
+      "warnings": []
+    },
+    {
+      "id": "gam_0439",
+      "properties": {
+        "better_optimum": false,
+        "reviewed_optimizer_warning_difference": true
+      },
+      "all_original_assertions_pass": true,
+      "warnings": []
+    },
+    {
+      "id": "gam_0758",
+      "properties": {
+        "better_optimum": false,
+        "reviewed_optimizer_warning_difference": true
+      },
+      "all_original_assertions_pass": false,
+      "error": "AssertionError:\nNot equal to tolerance rtol=1e-05, atol=1e-12\n\nMismatched elements: 6 / 21 (28.6%)\nFirst 5 mismatches are at indices:\n [15]: -5.397748481010395e-10 (ACTUAL), -1.1955568081632776e-10 (DESIRED)\n [16]: -1.5675135879866958e-10 (ACTUAL), -3.4719200623466346e-11 (DESIRED)\n [17]: 2.4452590016192104e-10 (ACTUAL), 5.416040235579402e-11 (DESIRED)\n [18]: 9.590898524706336e-10 (ACTUAL), 2.1243042614607933e-10 (DESIRED)\n [19]: 1.953827860538601e-09 (ACTUAL), 4.3275661981810614e-10 (DESIRED)\nMax absolute difference among violations: 1.73083056e-09\nMax relative difference among violations: 3.51484645\n ACTUAL: array([ 2.055759e+00,  7.844371e-02,  8.308225e-02, -5.590698e-02,\n       -6.181793e-03,  3.971601e-02,  1.105136e-01,  1.992287e-01,\n        2.097566e-01, -1.108508e-01, -9.257576e-02, -3.288826e-02,...\n DESIRED: array([ 2.055759e+00,  7.844371e-02,  8.308225e-02, -5.590698e-02,\n       -6.181793"
+    }
+  ]
+}

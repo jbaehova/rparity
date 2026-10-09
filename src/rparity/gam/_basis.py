@@ -14,7 +14,7 @@ from math import factorial, pi
 
 import numpy as np
 from scipy.interpolate import BSpline, CubicSpline
-from scipy.linalg import eigh, eigh_tridiagonal, null_space, qr, solve
+from scipy.linalg import eigh_tridiagonal, null_space, qr
 from scipy.spatial.distance import cdist
 from scipy.special import gamma
 
@@ -74,9 +74,10 @@ def _cubic(x: np.ndarray, k: int, shrinkage: bool) -> SplineBasis:
     if len(np.unique(xx)) < k:
         raise ValueError("A cubic spline needs at least k distinct covariate values.")
     ordered = np.sort(xx)
-    positions = (len(ordered) - 1) * np.linspace(0, 1, k)
-    left = np.floor(positions).astype(int)
-    fraction = positions - left
+    positions = 1 + (len(ordered) - 1) * np.linspace(0, 1, k)
+    floor = np.floor(positions)
+    left = floor.astype(int) - 1
+    fraction = positions - floor
     right = np.minimum(left + 1, len(ordered) - 1)
     knots = (1 - fraction) * ordered[left] + fraction * ordered[right]
     spline = CubicSpline(knots, np.eye(k), axis=0, bc_type="natural")
@@ -90,25 +91,9 @@ def _cubic(x: np.ndarray, k: int, shrinkage: bool) -> SplineBasis:
     second = spline(qpoints, 2)
     penalty = _positive(second.T @ (qweights[:, None] * second))
     if shrinkage:
-        # Cardinal cubic roughness D.T B^{-1} D. Shrinkage assigns the two
-        # null eigenvalues successively smaller positive values. LAPACK
-        # symmetric eigenvectors fix the otherwise arbitrary null rotation.
-        d = np.zeros((k - 2, k))
-        for j in range(k - 2):
-            d[j, j:j + 3] = [1 / lengths[j],
-                             -1 / lengths[j] - 1 / lengths[j + 1],
-                             1 / lengths[j + 1]]
-        b = (np.diag(2 * (lengths[:-1] + lengths[1:]))
-             + np.diag(lengths[1:-1], 1) + np.diag(lengths[1:-1], -1))
-        second_at_knots = np.zeros((k, k))
-        second_at_knots[1:-1] = solve(b, 6 * d, assume_a="sym")
-        integration = (np.diag(np.r_[lengths[0], lengths[:-1] + lengths[1:],
-                                    lengths[-1]] / 3)
-                       + np.diag(lengths / 6, 1) + np.diag(lengths / 6, -1))
-        raw_penalty = second_at_knots.T @ integration @ second_at_knots
-        w, v = eigh(raw_penalty, driver="evr")
-        w[0], w[1] = w[2] * 0.01, w[2] * 0.1
-        penalty = _symmetric((v * w) @ v.T)
+        from ._cs import cubic_shrinkage_penalty
+
+        penalty = cubic_shrinkage_penalty(knots)
 
     def evaluate(z: np.ndarray) -> np.ndarray:
         zz = np.asarray(z, dtype=float).reshape(-1)

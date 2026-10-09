@@ -134,7 +134,11 @@ def make_case(index: int) -> dict[str, Any]:
         "gam_check": True,
     }
     if spec["id"] in REFERENCE_OVERRIDES:
-        spec["args"].update(REFERENCE_OVERRIDES[spec["id"]]["args"])
+        override = REFERENCE_OVERRIDES[spec["id"]]
+        spec["args"].update(override["args"])
+        for name in ("gam_control", "gam_initial_sp"):
+            if name in override:
+                spec[name] = override[name]
     if np.any(weights != 1):
         spec["weights"] = "weight"
     return {

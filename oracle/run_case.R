@@ -142,7 +142,12 @@ fit_model <- function(s, d) {
     if (!is.null(a$sp)) a$sp <- unlist(a$sp)
     if (!is.null(a$in.out)) a$in.out <- lapply(a$in.out, unlist)
     if (!is.null(a$knots)) a$knots <- lapply(a$knots, unlist)
-    do.call(mgcv::gam, c(list(formula = form, data = d), a))
+    if (!is.null(s$gam_initial_sp)) {
+      # Public two-part fitting interface with numeric smoothing initialization.
+      setup <- do.call(mgcv::gam, c(list(formula = form, data = d, fit = FALSE), a))
+      setup$sp <- unlist(s$gam_initial_sp)
+      do.call(mgcv::gam, c(list(formula = form, data = d, G = setup), a))
+    } else do.call(mgcv::gam, c(list(formula = form, data = d), a))
   } else if (s$call == 'glmmTMB') {
     a$family <- public_family(s$family %or% 'gaussian', s$link, extended = TRUE)
     if (!is.null(a$start)) a$start <- lapply(a$start, unlist)
@@ -220,7 +225,7 @@ extract_tmb <- function(m, s) {
   sm <- summary(m)
   rr <- glmmTMB::ranef(m, condVar = TRUE)
   vc <- glmmTMB::VarCorr(m)
-  list(beta = unname(b$cond), coef_names = names(b$cond), vcov = plain_matrix(vv$cond),
+  ans <- list(beta = unname(b$cond), coef_names = names(b$cond), vcov = plain_matrix(vv$cond),
        fixef = lapply(b, unname), fixef_names = lapply(b, names),
        vcov_components = lapply(vv, plain_matrix),
        vcov_full = plain_matrix(vcov(m, full = TRUE)),
@@ -246,6 +251,22 @@ extract_tmb <- function(m, s) {
                                     objective = unname(m$fit$objective),
                                     gradient = unname(m$sdr$gradient.fixed),
                                     pdHess = m$sdr$pdHess))
+  if (isTRUE(s$tmb_covariance_diagnostics)) {
+    covariance <- as.matrix(m$sdr$cov.fixed)
+    diagnostic_step <- if (is.null(s$tmb_hessian_step)) 1e-3 else as.numeric(s$tmb_hessian_step)
+    stopifnot(length(diagnostic_step) == 1L, is.finite(diagnostic_step), diagnostic_step > 0)
+    hessian <- stats::optimHess(m$fit$par, m$obj$fn, m$obj$gr,
+                               control = list(ndeps = rep(diagnostic_step, length(m$fit$par))))
+    ans$covariance_diagnostics <- list(
+      native_parameters = unname(m$fit$par), native_parameter_names = names(m$fit$par),
+      covariance = plain_matrix(covariance), covariance_names = colnames(covariance),
+      covariance_finite = all(is.finite(covariance)),
+      covariance_eigenvalues = if (all(is.finite(covariance))) unname(eigen((covariance+t(covariance))/2, symmetric=TRUE, only.values=TRUE)$values) else NULL,
+      hessian = plain_matrix(hessian), hessian_finite = all(is.finite(hessian)),
+      hessian_eigenvalues = if (all(is.finite(hessian))) unname(eigen((hessian+t(hessian))/2, symmetric=TRUE, only.values=TRUE)$values) else NULL,
+      score = unname(m$obj$gr(m$fit$par)), finite_difference_step = diagnostic_step)
+  }
+  ans
 }
 extract_model <- function(m, s) {
   if (inherits(m, 'gam')) return(extract_gam(m, s))
@@ -315,7 +336,9 @@ run_one <- function(s) {
       list(X = plain_matrix(smooth$X), S = lapply(smooth$S, plain_matrix),
            F = unname(smooth$F), xp = unname(smooth$xp),
            S_hex = lapply(smooth$S, function(a) matrix(sprintf('%a', a), nrow(a))),
-           F_hex = sprintf('%a', smooth$F), xp_hex = sprintf('%a', smooth$xp))
+           F_hex = sprintf('%a', smooth$F), xp_hex = sprintf('%a', smooth$xp),
+           quantile_probabilities_hex = sprintf('%a', seq(0, 1, length.out = as.integer(s$k))),
+           sample_quantiles_hex = sprintf('%a', stats::quantile(d[[variable]], probs = seq(0, 1, length.out = as.integer(s$k)), names = FALSE)))
     } else if ((s$operation %or% '') == 'lanczos') {
       matrix_input <- do.call(rbind, lapply(s$A, unlist))
       eig <- mgcv::slanczos(matrix_input, k = as.integer(s$k %or% 10L), kl = as.integer(s$kl %or% -1L), tol = s$tol %or% sqrt(.Machine$double.eps), nt = 1L)

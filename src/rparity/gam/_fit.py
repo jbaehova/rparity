@@ -243,6 +243,94 @@ def _inverse_root(X: Array, weights: Array, root: Array) -> Array:
     return np.asarray(linalg.solve_triangular(R, np.eye(X.shape[1]), check_finite=False), dtype=float)
 
 
+def _criterion_derivatives(value: Array, objective: Any, analytic_gradient: Any) -> tuple[Array, Array]:
+    """Differentiate the profiled criterion without interpreting optimizer flags."""
+    count = len(value)
+    gradient = np.zeros(count)
+    hessian = np.zeros((count, count))
+    step = 1e-3
+    if analytic_gradient is not None:
+        gradient = np.asarray(analytic_gradient(value), dtype=float)
+        for i in range(count):
+            delta = np.zeros(count)
+            delta[i] = step
+            coarse = (analytic_gradient(value+delta)-analytic_gradient(value-delta))/(2*step)
+            fine = (analytic_gradient(value+delta/2)-analytic_gradient(value-delta/2))/step
+            hessian[:, i] = (4*fine-coarse)/3
+        return gradient, (hessian+hessian.T)/2
+    baseline = objective(value)
+    for i in range(count):
+        delta = np.zeros(count)
+        delta[i] = step
+        plus, minus = objective(value+delta), objective(value-delta)
+        half_plus, half_minus = objective(value+delta/2), objective(value-delta/2)
+        gradient[i] = (4*(half_plus-half_minus)/step-(plus-minus)/(2*step))/3
+        hessian[i, i] = (plus+minus-2*baseline)/step**2
+        for j in range(i):
+            other = np.zeros(count)
+            other[j] = step
+            hessian[i, j] = hessian[j, i] = (
+                objective(value+delta+other)-objective(value+delta-other)
+                - objective(value-delta+other)+objective(value-delta-other)
+            )/(4*step**2)
+    return gradient, hessian
+
+
+def _penalized_stationary(
+    X: Array, y: Array, weights: Array, family: _Family, inner: _Inner, root: Array,
+    *, beta: Array | None = None,
+) -> bool:
+    """Certify an inner optimum at floating-point objective resolution.
+
+    The score is whitened with the augmented QR information factor. Its
+    squared Newton decrement estimates the attainable decrease in deviance
+    plus penalty. Comparing it with machine precision avoids a false
+    failure from subtracting large normal-equation penalty entries or from an
+    IRLS coefficient step that has stopped changing the fitted likelihood.
+    This check does not change the coefficients or an iteration tolerance.
+    """
+    first, second = family.derivatives(inner.eta, inner.mu)
+    variance, variance_prime = family.variance(inner.mu)
+    working = weights*first**2/variance
+    observed_weights = weights*(first**2/variance-(y-inner.mu)*(
+        second/variance-first**2*variance_prime/variance**2))
+    inverse_root = _inverse_root(X, working, root)
+    predictor_root = X@inverse_root
+    penalty_root = root@inverse_root
+    curvature = (predictor_root.T@(observed_weights[:, None]*predictor_root)
+                 + penalty_root.T@penalty_root)
+    curvature = (curvature+curvature.T)/2
+    coefficient = inner.beta if beta is None else beta
+    score = root.T@(root@coefficient)-X.T@(weights*(y-inner.mu)*first/variance)
+    whitened_score = inverse_root.T@score
+    if not np.isfinite(curvature).all() or not np.isfinite(whitened_score).all():
+        return False
+    try:
+        factor = linalg.cho_factor(curvature, lower=True, check_finite=False)
+        decrement = float(whitened_score@linalg.cho_solve(factor, whitened_score, check_finite=False))
+    except linalg.LinAlgError:
+        return False
+    resolution = 8*np.finfo(float).eps*(1+abs(inner.deviance)+abs(inner.penalty))
+    return bool(decrement >= 0 and decrement <= resolution)
+
+
+def _criterion_stationary(gradient: Array, hessian: Array, criterion: float) -> bool:
+    """Require the actual outer score and nonnegative local curvature.
+
+    A square-root machine-precision score is the usual precision limit when
+    function values round before the next optimizer line search can improve
+    them. Curvature has the same relative numerical margin. An optimizer's
+    success or failure message never substitutes for either check.
+    """
+    if not np.isfinite(criterion) or not np.isfinite(gradient).all() or not np.isfinite(hessian).all():
+        return False
+    precision = np.sqrt(np.finfo(float).eps)
+    if np.max(np.abs(gradient), initial=0) > precision*max(1, abs(criterion)):
+        return False
+    eigenvalues = linalg.eigvalsh(hessian)
+    return bool(np.min(eigenvalues, initial=0) >= -precision*max(1, np.max(np.abs(eigenvalues), initial=0)))
+
+
 def _irls(
     X: Array, y: Array, weights: Array, offset: Array, family: _Family, penalty: Array,
     max_iter: int, tol: float, penalty_root: Array | None = None,
@@ -536,39 +624,8 @@ class GamResult:
         Richardson differentiation of that score; unsupported score formulas
         use Richardson differentiation of the objective instead.
         """
-        value = self._smoothing_solution
-        count = len(value)
-        gradient = np.zeros(count)
-        hessian = np.zeros((count, count))
-        step = 1e-3
-        objective = self._criterion_function
-        baseline = objective(value)
-        analytic_gradient = self._criterion_gradient
-        if analytic_gradient is not None:
-            gradient = np.asarray(analytic_gradient(value), dtype=float)
-        for i in range(count):
-            delta = np.zeros(count)
-            delta[i] = step
-            plus, minus = objective(value+delta), objective(value-delta)
-            half_plus, half_minus = objective(value+delta/2), objective(value-delta/2)
-            if analytic_gradient is None:
-                coarse = (plus-minus)/(2*step)
-                fine = (half_plus-half_minus)/step
-                gradient[i] = (4*fine-coarse)/3
-            else:
-                coarse_hessian = (analytic_gradient(value+delta)-analytic_gradient(value-delta))/(2*step)
-                fine_hessian = (analytic_gradient(value+delta/2)-analytic_gradient(value-delta/2))/step
-                hessian[:, i] = (4*fine_hessian-coarse_hessian)/3
-                continue
-            hessian[i, i] = (plus+minus-2*baseline)/step**2
-            for j in range(i):
-                other = np.zeros(count)
-                other[j] = step
-                hessian[i, j] = hessian[j, i] = (
-                    objective(value+delta+other) - objective(value+delta-other)
-                    - objective(value-delta+other) + objective(value-delta-other)
-                )/(4*step**2)
-        return gradient, (hessian+hessian.T)/2
+        return _criterion_derivatives(self._smoothing_solution, self._criterion_function,
+                                      self._criterion_gradient)
 
     def predict(
         self, newdata: Any = None, *, type: str = "link", se_fit: bool = False,
@@ -1078,10 +1135,18 @@ def gam(
             raise ValueError("scale_est must be fletcher, pearson or deviance")
         if method == "GCV.Cp":
             likelihood_scale = dispersion
-    converged = inner.converged and (outer is None or bool(outer.success))
+    final_root = np.vstack([np.sqrt(value)*root for value, root in zip(smoothing, penalty_roots)]) if penalty_roots else np.zeros((0, inner_space.shape[1]))
+    inner_stationary = _penalized_stationary(X@inner_space, y, prior_weights, family_info,
+                                            inner, final_root, beta=inner_space.T@inner.beta)
+    if outer is None:
+        outer_stationary = True
+    else:
+        outer_gradient, outer_hessian = _criterion_derivatives(solution, lambda value: evaluate(value)[0],
+                                                               gradient_function)
+        outer_stationary = _criterion_stationary(outer_gradient, outer_hessian, score)
+    converged = inner_stationary and outer_stationary
     if not converged:
         warnings.warn("GAM smoothing or IRLS optimization did not fully converge", RuntimeWarning, stacklevel=2)
-    final_root = np.vstack([np.sqrt(value)*root for value, root in zip(smoothing, penalty_roots)]) if penalty_roots else np.zeros((0, inner_space.shape[1]))
     first, second = family_info.derivatives(inner.eta, inner.mu)
     variance, variance_prime = family_info.variance(inner.mu)
     observed_weights = prior_weights*(first**2/variance-(y-inner.mu)*(second/variance-first**2*variance_prime/variance**2))
