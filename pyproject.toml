@@ -1,0 +1,31 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "rparity"
+version = "0.1.0.dev0"
+description = "R-grade mixed models, marginal means, GAMs and meta-analysis in pure Python, verified against R."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+dependencies = ["numpy>=2.0", "scipy>=1.14", "pandas>=2.2", "formulaic>=1.1", "statsmodels>=0.14"]
+
+[dependency-groups]
+dev = ["pytest>=8", "ruff>=0.11", "mypy>=1.15", "pandas-stubs", "scipy-stubs", "mkdocs-material>=9", "polars>=1"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.mypy]
+python_version = "3.11"
+ignore_missing_imports = true
+check_untyped_defs = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["needs_r: development-only tests requiring R and its packages", "golden: comparisons with R oracle outputs"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/rparity"]

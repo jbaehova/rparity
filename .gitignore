@@ -1,0 +1,17 @@
+TASK.md
+AGENTS.md
+.hov/
+.env
+.env.*
+.venv/
+oracle/cache/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+dist/
+build/
+site/
+*.egg-info/
+.DS_Store
