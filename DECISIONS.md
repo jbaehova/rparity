@@ -107,3 +107,14 @@ Control contrasts require an explicit supported `adjust` value. The unlisted R `
 - Evaluate GLS through exact correlation factors and augmented QR. Remove the corSymm diagonal floor; closed-form boundary tests verify the same likelihood without artificial regularization. Boundary coefficient differences remain failed cases.
 - Uniform tighter R GLMER inner tolerance is not substituted into goldens: 1e-15 caused two fit errors in the 20 reviewed cases, and 1e-16 caused twenty. Preserve the original controls and observations.
 - Do not add R-specific optimizer warnings to a converged Python fit or bias a stationary Python estimate toward a recorded R endpoint. Keep those strict differences visible.
+
+## Stage 2 scope and acceptance
+
+- Begin Stage 2 at the user's explicit request. Preserve the Stage 1 golden corpus and its 57 actual unresolved differences; reject newly failing previously passing cases. Stage 2 has its own 2,000-case, 98% gate and separate discrepancy accounting.
+- Use rolling v2-fan delegation with exact inherited settings, disjoint write ownership and root integration. Local tests remain the default; no hosted test workflow is started.
+- GAM smooth coefficient coordinates may differ under independently constructed bases. Validate parametric coefficients directly and compare smooth coefficients after an explicitly checked transformation into the public R lpmatrix coordinates. R matrices are comparison artifacts only, never runtime inputs.
+- Required Stage 2 options take precedence over optional expansions. No Stage 3 work and no PyPI upload.
+
+- Stage 2 Beta simulation projects every pre-inflation draw uniformly to [1e-12, 1-1e-12] before fitting. Floating-point endpoint errors tmb_0076 and tmb_0274 retain their original inputs and R errors in oracle_attempts; neither case is removed.
+- The TMB oracle explicitly uses nlminb relative tolerance 1e-10 for every design. A black-box R-only comparison of tolerances 1e-12, 1e-10 and 1e-8 on the first twelve predetermined cases showed 1e-12 generated singular termination warnings at identical interior likelihoods. The 1e-10 setting preserves numerical precision and corresponds to the documented optimizer default; old observations remain in oracle_attempts. Genuine boundary warnings remain required.
+- GAM prediction observations now pass spec.newdata to public predict rather than extracting training rows. This repairs the oracle extraction shape and does not change any fitted input or numerical tolerance.

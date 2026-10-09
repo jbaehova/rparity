@@ -1,6 +1,9 @@
-![Status: Stage 1 complete (v0.1.0)](https://img.shields.io/badge/Status-Stage%201%20complete%20%28v0.1.0%29-green)
+![Status: Stage 2 in progress](https://img.shields.io/badge/Status-Stage%202%20in%20progress-orange)
 
 # rparity
+
+Stage 2 development is underway: GAM and extended mixed models. These APIs remain
+pre-alpha until their required validation is complete. Tests run locally by default.
 
 R-grade mixed models, marginal means, GAMs and meta-analysis in pure Python, verified against R, no R required.
 

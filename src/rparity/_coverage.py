@@ -27,7 +27,8 @@ def generate(root: Path | None = None) -> str:
         if validation.get('source_sha256') != source_digest(root):
             validation = {}
     outcomes = validation.get('cases', {})
-    complete = validation.get('stage1_complete', False)
+    first_complete = validation.get('stage1_complete', False)
+    second_complete = validation.get('stage2_complete', False)
     rows: dict[tuple[str, str], list[str]] = defaultdict(list)
     for path in sorted((root / 'tests' / 'golden').glob('*/*.json')):
         case = json.loads(path.read_text())
@@ -36,8 +37,10 @@ def generate(root: Path | None = None) -> str:
         rows[(module, option)].append(case.get('id', path.stem))
     lines = [
         '# Validation coverage', '',
-        ('Stage 1 acceptance checks are complete for v0.1.0.' if complete else
+        ('Stage 1 acceptance checks are complete for v0.1.0.' if first_complete else
          'Stage 1 remains in progress until every required option and acceptance check passes.'), '',
+        ('Stage 2 acceptance checks are complete for v0.2.0.' if second_complete else
+         'Stage 2 verification is ongoing; generated cases alone do not establish acceptance.'), '',
         'Counts below refer to committed synthetic R observations. Passing status comes from',
         'the latest recorded pytest run; unexecuted or skipped cases are not passes.', '',
         '| Module | R function and options | Implementation | Golden cases | Pass rate | Notes |',
@@ -51,6 +54,7 @@ def generate(root: Path | None = None) -> str:
         rate = f'{passed / len(ids):.2%}' if verified else 'unverified'
         notes = f'{failed} failures; {len(ids)-verified} unverified'
         option = option.replace('|', '\\|')
+        complete = second_complete if module in {'gam', 'tmb'} else first_complete
         implementation = 'implemented and validated' if complete else 'implemented, verification ongoing'
         lines.append(f'| {module} | {option} | {implementation} | {len(ids)} | {rate} | {notes} |')
         totals[module][0] += len(ids)
@@ -65,7 +69,8 @@ def generate(root: Path | None = None) -> str:
     n = sum(v[0] for v in totals.values())
     p = sum(v[1] for v in totals.values())
     lines.extend(['', f'Total: {n} synthetic cases, {p} recorded passes.', '',
-                  'Each module requires at least 300 cases; Stage 1 requires at least 3,000 and 98% passing.', '',
+                  'Stage 1 requires at least 300 cases per module, 3,000 total and 98% passing.',
+                  'Stage 2 separately requires at least 2,000 cases and 98% passing, with no new Stage 1 failures.', '',
                   '## R package examples', '',
                   'Built-in R example data is not committed. The following `needs_r` cases',
                   'are included in coverage and require the development oracle.', '',
