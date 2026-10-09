@@ -331,7 +331,7 @@ def _evaluate(
         solved = linalg.cho_solve(factor, xy, check_finite=False)
         information += X[block].T @ solved[:, :p]
         rhs += X[block].T @ solved[:, p]
-        yvy += y[block] @ solved[:, p]
+        yvy += float(y[block] @ solved[:, p])
         logdet += 2 * np.log(np.diag(factor[0])).sum()
     chol = linalg.cho_factor(information, lower=True)
     beta = linalg.cho_solve(chol, rhs)
@@ -341,7 +341,7 @@ def _evaluate(
     residual = y - X @ beta
     for block, matrix in zip(covariance.blocks, covariance.matrices(theta)):
         factor = linalg.cho_factor(matrix, lower=True, check_finite=False)
-        quadratic += residual[block] @ linalg.cho_solve(factor, residual[block])
+        quadratic += float(residual[block] @ linalg.cho_solve(factor, residual[block]))
     df = n - p if reml else n
     if quadratic <= 0:
         raise ValueError("GLS residual variance must be positive")

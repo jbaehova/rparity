@@ -128,11 +128,11 @@ def conditional_mode(
         scale = 1.0
         while scale > 2**-25:
             candidate = u - scale * step
-            value = (
+            trial_value = (
                 conditional_terms(base + A @ candidate, y, trials, weights, family, link)[0]
-                + candidate @ candidate / 2
+                + float(candidate @ candidate) / 2
             )
-            if value <= criterion + 1e-12:
+            if trial_value <= criterion + 1e-12:
                 break
             scale /= 2
         u = candidate
@@ -146,11 +146,11 @@ def conditional_mode(
         chol = linalg.cholesky(hessian, lower=True, check_finite=False)
     except linalg.LinAlgError:
         return float("inf"), u, eta, hessian
-    value = nll + float(u @ u) / 2 + float(np.log(np.diag(chol)).sum())
-    if not converged or not np.isfinite(value):
+    objective_value = nll + float(u @ u) / 2 + float(np.log(np.diag(chol)).sum())
+    if not converged or not np.isfinite(objective_value):
         # Failed inner iterations must never masquerade as a likelihood optimum.
         return float("inf"), u, eta, hessian
-    return value, u, eta, hessian
+    return objective_value, u, eta, hessian
 
 
 def numerical_hessian(function: Callable[[Array], float], x: Array) -> Array:
