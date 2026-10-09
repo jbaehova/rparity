@@ -6,6 +6,70 @@ R-grade mixed models, marginal means, GAMs and meta-analysis in pure Python, ver
 
 Stage 1 is under development. See [progress](PROGRESS.md) and [validation coverage](docs/coverage.md).
 
+## Installation
+
+Python 3.11 or later is required. Build from this checkout with `uv build`,
+then install its wheel into your Python environment:
+
+```sh
+python -m pip install dist/rparity-0.1.0.dev0-py3-none-any.whl
+```
+
+NumPy, SciPy, pandas, formulaic, and statsmodels are installed as dependencies.
+Polars input is supported when Polars is already available. No R or rpy2 is
+required for fitting, inference, or prediction.
+
+## Quick start
+
+```python
+import numpy as np
+import pandas as pd
+
+from rparity import Anova, emmeans, lmer, pairs
+
+rng = np.random.default_rng(42)
+subject = np.repeat(np.arange(12), 6)
+days = np.tile(np.arange(6), 12)
+intercepts = rng.normal(0, 12, 12)
+slopes = rng.normal(0, 2, 12)
+data = pd.DataFrame({
+    "Reaction": 250 + 8 * days + intercepts[subject]
+                + slopes[subject] * days + rng.normal(0, 5, len(days)),
+    "Days": days,
+    "Subject": subject.astype(str),
+})
+model = lmer("Reaction ~ Days + (Days | Subject)", data=data)
+print(model.summary())
+print(Anova(model, type=3))
+means = emmeans(model, "Days", at={"Days": [0, 5]})
+print(pairs(means, adjust="tukey").summary())
+```
+
+The same example is available in `examples/quickstart.py`. The generated data
+is synthetic and does not require a package example dataset.
+
+## Validation
+
+R is used as a black-box development oracle through `oracle/run_case.R`.
+Synthetic inputs and their numerical observations are stored in `tests/golden/`.
+The checks apply separate tolerances to likelihoods, coefficients, covariance,
+degrees of freedom, marginal means, and p-values. Boundary or convergence
+warnings have an explicit likelihood-only policy and warning checks.
+
+See [option-level coverage](docs/coverage.md), [clean-room records](CLEANROOM.md),
+and [algorithm references](REFERENCES.md). Built-in example data stays in an
+ignored development cache; its tests are marked `needs_r`.
+
+## R migration
+
+- [lme4 and lmerTest](docs/migration/lme4.md)
+- [emmeans](docs/migration/emmeans.md)
+- [car](docs/migration/car.md)
+- [nlme](docs/migration/nlme.md)
+
+Type III tests depend on contrasts. Use sum contrasts for main effects in
+interaction models, including when fitting statsmodels formulas.
+
 ## Development
 
 ```sh
@@ -13,6 +77,10 @@ uv sync
 uv run pytest
 uv run ruff check
 uv run mypy src
+uv run python -m rparity._coverage
+uv run mkdocs build --strict
+uv build
 ```
 
-R is a development-only black-box oracle. It is never imported or invoked by the runtime package. This project follows the [clean-room rules](CLEANROOM.md).
+CI runs the tests without R on Linux and macOS. Documentation deploys through
+GitHub Pages when `main` is pushed. PyPI publication is performed by a person.

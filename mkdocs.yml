@@ -1,0 +1,12 @@
+site_name: rparity
+site_description: Clean-room Python statistical models validated against R.
+theme:
+  name: material
+nav:
+  - Home: index.md
+  - Validation coverage: coverage.md
+  - Migration:
+      - lme4: migration/lme4.md
+      - emmeans: migration/emmeans.md
+      - car: migration/car.md
+      - nlme: migration/nlme.md

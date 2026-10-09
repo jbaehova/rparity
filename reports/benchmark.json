@@ -1,0 +1,37 @@
+{
+  "repetitions": 3,
+  "statistic": "median",
+  "scope": "warm fit calls on the same machine, excluding R process startup",
+  "models": [
+    {
+      "option": "lmer / REML / (1|g) / boundary",
+      "observations": 48,
+      "python_seconds": 0.006769458006601781,
+      "r_seconds": 0.009000000000000119
+    },
+    {
+      "option": "lmer / ML / (x|g) / treatment",
+      "observations": 42,
+      "python_seconds": 0.005494624994753394,
+      "r_seconds": 0.01200000000000001
+    },
+    {
+      "option": "glmer / binomial-logit",
+      "observations": 48,
+      "python_seconds": 0.0267178750000312,
+      "r_seconds": 0.016000000000000014
+    },
+    {
+      "option": "glmer / poisson-log",
+      "observations": 99,
+      "python_seconds": 0.05300470799556933,
+      "r_seconds": 0.016000000000000014
+    },
+    {
+      "option": "gls / corAR1 / REML",
+      "observations": 57,
+      "python_seconds": 0.039563708000059705,
+      "r_seconds": 0.0020000000000000018
+    }
+  ]
+}

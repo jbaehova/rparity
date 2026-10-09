@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "rparity"
-version = "0.1.0.dev0"
+version = "0.1.0"
 description = "R-grade mixed models, marginal means, GAMs and meta-analysis in pure Python, verified against R."
 readme = "README.md"
 requires-python = ">=3.11"
@@ -25,6 +25,7 @@ check_untyped_defs = true
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+junit_family = "legacy"
 markers = ["needs_r: development-only tests requiring R and its packages", "golden: comparisons with R oracle outputs"]
 
 [tool.hatch.build.targets.wheel]

@@ -1,0 +1,12 @@
+{
+  "R": "R version 4.6.1 (2026-06-24)",
+  "packages": {
+    "jsonlite": "2.0.0",
+    "lme4": "2.0.6",
+    "lmerTest": "3.2.1",
+    "car": "3.1.5",
+    "emmeans": "2.0.4",
+    "pbkrtest": "0.5.5",
+    "nlme": "3.1.171"
+  }
+}

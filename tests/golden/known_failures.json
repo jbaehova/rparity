@@ -1,0 +1,242 @@
+{
+  "lmer_0003": {
+    "category": "near_zero_prediction",
+    "reason": "R optimizer roundoff exceeds the strict relative prediction criterion near zero; all objective checks pass."
+  },
+  "lmer_0059": {
+    "category": "near_zero_prediction",
+    "reason": "R optimizer roundoff exceeds the strict relative prediction criterion near zero; all objective checks pass."
+  },
+  "lmer_0186": {
+    "category": "near_zero_prediction",
+    "reason": "R optimizer roundoff exceeds the strict relative prediction criterion near zero; all objective checks pass."
+  },
+  "lmer_0214": {
+    "category": "near_zero_prediction",
+    "reason": "R optimizer roundoff exceeds the strict relative prediction criterion near zero; all objective checks pass."
+  },
+  "lmer_0257": {
+    "category": "near_zero_prediction",
+    "reason": "R optimizer roundoff exceeds the strict relative prediction criterion near zero; all objective checks pass."
+  },
+  "lmer_0288": {
+    "category": "near_zero_prediction",
+    "reason": "R optimizer roundoff exceeds the strict relative prediction criterion near zero; all objective checks pass."
+  },
+  "lmer_0325": {
+    "category": "near_zero_prediction",
+    "reason": "R optimizer roundoff exceeds the strict relative prediction criterion near zero; all objective checks pass."
+  },
+  "lmer_0337": {
+    "category": "near_zero_prediction",
+    "reason": "R optimizer roundoff exceeds the strict relative prediction criterion near zero; all objective checks pass."
+  },
+  "lmer_0372": {
+    "category": "near_zero_prediction",
+    "reason": "R optimizer roundoff exceeds the strict relative prediction criterion near zero; all objective checks pass."
+  },
+  "lmer_0406": {
+    "category": "near_zero_prediction",
+    "reason": "R optimizer roundoff exceeds the strict relative prediction criterion near zero; all objective checks pass."
+  },
+  "lmer_0488": {
+    "category": "near_zero_prediction",
+    "reason": "R optimizer roundoff exceeds the strict relative prediction criterion near zero; all objective checks pass."
+  },
+  "lmer_0550": {
+    "category": "near_zero_prediction",
+    "reason": "R optimizer roundoff exceeds the strict relative prediction criterion near zero; all objective checks pass."
+  },
+  "lmer_0561": {
+    "category": "near_zero_prediction",
+    "reason": "R optimizer roundoff exceeds the strict relative prediction criterion near zero; all objective checks pass."
+  },
+  "lmer_0585": {
+    "category": "near_zero_prediction",
+    "reason": "R optimizer roundoff exceeds the strict relative prediction criterion near zero; all objective checks pass."
+  },
+  "lmer_0160": {
+    "category": "optimizer_warning",
+    "reason": "R bobyqa reports trust-region convergence code 3; Python converges with matching objective and applicable singular warning."
+  },
+  "lmer_0239": {
+    "category": "optimizer_warning",
+    "reason": "R bobyqa reports trust-region convergence code 3; Python converges with matching objective and applicable singular warning."
+  },
+  "lmer_0270": {
+    "category": "optimizer_warning",
+    "reason": "R bobyqa reports trust-region convergence code 3; Python converges with matching objective and applicable singular warning."
+  },
+  "anova_0337": {
+    "category": "boundary_hypothesis_rank",
+    "reason": "Quasi-separation makes the R binomial Type II Wald covariance and hypothesis ranks unstable."
+  },
+  "anova_0476": {
+    "category": "optimizer_warning",
+    "reason": "R bobyqa emits a convergence warning that does not apply to the successful Python optimization."
+  },
+  "anova_0652": {
+    "category": "near_zero_coefficient",
+    "reason": "Near-zero GLMM intercept differs by about 1.4e-7 despite log likelihood agreement within 3.3e-9."
+  },
+  "gls_0037": {
+    "category": "small fitted prediction relative precision",
+    "reason": "Strict R/Python small fitted prediction relative precision mismatch; original inputs and numerical thresholds are retained."
+  },
+  "gls_0054": {
+    "category": "near-unit ARMA correlation",
+    "reason": "Strict R/Python near-unit ARMA correlation mismatch; original inputs and numerical thresholds are retained."
+  },
+  "gls_0133": {
+    "category": "small fitted prediction relative precision",
+    "reason": "Strict R/Python small fitted prediction relative precision mismatch; original inputs and numerical thresholds are retained."
+  },
+  "gls_0173": {
+    "category": "boundary corSymm optimizer/coefficients",
+    "reason": "Strict R/Python boundary corSymm optimizer/coefficients mismatch; original inputs and numerical thresholds are retained."
+  },
+  "gls_0177": {
+    "category": "small fitted prediction relative precision",
+    "reason": "Strict R/Python small fitted prediction relative precision mismatch; original inputs and numerical thresholds are retained."
+  },
+  "gls_0229": {
+    "category": "small fitted prediction relative precision",
+    "reason": "Strict R/Python small fitted prediction relative precision mismatch; original inputs and numerical thresholds are retained."
+  },
+  "gls_0273": {
+    "category": "boundary corSymm optimizer/coefficients",
+    "reason": "Strict R/Python boundary corSymm optimizer/coefficients mismatch; original inputs and numerical thresholds are retained."
+  },
+  "gls_0319": {
+    "category": "small fitted prediction relative precision",
+    "reason": "Strict R/Python small fitted prediction relative precision mismatch; original inputs and numerical thresholds are retained."
+  },
+  "gls_0323": {
+    "category": "small fitted prediction relative precision",
+    "reason": "Strict R/Python small fitted prediction relative precision mismatch; original inputs and numerical thresholds are retained."
+  },
+  "gls_0333": {
+    "category": "boundary corSymm optimizer/coefficients",
+    "reason": "Strict R/Python boundary corSymm optimizer/coefficients mismatch; original inputs and numerical thresholds are retained."
+  },
+  "gls_0339": {
+    "category": "small fitted prediction relative precision",
+    "reason": "Strict R/Python small fitted prediction relative precision mismatch; original inputs and numerical thresholds are retained."
+  },
+  "gls_0357": {
+    "category": "near-zero variance coefficient",
+    "reason": "Strict R/Python near-zero variance coefficient mismatch; original inputs and numerical thresholds are retained."
+  },
+  "gls_0429": {
+    "category": "small fitted prediction relative precision",
+    "reason": "Strict R/Python small fitted prediction relative precision mismatch; original inputs and numerical thresholds are retained."
+  },
+  "emm_0689": {
+    "category": "near_zero_contrast",
+    "reason": "GLS marginal contrast near zero differs by 3.89e-8, exceeding the strict 1e-6 relative estimate criterion."
+  },
+  "inference_0084": {
+    "category": "optimizer_warning",
+    "reason": "R bobyqa reports convergence code 3; Python converges with matching objective and applicable singular warnings."
+  },
+  "inference_0085": {
+    "category": "optimizer_warning",
+    "reason": "R bobyqa reports convergence code 3; Python converges with matching objective and applicable singular warnings."
+  },
+  "inference_0086": {
+    "category": "optimizer_warning",
+    "reason": "R bobyqa reports convergence code 3; Python converges with matching objective and applicable singular warnings."
+  },
+  "inference_0462": {
+    "category": "optimizer_warning",
+    "reason": "R bobyqa reports convergence code 3; Python converges with matching objective and applicable singular warnings."
+  },
+  "inference_0463": {
+    "category": "optimizer_warning",
+    "reason": "R bobyqa reports convergence code 3; Python converges with matching objective and applicable singular warnings."
+  },
+  "inference_0464": {
+    "category": "optimizer_warning",
+    "reason": "R bobyqa reports convergence code 3; Python converges with matching objective and applicable singular warnings."
+  },
+  "glmer_0002": {
+    "category": "coefficient_precision",
+    "reason": "Laplace objectives meet the 1e-6 criterion, but R/Python coefficient precision exceeds the specified strict relative threshold."
+  },
+  "glmer_0040": {
+    "category": "coefficient_precision",
+    "reason": "Laplace objectives meet the 1e-6 criterion, but R/Python coefficient precision exceeds the specified strict relative threshold."
+  },
+  "glmer_0102": {
+    "category": "coefficient_precision",
+    "reason": "Laplace objectives meet the 1e-6 criterion, but R/Python coefficient precision exceeds the specified strict relative threshold."
+  },
+  "glmer_0128": {
+    "category": "coefficient_precision",
+    "reason": "Laplace objectives meet the 1e-6 criterion, but R/Python coefficient precision exceeds the specified strict relative threshold."
+  },
+  "glmer_0157": {
+    "category": "coefficient_precision",
+    "reason": "Laplace objectives meet the 1e-6 criterion, but R/Python coefficient precision exceeds the specified strict relative threshold."
+  },
+  "glmer_0338": {
+    "category": "coefficient_precision",
+    "reason": "Laplace objectives meet the 1e-6 criterion, but R/Python coefficient precision exceeds the specified strict relative threshold."
+  },
+  "glmer_0368": {
+    "category": "coefficient_precision",
+    "reason": "Laplace objectives meet the 1e-6 criterion, but R/Python coefficient precision exceeds the specified strict relative threshold."
+  },
+  "glmer_0379": {
+    "category": "coefficient_precision",
+    "reason": "Laplace objectives meet the 1e-6 criterion, but R/Python coefficient precision exceeds the specified strict relative threshold."
+  },
+  "glmer_0517": {
+    "category": "coefficient_precision",
+    "reason": "Laplace objectives meet the 1e-6 criterion, but R/Python coefficient precision exceeds the specified strict relative threshold."
+  },
+  "glmer_0539": {
+    "category": "coefficient_precision",
+    "reason": "Laplace objectives meet the 1e-6 criterion, but R/Python coefficient precision exceeds the specified strict relative threshold."
+  },
+  "glmer_0581": {
+    "category": "coefficient_precision",
+    "reason": "Laplace objectives meet the 1e-6 criterion, but R/Python coefficient precision exceeds the specified strict relative threshold."
+  },
+  "glmer_0107": {
+    "category": "fixed_covariance_precision",
+    "reason": "Laplace objectives meet the 1e-6 criterion, but R/Python fixed covariance precision exceeds the specified strict relative threshold."
+  },
+  "glmer_0152": {
+    "category": "fixed_covariance_precision",
+    "reason": "Laplace objectives meet the 1e-6 criterion, but R/Python fixed covariance precision exceeds the specified strict relative threshold."
+  },
+  "glmer_0269": {
+    "category": "fixed_covariance_precision",
+    "reason": "Laplace objectives meet the 1e-6 criterion, but R/Python fixed covariance precision exceeds the specified strict relative threshold."
+  },
+  "glmer_0372": {
+    "category": "fixed_covariance_precision",
+    "reason": "Laplace objectives meet the 1e-6 criterion, but R/Python fixed covariance precision exceeds the specified strict relative threshold."
+  },
+  "glmer_0418": {
+    "category": "fixed_covariance_precision",
+    "reason": "Laplace objectives meet the 1e-6 criterion, but R/Python fixed covariance precision exceeds the specified strict relative threshold."
+  },
+  "glmer_0502": {
+    "category": "fixed_covariance_precision",
+    "reason": "Laplace objectives meet the 1e-6 criterion, but R/Python fixed covariance precision exceeds the specified strict relative threshold."
+  },
+  "glmer_0528": {
+    "category": "fixed_covariance_precision",
+    "reason": "Laplace objectives meet the 1e-6 criterion, but R/Python fixed covariance precision exceeds the specified strict relative threshold."
+  },
+  "glmer_0361": {
+    "category": "prediction_precision",
+    "reason": "Laplace objectives meet the 1e-6 criterion, but R/Python prediction precision exceeds the specified strict relative threshold."
+  },
+  "glmer_0312": {
+    "category": "better_optimum_warning_divergence",
+    "reason": "Python improves log likelihood by 7.21e-5 at SD 0.0172; R returns a singular SD near 4e-7. The fitted Python model does not warrant the R singular warning."
+  }
+}
