@@ -1,0 +1,1127 @@
+{
+  "comparison_policy": "Original inputs, oracle outputs and field tolerances unchanged.",
+  "lmer": [
+    {
+      "id": "lmer_0003",
+      "category": "near_zero_prediction",
+      "python_score_max": 4.084052482607128e-15,
+      "r_score_max": 4.817044747325122e-07,
+      "objective_delta_python_minus_R": 0.0,
+      "prediction_abs_delta_max": 8.179816379794147e-09,
+      "prediction_tolerance_ratio_max": 1.0698251213647212,
+      "conditional_mode_abs_delta_max": 6.238523697632559e-09,
+      "conditional_mode_tolerance_ratio_max": 0.00015964773254702644,
+      "python_warnings": [],
+      "R_warnings": []
+    },
+    {
+      "id": "lmer_0059",
+      "category": "near_zero_prediction",
+      "python_score_max": 1.468171864519572e-11,
+      "r_score_max": 3.776552625915315e-07,
+      "objective_delta_python_minus_R": 1.4210854715202004e-14,
+      "prediction_abs_delta_max": 1.6446701334160707e-08,
+      "prediction_tolerance_ratio_max": 1.2087493131061682,
+      "conditional_mode_abs_delta_max": 1.4099328593530913e-08,
+      "conditional_mode_tolerance_ratio_max": 0.00037430375997530104,
+      "python_warnings": [],
+      "R_warnings": []
+    },
+    {
+      "id": "lmer_0186",
+      "category": "near_zero_prediction",
+      "python_score_max": 9.803323528688274e-16,
+      "r_score_max": 2.1268011445995891e-07,
+      "objective_delta_python_minus_R": 5.684341886080802e-14,
+      "prediction_abs_delta_max": 3.3275955324540973e-09,
+      "prediction_tolerance_ratio_max": 1.0429083391818696,
+      "conditional_mode_abs_delta_max": 3.1622233720440818e-09,
+      "conditional_mode_tolerance_ratio_max": 3.282926644352042e-05,
+      "python_warnings": [],
+      "R_warnings": []
+    },
+    {
+      "id": "lmer_0214",
+      "category": "near_zero_prediction",
+      "python_score_max": 5.1296804480602505e-11,
+      "r_score_max": 4.652247668189088e-07,
+      "objective_delta_python_minus_R": 0.0,
+      "prediction_abs_delta_max": 1.998992971152802e-08,
+      "prediction_tolerance_ratio_max": 1.0242724558028415,
+      "conditional_mode_abs_delta_max": 1.6289157911408836e-08,
+      "conditional_mode_tolerance_ratio_max": 0.0010391991936688422,
+      "python_warnings": [],
+      "R_warnings": []
+    },
+    {
+      "id": "lmer_0257",
+      "category": "near_zero_prediction",
+      "python_score_max": 2.458659044157188e-15,
+      "r_score_max": 2.2559760332250588e-07,
+      "objective_delta_python_minus_R": 8.526512829121202e-14,
+      "prediction_abs_delta_max": 2.769646512135182e-09,
+      "prediction_tolerance_ratio_max": 35.616906565686534,
+      "conditional_mode_abs_delta_max": 1.649772041201203e-09,
+      "conditional_mode_tolerance_ratio_max": 0.00013292748350049414,
+      "python_warnings": [],
+      "R_warnings": []
+    },
+    {
+      "id": "lmer_0288",
+      "category": "near_zero_prediction",
+      "python_score_max": 1.0282118146695044e-11,
+      "r_score_max": 1.1392741874894488e-07,
+      "objective_delta_python_minus_R": 0.0,
+      "prediction_abs_delta_max": 1.2270309213135988e-09,
+      "prediction_tolerance_ratio_max": 11.335630655271126,
+      "conditional_mode_abs_delta_max": 1.1355387741218692e-09,
+      "conditional_mode_tolerance_ratio_max": 8.866565911730457e-06,
+      "python_warnings": [],
+      "R_warnings": []
+    },
+    {
+      "id": "lmer_0325",
+      "category": "near_zero_prediction",
+      "python_score_max": 1.575693948513971e-14,
+      "r_score_max": 6.69857792503437e-07,
+      "objective_delta_python_minus_R": 5.684341886080802e-14,
+      "prediction_abs_delta_max": 1.9076081159141722e-08,
+      "prediction_tolerance_ratio_max": 1.2510382727580318,
+      "conditional_mode_abs_delta_max": 1.1172166858308685e-08,
+      "conditional_mode_tolerance_ratio_max": 0.0015597682318435546,
+      "python_warnings": [],
+      "R_warnings": []
+    },
+    {
+      "id": "lmer_0337",
+      "category": "near_zero_prediction",
+      "python_score_max": 1.8960999518953682e-14,
+      "r_score_max": 4.0450631967607073e-07,
+      "objective_delta_python_minus_R": 0.0,
+      "prediction_abs_delta_max": 1.3889381644816012e-08,
+      "prediction_tolerance_ratio_max": 2.8068305236607616,
+      "conditional_mode_abs_delta_max": 1.4983692731007636e-08,
+      "conditional_mode_tolerance_ratio_max": 0.00018114538589067078,
+      "python_warnings": [],
+      "R_warnings": []
+    },
+    {
+      "id": "lmer_0372",
+      "category": "near_zero_prediction",
+      "python_score_max": 4.276646602815514e-11,
+      "r_score_max": 2.3875964692423845e-07,
+      "objective_delta_python_minus_R": 1.4210854715202004e-14,
+      "prediction_abs_delta_max": 3.344663990212382e-09,
+      "prediction_tolerance_ratio_max": 4.729322886649428,
+      "conditional_mode_abs_delta_max": 2.7308062477970907e-09,
+      "conditional_mode_tolerance_ratio_max": 5.708444021590096e-05,
+      "python_warnings": [],
+      "R_warnings": []
+    },
+    {
+      "id": "lmer_0406",
+      "category": "near_zero_prediction",
+      "python_score_max": 4.090951751139734e-15,
+      "r_score_max": 2.721398975828699e-07,
+      "objective_delta_python_minus_R": 8.526512829121202e-14,
+      "prediction_abs_delta_max": 5.354009680047511e-09,
+      "prediction_tolerance_ratio_max": 56.519888851638214,
+      "conditional_mode_abs_delta_max": 1.6719115869534562e-08,
+      "conditional_mode_tolerance_ratio_max": 0.0023827238515801,
+      "python_warnings": [],
+      "R_warnings": []
+    },
+    {
+      "id": "lmer_0488",
+      "category": "near_zero_prediction",
+      "python_score_max": 4.577196808577839e-15,
+      "r_score_max": 1.218952456952755e-06,
+      "objective_delta_python_minus_R": 0.0,
+      "prediction_abs_delta_max": 2.2119301945622283e-08,
+      "prediction_tolerance_ratio_max": 1.380676813848665,
+      "conditional_mode_abs_delta_max": 1.4563772299247546e-08,
+      "conditional_mode_tolerance_ratio_max": 0.00034717579647889225,
+      "python_warnings": [],
+      "R_warnings": []
+    },
+    {
+      "id": "lmer_0550",
+      "category": "near_zero_prediction",
+      "python_score_max": 1.0490659670283541e-14,
+      "r_score_max": 3.7410093671326877e-07,
+      "objective_delta_python_minus_R": 2.842170943040401e-14,
+      "prediction_abs_delta_max": 2.2130727028724095e-08,
+      "prediction_tolerance_ratio_max": 1.2501115739936537,
+      "conditional_mode_abs_delta_max": 1.8287753533741125e-08,
+      "conditional_mode_tolerance_ratio_max": 0.0013725378234514414,
+      "python_warnings": [],
+      "R_warnings": []
+    },
+    {
+      "id": "lmer_0561",
+      "category": "near_zero_prediction",
+      "python_score_max": 3.812134891538598e-15,
+      "r_score_max": 4.2213430423739885e-07,
+      "objective_delta_python_minus_R": 5.684341886080802e-14,
+      "prediction_abs_delta_max": 1.0338672140619565e-08,
+      "prediction_tolerance_ratio_max": 3.0067842008335925,
+      "conditional_mode_abs_delta_max": 6.336367652792774e-09,
+      "conditional_mode_tolerance_ratio_max": 7.312879536066487e-05,
+      "python_warnings": [],
+      "R_warnings": []
+    },
+    {
+      "id": "lmer_0585",
+      "category": "near_zero_prediction",
+      "python_score_max": 5.6144163411082526e-14,
+      "r_score_max": 3.613730651825605e-07,
+      "objective_delta_python_minus_R": 1.4210854715202004e-13,
+      "prediction_abs_delta_max": 3.881192256471877e-09,
+      "prediction_tolerance_ratio_max": 0.9787983908079213,
+      "conditional_mode_abs_delta_max": 2.5325361807659874e-09,
+      "conditional_mode_tolerance_ratio_max": 8.543008668217019e-05,
+      "python_warnings": [],
+      "R_warnings": []
+    },
+    {
+      "id": "lmer_0160",
+      "category": "optimizer_warning",
+      "python_score_max": 0.0,
+      "r_score_max": 0.0,
+      "objective_delta_python_minus_R": -5.684341886080802e-14,
+      "prediction_abs_delta_max": 4.440892098500626e-16,
+      "prediction_tolerance_ratio_max": 3.172061253127224e-10,
+      "conditional_mode_abs_delta_max": 0.0,
+      "conditional_mode_tolerance_ratio_max": 0.0,
+      "python_warnings": [
+        "boundary (singular) fit"
+      ],
+      "R_warnings": [
+        "convergence code 3 from bobyqa: bobyqa -- a trust region step failed to reduce q",
+        "boundary (singular) fit: see help('isSingular')\n"
+      ]
+    },
+    {
+      "id": "lmer_0239",
+      "category": "optimizer_warning",
+      "python_score_max": 0.0,
+      "r_score_max": 0.0,
+      "objective_delta_python_minus_R": 0.0,
+      "prediction_abs_delta_max": 1.7763568394002505e-15,
+      "prediction_tolerance_ratio_max": 5.512594737469544e-09,
+      "conditional_mode_abs_delta_max": 0.0,
+      "conditional_mode_tolerance_ratio_max": 0.0,
+      "python_warnings": [
+        "boundary (singular) fit"
+      ],
+      "R_warnings": [
+        "convergence code 3 from bobyqa: bobyqa -- a trust region step failed to reduce q",
+        "boundary (singular) fit: see help('isSingular')\n"
+      ]
+    },
+    {
+      "id": "lmer_0270",
+      "category": "optimizer_warning",
+      "python_score_max": 1.3584721652468746e-14,
+      "r_score_max": 1.0858782502984733e-09,
+      "objective_delta_python_minus_R": 0.0,
+      "prediction_abs_delta_max": 2.249267438969582e-11,
+      "prediction_tolerance_ratio_max": 0.001305429924764104,
+      "conditional_mode_abs_delta_max": 2.0002888234671445e-11,
+      "conditional_mode_tolerance_ratio_max": 2.7184823469715035e-07,
+      "python_warnings": [],
+      "R_warnings": "convergence code 3 from bobyqa: bobyqa -- a trust region step failed to reduce q"
+    },
+    {
+      "id": "lmer_0364",
+      "category": "near_zero_conditional_mode",
+      "python_score_max": 5.801757438488238e-14,
+      "r_score_max": 9.956713579073985e-08,
+      "objective_delta_python_minus_R": 2.842170943040401e-14,
+      "prediction_abs_delta_max": 1.8889276809375133e-09,
+      "prediction_tolerance_ratio_max": 0.0025640452686510364,
+      "conditional_mode_abs_delta_max": 3.2218097079095287e-09,
+      "conditional_mode_tolerance_ratio_max": 0.8251818159614822,
+      "python_warnings": [],
+      "R_warnings": []
+    }
+  ],
+  "anova_0337": {
+    "R_logLik": -42.659433256651106,
+    "python_logLik": -42.6594332566315,
+    "R_covariance_condition_number": 6821328641472.091,
+    "reason": "Quasi-separated binomial model: diverging fixed effects and ill-conditioned covariance make strict Wald rank/statistic reproduction unstable."
+  },
+  "glmer": {
+    "schema_version": 1,
+    "scope": "Twenty original GLMER Stage 1 failing IDs; all original thresholds retained. Diagnostic public R optimizer fields only, target package source was not inspected.",
+    "algorithm": "Analytic Laplace outer score from implicit conditional-mode differentiation; Richardson score-Hessian; score-polish tolerance 1e-10.",
+    "original_corpus": {
+      "cases": 603,
+      "passed": 583,
+      "failed": 20
+    },
+    "final_local_corpus": {
+      "cases": 603,
+      "passed": 585,
+      "failed": 18
+    },
+    "full_glmer_tests": {
+      "passed": 612,
+      "failed": 18,
+      "seconds": 24.56
+    },
+    "resolved_ids": [
+      "glmer_0107",
+      "glmer_0361"
+    ],
+    "remaining_ids": [
+      "glmer_0002",
+      "glmer_0040",
+      "glmer_0102",
+      "glmer_0128",
+      "glmer_0157",
+      "glmer_0338",
+      "glmer_0368",
+      "glmer_0379",
+      "glmer_0517",
+      "glmer_0539",
+      "glmer_0581",
+      "glmer_0152",
+      "glmer_0269",
+      "glmer_0372",
+      "glmer_0418",
+      "glmer_0502",
+      "glmer_0528",
+      "glmer_0312"
+    ],
+    "unit_regressions": "Seven independent finite-difference and small cross-curvature tests passed; Ruff and mypy passed.",
+    "source_sha256": {
+      "src/rparity/lmm/glmer.py": "bcd9360a4f5f351350ab4842b616c09c936e0bd6464b75bdf37d37e36f7ce05b",
+      "src/rparity/lmm/_glmer_math.py": "bbfe3843e8794dba9d6a2e604ed61adee04984a87df8ddc4c5f8074b1b6e989d",
+      "tests/test_glmer_precision.py": "51b917339c317863fa237a4a6226bef609e5edf2e44f672e96bca6d9ebf38ce6"
+    },
+    "cases": [
+      {
+        "id": "glmer_0002",
+        "pass": false,
+        "field_category": "coefficient_precision",
+        "coefficient_max_absolute_difference": 3.3859782533340876e-08,
+        "coefficient_max_relative_difference": 0.00012390007114416744,
+        "covariance_max_relative_difference": 2.414399870582411e-06,
+        "prediction_max_absolute_difference": 2.2255774445589793e-08,
+        "prediction_max_relative_difference": 9.217177294571598e-08,
+        "log_likelihood_improvement": 5.541787118090724e-08,
+        "python_negative_log_likelihood_score_max": 5.954872706048775e-11,
+        "python_score_at_R_parameters_max": 5.2234252478911e-07,
+        "R_deviance_gradient_max": 5.501732402990456e-07,
+        "R_Hessian_diagonal_negative_log_likelihood_scale": [
+          10.048713684082031,
+          10.165069580078125,
+          22.647379875183105,
+          10.820728302001953
+        ],
+        "R_theta_index_permutation_into_python_order": [
+          0
+        ],
+        "analytic_Hessian_diagonal_at_R": [
+          10.048703421111268,
+          10.165063369085603,
+          22.64737385519544,
+          10.820722339711176
+        ],
+        "python_singular": false,
+        "R_singular": false
+      },
+      {
+        "id": "glmer_0040",
+        "pass": false,
+        "field_category": "coefficient_precision",
+        "coefficient_max_absolute_difference": 4.278443267360238e-05,
+        "coefficient_max_relative_difference": 0.0013322372980294633,
+        "covariance_max_relative_difference": 1.7635107763883107,
+        "prediction_max_absolute_difference": 6.605216584021356e-06,
+        "prediction_max_relative_difference": 4.162461223798843e-05,
+        "log_likelihood_improvement": 3.2539048788748914e-08,
+        "python_negative_log_likelihood_score_max": 1.7763568394002505e-14,
+        "python_score_at_R_parameters_max": 0.0008966823927636369,
+        "R_deviance_gradient_max": 0.0017942048202712613,
+        "R_Hessian_diagonal_negative_log_likelihood_scale": [
+          99.66310691833496,
+          48.57110595703125,
+          36.52664566040039,
+          150.85015678405762,
+          47.13190841674805
+        ],
+        "R_theta_index_permutation_into_python_order": [
+          1,
+          0
+        ],
+        "analytic_Hessian_diagonal_at_R": [
+          33.630230153135265,
+          84.7222363910447,
+          21.58576944432131,
+          135.90928228772847,
+          32.1910337841581
+        ],
+        "python_singular": false,
+        "R_singular": false
+      },
+      {
+        "id": "glmer_0102",
+        "pass": false,
+        "field_category": "coefficient_precision",
+        "coefficient_max_absolute_difference": 3.2086752906404503e-07,
+        "coefficient_max_relative_difference": 0.0004753171686037564,
+        "covariance_max_relative_difference": 4.5053805246504656e-06,
+        "prediction_max_absolute_difference": 2.0558324431707575e-08,
+        "prediction_max_relative_difference": 6.199731865916415e-08,
+        "log_likelihood_improvement": 3.822719918389339e-10,
+        "python_negative_log_likelihood_score_max": 1.9539925233402755e-14,
+        "python_score_at_R_parameters_max": 4.560863137825777e-06,
+        "R_deviance_gradient_max": 8.711538157513132e-06,
+        "R_Hessian_diagonal_negative_log_likelihood_scale": [
+          22.69045639038086,
+          49.20455360412598,
+          53.23299026489258,
+          13.829446792602539,
+          54.07106590270996,
+          41.228254318237305
+        ],
+        "R_theta_index_permutation_into_python_order": [
+          0,
+          1,
+          2
+        ],
+        "analytic_Hessian_diagonal_at_R": [
+          22.690437844972895,
+          49.20453717610618,
+          53.2329778785637,
+          13.829434803150413,
+          54.0710648860069,
+          41.22824100146024
+        ],
+        "python_singular": false,
+        "R_singular": false
+      },
+      {
+        "id": "glmer_0128",
+        "pass": false,
+        "field_category": "coefficient_precision",
+        "coefficient_max_absolute_difference": 1.1055875459520248e-05,
+        "coefficient_max_relative_difference": 3.888779012746283e-05,
+        "covariance_max_relative_difference": 0.22877265027431493,
+        "prediction_max_absolute_difference": 1.226435884937871e-05,
+        "prediction_max_relative_difference": 2.1136007742189338e-05,
+        "log_likelihood_improvement": 2.4494823946952238e-09,
+        "python_negative_log_likelihood_score_max": 1.394717674685353e-15,
+        "python_score_at_R_parameters_max": 0.0002062716361272976,
+        "R_deviance_gradient_max": 0.00044115928687915584,
+        "R_Hessian_diagonal_negative_log_likelihood_scale": [
+          3.442984104156494,
+          10.66626787185669,
+          35.73083782196045,
+          22.661128520965576,
+          18.268957138061523
+        ],
+        "R_theta_index_permutation_into_python_order": [
+          0,
+          1
+        ],
+        "analytic_Hessian_diagonal_at_R": [
+          3.442982842252862,
+          10.380779104976737,
+          35.73084038800865,
+          22.37754474580468,
+          18.26895710393592
+        ],
+        "python_singular": false,
+        "R_singular": false
+      },
+      {
+        "id": "glmer_0157",
+        "pass": false,
+        "field_category": "coefficient_precision",
+        "coefficient_max_absolute_difference": 3.6325036312234715e-08,
+        "coefficient_max_relative_difference": 1.2573672542152231e-05,
+        "covariance_max_relative_difference": 9.007642647344818e-06,
+        "prediction_max_absolute_difference": 2.253606856683632e-09,
+        "prediction_max_relative_difference": 1.5279675546928417e-08,
+        "log_likelihood_improvement": 1.1683084721880732e-08,
+        "python_negative_log_likelihood_score_max": 1.5987211554602254e-14,
+        "python_score_at_R_parameters_max": 4.775234652143467e-07,
+        "R_deviance_gradient_max": 1.7760726223059464e-06,
+        "R_Hessian_diagonal_negative_log_likelihood_scale": [
+          14.738582611083984,
+          52.15338134765625,
+          6.3910064697265625,
+          156.18929481506348,
+          10.29749870300293
+        ],
+        "R_theta_index_permutation_into_python_order": [
+          0,
+          1
+        ],
+        "analytic_Hessian_diagonal_at_R": [
+          14.738564509975276,
+          52.153360141255455,
+          6.39099269270282,
+          156.1892750783297,
+          10.29749048473058
+        ],
+        "python_singular": false,
+        "R_singular": false
+      },
+      {
+        "id": "glmer_0338",
+        "pass": false,
+        "field_category": "coefficient_precision",
+        "coefficient_max_absolute_difference": 1.4096995705308035e-07,
+        "coefficient_max_relative_difference": 3.756832176467403e-05,
+        "covariance_max_relative_difference": 1.4272799475544386e-06,
+        "prediction_max_absolute_difference": 9.587349802941958e-09,
+        "prediction_max_relative_difference": 2.860873083053304e-08,
+        "log_likelihood_improvement": 5.5838910384409246e-08,
+        "python_negative_log_likelihood_score_max": 7.81839870622747e-15,
+        "python_score_at_R_parameters_max": 2.463459288507691e-06,
+        "R_deviance_gradient_max": 5.420872639660956e-06,
+        "R_Hessian_diagonal_negative_log_likelihood_scale": [
+          15.644325256347656,
+          8.20265007019043,
+          228.01997184753418,
+          87.2052059173584
+        ],
+        "R_theta_index_permutation_into_python_order": [
+          0
+        ],
+        "analytic_Hessian_diagonal_at_R": [
+          15.644318803002212,
+          8.202647385908074,
+          228.0199769222944,
+          87.20519189896538
+        ],
+        "python_singular": false,
+        "R_singular": false
+      },
+      {
+        "id": "glmer_0368",
+        "pass": false,
+        "field_category": "coefficient_precision",
+        "coefficient_max_absolute_difference": 9.131137073403739e-06,
+        "coefficient_max_relative_difference": 4.367762591051872e-05,
+        "covariance_max_relative_difference": 0.12233639207338268,
+        "prediction_max_absolute_difference": 1.688218745132808e-06,
+        "prediction_max_relative_difference": 1.0673327978508987e-05,
+        "log_likelihood_improvement": -9.190159744321136e-11,
+        "python_negative_log_likelihood_score_max": 1.4210854715202004e-14,
+        "python_score_at_R_parameters_max": 0.00024872119740293464,
+        "R_deviance_gradient_max": 0.0004972739020558947,
+        "R_Hessian_diagonal_negative_log_likelihood_scale": [
+          17.339733123779297,
+          126.82654190063477,
+          9.032794952392578,
+          113.29014587402344,
+          59.86813545227051
+        ],
+        "R_theta_index_permutation_into_python_order": [
+          0,
+          1
+        ],
+        "analytic_Hessian_diagonal_at_R": [
+          17.33972501744141,
+          126.82655632303272,
+          9.032793867689254,
+          113.29013801418897,
+          59.86813049330888
+        ],
+        "python_singular": false,
+        "R_singular": false
+      },
+      {
+        "id": "glmer_0379",
+        "pass": false,
+        "field_category": "coefficient_precision",
+        "coefficient_max_absolute_difference": 1.8228650604766583e-07,
+        "coefficient_max_relative_difference": 1.1781040077134702e-05,
+        "covariance_max_relative_difference": 1.7994418349346274e-06,
+        "prediction_max_absolute_difference": 4.311840902104791e-07,
+        "prediction_max_relative_difference": 1.3716633849259204e-07,
+        "log_likelihood_improvement": 7.503516030737956e-08,
+        "python_negative_log_likelihood_score_max": 6.5503158452884236e-15,
+        "python_score_at_R_parameters_max": 3.5331368841706734e-06,
+        "R_deviance_gradient_max": 7.136407020880142e-06,
+        "R_Hessian_diagonal_negative_log_likelihood_scale": [
+          45.914791107177734,
+          31.705978393554688,
+          24.229875564575195,
+          142.9396457672119,
+          26.34501075744629
+        ],
+        "R_theta_index_permutation_into_python_order": [
+          1,
+          0
+        ],
+        "analytic_Hessian_diagonal_at_R": [
+          31.70595896163627,
+          45.91477675409018,
+          24.229863644751617,
+          142.93956655951453,
+          26.345010000204187
+        ],
+        "python_singular": false,
+        "R_singular": false
+      },
+      {
+        "id": "glmer_0517",
+        "pass": false,
+        "field_category": "coefficient_precision",
+        "coefficient_max_absolute_difference": 5.9546447182423634e-05,
+        "coefficient_max_relative_difference": 4.919558721371128e-05,
+        "covariance_max_relative_difference": 1.7030754556930783,
+        "prediction_max_absolute_difference": 6.036902427730695e-06,
+        "prediction_max_relative_difference": 9.47945800278378e-05,
+        "log_likelihood_improvement": 7.047242434055079e-08,
+        "python_negative_log_likelihood_score_max": 1.2434497875801753e-14,
+        "python_score_at_R_parameters_max": 0.001714995291003829,
+        "R_deviance_gradient_max": 0.0034311864283154137,
+        "R_Hessian_diagonal_negative_log_likelihood_scale": [
+          68.03768157958984,
+          60.90894889831543,
+          25.260631561279297,
+          283.47823905944824,
+          24.278053283691406
+        ],
+        "R_theta_index_permutation_into_python_order": [
+          0,
+          1
+        ],
+        "analytic_Hessian_diagonal_at_R": [
+          63.08654077724925,
+          60.90893838612269,
+          20.30887728093039,
+          273.5751357903889,
+          14.374945919062746
+        ],
+        "python_singular": false,
+        "R_singular": false
+      },
+      {
+        "id": "glmer_0539",
+        "pass": false,
+        "field_category": "coefficient_precision",
+        "coefficient_max_absolute_difference": 4.812408581787768e-08,
+        "coefficient_max_relative_difference": 0.0031172687364389613,
+        "covariance_max_relative_difference": 2.9123507419061976e-06,
+        "prediction_max_absolute_difference": 9.244452314760565e-08,
+        "prediction_max_relative_difference": 2.9618850848799663e-08,
+        "log_likelihood_improvement": -6.16751094639767e-12,
+        "python_negative_log_likelihood_score_max": 1.0380585280245214e-14,
+        "python_score_at_R_parameters_max": 1.031854479194294e-06,
+        "R_deviance_gradient_max": 4.581011125992518e-06,
+        "R_Hessian_diagonal_negative_log_likelihood_scale": [
+          14.92413330078125,
+          77.62895584106445,
+          8.388376235961914,
+          43.81999206542969,
+          48.735124588012695
+        ],
+        "R_theta_index_permutation_into_python_order": [
+          0,
+          1
+        ],
+        "analytic_Hessian_diagonal_at_R": [
+          14.924136338938373,
+          77.6289311979698,
+          8.38835952720097,
+          43.81997259758384,
+          48.735111944057735
+        ],
+        "python_singular": false,
+        "R_singular": false
+      },
+      {
+        "id": "glmer_0581",
+        "pass": false,
+        "field_category": "coefficient_precision",
+        "coefficient_max_absolute_difference": 8.542322664895075e-06,
+        "coefficient_max_relative_difference": 0.0002095867129975448,
+        "covariance_max_relative_difference": 2.3430925018222153,
+        "prediction_max_absolute_difference": 5.775709586000599e-06,
+        "prediction_max_relative_difference": 9.378145836860637e-05,
+        "log_likelihood_improvement": 2.3956260974955512e-08,
+        "python_negative_log_likelihood_score_max": 6.661338147750939e-15,
+        "python_score_at_R_parameters_max": 0.0005858292932892084,
+        "R_deviance_gradient_max": 0.0019197872802578786,
+        "R_Hessian_diagonal_negative_log_likelihood_scale": [
+          24.66173553466797,
+          67.58219528198242,
+          53.99978256225586,
+          24.767831802368164,
+          72.90729713439941,
+          75.36407279968262
+        ],
+        "R_theta_index_permutation_into_python_order": [
+          0,
+          1,
+          2
+        ],
+        "analytic_Hessian_diagonal_at_R": [
+          17.183448904392495,
+          52.625628371556274,
+          39.04318320224605,
+          9.811270706700244,
+          57.95073007789578,
+          60.407508637124295
+        ],
+        "python_singular": false,
+        "R_singular": false
+      },
+      {
+        "id": "glmer_0107",
+        "pass": true,
+        "field_category": "resolved",
+        "coefficient_max_absolute_difference": 3.843412339776808e-08,
+        "coefficient_max_relative_difference": 1.29039889818431e-06,
+        "covariance_max_relative_difference": 9.3297502704323e-05,
+        "prediction_max_absolute_difference": 1.1810903366438197e-07,
+        "prediction_max_relative_difference": 1.0811771848892739e-07,
+        "log_likelihood_improvement": 1.2448708730516955e-11,
+        "python_negative_log_likelihood_score_max": 1.2434497875801753e-14,
+        "python_score_at_R_parameters_max": 1.6009575410924626e-06,
+        "R_deviance_gradient_max": 3.1897684493742418e-06,
+        "R_Hessian_diagonal_negative_log_likelihood_scale": [
+          18.517728805541992,
+          55.127553939819336,
+          12.616046905517578,
+          50.20221710205078,
+          34.481191635131836
+        ],
+        "R_theta_index_permutation_into_python_order": [
+          0,
+          1
+        ],
+        "analytic_Hessian_diagonal_at_R": [
+          18.517728132460814,
+          55.12754937689716,
+          12.61603566297046,
+          50.20221407259903,
+          34.481183836672805
+        ],
+        "python_singular": false,
+        "R_singular": false
+      },
+      {
+        "id": "glmer_0152",
+        "pass": false,
+        "field_category": "fixed_covariance_precision",
+        "coefficient_max_absolute_difference": 4.0457876826494044e-08,
+        "coefficient_max_relative_difference": 8.75655943921102e-08,
+        "covariance_max_relative_difference": 0.0006826736744015126,
+        "prediction_max_absolute_difference": 1.2823458406252541e-08,
+        "prediction_max_relative_difference": 2.6822627968831916e-08,
+        "log_likelihood_improvement": 1.497670609751367e-08,
+        "python_negative_log_likelihood_score_max": 8.881784197001252e-15,
+        "python_score_at_R_parameters_max": 1.976491897148769e-06,
+        "R_deviance_gradient_max": 2.4286350708280224e-06,
+        "R_Hessian_diagonal_negative_log_likelihood_scale": [
+          40.01061248779297,
+          57.97642135620117,
+          22.71935272216797,
+          49.515310287475586,
+          76.6424446105957
+        ],
+        "R_theta_index_permutation_into_python_order": [
+          0,
+          1
+        ],
+        "analytic_Hessian_diagonal_at_R": [
+          40.010609886253455,
+          57.97641538647665,
+          22.71934898795698,
+          49.51530851718969,
+          76.64243777376672
+        ],
+        "python_singular": false,
+        "R_singular": false
+      },
+      {
+        "id": "glmer_0269",
+        "pass": false,
+        "field_category": "fixed_covariance_precision",
+        "coefficient_max_absolute_difference": 1.4388810753995784e-08,
+        "coefficient_max_relative_difference": 3.8387160760758026e-08,
+        "covariance_max_relative_difference": 0.0005597111685889033,
+        "prediction_max_absolute_difference": 4.4194208292935855e-09,
+        "prediction_max_relative_difference": 2.11868976901184e-08,
+        "log_likelihood_improvement": 1.710537986809868e-07,
+        "python_negative_log_likelihood_score_max": 1.84297022087776e-14,
+        "python_score_at_R_parameters_max": 1.240055595652656e-06,
+        "R_deviance_gradient_max": 5.51679590898857e-06,
+        "R_Hessian_diagonal_negative_log_likelihood_scale": [
+          30.621095657348633,
+          100.43962287902832,
+          176.39488220214844,
+          17.05055809020996,
+          135.16849327087402,
+          93.43193435668945
+        ],
+        "R_theta_index_permutation_into_python_order": [
+          0,
+          1,
+          2
+        ],
+        "analytic_Hessian_diagonal_at_R": [
+          30.62107774589151,
+          100.43960291477354,
+          176.3948496798946,
+          17.05055173693376,
+          135.16846820787256,
+          93.431926278978
+        ],
+        "python_singular": false,
+        "R_singular": false
+      },
+      {
+        "id": "glmer_0372",
+        "pass": false,
+        "field_category": "fixed_covariance_precision",
+        "coefficient_max_absolute_difference": 6.226680291931963e-07,
+        "coefficient_max_relative_difference": 2.4123067919057433e-06,
+        "covariance_max_relative_difference": 1.4863806106222894,
+        "prediction_max_absolute_difference": 1.8003627877405393e-07,
+        "prediction_max_relative_difference": 5.085977620644878e-07,
+        "log_likelihood_improvement": 1.693933882052079e-11,
+        "python_negative_log_likelihood_score_max": 8.534839501805891e-15,
+        "python_score_at_R_parameters_max": 2.610239477018883e-05,
+        "R_deviance_gradient_max": 5.182414497539867e-05,
+        "R_Hessian_diagonal_negative_log_likelihood_scale": [
+          44.48480987548828,
+          57.249441146850586,
+          24.839975357055664,
+          116.47518920898438,
+          22.0443115234375
+        ],
+        "R_theta_index_permutation_into_python_order": [
+          0,
+          1
+        ],
+        "analytic_Hessian_diagonal_at_R": [
+          37.58526930837025,
+          50.34990265107127,
+          17.94043686732593,
+          109.57565302811484,
+          15.14478223882354
+        ],
+        "python_singular": false,
+        "R_singular": false
+      },
+      {
+        "id": "glmer_0418",
+        "pass": false,
+        "field_category": "fixed_covariance_precision",
+        "coefficient_max_absolute_difference": 3.840761514384283e-08,
+        "coefficient_max_relative_difference": 4.426203202607197e-07,
+        "covariance_max_relative_difference": 0.0003592658346895122,
+        "prediction_max_absolute_difference": 1.056454057568601e-08,
+        "prediction_max_relative_difference": 5.871215271220288e-08,
+        "log_likelihood_improvement": 9.197253802994965e-08,
+        "python_negative_log_likelihood_score_max": 2.1316282072803006e-14,
+        "python_score_at_R_parameters_max": 2.4807181802644074e-06,
+        "R_deviance_gradient_max": 5.157403393241111e-06,
+        "R_Hessian_diagonal_negative_log_likelihood_scale": [
+          49.95506477355957,
+          104.5014877319336,
+          27.654296875,
+          64.29789543151855,
+          121.85376930236816
+        ],
+        "R_theta_index_permutation_into_python_order": [
+          0,
+          1
+        ],
+        "analytic_Hessian_diagonal_at_R": [
+          49.95504962043196,
+          104.50146453642559,
+          27.65428208705728,
+          64.29787776674033,
+          121.85374801939047
+        ],
+        "python_singular": false,
+        "R_singular": false
+      },
+      {
+        "id": "glmer_0502",
+        "pass": false,
+        "field_category": "fixed_covariance_precision",
+        "coefficient_max_absolute_difference": 1.3153306926971808e-06,
+        "coefficient_max_relative_difference": 1.7042705010290127e-06,
+        "covariance_max_relative_difference": 0.035004151082785984,
+        "prediction_max_absolute_difference": 5.116739119070957e-07,
+        "prediction_max_relative_difference": 4.280693606710764e-06,
+        "log_likelihood_improvement": 3.274408300057985e-09,
+        "python_negative_log_likelihood_score_max": 1.2545520178264269e-14,
+        "python_score_at_R_parameters_max": 0.00010653456972775643,
+        "R_deviance_gradient_max": 0.00021058696120235254,
+        "R_Hessian_diagonal_negative_log_likelihood_scale": [
+          76.09274482727051,
+          358.88854026794434,
+          51.08146095275879,
+          181.0351161956787
+        ],
+        "R_theta_index_permutation_into_python_order": [
+          0
+        ],
+        "analytic_Hessian_diagonal_at_R": [
+          76.09273227071907,
+          358.8885386971042,
+          51.081453735921265,
+          181.0351104201685
+        ],
+        "python_singular": false,
+        "R_singular": false
+      },
+      {
+        "id": "glmer_0528",
+        "pass": false,
+        "field_category": "fixed_covariance_precision",
+        "coefficient_max_absolute_difference": 3.8277951475151895e-08,
+        "coefficient_max_relative_difference": 5.1119906410158936e-08,
+        "covariance_max_relative_difference": 0.0006792504780281543,
+        "prediction_max_absolute_difference": 1.4254610158914716e-08,
+        "prediction_max_relative_difference": 9.177374160433904e-08,
+        "log_likelihood_improvement": 1.8355876818532124e-09,
+        "python_negative_log_likelihood_score_max": 7.129713486264677e-15,
+        "python_score_at_R_parameters_max": 3.3600656632604142e-06,
+        "R_deviance_gradient_max": 6.8968120103818364e-06,
+        "R_Hessian_diagonal_negative_log_likelihood_scale": [
+          33.604618072509766,
+          19.834611892700195,
+          95.84187889099121,
+          38.48139953613281
+        ],
+        "R_theta_index_permutation_into_python_order": [
+          0
+        ],
+        "analytic_Hessian_diagonal_at_R": [
+          33.60461234480846,
+          19.834609950234803,
+          95.84187010491526,
+          38.48139373458985
+        ],
+        "python_singular": false,
+        "R_singular": false
+      },
+      {
+        "id": "glmer_0361",
+        "pass": true,
+        "field_category": "resolved",
+        "coefficient_max_absolute_difference": 1.0532834049392648e-07,
+        "coefficient_max_relative_difference": 1.5746236080974237e-07,
+        "covariance_max_relative_difference": 2.2518664397755827e-06,
+        "prediction_max_absolute_difference": 2.665760090447833e-08,
+        "prediction_max_relative_difference": 1.0317659140402631e-06,
+        "log_likelihood_improvement": 8.048706234831116e-08,
+        "python_negative_log_likelihood_score_max": 3.774758283725532e-15,
+        "python_score_at_R_parameters_max": 2.693533307507323e-07,
+        "R_deviance_gradient_max": 2.701838752727781e-07,
+        "R_Hessian_diagonal_negative_log_likelihood_scale": [
+          2.013523578643799,
+          2.077049732208252,
+          8.006924629211426,
+          4.971864223480225
+        ],
+        "R_theta_index_permutation_into_python_order": [
+          0
+        ],
+        "analytic_Hessian_diagonal_at_R": [
+          2.0135216362580115,
+          2.0770489259566056,
+          8.006921877376266,
+          4.971862941081812
+        ],
+        "python_singular": false,
+        "R_singular": false
+      },
+      {
+        "id": "glmer_0312",
+        "pass": false,
+        "field_category": "better_optimum_warning_divergence",
+        "coefficient_max_absolute_difference": 0.00013225780875431026,
+        "coefficient_max_relative_difference": 0.00041224159201507757,
+        "covariance_max_relative_difference": 0.19309393766837032,
+        "prediction_max_absolute_difference": 0.0007402198861559128,
+        "prediction_max_relative_difference": 0.0020689762562375383,
+        "log_likelihood_improvement": 7.212934661993131e-05,
+        "python_negative_log_likelihood_score_max": 1.1546319456101628e-14,
+        "python_score_at_R_parameters_max": 2.2072162859151483e-06,
+        "R_deviance_gradient_max": null,
+        "R_Hessian_diagonal_negative_log_likelihood_scale": null,
+        "R_theta_index_permutation_into_python_order": [
+          0
+        ],
+        "analytic_Hessian_diagonal_at_R": [
+          -0.9756350713841604,
+          139.4609299910195,
+          91.58350298653984,
+          70.52516015321659
+        ],
+        "python_singular": false,
+        "R_singular": true
+      }
+    ],
+    "tighter_R_inner_tolerance_probe": {
+      "1e-15": {
+        "cases": 20,
+        "fit_errors": 2,
+        "failures": [
+          {
+            "id": "glmer_0102",
+            "error": "(maxstephalfit) PIRLS step-halvings failed to reduce deviance in pwrssUpdate"
+          },
+          {
+            "id": "glmer_0269",
+            "error": "(maxstephalfit) PIRLS step-halvings failed to reduce deviance in pwrssUpdate"
+          }
+        ],
+        "decision": "Diagnostic only; no fixture regeneration. Uniform tolerance is not a stable cure."
+      },
+      "1e-16": {
+        "cases": 20,
+        "fit_errors": 20,
+        "failures": [
+          {
+            "id": "glmer_0002",
+            "error": "(maxstephalfit) PIRLS step-halvings failed to reduce deviance in pwrssUpdate"
+          },
+          {
+            "id": "glmer_0040",
+            "error": "(maxstephalfit) PIRLS step-halvings failed to reduce deviance in pwrssUpdate"
+          },
+          {
+            "id": "glmer_0102",
+            "error": "pwrssUpdate did not converge in (maxit) iterations"
+          },
+          {
+            "id": "glmer_0128",
+            "error": "(maxstephalfit) PIRLS step-halvings failed to reduce deviance in pwrssUpdate"
+          },
+          {
+            "id": "glmer_0157",
+            "error": "(maxstephalfit) PIRLS step-halvings failed to reduce deviance in pwrssUpdate"
+          },
+          {
+            "id": "glmer_0338",
+            "error": "(maxstephalfit) PIRLS step-halvings failed to reduce deviance in pwrssUpdate"
+          },
+          {
+            "id": "glmer_0368",
+            "error": "(maxstephalfit) PIRLS step-halvings failed to reduce deviance in pwrssUpdate"
+          },
+          {
+            "id": "glmer_0379",
+            "error": "pwrssUpdate did not converge in (maxit) iterations"
+          },
+          {
+            "id": "glmer_0517",
+            "error": "(maxstephalfit) PIRLS step-halvings failed to reduce deviance in pwrssUpdate"
+          },
+          {
+            "id": "glmer_0539",
+            "error": "pwrssUpdate did not converge in (maxit) iterations"
+          },
+          {
+            "id": "glmer_0581",
+            "error": "(maxstephalfit) PIRLS step-halvings failed to reduce deviance in pwrssUpdate"
+          },
+          {
+            "id": "glmer_0107",
+            "error": "(maxstephalfit) PIRLS step-halvings failed to reduce deviance in pwrssUpdate"
+          },
+          {
+            "id": "glmer_0152",
+            "error": "(maxstephalfit) PIRLS step-halvings failed to reduce deviance in pwrssUpdate"
+          },
+          {
+            "id": "glmer_0269",
+            "error": "(maxstephalfit) PIRLS step-halvings failed to reduce deviance in pwrssUpdate"
+          },
+          {
+            "id": "glmer_0372",
+            "error": "pwrssUpdate did not converge in (maxit) iterations"
+          },
+          {
+            "id": "glmer_0418",
+            "error": "(maxstephalfit) PIRLS step-halvings failed to reduce deviance in pwrssUpdate"
+          },
+          {
+            "id": "glmer_0502",
+            "error": "(maxstephalfit) PIRLS step-halvings failed to reduce deviance in pwrssUpdate"
+          },
+          {
+            "id": "glmer_0528",
+            "error": "(maxstephalfit) PIRLS step-halvings failed to reduce deviance in pwrssUpdate"
+          },
+          {
+            "id": "glmer_0361",
+            "error": "(maxstephalfit) PIRLS step-halvings failed to reduce deviance in pwrssUpdate"
+          },
+          {
+            "id": "glmer_0312",
+            "error": "pwrssUpdate did not converge in (maxit) iterations"
+          }
+        ],
+        "decision": "Diagnostic only; no fixture regeneration. Uniform tolerance is not a stable cure."
+      }
+    },
+    "tighter_R_probe_observations": [
+      "1e-15 changes glmer_0372 covariance by about149% and glmer_0581 by234%; it moves these toward analytic derivatives.",
+      "1e-15 changes glmer_0361 coefficient by about1.98e-4 and covariance by97%; uniform tighter tolerance also introduces additional oracle instability.",
+      "1e-16 produces PIRLS step-halving or max-iteration errors on all twenty GLMER diagnostic cases."
+    ],
+    "oracle_policy": "Keep existing references and strict comparisons. Do not fabricate singular warning for glmer_0312, where Python finds a better interior optimum.",
+    "thresholds": {
+      "coefficient": {
+        "rtol": 1e-05,
+        "atol": 1e-12
+      },
+      "covariance": {
+        "rtol": 0.0001,
+        "atol": 1e-12
+      },
+      "prediction": {
+        "rtol": 1e-06,
+        "atol": 1e-12
+      },
+      "log_likelihood_maximum_worsening": 1e-06
+    },
+    "interpretation": "Pass status is determined by complete unchanged pytest assertions, including combined absolute and relative tolerances; the reported maximum raw relative difference alone does not determine pass status."
+  },
+  "gls": {
+    "boundary_cases": [
+      {
+        "id": "gls_0173",
+        "R_min_correlation_eigenvalue": 8.6e-15,
+        "python_logLik_improvement": 7.590252189297896
+      },
+      {
+        "id": "gls_0273",
+        "R_min_correlation_eigenvalue": 6.3e-11,
+        "python_logLik_improvement": 17.05261309267209
+      },
+      {
+        "id": "gls_0333",
+        "R_min_correlation_eigenvalue": 3.7e-15,
+        "python_logLik_improvement": 59.332518858901935
+      }
+    ],
+    "boundary_note": "Finite likelihood improves but nearly singular coefficients remain unstable and warnings are retained; no complete parity pass is claimed.",
+    "small_prediction_python_score_max_approx": 1e-10,
+    "variance_case": {
+      "id": "gls_0357",
+      "R_variance_coefficient": 4.809283219985134e-06,
+      "python_variance_coefficient": 4.73171031e-06,
+      "python_logLik_improvement": 5.115907697472721e-13
+    }
+  },
+  "validated_runtime_sha256": "e037083415d69ff8ecb5e31a5c83a3dfa58702c89a1126f3127a169a3889f4de"
+}

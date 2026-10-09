@@ -159,3 +159,33 @@ def test_complete_cases_are_retained():
     assert 2 not in model.fitted().index
     with pytest.raises(ValueError, match="null"):
         gls("y ~ x", frame, na_action="raise")
+
+
+@pytest.mark.parametrize("method", ["ML", "REML"])
+def test_near_singular_symm_preserves_closed_form_likelihood(method):
+    # Identical pairs have residuals only in the common-mode direction.
+    # The covariance determinant is (1-rho)*(1+rho), even at the last
+    # representable rho below one. Flooring a Cholesky diagonal changes
+    # that likelihood rather than stabilizing the same statistical model.
+    rho = np.nextafter(1.0, 0.0)
+    pairs = np.linspace(-2.0, 2.0, 10)
+    frame = pd.DataFrame({"y": np.repeat(pairs, 2), "g": np.repeat(range(10), 2)})
+    with pytest.warns(RuntimeWarning, match="nearly singular"):
+        model = gls(
+            "y ~ 1", frame, method=method,
+            correlation=corSymm([rho], form="~1|g", fixed=True),
+        )
+    count = len(frame) - (method == "REML")
+    quadratic = 2 * np.sum((pairs - pairs.mean()) ** 2) / (1 + rho)
+    sigma2 = quadratic / count
+    logdet = len(pairs) * (np.log1p(-rho) + np.log1p(rho))
+    information = len(frame) / (1 + rho)
+    expected = -0.5 * (count * (np.log(2 * np.pi * sigma2) + 1) + logdet)
+    if method == "REML":
+        expected -= 0.5 * np.log(information)
+    assert_allclose(model.beta, [pairs.mean()], atol=1e-14)
+    assert_allclose(model.logLik(), expected, rtol=0, atol=1e-10)
+    assert_allclose(model.sigma**2, sigma2, rtol=1e-12)
+    assert_allclose(np.sum(model.residuals("normalized") ** 2), count, rtol=1e-12)
+    assert np.isfinite(model.anova().to_numpy()).all()
+    assert np.isfinite(model.intervals()["sigma"].to_numpy()).all()

@@ -84,6 +84,26 @@ def observed_information(
     return np.maximum(weights * trials * (derivative * ratio + (p - y) * ratio_derivative), 1e-15)
 
 
+def information_derivative(
+    eta: Array, trials: Array, weights: Array, family: str, link: str
+) -> Array:
+    """Differentiate the PIRLS information with respect to the predictor."""
+    mu, derivative = inverse_link(eta, link)
+    if family == "poisson":
+        return weights * mu
+    if link == "cloglog":
+        e = np.exp(np.clip(eta, -700, 40))
+        ratio = e * np.exp(-e) / np.maximum(-np.expm1(-e), 1e-300)
+        information = weights * trials * e * ratio
+        return information * (2 - e - ratio)
+    p = np.clip(mu, 1e-15, 1 - 1e-15)
+    variance = p * (1 - p)
+    information = weights * trials * derivative**2 / variance
+    if link == "logit":
+        return information * (1 - 2 * p)
+    return information * (-2 * eta - derivative * (1 - 2 * p) / variance)
+
+
 def conditional_mode(
     base: Array,
     A: Array,
@@ -169,3 +189,22 @@ def numerical_hessian(function: Callable[[Array], float], x: Array) -> Array:
             value -= function(x - ei + ej) - function(x - ei - ej)
             hessian[i, j] = hessian[j, i] = value / (4 * steps[i] * steps[j])
     return hessian
+
+
+def score_hessian(gradient: Callable[[Array], Array], x: Array) -> Array:
+    """Differentiate a score with Richardson cancellation of quadratic error.
+
+    A score derivative avoids subtracting nearly equal likelihood values.
+    Extrapolation permits a larger step, suppressing inner-mode roundoff
+    without retaining the corresponding second-order truncation error.
+    """
+    steps = 1e-3 * np.maximum(1, np.abs(x))
+    hessian = np.empty((len(x), len(x)))
+    for i, step in enumerate(steps):
+        direction = np.zeros(len(x))
+        direction[i] = step
+        coarse = (gradient(x + direction) - gradient(x - direction)) / (2 * step)
+        direction[i] /= 2
+        fine = (gradient(x + direction) - gradient(x - direction)) / step
+        hessian[:, i] = (4 * fine - coarse) / 3
+    return (hessian + hessian.T) / 2

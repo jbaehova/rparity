@@ -9,3 +9,12 @@ Every numerical R observation passed through `oracle/run_case.R`. The oracle cal
 Seeded synthetic inputs and public observations form the committed golden corpus. Precision attempts are observations rather than implementation templates. R's built-in example datasets remain only in ignored `oracle/cache/`; their tests require the development R installation. Package and R versions are recorded in `oracle/versions.json`.
 
 The release wheel contains Python runtime modules and requires no R executable or rpy2. The same public oracle supplies representative-example checks and same-machine fit-time measurements. Required-field discrepancies remain visible in the numerical coverage and Stage 1 report.
+
+## Post-release precision refinement
+
+LMER stationary-score roots, GLMER implicit-mode score differentiation and GLS
+factor/QR likelihood evaluation derive from the recorded mathematical references.
+R was queried only through oracle/run_case.R for public fit outputs and optional
+numerical optimizer gradient/Hessian fields. No target source or function body
+was inspected. Original synthetic inputs, oracle results and comparison tolerances
+were retained, including cases where tighter uniform R controls failed.

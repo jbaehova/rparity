@@ -231,19 +231,48 @@ class _Covariance:
         matrix = self.symm_matrix(theta)
         return matrix[self.symm_rows[self.symm_order], self.symm_cols[self.symm_order]]
 
-    def symm_matrix(self, theta: np.ndarray) -> np.ndarray:
+    def symm_factor(self, theta: np.ndarray) -> np.ndarray:
         factor = np.zeros((self.symm_size, self.symm_size))
         factor[0, 0] = 1
         k = 0
         for row in range(1, self.symm_size):
             scale = 1.0
             for col in range(row):
-                partial = np.cos(np.pi * special.expit(theta[k]))
-                factor[row, col] = scale * partial
-                scale *= np.sqrt(max(1 - partial**2, 1e-15))
+                angle = np.pi * special.expit(theta[k])
+                factor[row, col] = scale * np.cos(angle)
+                # Compute the complementary coordinate directly. Subtracting
+                # cos(angle)**2 from one loses the small Cholesky diagonal
+                # at a correlation boundary.
+                scale *= np.sin(angle)
                 k += 1
             factor[row, row] = scale
+        return factor
+
+    def symm_matrix(self, theta: np.ndarray) -> np.ndarray:
+        factor = self.symm_factor(theta)
         return factor @ factor.T
+
+    def factors(self, theta: np.ndarray) -> list[np.ndarray]:
+        """Return residual covariance factors without squaring their condition number."""
+        if not self.correlation or self.correlation.kind != "Symm":
+            return [linalg.cholesky(matrix, lower=True) for matrix in self.matrices(theta)]
+        all_theta = self.expand(theta)
+        sd = self.sd_multipliers(all_theta)
+        if not np.isfinite(sd).all() or np.any(sd <= 0):
+            raise ValueError("Invalid residual standard deviations")
+        general = self.symm_factor(all_theta[: self.nc])
+        result = []
+        for block in self.blocks:
+            indices = np.searchsorted(self.symm_times, self.times[block])
+            selected = sd[block, None] * general[indices]
+            _, upper = linalg.qr(selected.T, mode="economic")
+            lower = upper.T
+            signs = np.where(np.diag(lower) < 0, -1.0, 1.0)
+            factor = lower * signs
+            if not np.isfinite(factor).all() or np.any(np.diag(factor) <= 0):
+                raise ValueError("Residual covariance factor must have positive diagonal")
+            result.append(factor)
+        return result
 
     def var_values(self, all_theta: np.ndarray) -> np.ndarray:
         values = all_theta[self.nc :]
@@ -322,31 +351,24 @@ def _evaluate(
     theta: np.ndarray, covariance: _Covariance, X: np.ndarray, y: np.ndarray, reml: bool
 ) -> _Evaluation:
     n, p = X.shape
-    information = np.zeros((p, p))
-    rhs = np.zeros(p)
-    yvy = logdet = 0.0
-    for block, matrix in zip(covariance.blocks, covariance.matrices(theta)):
-        factor = linalg.cho_factor(matrix, lower=True, check_finite=False)
-        xy = np.column_stack([X[block], y[block]])
-        solved = linalg.cho_solve(factor, xy, check_finite=False)
-        information += X[block].T @ solved[:, :p]
-        rhs += X[block].T @ solved[:, p]
-        yvy += float(y[block] @ solved[:, p])
-        logdet += 2 * np.log(np.diag(factor[0])).sum()
-    chol = linalg.cho_factor(information, lower=True)
-    beta = linalg.cho_solve(chol, rhs)
-    inverse = linalg.cho_solve(chol, np.eye(p))
-    # Compute the residual quadratic directly to avoid cancellation for a strong signal.
-    quadratic = 0.0
-    residual = y - X @ beta
-    for block, matrix in zip(covariance.blocks, covariance.matrices(theta)):
-        factor = linalg.cho_factor(matrix, lower=True, check_finite=False)
-        quadratic += float(residual[block] @ linalg.cho_solve(factor, residual[block]))
+    whitened = np.empty((n, p + 1))
+    logdet = 0.0
+    for block, factor in zip(covariance.blocks, covariance.factors(theta)):
+        whitened[block] = linalg.solve_triangular(
+            factor, np.column_stack([X[block], y[block]]), lower=True, check_finite=False
+        )
+        logdet += 2 * np.log(np.diag(factor)).sum()
+    _, joint_upper = linalg.qr(whitened, mode="economic", check_finite=False)
+    upper = joint_upper[:p, :p]
+    beta = linalg.solve_triangular(upper, joint_upper[:p, p], check_finite=False)
+    inverse_upper = linalg.solve_triangular(upper, np.eye(p), check_finite=False)
+    inverse = inverse_upper @ inverse_upper.T
+    quadratic = float(joint_upper[p, p] ** 2)
     df = n - p if reml else n
     if quadratic <= 0:
         raise ValueError("GLS residual variance must be positive")
     sigma2 = quadratic / df
-    logdet_information = 2 * np.log(np.diag(chol[0])).sum()
+    logdet_information = 2 * np.log(np.abs(np.diag(upper))).sum()
     nll = 0.5 * (df * (np.log(2 * np.pi * sigma2) + 1) + logdet)
     if reml:
         nll += 0.5 * logdet_information
@@ -501,9 +523,9 @@ class GLSResult:
                 residual = residual / (self.sigma * sd)
             else:
                 residual = residual.copy()
-                matrices = self._covariance.matrices(self._theta)
-                for block, matrix in zip(self._covariance.blocks, matrices):
-                    factor = linalg.cholesky(matrix, lower=True)
+                for block, factor in zip(
+                    self._covariance.blocks, self._covariance.factors(self._theta)
+                ):
                     residual[block] = linalg.solve_triangular(factor, residual[block], lower=True)
                 residual /= self.sigma
         elif type != "response":
@@ -763,8 +785,7 @@ class GLSResult:
         if type not in {"sequential", "marginal"}:
             raise ValueError("type must be sequential or marginal")
         Xw, yw = self.X.copy(), self.y.copy()
-        for block, matrix in zip(self._covariance.blocks, self._covariance.matrices(self._theta)):
-            factor = linalg.cholesky(matrix, lower=True)
+        for block, factor in zip(self._covariance.blocks, self._covariance.factors(self._theta)):
             Xw[block] = linalg.solve_triangular(factor, self.X[block], lower=True)
             yw[block] = linalg.solve_triangular(factor, self.y[block], lower=True)
         q, _ = linalg.qr(Xw, mode="economic")

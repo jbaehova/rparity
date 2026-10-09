@@ -1,11 +1,11 @@
 {
-  "command": "uv run pytest --junitxml=oracle/cache/junit.xml",
-  "source_sha256": "ec5e96906b525ec09b60765c391814f47751d77839e2fdbef3d1b7da089486d8",
+  "command": "uv run pytest --junitxml=oracle/cache/refinement-junit.xml",
+  "source_sha256": "e037083415d69ff8ecb5e31a5c83a3dfa58702c89a1126f3127a169a3889f4de",
   "test_counts": {
-    "passed": 3920,
+    "passed": 3932,
     "failed": 0,
     "skipped": 0,
-    "expected_failures": 60
+    "expected_failures": 57
   },
   "cases": {
     "anova_0000": {
@@ -7820,10 +7820,8 @@
       "better_optimum": false
     },
     "glmer_0107": {
-      "status": "failed",
+      "status": "passed",
       "module": "glmer",
-      "expected_failure": true,
-      "reason": "Laplace objectives meet the 1e-6 criterion, but R/Python fixed covariance precision exceeds the specified strict relative threshold.",
       "better_optimum": false
     },
     "glmer_0108": {
@@ -9104,10 +9102,8 @@
       "better_optimum": false
     },
     "glmer_0361": {
-      "status": "failed",
+      "status": "passed",
       "module": "glmer",
-      "expected_failure": true,
-      "reason": "Laplace objectives meet the 1e-6 criterion, but R/Python prediction precision exceeds the specified strict relative threshold.",
       "better_optimum": false
     },
     "glmer_0362": {
@@ -11208,7 +11204,8 @@
       "status": "failed",
       "module": "gls",
       "expected_failure": true,
-      "reason": "Strict R/Python boundary corSymm optimizer/coefficients mismatch; original inputs and numerical thresholds are retained."
+      "reason": "Strict R/Python boundary corSymm optimizer/coefficients mismatch; original inputs and numerical thresholds are retained.",
+      "better_optimum": true
     },
     "gls_0174": {
       "status": "passed",
@@ -19328,10 +19325,8 @@
       "better_optimum": false
     },
     "lmer_0585": {
-      "status": "failed",
+      "status": "passed",
       "module": "lmer",
-      "expected_failure": true,
-      "reason": "R optimizer roundoff exceeds the strict relative prediction criterion near zero; all objective checks pass.",
       "better_optimum": false
     },
     "lmer_0586": {

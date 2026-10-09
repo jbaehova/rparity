@@ -24,7 +24,14 @@ from rparity.formula import (
     parse_formula,
 )
 
-from ._glmer_math import conditional_mode, conditional_terms, inverse_link, numerical_hessian
+from ._glmer_math import (
+    conditional_mode,
+    conditional_terms,
+    information_derivative,
+    inverse_link,
+    observed_information,
+    score_hessian,
+)
 
 Array = NDArray[np.float64]
 
@@ -470,6 +477,12 @@ def glmer(
             covariances.append(factor @ factor.T)
         return linalg.block_diag(*chunks), covariances
 
+    # The covariance factor is linear in its free Cholesky entries. Its
+    # derivatives are therefore constant even at a variance boundary.
+    factor_derivatives = [
+        Z @ covariance_factor(direction)[0] for direction in np.eye(theta_count)
+    ]
+
     rounded_trial = np.round(trial)
     rounded_y = np.divide(
         np.round(trial * y), rounded_trial, out=np.zeros_like(y), where=rounded_trial > 0
@@ -508,14 +521,42 @@ def glmer(
         return evaluate(parameters)[0]
 
     def objective_gradient(parameters: Array) -> Array:
-        steps = 1e-4 * np.maximum(1, np.abs(parameters))
-        gradient = np.empty(len(parameters))
-        for i, step in enumerate(steps):
-            perturbation = np.zeros(len(parameters))
-            perturbation[i] = step
-            gradient[i] = (
-                objective(parameters + perturbation) - objective(parameters - perturbation)
-            ) / (2 * step)
+        """Differentiate the likelihood and determinant through its inner mode.
+
+        Implicit differentiation of A.T @ score + u = 0 accounts for the
+        movement of the conditional mode. This avoids finite-difference
+        cancellation and truncation in the outer score equations.
+        """
+        value, u, eta, hessian = evaluate(parameters)
+        if not np.isfinite(value):
+            return np.full(len(parameters), np.nan)
+        factor, _ = covariance_factor(parameters[:theta_count])
+        A = Z @ factor
+        _, score, information = conditional_terms(
+            eta, y, trial, prior, family_name, selected_link
+        )
+        curvature = observed_information(eta, y, trial, prior, family_name, selected_link)
+        mode_hessian = (A.T * curvature) @ A + np.eye(A.shape[1])
+        base_derivatives = np.column_stack([dA @ u for dA in factor_derivatives] + [X])
+        rhs = A.T @ (curvature[:, None] * base_derivatives)
+        for i, dA in enumerate(factor_derivatives):
+            rhs[:, i] += dA.T @ score
+        du = -linalg.solve(mode_hessian, rhs, assume_a="pos")
+        eta_derivatives = base_derivatives + A @ du
+        inverse_A = linalg.solve(hessian, A.T, assume_a="pos")
+        leverage = np.einsum("ij,ji->i", A, inverse_A)
+        information_slope = information_derivative(
+            eta, trial, prior, family_name, selected_link
+        )
+        gradient = base_derivatives.T @ score
+        gradient += eta_derivatives.T @ (leverage * information_slope) / 2
+        for i, dA in enumerate(factor_derivatives):
+            gradient[i] += np.sum(inverse_A.T * (information[:, None] * dA))
+        if rounded_density:
+            density_score = conditional_terms(
+                eta, rounded_y, rounded_trial, density_weights, family_name, selected_link
+            )[1]
+            gradient += eta_derivatives.T @ (density_score - score)
         return gradient
 
     def glm_objective(beta: Array) -> tuple[float, Array]:
@@ -594,9 +635,11 @@ def glmer(
             if bound[0] == 0 and parameters[i] < 1e-6:
                 free_polish[i] = False
         score = objective_gradient(parameters)[free_polish]
-        if np.max(np.abs(score), initial=0) < 1e-8:
+        if np.max(np.abs(score), initial=0) < 1e-10:
             break
-        curvature = numerical_hessian(objective, parameters)[np.ix_(free_polish, free_polish)]
+        curvature = score_hessian(objective_gradient, parameters)[
+            np.ix_(free_polish, free_polish)
+        ]
         if np.min(np.linalg.eigvalsh(curvature)) <= 1e-7:
             break
         step = np.zeros(len(parameters))
@@ -617,7 +660,7 @@ def glmer(
             break
     value, u, eta, inner_hessian = evaluate(parameters)
     factor, covariances = covariance_factor(parameters[:theta_count])
-    hessian = numerical_hessian(objective, parameters)
+    hessian = score_hessian(objective_gradient, parameters)
     # At an active variance boundary nuisance parameters are constrained.
     free = np.ones(len(parameters), dtype=bool)
     for i, bound in enumerate(bounds[:theta_count]):

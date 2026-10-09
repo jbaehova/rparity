@@ -4,6 +4,10 @@ Stage 1 implements the mixed-model analysis stack in Python without an R runtime
 The final committed corpus contains 3,856 synthetic cases: 3,796 pass
 and 60 retain documented differences (98.44% passing).
 
+This is the v0.1.0 release baseline. Later checkout improvements are recorded in
+[the refinement report](PARITY_REFINEMENT.md); current coverage is regenerated from
+the latest validation. The published release tag and artifacts are unchanged.
+
 ## Implemented functions and options
 
 - `lmer`: ML/REML, all six required random-effect forms, weights, offsets, conditional modes and covariance, model summaries, fixed/population predictions and new groups.
@@ -26,7 +30,8 @@ and 60 retain documented differences (98.44% passing).
 
 The completion threshold is 98% across the entire Stage 1 corpus.
 Each module has at least 300 cases. Per-option coverage is generated in
-[coverage](../docs/coverage.md); raw outcomes are in [validation.json](validation.json).
+[coverage](../docs/coverage.md); release outcomes are in
+[the tagged validation](https://github.com/jbaehova/rparity/blob/v0.1.0/reports/validation.json).
 
 Fourteen development-only representative R examples pass, including sleepstudy,
 cbpp, Duncan, warpbreaks and Orthodont. Built-in datasets remain outside the repository.

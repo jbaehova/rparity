@@ -98,3 +98,12 @@ Control contrasts require an explicit supported `adjust` value. The unlisted R `
 
 - Run tests locally by default, now and in future work. At the user's request, cancel the remaining hosted test jobs and remove push/PR test triggers. Retain the six-environment workflow only for explicitly requested manual execution.
 - Keep the TASK-required automatic GitHub Pages deployment, limited to changes affecting documentation. Release acceptance uses the complete local validation rather than an incomplete remote matrix.
+
+## Post-release precision refinement
+
+- Preserve the v0.1.0 release tag and assets. Record later fixes as unreleased checkout changes with separate current validation and a refinement report.
+- Accept LMER interior score refinement only after feasibility, local movement, improved stationarity and objective roundoff safeguards. This resolves lmer_0585 while avoiding deliberate imitation of R stopping noise.
+- Use implicit conditional-mode differentiation for the GLMER Laplace score and Richardson score-Hessian differentiation for covariance. Independent numerical derivative checks validate all required links and weighted trials. Remove the resolved glmer_0107 and glmer_0361 markers.
+- Evaluate GLS through exact correlation factors and augmented QR. Remove the corSymm diagonal floor; closed-form boundary tests verify the same likelihood without artificial regularization. Boundary coefficient differences remain failed cases.
+- Uniform tighter R GLMER inner tolerance is not substituted into goldens: 1e-15 caused two fit errors in the 20 reviewed cases, and 1e-16 caused twenty. Preserve the original controls and observations.
+- Do not add R-specific optimizer warnings to a converged Python fit or bias a stationary Python estimate toward a recorded R endpoint. Keep those strict differences visible.

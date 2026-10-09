@@ -106,8 +106,8 @@ the latest recorded pytest run; unexecuted or skipped cases are not passes.
 | glmer | glmer / binomial-logit fractional binary | implemented and validated | 1 | 100.00% | 0 failures; 0 unverified |
 | glmer | glmer / binomial-logit fractional cbind | implemented and validated | 1 | 100.00% | 0 failures; 0 unverified |
 | glmer | glmer / binomial-logit fractional proportion | implemented and validated | 1 | 100.00% | 0 failures; 0 unverified |
-| glmer | glmer / binomial-probit | implemented and validated | 150 | 96.00% | 6 failures; 0 unverified |
-| glmer | glmer / poisson-log | implemented and validated | 150 | 98.00% | 3 failures; 0 unverified |
+| glmer | glmer / binomial-probit | implemented and validated | 150 | 96.67% | 5 failures; 0 unverified |
+| glmer | glmer / poisson-log | implemented and validated | 150 | 98.67% | 2 failures; 0 unverified |
 | gls | gls / corAR1 + varIdent / ML | implemented and validated | 30 | 100.00% | 0 failures; 0 unverified |
 | gls | gls / corAR1 + varIdent / REML | implemented and validated | 30 | 100.00% | 0 failures; 0 unverified |
 | gls | gls / corAR1 / ML | implemented and validated | 30 | 100.00% | 0 failures; 0 unverified |
@@ -148,7 +148,7 @@ the latest recorded pytest run; unexecuted or skipped cases are not passes.
 | lmer | lmer / ML / (1\|g)+(1\|h) / missingness | implemented and validated | 1 | 100.00% | 0 failures; 0 unverified |
 | lmer | lmer / ML / (1\|g)+(1\|h) / missingness / offset | implemented and validated | 2 | 100.00% | 0 failures; 0 unverified |
 | lmer | lmer / ML / (1\|g)+(1\|h) / missingness / weights | implemented and validated | 1 | 100.00% | 0 failures; 0 unverified |
-| lmer | lmer / ML / (1\|g)+(1\|h) / offset | implemented and validated | 21 | 95.24% | 1 failures; 0 unverified |
+| lmer | lmer / ML / (1\|g)+(1\|h) / offset | implemented and validated | 21 | 100.00% | 0 failures; 0 unverified |
 | lmer | lmer / ML / (1\|g)+(1\|h) / treatment | implemented and validated | 10 | 100.00% | 0 failures; 0 unverified |
 | lmer | lmer / ML / (1\|g)+(1\|h) / treatment / missingness | implemented and validated | 2 | 50.00% | 1 failures; 0 unverified |
 | lmer | lmer / ML / (1\|g)+(1\|h) / treatment / offset | implemented and validated | 5 | 100.00% | 0 failures; 0 unverified |
@@ -194,12 +194,12 @@ the latest recorded pytest run; unexecuted or skipped cases are not passes.
 | --- | ---: | ---: | ---: |
 | anova | 700 | 697 | 3 |
 | emm | 753 | 752 | 1 |
-| glmer | 603 | 583 | 20 |
+| glmer | 603 | 585 | 18 |
 | gls | 600 | 587 | 13 |
 | inference | 600 | 594 | 6 |
-| lmer | 600 | 583 | 17 |
+| lmer | 600 | 584 | 16 |
 
-Total: 3856 synthetic cases, 3796 recorded passes.
+Total: 3856 synthetic cases, 3799 recorded passes.
 
 Each module requires at least 300 cases; Stage 1 requires at least 3,000 and 98% passing.
 

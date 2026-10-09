@@ -1,5 +1,13 @@
 # Changelog
 
+## Unreleased
+
+- Refine LMER interior covariance estimates with safeguarded stationary-score roots.
+- Use implicit conditional-mode derivatives for the GLMER Laplace score and Richardson score-Hessian covariance, avoiding likelihood subtraction noise.
+- Preserve GLS covariance factors at corSymm boundaries and evaluate whitened likelihoods by augmented QR.
+- Resolve lmer_0585, glmer_0107 and glmer_0361 without modifying golden outputs or numerical tolerances.
+- Add independent derivative and closed-form boundary regression checks. Keep all remaining discrepancies in failure accounting.
+
 ## 0.1.0 (2026-10-09)
 
 - Add clean-room Gaussian and Laplace generalized mixed models.

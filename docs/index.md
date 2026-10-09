@@ -2,8 +2,12 @@
 
 Stage 1 provides R-style mixed models, small-sample inference, marginal means
 and generalized least squares in Python. The committed synthetic corpus passes
-3,796 of 3,856 cases (98.44%). Sixty documented differences remain
+3,799 of 3,856 cases (98.52%). Fifty-seven documented differences remain
 counted as failures in the [validation coverage](coverage.md).
+
+These counts include unreleased precision refinements in the checkout. The published
+v0.1.0 wheel retains its release baseline of 3,796 passes and 60 differences.
+See the [refinement report](https://github.com/jbaehova/rparity/blob/main/reports/PARITY_REFINEMENT.md).
 
 Install the wheel from the [GitHub release](https://github.com/jbaehova/rparity/releases/tag/v0.1.0).
 The [README](https://github.com/jbaehova/rparity#quick-start) contains a complete

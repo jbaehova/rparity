@@ -53,12 +53,6 @@
     "category": "near_zero_prediction",
     "reason": "R optimizer roundoff exceeds the strict relative prediction criterion near zero; all objective checks pass."
   },
-  "lmer_0585": {
-    "category": "near_zero_prediction",
-    "reason": "R optimizer roundoff exceeds the strict relative prediction criterion near zero; all objective checks pass.",
-    "strict": false,
-    "platform_dependent": true
-  },
   "lmer_0160": {
     "category": "optimizer_warning",
     "reason": "R bobyqa reports trust-region convergence code 3; Python converges with matching objective and applicable singular warning."
@@ -207,12 +201,6 @@
     "category": "coefficient_precision",
     "reason": "Laplace objectives meet the 1e-6 criterion, but R/Python coefficient precision exceeds the specified strict relative threshold."
   },
-  "glmer_0107": {
-    "category": "fixed_covariance_precision",
-    "reason": "Laplace objectives meet the 1e-6 criterion, but R/Python fixed covariance precision exceeds the specified strict relative threshold.",
-    "strict": false,
-    "platform_dependent": true
-  },
   "glmer_0152": {
     "category": "fixed_covariance_precision",
     "reason": "Laplace objectives meet the 1e-6 criterion, but R/Python fixed covariance precision exceeds the specified strict relative threshold."
@@ -236,10 +224,6 @@
   "glmer_0528": {
     "category": "fixed_covariance_precision",
     "reason": "Laplace objectives meet the 1e-6 criterion, but R/Python fixed covariance precision exceeds the specified strict relative threshold."
-  },
-  "glmer_0361": {
-    "category": "prediction_precision",
-    "reason": "Laplace objectives meet the 1e-6 criterion, but R/Python prediction precision exceeds the specified strict relative threshold."
   },
   "glmer_0312": {
     "category": "better_optimum_warning_divergence",

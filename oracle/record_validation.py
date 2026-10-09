@@ -59,7 +59,7 @@ def main() -> None:
                 if prop.get('name') == 'better_optimum':
                     entry['better_optimum'] = prop.get('value', '').lower() == 'true'
             outcomes[case_id] = entry
-    report = {'command': 'uv run pytest --junitxml=oracle/cache/junit.xml',
+    report = {'command': f'uv run pytest --junitxml={args.junit.as_posix()}',
               'source_sha256': source_digest(Path.cwd()),
               'test_counts': all_counts, 'cases': outcomes, 'r_examples': examples}
     if args.stage1_complete:

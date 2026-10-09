@@ -84,6 +84,10 @@ extract_model <- function(m, s) {
     if (s$call == 'glmer') {
       ans$response <- unname(lme4::getME(m, 'y'))
       ans$prior_weights <- unname(stats::weights(m, type = 'prior'))
+      if (isTRUE(s$optimizer_diagnostics)) {
+        ans$optimizer_diagnostics <- list(optimizer = m@optinfo$optimizer, derivatives = m@optinfo$derivs, convergence = m@optinfo$conv)
+        ans$vcov_factor <- plain_matrix(stats::vcov(m, use.hessian = FALSE))
+      }
     }
     ans$VarCorr <- table_result(as.data.frame(lme4::VarCorr(m)))
     ans$singular <- lme4::isSingular(m)

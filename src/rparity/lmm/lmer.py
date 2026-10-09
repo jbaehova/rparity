@@ -183,6 +183,33 @@ class LmerResult:
                 )
                 if interior.fun < result.fun:
                     result = interior
+        # A flat likelihood can satisfy the objective stopping rule before the
+        # covariance score is stationary. Refine the interior score rather than
+        # comparing objective decrements that are below floating-point accuracy.
+        free = [i for i, (lower, _) in enumerate(bounds)
+                if lower is None or result.x[i] > 1e-6]
+        if free and np.max(np.abs(np.asarray(result.jac)[free])) > 1e-10:
+            base = np.asarray(result.x, dtype=float).copy()
+
+            def stationary_score(values: FloatArray) -> FloatArray:
+                point = base.copy()
+                point[free] = values
+                return self._objective_and_gradient(point)[1][free]
+
+            stationary = optimize.root(stationary_score, base[free],
+                                       options={"xtol": 1e-10})
+            point = base.copy()
+            point[free] = stationary.x
+            feasible = all(lower is None or point[i] >= lower
+                           for i, (lower, _) in enumerate(bounds))
+            local = np.max(np.abs(point - base)) <= 1e-3 * max(1.0, np.max(np.abs(base)))
+            if stationary.success and feasible and local:
+                value, gradient = self._objective_and_gradient(point)
+                roundoff = 64 * np.finfo(float).eps * (1 + abs(result.fun))
+                if (value <= result.fun + roundoff
+                        and np.max(np.abs(gradient[free]))
+                        < np.max(np.abs(np.asarray(result.jac)[free]))):
+                    result.x, result.fun, result.jac = point, value, gradient
         self.optimizer_result = result
         self.theta = np.asarray(result.x, dtype=float)
         self._criterion, self.beta, self._cov_relative, self._quadratic, self._Vinv = (

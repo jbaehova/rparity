@@ -6,6 +6,11 @@ R-grade mixed models, marginal means, GAMs and meta-analysis in pure Python, ver
 
 Stage 1 is complete in v0.1.0. The synthetic corpus passes 3,796/3,856 cases (98.44%); 60 documented differences remain counted as failures. See the [Stage 1 report](reports/STAGE_1_REPORT.md), [validation coverage](docs/coverage.md), and [documentation site](https://jbaehova.github.io/rparity/).
 
+The checkout includes unreleased precision improvements: three failures are resolved
+without changing the oracle or tolerances, bringing validation to 3,799/3,856
+(98.52%) with 57 differences retained. See the [refinement report](reports/PARITY_REFINEMENT.md).
+The published v0.1.0 wheel retains its original release baseline.
+
 ## Installation
 
 Python 3.11 or later is required. Download the wheel from the [GitHub release](https://github.com/jbaehova/rparity/releases/tag/v0.1.0), or build from this checkout with `uv build`,
