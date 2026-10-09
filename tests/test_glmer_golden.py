@@ -94,9 +94,12 @@ def _assert_summary_structure(actual: str, expected: str) -> None:
         "Scaled residuals:",
         "Random effects:",
         "Fixed effects:",
-        "Signif. codes:",
         "Correlation of Fixed Effects:",
     ]
+    significance_legend = 'Signif. codes:'
+    assert (significance_legend in actual) == (significance_legend in expected)
+    if significance_legend in expected:
+        labels.insert(3, significance_legend)
     for text in [actual, expected]:
         positions = [text.index(label) for label in labels]
         assert positions == sorted(positions)

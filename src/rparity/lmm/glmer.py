@@ -339,7 +339,8 @@ class GlmerResult:
                 f"{name:12s} {estimate:9.5f} {stderr:10.5f} {statistic:7.3f} "
                 f"{probability:9.5g} {star}"
             )
-        lines += ["---", "Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1"]
+        if np.any(p < 0.1):
+            lines += ["---", "Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1"]
         if len(self.beta) > 1:
             correlation = self.cov_beta / np.outer(se, se)
             labels = ["(Intr)" if name == "(Intercept)" else name[:6] for name in self.coef_names]
