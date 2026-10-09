@@ -1,0 +1,491 @@
+{
+  "tmb_0001": {
+    "kind": "tmb_boundary_identification",
+    "exception_fields": [
+      "g_random_modes"
+    ],
+    "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+    "zero_random_effect": {
+      "g": {
+        "covariance_bound": 1e-09,
+        "mode_bound": 1e-08
+      }
+    }
+  },
+  "tmb_0003": {
+    "kind": "tmb_boundary_identification",
+    "exception_fields": [
+      "g_random_modes"
+    ],
+    "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+    "zero_random_effect": {
+      "g": {
+        "covariance_bound": 1e-09,
+        "mode_bound": 1e-08
+      }
+    }
+  },
+  "tmb_0008": {
+    "kind": "tmb_boundary_identification",
+    "exception_fields": [
+      "g_random_covariance",
+      "g_random_modes"
+    ],
+    "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+    "zero_random_effect": {
+      "g": {
+        "covariance_bound": 1e-09,
+        "mode_bound": 1e-08
+      }
+    }
+  },
+  "tmb_0011": {
+    "kind": "tmb_boundary_identification",
+    "exception_fields": [
+      "zi_beta",
+      "zi_vcov",
+      "zi_wald_p"
+    ],
+    "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+    "absent_zi": true,
+    "mixture_likelihood_bound": 1e-06,
+    "zi_curvature_bound": 1e-06
+  },
+  "tmb_0029": {
+    "kind": "tmb_boundary_identification",
+    "exception_fields": [
+      "zi_beta",
+      "zi_vcov",
+      "zi_wald_p"
+    ],
+    "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+    "absent_zi": true,
+    "mixture_likelihood_bound": 1e-06,
+    "zi_curvature_bound": 1e-06
+  },
+  "tmb_0047": {
+    "kind": "tmb_boundary_identification",
+    "exception_fields": [
+      "zi_beta",
+      "zi_vcov",
+      "zi_wald_p"
+    ],
+    "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+    "absent_zi": true,
+    "mixture_likelihood_bound": 1e-06,
+    "zi_curvature_bound": 1e-06
+  },
+  "tmb_0063": {
+    "kind": "tmb_boundary_identification",
+    "exception_fields": [
+      "zi_beta",
+      "zi_vcov",
+      "zi_wald_p"
+    ],
+    "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+    "absent_zi": true,
+    "mixture_likelihood_bound": 1e-06,
+    "zi_curvature_bound": 1e-06
+  },
+  "tmb_0107": {
+    "kind": "tmb_boundary_identification",
+    "exception_fields": [
+      "zi_beta",
+      "zi_vcov",
+      "zi_wald_p"
+    ],
+    "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+    "absent_zi": true,
+    "mixture_likelihood_bound": 1e-06,
+    "zi_curvature_bound": 1e-06
+  },
+  "tmb_0119": {
+    "kind": "tmb_boundary_identification",
+    "exception_fields": [
+      "zi_beta",
+      "zi_vcov",
+      "zi_wald_p"
+    ],
+    "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+    "absent_zi": true,
+    "mixture_likelihood_bound": 1e-06,
+    "zi_curvature_bound": 1e-06
+  },
+  "tmb_0137": {
+    "kind": "tmb_boundary_identification",
+    "exception_fields": [
+      "zi_beta",
+      "zi_vcov",
+      "zi_wald_p"
+    ],
+    "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+    "absent_zi": true,
+    "mixture_likelihood_bound": 1e-06,
+    "zi_curvature_bound": 1e-06
+  },
+  "tmb_0138": {
+    "kind": "tmb_boundary_identification",
+    "exception_fields": [
+      "g_random_covariance",
+      "g_random_modes"
+    ],
+    "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+    "zero_random_effect": {
+      "g": {
+        "covariance_bound": 1e-09,
+        "mode_bound": 1e-08
+      }
+    }
+  },
+  "tmb_0191": {
+    "kind": "tmb_boundary_identification",
+    "exception_fields": [
+      "zi_beta",
+      "zi_vcov",
+      "zi_wald_p"
+    ],
+    "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+    "absent_zi": true,
+    "mixture_likelihood_bound": 1e-06,
+    "zi_curvature_bound": 1e-06
+  },
+  "tmb_0258": {
+    "kind": "tmb_boundary_identification",
+    "exception_fields": [
+      "zi_beta",
+      "zi_vcov",
+      "zi_wald_p"
+    ],
+    "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+    "absent_zi": true,
+    "mixture_likelihood_bound": 1e-06,
+    "zi_curvature_bound": 1e-06
+  },
+  "tmb_0425": {
+    "kind": "tmb_boundary_identification",
+    "exception_fields": [
+      "zi_beta",
+      "zi_vcov",
+      "zi_wald_p"
+    ],
+    "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+    "absent_zi": true,
+    "mixture_likelihood_bound": 1e-06,
+    "zi_curvature_bound": 1e-06
+  },
+  "tmb_0431": {
+    "kind": "tmb_boundary_identification",
+    "exception_fields": [
+      "zi_beta",
+      "zi_vcov",
+      "zi_wald_p"
+    ],
+    "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+    "absent_zi": true,
+    "mixture_likelihood_bound": 1e-06,
+    "zi_curvature_bound": 1e-06
+  },
+  "tmb_0443": {
+    "kind": "tmb_boundary_identification",
+    "exception_fields": [
+      "zi_beta",
+      "zi_vcov",
+      "zi_wald_p"
+    ],
+    "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+    "absent_zi": true,
+    "mixture_likelihood_bound": 1e-06,
+    "zi_curvature_bound": 1e-06
+  },
+  "tmb_0461": {
+    "kind": "tmb_boundary_identification",
+    "exception_fields": [
+      "zi_beta",
+      "zi_vcov",
+      "zi_wald_p"
+    ],
+    "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+    "absent_zi": true,
+    "mixture_likelihood_bound": 1e-06,
+    "zi_curvature_bound": 1e-06
+  },
+  "tmb_0551": {
+    "kind": "tmb_boundary_identification",
+    "exception_fields": [
+      "zi_beta",
+      "zi_vcov",
+      "zi_wald_p"
+    ],
+    "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+    "absent_zi": true,
+    "mixture_likelihood_bound": 1e-06,
+    "zi_curvature_bound": 1e-06
+  },
+  "tmb_0587": {
+    "kind": "tmb_boundary_identification",
+    "exception_fields": [
+      "zi_beta",
+      "zi_vcov",
+      "zi_wald_p"
+    ],
+    "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+    "absent_zi": true,
+    "mixture_likelihood_bound": 1e-06,
+    "zi_curvature_bound": 1e-06
+  },
+  "tmb_0623": {
+    "kind": "tmb_boundary_identification",
+    "exception_fields": [
+      "zi_beta",
+      "zi_vcov",
+      "zi_wald_p"
+    ],
+    "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+    "absent_zi": true,
+    "mixture_likelihood_bound": 1e-06,
+    "zi_curvature_bound": 1e-06
+  },
+  "tmb_0659": {
+    "kind": "tmb_boundary_identification",
+    "exception_fields": [
+      "zi_beta",
+      "zi_vcov",
+      "zi_wald_p"
+    ],
+    "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+    "absent_zi": true,
+    "mixture_likelihood_bound": 1e-06,
+    "zi_curvature_bound": 1e-06
+  },
+  "tmb_0690": {
+    "kind": "tmb_boundary_identification",
+    "exception_fields": [
+      "g_random_covariance",
+      "g_random_modes"
+    ],
+    "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+    "zero_random_effect": {
+      "g": {
+        "covariance_bound": 1e-09,
+        "mode_bound": 1e-08
+      }
+    }
+  },
+  "tmb_0695": {
+    "kind": "tmb_boundary_identification",
+    "exception_fields": [
+      "zi_beta",
+      "zi_vcov",
+      "zi_wald_p"
+    ],
+    "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+    "absent_zi": true,
+    "mixture_likelihood_bound": 1e-06,
+    "zi_curvature_bound": 1e-06
+  },
+  "tmb_0713": {
+    "kind": "tmb_boundary_identification",
+    "exception_fields": [
+      "zi_beta",
+      "zi_vcov",
+      "zi_wald_p"
+    ],
+    "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+    "absent_zi": true,
+    "mixture_likelihood_bound": 1e-06,
+    "zi_curvature_bound": 1e-06
+  },
+  "tmb_0783": {
+    "kind": "tmb_boundary_identification",
+    "exception_fields": [
+      "g_random_modes"
+    ],
+    "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+    "zero_random_effect": {
+      "g": {
+        "covariance_bound": 1e-09,
+        "mode_bound": 1e-08
+      }
+    }
+  },
+  "tmb_0809": {
+    "kind": "tmb_boundary_identification",
+    "exception_fields": [
+      "zi_beta",
+      "zi_vcov",
+      "zi_wald_p"
+    ],
+    "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+    "absent_zi": true,
+    "mixture_likelihood_bound": 1e-06,
+    "zi_curvature_bound": 1e-06
+  },
+  "tmb_0871": {
+    "kind": "tmb_boundary_identification",
+    "exception_fields": [
+      "zi_beta",
+      "zi_vcov",
+      "zi_wald_p"
+    ],
+    "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+    "absent_zi": true,
+    "mixture_likelihood_bound": 1e-06,
+    "zi_curvature_bound": 1e-06
+  },
+  "tmb_0875": {
+    "kind": "tmb_boundary_identification",
+    "exception_fields": [
+      "zi_beta",
+      "zi_vcov",
+      "zi_wald_p"
+    ],
+    "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+    "absent_zi": true,
+    "mixture_likelihood_bound": 1e-06,
+    "zi_curvature_bound": 1e-06
+  },
+  "tmb_0893": {
+    "kind": "tmb_boundary_identification",
+    "exception_fields": [
+      "zi_beta",
+      "zi_vcov",
+      "zi_wald_p"
+    ],
+    "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+    "absent_zi": true,
+    "mixture_likelihood_bound": 1e-06,
+    "zi_curvature_bound": 1e-06
+  },
+  "tmb_0942": {
+    "kind": "tmb_boundary_identification",
+    "exception_fields": [
+      "zi_beta",
+      "zi_vcov",
+      "zi_wald_p"
+    ],
+    "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+    "absent_zi": true,
+    "mixture_likelihood_bound": 1e-06,
+    "zi_curvature_bound": 1e-06
+  },
+  "tmb_0997": {
+    "kind": "tmb_boundary_identification",
+    "exception_fields": [
+      "zi_beta",
+      "zi_vcov",
+      "zi_wald_p"
+    ],
+    "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+    "absent_zi": true,
+    "mixture_likelihood_bound": 1e-06,
+    "zi_curvature_bound": 1e-06
+  },
+  "tmb_0999": {
+    "kind": "tmb_boundary_identification",
+    "exception_fields": [
+      "zi_beta",
+      "zi_vcov",
+      "zi_wald_p"
+    ],
+    "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+    "absent_zi": true,
+    "mixture_likelihood_bound": 1e-06,
+    "zi_curvature_bound": 1e-06
+  },
+  "tmb_1081": {
+    "kind": "tmb_boundary_identification",
+    "exception_fields": [
+      "g_random_modes"
+    ],
+    "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+    "zero_random_effect": {
+      "g": {
+        "covariance_bound": 1e-09,
+        "mode_bound": 1e-08
+      }
+    }
+  },
+  "tmb_1088": {
+    "kind": "tmb_boundary_identification",
+    "exception_fields": [
+      "g_random_modes"
+    ],
+    "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+    "zero_random_effect": {
+      "g": {
+        "covariance_bound": 1e-09,
+        "mode_bound": 1e-08
+      }
+    }
+  },
+  "tmb_1104": {
+    "kind": "tmb_boundary_identification",
+    "exception_fields": [
+      "g_random_modes"
+    ],
+    "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+    "zero_random_effect": {
+      "g": {
+        "covariance_bound": 1e-09,
+        "mode_bound": 1e-08
+      }
+    }
+  },
+  "tmb_1123": {
+    "kind": "tmb_boundary_identification",
+    "exception_fields": [
+      "zi_beta",
+      "zi_vcov",
+      "zi_wald_p"
+    ],
+    "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+    "absent_zi": true,
+    "mixture_likelihood_bound": 1e-06,
+    "zi_curvature_bound": 1e-06,
+    "zero_random_effect": {
+      "g": {
+        "covariance_bound": 1e-09,
+        "mode_bound": 1e-08
+      }
+    }
+  },
+  "tmb_1125": {
+    "kind": "tmb_boundary_identification",
+    "exception_fields": [
+      "g_random_modes"
+    ],
+    "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+    "zero_random_effect": {
+      "g": {
+        "covariance_bound": 1e-09,
+        "mode_bound": 1e-08
+      }
+    }
+  },
+  "tmb_1129": {
+    "kind": "tmb_boundary_identification",
+    "exception_fields": [
+      "g_random_modes"
+    ],
+    "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+    "zero_random_effect": {
+      "g": {
+        "covariance_bound": 1e-09,
+        "mode_bound": 1e-08
+      }
+    }
+  },
+  "tmb_1133": {
+    "kind": "tmb_boundary_identification",
+    "exception_fields": [
+      "zi_beta",
+      "zi_vcov",
+      "zprob_prediction",
+      "zi_wald_p"
+    ],
+    "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+    "absent_zi": true,
+    "mixture_likelihood_bound": 1e-06,
+    "zi_curvature_bound": 1e-06
+  }
+}

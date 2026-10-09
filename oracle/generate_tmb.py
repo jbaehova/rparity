@@ -21,6 +21,7 @@ FAMILIES = ("poisson", "nbinom1", "nbinom2", "binomial", "beta", "gaussian")
 ZERO_FORMULAS = ("~0", "~1", "~z + x")
 DISPERSION_FORMULAS = ("~1", "~x", "~x + f")
 RANDOM_FORMULAS = ("(1|g)", "(x|g)")
+REFERENCE_OVERRIDES = json.loads((ROOT / "oracle/stage2_overrides.json").read_text())
 
 
 def make_case(index: int) -> dict[str, Any]:
@@ -90,7 +91,8 @@ def make_case(index: int) -> dict[str, Any]:
         "id": f"tmb_{index:04d}", "call": "glmmTMB", "formula": f"{response_formula} ~ {rhs}",
         "family": family, "link": link,
         "ziformula": ZERO_FORMULAS[zi], "dispformula": DISPERSION_FORMULAS[dispersion],
-        "tmb_control": {"optCtrl": {"iter.max": 10000, "eval.max": 10000, "rel.tol": 1e-10}},
+        "tmb_control": {"optCtrl": {"iter.max": 10000, "eval.max": 10000, "rel.tol": 1e-14, "x.tol": 1e-12, "sing.tol": 1e-16, "xf.tol": 1e-16}},
+        "score_polish": True,
         "factors": ["f", "g"],
         "data": {
             "y": y.tolist(), "x": x.tolist(), "z": z.tolist(), "f": f.tolist(), "g": g.tolist(),
@@ -104,6 +106,8 @@ def make_case(index: int) -> dict[str, Any]:
             "o": rng.uniform(-0.2, 0.2, 12).tolist() if np.any(offset) else [0.0] * 12,
         },
     }
+    if spec["id"] in REFERENCE_OVERRIDES:
+        spec.update({"args": REFERENCE_OVERRIDES[spec["id"]]["args"]})
     if np.any(weights != 1):
         spec["weights"] = "weight"
     return {
@@ -148,12 +152,14 @@ def generate(count: int, start: int = 0, batch_size: int = 25, specs_only: bool 
                     case["oracle_attempts"] = previous["oracle_attempts"]
                 if previous["spec"] != case["spec"]:
                     case.setdefault("oracle_attempts", []).append({
-                        "reason": "Oracle-control revision to explicit nlminb rel.tol=1e-10; Beta endpoints are projected to open support where needed. Original input and observation retained.",
+                        "reason": "Uniform explicit high-precision nlminb controls with independent stationary-score Newton polish. Fourteen previously observed local optima use documented, independently R-confirmed public starts from oracle/stage2_overrides.json. Beta endpoints are projected to open support where needed. Original input and observation retained.",
                         "spec": previous["spec"], "oracle": previous["oracle"],
                     })
             case["oracle"] = output
             errors += "error" in output["result"]
-            (destination / f"{case['id']}.json").write_text(json.dumps(case, indent=2) + "\n")
+            pending = destination / f".{case['id']}.pending"
+            pending.write_text(json.dumps(case, indent=2) + "\n")
+            pending.replace(existing_path)
         print(f"TMB observed {min(offset + batch_size, count)}/{count}; oracle errors={errors}", flush=True)
 
 

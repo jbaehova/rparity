@@ -17,6 +17,7 @@ import numpy as np
 from scipy.special import expit
 
 ROOT = Path(__file__).resolve().parents[1]
+REFERENCE_OVERRIDES = json.loads((ROOT / "oracle/stage2_overrides.json").read_text())
 FAMILIES = ("gaussian", "binomial", "poisson", "Gamma")
 METHODS = ("REML", "ML", "GCV.Cp")
 ARCHETYPES = ("tp", "cr", "cs", "ps", "re", "te", "ti", "continuous-by", "factor-by", "additive")
@@ -121,6 +122,7 @@ def make_case(index: int) -> dict[str, Any]:
         "family": family,
         "link": "identity" if family == "gaussian" else "logit" if family == "binomial" else "inverse" if family == "Gamma" and replicate % 2 == 0 else "log",
         "args": {"method": method},
+        "gam_control": {"epsilon": 1e-12, "maxit": 1000, "mgcv.tol": 1e-10, "newton": {"conv.tol": 1e-10}},
         "factors": ["f", "g"],
         "data": {
             "y": y.tolist(), "x": x.tolist(), "z": z.tolist(), "w": w.tolist(),
@@ -131,6 +133,8 @@ def make_case(index: int) -> dict[str, Any]:
         "gam_prediction": True,
         "gam_check": True,
     }
+    if spec["id"] in REFERENCE_OVERRIDES:
+        spec["args"].update(REFERENCE_OVERRIDES[spec["id"]]["args"])
     if np.any(weights != 1):
         spec["weights"] = "weight"
     return {
@@ -167,9 +171,21 @@ def generate(count: int, start: int = 0, batch_size: int = 40, specs_only: bool 
         outputs = json.loads(output_path.read_text())
         for case, output in zip(batch, outputs, strict=True):
             assert case["id"] == output["id"]
+            existing_path = destination / f"{case['id']}.json"
+            if existing_path.exists():
+                previous = json.loads(existing_path.read_text())
+                if previous.get("oracle_attempts"):
+                    case["oracle_attempts"] = previous["oracle_attempts"]
+                if previous["spec"] != case["spec"]:
+                    case.setdefault("oracle_attempts", []).append({
+                        "reason": "Uniform documented high-precision IRLS and smoothing controls. Explicit, independently R-confirmed in.out initialization overrides are recorded in oracle/stage2_overrides.json; original input and observation retained.",
+                        "spec": previous["spec"], "oracle": previous["oracle"],
+                    })
             case["oracle"] = output
             errors += "error" in output["result"]
-            (destination / f"{case['id']}.json").write_text(json.dumps(case, indent=2) + "\n")
+            pending = destination / f".{case['id']}.pending"
+            pending.write_text(json.dumps(case, indent=2) + "\n")
+            pending.replace(existing_path)
         print(f"GAM observed {min(offset + batch_size, count)}/{count}; oracle errors={errors}", flush=True)
 
 

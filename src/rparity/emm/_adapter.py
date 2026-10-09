@@ -27,9 +27,13 @@ class ModelAdapter:
     link: str
     formula: str
     mixed: bool
+    component: str = "cond"
 
     def matrix(self, data: pd.DataFrame) -> NDArray[np.float64]:
         """Build prediction rows with the fitting-time contrast coding."""
+        if getattr(self.model, "_model_type", None) == "glmmTMB":
+            info = self.model.component_data(self.component)
+            return np.asarray(info["fixed_spec"].get_model_matrix(data), dtype=float)
         if hasattr(self.model, "fixed_spec"):
             matrix = self.model.fixed_spec.get_model_matrix(data)
             if hasattr(matrix, "rhs"):
@@ -55,6 +59,8 @@ class ModelAdapter:
 
     def offsets(self, data: pd.DataFrame) -> NDArray[np.float64]:
         """Evaluate model formula offsets at the reference-grid values."""
+        if self.component != "cond":
+            return np.zeros(len(data))
         expressions = re.findall(r"offset\(([^()]*(?:\([^()]*\)[^()]*)*)\)", self.formula)
         output = np.zeros(len(data))
         for expression in expressions:
@@ -110,8 +116,31 @@ class ModelAdapter:
         return np.ones_like(value)
 
 
-def adapt(model: Any, data: Any = None) -> ModelAdapter:
+def adapt(model: Any, data: Any = None, *, component: str = "cond") -> ModelAdapter:
     """Extract a common fixed-effect representation from a fitted model."""
+    if getattr(model, "_model_type", None) == "glmmTMB":
+        if component not in {"cond", "zi", "disp"}:
+            raise ValueError("component must be 'cond', 'zi' or 'disp'")
+        info = model.component_data(component)
+        beta = np.asarray(info["beta"], dtype=float)
+        if not len(beta):
+            raise ValueError(f"The model has no estimated {component} component")
+        component_frame = as_dataframe(model.data if data is None else data)
+        formula = str(info["formula"])
+        rhs = formula.split("~", 1)[-1]
+        variables = [str(name) for name in component_frame if re.search(
+            r"(?<![\w])" + re.escape(str(name)) + r"(?![\w])", rhs,
+        )]
+        # glmmTMB has its own denominator-df policy; its random effects do not
+        # dispatch the Gaussian lmer Satterthwaite/Kenward-Roger machinery.
+        return ModelAdapter(
+            model, component_frame, beta, np.asarray(info["covariance"], dtype=float),
+            np.asarray(info["X"], dtype=float), list(info["coef_names"]),
+            variables, float(info["df"]), str(info["link"]).lower(),
+            formula, False, component,
+        )
+    if component != "cond":
+        raise ValueError("Separate model components require a glmmTMB result")
     native = hasattr(model, "fixed_spec")
     if native:
         frame = model.data if data is None else data

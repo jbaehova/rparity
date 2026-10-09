@@ -1,0 +1,3128 @@
+{
+  "gam_0007": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 11,
+    "coefficient_count": 12,
+    "max_design_null_residual": 4.440892098500626e-16,
+    "max_penalty_null_residual": 1.3757679819842585e-14
+  },
+  "gam_0017": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 9,
+    "coefficient_count": 10,
+    "max_design_null_residual": 6.661338147750939e-16,
+    "max_penalty_null_residual": 5.1155348617903005e-15
+  },
+  "gam_0026": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "Fitting terminated with step failure - check results carefully"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence"
+      ],
+      "criterion_difference": -5.684341886080802e-14,
+      "python_outer_gradient": [
+        3.241691359789911e-09,
+        -1.856751108419985e-08,
+        -3.8355407738777103e-10,
+        -7.288959658069416e-09
+      ],
+      "python_outer_hessian_eigenvalues": [
+        0.02317555735150576,
+        0.2169477114719901,
+        0.6245051276808496,
+        1.2973793633296498
+      ]
+    }
+  },
+  "gam_0027": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 8,
+    "coefficient_count": 9,
+    "max_design_null_residual": 2.8218296981113388e-15,
+    "max_penalty_null_residual": 1.5171766880691125e-14
+  },
+  "gam_0031": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": -8.726281919280154e-10,
+      "python_outer_gradient": [
+        -8.028453457598062e-10
+      ],
+      "python_outer_hessian_eigenvalues": [
+        8.035054103553799e-10
+      ]
+    }
+  },
+  "gam_0032": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "Fitting terminated with step failure - check results carefully"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence"
+      ],
+      "criterion_difference": 2.5224267119483557e-13,
+      "python_outer_gradient": [
+        -7.105427357601002e-15
+      ],
+      "python_outer_hessian_eigenvalues": [
+        0.4519485146442885
+      ]
+    }
+  },
+  "gam_0035": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": -1.0252634297103214e-09,
+      "python_outer_gradient": [
+        -3.7763570048809925e-11,
+        -9.094947017729282e-13
+      ],
+      "python_outer_hessian_eigenvalues": [
+        3.767344768181528e-11,
+        0.0008819071053805434
+      ]
+    }
+  },
+  "gam_0036": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": -7.30704385887293e-10,
+      "python_outer_gradient": [
+        4.74458694554869e-09,
+        -6.906285321406358e-09,
+        -8.487877067864247e-12,
+        -2.4651392038776976e-12
+      ],
+      "python_outer_hessian_eigenvalues": [
+        2.2203871208055314e-12,
+        8.030672139886364e-12,
+        0.2574013914985623,
+        0.5749005103469047
+      ]
+    }
+  },
+  "gam_0037": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 10,
+    "coefficient_count": 11,
+    "max_design_null_residual": 3.3306690738754696e-16,
+    "max_penalty_null_residual": 7.551089687190023e-15
+  },
+  "gam_0047": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 10,
+    "coefficient_count": 11,
+    "max_design_null_residual": 2.6645352591003757e-15,
+    "max_penalty_null_residual": 1.3289073877084093e-14
+  },
+  "gam_0057": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 9,
+    "coefficient_count": 10,
+    "max_design_null_residual": 6.661338147750939e-16,
+    "max_penalty_null_residual": 3.5396372134852338e-15
+  },
+  "gam_0067": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 11,
+    "coefficient_count": 12,
+    "max_design_null_residual": 8.881784197001252e-16,
+    "max_penalty_null_residual": 1.2259546835205675e-14
+  },
+  "gam_0073": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": 1.454623088648077e-10,
+      "python_outer_gradient": [
+        -8.693541442283959e-10
+      ],
+      "python_outer_hessian_eigenvalues": [
+        8.675652788762515e-10
+      ]
+    }
+  },
+  "gam_0075": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": -1.9629311509561376e-09,
+      "python_outer_gradient": [
+        -3.5202329939920673e-10,
+        6.576961197879427e-13
+      ],
+      "python_outer_hessian_eigenvalues": [
+        3.45501398553855e-10,
+        0.6899827862235272
+      ]
+    }
+  },
+  "gam_0077": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 8,
+    "coefficient_count": 9,
+    "max_design_null_residual": 4.609604583836605e-16,
+    "max_penalty_null_residual": 2.650833901475569e-16
+  },
+  "gam_0087": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 11,
+    "coefficient_count": 12,
+    "max_design_null_residual": 7.771561172376096e-16,
+    "max_penalty_null_residual": 1.137235289398557e-14
+  },
+  "gam_0097": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 10,
+    "coefficient_count": 11,
+    "max_design_null_residual": 6.661338147750939e-16,
+    "max_penalty_null_residual": 9.993076882728596e-15
+  },
+  "gam_0107": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 11,
+    "coefficient_count": 12,
+    "max_design_null_residual": 1.1102230246251565e-15,
+    "max_penalty_null_residual": 2.86142313537382e-14
+  },
+  "gam_0115": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; require the actual stationary score and nonnegative smoothing curvature and retain all identified numerical assertions at the original TASK tolerances.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": -1.914873815067608e-11,
+      "python_outer_gradient": [
+        -2.785570179255255e-13,
+        -1.8800691219915908e-13
+      ],
+      "python_outer_hessian_eigenvalues": [
+        1.7028756749726077e-13,
+        2.672750314304895e-13
+      ]
+    }
+  },
+  "gam_0116": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": -1.9096779713123624e-11,
+      "python_outer_gradient": [
+        8.730866528881831e-11,
+        2.579374131818357e-10,
+        -1.3861925905449762e-13,
+        -2.9244667595521623e-13
+      ],
+      "python_outer_hessian_eigenvalues": [
+        1.0221041773208081e-13,
+        2.678219202355301e-13,
+        0.0010601547665648932,
+        0.001339362638299256
+      ]
+    }
+  },
+  "gam_0117": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 8,
+    "coefficient_count": 9,
+    "max_design_null_residual": 4.457783463956134e-16,
+    "max_penalty_null_residual": 1.2406483764288457e-15
+  },
+  "gam_0127": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 11,
+    "coefficient_count": 12,
+    "max_design_null_residual": 6.661338147750939e-16,
+    "max_penalty_null_residual": 2.220446049250313e-16
+  },
+  "gam_0137": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 9,
+    "coefficient_count": 10,
+    "max_design_null_residual": 4.440892098500626e-16,
+    "max_penalty_null_residual": 1.1102230246251565e-16
+  },
+  "gam_0145": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": -5.7632689731690334e-09,
+      "python_outer_gradient": [
+        -1.7137722352345008e-09,
+        2.148725641859528e-11
+      ],
+      "python_outer_hessian_eigenvalues": [
+        1.5232259878306963e-09,
+        0.11286405355200498
+      ]
+    }
+  },
+  "gam_0147": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 8,
+    "coefficient_count": 9,
+    "max_design_null_residual": 3.885780586188048e-16,
+    "max_penalty_null_residual": 1.1102230246251565e-16
+  },
+  "gam_0157": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 9,
+    "coefficient_count": 10,
+    "max_design_null_residual": 4.727121472036799e-16,
+    "max_penalty_null_residual": 2.220446049250313e-16
+  },
+  "gam_0159": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "Fitting terminated with step failure - check results carefully"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence"
+      ],
+      "criterion_difference": 2.842170943040401e-14,
+      "python_outer_gradient": [
+        -3.610889365290859e-12,
+        -7.918110611626616e-13
+      ],
+      "python_outer_hessian_eigenvalues": [
+        0.5201040056609131,
+        1.7562317789274624
+      ]
+    }
+  },
+  "gam_0167": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 8,
+    "coefficient_count": 9,
+    "max_design_null_residual": 5.551115123125783e-16,
+    "max_penalty_null_residual": 5.551115123125783e-17
+  },
+  "gam_0172": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "Fitting terminated with step failure - check results carefully"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence"
+      ],
+      "criterion_difference": -2.842170943040401e-14,
+      "python_outer_gradient": [
+        -4.277911358485653e-12
+      ],
+      "python_outer_hessian_eigenvalues": [
+        0.5856205559925017
+      ]
+    }
+  },
+  "gam_0175": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": -2.8583144739968702e-09,
+      "python_outer_gradient": [
+        -4.723625934843767e-10,
+        -5.312381645694586e-10
+      ],
+      "python_outer_hessian_eigenvalues": [
+        3.2077370815166555e-10,
+        5.038999545399007e-10
+      ]
+    }
+  },
+  "gam_0177": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 8,
+    "coefficient_count": 9,
+    "max_design_null_residual": 4.440892098500626e-16,
+    "max_penalty_null_residual": 1.6653345369377348e-16
+  },
+  "gam_0181": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": -2.318586211913498e-09,
+      "python_outer_gradient": [
+        -2.7189714923991914e-09
+      ],
+      "python_outer_hessian_eigenvalues": [
+        2.7200464103316335e-09
+      ]
+    }
+  },
+  "gam_0187": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 11,
+    "coefficient_count": 12,
+    "max_design_null_residual": 6.661338147750939e-16,
+    "max_penalty_null_residual": 1.6653345369377348e-16
+  },
+  "gam_0191": {
+    "optimizer_warning_difference": {
+      "reason": "The R optimizer emitted a termination warning, while Python converged and every estimable numerical field independently passed the original TASK tolerances. Keep every numerical assertion and require a stationary score and nonnegative curvature instead of fabricating an optimizer warning.",
+      "r_warnings": [
+        "Fitting terminated with step failure - check results carefully"
+      ],
+      "criterion_difference": 5.684341886080801e-13,
+      "python_outer_gradient": [
+        1.6706991345927236e-07,
+        -1.1738897853774688e-05
+      ],
+      "python_outer_hessian_eigenvalues": [
+        1.6329736734530875,
+        72.07912002121361
+      ]
+    }
+  },
+  "gam_0193": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "Fitting terminated with step failure - check results carefully"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence"
+      ],
+      "criterion_difference": 2.5579538487363607e-13,
+      "python_outer_gradient": [
+        1.0298512576056851e-07
+      ],
+      "python_outer_hessian_eigenvalues": [
+        1.5237851445074242
+      ]
+    }
+  },
+  "gam_0197": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 9,
+    "coefficient_count": 10,
+    "max_design_null_residual": 6.661338147750939e-16,
+    "max_penalty_null_residual": 2.220446049250313e-16
+  },
+  "gam_0207": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 10,
+    "coefficient_count": 11,
+    "max_design_null_residual": 4.996003610813204e-16,
+    "max_penalty_null_residual": 2.220446049250313e-16
+  },
+  "gam_0215": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": -6.818212661130474e-12,
+      "python_outer_gradient": [
+        -7.318461114902419e-11,
+        -4.03442684601528e-11
+      ],
+      "python_outer_hessian_eigenvalues": [
+        4.028462080290358e-11,
+        0.017357390296976125
+      ]
+    }
+  },
+  "gam_0216": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": -4.419842269953733e-11,
+      "python_outer_gradient": [
+        9.878790147022087e-11,
+        -2.3817049693008826e-11,
+        6.201709631947772e-11,
+        -4.4421173076708564e-10
+      ],
+      "python_outer_hessian_eigenvalues": [
+        2.381484579126541e-11,
+        0.0017099842631292897,
+        0.004051140736553414,
+        0.009287880796125915
+      ]
+    }
+  },
+  "gam_0217": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 9,
+    "coefficient_count": 10,
+    "max_design_null_residual": 6.661338147750939e-16,
+    "max_penalty_null_residual": 5.551115123125783e-17
+  },
+  "gam_0224": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "Fitting terminated with step failure - check results carefully"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence"
+      ],
+      "criterion_difference": 6.661338147750939e-16,
+      "python_outer_gradient": [
+        -8.31602428412459e-10
+      ],
+      "python_outer_hessian_eigenvalues": [
+        0.0060160721704299695
+      ]
+    }
+  },
+  "gam_0226": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; require the actual stationary score and nonnegative smoothing curvature and retain all identified numerical assertions at the original TASK tolerances.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": -1.1748407802159022e-11,
+      "python_outer_gradient": [
+        1.214306433183765e-17,
+        -2.6020852139652106e-18,
+        -4.188235169903577e-12,
+        -3.807562259983368e-12
+      ],
+      "python_outer_hessian_eigenvalues": [
+        2.400148663359082e-12,
+        4.0204176436596814e-12,
+        0.002098145365405854,
+        0.009349632121711443
+      ]
+    }
+  },
+  "gam_0227": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 11,
+    "coefficient_count": 12,
+    "max_design_null_residual": 5.551115123125783e-16,
+    "max_penalty_null_residual": 8.326672684688674e-17
+  },
+  "gam_0236": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": -5.519140700016578e-12,
+      "python_outer_gradient": [
+        -2.2440330583323176e-10,
+        -4.561192979302825e-10,
+        2.347350514918939e-10,
+        -6.397285839843555e-13
+      ],
+      "python_outer_hessian_eigenvalues": [
+        6.419882027678239e-13,
+        0.0004970578359806542,
+        0.0010965643879646376,
+        0.0032449069807058114
+      ]
+    }
+  },
+  "gam_0237": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 11,
+    "coefficient_count": 12,
+    "max_design_null_residual": 5.689893001203927e-16,
+    "max_penalty_null_residual": 1.1102230246251565e-16
+  },
+  "gam_0273": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": -8.214300269005545,
+      "python_outer_gradient": [
+        -8.886600344482076e-10
+      ],
+      "python_outer_hessian_eigenvalues": [
+        8.892886427247504e-10
+      ]
+    }
+  },
+  "gam_0276": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; require the actual stationary score and nonnegative smoothing curvature and retain all identified numerical assertions at the original TASK tolerances.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": -1.2983498720586795e-09,
+      "python_outer_gradient": [
+        -4.440892098500626e-16,
+        -3.897580036493764e-10,
+        2.220446049250313e-16,
+        -4.440892098500626e-16
+      ],
+      "python_outer_hessian_eigenvalues": [
+        3.900213502481917e-10,
+        0.021056943027827832,
+        0.2133006603038229,
+        0.44046800332771013
+      ]
+    }
+  },
+  "gam_0311": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": -10.968405986727483,
+      "python_outer_gradient": [
+        -2.3588988540268474e-09
+      ],
+      "python_outer_hessian_eigenvalues": [
+        2.358409763777066e-09
+      ]
+    }
+  },
+  "gam_0316": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; require the actual stationary score and nonnegative smoothing curvature and retain all identified numerical assertions at the original TASK tolerances.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": -6.441354116759612e-10,
+      "python_outer_gradient": [
+        -2.617672745230948e-10,
+        -1.1102230246251565e-15,
+        -3.247180302423658e-11,
+        8.881784197001252e-16
+      ],
+      "python_outer_hessian_eigenvalues": [
+        3.130826477484037e-11,
+        2.614945535291623e-10,
+        0.05279721593452135,
+        0.5356695224062291
+      ]
+    }
+  },
+  "gam_0332": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "Fitting terminated with step failure - check results carefully"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence"
+      ],
+      "criterion_difference": 1.0547118733938987e-15,
+      "python_outer_gradient": [
+        -6.592660445337017e-13
+      ],
+      "python_outer_hessian_eigenvalues": [
+        0.008999956298997441
+      ]
+    }
+  },
+  "gam_0367": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 10,
+    "coefficient_count": 11,
+    "max_design_null_residual": 2.1094237467877974e-15,
+    "max_penalty_null_residual": 1.1102230246251565e-16
+  },
+  "gam_0377": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 9,
+    "coefficient_count": 10,
+    "max_design_null_residual": 4.440892098500626e-16,
+    "max_penalty_null_residual": 5.551115123125783e-17
+  },
+  "gam_0387": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 8,
+    "coefficient_count": 9,
+    "max_design_null_residual": 3.3306690738754696e-16,
+    "max_penalty_null_residual": 5.551115123125783e-17
+  },
+  "gam_0396": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": -4.822027221962344e-09,
+      "python_outer_gradient": [
+        8.00816968293816e-10,
+        -2.2619084383279642e-10,
+        -3.3506974972397074e-11,
+        -4.8818726838817383e-11
+      ],
+      "python_outer_hessian_eigenvalues": [
+        2.4151017935776684e-11,
+        4.412769807860839e-11,
+        0.4694249039155869,
+        1.1028313486536687
+      ]
+    }
+  },
+  "gam_0397": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 11,
+    "coefficient_count": 12,
+    "max_design_null_residual": 3.3306690738754696e-16,
+    "max_penalty_null_residual": 8.326672684688674e-17
+  },
+  "gam_0400": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "Fitting terminated with step failure - check results carefully"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence"
+      ],
+      "criterion_difference": 1.4210854715202004e-13,
+      "python_outer_gradient": [
+        -1.5543122344752192e-15
+      ],
+      "python_outer_hessian_eigenvalues": [
+        1.2556023168064738
+      ]
+    }
+  },
+  "gam_0407": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 10,
+    "coefficient_count": 11,
+    "max_design_null_residual": 4.440892098500626e-16,
+    "max_penalty_null_residual": 1.1102230246251565e-16
+  },
+  "gam_0416": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": 1.0868035360545036e-09,
+      "python_outer_gradient": [
+        -1.8444601401768068e-09,
+        -1.259337967240981e-09,
+        -6.8833827526759706e-15,
+        -1.3322676295501878e-13
+      ],
+      "python_outer_hessian_eigenvalues": [
+        1.259436465766034e-09,
+        1.8442290005641374e-09,
+        0.07973461861595707,
+        0.19575619130828964
+      ]
+    }
+  },
+  "gam_0417": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 11,
+    "coefficient_count": 12,
+    "max_design_null_residual": 4.440892098500626e-16,
+    "max_penalty_null_residual": 5.551115123125783e-17
+  },
+  "gam_0427": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 11,
+    "coefficient_count": 12,
+    "max_design_null_residual": 6.661338147750939e-16,
+    "max_penalty_null_residual": 8.326672684688674e-17,
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "Fitting terminated with step failure - check results carefully"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence"
+      ],
+      "criterion_difference": -5.684341886080802e-14,
+      "python_outer_gradient": [
+        -2.7601148033795653e-09
+      ],
+      "python_outer_hessian_eigenvalues": [
+        1.144725052336278
+      ]
+    }
+  },
+  "gam_0431": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "Fitting terminated with step failure - check results carefully"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence"
+      ],
+      "criterion_difference": 5.684341886080802e-14,
+      "python_outer_gradient": [
+        1.6372059263858318e-10
+      ],
+      "python_outer_hessian_eigenvalues": [
+        1.2431283789961316
+      ]
+    }
+  },
+  "gam_0433": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "Fitting terminated with step failure - check results carefully"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence"
+      ],
+      "criterion_difference": 3.126388037344441e-13,
+      "python_outer_gradient": [
+        4.865530200959256e-11
+      ],
+      "python_outer_hessian_eigenvalues": [
+        1.10943540273023
+      ]
+    }
+  },
+  "gam_0436": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": -2.9459386041708058e-09,
+      "python_outer_gradient": [
+        4.3076653355456074e-14,
+        -9.57012247226885e-14,
+        -5.289590987445081e-11,
+        -5.747002873590645e-11
+      ],
+      "python_outer_hessian_eigenvalues": [
+        3.2393406416495583e-11,
+        5.4907130753181815e-11,
+        0.6057187827703823,
+        0.9811642967139831
+      ]
+    }
+  },
+  "gam_0437": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 8,
+    "coefficient_count": 9,
+    "max_design_null_residual": 1.7208456881689926e-15,
+    "max_penalty_null_residual": 1.5265566588595902e-16
+  },
+  "gam_0447": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 9,
+    "coefficient_count": 10,
+    "max_design_null_residual": 6.661338147750939e-16,
+    "max_penalty_null_residual": 8.326672684688674e-17
+  },
+  "gam_0456": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": 4.5764086964439343e-11,
+      "python_outer_gradient": [
+        -2.8006025302964045e-11,
+        -4.5850776046544804e-11,
+        -2.0511920287291652e-10,
+        -3.6070770944959295e-13
+      ],
+      "python_outer_hessian_eigenvalues": [
+        3.5404560319498676e-13,
+        2.7996233323662184e-11,
+        4.584980992260198e-11,
+        0.0032698399229884084
+      ]
+    }
+  },
+  "gam_0457": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 8,
+    "coefficient_count": 9,
+    "max_design_null_residual": 1.582067810090848e-15,
+    "max_penalty_null_residual": 1.3877787807814457e-16
+  },
+  "gam_0465": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "Fitting terminated with step failure - check results carefully"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence"
+      ],
+      "criterion_difference": 9.159339953157541e-16,
+      "python_outer_gradient": [
+        -6.637110219059883e-10,
+        3.0030399694735976e-10
+      ],
+      "python_outer_hessian_eigenvalues": [
+        0.004503004088417323,
+        0.009621971533321075
+      ]
+    }
+  },
+  "gam_0466": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": -2.223093931164044e-11,
+      "python_outer_gradient": [
+        5.173228807137109e-10,
+        7.515302616334374e-12,
+        -3.3620340309264234e-12,
+        -6.009641486264054e-12
+      ],
+      "python_outer_hessian_eigenvalues": [
+        2.6324875139776612e-12,
+        5.535437720064848e-12,
+        0.006300587287083869,
+        0.009261413053089258
+      ]
+    }
+  },
+  "gam_0467": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 8,
+    "coefficient_count": 9,
+    "max_design_null_residual": 3.885780586188048e-16,
+    "max_penalty_null_residual": 2.7755575615628914e-17
+  },
+  "gam_0475": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": -1.3392675857204495e-11,
+      "python_outer_gradient": [
+        -7.442469262403106e-10,
+        -1.1693822860919368e-12
+      ],
+      "python_outer_hessian_eigenvalues": [
+        1.2158540933125629e-12,
+        0.006832948475388526
+      ]
+    }
+  },
+  "gam_0477": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 9,
+    "coefficient_count": 10,
+    "max_design_null_residual": 4.440892098500626e-16,
+    "max_penalty_null_residual": 2.7755575615628914e-17
+  },
+  "gam_0487": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 8,
+    "coefficient_count": 9,
+    "max_design_null_residual": 4.752498502934438e-16,
+    "max_penalty_null_residual": 1.2335392774031352e-15
+  },
+  "gam_0497": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 11,
+    "coefficient_count": 12,
+    "max_design_null_residual": 9.43689570931383e-16,
+    "max_penalty_null_residual": 3.0886035846016164e-14
+  },
+  "gam_0507": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 10,
+    "coefficient_count": 11,
+    "max_design_null_residual": 6.661338147750939e-16,
+    "max_penalty_null_residual": 1.16868797692453e-14
+  },
+  "gam_0514": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "Fitting terminated with step failure - check results carefully"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence"
+      ],
+      "criterion_difference": 2.2737367544323206e-13,
+      "python_outer_gradient": [
+        -1.3803092002717676e-10
+      ],
+      "python_outer_hessian_eigenvalues": [
+        1.1842447311585236
+      ]
+    }
+  },
+  "gam_0515": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": -7.766232101857895e-11,
+      "python_outer_gradient": [
+        -4.1527226102289205e-10,
+        -5.743023834270389e-10
+      ],
+      "python_outer_hessian_eigenvalues": [
+        4.889099060560436e-10,
+        1.6251767774351794e-09
+      ]
+    }
+  },
+  "gam_0516": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": 1.6909886824123532e-09,
+      "python_outer_gradient": [
+        -7.684386460482528e-11,
+        -2.010656974249514e-09,
+        -2.636453277915507e-10,
+        -3.1772584563327655e-10
+      ],
+      "python_outer_hessian_eigenvalues": [
+        1.5107851258255017e-10,
+        2.9645211532584646e-10,
+        2.0107622005586663e-09,
+        0.10538978077619572
+      ]
+    }
+  },
+  "gam_0517": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 11,
+    "coefficient_count": 12,
+    "max_design_null_residual": 8.881784197001252e-16,
+    "max_penalty_null_residual": 1.2645357266726981e-14
+  },
+  "gam_0527": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 11,
+    "coefficient_count": 12,
+    "max_design_null_residual": 1.3322676295501878e-15,
+    "max_penalty_null_residual": 2.652170680327014e-14
+  },
+  "gam_0536": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": 6.556945209013065e-09,
+      "python_outer_gradient": [
+        -1.2507772595427014e-11,
+        -1.0264121552694405e-08,
+        -7.761968845443334e-11,
+        3.2467362132138078e-12
+      ],
+      "python_outer_hessian_eigenvalues": [
+        7.941792733889615e-11,
+        1.0264825997078676e-08,
+        0.18215323061282962,
+        0.47783872211794326
+      ]
+    }
+  },
+  "gam_0537": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 9,
+    "coefficient_count": 10,
+    "max_design_null_residual": 1.3322676295501878e-15,
+    "max_penalty_null_residual": 2.144139796794236e-14,
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "Fitting terminated with step failure - check results carefully"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence"
+      ],
+      "criterion_difference": -2.842170943040401e-14,
+      "python_outer_gradient": [
+        4.0171421744616964e-11
+      ],
+      "python_outer_hessian_eigenvalues": [
+        1.0032728954845933
+      ]
+    }
+  },
+  "gam_0542": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "Fitting terminated with step failure - check results carefully"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence"
+      ],
+      "criterion_difference": -2.842170943040401e-14,
+      "python_outer_gradient": [
+        -3.637126155808801e-10
+      ],
+      "python_outer_hessian_eigenvalues": [
+        1.4420875687071177
+      ]
+    }
+  },
+  "gam_0547": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 8,
+    "coefficient_count": 9,
+    "max_design_null_residual": 4.445561298735934e-16,
+    "max_penalty_null_residual": 1.2520918558864722e-15
+  },
+  "gam_0551": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": 1.3709389179439313e-10,
+      "python_outer_gradient": [
+        -5.23977528033015e-10
+      ],
+      "python_outer_hessian_eigenvalues": [
+        5.239882601889197e-10
+      ]
+    }
+  },
+  "gam_0552": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "Fitting terminated with step failure - check results carefully"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence"
+      ],
+      "criterion_difference": 1.3500311979441904e-13,
+      "python_outer_gradient": [
+        1.6431300764452317e-14
+      ],
+      "python_outer_hessian_eigenvalues": [
+        0.2482581300689383
+      ]
+    }
+  },
+  "gam_0553": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": 7.069456131603147e-10,
+      "python_outer_gradient": [
+        -9.268275036333762e-10
+      ],
+      "python_outer_hessian_eigenvalues": [
+        9.274803147718558e-10
+      ]
+    }
+  },
+  "gam_0555": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": -7.001759172453603e-10,
+      "python_outer_gradient": [
+        -3.98016730684958e-10,
+        -7.311760086281538e-10
+      ],
+      "python_outer_hessian_eigenvalues": [
+        4.632650667830379e-10,
+        8.381383626825706e-10
+      ]
+    }
+  },
+  "gam_0556": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": -3.4656544301014947e-10,
+      "python_outer_gradient": [
+        -2.5615021215230627e-10,
+        1.2976415497689686e-09,
+        -3.383160418479747e-11,
+        1.5684118448433537e-09
+      ],
+      "python_outer_hessian_eigenvalues": [
+        3.5453120370304955e-11,
+        0.03756193158096916,
+        0.14251974330576678,
+        0.34151735439378844
+      ]
+    }
+  },
+  "gam_0557": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 8,
+    "coefficient_count": 9,
+    "max_design_null_residual": 4.237448202908626e-16,
+    "max_penalty_null_residual": 1.4130012907339511e-15
+  },
+  "gam_0567": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 9,
+    "coefficient_count": 10,
+    "max_design_null_residual": 6.661338147750939e-16,
+    "max_penalty_null_residual": 5.3622130957296335e-15
+  },
+  "gam_0572": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "Fitting terminated with step failure - check results carefully"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence"
+      ],
+      "criterion_difference": 8.187894806610529e-16,
+      "python_outer_gradient": [
+        1.0451233437708263e-09
+      ],
+      "python_outer_hessian_eigenvalues": [
+        0.012355141093843848
+      ]
+    }
+  },
+  "gam_0577": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 11,
+    "coefficient_count": 12,
+    "max_design_null_residual": 4.440892098500626e-16,
+    "max_penalty_null_residual": 9.786921337043501e-15
+  },
+  "gam_0587": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 9,
+    "coefficient_count": 10,
+    "max_design_null_residual": 5.551115123125783e-16,
+    "max_penalty_null_residual": 4.1091631341908915e-15
+  },
+  "gam_0595": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; require the actual stationary score and nonnegative smoothing curvature and retain all identified numerical assertions at the original TASK tolerances.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": -9.873490913747673e-12,
+      "python_outer_gradient": [
+        -1.5876703666148604e-14,
+        -4.803616617207463e-14
+      ],
+      "python_outer_hessian_eigenvalues": [
+        5.103141153545638e-15,
+        4.0015360487493275e-14
+      ]
+    }
+  },
+  "gam_0597": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 9,
+    "coefficient_count": 10,
+    "max_design_null_residual": 8.881784197001252e-16,
+    "max_penalty_null_residual": 5.472890921325243e-15
+  },
+  "gam_0607": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 8,
+    "coefficient_count": 9,
+    "max_design_null_residual": 6.661338147750939e-16,
+    "max_penalty_null_residual": 1.1102230246251565e-16,
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; require the actual stationary score and nonnegative smoothing curvature and retain all identified numerical assertions at the original TASK tolerances.",
+      "r_warnings": [
+        "Fitting terminated with step failure - check results carefully"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence"
+      ],
+      "criterion_difference": 0.0,
+      "python_outer_gradient": [
+        8.881784197001252e-16
+      ],
+      "python_outer_hessian_eigenvalues": [
+        0.9459947968845084
+      ]
+    }
+  },
+  "gam_0617": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 11,
+    "coefficient_count": 12,
+    "max_design_null_residual": 3.608224830031759e-16,
+    "max_penalty_null_residual": 1.6653345369377348e-16
+  },
+  "gam_0627": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 11,
+    "coefficient_count": 12,
+    "max_design_null_residual": 4.440892098500626e-16,
+    "max_penalty_null_residual": 1.6653345369377348e-16
+  },
+  "gam_0632": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; require the actual stationary score and nonnegative smoothing curvature and retain all identified numerical assertions at the original TASK tolerances.",
+      "r_warnings": [
+        "Fitting terminated with step failure - check results carefully"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence"
+      ],
+      "criterion_difference": 1.7053025658242404e-13,
+      "python_outer_gradient": [
+        2.6645352591003757e-15
+      ],
+      "python_outer_hessian_eigenvalues": [
+        1.3852068975725624
+      ]
+    }
+  },
+  "gam_0637": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 8,
+    "coefficient_count": 9,
+    "max_design_null_residual": 5.178149575790769e-16,
+    "max_penalty_null_residual": 5.551115123125783e-17
+  },
+  "gam_0645": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "Fitting terminated with step failure - check results carefully"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence"
+      ],
+      "criterion_difference": -2.842170943040401e-14,
+      "python_outer_gradient": [
+        4.1019188046220734e-11,
+        1.3925038899742503e-10
+      ],
+      "python_outer_hessian_eigenvalues": [
+        0.715155858267932,
+        1.3466549022898855
+      ]
+    }
+  },
+  "gam_0647": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 10,
+    "coefficient_count": 11,
+    "max_design_null_residual": 4.440892098500626e-16,
+    "max_penalty_null_residual": 1.1102230246251565e-16
+  },
+  "gam_0657": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 8,
+    "coefficient_count": 9,
+    "max_design_null_residual": 5.551115123125783e-16,
+    "max_penalty_null_residual": 5.551115123125783e-17
+  },
+  "gam_0658": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": 2.4732571546337567e-09,
+      "python_outer_gradient": [
+        -4.709470591279796e-09,
+        -2.713223867800707e-09,
+        -6.116449569049109e-10
+      ],
+      "python_outer_hessian_eigenvalues": [
+        6.121029395087581e-10,
+        2.712126785794494e-09,
+        4.707715753781598e-09
+      ]
+    }
+  },
+  "gam_0667": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 10,
+    "coefficient_count": 11,
+    "max_design_null_residual": 5.551115123125783e-16,
+    "max_penalty_null_residual": 1.1102230246251565e-16
+  },
+  "gam_0676": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; require the actual stationary score and nonnegative smoothing curvature and retain all identified numerical assertions at the original TASK tolerances.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": -4.0990926208905876e-09,
+      "python_outer_gradient": [
+        -8.881784197001252e-16,
+        4.440892098500626e-16,
+        -1.0949330331300189e-10,
+        0.0
+      ],
+      "python_outer_hessian_eigenvalues": [
+        1.1102230457147969e-10,
+        0.19260043190808868,
+        0.5963337613625798,
+        1.2052434064899655
+      ]
+    }
+  },
+  "gam_0677": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 9,
+    "coefficient_count": 10,
+    "max_design_null_residual": 4.440892098500626e-16,
+    "max_penalty_null_residual": 1.1102230246251565e-16
+  },
+  "gam_0687": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 9,
+    "coefficient_count": 10,
+    "max_design_null_residual": 5.551115123125783e-16,
+    "max_penalty_null_residual": 1.1102230246251565e-16
+  },
+  "gam_0696": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": 2.0405288569946833e-11,
+      "python_outer_gradient": [
+        1.8041124150158794e-15,
+        -9.019747005993611e-11,
+        -5.175795524232374e-13,
+        -9.350673335924849e-13
+      ],
+      "python_outer_hessian_eigenvalues": [
+        6.984437189217369e-13,
+        2.2722931752286706e-12,
+        9.019337318971766e-11,
+        0.007493012969221381
+      ]
+    }
+  },
+  "gam_0697": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 10,
+    "coefficient_count": 11,
+    "max_design_null_residual": 5.551115123125783e-16,
+    "max_penalty_null_residual": 1.1102230246251565e-16
+  },
+  "gam_0705": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": 7.870815110777585e-12,
+      "python_outer_gradient": [
+        -4.461665988320089e-11,
+        5.470640919436054e-10
+      ],
+      "python_outer_hessian_eigenvalues": [
+        4.4635957076884195e-11,
+        0.006219216004838453
+      ]
+    }
+  },
+  "gam_0706": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": -5.980999029375766e-11,
+      "python_outer_gradient": [
+        2.2426944502884627e-10,
+        5.857475858517258e-10,
+        4.08150050215661e-10,
+        -9.37546147872354e-12
+      ],
+      "python_outer_hessian_eigenvalues": [
+        9.383786656872329e-12,
+        0.00586541093810514,
+        0.011299919920855824,
+        0.019920050446170394
+      ]
+    }
+  },
+  "gam_0707": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 8,
+    "coefficient_count": 9,
+    "max_design_null_residual": 4.718447854656915e-16,
+    "max_penalty_null_residual": 1.1102230246251565e-16
+  },
+  "gam_0715": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "Fitting terminated with step failure - check results carefully"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence"
+      ],
+      "criterion_difference": -1.9817480989559044e-14,
+      "python_outer_gradient": [
+        -1.579227157030849e-11,
+        1.8845573539205684e-11
+      ],
+      "python_outer_hessian_eigenvalues": [
+        0.0014228451181260984,
+        0.0038709653746097257
+      ]
+    }
+  },
+  "gam_0716": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; require the actual stationary score and nonnegative smoothing curvature and retain all identified numerical assertions at the original TASK tolerances.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": -1.0036249609157721e-11,
+      "python_outer_gradient": [
+        1.951563910473908e-18,
+        4.7704895589362195e-18,
+        -2.0874562587657173e-12,
+        -1.0842021724855044e-18
+      ],
+      "python_outer_hessian_eigenvalues": [
+        2.0844512168120852e-12,
+        0.0007853884214494994,
+        0.0009644296275950131,
+        0.0016527036546303284
+      ]
+    }
+  },
+  "gam_0717": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 9,
+    "coefficient_count": 10,
+    "max_design_null_residual": 7.771561172376096e-16,
+    "max_penalty_null_residual": 1.1102230246251565e-16
+  },
+  "gam_0728": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "Fitting terminated with step failure - check results carefully"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence"
+      ],
+      "criterion_difference": 2.842170943040401e-14,
+      "python_outer_gradient": [
+        4.792344299175966e-11,
+        3.2506441982604883e-11,
+        -1.582467490379713e-11
+      ],
+      "python_outer_hessian_eigenvalues": [
+        0.443918573597306,
+        0.7679735951476963,
+        1.796245831353802
+      ]
+    }
+  },
+  "gam_0729": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "Fitting terminated with step failure - check results carefully"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence"
+      ],
+      "criterion_difference": 1.3946532817499246e-09,
+      "python_outer_gradient": [
+        6.71260513840366e-09,
+        3.462025111033995e-09
+      ],
+      "python_outer_hessian_eigenvalues": [
+        0.4118317709239445,
+        0.9749455607757289
+      ]
+    }
+  },
+  "gam_0737": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "Fitting terminated with step failure - check results carefully"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence"
+      ],
+      "criterion_difference": 8.526512829121202e-14,
+      "python_outer_gradient": [
+        -4.1033842990145786e-13
+      ],
+      "python_outer_hessian_eigenvalues": [
+        0.32772188756768905
+      ]
+    }
+  },
+  "gam_0751": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": -9.644836040934024e-10,
+      "python_outer_gradient": [
+        -7.721527861548338e-10
+      ],
+      "python_outer_hessian_eigenvalues": [
+        7.722341284951048e-10
+      ]
+    }
+  },
+  "gam_0783": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "Fitting terminated with step failure - check results carefully"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence"
+      ],
+      "criterion_difference": -5.684341886080802e-14,
+      "python_outer_gradient": [
+        3.552713678800501e-15
+      ],
+      "python_outer_hessian_eigenvalues": [
+        0.6388961259065074
+      ]
+    }
+  },
+  "gam_0791": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": -2.837410306710808e-10,
+      "python_outer_gradient": [
+        -6.481961634108302e-10
+      ],
+      "python_outer_hessian_eigenvalues": [
+        6.475190753955454e-10
+      ]
+    }
+  },
+  "gam_0793": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": 2.545430533018589e-10,
+      "python_outer_gradient": [
+        -5.648457257478867e-10
+      ],
+      "python_outer_hessian_eigenvalues": [
+        5.639562890754254e-10
+      ]
+    }
+  },
+  "gam_0796": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": 1.1624479157035239e-10,
+      "python_outer_gradient": [
+        -5.107863021436287e-10,
+        -8.250247152119528e-10,
+        -3.8176506400589005e-10,
+        -3.865388009671733e-10
+      ],
+      "python_outer_hessian_eigenvalues": [
+        1.9045506217321181e-10,
+        3.841963354484752e-10,
+        5.11479755978662e-10,
+        8.260429691457125e-10
+      ]
+    }
+  },
+  "gam_0821": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "Fitting terminated with step failure - check results carefully"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence"
+      ],
+      "criterion_difference": 6.661338147750939e-16,
+      "python_outer_gradient": [
+        4.322219665509053e-13
+      ],
+      "python_outer_hessian_eigenvalues": [
+        0.007507177617748981
+      ]
+    }
+  },
+  "gam_0835": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": -1.8855972339082427e-11,
+      "python_outer_gradient": [
+        4.3039161644331525e-13,
+        -2.2660844627485572e-13
+      ],
+      "python_outer_hessian_eigenvalues": [
+        2.3716052853052315e-13,
+        0.0010282434534579093
+      ]
+    }
+  },
+  "gam_0836": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; require the actual stationary score and nonnegative smoothing curvature and retain all identified numerical assertions at the original TASK tolerances.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": -6.928929652261218e-12,
+      "python_outer_gradient": [
+        1.4094628242311558e-18,
+        -2.4561683958455766e-12,
+        -3.845487220202528e-13,
+        0.0
+      ],
+      "python_outer_hessian_eigenvalues": [
+        3.8420037344881313e-13,
+        2.4560317036176144e-12,
+        0.0005687950873299204,
+        0.001255107582684633
+      ]
+    }
+  },
+  "gam_0847": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 11,
+    "coefficient_count": 12,
+    "max_design_null_residual": 4.996003610813204e-16,
+    "max_penalty_null_residual": 8.326672684688674e-17
+  },
+  "gam_0857": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 10,
+    "coefficient_count": 11,
+    "max_design_null_residual": 1.3322676295501878e-15,
+    "max_penalty_null_residual": 1.3877787807814457e-16
+  },
+  "gam_0861": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "Fitting terminated with step failure - check results carefully"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence"
+      ],
+      "criterion_difference": 2.842170943040401e-14,
+      "python_outer_gradient": [
+        -2.072120253160392e-12
+      ],
+      "python_outer_hessian_eigenvalues": [
+        1.3123041071245733
+      ]
+    }
+  },
+  "gam_0867": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 9,
+    "coefficient_count": 10,
+    "max_design_null_residual": 4.163336342344337e-16,
+    "max_penalty_null_residual": 6.245004513516506e-17
+  },
+  "gam_0877": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 8,
+    "coefficient_count": 9,
+    "max_design_null_residual": 8.881784197001252e-16,
+    "max_penalty_null_residual": 5.551115123125783e-17
+  },
+  "gam_0882": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "Fitting terminated with step failure - check results carefully"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence"
+      ],
+      "criterion_difference": 2.842170943040401e-14,
+      "python_outer_gradient": [
+        3.6548275517134243e-10
+      ],
+      "python_outer_hessian_eigenvalues": [
+        0.026508542948796194
+      ]
+    }
+  },
+  "gam_0887": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 10,
+    "coefficient_count": 11,
+    "max_design_null_residual": 3.885780586188048e-16,
+    "max_penalty_null_residual": 4.163336342344337e-17
+  },
+  "gam_0897": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 11,
+    "coefficient_count": 12,
+    "max_design_null_residual": 2.7755575615628914e-15,
+    "max_penalty_null_residual": 8.326672684688674e-17
+  },
+  "gam_0904": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "Fitting terminated with step failure - check results carefully"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence"
+      ],
+      "criterion_difference": -2.842170943040401e-14,
+      "python_outer_gradient": [
+        -6.854961043245567e-11
+      ],
+      "python_outer_hessian_eigenvalues": [
+        2.4076547846319705
+      ]
+    }
+  },
+  "gam_0907": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 9,
+    "coefficient_count": 10,
+    "max_design_null_residual": 2.7755575615628914e-16,
+    "max_penalty_null_residual": 5.551115123125783e-17,
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": 4.661728780774865e-10,
+      "python_outer_gradient": [
+        -1.0583934617613977e-08
+      ],
+      "python_outer_hessian_eigenvalues": [
+        1.058297893763438e-08
+      ]
+    }
+  },
+  "gam_0917": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 10,
+    "coefficient_count": 11,
+    "max_design_null_residual": 1.0547118733938987e-15,
+    "max_penalty_null_residual": 1.1102230246251565e-16
+  },
+  "gam_0918": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": -3.980716201112955e-09,
+      "python_outer_gradient": [
+        1.6077810194303765e-09,
+        9.673306600177511e-10,
+        -3.8650993516853305e-10
+      ],
+      "python_outer_hessian_eigenvalues": [
+        3.876158653307881e-10,
+        0.901101751991786,
+        1.4269739414863998
+      ]
+    }
+  },
+  "gam_0927": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 8,
+    "coefficient_count": 9,
+    "max_design_null_residual": 2.7755575615628914e-16,
+    "max_penalty_null_residual": 2.7755575615628914e-17
+  },
+  "gam_0937": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 8,
+    "coefficient_count": 9,
+    "max_design_null_residual": 3.3306690738754696e-16,
+    "max_penalty_null_residual": 2.7755575615628914e-17
+  },
+  "gam_0946": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; require the actual stationary score and nonnegative smoothing curvature and retain all identified numerical assertions at the original TASK tolerances.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": -1.4408307880131588e-11,
+      "python_outer_gradient": [
+        -8.673617379884035e-18,
+        7.806255641895632e-18,
+        -2.4936649967166602e-18,
+        -1.1022974691121521e-11
+      ],
+      "python_outer_hessian_eigenvalues": [
+        1.1027212881701585e-11,
+        1.3203226122144227e-05,
+        0.0011613145418360945,
+        0.007761681855512281
+      ]
+    }
+  },
+  "gam_0947": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 9,
+    "coefficient_count": 10,
+    "max_design_null_residual": 3.3306690738754696e-16,
+    "max_penalty_null_residual": 5.551115123125783e-17
+  },
+  "gam_0957": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 9,
+    "coefficient_count": 10,
+    "max_design_null_residual": 3.885780586188048e-16,
+    "max_penalty_null_residual": 2.7755575615628914e-17
+  },
+  "gam_0967": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 11,
+    "coefficient_count": 12,
+    "max_design_null_residual": 6.661338147750939e-16,
+    "max_penalty_null_residual": 1.1207991109425628e-14
+  },
+  "gam_0977": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 11,
+    "coefficient_count": 12,
+    "max_design_null_residual": 6.661338147750939e-16,
+    "max_penalty_null_residual": 2.396167887045397e-14
+  },
+  "gam_0979": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "Fitting terminated with step failure - check results carefully"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence"
+      ],
+      "criterion_difference": 0.0,
+      "python_outer_gradient": [
+        1.2200777810278396e-07,
+        1.349880873746656e-07
+      ],
+      "python_outer_hessian_eigenvalues": [
+        0.612949338231698,
+        0.6164705019397808
+      ]
+    }
+  },
+  "gam_0987": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 10,
+    "coefficient_count": 11,
+    "max_design_null_residual": 6.661338147750939e-16,
+    "max_penalty_null_residual": 1.3952786340039964e-14
+  },
+  "gam_0996": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; require the actual stationary score and nonnegative smoothing curvature and retain all identified numerical assertions at the original TASK tolerances.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": 8.692033759416518e-10,
+      "python_outer_gradient": [
+        -4.440892098500626e-16,
+        -9.069816009343867e-10,
+        -4.12067713284614e-10,
+        -3.51906948026226e-10
+      ],
+      "python_outer_hessian_eigenvalues": [
+        3.45857203097647e-10,
+        4.073919118239947e-10,
+        9.072744554940229e-10,
+        0.11655919818013653
+      ]
+    }
+  },
+  "gam_0997": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 8,
+    "coefficient_count": 9,
+    "max_design_null_residual": 1.4301266819040515e-15,
+    "max_penalty_null_residual": 4.825947508697732e-15
+  },
+  "gam_1005": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "Fitting terminated with step failure - check results carefully"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence"
+      ],
+      "criterion_difference": 5.684341886080802e-14,
+      "python_outer_gradient": [
+        1.95075067210837e-11,
+        -6.106981587095106e-11
+      ],
+      "python_outer_hessian_eigenvalues": [
+        0.7142992065675741,
+        1.359847179194736
+      ]
+    }
+  },
+  "gam_1007": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 10,
+    "coefficient_count": 11,
+    "max_design_null_residual": 8.881784197001252e-16,
+    "max_penalty_null_residual": 1.0168342602271654e-14
+  },
+  "gam_1012": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "Fitting terminated with step failure - check results carefully"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence"
+      ],
+      "criterion_difference": 8.526512829121202e-14,
+      "python_outer_gradient": [
+        -5.4012114780732645e-08
+      ],
+      "python_outer_hessian_eigenvalues": [
+        1.2148427484106605
+      ]
+    }
+  },
+  "gam_1017": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 9,
+    "coefficient_count": 10,
+    "max_design_null_residual": 1.5543122344752192e-15,
+    "max_penalty_null_residual": 1.6287549617678857e-14
+  },
+  "gam_1026": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": -6.515477934954106e-09,
+      "python_outer_gradient": [
+        3.3837865842656356e-10,
+        9.416909474424529e-10,
+        -5.429878768836716e-12,
+        -6.56226184503339e-11
+      ],
+      "python_outer_hessian_eigenvalues": [
+        2.6918698847959913e-11,
+        1.36321093202571e-10,
+        0.07097147418564201,
+        1.1579685692966428
+      ]
+    }
+  },
+  "gam_1027": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 11,
+    "coefficient_count": 12,
+    "max_design_null_residual": 6.661338147750939e-16,
+    "max_penalty_null_residual": 2.414155146652053e-15
+  },
+  "gam_1036": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; require the actual stationary score and nonnegative smoothing curvature and retain all identified numerical assertions at the original TASK tolerances.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": -1.0004583828049363e-09,
+      "python_outer_gradient": [
+        -2.220446049250313e-15,
+        -4.440892098500626e-16,
+        -5.602407426863465e-11,
+        -1.1350809181465138e-10
+      ],
+      "python_outer_hessian_eigenvalues": [
+        6.741435596116325e-11,
+        1.2983526807988657e-10,
+        0.21170823992793555,
+        0.23555546812680297
+      ]
+    }
+  },
+  "gam_1037": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 11,
+    "coefficient_count": 12,
+    "max_design_null_residual": 4.440892098500626e-16,
+    "max_penalty_null_residual": 9.254063280363525e-15
+  },
+  "gam_1047": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 11,
+    "coefficient_count": 12,
+    "max_design_null_residual": 1.1102230246251565e-15,
+    "max_penalty_null_residual": 8.746790879891152e-15
+  },
+  "gam_1053": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "Fitting terminated with step failure - check results carefully"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence"
+      ],
+      "criterion_difference": 1.096345236817342e-15,
+      "python_outer_gradient": [
+        -8.849887055822903e-10
+      ],
+      "python_outer_hessian_eigenvalues": [
+        0.007779313185332995
+      ]
+    }
+  },
+  "gam_1056": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; require the actual stationary score and nonnegative smoothing curvature and retain all identified numerical assertions at the original TASK tolerances.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": 1.1270356869985676e-10,
+      "python_outer_gradient": [
+        1.3010426069826053e-18,
+        -5.7039441889988215e-11,
+        -1.782948846666272e-10,
+        -5.204170427930421e-18
+      ],
+      "python_outer_hessian_eigenvalues": [
+        5.703269877480029e-11,
+        1.7830114653033767e-10,
+        0.0026111660008382976,
+        0.004797846189881016
+      ]
+    }
+  },
+  "gam_1057": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 11,
+    "coefficient_count": 12,
+    "max_design_null_residual": 1.1102230246251565e-15,
+    "max_penalty_null_residual": 1.4549377888259412e-14
+  },
+  "gam_1058": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; require the actual stationary score and nonnegative smoothing curvature and retain all identified numerical assertions at the original TASK tolerances.",
+      "r_warnings": [
+        "Fitting terminated with step failure - check results carefully"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence"
+      ],
+      "criterion_difference": 8.881784197001252e-16,
+      "python_outer_gradient": [
+        3.469446951953614e-18,
+        1.734723475976807e-18,
+        -5.204170427930421e-18
+      ],
+      "python_outer_hessian_eigenvalues": [
+        0.005489430461347138,
+        0.008121339149817717,
+        0.009327723356043701
+      ]
+    }
+  },
+  "gam_1059": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": 1.0900680358361114e-10,
+      "python_outer_gradient": [
+        7.605721608072713e-14,
+        -1.6870111752680987e-10
+      ],
+      "python_outer_hessian_eigenvalues": [
+        1.6870451146205794e-10,
+        0.0075402899912162605
+      ]
+    }
+  },
+  "gam_1065": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": -1.6655510304275367e-11,
+      "python_outer_gradient": [
+        -9.49742458723063e-10,
+        -3.021253670671262e-11
+      ],
+      "python_outer_hessian_eigenvalues": [
+        3.016233086886309e-11,
+        0.0026626782250511265
+      ]
+    }
+  },
+  "gam_1066": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": -5.074840547791837e-11,
+      "python_outer_gradient": [
+        -8.76160758528366e-11,
+        -4.4722680420106187e-11,
+        -1.0812746040712635e-12,
+        -4.093569520667611e-12
+      ],
+      "python_outer_hessian_eigenvalues": [
+        8.831263255242343e-13,
+        3.925865557483703e-12,
+        0.0023287958428718255,
+        0.007858022815064746
+      ]
+    }
+  },
+  "gam_1067": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 8,
+    "coefficient_count": 9,
+    "max_design_null_residual": 1.6708349076980422e-15,
+    "max_penalty_null_residual": 7.268485384120197e-15
+  },
+  "gam_1075": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": -3.488764832582092e-12,
+      "python_outer_gradient": [
+        -3.4555395871105343e-10,
+        -1.1849899629457592e-11
+      ],
+      "python_outer_hessian_eigenvalues": [
+        1.1855648912162263e-11,
+        0.0013625845928336821
+      ]
+    }
+  },
+  "gam_1077": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 10,
+    "coefficient_count": 11,
+    "max_design_null_residual": 1.7763568394002505e-15,
+    "max_penalty_null_residual": 1.4741191642987936e-14,
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "Fitting terminated with step failure - check results carefully"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence"
+      ],
+      "criterion_difference": 2.7755575615628914e-16,
+      "python_outer_gradient": [
+        -2.35013354263347e-12
+      ],
+      "python_outer_hessian_eigenvalues": [
+        0.0009569870762353641
+      ]
+    }
+  },
+  "gam_1083": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "Fitting terminated with step failure - check results carefully"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence"
+      ],
+      "criterion_difference": 0.0,
+      "python_outer_gradient": [
+        -1.0325074129013956e-13
+      ],
+      "python_outer_hessian_eigenvalues": [
+        0.15283285156064697
+      ]
+    }
+  },
+  "gam_1087": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 8,
+    "coefficient_count": 9,
+    "max_design_null_residual": 5.551115123125783e-16,
+    "max_penalty_null_residual": 1.1102230246251565e-16
+  },
+  "gam_1097": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 8,
+    "coefficient_count": 9,
+    "max_design_null_residual": 7.771561172376096e-16,
+    "max_penalty_null_residual": 1.1102230246251565e-16
+  },
+  "gam_1105": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": -4.632596528608701e-09,
+      "python_outer_gradient": [
+        -8.738343382219682e-10,
+        -6.358433779496409e-10
+      ],
+      "python_outer_hessian_eigenvalues": [
+        9.290345194613163e-10,
+        0.3284858059236692
+      ]
+    }
+  },
+  "gam_1106": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": -4.075786819157656e-09,
+      "python_outer_gradient": [
+        -2.0585153581720306e-09,
+        4.71449546068925e-11,
+        8.72413252750448e-11,
+        -2.041851132617012e-10
+      ],
+      "python_outer_hessian_eigenvalues": [
+        2.0502118447543696e-10,
+        2.059204659309629e-09,
+        0.13864022563265976,
+        0.6900233926321393
+      ]
+    }
+  },
+  "gam_1107": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 10,
+    "coefficient_count": 11,
+    "max_design_null_residual": 5.551115123125783e-16,
+    "max_penalty_null_residual": 1.1102230246251565e-16
+  },
+  "gam_1115": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": -2.031399048973981e-09,
+      "python_outer_gradient": [
+        -3.5277203380701394e-10,
+        4.6215031801466466e-10
+      ],
+      "python_outer_hessian_eigenvalues": [
+        3.3676763377750184e-10,
+        0.7091015965368097
+      ]
+    }
+  },
+  "gam_1117": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 10,
+    "coefficient_count": 11,
+    "max_design_null_residual": 3.3306690738754696e-16,
+    "max_penalty_null_residual": 1.1102230246251565e-16
+  },
+  "gam_1118": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": -5.819487114422373e-10,
+      "python_outer_gradient": [
+        2.439159985101469e-12,
+        -9.137905987444128e-10,
+        -8.358627123783435e-10
+      ],
+      "python_outer_hessian_eigenvalues": [
+        8.36293711520921e-10,
+        9.130477009467569e-10,
+        0.09816000498493367
+      ]
+    }
+  },
+  "gam_1122": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "Fitting terminated with step failure - check results carefully"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence"
+      ],
+      "criterion_difference": 1.4210854715202004e-14,
+      "python_outer_gradient": [
+        1.1257661469699087e-13
+      ],
+      "python_outer_hessian_eigenvalues": [
+        0.3389150031948285
+      ]
+    }
+  },
+  "gam_1127": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 9,
+    "coefficient_count": 10,
+    "max_design_null_residual": 6.106226635438361e-16,
+    "max_penalty_null_residual": 1.1102230246251565e-16
+  },
+  "gam_1137": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 9,
+    "coefficient_count": 10,
+    "max_design_null_residual": 4.440892098500626e-16,
+    "max_penalty_null_residual": 1.1102230246251565e-16
+  },
+  "gam_1147": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 11,
+    "coefficient_count": 12,
+    "max_design_null_residual": 5.551115123125783e-16,
+    "max_penalty_null_residual": 1.6653345369377348e-16,
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": 5.972822236799402e-10,
+      "python_outer_gradient": [
+        -4.182720392265082e-09
+      ],
+      "python_outer_hessian_eigenvalues": [
+        4.183690431129132e-09
+      ]
+    }
+  },
+  "gam_1148": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": -6.647866257480928e-09,
+      "python_outer_gradient": [
+        -2.151328670763064e-09,
+        -7.907707821885879e-10,
+        -4.003273268438079e-10
+      ],
+      "python_outer_hessian_eigenvalues": [
+        4.0008737064075223e-10,
+        7.904047786648031e-10,
+        2.152352370406637e-09
+      ]
+    }
+  },
+  "gam_1151": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": 1.7857075818028534e-09,
+      "python_outer_gradient": [
+        -6.078870740111597e-09
+      ],
+      "python_outer_hessian_eigenvalues": [
+        6.078026970612882e-09
+      ]
+    }
+  },
+  "gam_1157": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 8,
+    "coefficient_count": 9,
+    "max_design_null_residual": 3.608224830031759e-16,
+    "max_penalty_null_residual": 1.1102230246251565e-16
+  },
+  "gam_1158": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": -2.0867929606538382e-09,
+      "python_outer_gradient": [
+        -7.314149286230531e-13,
+        -1.0436096431476471e-13,
+        -2.9995872452559524e-10
+      ],
+      "python_outer_hessian_eigenvalues": [
+        2.998342315040748e-10,
+        0.0633756695604102,
+        0.27589170650918615
+      ]
+    }
+  },
+  "gam_1167": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 9,
+    "coefficient_count": 10,
+    "max_design_null_residual": 3.3306690738754696e-16,
+    "max_penalty_null_residual": 2.220446049250313e-16
+  },
+  "gam_1176": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; require the actual stationary score and nonnegative smoothing curvature and retain all identified numerical assertions at the original TASK tolerances.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": -2.9676761048591516e-11,
+      "python_outer_gradient": [
+        -6.8335229879402e-12,
+        -1.734723475976807e-17,
+        1.9081958235744878e-17,
+        -3.220468503261285e-13
+      ],
+      "python_outer_hessian_eigenvalues": [
+        3.138092567428963e-13,
+        6.834302172051731e-12,
+        0.0041120844986751596,
+        0.007684440311675231
+      ]
+    }
+  },
+  "gam_1177": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 11,
+    "coefficient_count": 12,
+    "max_design_null_residual": 5.551115123125783e-16,
+    "max_penalty_null_residual": 5.551115123125783e-17
+  },
+  "gam_1181": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "Fitting terminated with step failure - check results carefully"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence"
+      ],
+      "criterion_difference": 4.440892098500626e-16,
+      "python_outer_gradient": [
+        -9.44053913168319e-10
+      ],
+      "python_outer_hessian_eigenvalues": [
+        0.007535447629687722
+      ]
+    }
+  },
+  "gam_1185": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": 1.1366962926473434e-11,
+      "python_outer_gradient": [
+        -3.57306581260043e-11,
+        -1.2513080849263503e-13
+      ],
+      "python_outer_hessian_eigenvalues": [
+        3.57355208869996e-11,
+        0.006754782105159012
+      ]
+    }
+  },
+  "gam_1187": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 8,
+    "coefficient_count": 9,
+    "max_design_null_residual": 6.661338147750939e-16,
+    "max_penalty_null_residual": 1.1102230246251565e-16
+  },
+  "gam_1188": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; require the actual stationary score and nonnegative smoothing curvature and retain all identified numerical assertions at the original TASK tolerances.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": 2.3031351825686386e-10,
+      "python_outer_gradient": [
+        -1.0417496648418808e-10,
+        -1.0951554606902047e-10,
+        -5.2671157998150715e-11
+      ],
+      "python_outer_hessian_eigenvalues": [
+        5.2670894907322694e-11,
+        1.0417440823115526e-10,
+        1.0951464290206491e-10
+      ]
+    }
+  },
+  "gam_1191": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": 8.760994707479597e-11,
+      "python_outer_gradient": [
+        -1.051880320519354e-10
+      ],
+      "python_outer_hessian_eigenvalues": [
+        1.0518852056584081e-10
+      ]
+    }
+  },
+  "gam_1195": {
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; require the actual stationary score and nonnegative smoothing curvature and retain all identified numerical assertions at the original TASK tolerances.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": -7.8846928985854e-12,
+      "python_outer_gradient": [
+        -7.177817033315108e-12,
+        -1.3646635904640547e-14
+      ],
+      "python_outer_hessian_eigenvalues": [
+        7.162708975096903e-12,
+        0.0009898612355115771
+      ]
+    }
+  },
+  "gam_1197": {
+    "kind": "gam_coefficient_gauge",
+    "reason": "The explicit numeric by-variable duplicates an unpenalized smooth constant; coefficients and individual term decomposition have a joint design/penalty nullspace. Compare the identifiable quotient and complete predictions at unchanged TASK tolerances.",
+    "joint_nullity": 1,
+    "design_rank": 11,
+    "coefficient_count": 12,
+    "max_design_null_residual": 7.771561172376096e-16,
+    "max_penalty_null_residual": 2.220446049250313e-16,
+    "optimizer_warning_difference": {
+      "reason": "R emits an optimizer event although Python converges and every existing numerical comparison passes; do not manufacture an optimization failure in a healthy fit. All identified numerical assertions remain strict; require actual stationary score and nonnegative smoothing curvature.",
+      "r_warnings": [
+        "gam.fit3 algorithm did not converge"
+      ],
+      "r_metadata_differences": [
+        "RuntimeWarning correspondence",
+        "R convergence flag"
+      ],
+      "criterion_difference": 4.932101949073342e-11,
+      "python_outer_gradient": [
+        -5.7061009089416494e-11
+      ],
+      "python_outer_hessian_eigenvalues": [
+        5.7061530820646176e-11
+      ]
+    }
+  }
+}

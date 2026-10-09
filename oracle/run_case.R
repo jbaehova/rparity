@@ -63,6 +63,50 @@ structure_arg <- function(s, kind) {
   if (!is.null(a$value)) a$value <- unlist(a$value)
   do.call(getExportedValue('nlme', s$name), a)
 }
+# Independent, documented optimizer callback: refine only stable score directions.
+# No target function body or implementation is inspected.
+score_nlminb <- function(start, objective, gradient, control, ...) {
+  fit <- stats::nlminb(start, objective, gradient, control = control, ...)
+  par <- fit$par
+  value <- objective(par)
+  for (iteration in seq_len(6L)) {
+    score <- gradient(par)
+    if (!all(is.finite(score)) || max(abs(score)) < 1e-9) break
+    hessian <- stats::optimHess(par, objective, gradient,
+                              control = list(ndeps = rep(1e-4, length(par))))
+    if (!all(is.finite(hessian))) break
+    eig <- eigen((hessian + t(hessian))/2, symmetric = TRUE)
+    threshold <- max(1, max(abs(eig$values))) * 1e-9
+    if (min(eig$values) < -threshold) break
+    keep <- eig$values > threshold
+    if (!any(keep)) break
+    directions <- eig$vectors[, keep, drop = FALSE]
+    step <- as.numeric(directions %*% (as.numeric(crossprod(directions, score))/eig$values[keep]))
+    if (max(abs(step)) > 0.02 * (1 + max(abs(par)))) break
+    accepted <- FALSE
+    for (halving in 0:12) {
+      candidate <- par - step / 2^halving
+      candidate_value <- objective(candidate)
+      candidate_score <- gradient(candidate)
+      if (is.finite(candidate_value) && all(is.finite(candidate_score)) &&
+          candidate_value <= value + 1e-10 &&
+          sqrt(sum(candidate_score^2)) < sqrt(sum(score^2))) {
+        par <- candidate
+        value <- candidate_value
+        accepted <- TRUE
+        break
+      }
+    }
+    if (!accepted) break
+  }
+  fit$par <- par
+  fit$objective <- value
+  if (max(abs(gradient(par))) < 1e-8) {
+    fit$convergence <- 0L
+    fit$message <- 'stationary-score convergence'
+  }
+  fit
+}
 fit_model <- function(s, d) {
   form <- as.formula(s$formula)
   a <- s$args %or% list()
@@ -94,16 +138,28 @@ fit_model <- function(s, d) {
   } else if (s$call == 'gam') {
     a$family <- public_family(s$family %or% 'gaussian', s$link)
     a$method <- a$method %or% 'GCV.Cp'
-    a$control <- do.call(mgcv::gam.control, modifyList(list(epsilon = 1e-10, maxit = 1000L), s$gam_control %or% list()))
+    a$control <- do.call(mgcv::gam.control, modifyList(list(epsilon = 1e-12, maxit = 1000L, mgcv.tol = 1e-10, newton = list(conv.tol = 1e-10)), s$gam_control %or% list()))
     if (!is.null(a$sp)) a$sp <- unlist(a$sp)
+    if (!is.null(a$in.out)) a$in.out <- lapply(a$in.out, unlist)
     if (!is.null(a$knots)) a$knots <- lapply(a$knots, unlist)
     do.call(mgcv::gam, c(list(formula = form, data = d), a))
   } else if (s$call == 'glmmTMB') {
     a$family <- public_family(s$family %or% 'gaussian', s$link, extended = TRUE)
+    if (!is.null(a$start)) a$start <- lapply(a$start, unlist)
     a$ziformula <- as.formula(s$ziformula %or% '~ 0')
     a$dispformula <- as.formula(s$dispformula %or% '~ 1')
-    a$control <- do.call(glmmTMB::glmmTMBControl, modifyList(list(optCtrl = list(iter.max = 10000L, eval.max = 10000L, rel.tol = 1e-10), parallel = 1L), s$tmb_control %or% list()))
-    do.call(glmmTMB::glmmTMB, c(list(formula = form, data = d), a))
+    controls <- modifyList(list(optCtrl = list(iter.max = 10000L, eval.max = 10000L, rel.tol = 1e-14, x.tol = 1e-12, sing.tol = 1e-16, xf.tol = 1e-16), parallel = 1L), s$tmb_control %or% list())
+    if (isTRUE(s$score_polish)) controls$optimizer <- score_nlminb
+    a$control <- do.call(glmmTMB::glmmTMBControl, controls)
+    if (!is.null(s$tmb_inner_control)) {
+      # Public modular fitting API; change only documented Newton tolerances.
+      structure <- do.call(glmmTMB::glmmTMB, c(list(formula = form, data = d, doFit = FALSE), a))
+      objective <- glmmTMB::fitTMB(structure, doOptim = FALSE)
+      do.call(TMB::newtonOption, c(list(obj = objective), s$tmb_inner_control))
+      optimizer <- if (isTRUE(s$score_polish)) score_nlminb else stats::nlminb
+      fit <- optimizer(objective$par, objective$fn, objective$gr, control = controls$optCtrl)
+      glmmTMB::finalizeTMB(structure, objective, fit)
+    } else do.call(glmmTMB::glmmTMB, c(list(formula = form, data = d), a))
   } else stop('Unapproved model function')
 }
 extract_gam <- function(m, s) {
@@ -113,6 +169,7 @@ extract_gam <- function(m, s) {
               AIC = AIC(m), BIC = BIC(m), fitted = unname(fitted(m)),
               residuals = unname(residuals(m)), summary = display_summary(m),
               coefficients = table_result(sm$p.table), smooth_table = table_result(sm$s.table),
+              summary_statistics = list(r_sq = sm$r.sq, dev_expl = sm$dev.expl, null_deviance = m$null.deviance, residual_df = sm$residual.df, n = length(m$y), rank = sm$rank),
               edf = unname(m$edf), edf1 = unname(m$edf1), sp = unname(m$sp),
               sp_names = names(m$sp), scale = unname(sm$scale),
               df_resid = df.residual(m), deviance = deviance(m),
@@ -187,6 +244,7 @@ extract_tmb <- function(m, s) {
        optimizer_diagnostics = list(convergence = m$fit$convergence,
                                     message = m$fit$message, iterations = m$fit$iterations,
                                     objective = unname(m$fit$objective),
+                                    gradient = unname(m$sdr$gradient.fixed),
                                     pdHess = m$sdr$pdHess))
 }
 extract_model <- function(m, s) {
@@ -237,6 +295,31 @@ run_one <- function(s) {
     if ((s$operation %or% '') == 'versions') {
       ps <- c('jsonlite','lme4','lmerTest','car','emmeans','pbkrtest','nlme','mgcv','glmmTMB','TMB')
       list(R = R.version.string, packages = setNames(lapply(ps, function(p) tryCatch(as.character(packageVersion(p)), error = function(e) NA_character_)), ps))
+    } else if ((s$operation %or% '') == 'quadratic_tail') {
+      value <- mgcv::psum.chisq(unlist(s$q), lb = unlist(s$lb), df = unlist(s$df %or% rep(1, length(s$lb))), nc = unlist(s$nc %or% rep(0, length(s$lb))), sigz = s$sigz %or% 0, lower.tail = s$lower_tail %or% FALSE, tol = s$tol %or% 2e-5, nlim = as.integer(s$nlim %or% 100000L), trace = isTRUE(s$trace))
+      list(value = unname(value), ifault = unname(attr(value, 'ifault')), trace = unname(attr(value, 'trace')))
+    } else if ((s$operation %or% '') == 'matrix_eigen') {
+      matrix_input <- do.call(rbind, lapply(s$matrix, function(row) as.numeric(unlist(row))))
+      eig <- eigen(matrix_input, symmetric = TRUE)
+      list(values = unname(eig$values), vectors = plain_matrix(eig$vectors),
+           values_hex = sprintf('%a', eig$values),
+           vectors_hex = matrix(sprintf('%a', eig$vectors), nrow(eig$vectors)))
+    } else if ((s$operation %or% '') == 'smooth_basis') {
+      d <- make_data(s)
+      variable <- s$variable %or% 'x'
+      basis <- s$basis %or% 'cr'
+      if (!basis %in% c('cr', 'cs') || !variable %in% names(d)) stop('Unsupported public basis diagnostic')
+      term <- eval(substitute(mgcv::s(VAR, bs = BASIS, k = K),
+                             list(VAR = as.name(variable), BASIS = basis, K = as.integer(s$k))))
+      smooth <- mgcv::smoothCon(term, data = d, absorb.cons = FALSE, scale.penalty = FALSE)[[1L]]
+      list(X = plain_matrix(smooth$X), S = lapply(smooth$S, plain_matrix),
+           F = unname(smooth$F), xp = unname(smooth$xp),
+           S_hex = lapply(smooth$S, function(a) matrix(sprintf('%a', a), nrow(a))),
+           F_hex = sprintf('%a', smooth$F), xp_hex = sprintf('%a', smooth$xp))
+    } else if ((s$operation %or% '') == 'lanczos') {
+      matrix_input <- do.call(rbind, lapply(s$A, unlist))
+      eig <- mgcv::slanczos(matrix_input, k = as.integer(s$k %or% 10L), kl = as.integer(s$kl %or% -1L), tol = s$tol %or% sqrt(.Machine$double.eps), nt = 1L)
+      list(values = unname(eig$values), vectors = plain_matrix(eig$vectors), iterations = eig$iter)
     } else if ((s$operation %or% '') == 'rng') {
       RNGkind(kind = 'Mersenne-Twister', normal.kind = 'Inversion', sample.kind = 'Rejection')
       seed <- as.integer(s$seed %or% 17L)

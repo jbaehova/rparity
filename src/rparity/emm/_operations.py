@@ -54,6 +54,7 @@ def ref_grid(
     cov_reduce: Callable[[Any], Any] = np.mean, cov_keep: int | Sequence[str] = 2,
     lmer_df: str = "kenward-roger", df: float | None = None,
     type: str = "link", regrid: str | None = None, mode: str = "auto",
+    component: str = "cond",
 ) -> EmmGrid:
     """Construct a full factorial prediction grid using original contrast coding.
 
@@ -63,7 +64,7 @@ def ref_grid(
     """
     if lmer_df not in {"kenward-roger", "satterthwaite", "asymptotic"}:
         raise ValueError("Unknown mixed-model degree-of-freedom method")
-    adapter = adapt(model, data)
+    adapter = adapt(model, data, component=component)
     df_method = lmer_df
     if hasattr(model, "_covariance"):
         if mode not in {"auto", "df.error", "satterthwaite", "asymptotic"}:

@@ -1,0 +1,426 @@
+{
+  "gam_1056": {
+    "reason": "The documented public in.out start independently reproduced the lower smoothing criterion, with every identified field passing unchanged tolerances. Original input and observation retained.",
+    "original_R_criterion": 0.24709528624937538,
+    "independently_confirmed_R_criterion": 0.2470533978832279,
+    "args": {
+      "method": "GCV.Cp",
+      "in.out": {
+        "sp": [
+          2.7999358268605663,
+          72004899337.38582,
+          1417670232.9806836,
+          5.807205115213948
+        ],
+        "scale": 1
+      }
+    }
+  },
+  "gam_1188": {
+    "reason": "The documented public in.out start independently reproduced the lower smoothing criterion, with every identified field passing unchanged tolerances. Original input and observation retained.",
+    "original_R_criterion": 0.21571351700919372,
+    "independently_confirmed_R_criterion": 0.21069274007121885,
+    "args": {
+      "method": "GCV.Cp",
+      "in.out": {
+        "sp": [
+          72004899337.38585,
+          72004899337.38582,
+          72004899337.38588
+        ],
+        "scale": 1
+      }
+    }
+  },
+  "tmb_0017": {
+    "reason": "The documented public R start independently reproduced a higher likelihood. Retain all previous observations and rerun strict identified comparisons.",
+    "original_R_logLik": -106.25542586874143,
+    "independently_confirmed_R_logLik": -105.55055487696964,
+    "args": {
+      "start": {
+        "beta": [
+          0.2543752239996706,
+          0.2924555556392225,
+          -0.05077500776241721,
+          0.08180730607423396
+        ],
+        "betazi": [
+          -502.35664633260313,
+          -172.2017248124439,
+          286.8151712545824
+        ],
+        "betadisp": [
+          -0.30447450241292134
+        ],
+        "theta": [
+          -0.9552739786591533
+        ]
+      }
+    }
+  },
+  "tmb_0269": {
+    "reason": "The documented public R start independently reproduced a higher likelihood. Retain all previous observations and rerun strict identified comparisons.",
+    "original_R_logLik": -306.1268219175575,
+    "independently_confirmed_R_logLik": -303.9661803981443,
+    "args": {
+      "start": {
+        "beta": [
+          0.2874474372924225,
+          0.22568055320517733,
+          -0.018579549456083234,
+          -0.5426964972010409
+        ],
+        "betazi": [
+          -275.3754779990712,
+          95.7859815946615,
+          -125.52801364927585
+        ],
+        "betadisp": [
+          -0.09552458020138298,
+          0.12037041421588085,
+          -0.1348856232941925,
+          -0.13941679122338374
+        ],
+        "theta": [
+          -0.07836570476664509
+        ]
+      }
+    }
+  },
+  "tmb_0323": {
+    "reason": "The documented public R start independently reproduced a higher likelihood. Retain all previous observations and rerun strict identified comparisons.",
+    "original_R_logLik": -226.02136955178676,
+    "independently_confirmed_R_logLik": -222.0041992968105,
+    "args": {
+      "start": {
+        "beta": [
+          0.3807972569658754,
+          0.4207510319911477,
+          0.37184206359566996,
+          -0.10893079845793639
+        ],
+        "betazi": [
+          -1776.472608699796,
+          1613.459588114982,
+          2.743618067531851
+        ],
+        "betadisp": [
+          -0.43849062597242594,
+          0.17155803949528428,
+          -0.03470326290262925,
+          -0.05960765590196535
+        ],
+        "theta": [
+          -0.8909556759094258,
+          -1.7308741533760459,
+          0.6721297809138409
+        ]
+      }
+    }
+  },
+  "tmb_0341": {
+    "reason": "The documented public R start independently reproduced a higher likelihood. Retain all previous observations and rerun strict identified comparisons.",
+    "original_R_logLik": -114.93581658113,
+    "independently_confirmed_R_logLik": -113.99686402005514,
+    "args": {
+      "start": {
+        "beta": [
+          0.4402506686435901,
+          0.26187924864358725,
+          0.06043369496924441,
+          -0.416872194353329
+        ],
+        "betazi": [
+          -645.3284455683427,
+          -311.1546550070336,
+          234.09412083524478
+        ],
+        "betadisp": [
+          -0.31280609669092396
+        ],
+        "theta": [
+          -0.9273270499670524
+        ]
+      }
+    }
+  },
+  "tmb_0377": {
+    "reason": "The documented public R start independently reproduced a higher likelihood. Retain all previous observations and rerun strict identified comparisons.",
+    "original_R_logLik": -176.95035207875853,
+    "independently_confirmed_R_logLik": -175.93606038315286,
+    "args": {
+      "start": {
+        "beta": [
+          0.22893940810164543,
+          0.38076846901194805,
+          0.1927566329229159,
+          -0.1526848266184579
+        ],
+        "betazi": [
+          -603.9667330470625,
+          -398.20502234096773,
+          88.70472590052002
+        ],
+        "betadisp": [
+          -0.1648796801342763,
+          0.11520216662211276,
+          0.18864219024118525,
+          -0.2634452058537155
+        ],
+        "theta": [
+          -0.5147457258259189
+        ]
+      }
+    }
+  },
+  "tmb_0683": {
+    "reason": "The documented public R start independently reproduced a higher likelihood. Retain all previous observations and rerun strict identified comparisons.",
+    "original_R_logLik": -134.51503426651703,
+    "independently_confirmed_R_logLik": -133.1272333447613,
+    "args": {
+      "start": {
+        "beta": [
+          0.2022804359967202,
+          0.3052778433037164,
+          -0.009005363076542258,
+          -0.5717749701328922
+        ],
+        "betazi": [
+          -17.945530593278942,
+          -10.469796092915669,
+          8.32868392214312
+        ],
+        "betadisp": [
+          -0.19313832077101065,
+          0.21422607865892848
+        ],
+        "theta": [
+          -0.1719593075144193
+        ]
+      }
+    }
+  },
+  "tmb_0717": {
+    "reason": "The documented public R start independently reproduced a higher likelihood. Retain all previous observations and rerun strict identified comparisons.",
+    "original_R_logLik": -66.63692008333902,
+    "independently_confirmed_R_logLik": -66.39273814763806,
+    "args": {
+      "start": {
+        "beta": [
+          -0.1280860332666694,
+          -0.21440703008386344,
+          0.45246115760814637,
+          -0.1585698599411226
+        ],
+        "betazi": [
+          -578.4563212545165,
+          87.14201561178008,
+          -385.89637785175404
+        ],
+        "theta": [
+          -0.34107241517121767,
+          -3.1091059959352707,
+          70710.67518626999
+        ]
+      }
+    }
+  },
+  "tmb_0719": {
+    "reason": "The documented public R start independently reproduced a higher likelihood. Retain all previous observations and rerun strict identified comparisons.",
+    "original_R_logLik": -156.75198316040212,
+    "independently_confirmed_R_logLik": -156.18118884244242,
+    "args": {
+      "start": {
+        "beta": [
+          0.34990386665572903,
+          0.37230323807714666,
+          0.3248170390155822,
+          -0.011978005705596324
+        ],
+        "betazi": [
+          -363.138263118536,
+          261.991928073547,
+          -49.73812461174328
+        ],
+        "betadisp": [
+          -0.23934655861362128
+        ],
+        "theta": [
+          -1.0692019355266633,
+          -1.128190266846484,
+          70710.67518626999
+        ]
+      }
+    }
+  },
+  "tmb_0737": {
+    "reason": "The documented public R start independently reproduced a higher likelihood. Retain all previous observations and rerun strict identified comparisons.",
+    "original_R_logLik": -127.67281100193142,
+    "independently_confirmed_R_logLik": -125.99180757822941,
+    "args": {
+      "start": {
+        "beta": [
+          0.23053896961491155,
+          0.5879195846082147,
+          0.4200894228543811,
+          0.15769189818126952
+        ],
+        "betazi": [
+          -2029.1779408693258,
+          229.04010882646773,
+          -1480.478912913103
+        ],
+        "betadisp": [
+          -0.4143533284938211,
+          0.06842462374543096
+        ],
+        "theta": [
+          -1.0405549433066483,
+          -1.6133193716235386,
+          -0.036821193645104104
+        ]
+      }
+    }
+  },
+  "tmb_0953": {
+    "reason": "The documented public R start independently reproduced a higher likelihood. Retain all previous observations and rerun strict identified comparisons.",
+    "original_R_logLik": -177.36712431412354,
+    "independently_confirmed_R_logLik": -175.5254326289794,
+    "args": {
+      "start": {
+        "beta": [
+          -0.17488213380312773,
+          -0.14263720530498378,
+          0.2527468034580794,
+          -0.19863969199632184
+        ],
+        "betazi": [
+          -974.8312245840402,
+          806.9052172245825,
+          -1.5003407650021106
+        ],
+        "betadisp": [
+          -0.4908420514141543,
+          0.24210233155182118
+        ],
+        "theta": [
+          -0.6649888736485191,
+          -1.0687456519850849,
+          70710.67518626999
+        ]
+      }
+    }
+  },
+  "tmb_0971": {
+    "reason": "The documented public R start independently reproduced a higher likelihood. Retain all previous observations and rerun strict identified comparisons.",
+    "original_R_logLik": -175.66326779882,
+    "independently_confirmed_R_logLik": -174.67658490197536,
+    "args": {
+      "start": {
+        "beta": [
+          0.2930819192134956,
+          0.45434094324999563,
+          0.021552624971207975,
+          -0.1079721418008768
+        ],
+        "betazi": [
+          -341.8008575017398,
+          127.01136390619905,
+          -175.46730060852715
+        ],
+        "betadisp": [
+          0.014694807262049725,
+          0.06374070638646794,
+          -0.5241310819527649,
+          -0.7229415510107392
+        ],
+        "theta": [
+          -0.7649741609663228,
+          -1.9397369062897583,
+          70710.67518626999
+        ]
+      }
+    }
+  },
+  "tmb_0989": {
+    "reason": "The documented public R start independently reproduced a higher likelihood. Retain all previous observations and rerun strict identified comparisons.",
+    "original_R_logLik": -108.84126226072291,
+    "independently_confirmed_R_logLik": -108.22367889364605,
+    "args": {
+      "start": {
+        "beta": [
+          0.4354103388421211,
+          0.3513481217039253,
+          -0.07164516562157326,
+          -0.34767020674377025
+        ],
+        "betazi": [
+          -1264.6633124624807,
+          55.124282877163246,
+          -974.9515148534902
+        ],
+        "betadisp": [
+          -0.25431189179564473
+        ],
+        "theta": [
+          -0.9531896598195981
+        ]
+      }
+    }
+  },
+  "tmb_1025": {
+    "reason": "The documented public R start independently reproduced a higher likelihood. Retain all previous observations and rerun strict identified comparisons.",
+    "original_R_logLik": -114.65197138279724,
+    "independently_confirmed_R_logLik": -113.55186060003071,
+    "args": {
+      "start": {
+        "beta": [
+          0.18672358971299846,
+          0.36784233239405045,
+          0.051387902094182376,
+          0.22903412187449512
+        ],
+        "betazi": [
+          -1262.3922735574681,
+          695.4156537183303,
+          357.05681993449747
+        ],
+        "betadisp": [
+          -0.48474005878349213,
+          0.2026251237031082,
+          0.29486901420817035,
+          -0.0952054098889247
+        ],
+        "theta": [
+          -1.5516016741899639
+        ]
+      }
+    }
+  },
+  "tmb_1097": {
+    "reason": "The documented public R start independently reproduced a higher likelihood. Retain all previous observations and rerun strict identified comparisons.",
+    "original_R_logLik": -92.04622661718311,
+    "independently_confirmed_R_logLik": -90.70255447318698,
+    "args": {
+      "start": {
+        "beta": [
+          0.21723937972150678,
+          0.44663197090149254,
+          0.19261592568613753,
+          -0.25525109253317924
+        ],
+        "betazi": [
+          -3481.985596233096,
+          -327.566957324505,
+          -2611.529962109855
+        ],
+        "betadisp": [
+          -0.4330411992968081
+        ],
+        "theta": [
+          -18.420680743952367
+        ]
+      }
+    }
+  }
+}

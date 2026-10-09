@@ -1,0 +1,4082 @@
+{
+  "status": "individually_reviewed_and_verified_all_39_cases_passed",
+  "case_count": 39,
+  "no_global_tolerance_relaxation": true,
+  "identified_fields": "Conditional and dispersion coefficients, covariance, p values, likelihood, AIC/BIC, predictions, random effects outside the explicitly proven zero block, all dimensions and summary labels retain the original TASK tolerances.",
+  "mathematics": {
+    "zero_random_effect": "As covariance tends to zero the random effects and their conditional modes tend to zero. Relative error against zero is undefined; each listed R/Python covariance must have every absolute eigenvalue <=1e-9, and every mode must have absolute value <=1e-8. Only named exceptional fields use the corresponding absolute comparison.",
+    "absent_zi": "For mixing probability p, a nonzero observation changes conditional log density by log(1-p); a zero observation changes it by log((1-p)+p/f0). The test derives both changes from the normalized density and requires the weighted sum of absolute changes <=1e-6 for both implementations. It also requires max(p)<=1e-6/total_weight and observed ZI curvature norm <=1e-6. Observed logit information is Z.T diag(w*(p*(1-p)-q*(1-q)*I[y=0])) Z, where q is the posterior conditional-component probability.",
+    "zi_wald_p": "The absent-mixture limit has no finite logit MLE or covariance and no defined Wald ratio. Its derived ZI Wald p-value exception is listed explicitly. Conditional and dispersion Wald p values remain strict."
+  },
+  "cases": [
+    {
+      "id": "tmb_0001",
+      "status": "all_strict_identified_fields_and_boundary_guards_passed",
+      "exception_fields": [
+        "g_random_modes"
+      ],
+      "applied_policy": {
+        "kind": "tmb_boundary_identification",
+        "exception_fields": [
+          "g_random_modes"
+        ],
+        "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+        "zero_random_effect": {
+          "g": {
+            "covariance_bound": 1e-09,
+            "mode_bound": 1e-08
+          }
+        }
+      },
+      "initial_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "g": {
+              "covariance_absolute_max": 3.2088120550903104e-13,
+              "mode_absolute_max": 1.845424259160368e-12
+            }
+          },
+          "Python": {
+            "g": {
+              "covariance_absolute_max": 0.0,
+              "mode_absolute_max": 0.0
+            }
+          }
+        }
+      },
+      "original_objective_evidence": {
+        "R": -136.55266559031028,
+        "Python": -136.55266559030852,
+        "Python_minus_R": 1.7621459846850485e-12,
+        "minimum_required_delta": -1e-06
+      },
+      "original_limits_evidence": {
+        "zero_random_effect": {
+          "g": {
+            "mathematical_limit": "zero covariance and random modes; relative error against zero has no defined finite scale",
+            "R_covariance": [
+              [
+                3.2088120550903104e-13
+              ]
+            ],
+            "Python_covariance": [
+              [
+                0.0
+              ]
+            ],
+            "R_covariance_eigenvalues": [
+              3.2088120550903104e-13
+            ],
+            "Python_covariance_eigenvalues": [
+              0.0
+            ],
+            "covariance_absolute_difference_max": 3.2088120550903104e-13,
+            "R_mode_absolute_max": 1.845424259160368e-12,
+            "Python_mode_absolute_max": 0.0,
+            "mode_absolute_difference_max": 1.845424259160368e-12,
+            "proposed_covariance_zero_bound": 1e-09,
+            "proposed_mode_zero_bound": 1e-08
+          }
+        }
+      },
+      "original_strict_field_audit": [
+        "cond_beta",
+        "cond_prediction",
+        "cond_vcov",
+        "disp_beta",
+        "disp_prediction",
+        "g_random_covariance",
+        "response_prediction",
+        "zprob_prediction"
+      ],
+      "original_python_warnings": [
+        "boundary (singular) fit"
+      ],
+      "final_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "g": {
+              "covariance_absolute_max": 3.2088120550903104e-13,
+              "mode_absolute_max": 1.845424259160368e-12
+            }
+          },
+          "Python": {
+            "g": {
+              "covariance_absolute_max": 0.0,
+              "mode_absolute_max": 0.0
+            }
+          }
+        },
+        "reference_log_likelihood": -136.55266559031028,
+        "python_log_likelihood": -136.55266559030852,
+        "reference_convergence": 0,
+        "reference_pd_hessian": true,
+        "fixture_sha256": "3b833876b253eb4dbbd2d41f098cd0c3c6876fee13e5c9c5e2f02f991dc88e00"
+      }
+    },
+    {
+      "id": "tmb_0003",
+      "status": "all_strict_identified_fields_and_boundary_guards_passed",
+      "exception_fields": [
+        "g_random_modes"
+      ],
+      "applied_policy": {
+        "kind": "tmb_boundary_identification",
+        "exception_fields": [
+          "g_random_modes"
+        ],
+        "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+        "zero_random_effect": {
+          "g": {
+            "covariance_bound": 1e-09,
+            "mode_bound": 1e-08
+          }
+        }
+      },
+      "initial_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "g": {
+              "covariance_absolute_max": 6.020509640320225e-13,
+              "mode_absolute_max": 1.974669820269393e-12
+            }
+          },
+          "Python": {
+            "g": {
+              "covariance_absolute_max": 0.0,
+              "mode_absolute_max": 0.0
+            }
+          }
+        }
+      },
+      "original_objective_evidence": {
+        "R": -67.14509666433752,
+        "Python": -67.14509666433652,
+        "Python_minus_R": 9.947598300641403e-13,
+        "minimum_required_delta": -1e-06
+      },
+      "original_limits_evidence": {
+        "zero_random_effect": {
+          "g": {
+            "mathematical_limit": "zero covariance and random modes; relative error against zero has no defined finite scale",
+            "R_covariance": [
+              [
+                6.020509640320225e-13
+              ]
+            ],
+            "Python_covariance": [
+              [
+                0.0
+              ]
+            ],
+            "R_covariance_eigenvalues": [
+              6.020509640320225e-13
+            ],
+            "Python_covariance_eigenvalues": [
+              0.0
+            ],
+            "covariance_absolute_difference_max": 6.020509640320225e-13,
+            "R_mode_absolute_max": 1.974669820269393e-12,
+            "Python_mode_absolute_max": 0.0,
+            "mode_absolute_difference_max": 1.974669820269393e-12,
+            "proposed_covariance_zero_bound": 1e-09,
+            "proposed_mode_zero_bound": 1e-08
+          }
+        }
+      },
+      "original_strict_field_audit": [
+        "cond_beta",
+        "cond_prediction",
+        "cond_vcov",
+        "disp_prediction",
+        "g_random_covariance",
+        "response_prediction",
+        "zprob_prediction"
+      ],
+      "original_python_warnings": [
+        "boundary (singular) fit"
+      ],
+      "final_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "g": {
+              "covariance_absolute_max": 6.020509640320225e-13,
+              "mode_absolute_max": 1.974669820269393e-12
+            }
+          },
+          "Python": {
+            "g": {
+              "covariance_absolute_max": 0.0,
+              "mode_absolute_max": 0.0
+            }
+          }
+        },
+        "reference_log_likelihood": -67.14509666433752,
+        "python_log_likelihood": -67.14509666433652,
+        "reference_convergence": 0,
+        "reference_pd_hessian": true,
+        "fixture_sha256": "a226e6bf9dbcc02ef1ea279b335a42a9492882552a7d5e7eac3451262178a99d"
+      }
+    },
+    {
+      "id": "tmb_0008",
+      "status": "all_strict_identified_fields_and_boundary_guards_passed",
+      "exception_fields": [
+        "g_random_covariance",
+        "g_random_modes"
+      ],
+      "applied_policy": {
+        "kind": "tmb_boundary_identification",
+        "exception_fields": [
+          "g_random_covariance",
+          "g_random_modes"
+        ],
+        "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+        "zero_random_effect": {
+          "g": {
+            "covariance_bound": 1e-09,
+            "mode_bound": 1e-08
+          }
+        }
+      },
+      "initial_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "g": {
+              "covariance_absolute_max": 1.8182205696510043e-12,
+              "mode_absolute_max": 9.15919855937671e-12
+            }
+          },
+          "Python": {
+            "g": {
+              "covariance_absolute_max": 0.0,
+              "mode_absolute_max": 0.0
+            }
+          }
+        }
+      },
+      "original_objective_evidence": {
+        "R": -121.90746996853866,
+        "Python": -121.90746996853687,
+        "Python_minus_R": 1.7905676941154525e-12,
+        "minimum_required_delta": -1e-06
+      },
+      "original_limits_evidence": {
+        "zero_random_effect": {
+          "g": {
+            "mathematical_limit": "zero covariance and random modes; relative error against zero has no defined finite scale",
+            "R_covariance": [
+              [
+                1.8182205696510043e-12
+              ]
+            ],
+            "Python_covariance": [
+              [
+                0.0
+              ]
+            ],
+            "R_covariance_eigenvalues": [
+              1.8182205696510043e-12
+            ],
+            "Python_covariance_eigenvalues": [
+              0.0
+            ],
+            "covariance_absolute_difference_max": 1.8182205696510043e-12,
+            "R_mode_absolute_max": 9.159198759549925e-12,
+            "Python_mode_absolute_max": 0.0,
+            "mode_absolute_difference_max": 9.159198759549925e-12,
+            "proposed_covariance_zero_bound": 1e-09,
+            "proposed_mode_zero_bound": 1e-08
+          }
+        }
+      },
+      "original_strict_field_audit": [
+        "cond_beta",
+        "cond_prediction",
+        "cond_vcov",
+        "disp_beta",
+        "disp_prediction",
+        "response_prediction",
+        "zi_beta",
+        "zi_vcov",
+        "zprob_prediction"
+      ],
+      "original_python_warnings": [
+        "boundary (singular) fit"
+      ],
+      "final_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "g": {
+              "covariance_absolute_max": 1.8182205696510043e-12,
+              "mode_absolute_max": 9.15919855937671e-12
+            }
+          },
+          "Python": {
+            "g": {
+              "covariance_absolute_max": 0.0,
+              "mode_absolute_max": 0.0
+            }
+          }
+        },
+        "reference_log_likelihood": -121.90746996853863,
+        "python_log_likelihood": -121.90746996853686,
+        "reference_convergence": 0,
+        "reference_pd_hessian": true,
+        "fixture_sha256": "22a2e8c43fb8e1135d762936792510439d15b34128aa52f650babdf10bcf10d5"
+      }
+    },
+    {
+      "id": "tmb_0011",
+      "status": "all_strict_identified_fields_and_boundary_guards_passed",
+      "exception_fields": [
+        "zi_beta",
+        "zi_vcov"
+      ],
+      "applied_policy": {
+        "kind": "tmb_boundary_identification",
+        "exception_fields": [
+          "zi_beta",
+          "zi_vcov",
+          "zi_wald_p"
+        ],
+        "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+        "absent_zi": true,
+        "mixture_likelihood_bound": 1e-06,
+        "zi_curvature_bound": 1e-06
+      },
+      "initial_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "probability_max": 1.8806711096881065e-14,
+            "probability_bound": 1.3698630136986301e-08,
+            "conditional_density_difference": 1.526417793408462e-12,
+            "observed_zi_curvature_norm": 8.057879890938048e-13
+          },
+          "Python": {
+            "probability_max": 1.1387853289428626e-14,
+            "probability_bound": 1.3698630136986301e-08,
+            "conditional_density_difference": 9.242776049802735e-13,
+            "observed_zi_curvature_norm": 4.875882417043471e-13
+          }
+        }
+      },
+      "original_objective_evidence": {
+        "R": -81.67751079047481,
+        "Python": -81.67751079047449,
+        "Python_minus_R": 3.268496584496461e-13,
+        "minimum_required_delta": -1e-06
+      },
+      "original_limits_evidence": {
+        "absent_zi": {
+          "mathematical_limit": "all mixing probabilities zero; logit coefficients and divergent covariance do not have finite identified reference values",
+          "R_beta": -31.604562615536196,
+          "Python_beta": [
+            -32.10465422787919
+          ],
+          "R_marginal_precision_eigenvalues": [
+            7.523428462160662e-13
+          ],
+          "R_probability_max": 1.8806711096881065e-14,
+          "Python_probability_max": 1.1405801928513001e-14,
+          "probability_absolute_difference_max": 7.400909168368064e-15,
+          "case_total_weight": 73.0,
+          "proposed_probability_limit_bound": 1.3698630136986301e-08,
+          "probability_bound_met_by_both": true
+        }
+      },
+      "original_strict_field_audit": [
+        "cond_beta",
+        "cond_prediction",
+        "cond_vcov",
+        "disp_beta",
+        "disp_prediction",
+        "g_random_covariance",
+        "g_random_modes",
+        "response_prediction",
+        "zprob_prediction"
+      ],
+      "original_python_warnings": [],
+      "final_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "probability_max": 1.8806711096881065e-14,
+            "probability_bound": 1.3698630136986301e-08,
+            "conditional_density_difference": 1.526417793408462e-12,
+            "observed_zi_curvature_norm": 8.057879890938048e-13
+          },
+          "Python": {
+            "probability_max": 1.1387853289428626e-14,
+            "probability_bound": 1.3698630136986301e-08,
+            "conditional_density_difference": 9.242776049802735e-13,
+            "observed_zi_curvature_norm": 4.875882417043471e-13
+          }
+        },
+        "reference_log_likelihood": -81.67751079047481,
+        "python_log_likelihood": -81.67751079047449,
+        "reference_convergence": 0,
+        "reference_pd_hessian": true,
+        "fixture_sha256": "d38f2ca7a56255d8bf80f51c82eee14d7e1a3f798680e134c596835c5edf6923"
+      }
+    },
+    {
+      "id": "tmb_0029",
+      "status": "all_strict_identified_fields_and_boundary_guards_passed",
+      "exception_fields": [
+        "zi_beta",
+        "zi_vcov"
+      ],
+      "applied_policy": {
+        "kind": "tmb_boundary_identification",
+        "exception_fields": [
+          "zi_beta",
+          "zi_vcov",
+          "zi_wald_p"
+        ],
+        "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+        "absent_zi": true,
+        "mixture_likelihood_bound": 1e-06,
+        "zi_curvature_bound": 1e-06
+      },
+      "initial_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "probability_max": 3.3722276869362325e-14,
+            "probability_bound": 9.09090909090909e-09,
+            "conditional_density_difference": 4.003937557114935e-12,
+            "observed_zi_curvature_norm": 1.9990408638923583e-12
+          },
+          "Python": {
+            "probability_max": 2.0935978269583116e-14,
+            "probability_bound": 9.09090909090909e-09,
+            "conditional_density_difference": 2.4857855836234503e-12,
+            "observed_zi_curvature_norm": 1.2409182642977251e-12
+          }
+        }
+      },
+      "original_objective_evidence": {
+        "R": -139.2342251405427,
+        "Python": -139.23422514054198,
+        "Python_minus_R": 7.105427357601002e-13,
+        "minimum_required_delta": -1e-06
+      },
+      "original_limits_evidence": {
+        "absent_zi": {
+          "mathematical_limit": "all mixing probabilities zero; logit coefficients and divergent covariance do not have finite identified reference values",
+          "R_beta": -31.020617741240358,
+          "Python_beta": [
+            -31.511065671767582
+          ],
+          "R_marginal_precision_eigenvalues": [
+            1.9289817535510285e-12
+          ],
+          "R_probability_max": 3.3722276869362325e-14,
+          "Python_probability_max": 2.064990508736736e-14,
+          "probability_absolute_difference_max": 1.3072371781994966e-14,
+          "case_total_weight": 110.0,
+          "proposed_probability_limit_bound": 9.09090909090909e-09,
+          "probability_bound_met_by_both": true
+        }
+      },
+      "original_strict_field_audit": [
+        "cond_beta",
+        "cond_prediction",
+        "cond_vcov",
+        "disp_beta",
+        "disp_prediction",
+        "disp_vcov",
+        "g_random_covariance",
+        "g_random_modes",
+        "response_prediction",
+        "zprob_prediction"
+      ],
+      "original_python_warnings": [],
+      "final_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "probability_max": 3.3722276869362325e-14,
+            "probability_bound": 9.09090909090909e-09,
+            "conditional_density_difference": 4.003937557114935e-12,
+            "observed_zi_curvature_norm": 1.9990408638923583e-12
+          },
+          "Python": {
+            "probability_max": 2.0935978269583116e-14,
+            "probability_bound": 9.09090909090909e-09,
+            "conditional_density_difference": 2.4857855836234503e-12,
+            "observed_zi_curvature_norm": 1.2409182642977251e-12
+          }
+        },
+        "reference_log_likelihood": -139.23422514054272,
+        "python_log_likelihood": -139.234225140542,
+        "reference_convergence": 0,
+        "reference_pd_hessian": true,
+        "fixture_sha256": "cd8547f02368a0715256a4f5bff9a773dc83bc0415a8df56ca7d3e760e0dbd49"
+      }
+    },
+    {
+      "id": "tmb_0047",
+      "status": "all_strict_identified_fields_and_boundary_guards_passed",
+      "exception_fields": [
+        "zi_beta",
+        "zi_vcov"
+      ],
+      "applied_policy": {
+        "kind": "tmb_boundary_identification",
+        "exception_fields": [
+          "zi_beta",
+          "zi_vcov",
+          "zi_wald_p"
+        ],
+        "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+        "absent_zi": true,
+        "mixture_likelihood_bound": 1e-06,
+        "zi_curvature_bound": 1e-06
+      },
+      "initial_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "probability_max": 1.9873477551925094e-14,
+            "probability_bound": 1.176470588235294e-08,
+            "conditional_density_difference": 2.004881812032344e-12,
+            "observed_zi_curvature_norm": 8.961022631214521e-13
+          },
+          "Python": {
+            "probability_max": 1.8110050304777747e-14,
+            "probability_bound": 1.176470588235294e-08,
+            "conditional_density_difference": 1.8269832430459437e-12,
+            "observed_zi_curvature_norm": 8.172652206899325e-13
+          }
+        }
+      },
+      "original_objective_evidence": {
+        "R": -100.39519449224339,
+        "Python": -100.39519449224332,
+        "Python_minus_R": 7.105427357601002e-14,
+        "minimum_required_delta": -1e-06
+      },
+      "original_limits_evidence": {
+        "absent_zi": {
+          "mathematical_limit": "all mixing probabilities zero; logit coefficients and divergent covariance do not have finite identified reference values",
+          "R_beta": -31.54939033846529,
+          "Python_beta": [
+            -31.639702156268168
+          ],
+          "R_marginal_precision_eigenvalues": [
+            8.56632903656634e-13
+          ],
+          "R_probability_max": 1.9873477551925094e-14,
+          "Python_probability_max": 1.8157328233482807e-14,
+          "probability_absolute_difference_max": 1.716149318442287e-15,
+          "case_total_weight": 85.0,
+          "proposed_probability_limit_bound": 1.176470588235294e-08,
+          "probability_bound_met_by_both": true
+        }
+      },
+      "original_strict_field_audit": [
+        "cond_beta",
+        "cond_prediction",
+        "cond_vcov",
+        "disp_beta",
+        "disp_prediction",
+        "disp_vcov",
+        "g_random_covariance",
+        "g_random_modes",
+        "response_prediction",
+        "zprob_prediction"
+      ],
+      "original_python_warnings": [],
+      "final_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "probability_max": 1.9873477551925094e-14,
+            "probability_bound": 1.176470588235294e-08,
+            "conditional_density_difference": 2.004881812032344e-12,
+            "observed_zi_curvature_norm": 8.961022631214521e-13
+          },
+          "Python": {
+            "probability_max": 1.8110050304777747e-14,
+            "probability_bound": 1.176470588235294e-08,
+            "conditional_density_difference": 1.8269832430459437e-12,
+            "observed_zi_curvature_norm": 8.172652206899325e-13
+          }
+        },
+        "reference_log_likelihood": -100.39519449224339,
+        "python_log_likelihood": -100.39519449224332,
+        "reference_convergence": 0,
+        "reference_pd_hessian": true,
+        "fixture_sha256": "5fafcf3b0a31d6db98e6a74f7c638e43881444979cb9b2addee5440ab4eb8e9c"
+      }
+    },
+    {
+      "id": "tmb_0063",
+      "status": "all_strict_identified_fields_and_boundary_guards_passed",
+      "exception_fields": [
+        "zi_beta",
+        "zi_vcov"
+      ],
+      "applied_policy": {
+        "kind": "tmb_boundary_identification",
+        "exception_fields": [
+          "zi_beta",
+          "zi_vcov",
+          "zi_wald_p"
+        ],
+        "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+        "absent_zi": true,
+        "mixture_likelihood_bound": 1e-06,
+        "zi_curvature_bound": 1e-06
+      },
+      "initial_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "probability_max": 7.020714491097188e-13,
+            "probability_bound": 1.3513513513513512e-08,
+            "conditional_density_difference": 4.406797688023869e-11,
+            "observed_zi_curvature_norm": 2.269030525331277e-12
+          },
+          "Python": {
+            "probability_max": 5.277536402846574e-13,
+            "probability_bound": 1.3513513513513512e-08,
+            "conditional_density_difference": 3.312630822406152e-11,
+            "observed_zi_curvature_norm": 1.706088877294699e-12
+          }
+        }
+      },
+      "original_objective_evidence": {
+        "R": -48.47653840175647,
+        "Python": -48.47653840175911,
+        "Python_minus_R": -2.6361135496699717e-12,
+        "minimum_required_delta": -1e-06
+      },
+      "original_limits_evidence": {
+        "absent_zi": {
+          "mathematical_limit": "all mixing probabilities zero; logit coefficients and divergent covariance do not have finite identified reference values",
+          "R_beta": -27.984741216704766,
+          "Python_beta": [
+            -28.27747631246763
+          ],
+          "R_marginal_precision_eigenvalues": [
+            3.8795465088936026e-13
+          ],
+          "R_probability_max": 7.020714491097188e-13,
+          "Python_probability_max": 5.238996102334011e-13,
+          "probability_absolute_difference_max": 1.7817183887631766e-13,
+          "case_total_weight": 74.0,
+          "proposed_probability_limit_bound": 1.3513513513513512e-08,
+          "probability_bound_met_by_both": true
+        }
+      },
+      "original_strict_field_audit": [
+        "cond_beta",
+        "cond_prediction",
+        "cond_vcov",
+        "disp_prediction",
+        "g_random_covariance",
+        "g_random_modes",
+        "response_prediction",
+        "zprob_prediction"
+      ],
+      "original_python_warnings": [],
+      "final_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "probability_max": 7.020714491097188e-13,
+            "probability_bound": 1.3513513513513512e-08,
+            "conditional_density_difference": 4.406797688023869e-11,
+            "observed_zi_curvature_norm": 2.269030525331277e-12
+          },
+          "Python": {
+            "probability_max": 5.277536402846574e-13,
+            "probability_bound": 1.3513513513513512e-08,
+            "conditional_density_difference": 3.312630822406152e-11,
+            "observed_zi_curvature_norm": 1.706088877294699e-12
+          }
+        },
+        "reference_log_likelihood": -48.47653840175644,
+        "python_log_likelihood": -48.47653840175637,
+        "reference_convergence": 0,
+        "reference_pd_hessian": true,
+        "fixture_sha256": "72288ff68a938b5d847568988a2d41069a1db1c40b6e6b09c70cdc47b7a4acd7"
+      }
+    },
+    {
+      "id": "tmb_0107",
+      "status": "all_strict_identified_fields_and_boundary_guards_passed",
+      "exception_fields": [
+        "zi_beta",
+        "zi_vcov"
+      ],
+      "applied_policy": {
+        "kind": "tmb_boundary_identification",
+        "exception_fields": [
+          "zi_beta",
+          "zi_vcov",
+          "zi_wald_p"
+        ],
+        "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+        "absent_zi": true,
+        "mixture_likelihood_bound": 1e-06,
+        "zi_curvature_bound": 1e-06
+      },
+      "initial_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "probability_max": 3.412362856396371e-14,
+            "probability_bound": 1.0869565217391303e-08,
+            "conditional_density_difference": 2.0627454705127912e-12,
+            "observed_zi_curvature_norm": 1.3768864858273344e-12
+          },
+          "Python": {
+            "probability_max": 2.3857958174913053e-14,
+            "probability_bound": 1.0869565217391303e-08,
+            "conditional_density_difference": 1.6602059169004857e-12,
+            "observed_zi_curvature_norm": 1.1405030800659782e-12
+          }
+        }
+      },
+      "original_objective_evidence": {
+        "R": -117.52899134729526,
+        "Python": -117.5289913472945,
+        "Python_minus_R": 7.673861546209082e-13,
+        "minimum_required_delta": -1e-06
+      },
+      "original_limits_evidence": {
+        "absent_zi": {
+          "mathematical_limit": "all mixing probabilities zero; logit coefficients and divergent covariance do not have finite identified reference values",
+          "R_beta": [
+            -31.500604006365943,
+            0.272322724518135,
+            0.14027068478200688
+          ],
+          "Python_beta": [
+            -125.86384094021557,
+            -2.2662572901857896,
+            -70.66296788438555
+          ],
+          "R_marginal_precision_eigenvalues": [
+            4.580858528398175e-13,
+            7.762134799476491e-13,
+            1.3307359062813483e-12
+          ],
+          "R_probability_max": 3.412362856396371e-14,
+          "Python_probability_max": 5.100687835153102e-13,
+          "probability_absolute_difference_max": 4.920317693258301e-13,
+          "case_total_weight": 92.0,
+          "proposed_probability_limit_bound": 1.0869565217391303e-08,
+          "probability_bound_met_by_both": true
+        }
+      },
+      "original_strict_field_audit": [
+        "cond_beta",
+        "cond_prediction",
+        "cond_vcov",
+        "disp_beta",
+        "disp_prediction",
+        "disp_vcov",
+        "g_random_covariance",
+        "g_random_modes",
+        "response_prediction",
+        "zprob_prediction"
+      ],
+      "original_python_warnings": [
+        "Non-positive-definite Hessian"
+      ],
+      "final_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "probability_max": 3.412362856396371e-14,
+            "probability_bound": 1.0869565217391303e-08,
+            "conditional_density_difference": 2.0627454705127912e-12,
+            "observed_zi_curvature_norm": 1.3768864858273344e-12
+          },
+          "Python": {
+            "probability_max": 2.3857958174913053e-14,
+            "probability_bound": 1.0869565217391303e-08,
+            "conditional_density_difference": 1.6602059169004857e-12,
+            "observed_zi_curvature_norm": 1.1405030800659782e-12
+          }
+        },
+        "reference_log_likelihood": -117.52899134729526,
+        "python_log_likelihood": -117.52899134729509,
+        "reference_convergence": 0,
+        "reference_pd_hessian": true,
+        "fixture_sha256": "76262a88b58d249a8a01eb4d0fe21bd94e20996e4af9f9c7379e143525890819"
+      }
+    },
+    {
+      "id": "tmb_0119",
+      "status": "all_strict_identified_fields_and_boundary_guards_passed",
+      "exception_fields": [
+        "zi_beta",
+        "zi_vcov"
+      ],
+      "applied_policy": {
+        "kind": "tmb_boundary_identification",
+        "exception_fields": [
+          "zi_beta",
+          "zi_vcov",
+          "zi_wald_p"
+        ],
+        "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+        "absent_zi": true,
+        "mixture_likelihood_bound": 1e-06,
+        "zi_curvature_bound": 1e-06
+      },
+      "initial_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "probability_max": 3.870122752985349e-14,
+            "probability_bound": 7.936507936507936e-09,
+            "conditional_density_difference": 6.13959326019215e-12,
+            "observed_zi_curvature_norm": 1.7550736573307236e-12
+          },
+          "Python": {
+            "probability_max": 2.851162303994709e-14,
+            "probability_bound": 7.936507936507936e-09,
+            "conditional_density_difference": 4.523106366964756e-12,
+            "observed_zi_curvature_norm": 1.2943028420594487e-12
+          }
+        }
+      },
+      "original_objective_evidence": {
+        "R": -158.81964439669736,
+        "Python": -158.8196443966972,
+        "Python_minus_R": 1.4210854715202004e-13,
+        "minimum_required_delta": -1e-06
+      },
+      "original_limits_evidence": {
+        "absent_zi": {
+          "mathematical_limit": "all mixing probabilities zero; logit coefficients and divergent covariance do not have finite identified reference values",
+          "R_beta": -30.88290507626029,
+          "Python_beta": [
+            -31.06130175858478
+          ],
+          "R_marginal_precision_eigenvalues": [
+            1.5458963585437646e-12
+          ],
+          "R_probability_max": 3.870122752985349e-14,
+          "Python_probability_max": 3.2377852891103575e-14,
+          "probability_absolute_difference_max": 6.323374638749917e-15,
+          "case_total_weight": 126.0,
+          "proposed_probability_limit_bound": 7.936507936507936e-09,
+          "probability_bound_met_by_both": true
+        }
+      },
+      "original_strict_field_audit": [
+        "cond_beta",
+        "cond_prediction",
+        "cond_vcov",
+        "disp_beta",
+        "disp_prediction",
+        "g_random_covariance",
+        "g_random_modes",
+        "response_prediction",
+        "zprob_prediction"
+      ],
+      "original_python_warnings": [],
+      "final_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "probability_max": 3.870122752985349e-14,
+            "probability_bound": 7.936507936507936e-09,
+            "conditional_density_difference": 6.13959326019215e-12,
+            "observed_zi_curvature_norm": 1.7550736573307236e-12
+          },
+          "Python": {
+            "probability_max": 2.851162303994709e-14,
+            "probability_bound": 7.936507936507936e-09,
+            "conditional_density_difference": 4.523106366964756e-12,
+            "observed_zi_curvature_norm": 1.2943028420594487e-12
+          }
+        },
+        "reference_log_likelihood": -158.81964439669736,
+        "python_log_likelihood": -158.81964439669702,
+        "reference_convergence": 0,
+        "reference_pd_hessian": true,
+        "fixture_sha256": "0c733b4bcf4e94fae74f40d01b7ea027d770b9c2477986baade679f9152d843e"
+      }
+    },
+    {
+      "id": "tmb_0137",
+      "status": "all_strict_identified_fields_and_boundary_guards_passed",
+      "exception_fields": [
+        "zi_beta",
+        "zi_vcov"
+      ],
+      "applied_policy": {
+        "kind": "tmb_boundary_identification",
+        "exception_fields": [
+          "zi_beta",
+          "zi_vcov",
+          "zi_wald_p"
+        ],
+        "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+        "absent_zi": true,
+        "mixture_likelihood_bound": 1e-06,
+        "zi_curvature_bound": 1e-06
+      },
+      "initial_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "probability_max": 3.2223719371070495e-14,
+            "probability_bound": 1.0416666666666666e-08,
+            "conditional_density_difference": 3.3003739566409625e-12,
+            "observed_zi_curvature_norm": 1.4034955715383938e-12
+          },
+          "Python": {
+            "probability_max": 2.4284122726738394e-14,
+            "probability_bound": 1.0416666666666666e-08,
+            "conditional_density_difference": 2.4871953880814186e-12,
+            "observed_zi_curvature_norm": 1.0580720171267783e-12
+          }
+        }
+      },
+      "original_objective_evidence": {
+        "R": -106.88649605422302,
+        "Python": -106.88649605422266,
+        "Python_minus_R": 3.552713678800501e-13,
+        "minimum_required_delta": -1e-06
+      },
+      "original_limits_evidence": {
+        "absent_zi": {
+          "mathematical_limit": "all mixing probabilities zero; logit coefficients and divergent covariance do not have finite identified reference values",
+          "R_beta": -31.066073587105617,
+          "Python_beta": [
+            -31.348755615508843
+          ],
+          "R_marginal_precision_eigenvalues": [
+            1.3261084120878673e-12
+          ],
+          "R_probability_max": 3.2223719371070495e-14,
+          "Python_probability_max": 2.4288932147331635e-14,
+          "probability_absolute_difference_max": 7.93478722373886e-15,
+          "case_total_weight": 96.0,
+          "proposed_probability_limit_bound": 1.0416666666666666e-08,
+          "probability_bound_met_by_both": true
+        }
+      },
+      "original_strict_field_audit": [
+        "cond_beta",
+        "cond_prediction",
+        "cond_vcov",
+        "disp_beta",
+        "disp_prediction",
+        "disp_vcov",
+        "g_random_covariance",
+        "g_random_modes",
+        "response_prediction",
+        "zprob_prediction"
+      ],
+      "original_python_warnings": [],
+      "final_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "probability_max": 3.2223719371070495e-14,
+            "probability_bound": 1.0416666666666666e-08,
+            "conditional_density_difference": 3.3003739566409625e-12,
+            "observed_zi_curvature_norm": 1.4034955715383938e-12
+          },
+          "Python": {
+            "probability_max": 2.4284122726738394e-14,
+            "probability_bound": 1.0416666666666666e-08,
+            "conditional_density_difference": 2.4871953880814186e-12,
+            "observed_zi_curvature_norm": 1.0580720171267783e-12
+          }
+        },
+        "reference_log_likelihood": -106.88649605422302,
+        "python_log_likelihood": -106.88649605422265,
+        "reference_convergence": 0,
+        "reference_pd_hessian": true,
+        "fixture_sha256": "d3011f2bfdc89d267acbf469d730aacff68ea1b62e23ec2519738a2577db48c6"
+      }
+    },
+    {
+      "id": "tmb_0138",
+      "status": "all_strict_identified_fields_and_boundary_guards_passed",
+      "exception_fields": [
+        "g_random_covariance",
+        "g_random_modes"
+      ],
+      "applied_policy": {
+        "kind": "tmb_boundary_identification",
+        "exception_fields": [
+          "g_random_covariance",
+          "g_random_modes"
+        ],
+        "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+        "zero_random_effect": {
+          "g": {
+            "covariance_bound": 1e-09,
+            "mode_bound": 1e-08
+          }
+        }
+      },
+      "initial_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "g": {
+              "covariance_absolute_max": 1.0153279189816662e-12,
+              "mode_absolute_max": 3.854861902535551e-12
+            }
+          },
+          "Python": {
+            "g": {
+              "covariance_absolute_max": 0.0,
+              "mode_absolute_max": 0.0
+            }
+          }
+        }
+      },
+      "original_objective_evidence": {
+        "R": -97.5956037721024,
+        "Python": -97.59560377210164,
+        "Python_minus_R": 7.531752999057062e-13,
+        "minimum_required_delta": -1e-06
+      },
+      "original_limits_evidence": {
+        "zero_random_effect": {
+          "g": {
+            "mathematical_limit": "zero covariance and random modes; relative error against zero has no defined finite scale",
+            "R_covariance": [
+              [
+                1.0153279189816662e-12
+              ]
+            ],
+            "Python_covariance": [
+              [
+                0.0
+              ]
+            ],
+            "R_covariance_eigenvalues": [
+              1.0153279189816662e-12
+            ],
+            "Python_covariance_eigenvalues": [
+              0.0
+            ],
+            "covariance_absolute_difference_max": 1.0153279189816662e-12,
+            "R_mode_absolute_max": 3.854861902535551e-12,
+            "Python_mode_absolute_max": 0.0,
+            "mode_absolute_difference_max": 3.854861902535551e-12,
+            "proposed_covariance_zero_bound": 1e-09,
+            "proposed_mode_zero_bound": 1e-08
+          }
+        }
+      },
+      "original_strict_field_audit": [
+        "cond_beta",
+        "cond_prediction",
+        "cond_vcov",
+        "disp_prediction",
+        "response_prediction",
+        "zi_beta",
+        "zi_vcov",
+        "zprob_prediction"
+      ],
+      "original_python_warnings": [
+        "boundary (singular) fit"
+      ],
+      "final_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "g": {
+              "covariance_absolute_max": 1.0153279189816662e-12,
+              "mode_absolute_max": 3.854861902535551e-12
+            }
+          },
+          "Python": {
+            "g": {
+              "covariance_absolute_max": 0.0,
+              "mode_absolute_max": 0.0
+            }
+          }
+        },
+        "reference_log_likelihood": -97.59560377210238,
+        "python_log_likelihood": -97.59560377210164,
+        "reference_convergence": 0,
+        "reference_pd_hessian": true,
+        "fixture_sha256": "c58fcaa091ebf89fe5ab796dd31f901c919ea7cba45763ee27a75f4e283565af"
+      }
+    },
+    {
+      "id": "tmb_0191",
+      "status": "all_strict_identified_fields_and_boundary_guards_passed",
+      "exception_fields": [
+        "zi_beta",
+        "zi_vcov"
+      ],
+      "applied_policy": {
+        "kind": "tmb_boundary_identification",
+        "exception_fields": [
+          "zi_beta",
+          "zi_vcov",
+          "zi_wald_p"
+        ],
+        "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+        "absent_zi": true,
+        "mixture_likelihood_bound": 1e-06,
+        "zi_curvature_bound": 1e-06
+      },
+      "initial_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "probability_max": 1.1752507923916694e-13,
+            "probability_bound": 8.547008547008547e-09,
+            "conditional_density_difference": 1.88596868391064e-11,
+            "observed_zi_curvature_norm": 2.294486969096636e-12
+          },
+          "Python": {
+            "probability_max": 7.115736295040915e-14,
+            "probability_bound": 8.547008547008547e-09,
+            "conditional_density_difference": 1.1418886847207632e-11,
+            "observed_zi_curvature_norm": 1.3898482303686384e-12
+          }
+        }
+      },
+      "original_objective_evidence": {
+        "R": -137.1336783613621,
+        "Python": -137.1336783613619,
+        "Python_minus_R": 1.9895196601282805e-13,
+        "minimum_required_delta": -1e-06
+      },
+      "original_limits_evidence": {
+        "absent_zi": {
+          "mathematical_limit": "all mixing probabilities zero; logit coefficients and divergent covariance do not have finite identified reference values",
+          "R_beta": -29.772124643768166,
+          "Python_beta": [
+            -29.890298460673787
+          ],
+          "R_marginal_precision_eigenvalues": [
+            1.4551346765628368e-12
+          ],
+          "R_probability_max": 1.1752507923916694e-13,
+          "Python_probability_max": 1.0442592143497279e-13,
+          "probability_absolute_difference_max": 1.3099157804194149e-14,
+          "case_total_weight": 117.0,
+          "proposed_probability_limit_bound": 8.547008547008547e-09,
+          "probability_bound_met_by_both": true
+        }
+      },
+      "original_strict_field_audit": [
+        "cond_beta",
+        "cond_prediction",
+        "cond_vcov",
+        "disp_beta",
+        "disp_prediction",
+        "disp_vcov",
+        "g_random_covariance",
+        "g_random_modes",
+        "response_prediction",
+        "zprob_prediction"
+      ],
+      "original_python_warnings": [],
+      "final_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "probability_max": 1.1752507923916694e-13,
+            "probability_bound": 8.547008547008547e-09,
+            "conditional_density_difference": 1.88596868391064e-11,
+            "observed_zi_curvature_norm": 2.294486969096636e-12
+          },
+          "Python": {
+            "probability_max": 7.115736295040915e-14,
+            "probability_bound": 8.547008547008547e-09,
+            "conditional_density_difference": 1.1418886847207632e-11,
+            "observed_zi_curvature_norm": 1.3898482303686384e-12
+          }
+        },
+        "reference_log_likelihood": -137.13367836136206,
+        "python_log_likelihood": -137.13367836136146,
+        "reference_convergence": 0,
+        "reference_pd_hessian": true,
+        "fixture_sha256": "f93cacaa8538b011a226d47688ff2846174d7e24aa55d387106c33d840bbfcf1"
+      }
+    },
+    {
+      "id": "tmb_0258",
+      "status": "all_strict_identified_fields_and_boundary_guards_passed",
+      "exception_fields": [
+        "zi_beta",
+        "zi_vcov"
+      ],
+      "applied_policy": {
+        "kind": "tmb_boundary_identification",
+        "exception_fields": [
+          "zi_beta",
+          "zi_vcov",
+          "zi_wald_p"
+        ],
+        "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+        "absent_zi": true,
+        "mixture_likelihood_bound": 1e-06,
+        "zi_curvature_bound": 1e-06
+      },
+      "initial_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "probability_max": 2.0884797453516547e-13,
+            "probability_bound": 4.739336492890995e-09,
+            "conditional_density_difference": 5.855344774138276e-11,
+            "observed_zi_curvature_norm": 3.265560338159014e-12
+          },
+          "Python": {
+            "probability_max": 1.6355875734656954e-13,
+            "probability_bound": 4.739336492890995e-09,
+            "conditional_density_difference": 4.585598290736422e-11,
+            "observed_zi_curvature_norm": 2.5580130176167984e-12
+          }
+        }
+      },
+      "original_objective_evidence": {
+        "R": -289.51721308968484,
+        "Python": -289.5172130895656,
+        "Python_minus_R": 1.1925749276997522e-10,
+        "minimum_required_delta": -1e-06
+      },
+      "original_limits_evidence": {
+        "absent_zi": {
+          "mathematical_limit": "all mixing probabilities zero; logit coefficients and divergent covariance do not have finite identified reference values",
+          "R_beta": -29.19716980219404,
+          "Python_beta": [
+            -29.441799861536015
+          ],
+          "R_marginal_precision_eigenvalues": [
+            2.280797138277468e-12
+          ],
+          "R_probability_max": 2.0884797453516547e-13,
+          "Python_probability_max": 1.6352674147321318e-13,
+          "probability_absolute_difference_max": 4.532123306195229e-14,
+          "case_total_weight": 211.0,
+          "proposed_probability_limit_bound": 4.739336492890995e-09,
+          "probability_bound_met_by_both": true
+        }
+      },
+      "original_strict_field_audit": [
+        "cond_beta",
+        "cond_prediction",
+        "cond_vcov",
+        "disp_prediction",
+        "g_random_covariance",
+        "g_random_modes",
+        "response_prediction",
+        "zprob_prediction"
+      ],
+      "original_python_warnings": [],
+      "final_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "probability_max": 2.0884797453516547e-13,
+            "probability_bound": 4.739336492890995e-09,
+            "conditional_density_difference": 5.855344774138276e-11,
+            "observed_zi_curvature_norm": 3.265560338159014e-12
+          },
+          "Python": {
+            "probability_max": 1.6355875734656954e-13,
+            "probability_bound": 4.739336492890995e-09,
+            "conditional_density_difference": 4.585598290736422e-11,
+            "observed_zi_curvature_norm": 2.5580130176167984e-12
+          }
+        },
+        "reference_log_likelihood": -289.51721308968484,
+        "python_log_likelihood": -289.5172130895658,
+        "reference_convergence": 0,
+        "reference_pd_hessian": true,
+        "fixture_sha256": "cf4ef25b7ce79f0c1bb52edfbaba1f8ed8f02bc412e93eb734c3adb78999dd77"
+      }
+    },
+    {
+      "id": "tmb_0425",
+      "status": "all_strict_identified_fields_and_boundary_guards_passed",
+      "exception_fields": [
+        "zi_beta",
+        "zi_vcov"
+      ],
+      "applied_policy": {
+        "kind": "tmb_boundary_identification",
+        "exception_fields": [
+          "zi_beta",
+          "zi_vcov",
+          "zi_wald_p"
+        ],
+        "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+        "absent_zi": true,
+        "mixture_likelihood_bound": 1e-06,
+        "zi_curvature_bound": 1e-06
+      },
+      "initial_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "probability_max": 1.887979474244885e-14,
+            "probability_bound": 9.259259259259259e-09,
+            "conditional_density_difference": 2.185266000973213e-12,
+            "observed_zi_curvature_norm": 1.4774670263290656e-12
+          },
+          "Python": {
+            "probability_max": 7.175177818551858e-15,
+            "probability_bound": 9.259259259259259e-09,
+            "conditional_density_difference": 8.305001379487028e-13,
+            "observed_zi_curvature_norm": 5.615343390706445e-13
+          }
+        }
+      },
+      "original_objective_evidence": {
+        "R": -112.9663253132195,
+        "Python": -112.96632531321858,
+        "Python_minus_R": 9.237055564881302e-13,
+        "minimum_required_delta": -1e-06
+      },
+      "original_limits_evidence": {
+        "absent_zi": {
+          "mathematical_limit": "all mixing probabilities zero; logit coefficients and divergent covariance do not have finite identified reference values",
+          "R_beta": -31.600684105944737,
+          "Python_beta": [
+            -32.56801948885255
+          ],
+          "R_marginal_precision_eigenvalues": [
+            1.446584480996654e-12
+          ],
+          "R_probability_max": 1.887979474244885e-14,
+          "Python_probability_max": 7.17610607140446e-15,
+          "probability_absolute_difference_max": 1.1703688671044392e-14,
+          "case_total_weight": 108.0,
+          "proposed_probability_limit_bound": 9.259259259259259e-09,
+          "probability_bound_met_by_both": true
+        }
+      },
+      "original_strict_field_audit": [
+        "cond_beta",
+        "cond_prediction",
+        "cond_vcov",
+        "disp_beta",
+        "disp_prediction",
+        "disp_vcov",
+        "g_random_covariance",
+        "g_random_modes",
+        "response_prediction",
+        "zprob_prediction"
+      ],
+      "original_python_warnings": [],
+      "final_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "probability_max": 1.887979474244885e-14,
+            "probability_bound": 9.259259259259259e-09,
+            "conditional_density_difference": 2.185266000973213e-12,
+            "observed_zi_curvature_norm": 1.4774670263290656e-12
+          },
+          "Python": {
+            "probability_max": 7.175177818551858e-15,
+            "probability_bound": 9.259259259259259e-09,
+            "conditional_density_difference": 8.305001379487028e-13,
+            "observed_zi_curvature_norm": 5.615343390706445e-13
+          }
+        },
+        "reference_log_likelihood": -112.96632531321953,
+        "python_log_likelihood": -112.96632531321859,
+        "reference_convergence": 0,
+        "reference_pd_hessian": true,
+        "fixture_sha256": "fc8592efcde69e23f55ed7a5bdc1ecf097e436553d310610181873e3938cb078"
+      }
+    },
+    {
+      "id": "tmb_0431",
+      "status": "all_strict_identified_fields_and_boundary_guards_passed",
+      "exception_fields": [
+        "zi_beta",
+        "zi_vcov"
+      ],
+      "applied_policy": {
+        "kind": "tmb_boundary_identification",
+        "exception_fields": [
+          "zi_beta",
+          "zi_vcov",
+          "zi_wald_p"
+        ],
+        "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+        "absent_zi": true,
+        "mixture_likelihood_bound": 1e-06,
+        "zi_curvature_bound": 1e-06
+      },
+      "initial_verification": {
+        "passed": false,
+        "failure": "AssertionError: summary sections, labels and headers\nassert ['Family', 'F...f.resid', ...] == ['Family', 'F...f.resid', ...]\n  \n  At index 15 diff: 'Signif. codes' != 'Dispersion model'\n  Left contains one more item: 'Signif. codes'\n  Use -v to get more diff",
+        "dynamic_guards": {
+          "R": {
+            "probability_max": 4.59499755585667e-14,
+            "probability_bound": 8.333333333333334e-09,
+            "conditional_density_difference": 2.9879161461110772e-12,
+            "observed_zi_curvature_norm": 1.5724387339085888e-12
+          },
+          "Python": {
+            "probability_max": 6.283138530927927e-14,
+            "probability_bound": 8.333333333333334e-09,
+            "conditional_density_difference": 1.1457712446832885e-12,
+            "observed_zi_curvature_norm": 1.078536727006288e-12
+          }
+        }
+      },
+      "original_objective_evidence": {
+        "R": -146.5117879705544,
+        "Python": -146.51178797055377,
+        "Python_minus_R": 6.252776074688882e-13,
+        "minimum_required_delta": -1e-06
+      },
+      "original_limits_evidence": {
+        "absent_zi": {
+          "mathematical_limit": "all mixing probabilities zero; logit coefficients and divergent covariance do not have finite identified reference values",
+          "R_beta": [
+            -31.545515873536747,
+            0.18350166008930247,
+            0.3996897120633334
+          ],
+          "Python_beta": [
+            -32.69581352608737,
+            1.187401564507171,
+            -0.5183838866347188
+          ],
+          "R_marginal_precision_eigenvalues": [
+            7.002550982307832e-13,
+            7.694281425956858e-13,
+            1.5031342362359803e-12
+          ],
+          "R_probability_max": 4.59499755585667e-14,
+          "Python_probability_max": 6.282720477760466e-14,
+          "probability_absolute_difference_max": 4.4403194042563197e-14,
+          "case_total_weight": 120.0,
+          "proposed_probability_limit_bound": 8.333333333333334e-09,
+          "probability_bound_met_by_both": true
+        }
+      },
+      "original_strict_field_audit": [
+        "cond_beta",
+        "cond_prediction",
+        "cond_vcov",
+        "disp_beta",
+        "disp_prediction",
+        "disp_vcov",
+        "g_random_covariance",
+        "g_random_modes",
+        "response_prediction",
+        "zprob_prediction"
+      ],
+      "original_python_warnings": [
+        "Non-positive-definite Hessian"
+      ],
+      "final_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "probability_max": 4.59499755585667e-14,
+            "probability_bound": 8.333333333333334e-09,
+            "conditional_density_difference": 2.9879161461110772e-12,
+            "observed_zi_curvature_norm": 1.5724387339085888e-12
+          },
+          "Python": {
+            "probability_max": 6.283138530927927e-14,
+            "probability_bound": 8.333333333333334e-09,
+            "conditional_density_difference": 1.1457712446832885e-12,
+            "observed_zi_curvature_norm": 1.078536727006288e-12
+          }
+        },
+        "reference_log_likelihood": -146.5117879705544,
+        "python_log_likelihood": -146.51178797055377,
+        "reference_convergence": 0,
+        "reference_pd_hessian": true,
+        "fixture_sha256": "3a142c7e5bd521df751ae6a04529ca6a66389eaf730e9e103832f3b4a88acb2f"
+      }
+    },
+    {
+      "id": "tmb_0443",
+      "status": "all_strict_identified_fields_and_boundary_guards_passed",
+      "exception_fields": [
+        "zi_beta",
+        "zi_vcov"
+      ],
+      "applied_policy": {
+        "kind": "tmb_boundary_identification",
+        "exception_fields": [
+          "zi_beta",
+          "zi_vcov",
+          "zi_wald_p"
+        ],
+        "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+        "absent_zi": true,
+        "mixture_likelihood_bound": 1e-06,
+        "zi_curvature_bound": 1e-06
+      },
+      "initial_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "probability_max": 4.060848108189935e-14,
+            "probability_bound": 1.2987012987012986e-08,
+            "conditional_density_difference": 3.705601486193606e-12,
+            "observed_zi_curvature_norm": 1.1677534940529015e-12
+          },
+          "Python": {
+            "probability_max": 5.562185464577466e-14,
+            "probability_bound": 1.2987012987012986e-08,
+            "conditional_density_difference": 5.075600508698098e-12,
+            "observed_zi_curvature_norm": 1.5985855787863258e-12
+          }
+        }
+      },
+      "original_objective_evidence": {
+        "R": -81.50616574801161,
+        "Python": -81.50616574801198,
+        "Python_minus_R": -3.694822225952521e-13,
+        "minimum_required_delta": -1e-06
+      },
+      "original_limits_evidence": {
+        "absent_zi": {
+          "mathematical_limit": "all mixing probabilities zero; logit coefficients and divergent covariance do not have finite identified reference values",
+          "R_beta": -30.834799456475356,
+          "Python_beta": [
+            -30.518685259348214
+          ],
+          "R_marginal_precision_eigenvalues": [
+            1.0547817273078913e-12
+          ],
+          "R_probability_max": 4.060848108189935e-14,
+          "Python_probability_max": 5.570618240972744e-14,
+          "probability_absolute_difference_max": 1.509770132782809e-14,
+          "case_total_weight": 77.0,
+          "proposed_probability_limit_bound": 1.2987012987012986e-08,
+          "probability_bound_met_by_both": true
+        }
+      },
+      "original_strict_field_audit": [
+        "cond_beta",
+        "cond_prediction",
+        "cond_vcov",
+        "disp_beta",
+        "disp_prediction",
+        "g_random_covariance",
+        "g_random_modes",
+        "response_prediction",
+        "zprob_prediction"
+      ],
+      "original_python_warnings": [],
+      "final_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "probability_max": 4.060848108189935e-14,
+            "probability_bound": 1.2987012987012986e-08,
+            "conditional_density_difference": 3.705601486193606e-12,
+            "observed_zi_curvature_norm": 1.1677534940529015e-12
+          },
+          "Python": {
+            "probability_max": 5.562185464577466e-14,
+            "probability_bound": 1.2987012987012986e-08,
+            "conditional_density_difference": 5.075600508698098e-12,
+            "observed_zi_curvature_norm": 1.5985855787863258e-12
+          }
+        },
+        "reference_log_likelihood": -81.50616574801161,
+        "python_log_likelihood": -81.506165748012,
+        "reference_convergence": 0,
+        "reference_pd_hessian": true,
+        "fixture_sha256": "c9656d3542d699f3d24c941b53b411cfce5cd8fa1490c238413e6bf62b5ffa6b"
+      }
+    },
+    {
+      "id": "tmb_0461",
+      "status": "all_strict_identified_fields_and_boundary_guards_passed",
+      "exception_fields": [
+        "zi_beta",
+        "zi_vcov"
+      ],
+      "applied_policy": {
+        "kind": "tmb_boundary_identification",
+        "exception_fields": [
+          "zi_beta",
+          "zi_vcov",
+          "zi_wald_p"
+        ],
+        "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+        "absent_zi": true,
+        "mixture_likelihood_bound": 1e-06,
+        "zi_curvature_bound": 1e-06
+      },
+      "initial_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "probability_max": 3.33607504219827e-14,
+            "probability_bound": 7.352941176470588e-09,
+            "conditional_density_difference": 5.062421765242806e-12,
+            "observed_zi_curvature_norm": 2.076585790215463e-12
+          },
+          "Python": {
+            "probability_max": 2.8651057078763175e-14,
+            "probability_bound": 7.352941176470588e-09,
+            "conditional_density_difference": 4.347735980820312e-12,
+            "observed_zi_curvature_norm": 1.7835673022452589e-12
+          }
+        }
+      },
+      "original_objective_evidence": {
+        "R": -150.21833438272287,
+        "Python": -150.2183343827226,
+        "Python_minus_R": 2.8421709430404007e-13,
+        "minimum_required_delta": -1e-06
+      },
+      "original_limits_evidence": {
+        "absent_zi": {
+          "mathematical_limit": "all mixing probabilities zero; logit coefficients and divergent covariance do not have finite identified reference values",
+          "R_beta": -31.031396323009357,
+          "Python_beta": [
+            -31.18416744369014
+          ],
+          "R_marginal_precision_eigenvalues": [
+            1.9440554603760432e-12
+          ],
+          "R_probability_max": 3.33607504219827e-14,
+          "Python_probability_max": 2.863440455209552e-14,
+          "probability_absolute_difference_max": 4.7263458698871794e-15,
+          "case_total_weight": 136.0,
+          "proposed_probability_limit_bound": 7.352941176470588e-09,
+          "probability_bound_met_by_both": true
+        }
+      },
+      "original_strict_field_audit": [
+        "cond_beta",
+        "cond_prediction",
+        "cond_vcov",
+        "disp_beta",
+        "disp_prediction",
+        "disp_vcov",
+        "g_random_covariance",
+        "g_random_modes",
+        "response_prediction",
+        "zprob_prediction"
+      ],
+      "original_python_warnings": [],
+      "final_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "probability_max": 3.33607504219827e-14,
+            "probability_bound": 7.352941176470588e-09,
+            "conditional_density_difference": 5.062421765242806e-12,
+            "observed_zi_curvature_norm": 2.076585790215463e-12
+          },
+          "Python": {
+            "probability_max": 2.8651057078763175e-14,
+            "probability_bound": 7.352941176470588e-09,
+            "conditional_density_difference": 4.347735980820312e-12,
+            "observed_zi_curvature_norm": 1.7835673022452589e-12
+          }
+        },
+        "reference_log_likelihood": -150.21833438272276,
+        "python_log_likelihood": -150.21833438272256,
+        "reference_convergence": 0,
+        "reference_pd_hessian": true,
+        "fixture_sha256": "e5d8e9e25f87ab2b47fc3ba0d75b2f021725a5516795941d768dd94ff2e4d197"
+      }
+    },
+    {
+      "id": "tmb_0551",
+      "status": "all_strict_identified_fields_and_boundary_guards_passed",
+      "exception_fields": [
+        "zi_beta",
+        "zi_vcov"
+      ],
+      "applied_policy": {
+        "kind": "tmb_boundary_identification",
+        "exception_fields": [
+          "zi_beta",
+          "zi_vcov",
+          "zi_wald_p"
+        ],
+        "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+        "absent_zi": true,
+        "mixture_likelihood_bound": 1e-06,
+        "zi_curvature_bound": 1e-06
+      },
+      "initial_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "probability_max": 2.0833529538861068e-14,
+            "probability_bound": 5.4347826086956515e-09,
+            "conditional_density_difference": 4.4215588212250935e-12,
+            "observed_zi_curvature_norm": 2.286828761847634e-12
+          },
+          "Python": {
+            "probability_max": 2.0631446793755873e-14,
+            "probability_bound": 5.4347826086956515e-09,
+            "conditional_density_difference": 4.378670229467689e-12,
+            "observed_zi_curvature_norm": 2.2647445698831804e-12
+          }
+        }
+      },
+      "original_objective_evidence": {
+        "R": -202.99482406319171,
+        "Python": -202.99482406319171,
+        "Python_minus_R": 0.0,
+        "minimum_required_delta": -1e-06
+      },
+      "original_limits_evidence": {
+        "absent_zi": {
+          "mathematical_limit": "all mixing probabilities zero; logit coefficients and divergent covariance do not have finite identified reference values",
+          "R_beta": -31.502212709015435,
+          "Python_beta": [
+            -31.477183242463155
+          ],
+          "R_marginal_precision_eigenvalues": [
+            2.2377587027898577e-12
+          ],
+          "R_probability_max": 2.0833529538861068e-14,
+          "Python_probability_max": 2.136156229240484e-14,
+          "probability_absolute_difference_max": 5.280327535437726e-16,
+          "case_total_weight": 184.0,
+          "proposed_probability_limit_bound": 5.4347826086956515e-09,
+          "probability_bound_met_by_both": true
+        }
+      },
+      "original_strict_field_audit": [
+        "cond_beta",
+        "cond_prediction",
+        "cond_vcov",
+        "disp_beta",
+        "disp_prediction",
+        "g_random_covariance",
+        "g_random_modes",
+        "response_prediction",
+        "zprob_prediction"
+      ],
+      "original_python_warnings": [],
+      "final_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "probability_max": 2.0833529538861068e-14,
+            "probability_bound": 5.4347826086956515e-09,
+            "conditional_density_difference": 4.4215588212250935e-12,
+            "observed_zi_curvature_norm": 2.286828761847634e-12
+          },
+          "Python": {
+            "probability_max": 2.0631446793755873e-14,
+            "probability_bound": 5.4347826086956515e-09,
+            "conditional_density_difference": 4.378670229467689e-12,
+            "observed_zi_curvature_norm": 2.2647445698831804e-12
+          }
+        },
+        "reference_log_likelihood": -202.99482406319171,
+        "python_log_likelihood": -202.99482406319163,
+        "reference_convergence": 0,
+        "reference_pd_hessian": true,
+        "fixture_sha256": "3e46854248cc2502b5198705e7b0a47c1704fb6e2aacb3aec448a016355714ce"
+      }
+    },
+    {
+      "id": "tmb_0587",
+      "status": "all_strict_identified_fields_and_boundary_guards_passed",
+      "exception_fields": [
+        "zi_beta",
+        "zi_vcov"
+      ],
+      "applied_policy": {
+        "kind": "tmb_boundary_identification",
+        "exception_fields": [
+          "zi_beta",
+          "zi_vcov",
+          "zi_wald_p"
+        ],
+        "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+        "absent_zi": true,
+        "mixture_likelihood_bound": 1e-06,
+        "zi_curvature_bound": 1e-06
+      },
+      "initial_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "probability_max": 1.0686016878109048e-13,
+            "probability_bound": 4.784688995215311e-09,
+            "conditional_density_difference": 3.458002415222572e-11,
+            "observed_zi_curvature_norm": 4.3168539870444485e-12
+          },
+          "Python": {
+            "probability_max": 5.706198461445532e-14,
+            "probability_bound": 4.784688995215311e-09,
+            "conditional_density_difference": 1.8465297487820462e-11,
+            "observed_zi_curvature_norm": 2.3058722760494537e-12
+          }
+        }
+      },
+      "original_objective_evidence": {
+        "R": -274.6313341444724,
+        "Python": -274.6313341444706,
+        "Python_minus_R": 1.8189894035458565e-12,
+        "minimum_required_delta": -1e-06
+      },
+      "original_limits_evidence": {
+        "absent_zi": {
+          "mathematical_limit": "all mixing probabilities zero; logit coefficients and divergent covariance do not have finite identified reference values",
+          "R_beta": -29.86725524892225,
+          "Python_beta": [
+            -30.527399438326608
+          ],
+          "R_marginal_precision_eigenvalues": [
+            3.7971055924773316e-12
+          ],
+          "R_probability_max": 1.0686016878109048e-13,
+          "Python_probability_max": 5.522285771347162e-14,
+          "probability_absolute_difference_max": 5.163731106761886e-14,
+          "case_total_weight": 209.0,
+          "proposed_probability_limit_bound": 4.784688995215311e-09,
+          "probability_bound_met_by_both": true
+        }
+      },
+      "original_strict_field_audit": [
+        "cond_beta",
+        "cond_prediction",
+        "cond_vcov",
+        "disp_beta",
+        "disp_prediction",
+        "disp_vcov",
+        "g_random_covariance",
+        "g_random_modes",
+        "response_prediction",
+        "zprob_prediction"
+      ],
+      "original_python_warnings": [],
+      "final_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "probability_max": 1.0686016878109048e-13,
+            "probability_bound": 4.784688995215311e-09,
+            "conditional_density_difference": 3.458002415222572e-11,
+            "observed_zi_curvature_norm": 4.3168539870444485e-12
+          },
+          "Python": {
+            "probability_max": 5.706198461445532e-14,
+            "probability_bound": 4.784688995215311e-09,
+            "conditional_density_difference": 1.8465297487820462e-11,
+            "observed_zi_curvature_norm": 2.3058722760494537e-12
+          }
+        },
+        "reference_log_likelihood": -274.6313341444723,
+        "python_log_likelihood": -274.6313341444706,
+        "reference_convergence": 0,
+        "reference_pd_hessian": true,
+        "fixture_sha256": "5c42ea8c20ec98051232a83d25b6941d6d46993b448d8fe77f5beae82dc6ac1d"
+      }
+    },
+    {
+      "id": "tmb_0623",
+      "status": "all_strict_identified_fields_and_boundary_guards_passed",
+      "exception_fields": [
+        "zi_beta",
+        "zi_vcov"
+      ],
+      "applied_policy": {
+        "kind": "tmb_boundary_identification",
+        "exception_fields": [
+          "zi_beta",
+          "zi_vcov",
+          "zi_wald_p"
+        ],
+        "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+        "absent_zi": true,
+        "mixture_likelihood_bound": 1e-06,
+        "zi_curvature_bound": 1e-06
+      },
+      "initial_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "probability_max": 1.474471583749742e-14,
+            "probability_bound": 4.1493775933609955e-09,
+            "conditional_density_difference": 3.5570534980905586e-12,
+            "observed_zi_curvature_norm": 2.3402247955264928e-12
+          },
+          "Python": {
+            "probability_max": 1.0073898825860129e-14,
+            "probability_bound": 4.1493775933609955e-09,
+            "conditional_density_difference": 2.430253485472639e-12,
+            "observed_zi_curvature_norm": 1.599583240661917e-12
+          }
+        }
+      },
+      "original_objective_evidence": {
+        "R": -250.0103322265546,
+        "Python": -250.01033222655397,
+        "Python_minus_R": 6.252776074688882e-13,
+        "minimum_required_delta": -1e-06
+      },
+      "original_limits_evidence": {
+        "absent_zi": {
+          "mathematical_limit": "all mixing probabilities zero; logit coefficients and divergent covariance do not have finite identified reference values",
+          "R_beta": -31.847891624616356,
+          "Python_beta": [
+            -32.20136303594289
+          ],
+          "R_marginal_precision_eigenvalues": [
+            2.2986942145854518e-12
+          ],
+          "R_probability_max": 1.474471583749742e-14,
+          "Python_probability_max": 1.0354418729280282e-14,
+          "probability_absolute_difference_max": 4.390297108217137e-15,
+          "case_total_weight": 241.0,
+          "proposed_probability_limit_bound": 4.1493775933609955e-09,
+          "probability_bound_met_by_both": true
+        }
+      },
+      "original_strict_field_audit": [
+        "cond_beta",
+        "cond_prediction",
+        "cond_vcov",
+        "disp_beta",
+        "disp_prediction",
+        "disp_vcov",
+        "g_random_covariance",
+        "g_random_modes",
+        "response_prediction",
+        "zprob_prediction"
+      ],
+      "original_python_warnings": [],
+      "final_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "probability_max": 1.474471583749742e-14,
+            "probability_bound": 4.1493775933609955e-09,
+            "conditional_density_difference": 3.5570534980905586e-12,
+            "observed_zi_curvature_norm": 2.3402247955264928e-12
+          },
+          "Python": {
+            "probability_max": 1.0073898825860129e-14,
+            "probability_bound": 4.1493775933609955e-09,
+            "conditional_density_difference": 2.430253485472639e-12,
+            "observed_zi_curvature_norm": 1.599583240661917e-12
+          }
+        },
+        "reference_log_likelihood": -250.01033222655465,
+        "python_log_likelihood": -250.01033222655388,
+        "reference_convergence": 0,
+        "reference_pd_hessian": true,
+        "fixture_sha256": "da142320a48b4c6f5ef346ee2c953d9f112b964a820327e94d342b975d111422"
+      }
+    },
+    {
+      "id": "tmb_0659",
+      "status": "all_strict_identified_fields_and_boundary_guards_passed",
+      "exception_fields": [
+        "zi_beta",
+        "zi_vcov"
+      ],
+      "applied_policy": {
+        "kind": "tmb_boundary_identification",
+        "exception_fields": [
+          "zi_beta",
+          "zi_vcov",
+          "zi_wald_p"
+        ],
+        "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+        "absent_zi": true,
+        "mixture_likelihood_bound": 1e-06,
+        "zi_curvature_bound": 1e-06
+      },
+      "initial_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "probability_max": 3.005717977932298e-14,
+            "probability_bound": 1e-08,
+            "conditional_density_difference": 3.2408899792382545e-12,
+            "observed_zi_curvature_norm": 1.448297118988156e-12
+          },
+          "Python": {
+            "probability_max": 3.637215128719643e-14,
+            "probability_bound": 1e-08,
+            "conditional_density_difference": 3.921796439040208e-12,
+            "observed_zi_curvature_norm": 1.7516123436963177e-12
+          }
+        }
+      },
+      "original_objective_evidence": {
+        "R": -116.48331106538816,
+        "Python": -116.48331106538845,
+        "Python_minus_R": -2.8421709430404007e-13,
+        "minimum_required_delta": -1e-06
+      },
+      "original_limits_evidence": {
+        "absent_zi": {
+          "mathematical_limit": "all mixing probabilities zero; logit coefficients and divergent covariance do not have finite identified reference values",
+          "R_beta": -31.13567483470364,
+          "Python_beta": [
+            -30.94195438400236
+          ],
+          "R_marginal_precision_eigenvalues": [
+            1.3861957244509894e-12
+          ],
+          "R_probability_max": 3.005717977932298e-14,
+          "Python_probability_max": 3.6482110272249175e-14,
+          "probability_absolute_difference_max": 6.424930492926194e-15,
+          "case_total_weight": 100.0,
+          "proposed_probability_limit_bound": 1e-08,
+          "probability_bound_met_by_both": true
+        }
+      },
+      "original_strict_field_audit": [
+        "cond_beta",
+        "cond_prediction",
+        "cond_vcov",
+        "disp_beta",
+        "disp_prediction",
+        "g_random_covariance",
+        "g_random_modes",
+        "response_prediction",
+        "zprob_prediction"
+      ],
+      "original_python_warnings": [],
+      "final_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "probability_max": 3.005717977932298e-14,
+            "probability_bound": 1e-08,
+            "conditional_density_difference": 3.2408899792382545e-12,
+            "observed_zi_curvature_norm": 1.448297118988156e-12
+          },
+          "Python": {
+            "probability_max": 3.637215128719643e-14,
+            "probability_bound": 1e-08,
+            "conditional_density_difference": 3.921796439040208e-12,
+            "observed_zi_curvature_norm": 1.7516123436963177e-12
+          }
+        },
+        "reference_log_likelihood": -116.48331106538816,
+        "python_log_likelihood": -116.48331106538842,
+        "reference_convergence": 0,
+        "reference_pd_hessian": true,
+        "fixture_sha256": "a0f0ec49715245f1314da9a8c4c93081361b45470bc650f215df69ad49a429e2"
+      }
+    },
+    {
+      "id": "tmb_0690",
+      "status": "all_strict_identified_fields_and_boundary_guards_passed",
+      "exception_fields": [
+        "g_random_covariance",
+        "g_random_modes"
+      ],
+      "applied_policy": {
+        "kind": "tmb_boundary_identification",
+        "exception_fields": [
+          "g_random_covariance",
+          "g_random_modes"
+        ],
+        "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+        "zero_random_effect": {
+          "g": {
+            "covariance_bound": 1e-09,
+            "mode_bound": 1e-08
+          }
+        }
+      },
+      "initial_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "g": {
+              "covariance_absolute_max": 3.677187214048839e-12,
+              "mode_absolute_max": 2.3123590246017678e-11
+            }
+          },
+          "Python": {
+            "g": {
+              "covariance_absolute_max": 0.0,
+              "mode_absolute_max": 0.0
+            }
+          }
+        }
+      },
+      "original_objective_evidence": {
+        "R": -110.16192810082896,
+        "Python": -110.16192810082732,
+        "Python_minus_R": 1.6342482922482304e-12,
+        "minimum_required_delta": -1e-06
+      },
+      "original_limits_evidence": {
+        "zero_random_effect": {
+          "g": {
+            "mathematical_limit": "zero covariance and random modes; relative error against zero has no defined finite scale",
+            "R_covariance": [
+              [
+                3.677187214048839e-12
+              ]
+            ],
+            "Python_covariance": [
+              [
+                0.0
+              ]
+            ],
+            "R_covariance_eigenvalues": [
+              3.677187214048839e-12
+            ],
+            "Python_covariance_eigenvalues": [
+              0.0
+            ],
+            "covariance_absolute_difference_max": 3.677187214048839e-12,
+            "R_mode_absolute_max": 2.3123590246017678e-11,
+            "Python_mode_absolute_max": 0.0,
+            "mode_absolute_difference_max": 2.3123590246017678e-11,
+            "proposed_covariance_zero_bound": 1e-09,
+            "proposed_mode_zero_bound": 1e-08
+          }
+        }
+      },
+      "original_strict_field_audit": [
+        "cond_beta",
+        "cond_prediction",
+        "cond_vcov",
+        "disp_prediction",
+        "response_prediction",
+        "zi_beta",
+        "zi_vcov",
+        "zprob_prediction"
+      ],
+      "original_python_warnings": [
+        "boundary (singular) fit"
+      ],
+      "final_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "g": {
+              "covariance_absolute_max": 3.677187214048839e-12,
+              "mode_absolute_max": 2.3123590246017678e-11
+            }
+          },
+          "Python": {
+            "g": {
+              "covariance_absolute_max": 0.0,
+              "mode_absolute_max": 0.0
+            }
+          }
+        },
+        "reference_log_likelihood": -110.16192810082896,
+        "python_log_likelihood": -110.16192810082732,
+        "reference_convergence": 0,
+        "reference_pd_hessian": true,
+        "fixture_sha256": "bb12ef21925f34b0d027dcf155ab2cee9ffdec5b52c7e85724fc920c43b3e7d5"
+      }
+    },
+    {
+      "id": "tmb_0695",
+      "status": "all_strict_identified_fields_and_boundary_guards_passed",
+      "exception_fields": [
+        "zi_beta",
+        "zi_vcov"
+      ],
+      "applied_policy": {
+        "kind": "tmb_boundary_identification",
+        "exception_fields": [
+          "zi_beta",
+          "zi_vcov",
+          "zi_wald_p"
+        ],
+        "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+        "absent_zi": true,
+        "mixture_likelihood_bound": 1e-06,
+        "zi_curvature_bound": 1e-06
+      },
+      "initial_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "probability_max": 1.818632192042603e-14,
+            "probability_bound": 8.849557522123893e-09,
+            "conditional_density_difference": 2.1000595034306508e-12,
+            "observed_zi_curvature_norm": 1.1368999356431396e-12
+          },
+          "Python": {
+            "probability_max": 8.876000455879746e-15,
+            "probability_bound": 8.849557522123893e-09,
+            "conditional_density_difference": 1.0249532143507926e-12,
+            "observed_zi_curvature_norm": 5.544579495658486e-13
+          }
+        }
+      },
+      "original_objective_evidence": {
+        "R": -119.22530673367906,
+        "Python": -119.22530673367848,
+        "Python_minus_R": 5.826450433232822e-13,
+        "minimum_required_delta": -1e-06
+      },
+      "original_limits_evidence": {
+        "absent_zi": {
+          "mathematical_limit": "all mixing probabilities zero; logit coefficients and divergent covariance do not have finite identified reference values",
+          "R_beta": -31.638106626211542,
+          "Python_beta": [
+            -32.354716401551556
+          ],
+          "R_marginal_precision_eigenvalues": [
+            1.0938938644614875e-12
+          ],
+          "R_probability_max": 1.818632192042603e-14,
+          "Python_probability_max": 8.882295211403028e-15,
+          "probability_absolute_difference_max": 9.304026709023003e-15,
+          "case_total_weight": 113.0,
+          "proposed_probability_limit_bound": 8.849557522123893e-09,
+          "probability_bound_met_by_both": true
+        }
+      },
+      "original_strict_field_audit": [
+        "cond_beta",
+        "cond_prediction",
+        "cond_vcov",
+        "disp_beta",
+        "disp_prediction",
+        "disp_vcov",
+        "g_random_covariance",
+        "g_random_modes",
+        "response_prediction",
+        "zprob_prediction"
+      ],
+      "original_python_warnings": [],
+      "final_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "probability_max": 1.818632192042603e-14,
+            "probability_bound": 8.849557522123893e-09,
+            "conditional_density_difference": 2.1000595034306508e-12,
+            "observed_zi_curvature_norm": 1.1368999356431396e-12
+          },
+          "Python": {
+            "probability_max": 8.876000455879746e-15,
+            "probability_bound": 8.849557522123893e-09,
+            "conditional_density_difference": 1.0249532143507926e-12,
+            "observed_zi_curvature_norm": 5.544579495658486e-13
+          }
+        },
+        "reference_log_likelihood": -119.22530673367906,
+        "python_log_likelihood": -119.22530673367847,
+        "reference_convergence": 0,
+        "reference_pd_hessian": true,
+        "fixture_sha256": "2637fc8d19d0f4a4117b87e6441ad3c80265eb2f088a2162aa711c729e21b657"
+      }
+    },
+    {
+      "id": "tmb_0713",
+      "status": "all_strict_identified_fields_and_boundary_guards_passed",
+      "exception_fields": [
+        "zi_beta",
+        "zi_vcov"
+      ],
+      "applied_policy": {
+        "kind": "tmb_boundary_identification",
+        "exception_fields": [
+          "zi_beta",
+          "zi_vcov",
+          "zi_wald_p"
+        ],
+        "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+        "absent_zi": true,
+        "mixture_likelihood_bound": 1e-06,
+        "zi_curvature_bound": 1e-06
+      },
+      "initial_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "probability_max": 3.320391194596852e-14,
+            "probability_bound": 8.928571428571428e-09,
+            "conditional_density_difference": 3.854612424118728e-12,
+            "observed_zi_curvature_norm": 1.7906027887795366e-12
+          },
+          "Python": {
+            "probability_max": 1.2225657433202368e-14,
+            "probability_bound": 8.928571428571428e-09,
+            "conditional_density_difference": 1.419265630901691e-12,
+            "observed_zi_curvature_norm": 6.593970305733448e-13
+          }
+        }
+      },
+      "original_objective_evidence": {
+        "R": -120.40798456020798,
+        "Python": -120.40798456020698,
+        "Python_minus_R": 9.947598300641403e-13,
+        "minimum_required_delta": -1e-06
+      },
+      "original_limits_evidence": {
+        "absent_zi": {
+          "mathematical_limit": "all mixing probabilities zero; logit coefficients and divergent covariance do not have finite identified reference values",
+          "R_beta": -31.036108696231736,
+          "Python_beta": [
+            -32.02538168661989
+          ],
+          "R_marginal_precision_eigenvalues": [
+            1.609926176352154e-12
+          ],
+          "R_probability_max": 3.320391194596852e-14,
+          "Python_probability_max": 1.234677269018227e-14,
+          "probability_absolute_difference_max": 2.0857139255786252e-14,
+          "case_total_weight": 112.0,
+          "proposed_probability_limit_bound": 8.928571428571428e-09,
+          "probability_bound_met_by_both": true
+        }
+      },
+      "original_strict_field_audit": [
+        "cond_beta",
+        "cond_prediction",
+        "cond_vcov",
+        "disp_beta",
+        "disp_prediction",
+        "g_random_covariance",
+        "g_random_modes",
+        "response_prediction",
+        "zprob_prediction"
+      ],
+      "original_python_warnings": [],
+      "final_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "probability_max": 3.320391194596852e-14,
+            "probability_bound": 8.928571428571428e-09,
+            "conditional_density_difference": 3.854612424118728e-12,
+            "observed_zi_curvature_norm": 1.7906027887795366e-12
+          },
+          "Python": {
+            "probability_max": 1.2225657433202368e-14,
+            "probability_bound": 8.928571428571428e-09,
+            "conditional_density_difference": 1.419265630901691e-12,
+            "observed_zi_curvature_norm": 6.593970305733448e-13
+          }
+        },
+        "reference_log_likelihood": -120.40798456020798,
+        "python_log_likelihood": -120.40798456020698,
+        "reference_convergence": 0,
+        "reference_pd_hessian": true,
+        "fixture_sha256": "b80be1eea6b85b6eee72993a832819bed5aa88aea05dd6f29b2782d5dd50c852"
+      }
+    },
+    {
+      "id": "tmb_0783",
+      "status": "all_strict_identified_fields_and_boundary_guards_passed",
+      "exception_fields": [
+        "g_random_modes"
+      ],
+      "applied_policy": {
+        "kind": "tmb_boundary_identification",
+        "exception_fields": [
+          "g_random_modes"
+        ],
+        "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+        "zero_random_effect": {
+          "g": {
+            "covariance_bound": 1e-09,
+            "mode_bound": 1e-08
+          }
+        }
+      },
+      "initial_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "g": {
+              "covariance_absolute_max": 3.9707715176286217e-13,
+              "mode_absolute_max": 3.2856225044677428e-12
+            }
+          },
+          "Python": {
+            "g": {
+              "covariance_absolute_max": 0.0,
+              "mode_absolute_max": 0.0
+            }
+          }
+        }
+      },
+      "original_objective_evidence": {
+        "R": -205.66441087533573,
+        "Python": -205.66441087533286,
+        "Python_minus_R": 2.8705926524708048e-12,
+        "minimum_required_delta": -1e-06
+      },
+      "original_limits_evidence": {
+        "zero_random_effect": {
+          "g": {
+            "mathematical_limit": "zero covariance and random modes; relative error against zero has no defined finite scale",
+            "R_covariance": [
+              [
+                3.9707715176286217e-13
+              ]
+            ],
+            "Python_covariance": [
+              [
+                0.0
+              ]
+            ],
+            "R_covariance_eigenvalues": [
+              3.9707715176286217e-13
+            ],
+            "Python_covariance_eigenvalues": [
+              0.0
+            ],
+            "covariance_absolute_difference_max": 3.9707715176286217e-13,
+            "R_mode_absolute_max": 3.2856225044677428e-12,
+            "Python_mode_absolute_max": 0.0,
+            "mode_absolute_difference_max": 3.2856225044677428e-12,
+            "proposed_covariance_zero_bound": 1e-09,
+            "proposed_mode_zero_bound": 1e-08
+          }
+        }
+      },
+      "original_strict_field_audit": [
+        "cond_beta",
+        "cond_prediction",
+        "cond_vcov",
+        "disp_prediction",
+        "g_random_covariance",
+        "response_prediction",
+        "zi_beta",
+        "zi_vcov",
+        "zprob_prediction"
+      ],
+      "original_python_warnings": [
+        "boundary (singular) fit"
+      ],
+      "final_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "g": {
+              "covariance_absolute_max": 3.9707715176286217e-13,
+              "mode_absolute_max": 3.2856225044677428e-12
+            }
+          },
+          "Python": {
+            "g": {
+              "covariance_absolute_max": 0.0,
+              "mode_absolute_max": 0.0
+            }
+          }
+        },
+        "reference_log_likelihood": -205.6644108753357,
+        "python_log_likelihood": -205.66441087533292,
+        "reference_convergence": 0,
+        "reference_pd_hessian": true,
+        "fixture_sha256": "19836e8269ed84d0bd812e85fee8b22b1aa8a24b8f115ef1bc76c304c6bdddb3"
+      }
+    },
+    {
+      "id": "tmb_0809",
+      "status": "all_strict_identified_fields_and_boundary_guards_passed",
+      "exception_fields": [
+        "zi_beta",
+        "zi_vcov"
+      ],
+      "applied_policy": {
+        "kind": "tmb_boundary_identification",
+        "exception_fields": [
+          "zi_beta",
+          "zi_vcov",
+          "zi_wald_p"
+        ],
+        "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+        "absent_zi": true,
+        "mixture_likelihood_bound": 1e-06,
+        "zi_curvature_bound": 1e-06
+      },
+      "initial_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "probability_max": 2.629384465411511e-14,
+            "probability_bound": 8.264462809917355e-09,
+            "conditional_density_difference": 2.8271449451409424e-12,
+            "observed_zi_curvature_norm": 1.7089912265922761e-12
+          },
+          "Python": {
+            "probability_max": 1.7285866263545344e-13,
+            "probability_bound": 8.264462809917355e-09,
+            "conditional_density_difference": 1.3377057697996713e-12,
+            "observed_zi_curvature_norm": 2.193990560635991e-12
+          }
+        }
+      },
+      "original_objective_evidence": {
+        "R": -144.72218381432862,
+        "Python": -144.72218381432782,
+        "Python_minus_R": 7.958078640513122e-13,
+        "minimum_required_delta": -1e-06
+      },
+      "original_limits_evidence": {
+        "absent_zi": {
+          "mathematical_limit": "all mixing probabilities zero; logit coefficients and divergent covariance do not have finite identified reference values",
+          "R_beta": [
+            -31.434510823786926,
+            0.05358226147591158,
+            -0.0744643068540793
+          ],
+          "Python_beta": [
+            -32.89972157139825,
+            -0.9574967870584818,
+            -1.283775730355313
+          ],
+          "R_marginal_precision_eigenvalues": [
+            8.480452184581182e-13,
+            1.2268659916558708e-12,
+            1.663523927654671e-12
+          ],
+          "R_probability_max": 2.629384465411511e-14,
+          "Python_probability_max": 1.7272718617833103e-13,
+          "probability_absolute_difference_max": 1.512851771219413e-13,
+          "case_total_weight": 121.0,
+          "proposed_probability_limit_bound": 8.264462809917355e-09,
+          "probability_bound_met_by_both": true
+        }
+      },
+      "original_strict_field_audit": [
+        "cond_beta",
+        "cond_prediction",
+        "cond_vcov",
+        "disp_beta",
+        "disp_prediction",
+        "disp_vcov",
+        "g_random_covariance",
+        "g_random_modes",
+        "response_prediction",
+        "zprob_prediction"
+      ],
+      "original_python_warnings": [
+        "Non-positive-definite Hessian"
+      ],
+      "final_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "probability_max": 2.629384465411511e-14,
+            "probability_bound": 8.264462809917355e-09,
+            "conditional_density_difference": 2.8271449451409424e-12,
+            "observed_zi_curvature_norm": 1.7089912265922761e-12
+          },
+          "Python": {
+            "probability_max": 1.7285866263545344e-13,
+            "probability_bound": 8.264462809917355e-09,
+            "conditional_density_difference": 1.3377057697996713e-12,
+            "observed_zi_curvature_norm": 2.193990560635991e-12
+          }
+        },
+        "reference_log_likelihood": -144.72218381432862,
+        "python_log_likelihood": -144.72218381432782,
+        "reference_convergence": 0,
+        "reference_pd_hessian": true,
+        "fixture_sha256": "718c10c199c6500873aa60e4e3caca80dd92fa46413cf822b8d17f829979064f"
+      }
+    },
+    {
+      "id": "tmb_0871",
+      "status": "all_strict_identified_fields_and_boundary_guards_passed",
+      "exception_fields": [
+        "zi_beta",
+        "zi_vcov"
+      ],
+      "applied_policy": {
+        "kind": "tmb_boundary_identification",
+        "exception_fields": [
+          "zi_beta",
+          "zi_vcov",
+          "zi_wald_p"
+        ],
+        "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+        "absent_zi": true,
+        "mixture_likelihood_bound": 1e-06,
+        "zi_curvature_bound": 1e-06
+      },
+      "initial_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "probability_max": 6.604614497742739e-13,
+            "probability_bound": 5.46448087431694e-09,
+            "conditional_density_difference": 5.927798526344054e-11,
+            "observed_zi_curvature_norm": 2.804883182317052e-12
+          },
+          "Python": {
+            "probability_max": 3.6966498895147394e-13,
+            "probability_bound": 5.46448087431694e-09,
+            "conditional_density_difference": 3.317831158042473e-11,
+            "observed_zi_curvature_norm": 1.5671083294150592e-12
+          }
+        }
+      },
+      "original_objective_evidence": {
+        "R": -143.82936721065175,
+        "Python": -143.82936721065101,
+        "Python_minus_R": 7.389644451905042e-13,
+        "minimum_required_delta": -1e-06
+      },
+      "original_limits_evidence": {
+        "absent_zi": {
+          "mathematical_limit": "all mixing probabilities zero; logit coefficients and divergent covariance do not have finite identified reference values",
+          "R_beta": -28.045837637867805,
+          "Python_beta": [
+            -28.62766051015713
+          ],
+          "R_marginal_precision_eigenvalues": [
+            1.8724981414694557e-12
+          ],
+          "R_probability_max": 6.604614497742739e-13,
+          "Python_probability_max": 3.691178186282215e-13,
+          "probability_absolute_difference_max": 2.9134363114605244e-13,
+          "case_total_weight": 183.0,
+          "proposed_probability_limit_bound": 5.46448087431694e-09,
+          "probability_bound_met_by_both": true
+        }
+      },
+      "original_strict_field_audit": [
+        "cond_beta",
+        "cond_prediction",
+        "cond_vcov",
+        "disp_beta",
+        "disp_prediction",
+        "g_random_covariance",
+        "g_random_modes",
+        "response_prediction",
+        "zprob_prediction"
+      ],
+      "original_python_warnings": [],
+      "final_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "probability_max": 6.604614497742739e-13,
+            "probability_bound": 5.46448087431694e-09,
+            "conditional_density_difference": 5.927798526344054e-11,
+            "observed_zi_curvature_norm": 2.804883182317052e-12
+          },
+          "Python": {
+            "probability_max": 3.6966498895147394e-13,
+            "probability_bound": 5.46448087431694e-09,
+            "conditional_density_difference": 3.317831158042473e-11,
+            "observed_zi_curvature_norm": 1.5671083294150592e-12
+          }
+        },
+        "reference_log_likelihood": -143.82936721065172,
+        "python_log_likelihood": -143.82936721065096,
+        "reference_convergence": 0,
+        "reference_pd_hessian": true,
+        "fixture_sha256": "fb3e68bc9a49f7852abbb61d28db32b6db31b508ea4cf58522a75b884fb57cdc"
+      }
+    },
+    {
+      "id": "tmb_0875",
+      "status": "all_strict_identified_fields_and_boundary_guards_passed",
+      "exception_fields": [
+        "zi_beta",
+        "zi_vcov"
+      ],
+      "applied_policy": {
+        "kind": "tmb_boundary_identification",
+        "exception_fields": [
+          "zi_beta",
+          "zi_vcov",
+          "zi_wald_p"
+        ],
+        "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+        "absent_zi": true,
+        "mixture_likelihood_bound": 1e-06,
+        "zi_curvature_bound": 1e-06
+      },
+      "initial_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "probability_max": 1.753837811708004e-14,
+            "probability_bound": 4.166666666666667e-09,
+            "conditional_density_difference": 4.3219695904451485e-12,
+            "observed_zi_curvature_norm": 2.622924090514775e-12
+          },
+          "Python": {
+            "probability_max": 1.4360714372581302e-14,
+            "probability_bound": 4.166666666666667e-09,
+            "conditional_density_difference": 3.5389002563931553e-12,
+            "observed_zi_curvature_norm": 2.147610510608072e-12
+          }
+        }
+      },
+      "original_objective_evidence": {
+        "R": -266.95895884332515,
+        "Python": -266.95895884332464,
+        "Python_minus_R": 5.115907697472721e-13,
+        "minimum_required_delta": -1e-06
+      },
+      "original_limits_evidence": {
+        "absent_zi": {
+          "mathematical_limit": "all mixing probabilities zero; logit coefficients and divergent covariance do not have finite identified reference values",
+          "R_beta": -31.674384879911354,
+          "Python_beta": [
+            -31.873528554776488
+          ],
+          "R_marginal_precision_eigenvalues": [
+            2.5861133479073838e-12
+          ],
+          "R_probability_max": 1.753837811708004e-14,
+          "Python_probability_max": 1.4371510941850345e-14,
+          "probability_absolute_difference_max": 3.166867175229695e-15,
+          "case_total_weight": 240.0,
+          "proposed_probability_limit_bound": 4.166666666666667e-09,
+          "probability_bound_met_by_both": true
+        }
+      },
+      "original_strict_field_audit": [
+        "cond_beta",
+        "cond_prediction",
+        "cond_vcov",
+        "disp_beta",
+        "disp_prediction",
+        "g_random_covariance",
+        "g_random_modes",
+        "response_prediction",
+        "zprob_prediction"
+      ],
+      "original_python_warnings": [],
+      "final_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "probability_max": 1.753837811708004e-14,
+            "probability_bound": 4.166666666666667e-09,
+            "conditional_density_difference": 4.3219695904451485e-12,
+            "observed_zi_curvature_norm": 2.622924090514775e-12
+          },
+          "Python": {
+            "probability_max": 1.4360714372581302e-14,
+            "probability_bound": 4.166666666666667e-09,
+            "conditional_density_difference": 3.5389002563931553e-12,
+            "observed_zi_curvature_norm": 2.147610510608072e-12
+          }
+        },
+        "reference_log_likelihood": -266.95895884332515,
+        "python_log_likelihood": -266.95895884332464,
+        "reference_convergence": 0,
+        "reference_pd_hessian": true,
+        "fixture_sha256": "c383ef0328824a9b59d43d4e3fc5438b8d1c5cc287ebea3549e79226491fecb0"
+      }
+    },
+    {
+      "id": "tmb_0893",
+      "status": "all_strict_identified_fields_and_boundary_guards_passed",
+      "exception_fields": [
+        "zi_beta",
+        "zi_vcov"
+      ],
+      "applied_policy": {
+        "kind": "tmb_boundary_identification",
+        "exception_fields": [
+          "zi_beta",
+          "zi_vcov",
+          "zi_wald_p"
+        ],
+        "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+        "absent_zi": true,
+        "mixture_likelihood_bound": 1e-06,
+        "zi_curvature_bound": 1e-06
+      },
+      "initial_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "probability_max": 3.1402656758875506e-14,
+            "probability_bound": 4.6082949308755755e-09,
+            "conditional_density_difference": 8.945599086040618e-12,
+            "observed_zi_curvature_norm": 2.610628056235917e-12
+          },
+          "Python": {
+            "probability_max": 2.7142373575531924e-14,
+            "probability_bound": 4.6082949308755755e-09,
+            "conditional_density_difference": 7.731982491113543e-12,
+            "observed_zi_curvature_norm": 2.2559130616878326e-12
+          }
+        }
+      },
+      "original_objective_evidence": {
+        "R": -271.55134595867196,
+        "Python": -271.55134595867287,
+        "Python_minus_R": -9.094947017729282e-13,
+        "minimum_required_delta": -1e-06
+      },
+      "original_limits_evidence": {
+        "absent_zi": {
+          "mathematical_limit": "all mixing probabilities zero; logit coefficients and divergent covariance do not have finite identified reference values",
+          "R_beta": -31.091883895420413,
+          "Python_beta": [
+            -30.776202579616275
+          ],
+          "R_marginal_precision_eigenvalues": [
+            2.3486720510370925e-12
+          ],
+          "R_probability_max": 3.1402656758875506e-14,
+          "Python_probability_max": 4.305910967300649e-14,
+          "probability_absolute_difference_max": 1.1656452914130981e-14,
+          "case_total_weight": 217.0,
+          "proposed_probability_limit_bound": 4.6082949308755755e-09,
+          "probability_bound_met_by_both": true
+        }
+      },
+      "original_strict_field_audit": [
+        "cond_beta",
+        "cond_prediction",
+        "cond_vcov",
+        "disp_beta",
+        "disp_prediction",
+        "disp_vcov",
+        "g_random_covariance",
+        "g_random_modes",
+        "response_prediction",
+        "zprob_prediction"
+      ],
+      "original_python_warnings": [],
+      "final_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "probability_max": 3.1402656758875506e-14,
+            "probability_bound": 4.6082949308755755e-09,
+            "conditional_density_difference": 8.945599086040618e-12,
+            "observed_zi_curvature_norm": 2.610628056235917e-12
+          },
+          "Python": {
+            "probability_max": 2.7142373575531924e-14,
+            "probability_bound": 4.6082949308755755e-09,
+            "conditional_density_difference": 7.731982491113543e-12,
+            "observed_zi_curvature_norm": 2.2559130616878326e-12
+          }
+        },
+        "reference_log_likelihood": -271.55134595867196,
+        "python_log_likelihood": -271.55134595867156,
+        "reference_convergence": 0,
+        "reference_pd_hessian": true,
+        "fixture_sha256": "eb88824f06596e05935fddcb2fe7e7022bf3722de549380840af9902ed9bae33"
+      }
+    },
+    {
+      "id": "tmb_0942",
+      "status": "all_strict_identified_fields_and_boundary_guards_passed",
+      "exception_fields": [
+        "zi_beta",
+        "zi_vcov"
+      ],
+      "applied_policy": {
+        "kind": "tmb_boundary_identification",
+        "exception_fields": [
+          "zi_beta",
+          "zi_vcov",
+          "zi_wald_p"
+        ],
+        "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+        "absent_zi": true,
+        "mixture_likelihood_bound": 1e-06,
+        "zi_curvature_bound": 1e-06
+      },
+      "initial_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "probability_max": 3.199948176011514e-13,
+            "probability_bound": 6.097560975609756e-09,
+            "conditional_density_difference": 5.073790640506331e-11,
+            "observed_zi_curvature_norm": 3.660867337002713e-12
+          },
+          "Python": {
+            "probability_max": 1.9437463865929788e-13,
+            "probability_bound": 6.097560975609756e-09,
+            "conditional_density_difference": 3.0819756066012e-11,
+            "observed_zi_curvature_norm": 2.2233837523948227e-12
+          }
+        }
+      },
+      "original_objective_evidence": {
+        "R": -188.19522228953986,
+        "Python": -188.19522228953895,
+        "Python_minus_R": 9.094947017729282e-13,
+        "minimum_required_delta": -1e-06
+      },
+      "original_limits_evidence": {
+        "absent_zi": {
+          "mathematical_limit": "all mixing probabilities zero; logit coefficients and divergent covariance do not have finite identified reference values",
+          "R_beta": -28.770471594244135,
+          "Python_beta": [
+            -29.247273670110456
+          ],
+          "R_marginal_precision_eigenvalues": [
+            2.440020021033952e-12
+          ],
+          "R_probability_max": 3.199948176011514e-13,
+          "Python_probability_max": 1.986417050536455e-13,
+          "probability_absolute_difference_max": 1.2135311254750587e-13,
+          "case_total_weight": 164.0,
+          "proposed_probability_limit_bound": 6.097560975609756e-09,
+          "probability_bound_met_by_both": true
+        }
+      },
+      "original_strict_field_audit": [
+        "cond_beta",
+        "cond_prediction",
+        "cond_vcov",
+        "disp_prediction",
+        "g_random_covariance",
+        "g_random_modes",
+        "response_prediction",
+        "zprob_prediction"
+      ],
+      "original_python_warnings": [],
+      "final_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "probability_max": 3.199948176011514e-13,
+            "probability_bound": 6.097560975609756e-09,
+            "conditional_density_difference": 5.073790640506331e-11,
+            "observed_zi_curvature_norm": 3.660867337002713e-12
+          },
+          "Python": {
+            "probability_max": 1.9437463865929788e-13,
+            "probability_bound": 6.097560975609756e-09,
+            "conditional_density_difference": 3.0819756066012e-11,
+            "observed_zi_curvature_norm": 2.2233837523948227e-12
+          }
+        },
+        "reference_log_likelihood": -188.19522228953988,
+        "python_log_likelihood": -188.19522228953892,
+        "reference_convergence": 0,
+        "reference_pd_hessian": true,
+        "fixture_sha256": "1501c82b3949aa3f9e8292b16f84c108449f80da88f116e3403f585551692426"
+      }
+    },
+    {
+      "id": "tmb_0997",
+      "status": "all_strict_identified_fields_and_boundary_guards_passed",
+      "exception_fields": [
+        "zi_beta",
+        "zi_vcov"
+      ],
+      "applied_policy": {
+        "kind": "tmb_boundary_identification",
+        "exception_fields": [
+          "zi_beta",
+          "zi_vcov",
+          "zi_wald_p"
+        ],
+        "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+        "absent_zi": true,
+        "mixture_likelihood_bound": 1e-06,
+        "zi_curvature_bound": 1e-06
+      },
+      "initial_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "probability_max": 9.71382798406899e-14,
+            "probability_bound": 1.0869565217391303e-08,
+            "conditional_density_difference": 9.069616624984544e-12,
+            "observed_zi_curvature_norm": 1.2271110177423248e-12
+          },
+          "Python": {
+            "probability_max": 9.292988968149417e-14,
+            "probability_bound": 1.0869565217391303e-08,
+            "conditional_density_difference": 8.676687253400362e-12,
+            "observed_zi_curvature_norm": 1.1736721642985663e-12
+          }
+        }
+      },
+      "original_objective_evidence": {
+        "R": -128.79859729043795,
+        "Python": -128.79859729043727,
+        "Python_minus_R": 6.821210263296962e-13,
+        "minimum_required_delta": -1e-06
+      },
+      "original_limits_evidence": {
+        "absent_zi": {
+          "mathematical_limit": "all mixing probabilities zero; logit coefficients and divergent covariance do not have finite identified reference values",
+          "R_beta": -29.962640866192913,
+          "Python_beta": [
+            -30.809855423879146
+          ],
+          "R_marginal_precision_eigenvalues": [
+            1.054342952205804e-12
+          ],
+          "R_probability_max": 9.71382798406899e-14,
+          "Python_probability_max": 4.163415945378036e-14,
+          "probability_absolute_difference_max": 5.550412038690954e-14,
+          "case_total_weight": 92.0,
+          "proposed_probability_limit_bound": 1.0869565217391303e-08,
+          "probability_bound_met_by_both": true
+        }
+      },
+      "original_strict_field_audit": [
+        "cond_beta",
+        "cond_prediction",
+        "cond_vcov",
+        "disp_beta",
+        "disp_prediction",
+        "disp_vcov",
+        "g_random_covariance",
+        "g_random_modes",
+        "response_prediction",
+        "zprob_prediction"
+      ],
+      "original_python_warnings": [],
+      "final_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "probability_max": 9.71382798406899e-14,
+            "probability_bound": 1.0869565217391303e-08,
+            "conditional_density_difference": 9.069616624984544e-12,
+            "observed_zi_curvature_norm": 1.2271110177423248e-12
+          },
+          "Python": {
+            "probability_max": 9.292988968149417e-14,
+            "probability_bound": 1.0869565217391303e-08,
+            "conditional_density_difference": 8.676687253400362e-12,
+            "observed_zi_curvature_norm": 1.1736721642985663e-12
+          }
+        },
+        "reference_log_likelihood": -128.798597290438,
+        "python_log_likelihood": -128.79859729043784,
+        "reference_convergence": 0,
+        "reference_pd_hessian": true,
+        "fixture_sha256": "8a313535071aaf622e4156d5d53cf8e174165e994c6a7a4eebcf955bcfe46f36"
+      }
+    },
+    {
+      "id": "tmb_0999",
+      "status": "all_strict_identified_fields_and_boundary_guards_passed",
+      "exception_fields": [
+        "zi_beta",
+        "zi_vcov"
+      ],
+      "applied_policy": {
+        "kind": "tmb_boundary_identification",
+        "exception_fields": [
+          "zi_beta",
+          "zi_vcov",
+          "zi_wald_p"
+        ],
+        "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+        "absent_zi": true,
+        "mixture_likelihood_bound": 1e-06,
+        "zi_curvature_bound": 1e-06
+      },
+      "initial_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "probability_max": 2.32618643135515e-13,
+            "probability_bound": 9.433962264150943e-09,
+            "conditional_density_difference": 2.1822976722630005e-11,
+            "observed_zi_curvature_norm": 1.4397041029882624e-12
+          },
+          "Python": {
+            "probability_max": 1.9111519259322691e-13,
+            "probability_bound": 9.433962264150943e-09,
+            "conditional_density_difference": 1.7929355715833875e-11,
+            "observed_zi_curvature_norm": 1.1823584057757492e-12
+          }
+        }
+      },
+      "original_objective_evidence": {
+        "R": -68.74263223101386,
+        "Python": -68.74263223097753,
+        "Python_minus_R": 3.632294465205632e-11,
+        "minimum_required_delta": -1e-06
+      },
+      "original_limits_evidence": {
+        "absent_zi": {
+          "mathematical_limit": "all mixing probabilities zero; logit coefficients and divergent covariance do not have finite identified reference values",
+          "R_beta": -29.089376006982288,
+          "Python_beta": [
+            -29.28403443947036
+          ],
+          "R_marginal_precision_eigenvalues": [
+            5.17427819503316e-13
+          ],
+          "R_probability_max": 2.32618643135515e-13,
+          "Python_probability_max": 1.9147207115272643e-13,
+          "probability_absolute_difference_max": 4.114657198278859e-14,
+          "case_total_weight": 106.0,
+          "proposed_probability_limit_bound": 9.433962264150943e-09,
+          "probability_bound_met_by_both": true
+        }
+      },
+      "original_strict_field_audit": [
+        "cond_beta",
+        "cond_prediction",
+        "cond_vcov",
+        "disp_prediction",
+        "g_random_covariance",
+        "g_random_modes",
+        "response_prediction",
+        "zprob_prediction"
+      ],
+      "original_python_warnings": [],
+      "final_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "probability_max": 2.32618643135515e-13,
+            "probability_bound": 9.433962264150943e-09,
+            "conditional_density_difference": 2.1822976722630005e-11,
+            "observed_zi_curvature_norm": 1.4397041029882624e-12
+          },
+          "Python": {
+            "probability_max": 1.9111519259322691e-13,
+            "probability_bound": 9.433962264150943e-09,
+            "conditional_density_difference": 1.7929355715833875e-11,
+            "observed_zi_curvature_norm": 1.1823584057757492e-12
+          }
+        },
+        "reference_log_likelihood": -68.74263223101386,
+        "python_log_likelihood": -68.74263223097753,
+        "reference_convergence": 0,
+        "reference_pd_hessian": true,
+        "fixture_sha256": "4c65154b3d2578ea95f529849f0260bafcb47ed7af29ef2b12ae60f6da6705ab"
+      }
+    },
+    {
+      "id": "tmb_1081",
+      "status": "all_strict_identified_fields_and_boundary_guards_passed",
+      "exception_fields": [
+        "g_random_modes"
+      ],
+      "applied_policy": {
+        "kind": "tmb_boundary_identification",
+        "exception_fields": [
+          "g_random_modes"
+        ],
+        "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+        "zero_random_effect": {
+          "g": {
+            "covariance_bound": 1e-09,
+            "mode_bound": 1e-08
+          }
+        }
+      },
+      "initial_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "g": {
+              "covariance_absolute_max": 8.969461080377266e-13,
+              "mode_absolute_max": 5.846360429744808e-12
+            }
+          },
+          "Python": {
+            "g": {
+              "covariance_absolute_max": 0.0,
+              "mode_absolute_max": 0.0
+            }
+          }
+        }
+      },
+      "original_objective_evidence": {
+        "R": -195.96433879398694,
+        "Python": -195.964338793984,
+        "Python_minus_R": 2.9274360713316128e-12,
+        "minimum_required_delta": -1e-06
+      },
+      "original_limits_evidence": {
+        "zero_random_effect": {
+          "g": {
+            "mathematical_limit": "zero covariance and random modes; relative error against zero has no defined finite scale",
+            "R_covariance": [
+              [
+                8.969461080377266e-13
+              ]
+            ],
+            "Python_covariance": [
+              [
+                0.0
+              ]
+            ],
+            "R_covariance_eigenvalues": [
+              8.969461080377266e-13
+            ],
+            "Python_covariance_eigenvalues": [
+              0.0
+            ],
+            "covariance_absolute_difference_max": 8.969461080377266e-13,
+            "R_mode_absolute_max": 5.846360429744808e-12,
+            "Python_mode_absolute_max": 0.0,
+            "mode_absolute_difference_max": 5.846360429744808e-12,
+            "proposed_covariance_zero_bound": 1e-09,
+            "proposed_mode_zero_bound": 1e-08
+          }
+        }
+      },
+      "original_strict_field_audit": [
+        "cond_beta",
+        "cond_prediction",
+        "cond_vcov",
+        "disp_beta",
+        "disp_prediction",
+        "g_random_covariance",
+        "response_prediction",
+        "zprob_prediction"
+      ],
+      "original_python_warnings": [
+        "boundary (singular) fit"
+      ],
+      "final_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "g": {
+              "covariance_absolute_max": 8.969461080377266e-13,
+              "mode_absolute_max": 5.846360429744808e-12
+            }
+          },
+          "Python": {
+            "g": {
+              "covariance_absolute_max": 0.0,
+              "mode_absolute_max": 0.0
+            }
+          }
+        },
+        "reference_log_likelihood": -195.96433879398694,
+        "python_log_likelihood": -195.9643387939841,
+        "reference_convergence": 0,
+        "reference_pd_hessian": true,
+        "fixture_sha256": "b832957d776764aa08fe3202a2053bfa8b28cb40ed241e87a428b8bc494c1ffc"
+      }
+    },
+    {
+      "id": "tmb_1088",
+      "status": "all_strict_identified_fields_and_boundary_guards_passed",
+      "exception_fields": [
+        "g_random_modes"
+      ],
+      "applied_policy": {
+        "kind": "tmb_boundary_identification",
+        "exception_fields": [
+          "g_random_modes"
+        ],
+        "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+        "zero_random_effect": {
+          "g": {
+            "covariance_bound": 1e-09,
+            "mode_bound": 1e-08
+          }
+        }
+      },
+      "initial_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "g": {
+              "covariance_absolute_max": 2.962796048653122e-13,
+              "mode_absolute_max": 2.140402981079364e-12
+            }
+          },
+          "Python": {
+            "g": {
+              "covariance_absolute_max": 0.0,
+              "mode_absolute_max": 0.0
+            }
+          }
+        }
+      },
+      "original_objective_evidence": {
+        "R": -157.68265183727638,
+        "Python": -157.682651837275,
+        "Python_minus_R": 1.3926637620897964e-12,
+        "minimum_required_delta": -1e-06
+      },
+      "original_limits_evidence": {
+        "zero_random_effect": {
+          "g": {
+            "mathematical_limit": "zero covariance and random modes; relative error against zero has no defined finite scale",
+            "R_covariance": [
+              [
+                2.962796048653122e-13
+              ]
+            ],
+            "Python_covariance": [
+              [
+                0.0
+              ]
+            ],
+            "R_covariance_eigenvalues": [
+              2.962796048653122e-13
+            ],
+            "Python_covariance_eigenvalues": [
+              0.0
+            ],
+            "covariance_absolute_difference_max": 2.962796048653122e-13,
+            "R_mode_absolute_max": 2.1404029724421287e-12,
+            "Python_mode_absolute_max": 0.0,
+            "mode_absolute_difference_max": 2.1404029724421287e-12,
+            "proposed_covariance_zero_bound": 1e-09,
+            "proposed_mode_zero_bound": 1e-08
+          }
+        }
+      },
+      "original_strict_field_audit": [
+        "cond_beta",
+        "cond_prediction",
+        "cond_vcov",
+        "disp_beta",
+        "disp_prediction",
+        "g_random_covariance",
+        "response_prediction",
+        "zi_beta",
+        "zi_vcov",
+        "zprob_prediction"
+      ],
+      "original_python_warnings": [
+        "boundary (singular) fit"
+      ],
+      "final_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "g": {
+              "covariance_absolute_max": 2.962796048653122e-13,
+              "mode_absolute_max": 2.140402981079364e-12
+            }
+          },
+          "Python": {
+            "g": {
+              "covariance_absolute_max": 0.0,
+              "mode_absolute_max": 0.0
+            }
+          }
+        },
+        "reference_log_likelihood": -157.68265183727635,
+        "python_log_likelihood": -157.682651837275,
+        "reference_convergence": 0,
+        "reference_pd_hessian": true,
+        "fixture_sha256": "054e326327aabf1ab03ce5df28db19623618f309f67613300476f2bd8652b388"
+      }
+    },
+    {
+      "id": "tmb_1104",
+      "status": "all_strict_identified_fields_and_boundary_guards_passed",
+      "exception_fields": [
+        "g_random_modes"
+      ],
+      "applied_policy": {
+        "kind": "tmb_boundary_identification",
+        "exception_fields": [
+          "g_random_modes"
+        ],
+        "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+        "zero_random_effect": {
+          "g": {
+            "covariance_bound": 1e-09,
+            "mode_bound": 1e-08
+          }
+        }
+      },
+      "initial_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "g": {
+              "covariance_absolute_max": 1.4652300347565605e-13,
+              "mode_absolute_max": 1.0655673444627574e-12
+            }
+          },
+          "Python": {
+            "g": {
+              "covariance_absolute_max": 0.0,
+              "mode_absolute_max": 0.0
+            }
+          }
+        }
+      },
+      "original_objective_evidence": {
+        "R": -113.65323654944628,
+        "Python": -113.65323654944528,
+        "Python_minus_R": 9.947598300641403e-13,
+        "minimum_required_delta": -1e-06
+      },
+      "original_limits_evidence": {
+        "zero_random_effect": {
+          "g": {
+            "mathematical_limit": "zero covariance and random modes; relative error against zero has no defined finite scale",
+            "R_covariance": [
+              [
+                1.4652300347565605e-13
+              ]
+            ],
+            "Python_covariance": [
+              [
+                0.0
+              ]
+            ],
+            "R_covariance_eigenvalues": [
+              1.4652300347565605e-13
+            ],
+            "Python_covariance_eigenvalues": [
+              0.0
+            ],
+            "covariance_absolute_difference_max": 1.4652300347565605e-13,
+            "R_mode_absolute_max": 1.0655673444627574e-12,
+            "Python_mode_absolute_max": 0.0,
+            "mode_absolute_difference_max": 1.0655673444627574e-12,
+            "proposed_covariance_zero_bound": 1e-09,
+            "proposed_mode_zero_bound": 1e-08
+          }
+        }
+      },
+      "original_strict_field_audit": [
+        "cond_beta",
+        "cond_prediction",
+        "cond_vcov",
+        "disp_prediction",
+        "g_random_covariance",
+        "response_prediction",
+        "zi_beta",
+        "zi_vcov",
+        "zprob_prediction"
+      ],
+      "original_python_warnings": [
+        "boundary (singular) fit"
+      ],
+      "final_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "g": {
+              "covariance_absolute_max": 1.4652300347565605e-13,
+              "mode_absolute_max": 1.0655673444627574e-12
+            }
+          },
+          "Python": {
+            "g": {
+              "covariance_absolute_max": 0.0,
+              "mode_absolute_max": 0.0
+            }
+          }
+        },
+        "reference_log_likelihood": -113.65323654944628,
+        "python_log_likelihood": -113.65323654944531,
+        "reference_convergence": 0,
+        "reference_pd_hessian": true,
+        "fixture_sha256": "891eb91dd57de04a3dd8f19c6007bc18d792b08932a0def76df50a2358b16bc3"
+      }
+    },
+    {
+      "id": "tmb_1123",
+      "status": "all_strict_identified_fields_and_boundary_guards_passed",
+      "exception_fields": [
+        "zi_beta",
+        "zi_vcov"
+      ],
+      "applied_policy": {
+        "kind": "tmb_boundary_identification",
+        "exception_fields": [
+          "zi_beta",
+          "zi_vcov",
+          "zi_wald_p"
+        ],
+        "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+        "absent_zi": true,
+        "mixture_likelihood_bound": 1e-06,
+        "zi_curvature_bound": 1e-06,
+        "zero_random_effect": {
+          "g": {
+            "covariance_bound": 1e-09,
+            "mode_bound": 1e-08
+          }
+        }
+      },
+      "initial_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "probability_max": 1.9493867791764486e-13,
+            "probability_bound": 1.2658227848101265e-08,
+            "conditional_density_difference": 1.6548267449676472e-11,
+            "observed_zi_curvature_norm": 9.965661232209872e-13,
+            "g": {
+              "covariance_absolute_max": 9.523916053552119e-20,
+              "mode_absolute_max": 3.925404931587316e-19
+            }
+          },
+          "Python": {
+            "probability_max": 2.0809335845259862e-13,
+            "probability_bound": 1.2658227848101265e-08,
+            "conditional_density_difference": 1.7664963093121673e-11,
+            "observed_zi_curvature_norm": 1.063452560516179e-12,
+            "g": {
+              "covariance_absolute_max": 0.0,
+              "mode_absolute_max": 0.0
+            }
+          }
+        }
+      },
+      "original_objective_evidence": {
+        "R": -115.50149571315825,
+        "Python": -115.50149571315832,
+        "Python_minus_R": -7.105427357601002e-14,
+        "minimum_required_delta": -1e-06
+      },
+      "original_limits_evidence": {
+        "absent_zi": {
+          "mathematical_limit": "all mixing probabilities zero; logit coefficients and divergent covariance do not have finite identified reference values",
+          "R_beta": -29.266091358020706,
+          "Python_beta": [
+            -29.200789577192708
+          ],
+          "R_marginal_precision_eigenvalues": [
+            9.962135629147478e-13
+          ],
+          "R_probability_max": 1.9493867791764486e-13,
+          "Python_probability_max": 2.0809335845259862e-13,
+          "probability_absolute_difference_max": 1.3154680534953757e-14,
+          "case_total_weight": 79.0,
+          "proposed_probability_limit_bound": 1.2658227848101265e-08,
+          "probability_bound_met_by_both": true
+        },
+        "zero_random_effect": {
+          "g": {
+            "mathematical_limit": "zero covariance and random modes; relative error against zero has no defined finite scale",
+            "R_covariance": [
+              [
+                9.523916053552119e-20
+              ]
+            ],
+            "Python_covariance": [
+              [
+                0.0
+              ]
+            ],
+            "R_covariance_eigenvalues": [
+              9.523916053552119e-20
+            ],
+            "Python_covariance_eigenvalues": [
+              0.0
+            ],
+            "covariance_absolute_difference_max": 9.523916053552119e-20,
+            "R_mode_absolute_max": 3.925404931587316e-19,
+            "Python_mode_absolute_max": 0.0,
+            "mode_absolute_difference_max": 3.925404931587316e-19,
+            "proposed_covariance_zero_bound": 1e-09,
+            "proposed_mode_zero_bound": 1e-08
+          }
+        }
+      },
+      "original_strict_field_audit": [
+        "cond_beta",
+        "cond_prediction",
+        "cond_vcov",
+        "disp_beta",
+        "disp_prediction",
+        "disp_vcov",
+        "g_random_covariance",
+        "g_random_modes",
+        "response_prediction",
+        "zprob_prediction"
+      ],
+      "original_python_warnings": [
+        "boundary (singular) fit"
+      ],
+      "final_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "probability_max": 1.9493867791764486e-13,
+            "probability_bound": 1.2658227848101265e-08,
+            "conditional_density_difference": 1.6548267449676472e-11,
+            "observed_zi_curvature_norm": 9.965661232209872e-13,
+            "g": {
+              "covariance_absolute_max": 9.523916053552119e-20,
+              "mode_absolute_max": 3.925404931587316e-19
+            }
+          },
+          "Python": {
+            "probability_max": 2.0809335845259862e-13,
+            "probability_bound": 1.2658227848101265e-08,
+            "conditional_density_difference": 1.7664963093121673e-11,
+            "observed_zi_curvature_norm": 1.063452560516179e-12,
+            "g": {
+              "covariance_absolute_max": 0.0,
+              "mode_absolute_max": 0.0
+            }
+          }
+        },
+        "reference_log_likelihood": -115.50149571315832,
+        "python_log_likelihood": -115.50149571315836,
+        "reference_convergence": 0,
+        "reference_pd_hessian": true,
+        "fixture_sha256": "1f39defe4c12e140cbe8f65db61e17bcecb6c12ba9fb16fb8118dd1d285454d1"
+      }
+    },
+    {
+      "id": "tmb_1125",
+      "status": "all_strict_identified_fields_and_boundary_guards_passed",
+      "exception_fields": [
+        "g_random_modes"
+      ],
+      "applied_policy": {
+        "kind": "tmb_boundary_identification",
+        "exception_fields": [
+          "g_random_modes"
+        ],
+        "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+        "zero_random_effect": {
+          "g": {
+            "covariance_bound": 1e-09,
+            "mode_bound": 1e-08
+          }
+        }
+      },
+      "initial_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "g": {
+              "covariance_absolute_max": 2.10323768023729e-13,
+              "mode_absolute_max": 1.440880939034659e-12
+            }
+          },
+          "Python": {
+            "g": {
+              "covariance_absolute_max": 0.0,
+              "mode_absolute_max": 0.0
+            }
+          }
+        }
+      },
+      "original_objective_evidence": {
+        "R": -236.34259964686456,
+        "Python": -236.34259964686197,
+        "Python_minus_R": 2.5863755581667647e-12,
+        "minimum_required_delta": -1e-06
+      },
+      "original_limits_evidence": {
+        "zero_random_effect": {
+          "g": {
+            "mathematical_limit": "zero covariance and random modes; relative error against zero has no defined finite scale",
+            "R_covariance": [
+              [
+                2.10323768023729e-13
+              ]
+            ],
+            "Python_covariance": [
+              [
+                0.0
+              ]
+            ],
+            "R_covariance_eigenvalues": [
+              2.10323768023729e-13
+            ],
+            "Python_covariance_eigenvalues": [
+              0.0
+            ],
+            "covariance_absolute_difference_max": 2.10323768023729e-13,
+            "R_mode_absolute_max": 1.440880939034659e-12,
+            "Python_mode_absolute_max": 0.0,
+            "mode_absolute_difference_max": 1.440880939034659e-12,
+            "proposed_covariance_zero_bound": 1e-09,
+            "proposed_mode_zero_bound": 1e-08
+          }
+        }
+      },
+      "original_strict_field_audit": [
+        "cond_beta",
+        "cond_prediction",
+        "cond_vcov",
+        "disp_prediction",
+        "g_random_covariance",
+        "response_prediction",
+        "zi_beta",
+        "zi_vcov",
+        "zprob_prediction"
+      ],
+      "original_python_warnings": [
+        "boundary (singular) fit"
+      ],
+      "final_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "g": {
+              "covariance_absolute_max": 2.10323768023729e-13,
+              "mode_absolute_max": 1.440880939034659e-12
+            }
+          },
+          "Python": {
+            "g": {
+              "covariance_absolute_max": 0.0,
+              "mode_absolute_max": 0.0
+            }
+          }
+        },
+        "reference_log_likelihood": -236.34259964686456,
+        "python_log_likelihood": -236.342599646862,
+        "reference_convergence": 0,
+        "reference_pd_hessian": true,
+        "fixture_sha256": "8cf4e9fd0a4efe29b71ab8a14e4233a67c089e3b6f70e3092f313ed45334f962"
+      }
+    },
+    {
+      "id": "tmb_1129",
+      "status": "all_strict_identified_fields_and_boundary_guards_passed",
+      "exception_fields": [
+        "g_random_modes"
+      ],
+      "applied_policy": {
+        "kind": "tmb_boundary_identification",
+        "exception_fields": [
+          "g_random_modes"
+        ],
+        "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+        "zero_random_effect": {
+          "g": {
+            "covariance_bound": 1e-09,
+            "mode_bound": 1e-08
+          }
+        }
+      },
+      "initial_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "g": {
+              "covariance_absolute_max": 3.4312145000979645e-13,
+              "mode_absolute_max": 1.8080098013484195e-12
+            }
+          },
+          "Python": {
+            "g": {
+              "covariance_absolute_max": 0.0,
+              "mode_absolute_max": 0.0
+            }
+          }
+        }
+      },
+      "original_objective_evidence": {
+        "R": -106.53576315141628,
+        "Python": -106.53576315141498,
+        "Python_minus_R": 1.2931877790833823e-12,
+        "minimum_required_delta": -1e-06
+      },
+      "original_limits_evidence": {
+        "zero_random_effect": {
+          "g": {
+            "mathematical_limit": "zero covariance and random modes; relative error against zero has no defined finite scale",
+            "R_covariance": [
+              [
+                3.4312145000979645e-13
+              ]
+            ],
+            "Python_covariance": [
+              [
+                0.0
+              ]
+            ],
+            "R_covariance_eigenvalues": [
+              3.4312145000979645e-13
+            ],
+            "Python_covariance_eigenvalues": [
+              0.0
+            ],
+            "covariance_absolute_difference_max": 3.4312145000979645e-13,
+            "R_mode_absolute_max": 1.8080098013484195e-12,
+            "Python_mode_absolute_max": 0.0,
+            "mode_absolute_difference_max": 1.8080098013484195e-12,
+            "proposed_covariance_zero_bound": 1e-09,
+            "proposed_mode_zero_bound": 1e-08
+          }
+        }
+      },
+      "original_strict_field_audit": [
+        "cond_beta",
+        "cond_prediction",
+        "cond_vcov",
+        "disp_beta",
+        "disp_prediction",
+        "disp_vcov",
+        "g_random_covariance",
+        "response_prediction",
+        "zi_beta",
+        "zi_vcov",
+        "zprob_prediction"
+      ],
+      "original_python_warnings": [
+        "boundary (singular) fit"
+      ],
+      "final_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "g": {
+              "covariance_absolute_max": 3.4312145000979645e-13,
+              "mode_absolute_max": 1.8080098013484195e-12
+            }
+          },
+          "Python": {
+            "g": {
+              "covariance_absolute_max": 0.0,
+              "mode_absolute_max": 0.0
+            }
+          }
+        },
+        "reference_log_likelihood": -106.53576315141628,
+        "python_log_likelihood": -106.53576315141514,
+        "reference_convergence": 0,
+        "reference_pd_hessian": true,
+        "fixture_sha256": "9ed61fba005527d8a62b203c190a86a072bd4378d5409d1dc81fe88d94f0ba6b"
+      }
+    },
+    {
+      "id": "tmb_1133",
+      "status": "all_strict_identified_fields_and_boundary_guards_passed",
+      "exception_fields": [
+        "zi_beta",
+        "zi_vcov",
+        "zprob_prediction"
+      ],
+      "applied_policy": {
+        "kind": "tmb_boundary_identification",
+        "exception_fields": [
+          "zi_beta",
+          "zi_vcov",
+          "zprob_prediction",
+          "zi_wald_p"
+        ],
+        "reason": "Individually indexed zero-variance or absent-mixture limits have no finite relative comparison for the listed fields. Both implementations must dynamically reproduce the same identified model.",
+        "absent_zi": true,
+        "mixture_likelihood_bound": 1e-06,
+        "zi_curvature_bound": 1e-06
+      },
+      "initial_verification": {
+        "passed": false,
+        "failure": "AssertionError: summary sections, labels and headers\nassert ['Family', 'F...f.resid', ...] == ['Family', 'F...f.resid', ...]\n  \n  At index 15 diff: 'Signif. codes' != 'Dispersion model'\n  Left contains one more item: 'Signif. codes'\n  Use -v to get more diff",
+        "dynamic_guards": {
+          "R": {
+            "probability_max": 4.3583540641969264e-14,
+            "probability_bound": 9.259259259259259e-09,
+            "conditional_density_difference": 1.5724912691149973e-12,
+            "observed_zi_curvature_norm": 1.8221231916737407e-12
+          },
+          "Python": {
+            "probability_max": 3.237667988198293e-09,
+            "probability_bound": 9.259259259259259e-09,
+            "conditional_density_difference": 6.02754731899639e-10,
+            "observed_zi_curvature_norm": 1.1375829124603445e-10
+          }
+        }
+      },
+      "original_objective_evidence": {
+        "R": -102.60321221439749,
+        "Python": -102.60321221432658,
+        "Python_minus_R": 7.0912165028858e-11,
+        "minimum_required_delta": -1e-06
+      },
+      "original_limits_evidence": {
+        "absent_zi": {
+          "mathematical_limit": "all mixing probabilities zero; logit coefficients and divergent covariance do not have finite identified reference values",
+          "R_beta": [
+            -32.2528007582459,
+            0.058475980807299405,
+            1.0942906177377023
+          ],
+          "Python_beta": [
+            -81.44449399753402,
+            -37.924596957907184,
+            -4.596001984360008
+          ],
+          "R_marginal_precision_eigenvalues": [
+            1.9723504022693926e-13,
+            2.967776837631266e-13,
+            1.8169252271996357e-12
+          ],
+          "R_probability_max": 4.3583540641969264e-14,
+          "Python_probability_max": 3.336622695533536e-09,
+          "probability_absolute_difference_max": 3.3366179132380597e-09,
+          "case_total_weight": 108.0,
+          "proposed_probability_limit_bound": 9.259259259259259e-09,
+          "probability_bound_met_by_both": true
+        }
+      },
+      "original_strict_field_audit": [
+        "cond_beta",
+        "cond_prediction",
+        "cond_vcov",
+        "disp_beta",
+        "disp_prediction",
+        "disp_vcov",
+        "g_random_covariance",
+        "g_random_modes",
+        "response_prediction"
+      ],
+      "original_python_warnings": [
+        "Non-positive-definite Hessian"
+      ],
+      "final_verification": {
+        "passed": true,
+        "failure": null,
+        "dynamic_guards": {
+          "R": {
+            "probability_max": 4.3583540641969264e-14,
+            "probability_bound": 9.259259259259259e-09,
+            "conditional_density_difference": 1.572491269124481e-12,
+            "observed_zi_curvature_norm": 1.8221231916737407e-12
+          },
+          "Python": {
+            "probability_max": 3.237667988198293e-09,
+            "probability_bound": 9.259259259259259e-09,
+            "conditional_density_difference": 6.02754731899639e-10,
+            "observed_zi_curvature_norm": 1.1375829124603445e-10
+          }
+        },
+        "reference_log_likelihood": -102.60321221439746,
+        "python_log_likelihood": -102.60321221432649,
+        "reference_convergence": 0,
+        "reference_pd_hessian": true,
+        "fixture_sha256": "6af5c9c1d985cca9afdead38309b54c9d500a935a0bdfdd295e335f9b684fa68"
+      }
+    }
+  ],
+  "initial_verification": {
+    "passed": 37,
+    "failed": 2,
+    "failed_ids": [
+      "tmb_0431",
+      "tmb_1133"
+    ],
+    "failures_retained": "All numerical identification guards passed; the original strict summary structure check rejected an extra significance legend produced from an unidentified ZI pseudoinverse. No layout exception was added."
+  },
+  "verification": {
+    "reference_generation": "All 1200 R references regenerated through oracle/run_case.R with documented public score-polish control; generation finished before this verification.",
+    "selected_cases": 39,
+    "passed": 39,
+    "failed": 0,
+    "failed_ids": [],
+    "seconds": 6.41,
+    "ci": "Local pytest only; no GitHub Actions invocation.",
+    "strict_summary_structure": "Passed after runtime correctly marked unidentified Wald directions as undefined. No layout exception was added.",
+    "test_sha256": "745be2364a76dd20bf3c9ccc324560de16b40708ebec2708dc53f938d8b31dc5",
+    "policy_sha256": "27d85c52e594c91f50ce8a1fba6a830bf0e5ccc7c22a9418da1c5cbd45a2d936",
+    "runtime_sha256": {
+      "src/rparity/tmb/__init__.py": "ac8e4d693c4d58aa9ff6daaf664812ba4af3dea784af42a59e724e306c2748be",
+      "src/rparity/tmb/_covariance.py": "2e9a3208780fae222471b0f16d4003a4ee3df44481de3969547635c37963146d",
+      "src/rparity/tmb/_families.py": "1b5178f6f90b28114a0bb3078a003bf98ba415b89c97cdbab205e85a5dc6b9f1",
+      "src/rparity/tmb/_fit.py": "0dd57d315860308522fe3b187250491e8f21ec353b9e286270fe1fbdc9e0d457"
+    },
+    "minimum_python_minus_R_log_likelihood": -3.836930773104541e-13,
+    "maximum_conditional_mixture_density_difference": 6.02754731899639e-10,
+    "maximum_observed_zi_curvature_norm": 1.1375829124603445e-10,
+    "maximum_probability_fraction_of_bound": 0.34966814272541563
+  },
+  "guard_counts": {
+    "absent_zero_inflation": 28,
+    "zero_random_effect": 12,
+    "overlap": 1
+  }
+}

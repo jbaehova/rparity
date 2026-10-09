@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import warnings
+from types import SimpleNamespace
 from typing import Any
 
 import numpy as np
@@ -158,7 +159,7 @@ def _dispersion(model: Any, estimate: str) -> float:
 
 
 def Anova(model: Any, type: int | str = 2, test_statistic: str | None = None,
-          error_estimate: str = "pearson") -> pd.DataFrame:
+          error_estimate: str = "pearson", component: str = "cond") -> pd.DataFrame:
     """Return car-style Type II/III tests for mixed models and statsmodels fits.
 
     Type III hypotheses depend on factor coding. Use sum contrasts when an
@@ -167,6 +168,24 @@ def Anova(model: Any, type: int | str = 2, test_statistic: str | None = None,
     Term hypotheses follow Fox and Weisberg (2019); mixed-model F adjustments
     follow Kenward and Roger (1997).
     """
+    if getattr(model, "_model_type", None) == "glmmTMB":
+        if component not in {"cond", "zi", "disp"}:
+            raise ValueError("component must be 'cond', 'zi' or 'disp'")
+        if test_statistic is not None and test_statistic.lower() not in {"chisq", "wald"}:
+            raise ValueError("glmmTMB component ANOVA supports Wald chi-squared tests")
+        info = model.component_data(component)
+        if not len(info["beta"]):
+            raise ValueError(f"The model has no estimated {component} component")
+        view = SimpleNamespace(
+            beta=info["beta"], cov_beta=info["covariance"], X=info["X"],
+            fixed_spec=info["fixed_spec"], family=model.family,
+        )
+        table = Anova(view, type=type, test_statistic="Chisq")
+        table = table.rename(index={"Intercept": "(Intercept)"})
+        table.attrs["component"] = component
+        return table
+    if component != "cond":
+        raise ValueError("Separate model components require a glmmTMB result")
     kind = _type(type)
     if kind == 1:
         raise ValueError("Anova supports Type II and III; use anova for Type I")
