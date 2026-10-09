@@ -1,6 +1,6 @@
 {
   "command": "uv run pytest --junitxml=oracle/cache/junit.xml",
-  "source_sha256": "e884c2c81979c10070971f998df24a12536e0f7d22baf1eb8e3d8f25286788a0",
+  "source_sha256": "ec5e96906b525ec09b60765c391814f47751d77839e2fdbef3d1b7da089486d8",
   "test_counts": {
     "passed": 3920,
     "failed": 0,

@@ -89,3 +89,5 @@ Control contrasts require an explicit supported `adjust` value. The unlisted R `
 - lmer_0059: Full prediction checks pass on Linux Python 3.12/3.13 but fail in the other recorded environments. Permit XPASS for this ID with every numerical threshold unchanged.
 - lmer_0585: Full prediction checks pass on Linux Python 3.11 and all hosted macOS versions but fail in the other recorded environments. Permit XPASS for this ID with every numerical threshold unchanged.
 - The six initial CI jobs had exactly two XPASS errors each and no unexpected numerical regressions. Fifty-seven other expected-failure IDs remain strict. Expected failures accept AssertionError only, so runtime errors remain unexpected failures.
+
+- Normalize scalar inner products to Python float and separate trial/final objective names for older NumPy type stubs on Python 3.11. These conversions preserve the double-precision numerical values; the full corpus is rechecked after the typing fix.
